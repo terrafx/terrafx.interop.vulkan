@@ -4,11 +4,9 @@
 // Original source is Copyright © 2015-2017 The Khronos Group Inc.
 
 using System;
-using TerraFX.Utilities;
 
 namespace TerraFX.Interop
 {
-    [Unmanaged]
     public unsafe struct VkWaylandSurfaceCreateInfoKHR
     {
         #region Fields
