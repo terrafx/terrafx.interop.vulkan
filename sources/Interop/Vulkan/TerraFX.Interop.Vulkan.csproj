@@ -8,8 +8,4 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="TerraFX.Utilities" />
-  </ItemGroup>
-
 </Project>
