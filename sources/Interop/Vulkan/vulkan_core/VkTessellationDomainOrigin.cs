@@ -1,0 +1,19 @@
+// Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+
+// Ported from vulkan\vulkan_core.h in the Vulkan-Headers repository for tag v1.1.123
+// Original source is Copyright © 2015-2019 The Khronos Group Inc.
+
+namespace TerraFX.Interop
+{
+    public enum VkTessellationDomainOrigin
+    {
+        VK_TESSELLATION_DOMAIN_ORIGIN_UPPER_LEFT = 0,
+        VK_TESSELLATION_DOMAIN_ORIGIN_LOWER_LEFT = 1,
+        VK_TESSELLATION_DOMAIN_ORIGIN_UPPER_LEFT_KHR = VK_TESSELLATION_DOMAIN_ORIGIN_UPPER_LEFT,
+        VK_TESSELLATION_DOMAIN_ORIGIN_LOWER_LEFT_KHR = VK_TESSELLATION_DOMAIN_ORIGIN_LOWER_LEFT,
+        VK_TESSELLATION_DOMAIN_ORIGIN_BEGIN_RANGE = VK_TESSELLATION_DOMAIN_ORIGIN_UPPER_LEFT,
+        VK_TESSELLATION_DOMAIN_ORIGIN_END_RANGE = VK_TESSELLATION_DOMAIN_ORIGIN_LOWER_LEFT,
+        VK_TESSELLATION_DOMAIN_ORIGIN_RANGE_SIZE = (VK_TESSELLATION_DOMAIN_ORIGIN_LOWER_LEFT - VK_TESSELLATION_DOMAIN_ORIGIN_UPPER_LEFT + 1),
+        VK_TESSELLATION_DOMAIN_ORIGIN_MAX_ENUM = 0x7FFFFFFF,
+    }
+}
