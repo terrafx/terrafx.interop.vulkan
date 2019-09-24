@@ -10,6 +10,7 @@ namespace TerraFX.Interop
     public static unsafe partial class Vulkan
     {
         public const int VK_KHR_xlib_surface = 1;
+
         public const int VK_KHR_XLIB_SURFACE_SPEC_VERSION = 6;
 
         // VK_KHR_xlib_surface
