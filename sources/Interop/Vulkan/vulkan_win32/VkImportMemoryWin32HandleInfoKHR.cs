@@ -20,6 +20,6 @@ namespace TerraFX.Interop
         public IntPtr handle;
 
         [NativeTypeName("LPCWSTR")]
-        public char* name;
+        public ushort* name;
     }
 }
