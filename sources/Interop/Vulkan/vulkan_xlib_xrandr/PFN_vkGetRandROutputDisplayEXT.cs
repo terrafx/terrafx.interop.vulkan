@@ -8,6 +8,6 @@ using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop
 {
-    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    [UnmanagedFunctionPointer(CallingConvention.Winapi)]
     public unsafe delegate VkResult PFN_vkGetRandROutputDisplayEXT([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("Display *")] UIntPtr dpy, [NativeTypeName("RROutput")] uint rrOutput, [NativeTypeName("VkDisplayKHR *")] ulong* pDisplay);
 }

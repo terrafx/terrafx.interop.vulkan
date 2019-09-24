@@ -8,6 +8,6 @@ using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop
 {
-    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    [UnmanagedFunctionPointer(CallingConvention.Winapi)]
     public unsafe delegate VkResult PFN_vkGetAndroidHardwareBufferPropertiesANDROID([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const struct AHardwareBuffer *")] IntPtr buffer, [NativeTypeName("VkAndroidHardwareBufferPropertiesANDROID *")] VkAndroidHardwareBufferPropertiesANDROID* pProperties);
 }
