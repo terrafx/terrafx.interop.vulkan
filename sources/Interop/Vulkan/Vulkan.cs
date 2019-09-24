@@ -17,14 +17,18 @@ namespace TerraFX.Interop
 
         private static IntPtr ResolveLibrary(string libraryName, Assembly assembly, DllImportSearchPath? searchPath)
         {
+            IntPtr nativeLibrary;
+
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                return NativeLibrary.Load("vulkan-1.dll", assembly, searchPath);
+                nativeLibrary = NativeLibrary.Load("vulkan-1.dll", assembly, searchPath);
             }
-            else
+            else if (!NativeLibrary.TryLoad("libvulkan.so", assembly, searchPath, out nativeLibrary))
             {
-                return NativeLibrary.Load("libvulkan.so.1", assembly, searchPath);
+                nativeLibrary = NativeLibrary.Load("libvulkan.so.1", assembly, searchPath);
             }
+
+            return nativeLibrary;
         }
     }
 }

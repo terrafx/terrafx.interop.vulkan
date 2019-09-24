@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop
 {
-    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    [UnmanagedFunctionPointer(CallingConvention.Winapi)]
     [return: NativeTypeName("VkBool32")]
     public unsafe delegate uint PFN_vkGetPhysicalDeviceXcbPresentationSupportKHR([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex, [NativeTypeName("xcb_connection_t *")] IntPtr connection, [NativeTypeName("xcb_visualid_t")] uint visual_id);
 }

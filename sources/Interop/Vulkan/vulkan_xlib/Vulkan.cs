@@ -10,10 +10,10 @@ namespace TerraFX.Interop
 {
     public static unsafe partial class Vulkan
     {
-        [DllImport(libraryPath, EntryPoint = "vkCreateXlibSurfaceKHR", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(libraryPath, EntryPoint = "vkCreateXlibSurfaceKHR", CallingConvention = CallingConvention.Winapi, ExactSpelling = true)]
         public static extern VkResult vkCreateXlibSurfaceKHR([NativeTypeName("VkInstance")] IntPtr instance, [NativeTypeName("const VkXlibSurfaceCreateInfoKHR *")] VkXlibSurfaceCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkSurfaceKHR *")] ulong* pSurface);
 
-        [DllImport(libraryPath, EntryPoint = "vkGetPhysicalDeviceXlibPresentationSupportKHR", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(libraryPath, EntryPoint = "vkGetPhysicalDeviceXlibPresentationSupportKHR", CallingConvention = CallingConvention.Winapi, ExactSpelling = true)]
         [return: NativeTypeName("VkBool32")]
         public static extern uint vkGetPhysicalDeviceXlibPresentationSupportKHR([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex, [NativeTypeName("Display *")] UIntPtr dpy, [NativeTypeName("VisualID")] UIntPtr visualID);
     }

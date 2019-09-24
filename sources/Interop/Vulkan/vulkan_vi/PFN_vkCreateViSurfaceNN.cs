@@ -8,6 +8,6 @@ using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop
 {
-    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    [UnmanagedFunctionPointer(CallingConvention.Winapi)]
     public unsafe delegate VkResult PFN_vkCreateViSurfaceNN([NativeTypeName("VkInstance")] IntPtr instance, [NativeTypeName("const VkViSurfaceCreateInfoNN *")] VkViSurfaceCreateInfoNN* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkSurfaceKHR *")] ulong* pSurface);
 }

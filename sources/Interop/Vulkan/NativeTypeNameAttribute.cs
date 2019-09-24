@@ -8,7 +8,7 @@ namespace TerraFX.Interop
     /// <summary>Defines the type of a member as it was used in the native signature.</summary>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue, AllowMultiple = false, Inherited = true)]
     [Conditional("DEBUG")]
-    public sealed class NativeTypeNameAttribute : Attribute
+    internal sealed class NativeTypeNameAttribute : Attribute
     {
         private readonly string _name;
 
