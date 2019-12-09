@@ -41,7 +41,7 @@
     <Company>TerraFX</Company>
     <PackageOutputPath>$(BaseArtifactsPath)pkg/$(Configuration)/</PackageOutputPath>
     <Product>TerraFX.Interop.Vulkan</Product>
-    <VersionPrefix>1.1.123</VersionPrefix>
+    <VersionPrefix>1.1.126</VersionPrefix>
     <VersionSuffix>alpha</VersionSuffix>
     <VersionSuffix Condition="'$(SYSTEM_PULLREQUEST_PULLREQUESTNUMBER)' != ''">pr$(SYSTEM_PULLREQUEST_PULLREQUESTNUMBER)</VersionSuffix>
   </PropertyGroup>
