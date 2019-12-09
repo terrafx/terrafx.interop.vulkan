@@ -8,7 +8,7 @@ namespace TerraFX.Interop
 {
     public static unsafe partial class Vulkan
     {
-        private const string libraryPath = "vulkan";
+        private const string LibraryPath = "vulkan";
 
         static Vulkan()
         {

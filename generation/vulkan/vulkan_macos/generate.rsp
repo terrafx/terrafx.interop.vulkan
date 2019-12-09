@@ -1,0 +1,22 @@
+--additional
+-m32
+--config
+multi-file
+--define-macro
+VK_USE_PLATFORM_MACOS_MVK
+--file
+vulkan-vulkan_macos.h
+--headerFile
+header.txt
+--include-directory
+C:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/shared
+C:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um
+C:/VulkanSDK/1.1.126.0/Include
+--methodClassName
+Vulkan
+--namespace
+TerraFX.Interop
+--output
+../../../sources/Interop/Vulkan/vulkan_macos
+--traverse
+C:/VulkanSDK/1.1.126.0/Include\vulkan/vulkan_macos.h

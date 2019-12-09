@@ -1,9 +1,10 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from vulkan\vulkan_core.h in the Vulkan-Headers repository for tag v1.1.123
+// Ported from vulkan/vulkan_core.h in the Vulkan-Headers repository for tag v1.1.126
 // Original source is Copyright © 2015-2019 The Khronos Group Inc.
 
 using System;
+using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop
 {
@@ -23,7 +24,7 @@ namespace TerraFX.Interop
         [NativeTypeName("VkBool32")]
         public uint subsetAllocation;
 
-        public unsafe partial struct _physicalDevices_e__FixedBuffer
+        public partial struct _physicalDevices_e__FixedBuffer
         {
             internal IntPtr e0;
             internal IntPtr e1;
@@ -57,6 +58,10 @@ namespace TerraFX.Interop
             internal IntPtr e29;
             internal IntPtr e30;
             internal IntPtr e31;
+
+            public ref IntPtr this[int index] => ref AsSpan()[index];
+
+            public Span<IntPtr> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 32);
         }
     }
 }

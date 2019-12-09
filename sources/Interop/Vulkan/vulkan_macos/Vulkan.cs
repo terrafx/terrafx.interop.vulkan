@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from vulkan\vulkan_macos.h in the Vulkan-Headers repository for tag v1.1.123
+// Ported from vulkan/vulkan_macos.h in the Vulkan-Headers repository for tag v1.1.126
 // Original source is Copyright © 2015-2019 The Khronos Group Inc.
 
 using System;
@@ -10,7 +10,7 @@ namespace TerraFX.Interop
 {
     public static unsafe partial class Vulkan
     {
-        [DllImport(libraryPath, EntryPoint = "vkCreateMacOSSurfaceMVK", CallingConvention = CallingConvention.Winapi, ExactSpelling = true)]
+        [DllImport(LibraryPath, CallingConvention = CallingConvention.Winapi, EntryPoint = "vkCreateMacOSSurfaceMVK", ExactSpelling = true)]
         public static extern VkResult vkCreateMacOSSurfaceMVK([NativeTypeName("VkInstance")] IntPtr instance, [NativeTypeName("const VkMacOSSurfaceCreateInfoMVK *")] VkMacOSSurfaceCreateInfoMVK* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkSurfaceKHR *")] ulong* pSurface);
     }
 }
