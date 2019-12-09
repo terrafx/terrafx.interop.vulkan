@@ -71,6 +71,106 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{48E1
 		scripts\cibuild.sh = scripts\cibuild.sh
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "generation", "generation", "{7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vk_icd", "vk_icd", "{5C8448A5-FFD6-4E71-BD87-F22279A5EFE4}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vk_icd\generate.rsp = generation\vulkan\vk_icd\generate.rsp
+		generation\vulkan\vk_icd\header.txt = generation\vulkan\vk_icd\header.txt
+		generation\vulkan\vk_icd\vulkan-vk_icd.h = generation\vulkan\vk_icd\vulkan-vk_icd.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vk_layer", "vk_layer", "{3B55A37B-0519-40BC-9338-1483B0C13AD2}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vk_layer\generate.rsp = generation\vulkan\vk_layer\generate.rsp
+		generation\vulkan\vk_layer\header.txt = generation\vulkan\vk_layer\header.txt
+		generation\vulkan\vk_layer\vulkan-vk_layer.h = generation\vulkan\vk_layer\vulkan-vk_layer.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_android", "vulkan_android", "{AE1C8774-7178-4627-99DA-8C5109C29499}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vulkan_android\generate.rsp = generation\vulkan\vulkan_android\generate.rsp
+		generation\vulkan\vulkan_android\header.txt = generation\vulkan\vulkan_android\header.txt
+		generation\vulkan\vulkan_android\vulkan-vulkan_android.h = generation\vulkan\vulkan_android\vulkan-vulkan_android.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_core", "vulkan_core", "{356D5A76-2073-4838-BC96-5A86072E84CF}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vulkan_core\generate.rsp = generation\vulkan\vulkan_core\generate.rsp
+		generation\vulkan\vulkan_core\header.txt = generation\vulkan\vulkan_core\header.txt
+		generation\vulkan\vulkan_core\vulkan-vulkan_core.h = generation\vulkan\vulkan_core\vulkan-vulkan_core.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_fuchsia", "vulkan_fuchsia", "{686211F7-8AEB-45EA-83E6-3BAC23CE1FC0}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vulkan_fuchsia\generate.rsp = generation\vulkan\vulkan_fuchsia\generate.rsp
+		generation\vulkan\vulkan_fuchsia\header.txt = generation\vulkan\vulkan_fuchsia\header.txt
+		generation\vulkan\vulkan_fuchsia\vulkan-vulkan_fuchsia.h = generation\vulkan\vulkan_fuchsia\vulkan-vulkan_fuchsia.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_ios", "vulkan_ios", "{2551C4D8-775C-4A75-A5BB-5528530D55B4}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vulkan_ios\generate.rsp = generation\vulkan\vulkan_ios\generate.rsp
+		generation\vulkan\vulkan_ios\header.txt = generation\vulkan\vulkan_ios\header.txt
+		generation\vulkan\vulkan_ios\vulkan-vulkan_ios.h = generation\vulkan\vulkan_ios\vulkan-vulkan_ios.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_macos", "vulkan_macos", "{68AB09B3-9C88-45FB-A8BF-693C15A8DD28}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vulkan_macos\generate.rsp = generation\vulkan\vulkan_macos\generate.rsp
+		generation\vulkan\vulkan_macos\header.txt = generation\vulkan\vulkan_macos\header.txt
+		generation\vulkan\vulkan_macos\vulkan-vulkan_macos.h = generation\vulkan\vulkan_macos\vulkan-vulkan_macos.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_metal", "vulkan_metal", "{5D60FBC6-5D94-480C-9627-E9D68CE843EF}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vulkan_metal\generate.rsp = generation\vulkan\vulkan_metal\generate.rsp
+		generation\vulkan\vulkan_metal\header.txt = generation\vulkan\vulkan_metal\header.txt
+		generation\vulkan\vulkan_metal\vulkan-vulkan_metal.h = generation\vulkan\vulkan_metal\vulkan-vulkan_metal.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_vi", "vulkan_vi", "{111DC295-53D5-409C-B7E9-8C488196FC72}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vulkan_vi\generate.rsp = generation\vulkan\vulkan_vi\generate.rsp
+		generation\vulkan\vulkan_vi\header.txt = generation\vulkan\vulkan_vi\header.txt
+		generation\vulkan\vulkan_vi\vulkan-vulkan_vi.h = generation\vulkan\vulkan_vi\vulkan-vulkan_vi.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_wayland", "vulkan_wayland", "{BBE2D0C0-5813-4085-B0A5-B5442C165316}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vulkan_wayland\generate.rsp = generation\vulkan\vulkan_wayland\generate.rsp
+		generation\vulkan\vulkan_wayland\header.txt = generation\vulkan\vulkan_wayland\header.txt
+		generation\vulkan\vulkan_wayland\vulkan-vulkan_wayland.h = generation\vulkan\vulkan_wayland\vulkan-vulkan_wayland.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_win32", "vulkan_win32", "{0D57A385-E69C-4F88-910B-DD346172C9EE}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vulkan_win32\generate.rsp = generation\vulkan\vulkan_win32\generate.rsp
+		generation\vulkan\vulkan_win32\header.txt = generation\vulkan\vulkan_win32\header.txt
+		generation\vulkan\vulkan_win32\vulkan-vulkan_win32.h = generation\vulkan\vulkan_win32\vulkan-vulkan_win32.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_xlib", "vulkan_xlib", "{14012392-945B-4E64-94FF-A043FE035F0B}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vulkan_xlib\generate.rsp = generation\vulkan\vulkan_xlib\generate.rsp
+		generation\vulkan\vulkan_xlib\header.txt = generation\vulkan\vulkan_xlib\header.txt
+		generation\vulkan\vulkan_xlib\vulkan-vulkan_xlib.h = generation\vulkan\vulkan_xlib\vulkan-vulkan_xlib.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_xcb", "vulkan_xcb", "{AFB2FD31-9D96-49AE-BFA3-A1A3150AE386}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vulkan_xcb\generate.rsp = generation\vulkan\vulkan_xcb\generate.rsp
+		generation\vulkan\vulkan_xcb\header.txt = generation\vulkan\vulkan_xcb\header.txt
+		generation\vulkan\vulkan_xcb\vulkan-vulkan_xcb.h = generation\vulkan\vulkan_xcb\vulkan-vulkan_xcb.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_xlib_xrandr", "vulkan_xlib_xrandr", "{CE39443C-CC77-4C5C-A90C-DED73C9F7C61}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vulkan_xlib_xrandr\generate.rsp = generation\vulkan\vulkan_xlib_xrandr\generate.rsp
+		generation\vulkan\vulkan_xlib_xrandr\header.txt = generation\vulkan\vulkan_xlib_xrandr\header.txt
+		generation\vulkan\vulkan_xlib_xrandr\vulkan-vulkan_xlib_xrandr.h = generation\vulkan\vulkan_xlib_xrandr\vulkan-vulkan_xlib_xrandr.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,6 +196,20 @@ Global
 		{7E31C739-2787-44ED-8304-7EFCEE1A2B2C} = {EFB05081-EC44-49D3-B6D1-52AE42085B5B}
 		{2BB35CA0-985E-48D6-B849-A083C15F7F5D} = {7E31C739-2787-44ED-8304-7EFCEE1A2B2C}
 		{36F3B9F5-C894-421F-AAB2-20455380E779} = {2BB35CA0-985E-48D6-B849-A083C15F7F5D}
+		{5C8448A5-FFD6-4E71-BD87-F22279A5EFE4} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{3B55A37B-0519-40BC-9338-1483B0C13AD2} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{AE1C8774-7178-4627-99DA-8C5109C29499} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{356D5A76-2073-4838-BC96-5A86072E84CF} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{686211F7-8AEB-45EA-83E6-3BAC23CE1FC0} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{2551C4D8-775C-4A75-A5BB-5528530D55B4} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{68AB09B3-9C88-45FB-A8BF-693C15A8DD28} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{5D60FBC6-5D94-480C-9627-E9D68CE843EF} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{111DC295-53D5-409C-B7E9-8C488196FC72} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{BBE2D0C0-5813-4085-B0A5-B5442C165316} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{0D57A385-E69C-4F88-910B-DD346172C9EE} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{14012392-945B-4E64-94FF-A043FE035F0B} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{AFB2FD31-9D96-49AE-BFA3-A1A3150AE386} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{CE39443C-CC77-4C5C-A90C-DED73C9F7C61} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FE36DF8-2D9C-4F20-8787-45DC74B57461}
