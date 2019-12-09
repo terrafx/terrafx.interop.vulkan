@@ -1,7 +1,10 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from vulkan\vulkan_core.h in the Vulkan-Headers repository for tag v1.1.123
+// Ported from vulkan/vulkan_core.h in the Vulkan-Headers repository for tag v1.1.126
 // Original source is Copyright © 2015-2019 The Khronos Group Inc.
+
+using System;
+using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop
 {
@@ -53,6 +56,10 @@ namespace TerraFX.Interop
             internal VkMemoryType e29;
             internal VkMemoryType e30;
             internal VkMemoryType e31;
+
+            public ref VkMemoryType this[int index] => ref AsSpan()[index];
+
+            public Span<VkMemoryType> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 32);
         }
 
         public partial struct _memoryHeaps_e__FixedBuffer
@@ -73,6 +80,10 @@ namespace TerraFX.Interop
             internal VkMemoryHeap e13;
             internal VkMemoryHeap e14;
             internal VkMemoryHeap e15;
+
+            public ref VkMemoryHeap this[int index] => ref AsSpan()[index];
+
+            public Span<VkMemoryHeap> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 16);
         }
     }
 }
