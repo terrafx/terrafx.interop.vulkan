@@ -10,25 +10,101 @@ namespace TerraFX.Interop
     {
         private const string LibraryPath = "vulkan";
 
+        public static event DllImportResolver? ResolveLibrary;
+
         static Vulkan()
         {
-            NativeLibrary.SetDllImportResolver(Assembly.GetExecutingAssembly(), ResolveLibrary);
+            NativeLibrary.SetDllImportResolver(Assembly.GetExecutingAssembly(), OnDllImport);
         }
 
-        private static IntPtr ResolveLibrary(string libraryName, Assembly assembly, DllImportSearchPath? searchPath)
+        private static IntPtr OnDllImport(string libraryName, Assembly assembly, DllImportSearchPath? searchPath)
         {
             IntPtr nativeLibrary;
 
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            if (TryResolveLibrary(libraryName, assembly, searchPath, out nativeLibrary))
             {
-                nativeLibrary = NativeLibrary.Load("vulkan-1.dll", assembly, searchPath);
-            }
-            else if (!NativeLibrary.TryLoad("libvulkan.so", assembly, searchPath, out nativeLibrary))
-            {
-                nativeLibrary = NativeLibrary.Load("libvulkan.so.1", assembly, searchPath);
+                return nativeLibrary;
             }
 
-            return nativeLibrary;
+            if (libraryName.Equals("vulkan") && TryResolveVulkan(assembly, searchPath, out nativeLibrary))
+            {
+                return nativeLibrary;
+            }
+
+            return IntPtr.Zero;
+        }
+
+        private static bool TryResolveVulkan(Assembly assembly, DllImportSearchPath? searchPath, out IntPtr nativeLibrary)
+        {
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                if (NativeLibrary.TryLoad("vulkan", assembly, searchPath, out nativeLibrary))
+                {
+                    return true;
+                }
+
+                if (NativeLibrary.TryLoad("vulkan-1", assembly, searchPath, out nativeLibrary))
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                if (NativeLibrary.TryLoad("libvulkan", assembly, searchPath, out nativeLibrary))
+                {
+                    return true;
+                }
+
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                {
+                    if (NativeLibrary.TryLoad("vulkan.so.1", assembly, searchPath, out nativeLibrary))
+                    {
+                        return true;
+                    }
+
+                    if (NativeLibrary.TryLoad("libvulkan.so.1.1.126", assembly, searchPath, out nativeLibrary))
+                    {
+                        return true;
+                    }
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                {
+                    if (NativeLibrary.TryLoad("libvulkan.1.dylib", assembly, searchPath, out nativeLibrary))
+                    {
+                        return true;
+                    }
+
+                    if (NativeLibrary.TryLoad("libvulkan.1.1.126.dylib", assembly, searchPath, out nativeLibrary))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        private static bool TryResolveLibrary(string libraryName, Assembly assembly, DllImportSearchPath? searchPath, out IntPtr nativeLibrary)
+        {
+            var resolveLibrary = ResolveLibrary;
+
+            if (resolveLibrary != null)
+            {
+                var resolvers = resolveLibrary.GetInvocationList();
+
+                foreach (DllImportResolver resolver in resolvers)
+                {
+                    nativeLibrary = resolver(libraryName, assembly, searchPath);
+
+                    if (nativeLibrary != IntPtr.Zero)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            nativeLibrary = IntPtr.Zero;
+            return false;
         }
     }
 }
