@@ -1,0 +1,15 @@
+--remap
+AHardwareBuffer*=IntPtr
+ANativeWindow*=IntPtr
+HANDLE=IntPtr
+HINSTANCE=IntPtr
+HMONITOR=IntPtr
+HWND=IntPtr
+VkCommandBuffer_T*=IntPtr
+VkDevice_T*=IntPtr
+VkLayerDeviceLink_=VkLayerDeviceLink
+VkLayerInstanceLink_=VkLayerInstanceLink
+VkInstance_T*=IntPtr
+VkPhysicalDevice_T*=IntPtr
+VkQueue_T*=IntPtr
+_SECURITY_ATTRIBUTES*=IntPtr

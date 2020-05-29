@@ -1,31 +1,12 @@
---additional
--m32
---config
-multi-file
+@../../settings.rsp
+@../../remap.rsp
 --exclude
-CallDown
+VkEnumerateInstanceExtensionPropertiesChain.CallDown(const char *, uint32_t *, VkExtensionProperties *):VkResult
+VkEnumerateInstanceLayerPropertiesChain.CallDown(uint32_t *, VkLayerProperties *):VkResult
+VkEnumerateInstanceVersionChain.CallDown(uint32_t *):VkResult
 --file
 vulkan-vk_layer.h
---headerFile
-header.txt
---include-directory
-C:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/shared
-C:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um
-C:/VulkanSDK/1.1.126.0/Include
---methodClassName
-Vulkan
---namespace
-TerraFX.Interop
 --output
 ../../../sources/Interop/Vulkan/vk_layer
---remap
-__AnonymousRecord_vk_layer_L118_C5=_u_e__Union
-__AnonymousRecord_vk_layer_L121_C9=_layerDevice_e__Struct
-__AnonymousRecord_vk_layer_L138_C5=_u_e__Union
-VkDevice_T*=IntPtr
-VkInstance_T*=IntPtr
-VkLayerDeviceInfo_=VkLayerDeviceInfo
-VkLayerDeviceLink_=VkLayerDeviceLink
-VkLayerFunction_=VkLayerFunction
-VkLayerInstanceLink_=VkLayerInstanceLink
-VkPhysicalDevice_T*=IntPtr
+--traverse
+C:/VulkanSDK/1.2.135.0/Include/vulkan/vk_layer.h
