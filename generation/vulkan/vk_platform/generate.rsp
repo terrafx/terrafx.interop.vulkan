@@ -1,0 +1,8 @@
+@../../settings.rsp
+@../../remap.rsp
+--file
+vulkan-vk_platform.h
+--output
+../../../sources/Interop/Vulkan/vk_platform
+--traverse
+C:/VulkanSDK/1.2.135.0/Include/vulkan/vk_platform.h

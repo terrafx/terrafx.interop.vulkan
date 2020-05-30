@@ -1,22 +1,11 @@
---additional
--m32
---config
-multi-file
+@../../settings.rsp
+@../../remap.rsp
 --define-macro
 VK_USE_PLATFORM_ANDROID_KHR
 --file
 vulkan-vulkan_android.h
---headerFile
-header.txt
---include-directory
-C:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/shared
-C:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um
-C:/VulkanSDK/1.1.126.0/Include
---methodClassName
-Vulkan
---namespace
-TerraFX.Interop
 --output
 ../../../sources/Interop/Vulkan/vulkan_android
 --traverse
-C:/VulkanSDK/1.1.126.0/Include\vulkan/vulkan_android.h
+C:/VulkanSDK/1.2.135.0/Include/vulkan/vulkan_android.h
+
