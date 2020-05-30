@@ -7,12 +7,12 @@ namespace TerraFX.Interop
 {
     public static unsafe partial class Vulkan
     {
-        public const int MAX_NUM_UNKNOWN_EXTS = 250;
+        public const uint MAX_NUM_UNKNOWN_EXTS = 250;
 
-        public const int CURRENT_LOADER_LAYER_INTERFACE_VERSION = 2;
+        public const uint CURRENT_LOADER_LAYER_INTERFACE_VERSION = 2;
 
-        public const int MIN_SUPPORTED_LOADER_LAYER_INTERFACE_VERSION = 1;
+        public const uint MIN_SUPPORTED_LOADER_LAYER_INTERFACE_VERSION = 1;
 
-        public const int VK_CURRENT_CHAIN_VERSION = 1;
+        public const uint VK_CURRENT_CHAIN_VERSION = 1;
     }
 }

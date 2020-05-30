@@ -1,5 +1,11 @@
 @../../settings.rsp
 @../../remap.rsp
+--exclude
+VkCommandBuffer_T
+VkDevice_T
+VkInstance_T
+VkPhysicalDevice_T
+VkQueue_T
 --file
 vulkan-vulkan_core.h
 --output
