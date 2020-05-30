@@ -1,7 +1,7 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from vulkan/vulkan_core.h in the Vulkan-Headers repository for tag v1.1.126
-// Original source is Copyright © 2015-2019 The Khronos Group Inc.
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.135
+// Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 using System;
 
@@ -19,11 +19,14 @@ namespace TerraFX.Interop
         VK_BUFFER_USAGE_INDEX_BUFFER_BIT = 0x00000040,
         VK_BUFFER_USAGE_VERTEX_BUFFER_BIT = 0x00000080,
         VK_BUFFER_USAGE_INDIRECT_BUFFER_BIT = 0x00000100,
+        VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT = 0x00020000,
         VK_BUFFER_USAGE_TRANSFORM_FEEDBACK_BUFFER_BIT_EXT = 0x00000800,
         VK_BUFFER_USAGE_TRANSFORM_FEEDBACK_COUNTER_BUFFER_BIT_EXT = 0x00001000,
         VK_BUFFER_USAGE_CONDITIONAL_RENDERING_BIT_EXT = 0x00000200,
-        VK_BUFFER_USAGE_RAY_TRACING_BIT_NV = 0x00000400,
-        VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT_EXT = 0x00020000,
+        VK_BUFFER_USAGE_RAY_TRACING_BIT_KHR = 0x00000400,
+        VK_BUFFER_USAGE_RAY_TRACING_BIT_NV = VK_BUFFER_USAGE_RAY_TRACING_BIT_KHR,
+        VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT_EXT = VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT,
+        VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT_KHR = VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT,
         VK_BUFFER_USAGE_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
     }
 }

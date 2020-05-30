@@ -8,8 +8,6 @@ namespace TerraFX.Interop
 {
     public static unsafe partial class Vulkan
     {
-        private const string LibraryPath = "vulkan";
-
         public static event DllImportResolver? ResolveLibrary;
 
         static Vulkan()
@@ -62,7 +60,7 @@ namespace TerraFX.Interop
                         return true;
                     }
 
-                    if (NativeLibrary.TryLoad("libvulkan.so.1.1.126", assembly, searchPath, out nativeLibrary))
+                    if (NativeLibrary.TryLoad("libvulkan.so.1.2.135", assembly, searchPath, out nativeLibrary))
                     {
                         return true;
                     }
@@ -74,7 +72,7 @@ namespace TerraFX.Interop
                         return true;
                     }
 
-                    if (NativeLibrary.TryLoad("libvulkan.1.1.126.dylib", assembly, searchPath, out nativeLibrary))
+                    if (NativeLibrary.TryLoad("libvulkan.1.2.135.dylib", assembly, searchPath, out nativeLibrary))
                     {
                         return true;
                     }
