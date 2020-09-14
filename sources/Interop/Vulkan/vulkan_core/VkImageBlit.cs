@@ -22,20 +22,32 @@ namespace TerraFX.Interop
 
         public partial struct _srcOffsets_e__FixedBuffer
         {
-            internal VkOffset3D e0;
-            internal VkOffset3D e1;
+            public VkOffset3D e0;
+            public VkOffset3D e1;
 
-            public ref VkOffset3D this[int index] => ref AsSpan()[index];
+            public ref VkOffset3D this[int index]
+            {
+                get
+                {
+                    return ref AsSpan()[index];
+                }
+            }
 
             public Span<VkOffset3D> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 2);
         }
 
         public partial struct _dstOffsets_e__FixedBuffer
         {
-            internal VkOffset3D e0;
-            internal VkOffset3D e1;
+            public VkOffset3D e0;
+            public VkOffset3D e1;
 
-            public ref VkOffset3D this[int index] => ref AsSpan()[index];
+            public ref VkOffset3D this[int index]
+            {
+                get
+                {
+                    return ref AsSpan()[index];
+                }
+            }
 
             public Span<VkOffset3D> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 2);
         }

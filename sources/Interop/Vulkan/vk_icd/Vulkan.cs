@@ -9,14 +9,14 @@ namespace TerraFX.Interop
     {
         public static void set_loader_magic_value([NativeTypeName("void *")] void* pNewObject)
         {
-            VK_LOADER_DATA* loader_info = (VK_LOADER_DATA*)pNewObject;
+            VK_LOADER_DATA* loader_info = (VK_LOADER_DATA*)(pNewObject);
 
             loader_info->loaderMagic = 0x01CDC0DE;
         }
 
         public static bool valid_loader_magic_value([NativeTypeName("void *")] void* pNewObject)
         {
-            VK_LOADER_DATA* loader_info = (VK_LOADER_DATA*)pNewObject;
+            VK_LOADER_DATA* loader_info = (VK_LOADER_DATA*)(pNewObject);
 
             return (loader_info->loaderMagic & 0xffffffff) == 0x01CDC0DE;
         }

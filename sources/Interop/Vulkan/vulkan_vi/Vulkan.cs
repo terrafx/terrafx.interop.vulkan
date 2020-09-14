@@ -10,7 +10,7 @@ namespace TerraFX.Interop
 {
     public static unsafe partial class Vulkan
     {
-        [DllImport("vulkan", EntryPoint = "vkCreateViSurfaceNN", ExactSpelling = true)]
+        [DllImport("vulkan", ExactSpelling = true)]
         public static extern VkResult vkCreateViSurfaceNN([NativeTypeName("VkInstance")] IntPtr instance, [NativeTypeName("const VkViSurfaceCreateInfoNN *")] VkViSurfaceCreateInfoNN* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkSurfaceKHR *")] ulong* pSurface);
     }
 }

@@ -9,7 +9,7 @@ namespace TerraFX.Interop
     {
         public VkTransformMatrixKHR transform;
 
-        internal uint _bitfield1;
+        public uint _bitfield1;
 
         [NativeTypeName("uint32_t : 24")]
         public uint instanceCustomIndex
@@ -39,7 +39,7 @@ namespace TerraFX.Interop
             }
         }
 
-        internal uint _bitfield2;
+        public uint _bitfield2;
 
         [NativeTypeName("uint32_t : 24")]
         public uint instanceShaderBindingTableRecordOffset

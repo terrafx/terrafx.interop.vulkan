@@ -24,64 +24,76 @@ namespace TerraFX.Interop
 
         public partial struct _memoryTypes_e__FixedBuffer
         {
-            internal VkMemoryType e0;
-            internal VkMemoryType e1;
-            internal VkMemoryType e2;
-            internal VkMemoryType e3;
-            internal VkMemoryType e4;
-            internal VkMemoryType e5;
-            internal VkMemoryType e6;
-            internal VkMemoryType e7;
-            internal VkMemoryType e8;
-            internal VkMemoryType e9;
-            internal VkMemoryType e10;
-            internal VkMemoryType e11;
-            internal VkMemoryType e12;
-            internal VkMemoryType e13;
-            internal VkMemoryType e14;
-            internal VkMemoryType e15;
-            internal VkMemoryType e16;
-            internal VkMemoryType e17;
-            internal VkMemoryType e18;
-            internal VkMemoryType e19;
-            internal VkMemoryType e20;
-            internal VkMemoryType e21;
-            internal VkMemoryType e22;
-            internal VkMemoryType e23;
-            internal VkMemoryType e24;
-            internal VkMemoryType e25;
-            internal VkMemoryType e26;
-            internal VkMemoryType e27;
-            internal VkMemoryType e28;
-            internal VkMemoryType e29;
-            internal VkMemoryType e30;
-            internal VkMemoryType e31;
+            public VkMemoryType e0;
+            public VkMemoryType e1;
+            public VkMemoryType e2;
+            public VkMemoryType e3;
+            public VkMemoryType e4;
+            public VkMemoryType e5;
+            public VkMemoryType e6;
+            public VkMemoryType e7;
+            public VkMemoryType e8;
+            public VkMemoryType e9;
+            public VkMemoryType e10;
+            public VkMemoryType e11;
+            public VkMemoryType e12;
+            public VkMemoryType e13;
+            public VkMemoryType e14;
+            public VkMemoryType e15;
+            public VkMemoryType e16;
+            public VkMemoryType e17;
+            public VkMemoryType e18;
+            public VkMemoryType e19;
+            public VkMemoryType e20;
+            public VkMemoryType e21;
+            public VkMemoryType e22;
+            public VkMemoryType e23;
+            public VkMemoryType e24;
+            public VkMemoryType e25;
+            public VkMemoryType e26;
+            public VkMemoryType e27;
+            public VkMemoryType e28;
+            public VkMemoryType e29;
+            public VkMemoryType e30;
+            public VkMemoryType e31;
 
-            public ref VkMemoryType this[int index] => ref AsSpan()[index];
+            public ref VkMemoryType this[int index]
+            {
+                get
+                {
+                    return ref AsSpan()[index];
+                }
+            }
 
             public Span<VkMemoryType> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 32);
         }
 
         public partial struct _memoryHeaps_e__FixedBuffer
         {
-            internal VkMemoryHeap e0;
-            internal VkMemoryHeap e1;
-            internal VkMemoryHeap e2;
-            internal VkMemoryHeap e3;
-            internal VkMemoryHeap e4;
-            internal VkMemoryHeap e5;
-            internal VkMemoryHeap e6;
-            internal VkMemoryHeap e7;
-            internal VkMemoryHeap e8;
-            internal VkMemoryHeap e9;
-            internal VkMemoryHeap e10;
-            internal VkMemoryHeap e11;
-            internal VkMemoryHeap e12;
-            internal VkMemoryHeap e13;
-            internal VkMemoryHeap e14;
-            internal VkMemoryHeap e15;
+            public VkMemoryHeap e0;
+            public VkMemoryHeap e1;
+            public VkMemoryHeap e2;
+            public VkMemoryHeap e3;
+            public VkMemoryHeap e4;
+            public VkMemoryHeap e5;
+            public VkMemoryHeap e6;
+            public VkMemoryHeap e7;
+            public VkMemoryHeap e8;
+            public VkMemoryHeap e9;
+            public VkMemoryHeap e10;
+            public VkMemoryHeap e11;
+            public VkMemoryHeap e12;
+            public VkMemoryHeap e13;
+            public VkMemoryHeap e14;
+            public VkMemoryHeap e15;
 
-            public ref VkMemoryHeap this[int index] => ref AsSpan()[index];
+            public ref VkMemoryHeap this[int index]
+            {
+                get
+                {
+                    return ref AsSpan()[index];
+                }
+            }
 
             public Span<VkMemoryHeap> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 16);
         }
