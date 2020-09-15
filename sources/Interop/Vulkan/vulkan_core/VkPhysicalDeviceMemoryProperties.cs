@@ -4,6 +4,7 @@
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 using System;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop
@@ -59,12 +60,14 @@ namespace TerraFX.Interop
 
             public ref VkMemoryType this[int index]
             {
+                [MethodImpl(MethodImplOptions.AggressiveInlining)]
                 get
                 {
                     return ref AsSpan()[index];
                 }
             }
 
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public Span<VkMemoryType> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 32);
         }
 
@@ -89,12 +92,14 @@ namespace TerraFX.Interop
 
             public ref VkMemoryHeap this[int index]
             {
+                [MethodImpl(MethodImplOptions.AggressiveInlining)]
                 get
                 {
                     return ref AsSpan()[index];
                 }
             }
 
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public Span<VkMemoryHeap> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 16);
         }
     }

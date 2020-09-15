@@ -80,5 +80,32 @@ namespace TerraFX.Interop
 
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern VkResult vkGetDeviceAccelerationStructureCompatibilityKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkAccelerationStructureVersionKHR *")] VkAccelerationStructureVersionKHR* version);
+
+        [NativeTypeName("#define VK_KHR_deferred_host_operations 1")]
+        public const int VK_KHR_deferred_host_operations = 1;
+
+        [NativeTypeName("#define VK_KHR_DEFERRED_HOST_OPERATIONS_SPEC_VERSION 2")]
+        public const int VK_KHR_DEFERRED_HOST_OPERATIONS_SPEC_VERSION = 2;
+
+        [NativeTypeName("#define VK_KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME \"VK_KHR_deferred_host_operations\"")]
+        public static ReadOnlySpan<byte> VK_KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x64, 0x65, 0x66, 0x65, 0x72, 0x72, 0x65, 0x64, 0x5F, 0x68, 0x6F, 0x73, 0x74, 0x5F, 0x6F, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x73, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_pipeline_library 1")]
+        public const int VK_KHR_pipeline_library = 1;
+
+        [NativeTypeName("#define VK_KHR_PIPELINE_LIBRARY_SPEC_VERSION 1")]
+        public const int VK_KHR_PIPELINE_LIBRARY_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_PIPELINE_LIBRARY_EXTENSION_NAME \"VK_KHR_pipeline_library\"")]
+        public static ReadOnlySpan<byte> VK_KHR_PIPELINE_LIBRARY_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x70, 0x69, 0x70, 0x65, 0x6C, 0x69, 0x6E, 0x65, 0x5F, 0x6C, 0x69, 0x62, 0x72, 0x61, 0x72, 0x79, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_ray_tracing 1")]
+        public const int VK_KHR_ray_tracing = 1;
+
+        [NativeTypeName("#define VK_KHR_RAY_TRACING_SPEC_VERSION 8")]
+        public const int VK_KHR_RAY_TRACING_SPEC_VERSION = 8;
+
+        [NativeTypeName("#define VK_KHR_RAY_TRACING_EXTENSION_NAME \"VK_KHR_ray_tracing\"")]
+        public static ReadOnlySpan<byte> VK_KHR_RAY_TRACING_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x72, 0x61, 0x79, 0x5F, 0x74, 0x72, 0x61, 0x63, 0x69, 0x6E, 0x67, 0x00 };
     }
 }

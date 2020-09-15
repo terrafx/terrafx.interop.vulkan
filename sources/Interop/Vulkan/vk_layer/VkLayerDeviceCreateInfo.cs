@@ -30,7 +30,7 @@ namespace TerraFX.Interop
 
             [FieldOffset(0)]
             [NativeTypeName("PFN_vkSetDeviceLoaderData")]
-            public IntPtr pfnSetDeviceLoaderData;
+            public delegate* unmanaged<IntPtr, void*, VkResult> pfnSetDeviceLoaderData;
         }
     }
 }

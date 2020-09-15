@@ -2,9 +2,15 @@
 @../../remap.rsp
 --define-macro
 VK_USE_PLATFORM_XCB_KHR
+--exclude
+VULKAN_XCB_H_
 --file
 vulkan-vulkan_xcb.h
+--include-directory
+./
 --output
 ../../../sources/Interop/Vulkan/vulkan_xcb
+--test-output
+../../../tests/Interop/Vulkan/vulkan_xcb
 --traverse
 C:/VulkanSDK/1.2.135.0/Include/vulkan/vulkan_xcb.h

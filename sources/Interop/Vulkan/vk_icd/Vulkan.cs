@@ -20,5 +20,17 @@ namespace TerraFX.Interop
 
             return (loader_info->loaderMagic & 0xffffffff) == 0x01CDC0DE;
         }
+
+        [NativeTypeName("#define CURRENT_LOADER_ICD_INTERFACE_VERSION 5")]
+        public const int CURRENT_LOADER_ICD_INTERFACE_VERSION = 5;
+
+        [NativeTypeName("#define MIN_SUPPORTED_LOADER_ICD_INTERFACE_VERSION 0")]
+        public const int MIN_SUPPORTED_LOADER_ICD_INTERFACE_VERSION = 0;
+
+        [NativeTypeName("#define MIN_PHYS_DEV_EXTENSION_ICD_INTERFACE_VERSION 4")]
+        public const int MIN_PHYS_DEV_EXTENSION_ICD_INTERFACE_VERSION = 4;
+
+        [NativeTypeName("#define ICD_LOADER_MAGIC 0x01CDC0DE")]
+        public const int ICD_LOADER_MAGIC = 0x01CDC0DE;
     }
 }

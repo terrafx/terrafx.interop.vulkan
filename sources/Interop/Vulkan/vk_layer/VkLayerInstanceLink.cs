@@ -13,9 +13,9 @@ namespace TerraFX.Interop
         public VkLayerInstanceLink* pNext;
 
         [NativeTypeName("PFN_vkGetInstanceProcAddr")]
-        public IntPtr pfnNextGetInstanceProcAddr;
+        public delegate* unmanaged<IntPtr, sbyte*, delegate* unmanaged<void>> pfnNextGetInstanceProcAddr;
 
         [NativeTypeName("PFN_GetPhysicalDeviceProcAddr")]
-        public IntPtr pfnNextGetPhysicalDeviceProcAddr;
+        public delegate* unmanaged<IntPtr, sbyte*, delegate* unmanaged<void>> pfnNextGetPhysicalDeviceProcAddr;
     }
 }

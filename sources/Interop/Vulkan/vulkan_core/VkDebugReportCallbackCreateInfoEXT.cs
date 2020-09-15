@@ -3,8 +3,6 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.135
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
-using System;
-
 namespace TerraFX.Interop
 {
     public unsafe partial struct VkDebugReportCallbackCreateInfoEXT
@@ -18,7 +16,7 @@ namespace TerraFX.Interop
         public uint flags;
 
         [NativeTypeName("PFN_vkDebugReportCallbackEXT")]
-        public IntPtr pfnCallback;
+        public delegate* unmanaged<uint, VkDebugReportObjectTypeEXT, ulong, nuint, int, sbyte*, sbyte*, void*, uint> pfnCallback;
 
         [NativeTypeName("void *")]
         public void* pUserData;

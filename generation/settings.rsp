@@ -1,12 +1,22 @@
 --additional
 -m32
 -Wno-expansion-to-defined
+-Wno-extern-initializer
+-Wno-extra-tokens
 -Wno-ignored-attributes
 -Wno-ignored-pragma-intrinsic
+-Wno-macro-redefined
 -Wno-nonportable-include-path
 -Wno-pragma-pack
 --config
+exclude-com-proxies
+exclude-empty-records
+exclude-enum-operators
+generate-aggressive-inlining
+generate-macro-bindings
+generate-tests-nunit
 multi-file
+preview-codegen-fnptr
 preview-codegen-nint
 --headerFile
 header.txt
@@ -14,7 +24,6 @@ header.txt
 C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/shared
 C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um
 C:/VulkanSDK/1.2.135.0/Include
---with-libraryPath
 --methodClassName
 Vulkan
 --namespace

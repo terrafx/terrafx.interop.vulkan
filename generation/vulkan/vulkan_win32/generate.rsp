@@ -2,9 +2,13 @@
 @../../remap.rsp
 --define-macro
 VK_USE_PLATFORM_WIN32_KHR
+--exclude
+VULKAN_WIN32_H_
 --file
 vulkan-vulkan_win32.h
 --output
 ../../../sources/Interop/Vulkan/vulkan_win32
+--test-output
+../../../tests/Interop/Vulkan/vulkan_win32
 --traverse
 C:/VulkanSDK/1.2.135.0/Include/vulkan/vulkan_win32.h
