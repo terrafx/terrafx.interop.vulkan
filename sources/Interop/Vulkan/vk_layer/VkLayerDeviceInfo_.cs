@@ -13,6 +13,6 @@ namespace TerraFX.Interop
         public void* device_info;
 
         [NativeTypeName("PFN_vkGetInstanceProcAddr")]
-        public IntPtr pfnNextGetInstanceProcAddr;
+        public delegate* unmanaged<IntPtr, sbyte*, delegate* unmanaged<void>> pfnNextGetInstanceProcAddr;
     }
 }

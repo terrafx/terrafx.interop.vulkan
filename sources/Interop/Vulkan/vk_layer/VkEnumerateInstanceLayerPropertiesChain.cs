@@ -3,8 +3,6 @@
 // Ported from include/vulkan/vk_layer.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.135
 // Original source is Copyright © 2015-2017 The Khronos Group Inc. Copyright © 2015-2017 Valve Corporation. Copyright © 2015-2017 LunarG, Inc.
 
-using System;
-
 namespace TerraFX.Interop
 {
     public unsafe partial struct VkEnumerateInstanceLayerPropertiesChain
@@ -12,9 +10,14 @@ namespace TerraFX.Interop
         public VkChainHeader header;
 
         [NativeTypeName("VkResult (*)(const struct VkEnumerateInstanceLayerPropertiesChain *, uint32_t *, VkLayerProperties *) __attribute__((stdcall))")]
-        public IntPtr pfnNextLayer;
+        public delegate* unmanaged<VkEnumerateInstanceLayerPropertiesChain*, uint*, VkLayerProperties*, VkResult> pfnNextLayer;
 
         [NativeTypeName("const struct VkEnumerateInstanceLayerPropertiesChain *")]
         public VkEnumerateInstanceLayerPropertiesChain* pNextLink;
+
+        public VkResult CallDown([NativeTypeName("uint32_t *")] uint* pPropertyCount, [NativeTypeName("VkLayerProperties *")] VkLayerProperties* pProperties)
+        {
+            return pfnNextLayer(pNextLink, pPropertyCount, pProperties);
+        }
     }
 }

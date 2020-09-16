@@ -3,8 +3,6 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.135
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
-using System;
-
 namespace TerraFX.Interop
 {
     public unsafe partial struct VkAllocationCallbacks
@@ -13,18 +11,18 @@ namespace TerraFX.Interop
         public void* pUserData;
 
         [NativeTypeName("PFN_vkAllocationFunction")]
-        public IntPtr pfnAllocation;
+        public delegate* unmanaged<void*, nuint, nuint, VkSystemAllocationScope, void*> pfnAllocation;
 
         [NativeTypeName("PFN_vkReallocationFunction")]
-        public IntPtr pfnReallocation;
+        public delegate* unmanaged<void*, void*, nuint, nuint, VkSystemAllocationScope, void*> pfnReallocation;
 
         [NativeTypeName("PFN_vkFreeFunction")]
-        public IntPtr pfnFree;
+        public delegate* unmanaged<void*, void*, void> pfnFree;
 
         [NativeTypeName("PFN_vkInternalAllocationNotification")]
-        public IntPtr pfnInternalAllocation;
+        public delegate* unmanaged<void*, nuint, VkInternalAllocationType, VkSystemAllocationScope, void> pfnInternalAllocation;
 
         [NativeTypeName("PFN_vkInternalFreeNotification")]
-        public IntPtr pfnInternalFree;
+        public delegate* unmanaged<void*, nuint, VkInternalAllocationType, VkSystemAllocationScope, void> pfnInternalFree;
     }
 }

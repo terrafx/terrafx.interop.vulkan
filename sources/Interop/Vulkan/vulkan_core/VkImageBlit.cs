@@ -4,6 +4,7 @@
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 using System;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop
@@ -22,21 +23,37 @@ namespace TerraFX.Interop
 
         public partial struct _srcOffsets_e__FixedBuffer
         {
-            internal VkOffset3D e0;
-            internal VkOffset3D e1;
+            public VkOffset3D e0;
+            public VkOffset3D e1;
 
-            public ref VkOffset3D this[int index] => ref AsSpan()[index];
+            public ref VkOffset3D this[int index]
+            {
+                [MethodImpl(MethodImplOptions.AggressiveInlining)]
+                get
+                {
+                    return ref AsSpan()[index];
+                }
+            }
 
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public Span<VkOffset3D> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 2);
         }
 
         public partial struct _dstOffsets_e__FixedBuffer
         {
-            internal VkOffset3D e0;
-            internal VkOffset3D e1;
+            public VkOffset3D e0;
+            public VkOffset3D e1;
 
-            public ref VkOffset3D this[int index] => ref AsSpan()[index];
+            public ref VkOffset3D this[int index]
+            {
+                [MethodImpl(MethodImplOptions.AggressiveInlining)]
+                get
+                {
+                    return ref AsSpan()[index];
+                }
+            }
 
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public Span<VkOffset3D> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 2);
         }
     }

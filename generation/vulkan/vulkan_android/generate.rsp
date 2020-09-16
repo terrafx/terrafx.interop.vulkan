@@ -2,10 +2,14 @@
 @../../remap.rsp
 --define-macro
 VK_USE_PLATFORM_ANDROID_KHR
+--exclude
+VULKAN_ANDROID_H_
 --file
 vulkan-vulkan_android.h
 --output
 ../../../sources/Interop/Vulkan/vulkan_android
+--test-output
+../../../tests/Interop/Vulkan/vulkan_android
 --traverse
 C:/VulkanSDK/1.2.135.0/Include/vulkan/vulkan_android.h
 

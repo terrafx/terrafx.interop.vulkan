@@ -10,11 +10,20 @@ namespace TerraFX.Interop
 {
     public static unsafe partial class Vulkan
     {
-        [DllImport("vulkan", CallingConvention = CallingConvention.Winapi, EntryPoint = "vkCreateXlibSurfaceKHR", ExactSpelling = true)]
+        [DllImport("vulkan", ExactSpelling = true)]
         public static extern VkResult vkCreateXlibSurfaceKHR([NativeTypeName("VkInstance")] IntPtr instance, [NativeTypeName("const VkXlibSurfaceCreateInfoKHR *")] VkXlibSurfaceCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkSurfaceKHR *")] ulong* pSurface);
 
-        [DllImport("vulkan", CallingConvention = CallingConvention.Winapi, EntryPoint = "vkGetPhysicalDeviceXlibPresentationSupportKHR", ExactSpelling = true)]
+        [DllImport("vulkan", ExactSpelling = true)]
         [return: NativeTypeName("VkBool32")]
-        public static extern uint vkGetPhysicalDeviceXlibPresentationSupportKHR([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex, [NativeTypeName("Display *")] UIntPtr dpy, [NativeTypeName("VisualID")] UIntPtr visualID);
+        public static extern uint vkGetPhysicalDeviceXlibPresentationSupportKHR([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex, [NativeTypeName("Display *")] IntPtr dpy, [NativeTypeName("VisualID")] nuint visualID);
+
+        [NativeTypeName("#define VK_KHR_xlib_surface 1")]
+        public const int VK_KHR_xlib_surface = 1;
+
+        [NativeTypeName("#define VK_KHR_XLIB_SURFACE_SPEC_VERSION 6")]
+        public const int VK_KHR_XLIB_SURFACE_SPEC_VERSION = 6;
+
+        [NativeTypeName("#define VK_KHR_XLIB_SURFACE_EXTENSION_NAME \"VK_KHR_xlib_surface\"")]
+        public static ReadOnlySpan<byte> VK_KHR_XLIB_SURFACE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x78, 0x6C, 0x69, 0x62, 0x5F, 0x73, 0x75, 0x72, 0x66, 0x61, 0x63, 0x65, 0x00 };
     }
 }

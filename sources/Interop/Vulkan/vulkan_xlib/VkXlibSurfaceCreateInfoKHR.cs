@@ -18,9 +18,9 @@ namespace TerraFX.Interop
         public uint flags;
 
         [NativeTypeName("Display *")]
-        public UIntPtr dpy;
+        public IntPtr dpy;
 
         [NativeTypeName("Window")]
-        public UIntPtr window;
+        public nuint window;
     }
 }

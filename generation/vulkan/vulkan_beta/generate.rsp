@@ -2,9 +2,13 @@
 @../../remap.rsp
 --define-macro
 VK_ENABLE_BETA_EXTENSIONS
+--exclude
+VULKAN_BETA_H_
 --file
 vulkan-vulkan_beta.h
 --output
 ../../../sources/Interop/Vulkan/vulkan_beta
+--test-output
+../../../tests/Interop/Vulkan/vulkan_beta
 --traverse
 C:/VulkanSDK/1.2.135.0/Include/vulkan/vulkan_beta.h

@@ -10,10 +10,19 @@ namespace TerraFX.Interop
 {
     public static unsafe partial class Vulkan
     {
-        [DllImport("vulkan", CallingConvention = CallingConvention.Winapi, EntryPoint = "vkAcquireXlibDisplayEXT", ExactSpelling = true)]
-        public static extern VkResult vkAcquireXlibDisplayEXT([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("Display *")] UIntPtr dpy, [NativeTypeName("VkDisplayKHR")] ulong display);
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkAcquireXlibDisplayEXT([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("Display *")] IntPtr dpy, [NativeTypeName("VkDisplayKHR")] ulong display);
 
-        [DllImport("vulkan", CallingConvention = CallingConvention.Winapi, EntryPoint = "vkGetRandROutputDisplayEXT", ExactSpelling = true)]
-        public static extern VkResult vkGetRandROutputDisplayEXT([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("Display *")] UIntPtr dpy, [NativeTypeName("RROutput")] uint rrOutput, [NativeTypeName("VkDisplayKHR *")] ulong* pDisplay);
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkGetRandROutputDisplayEXT([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("Display *")] IntPtr dpy, [NativeTypeName("RROutput")] nuint rrOutput, [NativeTypeName("VkDisplayKHR *")] ulong* pDisplay);
+
+        [NativeTypeName("#define VK_EXT_acquire_xlib_display 1")]
+        public const int VK_EXT_acquire_xlib_display = 1;
+
+        [NativeTypeName("#define VK_EXT_ACQUIRE_XLIB_DISPLAY_SPEC_VERSION 1")]
+        public const int VK_EXT_ACQUIRE_XLIB_DISPLAY_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_ACQUIRE_XLIB_DISPLAY_EXTENSION_NAME \"VK_EXT_acquire_xlib_display\"")]
+        public static ReadOnlySpan<byte> VK_EXT_ACQUIRE_XLIB_DISPLAY_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x61, 0x63, 0x71, 0x75, 0x69, 0x72, 0x65, 0x5F, 0x78, 0x6C, 0x69, 0x62, 0x5F, 0x64, 0x69, 0x73, 0x70, 0x6C, 0x61, 0x79, 0x00 };
     }
 }

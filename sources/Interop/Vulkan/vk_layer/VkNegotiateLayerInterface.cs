@@ -18,12 +18,12 @@ namespace TerraFX.Interop
         public uint loaderLayerInterfaceVersion;
 
         [NativeTypeName("PFN_vkGetInstanceProcAddr")]
-        public IntPtr pfnGetInstanceProcAddr;
+        public delegate* unmanaged<IntPtr, sbyte*, delegate* unmanaged<void>> pfnGetInstanceProcAddr;
 
         [NativeTypeName("PFN_vkGetDeviceProcAddr")]
-        public IntPtr pfnGetDeviceProcAddr;
+        public delegate* unmanaged<IntPtr, sbyte*, delegate* unmanaged<void>> pfnGetDeviceProcAddr;
 
         [NativeTypeName("PFN_GetPhysicalDeviceProcAddr")]
-        public IntPtr pfnGetPhysicalDeviceProcAddr;
+        public delegate* unmanaged<IntPtr, sbyte*, delegate* unmanaged<void>> pfnGetPhysicalDeviceProcAddr;
     }
 }

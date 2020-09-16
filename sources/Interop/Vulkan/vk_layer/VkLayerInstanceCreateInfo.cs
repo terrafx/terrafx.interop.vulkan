@@ -30,19 +30,19 @@ namespace TerraFX.Interop
 
             [FieldOffset(0)]
             [NativeTypeName("PFN_vkSetInstanceLoaderData")]
-            public IntPtr pfnSetInstanceLoaderData;
+            public delegate* unmanaged<IntPtr, void*, VkResult> pfnSetInstanceLoaderData;
 
             [FieldOffset(0)]
             [NativeTypeName("struct (anonymous struct at C:/VulkanSDK/1.2.135.0/Include/vulkan/vk_layer.h:121:9)")]
             public _layerDevice_e__Struct layerDevice;
 
-            public partial struct _layerDevice_e__Struct
+            public unsafe partial struct _layerDevice_e__Struct
             {
                 [NativeTypeName("PFN_vkLayerCreateDevice")]
-                public IntPtr pfnLayerCreateDevice;
+                public delegate* unmanaged<IntPtr, IntPtr, VkDeviceCreateInfo*, VkAllocationCallbacks*, IntPtr*, delegate* unmanaged<IntPtr, sbyte*, delegate* unmanaged<void>>, delegate* unmanaged<IntPtr, sbyte*, delegate* unmanaged<void>>*, VkResult> pfnLayerCreateDevice;
 
                 [NativeTypeName("PFN_vkLayerDestroyDevice")]
-                public IntPtr pfnLayerDestroyDevice;
+                public delegate* unmanaged<IntPtr, VkAllocationCallbacks*, delegate* unmanaged<IntPtr, VkAllocationCallbacks*, void>, void> pfnLayerDestroyDevice;
             }
         }
     }

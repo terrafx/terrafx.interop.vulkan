@@ -4,6 +4,7 @@
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 using System;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop
@@ -26,41 +27,49 @@ namespace TerraFX.Interop
 
         public partial struct _physicalDevices_e__FixedBuffer
         {
-            internal IntPtr e0;
-            internal IntPtr e1;
-            internal IntPtr e2;
-            internal IntPtr e3;
-            internal IntPtr e4;
-            internal IntPtr e5;
-            internal IntPtr e6;
-            internal IntPtr e7;
-            internal IntPtr e8;
-            internal IntPtr e9;
-            internal IntPtr e10;
-            internal IntPtr e11;
-            internal IntPtr e12;
-            internal IntPtr e13;
-            internal IntPtr e14;
-            internal IntPtr e15;
-            internal IntPtr e16;
-            internal IntPtr e17;
-            internal IntPtr e18;
-            internal IntPtr e19;
-            internal IntPtr e20;
-            internal IntPtr e21;
-            internal IntPtr e22;
-            internal IntPtr e23;
-            internal IntPtr e24;
-            internal IntPtr e25;
-            internal IntPtr e26;
-            internal IntPtr e27;
-            internal IntPtr e28;
-            internal IntPtr e29;
-            internal IntPtr e30;
-            internal IntPtr e31;
+            public IntPtr e0;
+            public IntPtr e1;
+            public IntPtr e2;
+            public IntPtr e3;
+            public IntPtr e4;
+            public IntPtr e5;
+            public IntPtr e6;
+            public IntPtr e7;
+            public IntPtr e8;
+            public IntPtr e9;
+            public IntPtr e10;
+            public IntPtr e11;
+            public IntPtr e12;
+            public IntPtr e13;
+            public IntPtr e14;
+            public IntPtr e15;
+            public IntPtr e16;
+            public IntPtr e17;
+            public IntPtr e18;
+            public IntPtr e19;
+            public IntPtr e20;
+            public IntPtr e21;
+            public IntPtr e22;
+            public IntPtr e23;
+            public IntPtr e24;
+            public IntPtr e25;
+            public IntPtr e26;
+            public IntPtr e27;
+            public IntPtr e28;
+            public IntPtr e29;
+            public IntPtr e30;
+            public IntPtr e31;
 
-            public ref IntPtr this[int index] => ref AsSpan()[index];
+            public ref IntPtr this[int index]
+            {
+                [MethodImpl(MethodImplOptions.AggressiveInlining)]
+                get
+                {
+                    return ref AsSpan()[index];
+                }
+            }
 
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public Span<IntPtr> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 32);
         }
     }
