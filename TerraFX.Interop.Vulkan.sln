@@ -60,11 +60,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TerraFX.Interop.Vulkan.Unit
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{48E1F49D-7103-4DE6-9F69-915183B85095}"
 	ProjectSection(SolutionItems) = preProject
-		scripts\azure-ci.yml = scripts\azure-ci.yml
-		scripts\azure-pipelines.yml = scripts\azure-pipelines.yml
-		scripts\azure-pr.yml = scripts\azure-pr.yml
-		scripts\azure-unix.yml = scripts\azure-unix.yml
-		scripts\azure-windows.yml = scripts\azure-windows.yml
 		scripts\build.ps1 = scripts\build.ps1
 		scripts\build.sh = scripts\build.sh
 		scripts\cibuild.cmd = scripts\cibuild.cmd
@@ -206,6 +201,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_ggp", "vulkan_ggp", 
 		generation\vulkan\vulkan_ggp\vulkan-vulkan_ggp.h = generation\vulkan\vulkan_ggp\vulkan-vulkan_ggp.h
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{8B98276D-AB81-4492-81E3-BAB8F9494A99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{6B66365D-63B7-4988-89D3-58AB7F372854}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -250,6 +252,7 @@ Global
 		{00908E61-6A74-478C-ABD1-EA9A04587A42} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
 		{5C3C3DDA-9D36-4B31-AF01-175E1381FA32} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
 		{0BF30806-FF4A-43D5-9D38-77F44BD727E2} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{6B66365D-63B7-4988-89D3-58AB7F372854} = {8B98276D-AB81-4492-81E3-BAB8F9494A99}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FE36DF8-2D9C-4F20-8787-45DC74B57461}

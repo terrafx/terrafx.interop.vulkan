@@ -36,46 +36,46 @@ namespace TerraFX.Interop
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                if (NativeLibrary.TryLoad("vulkan", assembly, searchPath, out nativeLibrary))
+                if (NativeLibrary.TryLoad("vulkan-1", assembly, searchPath, out nativeLibrary))
                 {
                     return true;
                 }
 
-                if (NativeLibrary.TryLoad("vulkan-1", assembly, searchPath, out nativeLibrary))
+                if (NativeLibrary.TryLoad("vulkan", assembly, searchPath, out nativeLibrary))
                 {
                     return true;
                 }
             }
             else
             {
-                if (NativeLibrary.TryLoad("libvulkan", assembly, searchPath, out nativeLibrary))
-                {
-                    return true;
-                }
-
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                 {
-                    if (NativeLibrary.TryLoad("vulkan.so.1", assembly, searchPath, out nativeLibrary))
+                    if (NativeLibrary.TryLoad("libvulkan.so.1.2.135", assembly, searchPath, out nativeLibrary))
                     {
                         return true;
                     }
 
-                    if (NativeLibrary.TryLoad("libvulkan.so.1.2.135", assembly, searchPath, out nativeLibrary))
+                    if (NativeLibrary.TryLoad("vulkan.so.1", assembly, searchPath, out nativeLibrary))
                     {
                         return true;
                     }
                 }
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
                 {
-                    if (NativeLibrary.TryLoad("libvulkan.1.dylib", assembly, searchPath, out nativeLibrary))
-                    {
-                        return true;
-                    }
-
                     if (NativeLibrary.TryLoad("libvulkan.1.2.135.dylib", assembly, searchPath, out nativeLibrary))
                     {
                         return true;
                     }
+
+                    if (NativeLibrary.TryLoad("libvulkan.1.dylib", assembly, searchPath, out nativeLibrary))
+                    {
+                        return true;
+                    }
+                }
+
+                if (NativeLibrary.TryLoad("libvulkan", assembly, searchPath, out nativeLibrary))
+                {
+                    return true;
                 }
             }
 
