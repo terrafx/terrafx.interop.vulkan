@@ -1,12 +1,26 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vk_icd.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.135
+// Ported from include/vulkan/vk_icd.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.154
 // Original source is Copyright © 2015-2016 The Khronos Group Inc. Copyright © 2015-2016 Valve Corporation. Copyright © 2015-2016 LunarG, Inc.
+
+using System;
+using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop
 {
     public static unsafe partial class Vulkan
     {
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vk_icdNegotiateLoaderICDInterfaceVersion([NativeTypeName("uint32_t *")] uint* pVersion);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        [return: NativeTypeName("PFN_vkVoidFunction")]
+        public static extern delegate* unmanaged<void> vk_icdGetInstanceProcAddr([NativeTypeName("VkInstance")] IntPtr instance, [NativeTypeName("const char *")] sbyte* pName);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        [return: NativeTypeName("PFN_vkVoidFunction")]
+        public static extern delegate* unmanaged<void> vk_icdGetPhysicalDeviceProcAddr([NativeTypeName("VkInstance")] IntPtr isntance, [NativeTypeName("const char *")] sbyte* pName);
+
         public static void set_loader_magic_value([NativeTypeName("void *")] void* pNewObject)
         {
             VK_LOADER_DATA* loader_info = (VK_LOADER_DATA*)(pNewObject);
@@ -21,8 +35,8 @@ namespace TerraFX.Interop
             return (loader_info->loaderMagic & 0xffffffff) == 0x01CDC0DE;
         }
 
-        [NativeTypeName("#define CURRENT_LOADER_ICD_INTERFACE_VERSION 5")]
-        public const int CURRENT_LOADER_ICD_INTERFACE_VERSION = 5;
+        [NativeTypeName("#define CURRENT_LOADER_ICD_INTERFACE_VERSION 6")]
+        public const int CURRENT_LOADER_ICD_INTERFACE_VERSION = 6;
 
         [NativeTypeName("#define MIN_SUPPORTED_LOADER_ICD_INTERFACE_VERSION 0")]
         public const int MIN_SUPPORTED_LOADER_ICD_INTERFACE_VERSION = 0;

@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.135
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.154
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 namespace TerraFX.Interop
@@ -19,6 +19,8 @@ namespace TerraFX.Interop
         VK_DRIVER_ID_GOOGLE_SWIFTSHADER = 10,
         VK_DRIVER_ID_GGP_PROPRIETARY = 11,
         VK_DRIVER_ID_BROADCOM_PROPRIETARY = 12,
+        VK_DRIVER_ID_MESA_LLVMPIPE = 13,
+        VK_DRIVER_ID_MOLTENVK = 14,
         VK_DRIVER_ID_AMD_PROPRIETARY_KHR = VK_DRIVER_ID_AMD_PROPRIETARY,
         VK_DRIVER_ID_AMD_OPEN_SOURCE_KHR = VK_DRIVER_ID_AMD_OPEN_SOURCE,
         VK_DRIVER_ID_MESA_RADV_KHR = VK_DRIVER_ID_MESA_RADV,
@@ -31,9 +33,6 @@ namespace TerraFX.Interop
         VK_DRIVER_ID_GOOGLE_SWIFTSHADER_KHR = VK_DRIVER_ID_GOOGLE_SWIFTSHADER,
         VK_DRIVER_ID_GGP_PROPRIETARY_KHR = VK_DRIVER_ID_GGP_PROPRIETARY,
         VK_DRIVER_ID_BROADCOM_PROPRIETARY_KHR = VK_DRIVER_ID_BROADCOM_PROPRIETARY,
-        VK_DRIVER_ID_BEGIN_RANGE = VK_DRIVER_ID_AMD_PROPRIETARY,
-        VK_DRIVER_ID_END_RANGE = VK_DRIVER_ID_BROADCOM_PROPRIETARY,
-        VK_DRIVER_ID_RANGE_SIZE = (VK_DRIVER_ID_BROADCOM_PROPRIETARY - VK_DRIVER_ID_AMD_PROPRIETARY + 1),
         VK_DRIVER_ID_MAX_ENUM = 0x7FFFFFFF,
     }
 }

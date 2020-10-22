@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.135
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.154
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 namespace TerraFX.Interop
@@ -15,9 +15,6 @@ namespace TerraFX.Interop
         VK_COMPARE_OP_NOT_EQUAL = 5,
         VK_COMPARE_OP_GREATER_OR_EQUAL = 6,
         VK_COMPARE_OP_ALWAYS = 7,
-        VK_COMPARE_OP_BEGIN_RANGE = VK_COMPARE_OP_NEVER,
-        VK_COMPARE_OP_END_RANGE = VK_COMPARE_OP_ALWAYS,
-        VK_COMPARE_OP_RANGE_SIZE = (VK_COMPARE_OP_ALWAYS - VK_COMPARE_OP_NEVER + 1),
         VK_COMPARE_OP_MAX_ENUM = 0x7FFFFFFF,
     }
 }

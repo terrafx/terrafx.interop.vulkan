@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.135
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.154
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 namespace TerraFX.Interop
@@ -15,9 +15,6 @@ namespace TerraFX.Interop
         VK_INDIRECT_COMMANDS_TOKEN_TYPE_DRAW_INDEXED_NV = 5,
         VK_INDIRECT_COMMANDS_TOKEN_TYPE_DRAW_NV = 6,
         VK_INDIRECT_COMMANDS_TOKEN_TYPE_DRAW_TASKS_NV = 7,
-        VK_INDIRECT_COMMANDS_TOKEN_TYPE_BEGIN_RANGE_NV = VK_INDIRECT_COMMANDS_TOKEN_TYPE_SHADER_GROUP_NV,
-        VK_INDIRECT_COMMANDS_TOKEN_TYPE_END_RANGE_NV = VK_INDIRECT_COMMANDS_TOKEN_TYPE_DRAW_TASKS_NV,
-        VK_INDIRECT_COMMANDS_TOKEN_TYPE_RANGE_SIZE_NV = (VK_INDIRECT_COMMANDS_TOKEN_TYPE_DRAW_TASKS_NV - VK_INDIRECT_COMMANDS_TOKEN_TYPE_SHADER_GROUP_NV + 1),
         VK_INDIRECT_COMMANDS_TOKEN_TYPE_MAX_ENUM_NV = 0x7FFFFFFF,
     }
 }

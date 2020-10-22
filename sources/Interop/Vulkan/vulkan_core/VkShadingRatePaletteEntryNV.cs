@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.135
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.154
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 namespace TerraFX.Interop
@@ -19,9 +19,6 @@ namespace TerraFX.Interop
         VK_SHADING_RATE_PALETTE_ENTRY_1_INVOCATION_PER_4X2_PIXELS_NV = 9,
         VK_SHADING_RATE_PALETTE_ENTRY_1_INVOCATION_PER_2X4_PIXELS_NV = 10,
         VK_SHADING_RATE_PALETTE_ENTRY_1_INVOCATION_PER_4X4_PIXELS_NV = 11,
-        VK_SHADING_RATE_PALETTE_ENTRY_BEGIN_RANGE_NV = VK_SHADING_RATE_PALETTE_ENTRY_NO_INVOCATIONS_NV,
-        VK_SHADING_RATE_PALETTE_ENTRY_END_RANGE_NV = VK_SHADING_RATE_PALETTE_ENTRY_1_INVOCATION_PER_4X4_PIXELS_NV,
-        VK_SHADING_RATE_PALETTE_ENTRY_RANGE_SIZE_NV = (VK_SHADING_RATE_PALETTE_ENTRY_1_INVOCATION_PER_4X4_PIXELS_NV - VK_SHADING_RATE_PALETTE_ENTRY_NO_INVOCATIONS_NV + 1),
         VK_SHADING_RATE_PALETTE_ENTRY_MAX_ENUM_NV = 0x7FFFFFFF,
     }
 }
