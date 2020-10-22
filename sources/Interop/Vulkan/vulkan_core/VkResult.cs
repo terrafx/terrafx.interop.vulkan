@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.135
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.154
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 namespace TerraFX.Interop
@@ -45,15 +45,13 @@ namespace TerraFX.Interop
         VK_THREAD_DONE_KHR = 1000268001,
         VK_OPERATION_DEFERRED_KHR = 1000268002,
         VK_OPERATION_NOT_DEFERRED_KHR = 1000268003,
-        VK_ERROR_PIPELINE_COMPILE_REQUIRED_EXT = 1000297000,
+        VK_PIPELINE_COMPILE_REQUIRED_EXT = 1000297000,
         VK_ERROR_OUT_OF_POOL_MEMORY_KHR = VK_ERROR_OUT_OF_POOL_MEMORY,
         VK_ERROR_INVALID_EXTERNAL_HANDLE_KHR = VK_ERROR_INVALID_EXTERNAL_HANDLE,
         VK_ERROR_FRAGMENTATION_EXT = VK_ERROR_FRAGMENTATION,
         VK_ERROR_INVALID_DEVICE_ADDRESS_EXT = VK_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS,
         VK_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS_KHR = VK_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS,
-        VK_RESULT_BEGIN_RANGE = VK_ERROR_UNKNOWN,
-        VK_RESULT_END_RANGE = VK_INCOMPLETE,
-        VK_RESULT_RANGE_SIZE = (VK_INCOMPLETE - VK_ERROR_UNKNOWN + 1),
+        VK_ERROR_PIPELINE_COMPILE_REQUIRED_EXT = VK_PIPELINE_COMPILE_REQUIRED_EXT,
         VK_RESULT_MAX_ENUM = 0x7FFFFFFF,
     }
 }

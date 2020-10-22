@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.135
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.154
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 using System;
@@ -799,6 +799,24 @@ namespace TerraFX.Interop
         public static extern VkResult vkGetPipelineExecutableInternalRepresentationsKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkPipelineExecutableInfoKHR *")] VkPipelineExecutableInfoKHR* pExecutableInfo, [NativeTypeName("uint32_t *")] uint* pInternalRepresentationCount, [NativeTypeName("VkPipelineExecutableInternalRepresentationKHR *")] VkPipelineExecutableInternalRepresentationKHR* pInternalRepresentations);
 
         [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdCopyBuffer2KHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkCopyBufferInfo2KHR *")] VkCopyBufferInfo2KHR* pCopyBufferInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdCopyImage2KHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkCopyImageInfo2KHR *")] VkCopyImageInfo2KHR* pCopyImageInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdCopyBufferToImage2KHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkCopyBufferToImageInfo2KHR *")] VkCopyBufferToImageInfo2KHR* pCopyBufferToImageInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdCopyImageToBuffer2KHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkCopyImageToBufferInfo2KHR *")] VkCopyImageToBufferInfo2KHR* pCopyImageToBufferInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdBlitImage2KHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkBlitImageInfo2KHR *")] VkBlitImageInfo2KHR* pBlitImageInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdResolveImage2KHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkResolveImageInfo2KHR *")] VkResolveImageInfo2KHR* pResolveImageInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
         public static extern VkResult vkCreateDebugReportCallbackEXT([NativeTypeName("VkInstance")] IntPtr instance, [NativeTypeName("const VkDebugReportCallbackCreateInfoEXT *")] VkDebugReportCallbackCreateInfoEXT* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkDebugReportCallbackEXT *")] ulong* pCallback);
 
         [DllImport("vulkan", ExactSpelling = true)]
@@ -843,6 +861,9 @@ namespace TerraFX.Interop
         [DllImport("vulkan", ExactSpelling = true)]
         [return: NativeTypeName("uint32_t")]
         public static extern uint vkGetImageViewHandleNVX([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkImageViewHandleInfoNVX *")] VkImageViewHandleInfoNVX* pInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkGetImageViewAddressNVX([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkImageView")] ulong imageView, [NativeTypeName("VkImageViewAddressPropertiesNVX *")] VkImageViewAddressPropertiesNVX* pProperties);
 
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern void vkCmdDrawIndirectCountAMD([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkBuffer")] ulong buffer, [NativeTypeName("VkDeviceSize")] ulong offset, [NativeTypeName("VkBuffer")] ulong countBuffer, [NativeTypeName("VkDeviceSize")] ulong countBufferOffset, [NativeTypeName("uint32_t")] uint maxDrawCount, [NativeTypeName("uint32_t")] uint stride);
@@ -1089,6 +1110,42 @@ namespace TerraFX.Interop
         public static extern void vkResetQueryPoolEXT([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkQueryPool")] ulong queryPool, [NativeTypeName("uint32_t")] uint firstQuery, [NativeTypeName("uint32_t")] uint queryCount);
 
         [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetCullModeEXT([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkCullModeFlags")] uint cullMode);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetFrontFaceEXT([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, VkFrontFace frontFace);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetPrimitiveTopologyEXT([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, VkPrimitiveTopology primitiveTopology);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetViewportWithCountEXT([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("uint32_t")] uint viewportCount, [NativeTypeName("const VkViewport *")] VkViewport* pViewports);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetScissorWithCountEXT([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("uint32_t")] uint scissorCount, [NativeTypeName("const VkRect2D *")] VkRect2D* pScissors);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdBindVertexBuffers2EXT([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("uint32_t")] uint firstBinding, [NativeTypeName("uint32_t")] uint bindingCount, [NativeTypeName("const VkBuffer *")] ulong* pBuffers, [NativeTypeName("const VkDeviceSize *")] ulong* pOffsets, [NativeTypeName("const VkDeviceSize *")] ulong* pSizes, [NativeTypeName("const VkDeviceSize *")] ulong* pStrides);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetDepthTestEnableEXT([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkBool32")] uint depthTestEnable);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetDepthWriteEnableEXT([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkBool32")] uint depthWriteEnable);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetDepthCompareOpEXT([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, VkCompareOp depthCompareOp);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetDepthBoundsTestEnableEXT([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkBool32")] uint depthBoundsTestEnable);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetStencilTestEnableEXT([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkBool32")] uint stencilTestEnable);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetStencilOpEXT([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkStencilFaceFlags")] uint faceMask, VkStencilOp failOp, VkStencilOp passOp, VkStencilOp depthFailOp, VkCompareOp compareOp);
+
+        [DllImport("vulkan", ExactSpelling = true)]
         public static extern void vkGetGeneratedCommandsMemoryRequirementsNV([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkGeneratedCommandsMemoryRequirementsInfoNV *")] VkGeneratedCommandsMemoryRequirementsInfoNV* pInfo, [NativeTypeName("VkMemoryRequirements2 *")] VkMemoryRequirements2* pMemoryRequirements);
 
         [DllImport("vulkan", ExactSpelling = true)]
@@ -1106,59 +1163,71 @@ namespace TerraFX.Interop
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern void vkDestroyIndirectCommandsLayoutNV([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkIndirectCommandsLayoutNV")] ulong indirectCommandsLayout, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkCreatePrivateDataSlotEXT([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkPrivateDataSlotCreateInfoEXT *")] VkPrivateDataSlotCreateInfoEXT* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkPrivateDataSlotEXT *")] ulong* pPrivateDataSlot);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkDestroyPrivateDataSlotEXT([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkPrivateDataSlotEXT")] ulong privateDataSlot, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkSetPrivateDataEXT([NativeTypeName("VkDevice")] IntPtr device, VkObjectType objectType, [NativeTypeName("uint64_t")] ulong objectHandle, [NativeTypeName("VkPrivateDataSlotEXT")] ulong privateDataSlot, [NativeTypeName("uint64_t")] ulong data);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkGetPrivateDataEXT([NativeTypeName("VkDevice")] IntPtr device, VkObjectType objectType, [NativeTypeName("uint64_t")] ulong objectHandle, [NativeTypeName("VkPrivateDataSlotEXT")] ulong privateDataSlot, [NativeTypeName("uint64_t *")] ulong* pData);
+
         [NativeTypeName("#define VK_VERSION_1_0 1")]
         public const int VK_VERSION_1_0 = 1;
 
         [NativeTypeName("#define VK_API_VERSION_1_0 VK_MAKE_VERSION(1, 0, 0)")]
-        public const int VK_API_VERSION_1_0 = (((1) << 22) | ((0) << 12) | (0));
+        public const uint VK_API_VERSION_1_0 = ((((uint)(1)) << 22) | (((uint)(0)) << 12) | ((uint)(0)));
 
-        [NativeTypeName("#define VK_HEADER_VERSION 135")]
-        public const int VK_HEADER_VERSION = 135;
+        [NativeTypeName("#define VK_HEADER_VERSION 154")]
+        public const int VK_HEADER_VERSION = 154;
 
         [NativeTypeName("#define VK_HEADER_VERSION_COMPLETE VK_MAKE_VERSION(1, 2, VK_HEADER_VERSION)")]
-        public const int VK_HEADER_VERSION_COMPLETE = (((1) << 22) | ((2) << 12) | (135));
+        public const uint VK_HEADER_VERSION_COMPLETE = ((((uint)(1)) << 22) | (((uint)(2)) << 12) | ((uint)(154)));
 
         [NativeTypeName("#define VK_NULL_HANDLE 0")]
         public const int VK_NULL_HANDLE = 0;
 
-        [NativeTypeName("#define VK_LOD_CLAMP_NONE 1000.0f")]
-        public const float VK_LOD_CLAMP_NONE = 1000.0f;
-
-        [NativeTypeName("#define VK_REMAINING_MIP_LEVELS (~0U)")]
-        public const uint VK_REMAINING_MIP_LEVELS = (~0U);
-
-        [NativeTypeName("#define VK_REMAINING_ARRAY_LAYERS (~0U)")]
-        public const uint VK_REMAINING_ARRAY_LAYERS = (~0U);
-
-        [NativeTypeName("#define VK_WHOLE_SIZE (~0ULL)")]
-        public const ulong VK_WHOLE_SIZE = (~0UL);
-
         [NativeTypeName("#define VK_ATTACHMENT_UNUSED (~0U)")]
         public const uint VK_ATTACHMENT_UNUSED = (~0U);
-
-        [NativeTypeName("#define VK_TRUE 1")]
-        public const int VK_TRUE = 1;
 
         [NativeTypeName("#define VK_FALSE 0")]
         public const int VK_FALSE = 0;
 
+        [NativeTypeName("#define VK_LOD_CLAMP_NONE 1000.0f")]
+        public const float VK_LOD_CLAMP_NONE = 1000.0f;
+
         [NativeTypeName("#define VK_QUEUE_FAMILY_IGNORED (~0U)")]
         public const uint VK_QUEUE_FAMILY_IGNORED = (~0U);
+
+        [NativeTypeName("#define VK_REMAINING_ARRAY_LAYERS (~0U)")]
+        public const uint VK_REMAINING_ARRAY_LAYERS = (~0U);
+
+        [NativeTypeName("#define VK_REMAINING_MIP_LEVELS (~0U)")]
+        public const uint VK_REMAINING_MIP_LEVELS = (~0U);
 
         [NativeTypeName("#define VK_SUBPASS_EXTERNAL (~0U)")]
         public const uint VK_SUBPASS_EXTERNAL = (~0U);
 
-        [NativeTypeName("#define VK_MAX_PHYSICAL_DEVICE_NAME_SIZE 256")]
-        public const int VK_MAX_PHYSICAL_DEVICE_NAME_SIZE = 256;
+        [NativeTypeName("#define VK_TRUE 1")]
+        public const int VK_TRUE = 1;
 
-        [NativeTypeName("#define VK_UUID_SIZE 16")]
-        public const int VK_UUID_SIZE = 16;
+        [NativeTypeName("#define VK_WHOLE_SIZE (~0ULL)")]
+        public const ulong VK_WHOLE_SIZE = (~0UL);
 
         [NativeTypeName("#define VK_MAX_MEMORY_TYPES 32")]
         public const int VK_MAX_MEMORY_TYPES = 32;
 
         [NativeTypeName("#define VK_MAX_MEMORY_HEAPS 16")]
         public const int VK_MAX_MEMORY_HEAPS = 16;
+
+        [NativeTypeName("#define VK_MAX_PHYSICAL_DEVICE_NAME_SIZE 256")]
+        public const int VK_MAX_PHYSICAL_DEVICE_NAME_SIZE = 256;
+
+        [NativeTypeName("#define VK_UUID_SIZE 16")]
+        public const int VK_UUID_SIZE = 16;
 
         [NativeTypeName("#define VK_MAX_EXTENSION_NAME_SIZE 256")]
         public const int VK_MAX_EXTENSION_NAME_SIZE = 256;
@@ -1170,7 +1239,7 @@ namespace TerraFX.Interop
         public const int VK_VERSION_1_1 = 1;
 
         [NativeTypeName("#define VK_API_VERSION_1_1 VK_MAKE_VERSION(1, 1, 0)")]
-        public const int VK_API_VERSION_1_1 = (((1) << 22) | ((1) << 12) | (0));
+        public const uint VK_API_VERSION_1_1 = ((((uint)(1)) << 22) | (((uint)(1)) << 12) | ((uint)(0)));
 
         [NativeTypeName("#define VK_MAX_DEVICE_GROUP_SIZE 32")]
         public const int VK_MAX_DEVICE_GROUP_SIZE = 32;
@@ -1185,7 +1254,7 @@ namespace TerraFX.Interop
         public const int VK_VERSION_1_2 = 1;
 
         [NativeTypeName("#define VK_API_VERSION_1_2 VK_MAKE_VERSION(1, 2, 0)")]
-        public const int VK_API_VERSION_1_2 = (((1) << 22) | ((2) << 12) | (0));
+        public const uint VK_API_VERSION_1_2 = ((((uint)(1)) << 22) | (((uint)(2)) << 12) | ((uint)(0)));
 
         [NativeTypeName("#define VK_MAX_DRIVER_NAME_SIZE 256")]
         public const int VK_MAX_DRIVER_NAME_SIZE = 256;
@@ -1739,6 +1808,15 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_KHR_SHADER_NON_SEMANTIC_INFO_EXTENSION_NAME \"VK_KHR_shader_non_semantic_info\"")]
         public static ReadOnlySpan<byte> VK_KHR_SHADER_NON_SEMANTIC_INFO_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x73, 0x68, 0x61, 0x64, 0x65, 0x72, 0x5F, 0x6E, 0x6F, 0x6E, 0x5F, 0x73, 0x65, 0x6D, 0x61, 0x6E, 0x74, 0x69, 0x63, 0x5F, 0x69, 0x6E, 0x66, 0x6F, 0x00 };
 
+        [NativeTypeName("#define VK_KHR_copy_commands2 1")]
+        public const int VK_KHR_copy_commands2 = 1;
+
+        [NativeTypeName("#define VK_KHR_COPY_COMMANDS_2_SPEC_VERSION 1")]
+        public const int VK_KHR_COPY_COMMANDS_2_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_COPY_COMMANDS_2_EXTENSION_NAME \"VK_KHR_copy_commands2\"")]
+        public static ReadOnlySpan<byte> VK_KHR_COPY_COMMANDS_2_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x63, 0x6F, 0x70, 0x79, 0x5F, 0x63, 0x6F, 0x6D, 0x6D, 0x61, 0x6E, 0x64, 0x73, 0x32, 0x00 };
+
         [NativeTypeName("#define VK_EXT_debug_report 1")]
         public const int VK_EXT_debug_report = 1;
 
@@ -1841,8 +1919,8 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_NVX_image_view_handle 1")]
         public const int VK_NVX_image_view_handle = 1;
 
-        [NativeTypeName("#define VK_NVX_IMAGE_VIEW_HANDLE_SPEC_VERSION 1")]
-        public const int VK_NVX_IMAGE_VIEW_HANDLE_SPEC_VERSION = 1;
+        [NativeTypeName("#define VK_NVX_IMAGE_VIEW_HANDLE_SPEC_VERSION 2")]
+        public const int VK_NVX_IMAGE_VIEW_HANDLE_SPEC_VERSION = 2;
 
         [NativeTypeName("#define VK_NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME \"VK_NVX_image_view_handle\"")]
         public static ReadOnlySpan<byte> VK_NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4E, 0x56, 0x58, 0x5F, 0x69, 0x6D, 0x61, 0x67, 0x65, 0x5F, 0x76, 0x69, 0x65, 0x77, 0x5F, 0x68, 0x61, 0x6E, 0x64, 0x6C, 0x65, 0x00 };
@@ -2159,8 +2237,8 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_EXT_debug_utils 1")]
         public const int VK_EXT_debug_utils = 1;
 
-        [NativeTypeName("#define VK_EXT_DEBUG_UTILS_SPEC_VERSION 1")]
-        public const int VK_EXT_DEBUG_UTILS_SPEC_VERSION = 1;
+        [NativeTypeName("#define VK_EXT_DEBUG_UTILS_SPEC_VERSION 2")]
+        public const int VK_EXT_DEBUG_UTILS_SPEC_VERSION = 2;
 
         [NativeTypeName("#define VK_EXT_DEBUG_UTILS_EXTENSION_NAME \"VK_EXT_debug_utils\"")]
         public static ReadOnlySpan<byte> VK_EXT_DEBUG_UTILS_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x64, 0x65, 0x62, 0x75, 0x67, 0x5F, 0x75, 0x74, 0x69, 0x6C, 0x73, 0x00 };
@@ -2359,6 +2437,15 @@ namespace TerraFX.Interop
 
         [NativeTypeName("#define VK_EXT_FILTER_CUBIC_EXTENSION_NAME \"VK_EXT_filter_cubic\"")]
         public static ReadOnlySpan<byte> VK_EXT_FILTER_CUBIC_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x66, 0x69, 0x6C, 0x74, 0x65, 0x72, 0x5F, 0x63, 0x75, 0x62, 0x69, 0x63, 0x00 };
+
+        [NativeTypeName("#define VK_QCOM_render_pass_shader_resolve 1")]
+        public const int VK_QCOM_render_pass_shader_resolve = 1;
+
+        [NativeTypeName("#define VK_QCOM_RENDER_PASS_SHADER_RESOLVE_SPEC_VERSION 4")]
+        public const int VK_QCOM_RENDER_PASS_SHADER_RESOLVE_SPEC_VERSION = 4;
+
+        [NativeTypeName("#define VK_QCOM_RENDER_PASS_SHADER_RESOLVE_EXTENSION_NAME \"VK_QCOM_render_pass_shader_resolve\"")]
+        public static ReadOnlySpan<byte> VK_QCOM_RENDER_PASS_SHADER_RESOLVE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x51, 0x43, 0x4F, 0x4D, 0x5F, 0x72, 0x65, 0x6E, 0x64, 0x65, 0x72, 0x5F, 0x70, 0x61, 0x73, 0x73, 0x5F, 0x73, 0x68, 0x61, 0x64, 0x65, 0x72, 0x5F, 0x72, 0x65, 0x73, 0x6F, 0x6C, 0x76, 0x65, 0x00 };
 
         [NativeTypeName("#define VK_EXT_global_priority 1")]
         public const int VK_EXT_global_priority = 1;
@@ -2660,8 +2747,8 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_EXT_validation_features 1")]
         public const int VK_EXT_validation_features = 1;
 
-        [NativeTypeName("#define VK_EXT_VALIDATION_FEATURES_SPEC_VERSION 3")]
-        public const int VK_EXT_VALIDATION_FEATURES_SPEC_VERSION = 3;
+        [NativeTypeName("#define VK_EXT_VALIDATION_FEATURES_SPEC_VERSION 4")]
+        public const int VK_EXT_VALIDATION_FEATURES_SPEC_VERSION = 4;
 
         [NativeTypeName("#define VK_EXT_VALIDATION_FEATURES_EXTENSION_NAME \"VK_EXT_validation_features\"")]
         public static ReadOnlySpan<byte> VK_EXT_VALIDATION_FEATURES_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x76, 0x61, 0x6C, 0x69, 0x64, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x5F, 0x66, 0x65, 0x61, 0x74, 0x75, 0x72, 0x65, 0x73, 0x00 };
@@ -2720,6 +2807,15 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_EXT_LINE_RASTERIZATION_EXTENSION_NAME \"VK_EXT_line_rasterization\"")]
         public static ReadOnlySpan<byte> VK_EXT_LINE_RASTERIZATION_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x6C, 0x69, 0x6E, 0x65, 0x5F, 0x72, 0x61, 0x73, 0x74, 0x65, 0x72, 0x69, 0x7A, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x00 };
 
+        [NativeTypeName("#define VK_EXT_shader_atomic_float 1")]
+        public const int VK_EXT_shader_atomic_float = 1;
+
+        [NativeTypeName("#define VK_EXT_SHADER_ATOMIC_FLOAT_SPEC_VERSION 1")]
+        public const int VK_EXT_SHADER_ATOMIC_FLOAT_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_SHADER_ATOMIC_FLOAT_EXTENSION_NAME \"VK_EXT_shader_atomic_float\"")]
+        public static ReadOnlySpan<byte> VK_EXT_SHADER_ATOMIC_FLOAT_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x73, 0x68, 0x61, 0x64, 0x65, 0x72, 0x5F, 0x61, 0x74, 0x6F, 0x6D, 0x69, 0x63, 0x5F, 0x66, 0x6C, 0x6F, 0x61, 0x74, 0x00 };
+
         [NativeTypeName("#define VK_EXT_host_query_reset 1")]
         public const int VK_EXT_host_query_reset = 1;
 
@@ -2737,6 +2833,15 @@ namespace TerraFX.Interop
 
         [NativeTypeName("#define VK_EXT_INDEX_TYPE_UINT8_EXTENSION_NAME \"VK_EXT_index_type_uint8\"")]
         public static ReadOnlySpan<byte> VK_EXT_INDEX_TYPE_UINT8_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x69, 0x6E, 0x64, 0x65, 0x78, 0x5F, 0x74, 0x79, 0x70, 0x65, 0x5F, 0x75, 0x69, 0x6E, 0x74, 0x38, 0x00 };
+
+        [NativeTypeName("#define VK_EXT_extended_dynamic_state 1")]
+        public const int VK_EXT_extended_dynamic_state = 1;
+
+        [NativeTypeName("#define VK_EXT_EXTENDED_DYNAMIC_STATE_SPEC_VERSION 1")]
+        public const int VK_EXT_EXTENDED_DYNAMIC_STATE_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME \"VK_EXT_extended_dynamic_state\"")]
+        public static ReadOnlySpan<byte> VK_EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x65, 0x78, 0x74, 0x65, 0x6E, 0x64, 0x65, 0x64, 0x5F, 0x64, 0x79, 0x6E, 0x61, 0x6D, 0x69, 0x63, 0x5F, 0x73, 0x74, 0x61, 0x74, 0x65, 0x00 };
 
         [NativeTypeName("#define VK_EXT_shader_demote_to_helper_invocation 1")]
         public const int VK_EXT_shader_demote_to_helper_invocation = 1;
@@ -2774,6 +2879,24 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME \"VK_QCOM_render_pass_transform\"")]
         public static ReadOnlySpan<byte> VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x51, 0x43, 0x4F, 0x4D, 0x5F, 0x72, 0x65, 0x6E, 0x64, 0x65, 0x72, 0x5F, 0x70, 0x61, 0x73, 0x73, 0x5F, 0x74, 0x72, 0x61, 0x6E, 0x73, 0x66, 0x6F, 0x72, 0x6D, 0x00 };
 
+        [NativeTypeName("#define VK_EXT_robustness2 1")]
+        public const int VK_EXT_robustness2 = 1;
+
+        [NativeTypeName("#define VK_EXT_ROBUSTNESS_2_SPEC_VERSION 1")]
+        public const int VK_EXT_ROBUSTNESS_2_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_ROBUSTNESS_2_EXTENSION_NAME \"VK_EXT_robustness2\"")]
+        public static ReadOnlySpan<byte> VK_EXT_ROBUSTNESS_2_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x72, 0x6F, 0x62, 0x75, 0x73, 0x74, 0x6E, 0x65, 0x73, 0x73, 0x32, 0x00 };
+
+        [NativeTypeName("#define VK_EXT_custom_border_color 1")]
+        public const int VK_EXT_custom_border_color = 1;
+
+        [NativeTypeName("#define VK_EXT_CUSTOM_BORDER_COLOR_SPEC_VERSION 12")]
+        public const int VK_EXT_CUSTOM_BORDER_COLOR_SPEC_VERSION = 12;
+
+        [NativeTypeName("#define VK_EXT_CUSTOM_BORDER_COLOR_EXTENSION_NAME \"VK_EXT_custom_border_color\"")]
+        public static ReadOnlySpan<byte> VK_EXT_CUSTOM_BORDER_COLOR_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x63, 0x75, 0x73, 0x74, 0x6F, 0x6D, 0x5F, 0x62, 0x6F, 0x72, 0x64, 0x65, 0x72, 0x5F, 0x63, 0x6F, 0x6C, 0x6F, 0x72, 0x00 };
+
         [NativeTypeName("#define VK_GOOGLE_user_type 1")]
         public const int VK_GOOGLE_user_type = 1;
 
@@ -2783,11 +2906,20 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_GOOGLE_USER_TYPE_EXTENSION_NAME \"VK_GOOGLE_user_type\"")]
         public static ReadOnlySpan<byte> VK_GOOGLE_USER_TYPE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x47, 0x4F, 0x4F, 0x47, 0x4C, 0x45, 0x5F, 0x75, 0x73, 0x65, 0x72, 0x5F, 0x74, 0x79, 0x70, 0x65, 0x00 };
 
+        [NativeTypeName("#define VK_EXT_private_data 1")]
+        public const int VK_EXT_private_data = 1;
+
+        [NativeTypeName("#define VK_EXT_PRIVATE_DATA_SPEC_VERSION 1")]
+        public const int VK_EXT_PRIVATE_DATA_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_PRIVATE_DATA_EXTENSION_NAME \"VK_EXT_private_data\"")]
+        public static ReadOnlySpan<byte> VK_EXT_PRIVATE_DATA_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x70, 0x72, 0x69, 0x76, 0x61, 0x74, 0x65, 0x5F, 0x64, 0x61, 0x74, 0x61, 0x00 };
+
         [NativeTypeName("#define VK_EXT_pipeline_creation_cache_control 1")]
         public const int VK_EXT_pipeline_creation_cache_control = 1;
 
-        [NativeTypeName("#define VK_EXT_PIPELINE_CREATION_CACHE_CONTROL_SPEC_VERSION 2")]
-        public const int VK_EXT_PIPELINE_CREATION_CACHE_CONTROL_SPEC_VERSION = 2;
+        [NativeTypeName("#define VK_EXT_PIPELINE_CREATION_CACHE_CONTROL_SPEC_VERSION 3")]
+        public const int VK_EXT_PIPELINE_CREATION_CACHE_CONTROL_SPEC_VERSION = 3;
 
         [NativeTypeName("#define VK_EXT_PIPELINE_CREATION_CACHE_CONTROL_EXTENSION_NAME \"VK_EXT_pipeline_creation_cache_control\"")]
         public static ReadOnlySpan<byte> VK_EXT_PIPELINE_CREATION_CACHE_CONTROL_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x70, 0x69, 0x70, 0x65, 0x6C, 0x69, 0x6E, 0x65, 0x5F, 0x63, 0x72, 0x65, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x5F, 0x63, 0x61, 0x63, 0x68, 0x65, 0x5F, 0x63, 0x6F, 0x6E, 0x74, 0x72, 0x6F, 0x6C, 0x00 };
@@ -2800,5 +2932,41 @@ namespace TerraFX.Interop
 
         [NativeTypeName("#define VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME \"VK_NV_device_diagnostics_config\"")]
         public static ReadOnlySpan<byte> VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4E, 0x56, 0x5F, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x5F, 0x64, 0x69, 0x61, 0x67, 0x6E, 0x6F, 0x73, 0x74, 0x69, 0x63, 0x73, 0x5F, 0x63, 0x6F, 0x6E, 0x66, 0x69, 0x67, 0x00 };
+
+        [NativeTypeName("#define VK_QCOM_render_pass_store_ops 1")]
+        public const int VK_QCOM_render_pass_store_ops = 1;
+
+        [NativeTypeName("#define VK_QCOM_render_pass_store_ops_SPEC_VERSION 2")]
+        public const int VK_QCOM_render_pass_store_ops_SPEC_VERSION = 2;
+
+        [NativeTypeName("#define VK_QCOM_render_pass_store_ops_EXTENSION_NAME \"VK_QCOM_render_pass_store_ops\"")]
+        public static ReadOnlySpan<byte> VK_QCOM_render_pass_store_ops_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x51, 0x43, 0x4F, 0x4D, 0x5F, 0x72, 0x65, 0x6E, 0x64, 0x65, 0x72, 0x5F, 0x70, 0x61, 0x73, 0x73, 0x5F, 0x73, 0x74, 0x6F, 0x72, 0x65, 0x5F, 0x6F, 0x70, 0x73, 0x00 };
+
+        [NativeTypeName("#define VK_EXT_fragment_density_map2 1")]
+        public const int VK_EXT_fragment_density_map2 = 1;
+
+        [NativeTypeName("#define VK_EXT_FRAGMENT_DENSITY_MAP_2_SPEC_VERSION 1")]
+        public const int VK_EXT_FRAGMENT_DENSITY_MAP_2_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_FRAGMENT_DENSITY_MAP_2_EXTENSION_NAME \"VK_EXT_fragment_density_map2\"")]
+        public static ReadOnlySpan<byte> VK_EXT_FRAGMENT_DENSITY_MAP_2_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x66, 0x72, 0x61, 0x67, 0x6D, 0x65, 0x6E, 0x74, 0x5F, 0x64, 0x65, 0x6E, 0x73, 0x69, 0x74, 0x79, 0x5F, 0x6D, 0x61, 0x70, 0x32, 0x00 };
+
+        [NativeTypeName("#define VK_EXT_image_robustness 1")]
+        public const int VK_EXT_image_robustness = 1;
+
+        [NativeTypeName("#define VK_EXT_IMAGE_ROBUSTNESS_SPEC_VERSION 1")]
+        public const int VK_EXT_IMAGE_ROBUSTNESS_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_IMAGE_ROBUSTNESS_EXTENSION_NAME \"VK_EXT_image_robustness\"")]
+        public static ReadOnlySpan<byte> VK_EXT_IMAGE_ROBUSTNESS_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x69, 0x6D, 0x61, 0x67, 0x65, 0x5F, 0x72, 0x6F, 0x62, 0x75, 0x73, 0x74, 0x6E, 0x65, 0x73, 0x73, 0x00 };
+
+        [NativeTypeName("#define VK_EXT_4444_formats 1")]
+        public const int VK_EXT_4444_formats = 1;
+
+        [NativeTypeName("#define VK_EXT_4444_FORMATS_SPEC_VERSION 1")]
+        public const int VK_EXT_4444_FORMATS_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_4444_FORMATS_EXTENSION_NAME \"VK_EXT_4444_formats\"")]
+        public static ReadOnlySpan<byte> VK_EXT_4444_FORMATS_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x34, 0x34, 0x34, 0x34, 0x5F, 0x66, 0x6F, 0x72, 0x6D, 0x61, 0x74, 0x73, 0x00 };
     }
 }

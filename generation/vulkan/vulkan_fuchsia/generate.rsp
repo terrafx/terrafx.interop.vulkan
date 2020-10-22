@@ -13,4 +13,4 @@ vulkan-vulkan_fuchsia.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan_fuchsia
 --traverse
-C:/VulkanSDK/1.2.135.0/Include/vulkan/vulkan_fuchsia.h
+C:/VulkanSDK/1.2.154.1/Include/vulkan/vulkan_fuchsia.h

@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.135
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.154
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 namespace TerraFX.Interop
@@ -18,9 +18,6 @@ namespace TerraFX.Interop
         VK_PERFORMANCE_COUNTER_UNIT_AMPS_KHR = 8,
         VK_PERFORMANCE_COUNTER_UNIT_HERTZ_KHR = 9,
         VK_PERFORMANCE_COUNTER_UNIT_CYCLES_KHR = 10,
-        VK_PERFORMANCE_COUNTER_UNIT_BEGIN_RANGE_KHR = VK_PERFORMANCE_COUNTER_UNIT_GENERIC_KHR,
-        VK_PERFORMANCE_COUNTER_UNIT_END_RANGE_KHR = VK_PERFORMANCE_COUNTER_UNIT_CYCLES_KHR,
-        VK_PERFORMANCE_COUNTER_UNIT_RANGE_SIZE_KHR = (VK_PERFORMANCE_COUNTER_UNIT_CYCLES_KHR - VK_PERFORMANCE_COUNTER_UNIT_GENERIC_KHR + 1),
         VK_PERFORMANCE_COUNTER_UNIT_MAX_ENUM_KHR = 0x7FFFFFFF,
     }
 }

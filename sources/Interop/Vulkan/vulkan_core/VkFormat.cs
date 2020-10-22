@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.135
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.154
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 namespace TerraFX.Interop
@@ -248,6 +248,8 @@ namespace TerraFX.Interop
         VK_FORMAT_ASTC_10x10_SFLOAT_BLOCK_EXT = 1000066011,
         VK_FORMAT_ASTC_12x10_SFLOAT_BLOCK_EXT = 1000066012,
         VK_FORMAT_ASTC_12x12_SFLOAT_BLOCK_EXT = 1000066013,
+        VK_FORMAT_A4R4G4B4_UNORM_PACK16_EXT = 1000340000,
+        VK_FORMAT_A4B4G4R4_UNORM_PACK16_EXT = 1000340001,
         VK_FORMAT_G8B8G8R8_422_UNORM_KHR = VK_FORMAT_G8B8G8R8_422_UNORM,
         VK_FORMAT_B8G8R8G8_422_UNORM_KHR = VK_FORMAT_B8G8R8G8_422_UNORM,
         VK_FORMAT_G8_B8_R8_3PLANE_420_UNORM_KHR = VK_FORMAT_G8_B8_R8_3PLANE_420_UNORM,
@@ -282,9 +284,6 @@ namespace TerraFX.Interop
         VK_FORMAT_G16_B16_R16_3PLANE_422_UNORM_KHR = VK_FORMAT_G16_B16_R16_3PLANE_422_UNORM,
         VK_FORMAT_G16_B16R16_2PLANE_422_UNORM_KHR = VK_FORMAT_G16_B16R16_2PLANE_422_UNORM,
         VK_FORMAT_G16_B16_R16_3PLANE_444_UNORM_KHR = VK_FORMAT_G16_B16_R16_3PLANE_444_UNORM,
-        VK_FORMAT_BEGIN_RANGE = VK_FORMAT_UNDEFINED,
-        VK_FORMAT_END_RANGE = VK_FORMAT_ASTC_12x12_SRGB_BLOCK,
-        VK_FORMAT_RANGE_SIZE = (VK_FORMAT_ASTC_12x12_SRGB_BLOCK - VK_FORMAT_UNDEFINED + 1),
         VK_FORMAT_MAX_ENUM = 0x7FFFFFFF,
     }
 }

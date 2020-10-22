@@ -11,5 +11,5 @@ vulkan-vulkan_android.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan_android
 --traverse
-C:/VulkanSDK/1.2.135.0/Include/vulkan/vulkan_android.h
+C:/VulkanSDK/1.2.154.1/Include/vulkan/vulkan_android.h
 

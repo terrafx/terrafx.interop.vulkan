@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vk_layer.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.135
+// Ported from include/vulkan/vk_layer.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.154
 // Original source is Copyright © 2015-2017 The Khronos Group Inc. Copyright © 2015-2017 Valve Corporation. Copyright © 2015-2017 LunarG, Inc.
 
 using System;
@@ -18,7 +18,7 @@ namespace TerraFX.Interop
         [NativeTypeName("VkLayerFunction")]
         public VkLayerFunction_ function;
 
-        [NativeTypeName("union (anonymous union at C:/VulkanSDK/1.2.135.0/Include/vulkan/vk_layer.h:118:5)")]
+        [NativeTypeName("union (anonymous union at C:/VulkanSDK/1.2.154.1/Include/vulkan/vk_layer.h:125:5)")]
         public _u_e__Union u;
 
         [StructLayout(LayoutKind.Explicit)]
@@ -33,8 +33,12 @@ namespace TerraFX.Interop
             public delegate* unmanaged<IntPtr, void*, VkResult> pfnSetInstanceLoaderData;
 
             [FieldOffset(0)]
-            [NativeTypeName("struct (anonymous struct at C:/VulkanSDK/1.2.135.0/Include/vulkan/vk_layer.h:121:9)")]
+            [NativeTypeName("struct (anonymous struct at C:/VulkanSDK/1.2.154.1/Include/vulkan/vk_layer.h:128:9)")]
             public _layerDevice_e__Struct layerDevice;
+
+            [FieldOffset(0)]
+            [NativeTypeName("VkLoaderFeatureFlags")]
+            public uint loaderFeatures;
 
             public unsafe partial struct _layerDevice_e__Struct
             {
