@@ -13,4 +13,4 @@ vulkan-vulkan_wayland.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan_wayland
 --traverse
-C:/VulkanSDK/1.2.154.1/Include/vulkan/vulkan_wayland.h
+C:/VulkanSDK/1.2.162.1/Include/vulkan/vulkan_wayland.h
