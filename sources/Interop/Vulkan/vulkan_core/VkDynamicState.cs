@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.154
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.162
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 namespace TerraFX.Interop
@@ -19,9 +19,11 @@ namespace TerraFX.Interop
         VK_DYNAMIC_STATE_VIEWPORT_W_SCALING_NV = 1000087000,
         VK_DYNAMIC_STATE_DISCARD_RECTANGLE_EXT = 1000099000,
         VK_DYNAMIC_STATE_SAMPLE_LOCATIONS_EXT = 1000143000,
+        VK_DYNAMIC_STATE_RAY_TRACING_PIPELINE_STACK_SIZE_KHR = 1000347000,
         VK_DYNAMIC_STATE_VIEWPORT_SHADING_RATE_PALETTE_NV = 1000164004,
         VK_DYNAMIC_STATE_VIEWPORT_COARSE_SAMPLE_ORDER_NV = 1000164006,
         VK_DYNAMIC_STATE_EXCLUSIVE_SCISSOR_NV = 1000205001,
+        VK_DYNAMIC_STATE_FRAGMENT_SHADING_RATE_KHR = 1000226000,
         VK_DYNAMIC_STATE_LINE_STIPPLE_EXT = 1000259000,
         VK_DYNAMIC_STATE_CULL_MODE_EXT = 1000267000,
         VK_DYNAMIC_STATE_FRONT_FACE_EXT = 1000267001,

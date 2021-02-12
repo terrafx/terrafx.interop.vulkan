@@ -13,4 +13,4 @@ vulkan-vulkan_xlib_xrandr.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan_xlib_xrandr
 --traverse
-C:/VulkanSDK/1.2.154.1/Include/vulkan/vulkan_xlib_xrandr.h
+C:/VulkanSDK/1.2.162.1/Include/vulkan/vulkan_xlib_xrandr.h

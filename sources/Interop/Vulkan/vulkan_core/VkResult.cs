@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.154
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.162
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 namespace TerraFX.Interop
@@ -37,7 +37,6 @@ namespace TerraFX.Interop
         VK_ERROR_INCOMPATIBLE_DISPLAY_KHR = -1000003001,
         VK_ERROR_VALIDATION_FAILED_EXT = -1000011001,
         VK_ERROR_INVALID_SHADER_NV = -1000012000,
-        VK_ERROR_INCOMPATIBLE_VERSION_KHR = -1000150000,
         VK_ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT = -1000158000,
         VK_ERROR_NOT_PERMITTED_EXT = -1000174001,
         VK_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT = -1000255000,

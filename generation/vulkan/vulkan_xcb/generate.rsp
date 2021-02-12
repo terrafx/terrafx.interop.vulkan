@@ -13,4 +13,4 @@ vulkan-vulkan_xcb.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan_xcb
 --traverse
-C:/VulkanSDK/1.2.154.1/Include/vulkan/vulkan_xcb.h
+C:/VulkanSDK/1.2.162.1/Include/vulkan/vulkan_xcb.h

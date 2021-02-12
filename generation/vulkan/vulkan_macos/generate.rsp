@@ -11,4 +11,4 @@ vulkan-vulkan_macos.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan_macos
 --traverse
-C:/VulkanSDK/1.2.154.1/Include/vulkan/vulkan_macos.h
+C:/VulkanSDK/1.2.162.1/Include/vulkan/vulkan_macos.h

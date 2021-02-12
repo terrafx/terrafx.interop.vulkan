@@ -42,7 +42,7 @@
     <ContinuousIntegrationBuild Condition="'$(GITHUB_RUN_ID)' != ''">true</ContinuousIntegrationBuild>
     <PackageOutputPath>$(BaseArtifactsPath)pkg/$(Configuration)/</PackageOutputPath>
     <Product>TerraFX.Interop.Vulkan</Product>
-    <VersionPrefix>1.2.154</VersionPrefix>
+    <VersionPrefix>1.2.162</VersionPrefix>
     <VersionSuffix>beta2</VersionSuffix>
     <VersionSuffix Condition="'$(GITHUB_EVENT_NAME)' == 'pull_request'">pr</VersionSuffix>
   </PropertyGroup>
