@@ -20,5 +20,6 @@ namespace TerraFX.Interop
         VK_ICD_WSI_PLATFORM_METAL,
         VK_ICD_WSI_PLATFORM_DIRECTFB,
         VK_ICD_WSI_PLATFORM_VI,
+        VK_ICD_WSI_PLATFORM_GGP,
     }
 }

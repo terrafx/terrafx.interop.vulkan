@@ -778,6 +778,12 @@ namespace TerraFX.Interop
         public static extern VkResult vkSignalSemaphoreKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkSemaphoreSignalInfo *")] VkSemaphoreSignalInfo* pSignalInfo);
 
         [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkGetPhysicalDeviceFragmentShadingRatesKHR([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("uint32_t *")] uint* pFragmentShadingRateCount, [NativeTypeName("VkPhysicalDeviceFragmentShadingRateKHR *")] VkPhysicalDeviceFragmentShadingRateKHR* pFragmentShadingRates);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetFragmentShadingRateKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkExtent2D *")] VkExtent2D* pFragmentSize, [NativeTypeName("const VkFragmentShadingRateCombinerOpKHR [2]")] VkFragmentShadingRateCombinerOpKHR* combinerOps);
+
+        [DllImport("vulkan", ExactSpelling = true)]
         [return: NativeTypeName("VkDeviceAddress")]
         public static extern ulong vkGetBufferDeviceAddressKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkBufferDeviceAddressInfo *")] VkBufferDeviceAddressInfo* pInfo);
 
@@ -788,6 +794,22 @@ namespace TerraFX.Interop
         [DllImport("vulkan", ExactSpelling = true)]
         [return: NativeTypeName("uint64_t")]
         public static extern ulong vkGetDeviceMemoryOpaqueCaptureAddressKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkDeviceMemoryOpaqueCaptureAddressInfo *")] VkDeviceMemoryOpaqueCaptureAddressInfo* pInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkCreateDeferredOperationKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkDeferredOperationKHR *")] ulong* pDeferredOperation);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkDestroyDeferredOperationKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkDeferredOperationKHR")] ulong operation, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        [return: NativeTypeName("uint32_t")]
+        public static extern uint vkGetDeferredOperationMaxConcurrencyKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkDeferredOperationKHR")] ulong operation);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkGetDeferredOperationResultKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkDeferredOperationKHR")] ulong operation);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkDeferredOperationJoinKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkDeferredOperationKHR")] ulong operation);
 
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern VkResult vkGetPipelineExecutablePropertiesKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkPipelineInfoKHR *")] VkPipelineInfoKHR* pPipelineInfo, [NativeTypeName("uint32_t *")] uint* pExecutableCount, [NativeTypeName("VkPipelineExecutablePropertiesKHR *")] VkPipelineExecutablePropertiesKHR* pProperties);
@@ -983,25 +1005,19 @@ namespace TerraFX.Interop
         public static extern VkResult vkCreateAccelerationStructureNV([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkAccelerationStructureCreateInfoNV *")] VkAccelerationStructureCreateInfoNV* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkAccelerationStructureNV *")] ulong* pAccelerationStructure);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyAccelerationStructureKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkAccelerationStructureKHR")] ulong accelerationStructure, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyAccelerationStructureNV([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkAccelerationStructureKHR")] ulong accelerationStructure, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
+        public static extern void vkDestroyAccelerationStructureNV([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkAccelerationStructureNV")] ulong accelerationStructure, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern void vkGetAccelerationStructureMemoryRequirementsNV([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkAccelerationStructureMemoryRequirementsInfoNV *")] VkAccelerationStructureMemoryRequirementsInfoNV* pInfo, [NativeTypeName("VkMemoryRequirements2KHR *")] VkMemoryRequirements2* pMemoryRequirements);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkBindAccelerationStructureMemoryKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("uint32_t")] uint bindInfoCount, [NativeTypeName("const VkBindAccelerationStructureMemoryInfoKHR *")] VkBindAccelerationStructureMemoryInfoKHR* pBindInfos);
+        public static extern VkResult vkBindAccelerationStructureMemoryNV([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("uint32_t")] uint bindInfoCount, [NativeTypeName("const VkBindAccelerationStructureMemoryInfoNV *")] VkBindAccelerationStructureMemoryInfoNV* pBindInfos);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkBindAccelerationStructureMemoryNV([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("uint32_t")] uint bindInfoCount, [NativeTypeName("const VkBindAccelerationStructureMemoryInfoKHR *")] VkBindAccelerationStructureMemoryInfoKHR* pBindInfos);
+        public static extern void vkCmdBuildAccelerationStructureNV([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkAccelerationStructureInfoNV *")] VkAccelerationStructureInfoNV* pInfo, [NativeTypeName("VkBuffer")] ulong instanceData, [NativeTypeName("VkDeviceSize")] ulong instanceOffset, [NativeTypeName("VkBool32")] uint update, [NativeTypeName("VkAccelerationStructureNV")] ulong dst, [NativeTypeName("VkAccelerationStructureNV")] ulong src, [NativeTypeName("VkBuffer")] ulong scratch, [NativeTypeName("VkDeviceSize")] ulong scratchOffset);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBuildAccelerationStructureNV([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkAccelerationStructureInfoNV *")] VkAccelerationStructureInfoNV* pInfo, [NativeTypeName("VkBuffer")] ulong instanceData, [NativeTypeName("VkDeviceSize")] ulong instanceOffset, [NativeTypeName("VkBool32")] uint update, [NativeTypeName("VkAccelerationStructureKHR")] ulong dst, [NativeTypeName("VkAccelerationStructureKHR")] ulong src, [NativeTypeName("VkBuffer")] ulong scratch, [NativeTypeName("VkDeviceSize")] ulong scratchOffset);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdCopyAccelerationStructureNV([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkAccelerationStructureKHR")] ulong dst, [NativeTypeName("VkAccelerationStructureKHR")] ulong src, VkCopyAccelerationStructureModeKHR mode);
+        public static extern void vkCmdCopyAccelerationStructureNV([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkAccelerationStructureNV")] ulong dst, [NativeTypeName("VkAccelerationStructureNV")] ulong src, VkCopyAccelerationStructureModeKHR mode);
 
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern void vkCmdTraceRaysNV([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkBuffer")] ulong raygenShaderBindingTableBuffer, [NativeTypeName("VkDeviceSize")] ulong raygenShaderBindingOffset, [NativeTypeName("VkBuffer")] ulong missShaderBindingTableBuffer, [NativeTypeName("VkDeviceSize")] ulong missShaderBindingOffset, [NativeTypeName("VkDeviceSize")] ulong missShaderBindingStride, [NativeTypeName("VkBuffer")] ulong hitShaderBindingTableBuffer, [NativeTypeName("VkDeviceSize")] ulong hitShaderBindingOffset, [NativeTypeName("VkDeviceSize")] ulong hitShaderBindingStride, [NativeTypeName("VkBuffer")] ulong callableShaderBindingTableBuffer, [NativeTypeName("VkDeviceSize")] ulong callableShaderBindingOffset, [NativeTypeName("VkDeviceSize")] ulong callableShaderBindingStride, [NativeTypeName("uint32_t")] uint width, [NativeTypeName("uint32_t")] uint height, [NativeTypeName("uint32_t")] uint depth);
@@ -1016,13 +1032,10 @@ namespace TerraFX.Interop
         public static extern VkResult vkGetRayTracingShaderGroupHandlesNV([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkPipeline")] ulong pipeline, [NativeTypeName("uint32_t")] uint firstGroup, [NativeTypeName("uint32_t")] uint groupCount, [NativeTypeName("size_t")] nuint dataSize, [NativeTypeName("void *")] void* pData);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetAccelerationStructureHandleNV([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkAccelerationStructureKHR")] ulong accelerationStructure, [NativeTypeName("size_t")] nuint dataSize, [NativeTypeName("void *")] void* pData);
+        public static extern VkResult vkGetAccelerationStructureHandleNV([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkAccelerationStructureNV")] ulong accelerationStructure, [NativeTypeName("size_t")] nuint dataSize, [NativeTypeName("void *")] void* pData);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdWriteAccelerationStructuresPropertiesKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("uint32_t")] uint accelerationStructureCount, [NativeTypeName("const VkAccelerationStructureKHR *")] ulong* pAccelerationStructures, VkQueryType queryType, [NativeTypeName("VkQueryPool")] ulong queryPool, [NativeTypeName("uint32_t")] uint firstQuery);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdWriteAccelerationStructuresPropertiesNV([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("uint32_t")] uint accelerationStructureCount, [NativeTypeName("const VkAccelerationStructureKHR *")] ulong* pAccelerationStructures, VkQueryType queryType, [NativeTypeName("VkQueryPool")] ulong queryPool, [NativeTypeName("uint32_t")] uint firstQuery);
+        public static extern void vkCmdWriteAccelerationStructuresPropertiesNV([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("uint32_t")] uint accelerationStructureCount, [NativeTypeName("const VkAccelerationStructureNV *")] ulong* pAccelerationStructures, VkQueryType queryType, [NativeTypeName("VkQueryPool")] ulong queryPool, [NativeTypeName("uint32_t")] uint firstQuery);
 
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern VkResult vkCompileDeferredNV([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkPipeline")] ulong pipeline, [NativeTypeName("uint32_t")] uint shader);
@@ -1175,17 +1188,88 @@ namespace TerraFX.Interop
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern void vkGetPrivateDataEXT([NativeTypeName("VkDevice")] IntPtr device, VkObjectType objectType, [NativeTypeName("uint64_t")] ulong objectHandle, [NativeTypeName("VkPrivateDataSlotEXT")] ulong privateDataSlot, [NativeTypeName("uint64_t *")] ulong* pData);
 
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetFragmentShadingRateEnumNV([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, VkFragmentShadingRateNV shadingRate, [NativeTypeName("const VkFragmentShadingRateCombinerOpKHR [2]")] VkFragmentShadingRateCombinerOpKHR* combinerOps);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkCreateAccelerationStructureKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkAccelerationStructureCreateInfoKHR *")] VkAccelerationStructureCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkAccelerationStructureKHR *")] ulong* pAccelerationStructure);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkDestroyAccelerationStructureKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkAccelerationStructureKHR")] ulong accelerationStructure, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdBuildAccelerationStructuresKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("uint32_t")] uint infoCount, [NativeTypeName("const VkAccelerationStructureBuildGeometryInfoKHR *")] VkAccelerationStructureBuildGeometryInfoKHR* pInfos, [NativeTypeName("const VkAccelerationStructureBuildRangeInfoKHR *const *")] VkAccelerationStructureBuildRangeInfoKHR** ppBuildRangeInfos);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdBuildAccelerationStructuresIndirectKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("uint32_t")] uint infoCount, [NativeTypeName("const VkAccelerationStructureBuildGeometryInfoKHR *")] VkAccelerationStructureBuildGeometryInfoKHR* pInfos, [NativeTypeName("const VkDeviceAddress *")] ulong* pIndirectDeviceAddresses, [NativeTypeName("const uint32_t *")] uint* pIndirectStrides, [NativeTypeName("const uint32_t *const *")] uint** ppMaxPrimitiveCounts);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkBuildAccelerationStructuresKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkDeferredOperationKHR")] ulong deferredOperation, [NativeTypeName("uint32_t")] uint infoCount, [NativeTypeName("const VkAccelerationStructureBuildGeometryInfoKHR *")] VkAccelerationStructureBuildGeometryInfoKHR* pInfos, [NativeTypeName("const VkAccelerationStructureBuildRangeInfoKHR *const *")] VkAccelerationStructureBuildRangeInfoKHR** ppBuildRangeInfos);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkCopyAccelerationStructureKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkDeferredOperationKHR")] ulong deferredOperation, [NativeTypeName("const VkCopyAccelerationStructureInfoKHR *")] VkCopyAccelerationStructureInfoKHR* pInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkCopyAccelerationStructureToMemoryKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkDeferredOperationKHR")] ulong deferredOperation, [NativeTypeName("const VkCopyAccelerationStructureToMemoryInfoKHR *")] VkCopyAccelerationStructureToMemoryInfoKHR* pInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkCopyMemoryToAccelerationStructureKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkDeferredOperationKHR")] ulong deferredOperation, [NativeTypeName("const VkCopyMemoryToAccelerationStructureInfoKHR *")] VkCopyMemoryToAccelerationStructureInfoKHR* pInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkWriteAccelerationStructuresPropertiesKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("uint32_t")] uint accelerationStructureCount, [NativeTypeName("const VkAccelerationStructureKHR *")] ulong* pAccelerationStructures, VkQueryType queryType, [NativeTypeName("size_t")] nuint dataSize, [NativeTypeName("void *")] void* pData, [NativeTypeName("size_t")] nuint stride);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdCopyAccelerationStructureKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkCopyAccelerationStructureInfoKHR *")] VkCopyAccelerationStructureInfoKHR* pInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdCopyAccelerationStructureToMemoryKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkCopyAccelerationStructureToMemoryInfoKHR *")] VkCopyAccelerationStructureToMemoryInfoKHR* pInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdCopyMemoryToAccelerationStructureKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkCopyMemoryToAccelerationStructureInfoKHR *")] VkCopyMemoryToAccelerationStructureInfoKHR* pInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        [return: NativeTypeName("VkDeviceAddress")]
+        public static extern ulong vkGetAccelerationStructureDeviceAddressKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkAccelerationStructureDeviceAddressInfoKHR *")] VkAccelerationStructureDeviceAddressInfoKHR* pInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdWriteAccelerationStructuresPropertiesKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("uint32_t")] uint accelerationStructureCount, [NativeTypeName("const VkAccelerationStructureKHR *")] ulong* pAccelerationStructures, VkQueryType queryType, [NativeTypeName("VkQueryPool")] ulong queryPool, [NativeTypeName("uint32_t")] uint firstQuery);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkGetDeviceAccelerationStructureCompatibilityKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkAccelerationStructureVersionInfoKHR *")] VkAccelerationStructureVersionInfoKHR* pVersionInfo, [NativeTypeName("VkAccelerationStructureCompatibilityKHR *")] VkAccelerationStructureCompatibilityKHR* pCompatibility);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkGetAccelerationStructureBuildSizesKHR([NativeTypeName("VkDevice")] IntPtr device, VkAccelerationStructureBuildTypeKHR buildType, [NativeTypeName("const VkAccelerationStructureBuildGeometryInfoKHR *")] VkAccelerationStructureBuildGeometryInfoKHR* pBuildInfo, [NativeTypeName("const uint32_t *")] uint* pMaxPrimitiveCounts, [NativeTypeName("VkAccelerationStructureBuildSizesInfoKHR *")] VkAccelerationStructureBuildSizesInfoKHR* pSizeInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdTraceRaysKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pRaygenShaderBindingTable, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pMissShaderBindingTable, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pHitShaderBindingTable, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pCallableShaderBindingTable, [NativeTypeName("uint32_t")] uint width, [NativeTypeName("uint32_t")] uint height, [NativeTypeName("uint32_t")] uint depth);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkCreateRayTracingPipelinesKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkDeferredOperationKHR")] ulong deferredOperation, [NativeTypeName("VkPipelineCache")] ulong pipelineCache, [NativeTypeName("uint32_t")] uint createInfoCount, [NativeTypeName("const VkRayTracingPipelineCreateInfoKHR *")] VkRayTracingPipelineCreateInfoKHR* pCreateInfos, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkPipeline *")] ulong* pPipelines);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkGetRayTracingCaptureReplayShaderGroupHandlesKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkPipeline")] ulong pipeline, [NativeTypeName("uint32_t")] uint firstGroup, [NativeTypeName("uint32_t")] uint groupCount, [NativeTypeName("size_t")] nuint dataSize, [NativeTypeName("void *")] void* pData);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdTraceRaysIndirectKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pRaygenShaderBindingTable, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pMissShaderBindingTable, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pHitShaderBindingTable, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pCallableShaderBindingTable, [NativeTypeName("VkDeviceAddress")] ulong indirectDeviceAddress);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        [return: NativeTypeName("VkDeviceSize")]
+        public static extern ulong vkGetRayTracingShaderGroupStackSizeKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkPipeline")] ulong pipeline, [NativeTypeName("uint32_t")] uint group, VkShaderGroupShaderKHR groupShader);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetRayTracingPipelineStackSizeKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("uint32_t")] uint pipelineStackSize);
+
         [NativeTypeName("#define VK_VERSION_1_0 1")]
         public const int VK_VERSION_1_0 = 1;
 
         [NativeTypeName("#define VK_API_VERSION_1_0 VK_MAKE_VERSION(1, 0, 0)")]
         public const uint VK_API_VERSION_1_0 = ((((uint)(1)) << 22) | (((uint)(0)) << 12) | ((uint)(0)));
 
-        [NativeTypeName("#define VK_HEADER_VERSION 154")]
-        public const int VK_HEADER_VERSION = 154;
+        [NativeTypeName("#define VK_HEADER_VERSION 162")]
+        public const int VK_HEADER_VERSION = 162;
 
         [NativeTypeName("#define VK_HEADER_VERSION_COMPLETE VK_MAKE_VERSION(1, 2, VK_HEADER_VERSION)")]
-        public const uint VK_HEADER_VERSION_COMPLETE = ((((uint)(1)) << 22) | (((uint)(2)) << 12) | ((uint)(154)));
+        public const uint VK_HEADER_VERSION_COMPLETE = ((((uint)(1)) << 22) | (((uint)(2)) << 12) | ((uint)(162)));
 
         [NativeTypeName("#define VK_NULL_HANDLE 0")]
         public const int VK_NULL_HANDLE = 0;
@@ -1745,6 +1829,24 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_KHR_VULKAN_MEMORY_MODEL_EXTENSION_NAME \"VK_KHR_vulkan_memory_model\"")]
         public static ReadOnlySpan<byte> VK_KHR_VULKAN_MEMORY_MODEL_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x76, 0x75, 0x6C, 0x6B, 0x61, 0x6E, 0x5F, 0x6D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x5F, 0x6D, 0x6F, 0x64, 0x65, 0x6C, 0x00 };
 
+        [NativeTypeName("#define VK_KHR_shader_terminate_invocation 1")]
+        public const int VK_KHR_shader_terminate_invocation = 1;
+
+        [NativeTypeName("#define VK_KHR_SHADER_TERMINATE_INVOCATION_SPEC_VERSION 1")]
+        public const int VK_KHR_SHADER_TERMINATE_INVOCATION_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_SHADER_TERMINATE_INVOCATION_EXTENSION_NAME \"VK_KHR_shader_terminate_invocation\"")]
+        public static ReadOnlySpan<byte> VK_KHR_SHADER_TERMINATE_INVOCATION_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x73, 0x68, 0x61, 0x64, 0x65, 0x72, 0x5F, 0x74, 0x65, 0x72, 0x6D, 0x69, 0x6E, 0x61, 0x74, 0x65, 0x5F, 0x69, 0x6E, 0x76, 0x6F, 0x63, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_fragment_shading_rate 1")]
+        public const int VK_KHR_fragment_shading_rate = 1;
+
+        [NativeTypeName("#define VK_KHR_FRAGMENT_SHADING_RATE_SPEC_VERSION 1")]
+        public const int VK_KHR_FRAGMENT_SHADING_RATE_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME \"VK_KHR_fragment_shading_rate\"")]
+        public static ReadOnlySpan<byte> VK_KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x66, 0x72, 0x61, 0x67, 0x6D, 0x65, 0x6E, 0x74, 0x5F, 0x73, 0x68, 0x61, 0x64, 0x69, 0x6E, 0x67, 0x5F, 0x72, 0x61, 0x74, 0x65, 0x00 };
+
         [NativeTypeName("#define VK_KHR_spirv_1_4 1")]
         public const int VK_KHR_spirv_1_4 = 1;
 
@@ -1790,6 +1892,15 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_KHR_BUFFER_DEVICE_ADDRESS_EXTENSION_NAME \"VK_KHR_buffer_device_address\"")]
         public static ReadOnlySpan<byte> VK_KHR_BUFFER_DEVICE_ADDRESS_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x62, 0x75, 0x66, 0x66, 0x65, 0x72, 0x5F, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x5F, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x00 };
 
+        [NativeTypeName("#define VK_KHR_deferred_host_operations 1")]
+        public const int VK_KHR_deferred_host_operations = 1;
+
+        [NativeTypeName("#define VK_KHR_DEFERRED_HOST_OPERATIONS_SPEC_VERSION 4")]
+        public const int VK_KHR_DEFERRED_HOST_OPERATIONS_SPEC_VERSION = 4;
+
+        [NativeTypeName("#define VK_KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME \"VK_KHR_deferred_host_operations\"")]
+        public static ReadOnlySpan<byte> VK_KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x64, 0x65, 0x66, 0x65, 0x72, 0x72, 0x65, 0x64, 0x5F, 0x68, 0x6F, 0x73, 0x74, 0x5F, 0x6F, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x73, 0x00 };
+
         [NativeTypeName("#define VK_KHR_pipeline_executable_properties 1")]
         public const int VK_KHR_pipeline_executable_properties = 1;
 
@@ -1798,6 +1909,15 @@ namespace TerraFX.Interop
 
         [NativeTypeName("#define VK_KHR_PIPELINE_EXECUTABLE_PROPERTIES_EXTENSION_NAME \"VK_KHR_pipeline_executable_properties\"")]
         public static ReadOnlySpan<byte> VK_KHR_PIPELINE_EXECUTABLE_PROPERTIES_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x70, 0x69, 0x70, 0x65, 0x6C, 0x69, 0x6E, 0x65, 0x5F, 0x65, 0x78, 0x65, 0x63, 0x75, 0x74, 0x61, 0x62, 0x6C, 0x65, 0x5F, 0x70, 0x72, 0x6F, 0x70, 0x65, 0x72, 0x74, 0x69, 0x65, 0x73, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_pipeline_library 1")]
+        public const int VK_KHR_pipeline_library = 1;
+
+        [NativeTypeName("#define VK_KHR_PIPELINE_LIBRARY_SPEC_VERSION 1")]
+        public const int VK_KHR_PIPELINE_LIBRARY_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_PIPELINE_LIBRARY_EXTENSION_NAME \"VK_KHR_pipeline_library\"")]
+        public static ReadOnlySpan<byte> VK_KHR_PIPELINE_LIBRARY_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x70, 0x69, 0x70, 0x65, 0x6C, 0x69, 0x6E, 0x65, 0x5F, 0x6C, 0x69, 0x62, 0x72, 0x61, 0x72, 0x79, 0x00 };
 
         [NativeTypeName("#define VK_KHR_shader_non_semantic_info 1")]
         public const int VK_KHR_shader_non_semantic_info = 1;
@@ -2690,6 +2810,15 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_AMD_DEVICE_COHERENT_MEMORY_EXTENSION_NAME \"VK_AMD_device_coherent_memory\"")]
         public static ReadOnlySpan<byte> VK_AMD_DEVICE_COHERENT_MEMORY_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x41, 0x4D, 0x44, 0x5F, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x5F, 0x63, 0x6F, 0x68, 0x65, 0x72, 0x65, 0x6E, 0x74, 0x5F, 0x6D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x00 };
 
+        [NativeTypeName("#define VK_EXT_shader_image_atomic_int64 1")]
+        public const int VK_EXT_shader_image_atomic_int64 = 1;
+
+        [NativeTypeName("#define VK_EXT_SHADER_IMAGE_ATOMIC_INT64_SPEC_VERSION 1")]
+        public const int VK_EXT_SHADER_IMAGE_ATOMIC_INT64_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_SHADER_IMAGE_ATOMIC_INT64_EXTENSION_NAME \"VK_EXT_shader_image_atomic_int64\"")]
+        public static ReadOnlySpan<byte> VK_EXT_SHADER_IMAGE_ATOMIC_INT64_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x73, 0x68, 0x61, 0x64, 0x65, 0x72, 0x5F, 0x69, 0x6D, 0x61, 0x67, 0x65, 0x5F, 0x61, 0x74, 0x6F, 0x6D, 0x69, 0x63, 0x5F, 0x69, 0x6E, 0x74, 0x36, 0x34, 0x00 };
+
         [NativeTypeName("#define VK_EXT_memory_budget 1")]
         public const int VK_EXT_memory_budget = 1;
 
@@ -2879,6 +3008,15 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME \"VK_QCOM_render_pass_transform\"")]
         public static ReadOnlySpan<byte> VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x51, 0x43, 0x4F, 0x4D, 0x5F, 0x72, 0x65, 0x6E, 0x64, 0x65, 0x72, 0x5F, 0x70, 0x61, 0x73, 0x73, 0x5F, 0x74, 0x72, 0x61, 0x6E, 0x73, 0x66, 0x6F, 0x72, 0x6D, 0x00 };
 
+        [NativeTypeName("#define VK_EXT_device_memory_report 1")]
+        public const int VK_EXT_device_memory_report = 1;
+
+        [NativeTypeName("#define VK_EXT_DEVICE_MEMORY_REPORT_SPEC_VERSION 1")]
+        public const int VK_EXT_DEVICE_MEMORY_REPORT_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_DEVICE_MEMORY_REPORT_EXTENSION_NAME \"VK_EXT_device_memory_report\"")]
+        public static ReadOnlySpan<byte> VK_EXT_DEVICE_MEMORY_REPORT_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x5F, 0x6D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x5F, 0x72, 0x65, 0x70, 0x6F, 0x72, 0x74, 0x00 };
+
         [NativeTypeName("#define VK_EXT_robustness2 1")]
         public const int VK_EXT_robustness2 = 1;
 
@@ -2942,6 +3080,15 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_QCOM_render_pass_store_ops_EXTENSION_NAME \"VK_QCOM_render_pass_store_ops\"")]
         public static ReadOnlySpan<byte> VK_QCOM_render_pass_store_ops_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x51, 0x43, 0x4F, 0x4D, 0x5F, 0x72, 0x65, 0x6E, 0x64, 0x65, 0x72, 0x5F, 0x70, 0x61, 0x73, 0x73, 0x5F, 0x73, 0x74, 0x6F, 0x72, 0x65, 0x5F, 0x6F, 0x70, 0x73, 0x00 };
 
+        [NativeTypeName("#define VK_NV_fragment_shading_rate_enums 1")]
+        public const int VK_NV_fragment_shading_rate_enums = 1;
+
+        [NativeTypeName("#define VK_NV_FRAGMENT_SHADING_RATE_ENUMS_SPEC_VERSION 1")]
+        public const int VK_NV_FRAGMENT_SHADING_RATE_ENUMS_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_NV_FRAGMENT_SHADING_RATE_ENUMS_EXTENSION_NAME \"VK_NV_fragment_shading_rate_enums\"")]
+        public static ReadOnlySpan<byte> VK_NV_FRAGMENT_SHADING_RATE_ENUMS_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4E, 0x56, 0x5F, 0x66, 0x72, 0x61, 0x67, 0x6D, 0x65, 0x6E, 0x74, 0x5F, 0x73, 0x68, 0x61, 0x64, 0x69, 0x6E, 0x67, 0x5F, 0x72, 0x61, 0x74, 0x65, 0x5F, 0x65, 0x6E, 0x75, 0x6D, 0x73, 0x00 };
+
         [NativeTypeName("#define VK_EXT_fragment_density_map2 1")]
         public const int VK_EXT_fragment_density_map2 = 1;
 
@@ -2950,6 +3097,15 @@ namespace TerraFX.Interop
 
         [NativeTypeName("#define VK_EXT_FRAGMENT_DENSITY_MAP_2_EXTENSION_NAME \"VK_EXT_fragment_density_map2\"")]
         public static ReadOnlySpan<byte> VK_EXT_FRAGMENT_DENSITY_MAP_2_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x66, 0x72, 0x61, 0x67, 0x6D, 0x65, 0x6E, 0x74, 0x5F, 0x64, 0x65, 0x6E, 0x73, 0x69, 0x74, 0x79, 0x5F, 0x6D, 0x61, 0x70, 0x32, 0x00 };
+
+        [NativeTypeName("#define VK_QCOM_rotated_copy_commands 1")]
+        public const int VK_QCOM_rotated_copy_commands = 1;
+
+        [NativeTypeName("#define VK_QCOM_rotated_copy_commands_SPEC_VERSION 0")]
+        public const int VK_QCOM_rotated_copy_commands_SPEC_VERSION = 0;
+
+        [NativeTypeName("#define VK_QCOM_rotated_copy_commands_EXTENSION_NAME \"VK_QCOM_rotated_copy_commands\"")]
+        public static ReadOnlySpan<byte> VK_QCOM_rotated_copy_commands_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x51, 0x43, 0x4F, 0x4D, 0x5F, 0x72, 0x6F, 0x74, 0x61, 0x74, 0x65, 0x64, 0x5F, 0x63, 0x6F, 0x70, 0x79, 0x5F, 0x63, 0x6F, 0x6D, 0x6D, 0x61, 0x6E, 0x64, 0x73, 0x00 };
 
         [NativeTypeName("#define VK_EXT_image_robustness 1")]
         public const int VK_EXT_image_robustness = 1;
@@ -2968,5 +3124,32 @@ namespace TerraFX.Interop
 
         [NativeTypeName("#define VK_EXT_4444_FORMATS_EXTENSION_NAME \"VK_EXT_4444_formats\"")]
         public static ReadOnlySpan<byte> VK_EXT_4444_FORMATS_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x34, 0x34, 0x34, 0x34, 0x5F, 0x66, 0x6F, 0x72, 0x6D, 0x61, 0x74, 0x73, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_acceleration_structure 1")]
+        public const int VK_KHR_acceleration_structure = 1;
+
+        [NativeTypeName("#define VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION 11")]
+        public const int VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION = 11;
+
+        [NativeTypeName("#define VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME \"VK_KHR_acceleration_structure\"")]
+        public static ReadOnlySpan<byte> VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x61, 0x63, 0x63, 0x65, 0x6C, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x5F, 0x73, 0x74, 0x72, 0x75, 0x63, 0x74, 0x75, 0x72, 0x65, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_ray_tracing_pipeline 1")]
+        public const int VK_KHR_ray_tracing_pipeline = 1;
+
+        [NativeTypeName("#define VK_KHR_RAY_TRACING_PIPELINE_SPEC_VERSION 1")]
+        public const int VK_KHR_RAY_TRACING_PIPELINE_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_RAY_TRACING_PIPELINE_EXTENSION_NAME \"VK_KHR_ray_tracing_pipeline\"")]
+        public static ReadOnlySpan<byte> VK_KHR_RAY_TRACING_PIPELINE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x72, 0x61, 0x79, 0x5F, 0x74, 0x72, 0x61, 0x63, 0x69, 0x6E, 0x67, 0x5F, 0x70, 0x69, 0x70, 0x65, 0x6C, 0x69, 0x6E, 0x65, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_ray_query 1")]
+        public const int VK_KHR_ray_query = 1;
+
+        [NativeTypeName("#define VK_KHR_RAY_QUERY_SPEC_VERSION 1")]
+        public const int VK_KHR_RAY_QUERY_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_RAY_QUERY_EXTENSION_NAME \"VK_KHR_ray_query\"")]
+        public static ReadOnlySpan<byte> VK_KHR_RAY_QUERY_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x72, 0x61, 0x79, 0x5F, 0x71, 0x75, 0x65, 0x72, 0x79, 0x00 };
     }
 }
