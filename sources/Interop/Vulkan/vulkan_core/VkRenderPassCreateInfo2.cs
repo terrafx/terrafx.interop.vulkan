@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkRenderPassCreateFlags")]
-        public uint flags;
+        public VkRenderPassCreateFlags flags;
 
         [NativeTypeName("uint32_t")]
         public uint attachmentCount;

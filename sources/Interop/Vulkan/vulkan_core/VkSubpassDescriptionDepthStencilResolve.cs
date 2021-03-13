@@ -12,9 +12,11 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        public VkResolveModeFlagBits depthResolveMode;
+        [NativeTypeName("VkResolveModeFlagBits")]
+        public VkResolveModeFlags depthResolveMode;
 
-        public VkResolveModeFlagBits stencilResolveMode;
+        [NativeTypeName("VkResolveModeFlagBits")]
+        public VkResolveModeFlags stencilResolveMode;
 
         [NativeTypeName("const VkAttachmentReference2 *")]
         public VkAttachmentReference2* pDepthStencilResolveAttachment;

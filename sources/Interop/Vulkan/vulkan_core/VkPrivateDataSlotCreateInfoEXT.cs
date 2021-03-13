@@ -12,7 +12,6 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkPrivateDataSlotCreateFlagsEXT")]
-        public uint flags;
+        public VkPrivateDataSlotCreateFlagsEXT flags;
     }
 }

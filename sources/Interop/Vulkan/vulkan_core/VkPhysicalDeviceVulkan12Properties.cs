@@ -139,11 +139,9 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint maxDescriptorSetUpdateAfterBindInputAttachments;
 
-        [NativeTypeName("VkResolveModeFlags")]
-        public uint supportedDepthResolveModes;
+        public VkResolveModeFlags supportedDepthResolveModes;
 
-        [NativeTypeName("VkResolveModeFlags")]
-        public uint supportedStencilResolveModes;
+        public VkResolveModeFlags supportedStencilResolveModes;
 
         [NativeTypeName("VkBool32")]
         public uint independentResolveNone;
@@ -160,7 +158,6 @@ namespace TerraFX.Interop
         [NativeTypeName("uint64_t")]
         public ulong maxTimelineSemaphoreValueDifference;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint framebufferIntegerColorSampleCounts;
+        public VkSampleCountFlags framebufferIntegerColorSampleCounts;
     }
 }

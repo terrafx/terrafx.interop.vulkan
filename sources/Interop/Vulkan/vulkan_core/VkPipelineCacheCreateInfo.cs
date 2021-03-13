@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkPipelineCacheCreateFlags")]
-        public uint flags;
+        public VkPipelineCacheCreateFlags flags;
 
         [NativeTypeName("size_t")]
         public nuint initialDataSize;

@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkPipelineCreateFlags")]
-        public uint flags;
+        public VkPipelineCreateFlags flags;
 
         [NativeTypeName("uint32_t")]
         public uint stageCount;

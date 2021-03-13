@@ -23,8 +23,7 @@ namespace TerraFX.Interop
 
         public VkPolygonMode polygonMode;
 
-        [NativeTypeName("VkCullModeFlags")]
-        public uint cullMode;
+        public VkCullModeFlags cullMode;
 
         public VkFrontFace frontFace;
 

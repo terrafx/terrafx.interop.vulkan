@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkPerformanceCounterDescriptionFlagsKHR")]
-        public uint flags;
+        public VkPerformanceCounterDescriptionFlagsKHR flags;
 
         [NativeTypeName("char [256]")]
         public fixed sbyte name[256];

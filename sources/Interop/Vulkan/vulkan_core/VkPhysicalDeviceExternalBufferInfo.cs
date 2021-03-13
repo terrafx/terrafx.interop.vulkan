@@ -12,12 +12,11 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkBufferCreateFlags")]
-        public uint flags;
+        public VkBufferCreateFlags flags;
 
-        [NativeTypeName("VkBufferUsageFlags")]
-        public uint usage;
+        public VkBufferUsageFlags usage;
 
-        public VkExternalMemoryHandleTypeFlagBits handleType;
+        [NativeTypeName("VkExternalMemoryHandleTypeFlagBits")]
+        public VkExternalMemoryHandleTypeFlags handleType;
     }
 }

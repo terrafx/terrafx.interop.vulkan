@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkAcquireProfilingLockFlagsKHR")]
-        public uint flags;
+        public VkAcquireProfilingLockFlagsKHR flags;
 
         [NativeTypeName("uint64_t")]
         public ulong timeout;

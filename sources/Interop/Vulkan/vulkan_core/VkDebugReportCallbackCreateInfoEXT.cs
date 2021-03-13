@@ -12,11 +12,10 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkDebugReportFlagsEXT")]
-        public uint flags;
+        public VkDebugReportFlagsEXT flags;
 
         [NativeTypeName("PFN_vkDebugReportCallbackEXT")]
-        public delegate* unmanaged<uint, VkDebugReportObjectTypeEXT, ulong, nuint, int, sbyte*, sbyte*, void*, uint> pfnCallback;
+        public delegate* unmanaged<VkDebugReportFlagsEXT, VkDebugReportObjectTypeEXT, ulong, nuint, int, sbyte*, sbyte*, void*, uint> pfnCallback;
 
         public void* pUserData;
     }

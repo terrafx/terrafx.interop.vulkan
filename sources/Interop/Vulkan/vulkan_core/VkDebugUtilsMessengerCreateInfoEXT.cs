@@ -15,14 +15,12 @@ namespace TerraFX.Interop
         [NativeTypeName("VkDebugUtilsMessengerCreateFlagsEXT")]
         public uint flags;
 
-        [NativeTypeName("VkDebugUtilsMessageSeverityFlagsEXT")]
-        public uint messageSeverity;
+        public VkDebugUtilsMessageSeverityFlagsEXT messageSeverity;
 
-        [NativeTypeName("VkDebugUtilsMessageTypeFlagsEXT")]
-        public uint messageType;
+        public VkDebugUtilsMessageTypeFlagsEXT messageType;
 
         [NativeTypeName("PFN_vkDebugUtilsMessengerCallbackEXT")]
-        public delegate* unmanaged<VkDebugUtilsMessageSeverityFlagBitsEXT, uint, VkDebugUtilsMessengerCallbackDataEXT*, void*, uint> pfnUserCallback;
+        public delegate* unmanaged<VkDebugUtilsMessageSeverityFlagsEXT, VkDebugUtilsMessageTypeFlagsEXT, VkDebugUtilsMessengerCallbackDataEXT*, void*, uint> pfnUserCallback;
 
         public void* pUserData;
     }

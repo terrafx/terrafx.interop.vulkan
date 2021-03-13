@@ -8,3 +8,7 @@ vulkan-vk_layer.h
 ../../../tests/Interop/Vulkan/vk_layer
 --traverse
 C:/VulkanSDK/1.2.170.0/Include/vulkan/vk_layer.h
+--with-attribute
+VkLoaderFeastureFlagBits=Flags
+--with-type
+VkLoaderFeastureFlagBits=uint

@@ -12,6 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        public VkSurfaceTransformFlagBitsKHR transform;
+        [NativeTypeName("VkSurfaceTransformFlagBitsKHR")]
+        public VkSurfaceTransformFlagsKHR transform;
     }
 }

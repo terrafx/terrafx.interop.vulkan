@@ -15,10 +15,10 @@ namespace TerraFX.Interop
         [NativeTypeName("VkSemaphore")]
         public ulong semaphore;
 
-        [NativeTypeName("VkSemaphoreImportFlags")]
-        public uint flags;
+        public VkSemaphoreImportFlags flags;
 
-        public VkExternalSemaphoreHandleTypeFlagBits handleType;
+        [NativeTypeName("VkExternalSemaphoreHandleTypeFlagBits")]
+        public VkExternalSemaphoreHandleTypeFlags handleType;
 
         public int fd;
     }

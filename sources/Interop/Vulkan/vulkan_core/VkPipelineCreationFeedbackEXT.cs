@@ -7,8 +7,7 @@ namespace TerraFX.Interop
 {
     public partial struct VkPipelineCreationFeedbackEXT
     {
-        [NativeTypeName("VkPipelineCreationFeedbackFlagsEXT")]
-        public uint flags;
+        public VkPipelineCreationFeedbackFlagsEXT flags;
 
         [NativeTypeName("uint64_t")]
         public ulong duration;

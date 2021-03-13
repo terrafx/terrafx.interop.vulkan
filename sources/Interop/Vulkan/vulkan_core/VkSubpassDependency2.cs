@@ -18,20 +18,15 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint dstSubpass;
 
-        [NativeTypeName("VkPipelineStageFlags")]
-        public uint srcStageMask;
+        public VkPipelineStageFlags srcStageMask;
 
-        [NativeTypeName("VkPipelineStageFlags")]
-        public uint dstStageMask;
+        public VkPipelineStageFlags dstStageMask;
 
-        [NativeTypeName("VkAccessFlags")]
-        public uint srcAccessMask;
+        public VkAccessFlags srcAccessMask;
 
-        [NativeTypeName("VkAccessFlags")]
-        public uint dstAccessMask;
+        public VkAccessFlags dstAccessMask;
 
-        [NativeTypeName("VkDependencyFlags")]
-        public uint dependencyFlags;
+        public VkDependencyFlags dependencyFlags;
 
         [NativeTypeName("int32_t")]
         public int viewOffset;

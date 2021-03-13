@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkDescriptorSetLayoutCreateFlags")]
-        public uint flags;
+        public VkDescriptorSetLayoutCreateFlags flags;
 
         [NativeTypeName("uint32_t")]
         public uint bindingCount;

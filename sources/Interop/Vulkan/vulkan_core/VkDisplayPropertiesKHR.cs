@@ -17,8 +17,7 @@ namespace TerraFX.Interop
 
         public VkExtent2D physicalResolution;
 
-        [NativeTypeName("VkSurfaceTransformFlagsKHR")]
-        public uint supportedTransforms;
+        public VkSurfaceTransformFlagsKHR supportedTransforms;
 
         [NativeTypeName("VkBool32")]
         public uint planeReorderPossible;

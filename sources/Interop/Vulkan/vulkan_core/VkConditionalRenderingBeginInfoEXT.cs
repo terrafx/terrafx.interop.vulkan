@@ -18,7 +18,6 @@ namespace TerraFX.Interop
         [NativeTypeName("VkDeviceSize")]
         public ulong offset;
 
-        [NativeTypeName("VkConditionalRenderingFlagsEXT")]
-        public uint flags;
+        public VkConditionalRenderingFlagsEXT flags;
     }
 }

@@ -12,6 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        public VkImageAspectFlagBits planeAspect;
+        [NativeTypeName("VkImageAspectFlagBits")]
+        public VkImageAspectFlags planeAspect;
     }
 }

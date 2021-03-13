@@ -7,8 +7,7 @@ namespace TerraFX.Interop
 {
     public unsafe partial struct VkShaderStatisticsInfoAMD
     {
-        [NativeTypeName("VkShaderStageFlags")]
-        public uint shaderStageMask;
+        public VkShaderStageFlags shaderStageMask;
 
         public VkShaderResourceUsageAMD resourceUsage;
 

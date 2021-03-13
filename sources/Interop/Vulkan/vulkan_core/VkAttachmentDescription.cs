@@ -7,12 +7,12 @@ namespace TerraFX.Interop
 {
     public partial struct VkAttachmentDescription
     {
-        [NativeTypeName("VkAttachmentDescriptionFlags")]
-        public uint flags;
+        public VkAttachmentDescriptionFlags flags;
 
         public VkFormat format;
 
-        public VkSampleCountFlagBits samples;
+        [NativeTypeName("VkSampleCountFlagBits")]
+        public VkSampleCountFlags samples;
 
         public VkAttachmentLoadOp loadOp;
 

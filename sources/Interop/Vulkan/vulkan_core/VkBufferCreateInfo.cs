@@ -12,14 +12,12 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkBufferCreateFlags")]
-        public uint flags;
+        public VkBufferCreateFlags flags;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong size;
 
-        [NativeTypeName("VkBufferUsageFlags")]
-        public uint usage;
+        public VkBufferUsageFlags usage;
 
         public VkSharingMode sharingMode;
 

@@ -21,7 +21,7 @@ namespace TerraFX.Interop
         public ulong* pWaitSemaphores;
 
         [NativeTypeName("const VkPipelineStageFlags *")]
-        public uint* pWaitDstStageMask;
+        public VkPipelineStageFlags* pWaitDstStageMask;
 
         [NativeTypeName("uint32_t")]
         public uint commandBufferCount;

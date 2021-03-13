@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkImageViewCreateFlags")]
-        public uint flags;
+        public VkImageViewCreateFlags flags;
 
         [NativeTypeName("VkImage")]
         public ulong image;

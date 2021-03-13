@@ -26,18 +26,15 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint maxImageArrayLayers;
 
-        [NativeTypeName("VkSurfaceTransformFlagsKHR")]
-        public uint supportedTransforms;
+        public VkSurfaceTransformFlagsKHR supportedTransforms;
 
-        public VkSurfaceTransformFlagBitsKHR currentTransform;
+        [NativeTypeName("VkSurfaceTransformFlagBitsKHR")]
+        public VkSurfaceTransformFlagsKHR currentTransform;
 
-        [NativeTypeName("VkCompositeAlphaFlagsKHR")]
-        public uint supportedCompositeAlpha;
+        public VkCompositeAlphaFlagsKHR supportedCompositeAlpha;
 
-        [NativeTypeName("VkImageUsageFlags")]
-        public uint supportedUsageFlags;
+        public VkImageUsageFlags supportedUsageFlags;
 
-        [NativeTypeName("VkSurfaceCounterFlagsEXT")]
-        public uint supportedSurfaceCounters;
+        public VkSurfaceCounterFlagsEXT supportedSurfaceCounters;
     }
 }

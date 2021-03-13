@@ -11,11 +11,9 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkResolveModeFlags")]
-        public uint supportedDepthResolveModes;
+        public VkResolveModeFlags supportedDepthResolveModes;
 
-        [NativeTypeName("VkResolveModeFlags")]
-        public uint supportedStencilResolveModes;
+        public VkResolveModeFlags supportedStencilResolveModes;
 
         [NativeTypeName("VkBool32")]
         public uint independentResolveNone;

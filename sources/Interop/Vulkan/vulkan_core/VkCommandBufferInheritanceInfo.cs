@@ -24,10 +24,8 @@ namespace TerraFX.Interop
         [NativeTypeName("VkBool32")]
         public uint occlusionQueryEnable;
 
-        [NativeTypeName("VkQueryControlFlags")]
-        public uint queryFlags;
+        public VkQueryControlFlags queryFlags;
 
-        [NativeTypeName("VkQueryPipelineStatisticFlags")]
-        public uint pipelineStatistics;
+        public VkQueryPipelineStatisticFlags pipelineStatistics;
     }
 }

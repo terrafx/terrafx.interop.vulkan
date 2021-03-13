@@ -7,13 +7,10 @@ namespace TerraFX.Interop
 {
     public partial struct VkExternalMemoryProperties
     {
-        [NativeTypeName("VkExternalMemoryFeatureFlags")]
-        public uint externalMemoryFeatures;
+        public VkExternalMemoryFeatureFlags externalMemoryFeatures;
 
-        [NativeTypeName("VkExternalMemoryHandleTypeFlags")]
-        public uint exportFromImportedHandleTypes;
+        public VkExternalMemoryHandleTypeFlags exportFromImportedHandleTypes;
 
-        [NativeTypeName("VkExternalMemoryHandleTypeFlags")]
-        public uint compatibleHandleTypes;
+        public VkExternalMemoryHandleTypeFlags compatibleHandleTypes;
     }
 }

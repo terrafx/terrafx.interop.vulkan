@@ -17,7 +17,6 @@ namespace TerraFX.Interop
 
         public VkImageLayout layout;
 
-        [NativeTypeName("VkImageAspectFlags")]
-        public uint aspectMask;
+        public VkImageAspectFlags aspectMask;
     }
 }

@@ -7,8 +7,7 @@ namespace TerraFX.Interop
 {
     public partial struct VkPushConstantRange
     {
-        [NativeTypeName("VkShaderStageFlags")]
-        public uint stageFlags;
+        public VkShaderStageFlags stageFlags;
 
         [NativeTypeName("uint32_t")]
         public uint offset;

@@ -11,8 +11,7 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkShaderCorePropertiesFlagsAMD")]
-        public uint shaderCoreFeatures;
+        public VkShaderCorePropertiesFlagsAMD shaderCoreFeatures;
 
         [NativeTypeName("uint32_t")]
         public uint activeComputeUnitCount;

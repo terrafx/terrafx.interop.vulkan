@@ -11,7 +11,6 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkImageUsageFlags")]
-        public uint sharedPresentSupportedUsageFlags;
+        public VkImageUsageFlags sharedPresentSupportedUsageFlags;
     }
 }

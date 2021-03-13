@@ -15,8 +15,7 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint descriptorCount;
 
-        [NativeTypeName("VkShaderStageFlags")]
-        public uint stageFlags;
+        public VkShaderStageFlags stageFlags;
 
         [NativeTypeName("const VkSampler *")]
         public ulong* pImmutableSamplers;

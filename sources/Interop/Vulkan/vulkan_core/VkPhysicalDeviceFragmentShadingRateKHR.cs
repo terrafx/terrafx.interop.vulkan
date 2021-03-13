@@ -11,8 +11,7 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint sampleCounts;
+        public VkSampleCountFlags sampleCounts;
 
         public VkExtent2D fragmentSize;
     }

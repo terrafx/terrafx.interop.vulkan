@@ -10,7 +10,6 @@ namespace TerraFX.Interop
         [NativeTypeName("VkDeviceSize")]
         public ulong size;
 
-        [NativeTypeName("VkMemoryHeapFlags")]
-        public uint flags;
+        public VkMemoryHeapFlags flags;
     }
 }

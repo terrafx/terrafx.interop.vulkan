@@ -11,7 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        public VkSurfaceTransformFlagBitsKHR transform;
+        [NativeTypeName("VkSurfaceTransformFlagBitsKHR")]
+        public VkSurfaceTransformFlagsKHR transform;
 
         public VkRect2D renderArea;
     }

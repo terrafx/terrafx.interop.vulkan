@@ -14,8 +14,7 @@ namespace TerraFX.Interop
 
         public VkAccelerationStructureTypeKHR type;
 
-        [NativeTypeName("VkBuildAccelerationStructureFlagsKHR")]
-        public uint flags;
+        public VkBuildAccelerationStructureFlagsKHR flags;
 
         public VkBuildAccelerationStructureModeKHR mode;
 

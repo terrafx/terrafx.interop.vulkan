@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkSubpassDescriptionFlags")]
-        public uint flags;
+        public VkSubpassDescriptionFlags flags;
 
         public VkPipelineBindPoint pipelineBindPoint;
 

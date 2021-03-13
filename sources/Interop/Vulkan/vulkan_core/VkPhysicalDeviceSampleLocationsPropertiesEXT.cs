@@ -11,8 +11,7 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint sampleLocationSampleCounts;
+        public VkSampleCountFlags sampleLocationSampleCounts;
 
         public VkExtent2D maxSampleLocationGridSize;
 

@@ -7,12 +7,10 @@ namespace TerraFX.Interop
 {
     public partial struct VkSparseImageFormatProperties
     {
-        [NativeTypeName("VkImageAspectFlags")]
-        public uint aspectMask;
+        public VkImageAspectFlags aspectMask;
 
         public VkExtent3D imageGranularity;
 
-        [NativeTypeName("VkSparseImageFormatFlags")]
-        public uint flags;
+        public VkSparseImageFormatFlags flags;
     }
 }

@@ -11,7 +11,6 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkPipelineStageFlags")]
-        public uint checkpointExecutionStageMask;
+        public VkPipelineStageFlags checkpointExecutionStageMask;
     }
 }

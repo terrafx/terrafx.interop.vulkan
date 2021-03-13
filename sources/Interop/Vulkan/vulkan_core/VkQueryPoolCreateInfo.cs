@@ -20,7 +20,6 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint queryCount;
 
-        [NativeTypeName("VkQueryPipelineStatisticFlags")]
-        public uint pipelineStatistics;
+        public VkQueryPipelineStatisticFlags pipelineStatistics;
     }
 }

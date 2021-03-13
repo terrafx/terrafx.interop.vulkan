@@ -11,13 +11,10 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkExternalSemaphoreHandleTypeFlags")]
-        public uint exportFromImportedHandleTypes;
+        public VkExternalSemaphoreHandleTypeFlags exportFromImportedHandleTypes;
 
-        [NativeTypeName("VkExternalSemaphoreHandleTypeFlags")]
-        public uint compatibleHandleTypes;
+        public VkExternalSemaphoreHandleTypeFlags compatibleHandleTypes;
 
-        [NativeTypeName("VkExternalSemaphoreFeatureFlags")]
-        public uint externalSemaphoreFeatures;
+        public VkExternalSemaphoreFeatureFlags externalSemaphoreFeatures;
     }
 }

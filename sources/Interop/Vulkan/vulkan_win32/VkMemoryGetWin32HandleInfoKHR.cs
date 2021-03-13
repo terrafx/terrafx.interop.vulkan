@@ -15,6 +15,7 @@ namespace TerraFX.Interop
         [NativeTypeName("VkDeviceMemory")]
         public ulong memory;
 
-        public VkExternalMemoryHandleTypeFlagBits handleType;
+        [NativeTypeName("VkExternalMemoryHandleTypeFlagBits")]
+        public VkExternalMemoryHandleTypeFlags handleType;
     }
 }

@@ -11,8 +11,7 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkShaderStageFlags")]
-        public uint stages;
+        public VkShaderStageFlags stages;
 
         [NativeTypeName("char [256]")]
         public fixed sbyte name[256];

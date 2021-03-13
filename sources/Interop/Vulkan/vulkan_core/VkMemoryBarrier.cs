@@ -12,10 +12,8 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkAccessFlags")]
-        public uint srcAccessMask;
+        public VkAccessFlags srcAccessMask;
 
-        [NativeTypeName("VkAccessFlags")]
-        public uint dstAccessMask;
+        public VkAccessFlags dstAccessMask;
     }
 }

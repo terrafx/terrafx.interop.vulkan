@@ -15,8 +15,7 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint maxArrayLayers;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint sampleCounts;
+        public VkSampleCountFlags sampleCounts;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong maxResourceSize;

@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkShaderModuleCreateFlags")]
-        public uint flags;
+        public VkShaderModuleCreateFlags flags;
 
         [NativeTypeName("size_t")]
         public nuint codeSize;

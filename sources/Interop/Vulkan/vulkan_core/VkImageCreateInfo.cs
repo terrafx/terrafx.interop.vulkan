@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkImageCreateFlags")]
-        public uint flags;
+        public VkImageCreateFlags flags;
 
         public VkImageType imageType;
 
@@ -27,12 +26,12 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint arrayLayers;
 
-        public VkSampleCountFlagBits samples;
+        [NativeTypeName("VkSampleCountFlagBits")]
+        public VkSampleCountFlags samples;
 
         public VkImageTiling tiling;
 
-        [NativeTypeName("VkImageUsageFlags")]
-        public uint usage;
+        public VkImageUsageFlags usage;
 
         public VkSharingMode sharingMode;
 

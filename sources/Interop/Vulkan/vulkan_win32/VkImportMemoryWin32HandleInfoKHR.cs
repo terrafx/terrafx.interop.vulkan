@@ -14,7 +14,8 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        public VkExternalMemoryHandleTypeFlagBits handleType;
+        [NativeTypeName("VkExternalMemoryHandleTypeFlagBits")]
+        public VkExternalMemoryHandleTypeFlags handleType;
 
         [NativeTypeName("HANDLE")]
         public IntPtr handle;

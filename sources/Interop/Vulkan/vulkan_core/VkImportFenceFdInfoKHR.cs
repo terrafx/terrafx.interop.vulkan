@@ -15,10 +15,10 @@ namespace TerraFX.Interop
         [NativeTypeName("VkFence")]
         public ulong fence;
 
-        [NativeTypeName("VkFenceImportFlags")]
-        public uint flags;
+        public VkFenceImportFlags flags;
 
-        public VkExternalFenceHandleTypeFlagBits handleType;
+        [NativeTypeName("VkExternalFenceHandleTypeFlagBits")]
+        public VkExternalFenceHandleTypeFlags handleType;
 
         public int fd;
     }

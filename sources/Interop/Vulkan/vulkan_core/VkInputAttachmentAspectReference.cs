@@ -13,7 +13,6 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint inputAttachmentIndex;
 
-        [NativeTypeName("VkImageAspectFlags")]
-        public uint aspectMask;
+        public VkImageAspectFlags aspectMask;
     }
 }

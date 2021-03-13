@@ -12,7 +12,8 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        public VkSampleCountFlagBits sampleLocationsPerPixel;
+        [NativeTypeName("VkSampleCountFlagBits")]
+        public VkSampleCountFlags sampleLocationsPerPixel;
 
         public VkExtent2D sampleLocationGridSize;
 

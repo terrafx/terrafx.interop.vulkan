@@ -16,10 +16,10 @@ namespace TerraFX.Interop
 
         public VkImageType type;
 
-        public VkSampleCountFlagBits samples;
+        [NativeTypeName("VkSampleCountFlagBits")]
+        public VkSampleCountFlags samples;
 
-        [NativeTypeName("VkImageUsageFlags")]
-        public uint usage;
+        public VkImageUsageFlags usage;
 
         public VkImageTiling tiling;
     }

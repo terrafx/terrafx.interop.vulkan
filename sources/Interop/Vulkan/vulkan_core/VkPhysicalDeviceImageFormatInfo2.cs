@@ -18,10 +18,8 @@ namespace TerraFX.Interop
 
         public VkImageTiling tiling;
 
-        [NativeTypeName("VkImageUsageFlags")]
-        public uint usage;
+        public VkImageUsageFlags usage;
 
-        [NativeTypeName("VkImageCreateFlags")]
-        public uint flags;
+        public VkImageCreateFlags flags;
     }
 }

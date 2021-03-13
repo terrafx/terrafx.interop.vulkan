@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkCommandBufferUsageFlags")]
-        public uint flags;
+        public VkCommandBufferUsageFlags flags;
 
         [NativeTypeName("const VkCommandBufferInheritanceInfo *")]
         public VkCommandBufferInheritanceInfo* pInheritanceInfo;

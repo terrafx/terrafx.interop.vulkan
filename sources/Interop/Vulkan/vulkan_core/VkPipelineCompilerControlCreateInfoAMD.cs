@@ -12,7 +12,6 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkPipelineCompilerControlFlagsAMD")]
-        public uint compilerControlFlags;
+        public VkPipelineCompilerControlFlagsAMD compilerControlFlags;
     }
 }

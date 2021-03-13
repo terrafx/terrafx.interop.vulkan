@@ -13,12 +13,11 @@ namespace TerraFX.Interop
 
         public VkCoverageReductionModeNV coverageReductionMode;
 
-        public VkSampleCountFlagBits rasterizationSamples;
+        [NativeTypeName("VkSampleCountFlagBits")]
+        public VkSampleCountFlags rasterizationSamples;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint depthStencilSamples;
+        public VkSampleCountFlags depthStencilSamples;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint colorSamples;
+        public VkSampleCountFlags colorSamples;
     }
 }

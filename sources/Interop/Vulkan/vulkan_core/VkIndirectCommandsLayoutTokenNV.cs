@@ -29,8 +29,7 @@ namespace TerraFX.Interop
         [NativeTypeName("VkPipelineLayout")]
         public ulong pushconstantPipelineLayout;
 
-        [NativeTypeName("VkShaderStageFlags")]
-        public uint pushconstantShaderStageFlags;
+        public VkShaderStageFlags pushconstantShaderStageFlags;
 
         [NativeTypeName("uint32_t")]
         public uint pushconstantOffset;
@@ -38,8 +37,7 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint pushconstantSize;
 
-        [NativeTypeName("VkIndirectStateFlagsNV")]
-        public uint indirectStateFlags;
+        public VkIndirectStateFlagsNV indirectStateFlags;
 
         [NativeTypeName("uint32_t")]
         public uint indexTypeCount;

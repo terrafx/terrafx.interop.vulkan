@@ -15,7 +15,6 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t [32]")]
         public fixed uint presentMask[32];
 
-        [NativeTypeName("VkDeviceGroupPresentModeFlagsKHR")]
-        public uint modes;
+        public VkDeviceGroupPresentModeFlagsKHR modes;
     }
 }

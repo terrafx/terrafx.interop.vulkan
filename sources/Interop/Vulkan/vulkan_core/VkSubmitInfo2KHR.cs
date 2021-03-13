@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkSubmitFlagsKHR")]
-        public uint flags;
+        public VkSubmitFlagsKHR flags;
 
         [NativeTypeName("uint32_t")]
         public uint waitSemaphoreInfoCount;

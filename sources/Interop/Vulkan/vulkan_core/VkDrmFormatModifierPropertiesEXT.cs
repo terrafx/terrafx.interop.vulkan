@@ -13,7 +13,6 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint drmFormatModifierPlaneCount;
 
-        [NativeTypeName("VkFormatFeatureFlags")]
-        public uint drmFormatModifierTilingFeatures;
+        public VkFormatFeatureFlags drmFormatModifierTilingFeatures;
     }
 }

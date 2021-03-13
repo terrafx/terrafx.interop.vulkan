@@ -7,8 +7,7 @@ namespace TerraFX.Interop
 {
     public unsafe partial struct VkSubpassDescription
     {
-        [NativeTypeName("VkSubpassDescriptionFlags")]
-        public uint flags;
+        public VkSubpassDescriptionFlags flags;
 
         public VkPipelineBindPoint pipelineBindPoint;
 

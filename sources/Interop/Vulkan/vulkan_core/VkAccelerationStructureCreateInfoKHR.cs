@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkAccelerationStructureCreateFlagsKHR")]
-        public uint createFlags;
+        public VkAccelerationStructureCreateFlagsKHR createFlags;
 
         [NativeTypeName("VkBuffer")]
         public ulong buffer;

@@ -12,11 +12,9 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkImageCreateFlags")]
-        public uint flags;
+        public VkImageCreateFlags flags;
 
-        [NativeTypeName("VkImageUsageFlags")]
-        public uint usage;
+        public VkImageUsageFlags usage;
 
         [NativeTypeName("uint32_t")]
         public uint width;

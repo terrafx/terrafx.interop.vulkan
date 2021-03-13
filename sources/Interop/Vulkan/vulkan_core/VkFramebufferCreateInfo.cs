@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkFramebufferCreateFlags")]
-        public uint flags;
+        public VkFramebufferCreateFlags flags;
 
         [NativeTypeName("VkRenderPass")]
         public ulong renderPass;

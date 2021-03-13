@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkSamplerCreateFlags")]
-        public uint flags;
+        public VkSamplerCreateFlags flags;
 
         public VkFilter magFilter;
 

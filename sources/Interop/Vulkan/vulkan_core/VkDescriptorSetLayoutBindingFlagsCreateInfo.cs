@@ -16,6 +16,6 @@ namespace TerraFX.Interop
         public uint bindingCount;
 
         [NativeTypeName("const VkDescriptorBindingFlags *")]
-        public uint* pBindingFlags;
+        public VkDescriptorBindingFlags* pBindingFlags;
     }
 }

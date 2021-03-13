@@ -7,8 +7,7 @@ namespace TerraFX.Interop
 {
     public partial struct VkQueueFamilyProperties
     {
-        [NativeTypeName("VkQueueFlags")]
-        public uint queueFlags;
+        public VkQueueFlags queueFlags;
 
         [NativeTypeName("uint32_t")]
         public uint queueCount;

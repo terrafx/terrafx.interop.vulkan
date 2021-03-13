@@ -17,8 +17,7 @@ namespace TerraFX.Interop
         [NativeTypeName("char [256]")]
         public fixed sbyte version[256];
 
-        [NativeTypeName("VkToolPurposeFlagsEXT")]
-        public uint purposes;
+        public VkToolPurposeFlagsEXT purposes;
 
         [NativeTypeName("char [256]")]
         public fixed sbyte description[256];

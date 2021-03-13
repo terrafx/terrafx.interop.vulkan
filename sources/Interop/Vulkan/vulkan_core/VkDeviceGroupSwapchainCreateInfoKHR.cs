@@ -12,7 +12,6 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkDeviceGroupPresentModeFlagsKHR")]
-        public uint modes;
+        public VkDeviceGroupPresentModeFlagsKHR modes;
     }
 }

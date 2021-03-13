@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkDeviceQueueCreateFlags")]
-        public uint flags;
+        public VkDeviceQueueCreateFlags flags;
 
         [NativeTypeName("uint32_t")]
         public uint queueFamilyIndex;

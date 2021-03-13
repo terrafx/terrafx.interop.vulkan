@@ -16,7 +16,6 @@ namespace TerraFX.Interop
 
         public VkAccelerationStructureGeometryDataKHR geometry;
 
-        [NativeTypeName("VkGeometryFlagsKHR")]
-        public uint flags;
+        public VkGeometryFlagsKHR flags;
     }
 }

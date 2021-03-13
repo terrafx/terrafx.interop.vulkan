@@ -35,7 +35,8 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint maxFragmentShadingRateCoverageSamples;
 
-        public VkSampleCountFlagBits maxFragmentShadingRateRasterizationSamples;
+        [NativeTypeName("VkSampleCountFlagBits")]
+        public VkSampleCountFlags maxFragmentShadingRateRasterizationSamples;
 
         [NativeTypeName("VkBool32")]
         public uint fragmentShadingRateWithShaderDepthStencilWrites;

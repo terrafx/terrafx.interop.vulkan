@@ -7,13 +7,10 @@ namespace TerraFX.Interop
 {
     public partial struct VkFormatProperties
     {
-        [NativeTypeName("VkFormatFeatureFlags")]
-        public uint linearTilingFeatures;
+        public VkFormatFeatureFlags linearTilingFeatures;
 
-        [NativeTypeName("VkFormatFeatureFlags")]
-        public uint optimalTilingFeatures;
+        public VkFormatFeatureFlags optimalTilingFeatures;
 
-        [NativeTypeName("VkFormatFeatureFlags")]
-        public uint bufferFeatures;
+        public VkFormatFeatureFlags bufferFeatures;
     }
 }

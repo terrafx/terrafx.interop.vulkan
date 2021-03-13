@@ -15,8 +15,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkLayerFunction")]
-        public VkLayerFunction_ function;
+        public VkLayerFunction function;
 
         [NativeTypeName("union (anonymous union at C:/VulkanSDK/1.2.170.0/Include/vulkan/vk_layer.h:146:5)")]
         public _u_e__Union u;

@@ -11,7 +11,6 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkShaderStageFlags")]
-        public uint cooperativeMatrixSupportedStages;
+        public VkShaderStageFlags cooperativeMatrixSupportedStages;
     }
 }

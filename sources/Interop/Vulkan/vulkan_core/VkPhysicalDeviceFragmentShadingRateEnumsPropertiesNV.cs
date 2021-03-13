@@ -11,6 +11,7 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        public VkSampleCountFlagBits maxFragmentShadingRateInvocationCount;
+        [NativeTypeName("VkSampleCountFlagBits")]
+        public VkSampleCountFlags maxFragmentShadingRateInvocationCount;
     }
 }

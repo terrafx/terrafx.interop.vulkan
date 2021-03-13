@@ -9,13 +9,10 @@ namespace TerraFX.Interop
     {
         public VkImageFormatProperties imageFormatProperties;
 
-        [NativeTypeName("VkExternalMemoryFeatureFlagsNV")]
-        public uint externalMemoryFeatures;
+        public VkExternalMemoryFeatureFlagsNV externalMemoryFeatures;
 
-        [NativeTypeName("VkExternalMemoryHandleTypeFlagsNV")]
-        public uint exportFromImportedHandleTypes;
+        public VkExternalMemoryHandleTypeFlagsNV exportFromImportedHandleTypes;
 
-        [NativeTypeName("VkExternalMemoryHandleTypeFlagsNV")]
-        public uint compatibleHandleTypes;
+        public VkExternalMemoryHandleTypeFlagsNV compatibleHandleTypes;
     }
 }

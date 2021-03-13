@@ -14,11 +14,9 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint subgroupSize;
 
-        [NativeTypeName("VkShaderStageFlags")]
-        public uint supportedStages;
+        public VkShaderStageFlags supportedStages;
 
-        [NativeTypeName("VkSubgroupFeatureFlags")]
-        public uint supportedOperations;
+        public VkSubgroupFeatureFlags supportedOperations;
 
         [NativeTypeName("VkBool32")]
         public uint quadOperationsInAllStages;

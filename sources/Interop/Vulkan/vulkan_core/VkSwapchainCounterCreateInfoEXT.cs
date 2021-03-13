@@ -12,7 +12,6 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkSurfaceCounterFlagsEXT")]
-        public uint surfaceCounters;
+        public VkSurfaceCounterFlagsEXT surfaceCounters;
     }
 }

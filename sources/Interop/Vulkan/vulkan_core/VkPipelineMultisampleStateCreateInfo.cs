@@ -15,7 +15,8 @@ namespace TerraFX.Interop
         [NativeTypeName("VkPipelineMultisampleStateCreateFlags")]
         public uint flags;
 
-        public VkSampleCountFlagBits rasterizationSamples;
+        [NativeTypeName("VkSampleCountFlagBits")]
+        public VkSampleCountFlags rasterizationSamples;
 
         [NativeTypeName("VkBool32")]
         public uint sampleShadingEnable;

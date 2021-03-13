@@ -16,8 +16,7 @@ namespace TerraFX.Interop
         [NativeTypeName("uint64_t")]
         public ulong externalFormat;
 
-        [NativeTypeName("VkFormatFeatureFlags")]
-        public uint formatFeatures;
+        public VkFormatFeatureFlags formatFeatures;
 
         public VkComponentMapping samplerYcbcrConversionComponents;
 

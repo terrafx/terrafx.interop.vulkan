@@ -243,35 +243,26 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint maxFramebufferLayers;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint framebufferColorSampleCounts;
+        public VkSampleCountFlags framebufferColorSampleCounts;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint framebufferDepthSampleCounts;
+        public VkSampleCountFlags framebufferDepthSampleCounts;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint framebufferStencilSampleCounts;
+        public VkSampleCountFlags framebufferStencilSampleCounts;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint framebufferNoAttachmentsSampleCounts;
+        public VkSampleCountFlags framebufferNoAttachmentsSampleCounts;
 
         [NativeTypeName("uint32_t")]
         public uint maxColorAttachments;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint sampledImageColorSampleCounts;
+        public VkSampleCountFlags sampledImageColorSampleCounts;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint sampledImageIntegerSampleCounts;
+        public VkSampleCountFlags sampledImageIntegerSampleCounts;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint sampledImageDepthSampleCounts;
+        public VkSampleCountFlags sampledImageDepthSampleCounts;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint sampledImageStencilSampleCounts;
+        public VkSampleCountFlags sampledImageStencilSampleCounts;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint storageImageSampleCounts;
+        public VkSampleCountFlags storageImageSampleCounts;
 
         [NativeTypeName("uint32_t")]
         public uint maxSampleMaskWords;

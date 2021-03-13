@@ -15,6 +15,7 @@ namespace TerraFX.Interop
         [NativeTypeName("VkSemaphore")]
         public ulong semaphore;
 
-        public VkExternalSemaphoreHandleTypeFlagBits handleType;
+        [NativeTypeName("VkExternalSemaphoreHandleTypeFlagBits")]
+        public VkExternalSemaphoreHandleTypeFlags handleType;
     }
 }

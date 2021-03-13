@@ -7,8 +7,7 @@ namespace TerraFX.Interop
 {
     public partial struct VkDisplayPlaneCapabilitiesKHR
     {
-        [NativeTypeName("VkDisplayPlaneAlphaFlagsKHR")]
-        public uint supportedAlpha;
+        public VkDisplayPlaneAlphaFlagsKHR supportedAlpha;
 
         public VkOffset2D minSrcPosition;
 

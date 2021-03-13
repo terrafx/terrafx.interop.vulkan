@@ -18,11 +18,13 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint planeStackIndex;
 
-        public VkSurfaceTransformFlagBitsKHR transform;
+        [NativeTypeName("VkSurfaceTransformFlagBitsKHR")]
+        public VkSurfaceTransformFlagsKHR transform;
 
         public float globalAlpha;
 
-        public VkDisplayPlaneAlphaFlagBitsKHR alphaMode;
+        [NativeTypeName("VkDisplayPlaneAlphaFlagBitsKHR")]
+        public VkDisplayPlaneAlphaFlagsKHR alphaMode;
 
         public VkExtent2D imageExtent;
     }

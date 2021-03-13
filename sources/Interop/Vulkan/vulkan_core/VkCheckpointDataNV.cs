@@ -11,7 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        public VkPipelineStageFlagBits stage;
+        [NativeTypeName("VkPipelineStageFlagBits")]
+        public VkPipelineStageFlags stage;
 
         public void* pCheckpointMarker;
     }

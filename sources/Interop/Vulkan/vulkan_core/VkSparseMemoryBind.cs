@@ -19,7 +19,6 @@ namespace TerraFX.Interop
         [NativeTypeName("VkDeviceSize")]
         public ulong memoryOffset;
 
-        [NativeTypeName("VkSparseMemoryBindFlags")]
-        public uint flags;
+        public VkSparseMemoryBindFlags flags;
     }
 }

@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkSwapchainCreateFlagsKHR")]
-        public uint flags;
+        public VkSwapchainCreateFlagsKHR flags;
 
         [NativeTypeName("VkSurfaceKHR")]
         public ulong surface;
@@ -30,8 +29,7 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint imageArrayLayers;
 
-        [NativeTypeName("VkImageUsageFlags")]
-        public uint imageUsage;
+        public VkImageUsageFlags imageUsage;
 
         public VkSharingMode imageSharingMode;
 
@@ -41,9 +39,11 @@ namespace TerraFX.Interop
         [NativeTypeName("const uint32_t *")]
         public uint* pQueueFamilyIndices;
 
-        public VkSurfaceTransformFlagBitsKHR preTransform;
+        [NativeTypeName("VkSurfaceTransformFlagBitsKHR")]
+        public VkSurfaceTransformFlagsKHR preTransform;
 
-        public VkCompositeAlphaFlagBitsKHR compositeAlpha;
+        [NativeTypeName("VkCompositeAlphaFlagBitsKHR")]
+        public VkCompositeAlphaFlagsKHR compositeAlpha;
 
         public VkPresentModeKHR presentMode;
 

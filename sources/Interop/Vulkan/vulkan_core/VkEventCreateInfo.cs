@@ -12,7 +12,6 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkEventCreateFlags")]
-        public uint flags;
+        public VkEventCreateFlags flags;
     }
 }

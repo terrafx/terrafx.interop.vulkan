@@ -12,12 +12,12 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkAttachmentDescriptionFlags")]
-        public uint flags;
+        public VkAttachmentDescriptionFlags flags;
 
         public VkFormat format;
 
-        public VkSampleCountFlagBits samples;
+        [NativeTypeName("VkSampleCountFlagBits")]
+        public VkSampleCountFlags samples;
 
         public VkAttachmentLoadOp loadOp;
 

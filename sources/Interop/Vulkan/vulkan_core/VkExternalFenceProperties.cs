@@ -11,13 +11,10 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkExternalFenceHandleTypeFlags")]
-        public uint exportFromImportedHandleTypes;
+        public VkExternalFenceHandleTypeFlags exportFromImportedHandleTypes;
 
-        [NativeTypeName("VkExternalFenceHandleTypeFlags")]
-        public uint compatibleHandleTypes;
+        public VkExternalFenceHandleTypeFlags compatibleHandleTypes;
 
-        [NativeTypeName("VkExternalFenceFeatureFlags")]
-        public uint externalFenceFeatures;
+        public VkExternalFenceFeatureFlags externalFenceFeatures;
     }
 }

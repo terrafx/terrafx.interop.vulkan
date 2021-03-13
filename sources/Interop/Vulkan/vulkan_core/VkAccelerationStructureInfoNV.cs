@@ -16,7 +16,7 @@ namespace TerraFX.Interop
         public VkAccelerationStructureTypeKHR type;
 
         [NativeTypeName("VkBuildAccelerationStructureFlagsNV")]
-        public uint flags;
+        public VkBuildAccelerationStructureFlagsKHR flags;
 
         [NativeTypeName("uint32_t")]
         public uint instanceCount;

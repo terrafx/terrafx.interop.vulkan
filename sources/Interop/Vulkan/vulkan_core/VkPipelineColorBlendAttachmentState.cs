@@ -22,7 +22,6 @@ namespace TerraFX.Interop
 
         public VkBlendOp alphaBlendOp;
 
-        [NativeTypeName("VkColorComponentFlags")]
-        public uint colorWriteMask;
+        public VkColorComponentFlags colorWriteMask;
     }
 }

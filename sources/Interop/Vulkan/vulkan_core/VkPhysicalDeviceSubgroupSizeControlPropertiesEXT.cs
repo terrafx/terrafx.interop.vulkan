@@ -20,7 +20,6 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint maxComputeWorkgroupSubgroups;
 
-        [NativeTypeName("VkShaderStageFlags")]
-        public uint requiredSubgroupSizeStages;
+        public VkShaderStageFlags requiredSubgroupSizeStages;
     }
 }

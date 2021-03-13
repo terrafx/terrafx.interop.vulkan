@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkMemoryAllocateFlags")]
-        public uint flags;
+        public VkMemoryAllocateFlags flags;
 
         [NativeTypeName("uint32_t")]
         public uint deviceMask;

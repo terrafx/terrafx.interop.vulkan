@@ -12,10 +12,10 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkPipelineShaderStageCreateFlags")]
-        public uint flags;
+        public VkPipelineShaderStageCreateFlags flags;
 
-        public VkShaderStageFlagBits stage;
+        [NativeTypeName("VkShaderStageFlagBits")]
+        public VkShaderStageFlags stage;
 
         [NativeTypeName("VkShaderModule")]
         public ulong module;

@@ -12,7 +12,6 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkDeviceDiagnosticsConfigFlagsNV")]
-        public uint flags;
+        public VkDeviceDiagnosticsConfigFlagsNV flags;
     }
 }

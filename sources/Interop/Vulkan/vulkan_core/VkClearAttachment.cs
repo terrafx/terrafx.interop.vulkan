@@ -7,8 +7,7 @@ namespace TerraFX.Interop
 {
     public partial struct VkClearAttachment
     {
-        [NativeTypeName("VkImageAspectFlags")]
-        public uint aspectMask;
+        public VkImageAspectFlags aspectMask;
 
         [NativeTypeName("uint32_t")]
         public uint colorAttachment;
