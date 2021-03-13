@@ -5,14 +5,9 @@
 
 namespace TerraFX.Interop
 {
-    public enum VkVendorId
+    public enum VkSubmitFlagBitsKHR
     {
-        VK_VENDOR_ID_VIV = 0x10001,
-        VK_VENDOR_ID_VSI = 0x10002,
-        VK_VENDOR_ID_KAZAN = 0x10003,
-        VK_VENDOR_ID_CODEPLAY = 0x10004,
-        VK_VENDOR_ID_MESA = 0x10005,
-        VK_VENDOR_ID_POCL = 0x10006,
-        VK_VENDOR_ID_MAX_ENUM = 0x7FFFFFFF,
+        VK_SUBMIT_PROTECTED_BIT_KHR = 0x00000001,
+        VK_SUBMIT_FLAG_BITS_MAX_ENUM_KHR = 0x7FFFFFFF,
     }
 }

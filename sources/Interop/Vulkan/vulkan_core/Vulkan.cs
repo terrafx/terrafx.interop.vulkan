@@ -820,6 +820,249 @@ namespace TerraFX.Interop
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern VkResult vkGetPipelineExecutableInternalRepresentationsKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkPipelineExecutableInfoKHR *")] VkPipelineExecutableInfoKHR* pExecutableInfo, [NativeTypeName("uint32_t *")] uint* pInternalRepresentationCount, VkPipelineExecutableInternalRepresentationKHR* pInternalRepresentations);
 
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_NONE_KHR = 0;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_TOP_OF_PIPE_BIT_KHR = 0x00000001;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT_KHR = 0x00000002;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT_KHR = 0x00000004;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_VERTEX_SHADER_BIT_KHR = 0x00000008;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER_BIT_KHR = 0x00000010;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_TESSELLATION_EVALUATION_SHADER_BIT_KHR = 0x00000020;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_GEOMETRY_SHADER_BIT_KHR = 0x00000040;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_FRAGMENT_SHADER_BIT_KHR = 0x00000080;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS_BIT_KHR = 0x00000100;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT_KHR = 0x00000200;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT_KHR = 0x00000400;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_COMPUTE_SHADER_BIT_KHR = 0x00000800;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT_KHR = 0x00001000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_TRANSFER_BIT_KHR = 0x00001000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_BOTTOM_OF_PIPE_BIT_KHR = 0x00002000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_HOST_BIT_KHR = 0x00004000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT_KHR = 0x00008000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_ALL_COMMANDS_BIT_KHR = 0x00010000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_COPY_BIT_KHR = 0x100000000UL;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_RESOLVE_BIT_KHR = 0x200000000UL;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_BLIT_BIT_KHR = 0x400000000UL;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_CLEAR_BIT_KHR = 0x800000000UL;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_INDEX_INPUT_BIT_KHR = 0x1000000000UL;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_VERTEX_ATTRIBUTE_INPUT_BIT_KHR = 0x2000000000UL;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT_KHR = 0x4000000000UL;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_TRANSFORM_FEEDBACK_BIT_EXT = 0x01000000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_CONDITIONAL_RENDERING_BIT_EXT = 0x00040000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_COMMAND_PREPROCESS_BIT_NV = 0x00020000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x00400000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_SHADING_RATE_IMAGE_BIT_NV = 0x00400000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_KHR = 0x02000000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_RAY_TRACING_SHADER_BIT_KHR = 0x00200000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_RAY_TRACING_SHADER_BIT_NV = 0x00200000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_NV = 0x02000000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_BIT_EXT = 0x00800000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV = 0x00080000;
+
+        [NativeTypeName("const VkPipelineStageFlags2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV = 0x00100000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_NONE_KHR = 0;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_INDIRECT_COMMAND_READ_BIT_KHR = 0x00000001;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_INDEX_READ_BIT_KHR = 0x00000002;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_VERTEX_ATTRIBUTE_READ_BIT_KHR = 0x00000004;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_UNIFORM_READ_BIT_KHR = 0x00000008;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_INPUT_ATTACHMENT_READ_BIT_KHR = 0x00000010;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_SHADER_READ_BIT_KHR = 0x00000020;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_SHADER_WRITE_BIT_KHR = 0x00000040;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_COLOR_ATTACHMENT_READ_BIT_KHR = 0x00000080;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_COLOR_ATTACHMENT_WRITE_BIT_KHR = 0x00000100;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_DEPTH_STENCIL_ATTACHMENT_READ_BIT_KHR = 0x00000200;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT_KHR = 0x00000400;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_TRANSFER_READ_BIT_KHR = 0x00000800;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_TRANSFER_WRITE_BIT_KHR = 0x00001000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_HOST_READ_BIT_KHR = 0x00002000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_HOST_WRITE_BIT_KHR = 0x00004000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_MEMORY_READ_BIT_KHR = 0x00008000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_MEMORY_WRITE_BIT_KHR = 0x00010000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_SHADER_SAMPLED_READ_BIT_KHR = 0x100000000UL;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_SHADER_STORAGE_READ_BIT_KHR = 0x200000000UL;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_SHADER_STORAGE_WRITE_BIT_KHR = 0x400000000UL;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_TRANSFORM_FEEDBACK_WRITE_BIT_EXT = 0x02000000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_TRANSFORM_FEEDBACK_COUNTER_READ_BIT_EXT = 0x04000000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_TRANSFORM_FEEDBACK_COUNTER_WRITE_BIT_EXT = 0x08000000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_CONDITIONAL_RENDERING_READ_BIT_EXT = 0x00100000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_COMMAND_PREPROCESS_READ_BIT_NV = 0x00020000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_COMMAND_PREPROCESS_WRITE_BIT_NV = 0x00040000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_FRAGMENT_SHADING_RATE_ATTACHMENT_READ_BIT_KHR = 0x00800000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_SHADING_RATE_IMAGE_READ_BIT_NV = 0x00800000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_ACCELERATION_STRUCTURE_READ_BIT_KHR = 0x00200000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_ACCELERATION_STRUCTURE_WRITE_BIT_KHR = 0x00400000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_ACCELERATION_STRUCTURE_READ_BIT_NV = 0x00200000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_ACCELERATION_STRUCTURE_WRITE_BIT_NV = 0x00400000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_FRAGMENT_DENSITY_MAP_READ_BIT_EXT = 0x01000000;
+
+        [NativeTypeName("const VkAccessFlags2KHR")]
+        public const ulong VK_ACCESS_2_COLOR_ATTACHMENT_READ_NONCOHERENT_BIT_EXT = 0x00080000;
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdSetEvent2KHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkEvent")] ulong @event, [NativeTypeName("const VkDependencyInfoKHR *")] VkDependencyInfoKHR* pDependencyInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdResetEvent2KHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkEvent")] ulong @event, [NativeTypeName("VkPipelineStageFlags2KHR")] ulong stageMask);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdWaitEvents2KHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("uint32_t")] uint eventCount, [NativeTypeName("const VkEvent *")] ulong* pEvents, [NativeTypeName("const VkDependencyInfoKHR *")] VkDependencyInfoKHR* pDependencyInfos);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdPipelineBarrier2KHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkDependencyInfoKHR *")] VkDependencyInfoKHR* pDependencyInfo);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdWriteTimestamp2KHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkPipelineStageFlags2KHR")] ulong stage, [NativeTypeName("VkQueryPool")] ulong queryPool, [NativeTypeName("uint32_t")] uint query);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkQueueSubmit2KHR([NativeTypeName("VkQueue")] IntPtr queue, [NativeTypeName("uint32_t")] uint submitCount, [NativeTypeName("const VkSubmitInfo2KHR *")] VkSubmitInfo2KHR* pSubmits, [NativeTypeName("VkFence")] ulong fence);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdWriteBufferMarker2AMD([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkPipelineStageFlags2KHR")] ulong stage, [NativeTypeName("VkBuffer")] ulong dstBuffer, [NativeTypeName("VkDeviceSize")] ulong dstOffset, [NativeTypeName("uint32_t")] uint marker);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkGetQueueCheckpointData2NV([NativeTypeName("VkQueue")] IntPtr queue, [NativeTypeName("uint32_t *")] uint* pCheckpointDataCount, VkCheckpointData2NV* pCheckpointData);
+
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern void vkCmdCopyBuffer2KHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkCopyBufferInfo2KHR *")] VkCopyBufferInfo2KHR* pCopyBufferInfo);
 
@@ -1192,6 +1435,12 @@ namespace TerraFX.Interop
         public static extern void vkCmdSetFragmentShadingRateEnumNV([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, VkFragmentShadingRateNV shadingRate, [NativeTypeName("const VkFragmentShadingRateCombinerOpKHR [2]")] VkFragmentShadingRateCombinerOpKHR* combinerOps);
 
         [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkAcquireWinrtDisplayNV([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("VkDisplayKHR")] ulong display);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkGetWinrtDisplayNV([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("uint32_t")] uint deviceRelativeId, [NativeTypeName("VkDisplayKHR *")] ulong* pDisplay);
+
+        [DllImport("vulkan", ExactSpelling = true)]
         public static extern VkResult vkCreateAccelerationStructureKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkAccelerationStructureCreateInfoKHR *")] VkAccelerationStructureCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkAccelerationStructureKHR *")] ulong* pAccelerationStructure);
 
         [DllImport("vulkan", ExactSpelling = true)]
@@ -1265,11 +1514,11 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_API_VERSION_1_0 VK_MAKE_VERSION(1, 0, 0)")]
         public const uint VK_API_VERSION_1_0 = ((((uint)(1)) << 22) | (((uint)(0)) << 12) | ((uint)(0)));
 
-        [NativeTypeName("#define VK_HEADER_VERSION 162")]
-        public const int VK_HEADER_VERSION = 162;
+        [NativeTypeName("#define VK_HEADER_VERSION 170")]
+        public const int VK_HEADER_VERSION = 170;
 
         [NativeTypeName("#define VK_HEADER_VERSION_COMPLETE VK_MAKE_VERSION(1, 2, VK_HEADER_VERSION)")]
-        public const uint VK_HEADER_VERSION_COMPLETE = ((((uint)(1)) << 22) | (((uint)(2)) << 12) | ((uint)(162)));
+        public const uint VK_HEADER_VERSION_COMPLETE = ((((uint)(1)) << 22) | (((uint)(2)) << 12) | ((uint)(170)));
 
         [NativeTypeName("#define VK_NULL_HANDLE 0")]
         public const int VK_NULL_HANDLE = 0;
@@ -1927,6 +2176,33 @@ namespace TerraFX.Interop
 
         [NativeTypeName("#define VK_KHR_SHADER_NON_SEMANTIC_INFO_EXTENSION_NAME \"VK_KHR_shader_non_semantic_info\"")]
         public static ReadOnlySpan<byte> VK_KHR_SHADER_NON_SEMANTIC_INFO_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x73, 0x68, 0x61, 0x64, 0x65, 0x72, 0x5F, 0x6E, 0x6F, 0x6E, 0x5F, 0x73, 0x65, 0x6D, 0x61, 0x6E, 0x74, 0x69, 0x63, 0x5F, 0x69, 0x6E, 0x66, 0x6F, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_synchronization2 1")]
+        public const int VK_KHR_synchronization2 = 1;
+
+        [NativeTypeName("#define VK_KHR_SYNCHRONIZATION_2_SPEC_VERSION 1")]
+        public const int VK_KHR_SYNCHRONIZATION_2_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_SYNCHRONIZATION_2_EXTENSION_NAME \"VK_KHR_synchronization2\"")]
+        public static ReadOnlySpan<byte> VK_KHR_SYNCHRONIZATION_2_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x73, 0x79, 0x6E, 0x63, 0x68, 0x72, 0x6F, 0x6E, 0x69, 0x7A, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x32, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_zero_initialize_workgroup_memory 1")]
+        public const int VK_KHR_zero_initialize_workgroup_memory = 1;
+
+        [NativeTypeName("#define VK_KHR_ZERO_INITIALIZE_WORKGROUP_MEMORY_SPEC_VERSION 1")]
+        public const int VK_KHR_ZERO_INITIALIZE_WORKGROUP_MEMORY_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_ZERO_INITIALIZE_WORKGROUP_MEMORY_EXTENSION_NAME \"VK_KHR_zero_initialize_workgroup_memory\"")]
+        public static ReadOnlySpan<byte> VK_KHR_ZERO_INITIALIZE_WORKGROUP_MEMORY_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x7A, 0x65, 0x72, 0x6F, 0x5F, 0x69, 0x6E, 0x69, 0x74, 0x69, 0x61, 0x6C, 0x69, 0x7A, 0x65, 0x5F, 0x77, 0x6F, 0x72, 0x6B, 0x67, 0x72, 0x6F, 0x75, 0x70, 0x5F, 0x6D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_workgroup_memory_explicit_layout 1")]
+        public const int VK_KHR_workgroup_memory_explicit_layout = 1;
+
+        [NativeTypeName("#define VK_KHR_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_SPEC_VERSION 1")]
+        public const int VK_KHR_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_EXTENSION_NAME \"VK_KHR_workgroup_memory_explicit_layout\"")]
+        public static ReadOnlySpan<byte> VK_KHR_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x77, 0x6F, 0x72, 0x6B, 0x67, 0x72, 0x6F, 0x75, 0x70, 0x5F, 0x6D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x5F, 0x65, 0x78, 0x70, 0x6C, 0x69, 0x63, 0x69, 0x74, 0x5F, 0x6C, 0x61, 0x79, 0x6F, 0x75, 0x74, 0x00 };
 
         [NativeTypeName("#define VK_KHR_copy_commands2 1")]
         public const int VK_KHR_copy_commands2 = 1;
@@ -3011,8 +3287,8 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_EXT_device_memory_report 1")]
         public const int VK_EXT_device_memory_report = 1;
 
-        [NativeTypeName("#define VK_EXT_DEVICE_MEMORY_REPORT_SPEC_VERSION 1")]
-        public const int VK_EXT_DEVICE_MEMORY_REPORT_SPEC_VERSION = 1;
+        [NativeTypeName("#define VK_EXT_DEVICE_MEMORY_REPORT_SPEC_VERSION 2")]
+        public const int VK_EXT_DEVICE_MEMORY_REPORT_SPEC_VERSION = 2;
 
         [NativeTypeName("#define VK_EXT_DEVICE_MEMORY_REPORT_EXTENSION_NAME \"VK_EXT_device_memory_report\"")]
         public static ReadOnlySpan<byte> VK_EXT_DEVICE_MEMORY_REPORT_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x5F, 0x6D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x5F, 0x72, 0x65, 0x70, 0x6F, 0x72, 0x74, 0x00 };
@@ -3101,11 +3377,11 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_QCOM_rotated_copy_commands 1")]
         public const int VK_QCOM_rotated_copy_commands = 1;
 
-        [NativeTypeName("#define VK_QCOM_rotated_copy_commands_SPEC_VERSION 0")]
-        public const int VK_QCOM_rotated_copy_commands_SPEC_VERSION = 0;
+        [NativeTypeName("#define VK_QCOM_ROTATED_COPY_COMMANDS_SPEC_VERSION 0")]
+        public const int VK_QCOM_ROTATED_COPY_COMMANDS_SPEC_VERSION = 0;
 
-        [NativeTypeName("#define VK_QCOM_rotated_copy_commands_EXTENSION_NAME \"VK_QCOM_rotated_copy_commands\"")]
-        public static ReadOnlySpan<byte> VK_QCOM_rotated_copy_commands_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x51, 0x43, 0x4F, 0x4D, 0x5F, 0x72, 0x6F, 0x74, 0x61, 0x74, 0x65, 0x64, 0x5F, 0x63, 0x6F, 0x70, 0x79, 0x5F, 0x63, 0x6F, 0x6D, 0x6D, 0x61, 0x6E, 0x64, 0x73, 0x00 };
+        [NativeTypeName("#define VK_QCOM_ROTATED_COPY_COMMANDS_EXTENSION_NAME \"VK_QCOM_rotated_copy_commands\"")]
+        public static ReadOnlySpan<byte> VK_QCOM_ROTATED_COPY_COMMANDS_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x51, 0x43, 0x4F, 0x4D, 0x5F, 0x72, 0x6F, 0x74, 0x61, 0x74, 0x65, 0x64, 0x5F, 0x63, 0x6F, 0x70, 0x79, 0x5F, 0x63, 0x6F, 0x6D, 0x6D, 0x61, 0x6E, 0x64, 0x73, 0x00 };
 
         [NativeTypeName("#define VK_EXT_image_robustness 1")]
         public const int VK_EXT_image_robustness = 1;
@@ -3124,6 +3400,24 @@ namespace TerraFX.Interop
 
         [NativeTypeName("#define VK_EXT_4444_FORMATS_EXTENSION_NAME \"VK_EXT_4444_formats\"")]
         public static ReadOnlySpan<byte> VK_EXT_4444_FORMATS_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x34, 0x34, 0x34, 0x34, 0x5F, 0x66, 0x6F, 0x72, 0x6D, 0x61, 0x74, 0x73, 0x00 };
+
+        [NativeTypeName("#define VK_NV_acquire_winrt_display 1")]
+        public const int VK_NV_acquire_winrt_display = 1;
+
+        [NativeTypeName("#define VK_NV_ACQUIRE_WINRT_DISPLAY_SPEC_VERSION 1")]
+        public const int VK_NV_ACQUIRE_WINRT_DISPLAY_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_NV_ACQUIRE_WINRT_DISPLAY_EXTENSION_NAME \"VK_NV_acquire_winrt_display\"")]
+        public static ReadOnlySpan<byte> VK_NV_ACQUIRE_WINRT_DISPLAY_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4E, 0x56, 0x5F, 0x61, 0x63, 0x71, 0x75, 0x69, 0x72, 0x65, 0x5F, 0x77, 0x69, 0x6E, 0x72, 0x74, 0x5F, 0x64, 0x69, 0x73, 0x70, 0x6C, 0x61, 0x79, 0x00 };
+
+        [NativeTypeName("#define VK_VALVE_mutable_descriptor_type 1")]
+        public const int VK_VALVE_mutable_descriptor_type = 1;
+
+        [NativeTypeName("#define VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_SPEC_VERSION 1")]
+        public const int VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME \"VK_VALVE_mutable_descriptor_type\"")]
+        public static ReadOnlySpan<byte> VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x56, 0x41, 0x4C, 0x56, 0x45, 0x5F, 0x6D, 0x75, 0x74, 0x61, 0x62, 0x6C, 0x65, 0x5F, 0x64, 0x65, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x6F, 0x72, 0x5F, 0x74, 0x79, 0x70, 0x65, 0x00 };
 
         [NativeTypeName("#define VK_KHR_acceleration_structure 1")]
         public const int VK_KHR_acceleration_structure = 1;
