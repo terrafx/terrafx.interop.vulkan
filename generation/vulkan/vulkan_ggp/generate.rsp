@@ -13,4 +13,4 @@ vulkan-vulkan_ggp.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan_ggp
 --traverse
-C:/VulkanSDK/1.2.162.1/Include/vulkan/vulkan_ggp.h
+C:/VulkanSDK/1.2.170.0/Include/vulkan/vulkan_ggp.h

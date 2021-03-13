@@ -11,4 +11,4 @@ vulkan-vulkan_win32.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan_win32
 --traverse
-C:/VulkanSDK/1.2.162.1/Include/vulkan/vulkan_win32.h
+C:/VulkanSDK/1.2.170.0/Include/vulkan/vulkan_win32.h

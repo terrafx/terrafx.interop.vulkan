@@ -15,7 +15,7 @@ vulkan-vulkan_core.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan_core
 --traverse
-C:/VulkanSDK/1.2.162.1/Include/vulkan/vulkan_core.h
+C:/VulkanSDK/1.2.170.0/Include/vulkan/vulkan_core.h
 --with-attribute
 VkAccessFlagBits=Flags
 VkAcquireProfilingLockFlagBitsKHR=Flags
