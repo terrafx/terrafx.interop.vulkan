@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.162
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.170
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 namespace TerraFX.Interop
@@ -243,35 +243,26 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint maxFramebufferLayers;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint framebufferColorSampleCounts;
+        public VkSampleCountFlags framebufferColorSampleCounts;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint framebufferDepthSampleCounts;
+        public VkSampleCountFlags framebufferDepthSampleCounts;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint framebufferStencilSampleCounts;
+        public VkSampleCountFlags framebufferStencilSampleCounts;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint framebufferNoAttachmentsSampleCounts;
+        public VkSampleCountFlags framebufferNoAttachmentsSampleCounts;
 
         [NativeTypeName("uint32_t")]
         public uint maxColorAttachments;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint sampledImageColorSampleCounts;
+        public VkSampleCountFlags sampledImageColorSampleCounts;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint sampledImageIntegerSampleCounts;
+        public VkSampleCountFlags sampledImageIntegerSampleCounts;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint sampledImageDepthSampleCounts;
+        public VkSampleCountFlags sampledImageDepthSampleCounts;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint sampledImageStencilSampleCounts;
+        public VkSampleCountFlags sampledImageStencilSampleCounts;
 
-        [NativeTypeName("VkSampleCountFlags")]
-        public uint storageImageSampleCounts;
+        public VkSampleCountFlags storageImageSampleCounts;
 
         [NativeTypeName("uint32_t")]
         public uint maxSampleMaskWords;

@@ -11,4 +11,4 @@ vulkan-vulkan_ios.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan_ios
 --traverse
-C:/VulkanSDK/1.2.162.1/Include/vulkan/vulkan_ios.h
+C:/VulkanSDK/1.2.170.0/Include/vulkan/vulkan_ios.h

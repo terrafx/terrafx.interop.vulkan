@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.162
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.170
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 namespace TerraFX.Interop
@@ -12,6 +12,7 @@ namespace TerraFX.Interop
         VK_VENDOR_ID_KAZAN = 0x10003,
         VK_VENDOR_ID_CODEPLAY = 0x10004,
         VK_VENDOR_ID_MESA = 0x10005,
+        VK_VENDOR_ID_POCL = 0x10006,
         VK_VENDOR_ID_MAX_ENUM = 0x7FFFFFFF,
     }
 }

@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.162
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.170
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
 namespace TerraFX.Interop
@@ -15,16 +15,13 @@ namespace TerraFX.Interop
         [NativeTypeName("VkDebugUtilsMessengerCreateFlagsEXT")]
         public uint flags;
 
-        [NativeTypeName("VkDebugUtilsMessageSeverityFlagsEXT")]
-        public uint messageSeverity;
+        public VkDebugUtilsMessageSeverityFlagsEXT messageSeverity;
 
-        [NativeTypeName("VkDebugUtilsMessageTypeFlagsEXT")]
-        public uint messageType;
+        public VkDebugUtilsMessageTypeFlagsEXT messageType;
 
         [NativeTypeName("PFN_vkDebugUtilsMessengerCallbackEXT")]
-        public delegate* unmanaged<VkDebugUtilsMessageSeverityFlagBitsEXT, uint, VkDebugUtilsMessengerCallbackDataEXT*, void*, uint> pfnUserCallback;
+        public delegate* unmanaged<VkDebugUtilsMessageSeverityFlagsEXT, VkDebugUtilsMessageTypeFlagsEXT, VkDebugUtilsMessengerCallbackDataEXT*, void*, uint> pfnUserCallback;
 
-        [NativeTypeName("void *")]
         public void* pUserData;
     }
 }

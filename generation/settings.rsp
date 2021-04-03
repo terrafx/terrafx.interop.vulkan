@@ -16,14 +16,12 @@ generate-aggressive-inlining
 generate-macro-bindings
 generate-tests-nunit
 multi-file
-preview-codegen-fnptr
-preview-codegen-nint
 --headerFile
 header.txt
 --include-directory
 C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/shared
 C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um
-C:/VulkanSDK/1.2.162.1/Include
+C:/VulkanSDK/1.2.170.0/Include
 --methodClassName
 Vulkan
 --namespace
