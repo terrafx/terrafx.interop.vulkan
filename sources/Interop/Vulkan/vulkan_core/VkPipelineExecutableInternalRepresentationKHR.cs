@@ -9,7 +9,6 @@ namespace TerraFX.Interop
     {
         public VkStructureType sType;
 
-        [NativeTypeName("void *")]
         public void* pNext;
 
         [NativeTypeName("char [256]")]
@@ -24,7 +23,6 @@ namespace TerraFX.Interop
         [NativeTypeName("size_t")]
         public nuint dataSize;
 
-        [NativeTypeName("void *")]
         public void* pData;
     }
 }

@@ -15,7 +15,6 @@ namespace TerraFX.Interop
         public ulong deviceAddress;
 
         [FieldOffset(0)]
-        [NativeTypeName("void *")]
         public void* hostAddress;
     }
 }

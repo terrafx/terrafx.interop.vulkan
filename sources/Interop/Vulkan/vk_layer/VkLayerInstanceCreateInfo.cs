@@ -25,7 +25,6 @@ namespace TerraFX.Interop
         public unsafe partial struct _u_e__Union
         {
             [FieldOffset(0)]
-            [NativeTypeName("VkLayerInstanceLink *")]
             public VkLayerInstanceLink* pLayerInfo;
 
             [FieldOffset(0)]

@@ -15,7 +15,6 @@ namespace TerraFX.Interop
         [NativeTypeName("VkViSurfaceCreateFlagsNN")]
         public uint flags;
 
-        [NativeTypeName("void *")]
         public void* window;
     }
 }

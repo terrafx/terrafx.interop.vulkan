@@ -18,7 +18,6 @@ namespace TerraFX.Interop
         [NativeTypeName("PFN_vkDebugReportCallbackEXT")]
         public delegate* unmanaged<uint, VkDebugReportObjectTypeEXT, ulong, nuint, int, sbyte*, sbyte*, void*, uint> pfnCallback;
 
-        [NativeTypeName("void *")]
         public void* pUserData;
     }
 }

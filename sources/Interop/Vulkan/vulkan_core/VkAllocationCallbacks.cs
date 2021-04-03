@@ -7,7 +7,6 @@ namespace TerraFX.Interop
 {
     public unsafe partial struct VkAllocationCallbacks
     {
-        [NativeTypeName("void *")]
         public void* pUserData;
 
         [NativeTypeName("PFN_vkAllocationFunction")]

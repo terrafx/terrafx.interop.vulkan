@@ -21,14 +21,14 @@ namespace TerraFX.Interop
         [return: NativeTypeName("PFN_vkVoidFunction")]
         public static extern delegate* unmanaged<void> vk_icdGetPhysicalDeviceProcAddr([NativeTypeName("VkInstance")] IntPtr isntance, [NativeTypeName("const char *")] sbyte* pName);
 
-        public static void set_loader_magic_value([NativeTypeName("void *")] void* pNewObject)
+        public static void set_loader_magic_value(void* pNewObject)
         {
             VK_LOADER_DATA* loader_info = (VK_LOADER_DATA*)(pNewObject);
 
             loader_info->loaderMagic = 0x01CDC0DE;
         }
 
-        public static bool valid_loader_magic_value([NativeTypeName("void *")] void* pNewObject)
+        public static bool valid_loader_magic_value(void* pNewObject)
         {
             VK_LOADER_DATA* loader_info = (VK_LOADER_DATA*)(pNewObject);
 

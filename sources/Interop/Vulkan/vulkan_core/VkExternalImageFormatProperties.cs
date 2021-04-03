@@ -9,7 +9,6 @@ namespace TerraFX.Interop
     {
         public VkStructureType sType;
 
-        [NativeTypeName("void *")]
         public void* pNext;
 
         public VkExternalMemoryProperties externalMemoryProperties;

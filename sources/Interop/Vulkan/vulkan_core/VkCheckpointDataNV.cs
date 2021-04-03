@@ -9,12 +9,10 @@ namespace TerraFX.Interop
     {
         public VkStructureType sType;
 
-        [NativeTypeName("void *")]
         public void* pNext;
 
         public VkPipelineStageFlagBits stage;
 
-        [NativeTypeName("void *")]
         public void* pCheckpointMarker;
     }
 }

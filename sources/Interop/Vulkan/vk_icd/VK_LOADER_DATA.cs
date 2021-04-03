@@ -15,7 +15,6 @@ namespace TerraFX.Interop
         public nuint loaderMagic;
 
         [FieldOffset(0)]
-        [NativeTypeName("void *")]
         public void* loaderData;
     }
 }

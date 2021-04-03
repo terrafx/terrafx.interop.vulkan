@@ -18,7 +18,6 @@ namespace TerraFX.Interop
         [NativeTypeName("PFN_vkDeviceMemoryReportCallbackEXT")]
         public delegate* unmanaged<VkDeviceMemoryReportCallbackDataEXT*, void*, void> pfnUserCallback;
 
-        [NativeTypeName("void *")]
         public void* pUserData;
     }
 }

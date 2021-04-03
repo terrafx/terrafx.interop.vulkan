@@ -9,7 +9,6 @@ namespace TerraFX.Interop
 {
     public unsafe partial struct VkLayerDeviceInfo_
     {
-        [NativeTypeName("void *")]
         public void* device_info;
 
         [NativeTypeName("PFN_vkGetInstanceProcAddr")]

@@ -12,13 +12,11 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkPipelineCreationFeedbackEXT *")]
         public VkPipelineCreationFeedbackEXT* pPipelineCreationFeedback;
 
         [NativeTypeName("uint32_t")]
         public uint pipelineStageCreationFeedbackCount;
 
-        [NativeTypeName("VkPipelineCreationFeedbackEXT *")]
         public VkPipelineCreationFeedbackEXT* pPipelineStageCreationFeedbacks;
     }
 }

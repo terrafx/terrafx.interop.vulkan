@@ -10,7 +10,7 @@ namespace TerraFX.Interop
     public static unsafe partial class Vulkan
     {
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkNegotiateLoaderLayerInterfaceVersion([NativeTypeName("VkNegotiateLayerInterface *")] VkNegotiateLayerInterface* pVersionStruct);
+        public static extern VkResult vkNegotiateLoaderLayerInterfaceVersion(VkNegotiateLayerInterface* pVersionStruct);
 
         [NativeTypeName("#define MAX_NUM_UNKNOWN_EXTS 250")]
         public const int MAX_NUM_UNKNOWN_EXTS = 250;

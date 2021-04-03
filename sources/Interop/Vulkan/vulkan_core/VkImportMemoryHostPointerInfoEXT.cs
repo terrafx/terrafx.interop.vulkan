@@ -14,7 +14,6 @@ namespace TerraFX.Interop
 
         public VkExternalMemoryHandleTypeFlagBits handleType;
 
-        [NativeTypeName("void *")]
         public void* pHostPointer;
     }
 }

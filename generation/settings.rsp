@@ -16,8 +16,6 @@ generate-aggressive-inlining
 generate-macro-bindings
 generate-tests-nunit
 multi-file
-preview-codegen-fnptr
-preview-codegen-nint
 --headerFile
 header.txt
 --include-directory
