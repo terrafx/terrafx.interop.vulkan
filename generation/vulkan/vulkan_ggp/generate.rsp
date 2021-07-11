@@ -9,8 +9,8 @@ vulkan-vulkan_ggp.h
 --include-directory
 ./
 --output
-../../../sources/Interop/Vulkan/vulkan_ggp
+../../../sources/Interop/Vulkan/vulkan/vulkan_ggp
 --test-output
-../../../tests/Interop/Vulkan/vulkan_ggp
+../../../tests/Interop/Vulkan/vulkan/vulkan_ggp
 --traverse
-C:/VulkanSDK/1.2.170.0/Include/vulkan/vulkan_ggp.h
+C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan_ggp.h

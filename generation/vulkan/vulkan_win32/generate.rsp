@@ -7,8 +7,8 @@ VULKAN_WIN32_H_
 --file
 vulkan-vulkan_win32.h
 --output
-../../../sources/Interop/Vulkan/vulkan_win32
+../../../sources/Interop/Vulkan/vulkan/vulkan_win32
 --test-output
-../../../tests/Interop/Vulkan/vulkan_win32
+../../../tests/Interop/Vulkan/vulkan/vulkan_win32
 --traverse
-C:/VulkanSDK/1.2.170.0/Include/vulkan/vulkan_win32.h
+C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan_win32.h

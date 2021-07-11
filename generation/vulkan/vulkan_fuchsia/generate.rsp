@@ -9,8 +9,8 @@ vulkan-vulkan_fuchsia.h
 --include-directory
 ./
 --output
-../../../sources/Interop/Vulkan/vulkan_fuchsia
+../../../sources/Interop/Vulkan/vulkan/vulkan_fuchsia
 --test-output
-../../../tests/Interop/Vulkan/vulkan_fuchsia
+../../../tests/Interop/Vulkan/vulkan/vulkan_fuchsia
 --traverse
-C:/VulkanSDK/1.2.170.0/Include/vulkan/vulkan_fuchsia.h
+C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan_fuchsia.h

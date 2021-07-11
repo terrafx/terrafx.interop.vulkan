@@ -7,8 +7,8 @@ VULKAN_IOS_H_
 --file
 vulkan-vulkan_ios.h
 --output
-../../../sources/Interop/Vulkan/vulkan_ios
+../../../sources/Interop/Vulkan/vulkan/vulkan_ios
 --test-output
-../../../tests/Interop/Vulkan/vulkan_ios
+../../../tests/Interop/Vulkan/vulkan/vulkan_ios
 --traverse
-C:/VulkanSDK/1.2.170.0/Include/vulkan/vulkan_ios.h
+C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan_ios.h

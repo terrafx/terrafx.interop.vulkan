@@ -3,8 +3,8 @@
 --file
 vulkan-vk_icd.h
 --output
-../../../sources/Interop/Vulkan/vk_icd
+../../../sources/Interop/Vulkan/vulkan/vk_icd
 --test-output
-../../../tests/Interop/Vulkan/vk_icd
+../../../tests/Interop/Vulkan/vulkan/vk_icd
 --traverse
-C:/VulkanSDK/1.2.170.0/Include/vulkan/vk_icd.h
+C:/VulkanSDK/1.2.182.0/Include/vulkan/vk_icd.h

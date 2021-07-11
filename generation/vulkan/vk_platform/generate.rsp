@@ -3,8 +3,8 @@
 --file
 vulkan-vk_platform.h
 --output
-../../../sources/Interop/Vulkan/vk_platform
+../../../sources/Interop/Vulkan/vulkan/vk_platform
 --test-output
-../../../tests/Interop/Vulkan/vk_platform
+../../../tests/Interop/Vulkan/vulkan/vk_platform
 --traverse
-C:/VulkanSDK/1.2.170.0/Include/vulkan/vk_platform.h
+C:/VulkanSDK/1.2.182.0/Include/vulkan/vk_platform.h

@@ -3,11 +3,11 @@
 --file
 vulkan-vk_layer.h
 --output
-../../../sources/Interop/Vulkan/vk_layer
+../../../sources/Interop/Vulkan/vulkan/vk_layer
 --test-output
-../../../tests/Interop/Vulkan/vk_layer
+../../../tests/Interop/Vulkan/vulkan/vk_layer
 --traverse
-C:/VulkanSDK/1.2.170.0/Include/vulkan/vk_layer.h
+C:/VulkanSDK/1.2.182.0/Include/vulkan/vk_layer.h
 --with-attribute
 VkLoaderFeastureFlagBits=Flags
 --with-type

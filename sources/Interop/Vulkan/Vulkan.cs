@@ -50,7 +50,7 @@ namespace TerraFX.Interop
             {
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                 {
-                    if (NativeLibrary.TryLoad("libvulkan.so.1.2.170", assembly, searchPath, out nativeLibrary))
+                    if (NativeLibrary.TryLoad("libvulkan.so.1.2.182", assembly, searchPath, out nativeLibrary))
                     {
                         return true;
                     }
@@ -62,7 +62,7 @@ namespace TerraFX.Interop
                 }
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
                 {
-                    if (NativeLibrary.TryLoad("libvulkan.1.2.170.dylib", assembly, searchPath, out nativeLibrary))
+                    if (NativeLibrary.TryLoad("libvulkan.1.2.182.dylib", assembly, searchPath, out nativeLibrary))
                     {
                         return true;
                     }

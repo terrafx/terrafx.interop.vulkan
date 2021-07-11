@@ -7,8 +7,8 @@ VULKAN_METAL_H_
 --file
 vulkan-vulkan_metal.h
 --output
-../../../sources/Interop/Vulkan/vulkan_metal
+../../../sources/Interop/Vulkan/vulkan/vulkan_metal
 --test-output
-../../../tests/Interop/Vulkan/vulkan_metal
+../../../tests/Interop/Vulkan/vulkan/vulkan_metal
 --traverse
-C:/VulkanSDK/1.2.170.0/Include/vulkan/vulkan_metal.h
+C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan_metal.h

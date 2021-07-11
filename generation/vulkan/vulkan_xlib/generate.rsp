@@ -9,8 +9,8 @@ vulkan-vulkan_xlib.h
 --include-directory
 ./
 --output
-../../../sources/Interop/Vulkan/vulkan_xlib
+../../../sources/Interop/Vulkan/vulkan/vulkan_xlib
 --test-output
-../../../tests/Interop/Vulkan/vulkan_xlib
+../../../tests/Interop/Vulkan/vulkan/vulkan_xlib
 --traverse
-C:/VulkanSDK/1.2.170.0/Include/vulkan/vulkan_xlib.h
+C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan_xlib.h

@@ -9,8 +9,8 @@ vulkan-vulkan_xlib_xrandr.h
 --include-directory
 ./
 --output
-../../../sources/Interop/Vulkan/vulkan_xlib_xrandr
+../../../sources/Interop/Vulkan/vulkan/vulkan_xlib_xrandr
 --test-output
-../../../tests/Interop/Vulkan/vulkan_xlib_xrandr
+../../../tests/Interop/Vulkan/vulkan/vulkan_xlib_xrandr
 --traverse
-C:/VulkanSDK/1.2.170.0/Include/vulkan/vulkan_xlib_xrandr.h
+C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan_xlib_xrandr.h
