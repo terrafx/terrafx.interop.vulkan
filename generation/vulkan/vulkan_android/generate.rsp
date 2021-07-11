@@ -7,9 +7,9 @@ VULKAN_ANDROID_H_
 --file
 vulkan-vulkan_android.h
 --output
-../../../sources/Interop/Vulkan/vulkan_android
+../../../sources/Interop/Vulkan/vulkan/vulkan_android
 --test-output
-../../../tests/Interop/Vulkan/vulkan_android
+../../../tests/Interop/Vulkan/vulkan/vulkan_android
 --traverse
-C:/VulkanSDK/1.2.170.0/Include/vulkan/vulkan_android.h
+C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan_android.h
 

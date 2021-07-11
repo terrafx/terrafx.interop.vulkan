@@ -9,8 +9,8 @@ vulkan-vulkan_xcb.h
 --include-directory
 ./
 --output
-../../../sources/Interop/Vulkan/vulkan_xcb
+../../../sources/Interop/Vulkan/vulkan/vulkan_xcb
 --test-output
-../../../tests/Interop/Vulkan/vulkan_xcb
+../../../tests/Interop/Vulkan/vulkan/vulkan_xcb
 --traverse
-C:/VulkanSDK/1.2.170.0/Include/vulkan/vulkan_xcb.h
+C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan_xcb.h

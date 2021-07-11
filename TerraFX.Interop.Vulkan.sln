@@ -221,6 +221,64 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_directfb", "vulkan_d
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan", "vulkan", "{A60F8633-35FC-4F61-A42A-420ED1BEB2DB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_screen", "vulkan_screen", "{277EB067-C8D5-4766-B3AA-BFBCFD06C984}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vulkan_screen\generate.rsp = generation\vulkan\vulkan_screen\generate.rsp
+		generation\vulkan\vulkan_screen\header.txt = generation\vulkan\vulkan_screen\header.txt
+		generation\vulkan\vulkan_screen\vulkan-vulkan_screen.h = generation\vulkan\vulkan_screen\vulkan-vulkan_screen.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vk_video", "vk_video", "{70F5B453-DC97-44B5-B557-22FA8093F38D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vk_enum_string_helper", "vk_enum_string_helper", "{678CBA13-C08F-4D99-AA6B-DAD5B0B03DFA}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vulkan\vk_enum_string_helper\generate.rsp = generation\vulkan\vk_enum_string_helper\generate.rsp
+		generation\vulkan\vk_enum_string_helper\header.txt = generation\vulkan\vk_enum_string_helper\header.txt
+		generation\vulkan\vk_enum_string_helper\vulkan-vk_enum_string_helper.h = generation\vulkan\vk_enum_string_helper\vulkan-vk_enum_string_helper.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_video_codec_h264std", "vulkan_video_codec_h264std", "{12D560FA-F1BD-4E62-A2C7-3518B9D1A6B2}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vk_video\vulkan_video_codec_h264std\generate.rsp = generation\vk_video\vulkan_video_codec_h264std\generate.rsp
+		generation\vk_video\vulkan_video_codec_h264std\header.txt = generation\vk_video\vulkan_video_codec_h264std\header.txt
+		generation\vk_video\vulkan_video_codec_h264std\vk_video-vulkan_video_codec_h264std.h = generation\vk_video\vulkan_video_codec_h264std\vk_video-vulkan_video_codec_h264std.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_video_codec_h264std_decode", "vulkan_video_codec_h264std_decode", "{32C9C394-6479-4B4F-AF42-7B4C085DE67B}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vk_video\vulkan_video_codec_h264std_decode\generate.rsp = generation\vk_video\vulkan_video_codec_h264std_decode\generate.rsp
+		generation\vk_video\vulkan_video_codec_h264std_decode\header.txt = generation\vk_video\vulkan_video_codec_h264std_decode\header.txt
+		generation\vk_video\vulkan_video_codec_h264std_decode\vk_video-vulkan_video_codec_h264std_decode.h = generation\vk_video\vulkan_video_codec_h264std_decode\vk_video-vulkan_video_codec_h264std_decode.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_video_codec_h264std_encode", "vulkan_video_codec_h264std_encode", "{9F4D701B-593C-42AC-8EAC-B51950CEB2E4}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vk_video\vulkan_video_codec_h264std_encode\generate.rsp = generation\vk_video\vulkan_video_codec_h264std_encode\generate.rsp
+		generation\vk_video\vulkan_video_codec_h264std_encode\header.txt = generation\vk_video\vulkan_video_codec_h264std_encode\header.txt
+		generation\vk_video\vulkan_video_codec_h264std_encode\vk_video-vulkan_video_codec_h264std_encode.h = generation\vk_video\vulkan_video_codec_h264std_encode\vk_video-vulkan_video_codec_h264std_encode.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_video_codec_h265std", "vulkan_video_codec_h265std", "{17DF0860-8D75-473C-B506-839226CD8692}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vk_video\vulkan_video_codec_h265std\generate.rsp = generation\vk_video\vulkan_video_codec_h265std\generate.rsp
+		generation\vk_video\vulkan_video_codec_h265std\header.txt = generation\vk_video\vulkan_video_codec_h265std\header.txt
+		generation\vk_video\vulkan_video_codec_h265std\vk_video-vulkan_video_codec_h265std.h = generation\vk_video\vulkan_video_codec_h265std\vk_video-vulkan_video_codec_h265std.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_video_codec_h265std_decode", "vulkan_video_codec_h265std_decode", "{D29C2169-CA3D-44D4-A3A7-43D5383697A1}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vk_video\vulkan_video_codec_h265std_decode\generate.rsp = generation\vk_video\vulkan_video_codec_h265std_decode\generate.rsp
+		generation\vk_video\vulkan_video_codec_h265std_decode\header.txt = generation\vk_video\vulkan_video_codec_h265std_decode\header.txt
+		generation\vk_video\vulkan_video_codec_h265std_decode\vk_video-vulkan_video_codec_h265std_decode.h = generation\vk_video\vulkan_video_codec_h265std_decode\vk_video-vulkan_video_codec_h265std_decode.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_video_codecs_common", "vulkan_video_codecs_common", "{B0BE7192-1080-4524-89EE-134E8BA49F43}"
+	ProjectSection(SolutionItems) = preProject
+		generation\vk_video\vulkan_video_codecs_common\generate.rsp = generation\vk_video\vulkan_video_codecs_common\generate.rsp
+		generation\vk_video\vulkan_video_codecs_common\header.txt = generation\vk_video\vulkan_video_codecs_common\header.txt
+		generation\vk_video\vulkan_video_codecs_common\vk_video-vulkan_video_codecs_common.h = generation\vk_video\vulkan_video_codecs_common\vk_video-vulkan_video_codecs_common.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -268,6 +326,15 @@ Global
 		{6B66365D-63B7-4988-89D3-58AB7F372854} = {8B98276D-AB81-4492-81E3-BAB8F9494A99}
 		{D2B26392-2F4C-4A6D-AAC9-3DB9F74C0CE9} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
 		{A60F8633-35FC-4F61-A42A-420ED1BEB2DB} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{277EB067-C8D5-4766-B3AA-BFBCFD06C984} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
+		{70F5B453-DC97-44B5-B557-22FA8093F38D} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{678CBA13-C08F-4D99-AA6B-DAD5B0B03DFA} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
+		{12D560FA-F1BD-4E62-A2C7-3518B9D1A6B2} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
+		{32C9C394-6479-4B4F-AF42-7B4C085DE67B} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
+		{9F4D701B-593C-42AC-8EAC-B51950CEB2E4} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
+		{17DF0860-8D75-473C-B506-839226CD8692} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
+		{D29C2169-CA3D-44D4-A3A7-43D5383697A1} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
+		{B0BE7192-1080-4524-89EE-134E8BA49F43} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FE36DF8-2D9C-4F20-8787-45DC74B57461}

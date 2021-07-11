@@ -1,0 +1,10 @@
+@../../settings.rsp
+@../../remap.rsp
+--file
+vulkan-vk_enum_string_helper.h
+--output
+../../../sources/Interop/Vulkan/vulkan/vk_enum_string_helper
+--test-output
+../../../tests/Interop/Vulkan/vulkan/vk_enum_string_helper
+--traverse
+C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan-vk_enum_string_helper.h

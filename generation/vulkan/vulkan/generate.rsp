@@ -5,8 +5,8 @@ VULKAN_H_
 --file
 vulkan-vulkan.h
 --output
-../../../sources/Interop/Vulkan/vulkan
+../../../sources/Interop/Vulkan/vulkan/vulkan
 --test-output
-../../../tests/Interop/Vulkan/vulkan
+../../../tests/Interop/Vulkan/vulkan/vulkan
 --traverse
-C:/VulkanSDK/1.2.170.0/Include/vulkan/vulkan.h
+C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan.h
