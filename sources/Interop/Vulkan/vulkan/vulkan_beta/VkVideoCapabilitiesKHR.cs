@@ -11,7 +11,7 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        public VkVideoCapabilitiesFlagsKHR capabilityFlags;
+        public VkVideoCapabilityFlagsKHR capabilityFlags;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong minBitstreamBufferOffsetAlignment;

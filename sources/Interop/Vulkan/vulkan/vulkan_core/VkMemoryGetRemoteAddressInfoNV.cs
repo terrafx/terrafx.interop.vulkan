@@ -5,21 +5,17 @@
 
 namespace TerraFX.Interop
 {
-    public unsafe partial struct VkPerformanceCounterDescriptionKHR
+    public unsafe partial struct VkMemoryGetRemoteAddressInfoNV
     {
         public VkStructureType sType;
 
+        [NativeTypeName("const void *")]
         public void* pNext;
 
-        public VkPerformanceCounterDescriptionFlagsKHR flags;
+        [NativeTypeName("VkDeviceMemory")]
+        public ulong memory;
 
-        [NativeTypeName("char [256]")]
-        public fixed sbyte name[256];
-
-        [NativeTypeName("char [256]")]
-        public fixed sbyte category[256];
-
-        [NativeTypeName("char [256]")]
-        public fixed sbyte description[256];
+        [NativeTypeName("VkExternalMemoryHandleTypeFlagBits")]
+        public VkExternalMemoryHandleTypeFlags handleType;
     }
 }

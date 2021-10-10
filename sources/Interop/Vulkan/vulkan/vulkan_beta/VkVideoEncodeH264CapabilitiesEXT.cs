@@ -12,7 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        public VkVideoEncodeH264CapabilitiesFlagsEXT flags;
+        public VkVideoEncodeH264CapabilityFlagsEXT flags;
 
         public VkVideoEncodeH264InputModeFlagsEXT inputModeFlags;
 

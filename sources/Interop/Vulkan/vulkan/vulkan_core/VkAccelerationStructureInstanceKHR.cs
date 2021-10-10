@@ -75,7 +75,7 @@ namespace TerraFX.Interop
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             set
             {
-                _bitfield2 = (_bitfield2 & ~(0xFFu << 24)) | (((uint)value & 0xFFu) << 24);
+                _bitfield2 = (_bitfield2 & ~(0xFFu << 24)) | (((uint)(value) & 0xFFu) << 24);
             }
         }
 

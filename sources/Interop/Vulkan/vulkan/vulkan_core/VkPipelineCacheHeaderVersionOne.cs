@@ -5,19 +5,20 @@
 
 namespace TerraFX.Interop
 {
-    public unsafe partial struct VkPerformanceCounterKHR
+    public unsafe partial struct VkPipelineCacheHeaderVersionOne
     {
-        public VkStructureType sType;
+        [NativeTypeName("uint32_t")]
+        public uint headerSize;
 
-        public void* pNext;
+        public VkPipelineCacheHeaderVersion headerVersion;
 
-        public VkPerformanceCounterUnitKHR unit;
+        [NativeTypeName("uint32_t")]
+        public uint vendorID;
 
-        public VkPerformanceCounterScopeKHR scope;
-
-        public VkPerformanceCounterStorageKHR storage;
+        [NativeTypeName("uint32_t")]
+        public uint deviceID;
 
         [NativeTypeName("uint8_t [16]")]
-        public fixed byte uuid[16];
+        public fixed byte pipelineCacheUUID[16];
     }
 }

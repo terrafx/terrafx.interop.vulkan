@@ -5,12 +5,17 @@
 
 namespace TerraFX.Interop
 {
-    public enum VkAttachmentStoreOp
+    public unsafe partial struct VkPresentIdKHR
     {
-        VK_ATTACHMENT_STORE_OP_STORE = 0,
-        VK_ATTACHMENT_STORE_OP_DONT_CARE = 1,
-        VK_ATTACHMENT_STORE_OP_NONE_EXT = 1000301000,
-        VK_ATTACHMENT_STORE_OP_NONE_QCOM = VK_ATTACHMENT_STORE_OP_NONE_EXT,
-        VK_ATTACHMENT_STORE_OP_MAX_ENUM = 0x7FFFFFFF,
+        public VkStructureType sType;
+
+        [NativeTypeName("const void *")]
+        public void* pNext;
+
+        [NativeTypeName("uint32_t")]
+        public uint swapchainCount;
+
+        [NativeTypeName("const uint64_t *")]
+        public ulong* pPresentIds;
     }
 }

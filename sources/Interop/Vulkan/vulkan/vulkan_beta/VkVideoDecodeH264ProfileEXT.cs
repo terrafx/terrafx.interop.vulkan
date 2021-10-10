@@ -14,6 +14,6 @@ namespace TerraFX.Interop
 
         public StdVideoH264ProfileIdc stdProfileIdc;
 
-        public VkVideoDecodeH264FieldLayoutFlagsEXT fieldLayout;
+        public VkVideoDecodeH264PictureLayoutFlagsEXT pictureLayout;
     }
 }

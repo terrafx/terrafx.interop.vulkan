@@ -5,12 +5,13 @@
 
 namespace TerraFX.Interop
 {
-    public enum VkAttachmentStoreOp
+    public unsafe partial struct VkPhysicalDeviceInvocationMaskFeaturesHUAWEI
     {
-        VK_ATTACHMENT_STORE_OP_STORE = 0,
-        VK_ATTACHMENT_STORE_OP_DONT_CARE = 1,
-        VK_ATTACHMENT_STORE_OP_NONE_EXT = 1000301000,
-        VK_ATTACHMENT_STORE_OP_NONE_QCOM = VK_ATTACHMENT_STORE_OP_NONE_EXT,
-        VK_ATTACHMENT_STORE_OP_MAX_ENUM = 0x7FFFFFFF,
+        public VkStructureType sType;
+
+        public void* pNext;
+
+        [NativeTypeName("VkBool32")]
+        public uint invocationMask;
     }
 }

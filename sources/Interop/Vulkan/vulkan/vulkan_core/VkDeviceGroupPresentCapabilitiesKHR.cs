@@ -9,7 +9,6 @@ namespace TerraFX.Interop
     {
         public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
         public void* pNext;
 
         [NativeTypeName("uint32_t [32]")]
