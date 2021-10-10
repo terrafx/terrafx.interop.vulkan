@@ -7,4 +7,4 @@ vulkan-vk_platform.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan/vk_platform
 --traverse
-C:/VulkanSDK/1.2.182.0/Include/vulkan/vk_platform.h
+C:/VulkanSDK/1.2.189.2/Include/vulkan/vk_platform.h

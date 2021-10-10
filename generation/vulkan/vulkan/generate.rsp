@@ -9,4 +9,4 @@ vulkan-vulkan.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan/vulkan
 --traverse
-C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan.h
+C:/VulkanSDK/1.2.189.2/Include/vulkan/vulkan.h

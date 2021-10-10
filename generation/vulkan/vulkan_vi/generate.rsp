@@ -11,4 +11,4 @@ vulkan-vulkan_vi.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan/vulkan_vi
 --traverse
-C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan_vi.h
+C:/VulkanSDK/1.2.189.2/Include/vulkan/vulkan_vi.h

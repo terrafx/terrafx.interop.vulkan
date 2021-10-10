@@ -9,4 +9,4 @@ vulkan-vulkan_directfb.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan/vulkan_directfb
 --traverse
-C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan_directfb.h
+C:/VulkanSDK/1.2.189.2/Include/vulkan/vulkan_directfb.h

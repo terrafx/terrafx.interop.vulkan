@@ -7,4 +7,4 @@ vulkan-vk_enum_string_helper.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan/vk_enum_string_helper
 --traverse
-C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan-vk_enum_string_helper.h
+C:/VulkanSDK/1.2.189.2/Include/vulkan/vulkan-vk_enum_string_helper.h
