@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.182
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
 // Original source is Copyright © 2015-2021 The Khronos Group Inc.
 
 using System;
@@ -784,6 +784,9 @@ namespace TerraFX.Interop
         public static extern void vkCmdSetFragmentShadingRateKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkExtent2D *")] VkExtent2D* pFragmentSize, [NativeTypeName("const VkFragmentShadingRateCombinerOpKHR [2]")] VkFragmentShadingRateCombinerOpKHR* combinerOps);
 
         [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkWaitForPresentKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkSwapchainKHR")] ulong swapchain, [NativeTypeName("uint64_t")] ulong presentId, [NativeTypeName("uint64_t")] ulong timeout);
+
+        [DllImport("vulkan", ExactSpelling = true)]
         [return: NativeTypeName("VkDeviceAddress")]
         public static extern ulong vkGetBufferDeviceAddressKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkBufferDeviceAddressInfo *")] VkBufferDeviceAddressInfo* pInfo);
 
@@ -863,7 +866,7 @@ namespace TerraFX.Interop
         public const ulong VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT_KHR = 0x00001000UL;
 
         [NativeTypeName("const VkPipelineStageFlagBits2KHR")]
-        public const ulong VK_PIPELINE_STAGE_2_TRANSFER_BIT_KHR = 0x00001000;
+        public const ulong VK_PIPELINE_STAGE_2_TRANSFER_BIT_KHR = 0x00001000UL;
 
         [NativeTypeName("const VkPipelineStageFlagBits2KHR")]
         public const ulong VK_PIPELINE_STAGE_2_BOTTOM_OF_PIPE_BIT_KHR = 0x00002000UL;
@@ -911,7 +914,7 @@ namespace TerraFX.Interop
         public const ulong VK_PIPELINE_STAGE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x00400000UL;
 
         [NativeTypeName("const VkPipelineStageFlagBits2KHR")]
-        public const ulong VK_PIPELINE_STAGE_2_SHADING_RATE_IMAGE_BIT_NV = 0x00400000;
+        public const ulong VK_PIPELINE_STAGE_2_SHADING_RATE_IMAGE_BIT_NV = 0x00400000UL;
 
         [NativeTypeName("const VkPipelineStageFlagBits2KHR")]
         public const ulong VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_KHR = 0x02000000UL;
@@ -920,10 +923,10 @@ namespace TerraFX.Interop
         public const ulong VK_PIPELINE_STAGE_2_RAY_TRACING_SHADER_BIT_KHR = 0x00200000UL;
 
         [NativeTypeName("const VkPipelineStageFlagBits2KHR")]
-        public const ulong VK_PIPELINE_STAGE_2_RAY_TRACING_SHADER_BIT_NV = 0x00200000;
+        public const ulong VK_PIPELINE_STAGE_2_RAY_TRACING_SHADER_BIT_NV = 0x00200000UL;
 
         [NativeTypeName("const VkPipelineStageFlagBits2KHR")]
-        public const ulong VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_NV = 0x02000000;
+        public const ulong VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_NV = 0x02000000UL;
 
         [NativeTypeName("const VkPipelineStageFlagBits2KHR")]
         public const ulong VK_PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_BIT_EXT = 0x00800000UL;
@@ -936,6 +939,9 @@ namespace TerraFX.Interop
 
         [NativeTypeName("const VkPipelineStageFlagBits2KHR")]
         public const ulong VK_PIPELINE_STAGE_2_SUBPASS_SHADING_BIT_HUAWEI = 0x8000000000UL;
+
+        [NativeTypeName("const VkPipelineStageFlagBits2KHR")]
+        public const ulong VK_PIPELINE_STAGE_2_INVOCATION_MASK_BIT_HUAWEI = 0x10000000000UL;
 
         [NativeTypeName("const VkAccessFlagBits2KHR")]
         public const ulong VK_ACCESS_2_NONE_KHR = 0UL;
@@ -1022,7 +1028,7 @@ namespace TerraFX.Interop
         public const ulong VK_ACCESS_2_FRAGMENT_SHADING_RATE_ATTACHMENT_READ_BIT_KHR = 0x00800000UL;
 
         [NativeTypeName("const VkAccessFlagBits2KHR")]
-        public const ulong VK_ACCESS_2_SHADING_RATE_IMAGE_READ_BIT_NV = 0x00800000;
+        public const ulong VK_ACCESS_2_SHADING_RATE_IMAGE_READ_BIT_NV = 0x00800000UL;
 
         [NativeTypeName("const VkAccessFlagBits2KHR")]
         public const ulong VK_ACCESS_2_ACCELERATION_STRUCTURE_READ_BIT_KHR = 0x00200000UL;
@@ -1031,16 +1037,19 @@ namespace TerraFX.Interop
         public const ulong VK_ACCESS_2_ACCELERATION_STRUCTURE_WRITE_BIT_KHR = 0x00400000UL;
 
         [NativeTypeName("const VkAccessFlagBits2KHR")]
-        public const ulong VK_ACCESS_2_ACCELERATION_STRUCTURE_READ_BIT_NV = 0x00200000;
+        public const ulong VK_ACCESS_2_ACCELERATION_STRUCTURE_READ_BIT_NV = 0x00200000UL;
 
         [NativeTypeName("const VkAccessFlagBits2KHR")]
-        public const ulong VK_ACCESS_2_ACCELERATION_STRUCTURE_WRITE_BIT_NV = 0x00400000;
+        public const ulong VK_ACCESS_2_ACCELERATION_STRUCTURE_WRITE_BIT_NV = 0x00400000UL;
 
         [NativeTypeName("const VkAccessFlagBits2KHR")]
         public const ulong VK_ACCESS_2_FRAGMENT_DENSITY_MAP_READ_BIT_EXT = 0x01000000UL;
 
         [NativeTypeName("const VkAccessFlagBits2KHR")]
         public const ulong VK_ACCESS_2_COLOR_ATTACHMENT_READ_NONCOHERENT_BIT_EXT = 0x00080000UL;
+
+        [NativeTypeName("const VkAccessFlagBits2KHR")]
+        public const ulong VK_ACCESS_2_INVOCATION_MASK_READ_BIT_HUAWEI = 0x8000000000UL;
 
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern void vkCmdSetEvent2KHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkEvent")] ulong @event, [NativeTypeName("const VkDependencyInfoKHR *")] VkDependencyInfoKHR* pDependencyInfo);
@@ -1468,10 +1477,16 @@ namespace TerraFX.Interop
         public static extern void vkCmdSetVertexInputEXT([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("uint32_t")] uint vertexBindingDescriptionCount, [NativeTypeName("const VkVertexInputBindingDescription2EXT *")] VkVertexInputBindingDescription2EXT* pVertexBindingDescriptions, [NativeTypeName("uint32_t")] uint vertexAttributeDescriptionCount, [NativeTypeName("const VkVertexInputAttributeDescription2EXT *")] VkVertexInputAttributeDescription2EXT* pVertexAttributeDescriptions);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetSubpassShadingMaxWorkgroupSizeHUAWEI([NativeTypeName("VkRenderPass")] ulong renderpass, VkExtent2D* pMaxWorkgroupSize);
+        public static extern VkResult vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkRenderPass")] ulong renderpass, VkExtent2D* pMaxWorkgroupSize);
 
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern void vkCmdSubpassShadingHUAWEI([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern void vkCmdBindInvocationMaskHUAWEI([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("VkImageView")] ulong imageView, VkImageLayout imageLayout);
+
+        [DllImport("vulkan", ExactSpelling = true)]
+        public static extern VkResult vkGetMemoryRemoteAddressNV([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkMemoryGetRemoteAddressInfoNV *")] VkMemoryGetRemoteAddressInfoNV* pMemoryGetRemoteAddressInfo, [NativeTypeName("VkRemoteAddressNV *")] void** pAddress);
 
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern void vkCmdSetPatchControlPointsEXT([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("uint32_t")] uint patchControlPoints);
@@ -1577,11 +1592,14 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_API_VERSION_1_0 VK_MAKE_API_VERSION(0, 1, 0, 0)")]
         public const uint VK_API_VERSION_1_0 = ((((uint)(0)) << 29) | (((uint)(1)) << 22) | (((uint)(0)) << 12) | ((uint)(0)));
 
-        [NativeTypeName("#define VK_HEADER_VERSION 182")]
-        public const int VK_HEADER_VERSION = 182;
+        [NativeTypeName("#define VK_HEADER_VERSION 189")]
+        public const int VK_HEADER_VERSION = 189;
 
         [NativeTypeName("#define VK_HEADER_VERSION_COMPLETE VK_MAKE_API_VERSION(0, 1, 2, VK_HEADER_VERSION)")]
-        public const uint VK_HEADER_VERSION_COMPLETE = ((((uint)(0)) << 29) | (((uint)(1)) << 22) | (((uint)(2)) << 12) | ((uint)(182)));
+        public const uint VK_HEADER_VERSION_COMPLETE = ((((uint)(0)) << 29) | (((uint)(1)) << 22) | (((uint)(2)) << 12) | ((uint)(189)));
+
+        [NativeTypeName("#define VK_UUID_SIZE 16U")]
+        public const uint VK_UUID_SIZE = 16U;
 
         [NativeTypeName("#define VK_ATTACHMENT_UNUSED (~0U)")]
         public const uint VK_ATTACHMENT_UNUSED = (~0U);
@@ -1618,9 +1636,6 @@ namespace TerraFX.Interop
 
         [NativeTypeName("#define VK_MAX_PHYSICAL_DEVICE_NAME_SIZE 256U")]
         public const uint VK_MAX_PHYSICAL_DEVICE_NAME_SIZE = 256U;
-
-        [NativeTypeName("#define VK_UUID_SIZE 16U")]
-        public const uint VK_UUID_SIZE = 16U;
 
         [NativeTypeName("#define VK_MAX_EXTENSION_NAME_SIZE 256U")]
         public const uint VK_MAX_EXTENSION_NAME_SIZE = 256U;
@@ -2183,6 +2198,15 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_KHR_SEPARATE_DEPTH_STENCIL_LAYOUTS_EXTENSION_NAME \"VK_KHR_separate_depth_stencil_layouts\"")]
         public static ReadOnlySpan<byte> VK_KHR_SEPARATE_DEPTH_STENCIL_LAYOUTS_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x73, 0x65, 0x70, 0x61, 0x72, 0x61, 0x74, 0x65, 0x5F, 0x64, 0x65, 0x70, 0x74, 0x68, 0x5F, 0x73, 0x74, 0x65, 0x6E, 0x63, 0x69, 0x6C, 0x5F, 0x6C, 0x61, 0x79, 0x6F, 0x75, 0x74, 0x73, 0x00 };
 
+        [NativeTypeName("#define VK_KHR_present_wait 1")]
+        public const int VK_KHR_present_wait = 1;
+
+        [NativeTypeName("#define VK_KHR_PRESENT_WAIT_SPEC_VERSION 1")]
+        public const int VK_KHR_PRESENT_WAIT_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_PRESENT_WAIT_EXTENSION_NAME \"VK_KHR_present_wait\"")]
+        public static ReadOnlySpan<byte> VK_KHR_PRESENT_WAIT_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x70, 0x72, 0x65, 0x73, 0x65, 0x6E, 0x74, 0x5F, 0x77, 0x61, 0x69, 0x74, 0x00 };
+
         [NativeTypeName("#define VK_KHR_uniform_buffer_standard_layout 1")]
         public const int VK_KHR_uniform_buffer_standard_layout = 1;
 
@@ -2236,6 +2260,15 @@ namespace TerraFX.Interop
 
         [NativeTypeName("#define VK_KHR_SHADER_NON_SEMANTIC_INFO_EXTENSION_NAME \"VK_KHR_shader_non_semantic_info\"")]
         public static ReadOnlySpan<byte> VK_KHR_SHADER_NON_SEMANTIC_INFO_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x73, 0x68, 0x61, 0x64, 0x65, 0x72, 0x5F, 0x6E, 0x6F, 0x6E, 0x5F, 0x73, 0x65, 0x6D, 0x61, 0x6E, 0x74, 0x69, 0x63, 0x5F, 0x69, 0x6E, 0x66, 0x6F, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_present_id 1")]
+        public const int VK_KHR_present_id = 1;
+
+        [NativeTypeName("#define VK_KHR_PRESENT_ID_SPEC_VERSION 1")]
+        public const int VK_KHR_PRESENT_ID_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_PRESENT_ID_EXTENSION_NAME \"VK_KHR_present_id\"")]
+        public static ReadOnlySpan<byte> VK_KHR_PRESENT_ID_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x70, 0x72, 0x65, 0x73, 0x65, 0x6E, 0x74, 0x5F, 0x69, 0x64, 0x00 };
 
         [NativeTypeName("#define VK_KHR_synchronization2 1")]
         public const int VK_KHR_synchronization2 = 1;
@@ -3335,6 +3368,15 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME \"VK_EXT_extended_dynamic_state\"")]
         public static ReadOnlySpan<byte> VK_EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x65, 0x78, 0x74, 0x65, 0x6E, 0x64, 0x65, 0x64, 0x5F, 0x64, 0x79, 0x6E, 0x61, 0x6D, 0x69, 0x63, 0x5F, 0x73, 0x74, 0x61, 0x74, 0x65, 0x00 };
 
+        [NativeTypeName("#define VK_EXT_shader_atomic_float2 1")]
+        public const int VK_EXT_shader_atomic_float2 = 1;
+
+        [NativeTypeName("#define VK_EXT_SHADER_ATOMIC_FLOAT_2_SPEC_VERSION 1")]
+        public const int VK_EXT_SHADER_ATOMIC_FLOAT_2_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_SHADER_ATOMIC_FLOAT_2_EXTENSION_NAME \"VK_EXT_shader_atomic_float2\"")]
+        public static ReadOnlySpan<byte> VK_EXT_SHADER_ATOMIC_FLOAT_2_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x73, 0x68, 0x61, 0x64, 0x65, 0x72, 0x5F, 0x61, 0x74, 0x6F, 0x6D, 0x69, 0x63, 0x5F, 0x66, 0x6C, 0x6F, 0x61, 0x74, 0x32, 0x00 };
+
         [NativeTypeName("#define VK_EXT_shader_demote_to_helper_invocation 1")]
         public const int VK_EXT_shader_demote_to_helper_invocation = 1;
 
@@ -3563,11 +3605,29 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_HUAWEI_subpass_shading 1")]
         public const int VK_HUAWEI_subpass_shading = 1;
 
-        [NativeTypeName("#define VK_HUAWEI_SUBPASS_SHADING_SPEC_VERSION 0")]
-        public const int VK_HUAWEI_SUBPASS_SHADING_SPEC_VERSION = 0;
+        [NativeTypeName("#define VK_HUAWEI_SUBPASS_SHADING_SPEC_VERSION 2")]
+        public const int VK_HUAWEI_SUBPASS_SHADING_SPEC_VERSION = 2;
 
         [NativeTypeName("#define VK_HUAWEI_SUBPASS_SHADING_EXTENSION_NAME \"VK_HUAWEI_subpass_shading\"")]
         public static ReadOnlySpan<byte> VK_HUAWEI_SUBPASS_SHADING_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x48, 0x55, 0x41, 0x57, 0x45, 0x49, 0x5F, 0x73, 0x75, 0x62, 0x70, 0x61, 0x73, 0x73, 0x5F, 0x73, 0x68, 0x61, 0x64, 0x69, 0x6E, 0x67, 0x00 };
+
+        [NativeTypeName("#define VK_HUAWEI_invocation_mask 1")]
+        public const int VK_HUAWEI_invocation_mask = 1;
+
+        [NativeTypeName("#define VK_HUAWEI_INVOCATION_MASK_SPEC_VERSION 1")]
+        public const int VK_HUAWEI_INVOCATION_MASK_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_HUAWEI_INVOCATION_MASK_EXTENSION_NAME \"VK_HUAWEI_invocation_mask\"")]
+        public static ReadOnlySpan<byte> VK_HUAWEI_INVOCATION_MASK_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x48, 0x55, 0x41, 0x57, 0x45, 0x49, 0x5F, 0x69, 0x6E, 0x76, 0x6F, 0x63, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x5F, 0x6D, 0x61, 0x73, 0x6B, 0x00 };
+
+        [NativeTypeName("#define VK_NV_external_memory_rdma 1")]
+        public const int VK_NV_external_memory_rdma = 1;
+
+        [NativeTypeName("#define VK_NV_EXTERNAL_MEMORY_RDMA_SPEC_VERSION 1")]
+        public const int VK_NV_EXTERNAL_MEMORY_RDMA_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_NV_EXTERNAL_MEMORY_RDMA_EXTENSION_NAME \"VK_NV_external_memory_rdma\"")]
+        public static ReadOnlySpan<byte> VK_NV_EXTERNAL_MEMORY_RDMA_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4E, 0x56, 0x5F, 0x65, 0x78, 0x74, 0x65, 0x72, 0x6E, 0x61, 0x6C, 0x5F, 0x6D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x5F, 0x72, 0x64, 0x6D, 0x61, 0x00 };
 
         [NativeTypeName("#define VK_EXT_extended_dynamic_state2 1")]
         public const int VK_EXT_extended_dynamic_state2 = 1;
@@ -3608,11 +3668,20 @@ namespace TerraFX.Interop
         [NativeTypeName("#define VK_EXT_MULTI_DRAW_EXTENSION_NAME \"VK_EXT_multi_draw\"")]
         public static ReadOnlySpan<byte> VK_EXT_MULTI_DRAW_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x6D, 0x75, 0x6C, 0x74, 0x69, 0x5F, 0x64, 0x72, 0x61, 0x77, 0x00 };
 
+        [NativeTypeName("#define VK_EXT_load_store_op_none 1")]
+        public const int VK_EXT_load_store_op_none = 1;
+
+        [NativeTypeName("#define VK_EXT_LOAD_STORE_OP_NONE_SPEC_VERSION 1")]
+        public const int VK_EXT_LOAD_STORE_OP_NONE_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_LOAD_STORE_OP_NONE_EXTENSION_NAME \"VK_EXT_load_store_op_none\"")]
+        public static ReadOnlySpan<byte> VK_EXT_LOAD_STORE_OP_NONE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x6C, 0x6F, 0x61, 0x64, 0x5F, 0x73, 0x74, 0x6F, 0x72, 0x65, 0x5F, 0x6F, 0x70, 0x5F, 0x6E, 0x6F, 0x6E, 0x65, 0x00 };
+
         [NativeTypeName("#define VK_KHR_acceleration_structure 1")]
         public const int VK_KHR_acceleration_structure = 1;
 
-        [NativeTypeName("#define VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION 11")]
-        public const int VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION = 11;
+        [NativeTypeName("#define VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION 12")]
+        public const int VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION = 12;
 
         [NativeTypeName("#define VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME \"VK_KHR_acceleration_structure\"")]
         public static ReadOnlySpan<byte> VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x61, 0x63, 0x63, 0x65, 0x6C, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x5F, 0x73, 0x74, 0x72, 0x75, 0x63, 0x74, 0x75, 0x72, 0x65, 0x00 };

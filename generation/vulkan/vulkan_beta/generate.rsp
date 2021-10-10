@@ -11,7 +11,7 @@ vulkan-vulkan_beta.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan/vulkan_beta
 --traverse
-C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan_beta.h
+C:/VulkanSDK/1.2.189.2/Include/vulkan/vulkan_beta.h
 --with-type
 VkVideoCapabilitiesFlagsKHR=uint
 VkVideoChromaSubsamplingFlagsKHR=uint

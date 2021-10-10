@@ -9,4 +9,4 @@ vk_video-vulkan_video_codecs_common.h
 --test-output
 ../../../tests/Interop/Vulkan/vk_video/vulkan_video_codecs_common
 --traverse
-C:/VulkanSDK/1.2.182.0/Include/vk_video/vulkan_video_codecs_common.h
+C:/VulkanSDK/1.2.189.2/Include/vk_video/vulkan_video_codecs_common.h

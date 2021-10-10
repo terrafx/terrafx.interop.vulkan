@@ -7,4 +7,4 @@ vk_video-vulkan_video_codec_h265std_decode.h
 --test-output
 ../../../tests/Interop/Vulkan/vk_video/vulkan_video_codec_h265std_decode
 --traverse
-C:/VulkanSDK/1.2.182.0/Include/vk_video/vulkan_video_codec_h265std_decode.h
+C:/VulkanSDK/1.2.189.2/Include/vk_video/vulkan_video_codec_h265std_decode.h

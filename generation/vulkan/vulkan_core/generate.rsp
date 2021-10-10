@@ -20,7 +20,7 @@ vulkan-vulkan_core.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan/vulkan_core
 --traverse
-C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan_core.h
+C:/VulkanSDK/1.2.189.2/Include/vulkan/vulkan_core.h
 --with-attribute
 VkAccelerationStructureCreateFlagsKHR=Flags
 VkAccessFlags=Flags

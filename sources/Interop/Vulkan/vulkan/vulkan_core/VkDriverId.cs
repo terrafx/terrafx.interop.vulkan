@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.182
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
 // Original source is Copyright © 2015-2021 The Khronos Group Inc.
 
 namespace TerraFX.Interop
@@ -23,6 +23,7 @@ namespace TerraFX.Interop
         VK_DRIVER_ID_MOLTENVK = 14,
         VK_DRIVER_ID_COREAVI_PROPRIETARY = 15,
         VK_DRIVER_ID_JUICE_PROPRIETARY = 16,
+        VK_DRIVER_ID_VERISILICON_PROPRIETARY = 17,
         VK_DRIVER_ID_AMD_PROPRIETARY_KHR = VK_DRIVER_ID_AMD_PROPRIETARY,
         VK_DRIVER_ID_AMD_OPEN_SOURCE_KHR = VK_DRIVER_ID_AMD_OPEN_SOURCE,
         VK_DRIVER_ID_MESA_RADV_KHR = VK_DRIVER_ID_MESA_RADV,

@@ -13,4 +13,4 @@ vulkan-vulkan_screen.h
 --test-output
 ../../../tests/Interop/Vulkan/vulkan/vulkan_screen
 --traverse
-C:/VulkanSDK/1.2.182.0/Include/vulkan/vulkan_screen.h
+C:/VulkanSDK/1.2.189.2/Include/vulkan/vulkan_screen.h
