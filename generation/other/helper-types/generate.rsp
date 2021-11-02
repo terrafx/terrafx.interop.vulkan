@@ -1,0 +1,10 @@
+@../../settings.rsp
+@../../remap.rsp
+--config
+generate-helper-types
+--file
+other-helper-types.h
+--output
+../../../sources/Interop/Vulkan/other/helper-types
+--test-output
+../../../tests/Interop/Vulkan/other/helper-types

@@ -1,0 +1,16 @@
+--remap
+AHardwareBuffer*=@IntPtr
+ANativeWindow*=@IntPtr
+Display*=@IntPtr
+HANDLE=@IntPtr
+HINSTANCE=@IntPtr
+HMONITOR=@IntPtr
+HWND=@IntPtr
+IDirectFB*=@IntPtr
+IDirectFBSurface*=@IntPtr
+wl_display*=@IntPtr
+wl_surface*=@IntPtr
+xcb_connection_t*=@IntPtr
+_screen_context*=@IntPtr
+_screen_window*=@IntPtr
+SECURITY_ATTRIBUTES*=@IntPtr
