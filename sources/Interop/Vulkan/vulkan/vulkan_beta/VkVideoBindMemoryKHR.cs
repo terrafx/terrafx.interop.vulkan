@@ -15,8 +15,7 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint memoryBindIndex;
 
-        [NativeTypeName("VkDeviceMemory")]
-        public ulong memory;
+        public VkDeviceMemory memory;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong memoryOffset;

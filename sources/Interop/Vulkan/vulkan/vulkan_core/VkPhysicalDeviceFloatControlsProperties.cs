@@ -15,49 +15,34 @@ namespace TerraFX.Interop
 
         public VkShaderFloatControlsIndependence roundingModeIndependence;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSignedZeroInfNanPreserveFloat16;
+        public VkBool32 shaderSignedZeroInfNanPreserveFloat16;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSignedZeroInfNanPreserveFloat32;
+        public VkBool32 shaderSignedZeroInfNanPreserveFloat32;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSignedZeroInfNanPreserveFloat64;
+        public VkBool32 shaderSignedZeroInfNanPreserveFloat64;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderDenormPreserveFloat16;
+        public VkBool32 shaderDenormPreserveFloat16;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderDenormPreserveFloat32;
+        public VkBool32 shaderDenormPreserveFloat32;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderDenormPreserveFloat64;
+        public VkBool32 shaderDenormPreserveFloat64;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderDenormFlushToZeroFloat16;
+        public VkBool32 shaderDenormFlushToZeroFloat16;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderDenormFlushToZeroFloat32;
+        public VkBool32 shaderDenormFlushToZeroFloat32;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderDenormFlushToZeroFloat64;
+        public VkBool32 shaderDenormFlushToZeroFloat64;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderRoundingModeRTEFloat16;
+        public VkBool32 shaderRoundingModeRTEFloat16;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderRoundingModeRTEFloat32;
+        public VkBool32 shaderRoundingModeRTEFloat32;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderRoundingModeRTEFloat64;
+        public VkBool32 shaderRoundingModeRTEFloat64;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderRoundingModeRTZFloat16;
+        public VkBool32 shaderRoundingModeRTZFloat16;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderRoundingModeRTZFloat32;
+        public VkBool32 shaderRoundingModeRTZFloat32;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderRoundingModeRTZFloat64;
+        public VkBool32 shaderRoundingModeRTZFloat64;
     }
 }

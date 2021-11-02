@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPhysicalDeviceMeshShaderFeaturesNV" /> struct.</summary>
-    public static unsafe class VkPhysicalDeviceMeshShaderFeaturesNVTests
+    public static unsafe partial class VkPhysicalDeviceMeshShaderFeaturesNVTests
     {
         /// <summary>Validates that the <see cref="VkPhysicalDeviceMeshShaderFeaturesNV" /> struct is blittable.</summary>
         [Test]

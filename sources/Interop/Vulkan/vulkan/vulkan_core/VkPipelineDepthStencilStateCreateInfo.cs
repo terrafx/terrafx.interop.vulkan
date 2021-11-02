@@ -15,19 +15,15 @@ namespace TerraFX.Interop
         [NativeTypeName("VkPipelineDepthStencilStateCreateFlags")]
         public uint flags;
 
-        [NativeTypeName("VkBool32")]
-        public uint depthTestEnable;
+        public VkBool32 depthTestEnable;
 
-        [NativeTypeName("VkBool32")]
-        public uint depthWriteEnable;
+        public VkBool32 depthWriteEnable;
 
         public VkCompareOp depthCompareOp;
 
-        [NativeTypeName("VkBool32")]
-        public uint depthBoundsTestEnable;
+        public VkBool32 depthBoundsTestEnable;
 
-        [NativeTypeName("VkBool32")]
-        public uint stencilTestEnable;
+        public VkBool32 stencilTestEnable;
 
         public VkStencilOpState front;
 

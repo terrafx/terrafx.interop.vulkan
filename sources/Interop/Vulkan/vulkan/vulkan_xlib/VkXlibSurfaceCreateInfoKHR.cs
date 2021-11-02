@@ -17,7 +17,6 @@ namespace TerraFX.Interop
         [NativeTypeName("VkXlibSurfaceCreateFlagsKHR")]
         public uint flags;
 
-        [NativeTypeName("Display *")]
         public IntPtr dpy;
 
         [NativeTypeName("Window")]

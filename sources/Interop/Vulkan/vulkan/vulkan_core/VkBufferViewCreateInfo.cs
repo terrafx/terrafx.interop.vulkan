@@ -15,8 +15,7 @@ namespace TerraFX.Interop
         [NativeTypeName("VkBufferViewCreateFlags")]
         public uint flags;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong buffer;
+        public VkBuffer buffer;
 
         public VkFormat format;
 

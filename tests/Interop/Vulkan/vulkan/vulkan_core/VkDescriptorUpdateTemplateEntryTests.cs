@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkDescriptorUpdateTemplateEntry" /> struct.</summary>
-    public static unsafe class VkDescriptorUpdateTemplateEntryTests
+    public static unsafe partial class VkDescriptorUpdateTemplateEntryTests
     {
         /// <summary>Validates that the <see cref="VkDescriptorUpdateTemplateEntry" /> struct is blittable.</summary>
         [Test]

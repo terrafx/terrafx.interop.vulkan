@@ -15,8 +15,7 @@ namespace TerraFX.Interop
         [NativeTypeName("VkPipelineColorBlendStateCreateFlags")]
         public uint flags;
 
-        [NativeTypeName("VkBool32")]
-        public uint logicOpEnable;
+        public VkBool32 logicOpEnable;
 
         public VkLogicOp logicOp;
 

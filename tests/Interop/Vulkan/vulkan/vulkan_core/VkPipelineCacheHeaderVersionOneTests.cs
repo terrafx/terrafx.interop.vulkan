@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPipelineCacheHeaderVersionOne" /> struct.</summary>
-    public static unsafe class VkPipelineCacheHeaderVersionOneTests
+    public static unsafe partial class VkPipelineCacheHeaderVersionOneTests
     {
         /// <summary>Validates that the <see cref="VkPipelineCacheHeaderVersionOne" /> struct is blittable.</summary>
         [Test]

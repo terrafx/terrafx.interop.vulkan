@@ -16,6 +16,6 @@ namespace TerraFX.Interop
         public uint accelerationStructureCount;
 
         [NativeTypeName("const VkAccelerationStructureKHR *")]
-        public ulong* pAccelerationStructures;
+        public VkAccelerationStructureKHR* pAccelerationStructures;
     }
 }

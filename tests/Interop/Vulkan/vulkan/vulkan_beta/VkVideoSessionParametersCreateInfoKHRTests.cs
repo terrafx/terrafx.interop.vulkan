@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkVideoSessionParametersCreateInfoKHR" /> struct.</summary>
-    public static unsafe class VkVideoSessionParametersCreateInfoKHRTests
+    public static unsafe partial class VkVideoSessionParametersCreateInfoKHRTests
     {
         /// <summary>Validates that the <see cref="VkVideoSessionParametersCreateInfoKHR" /> struct is blittable.</summary>
         [Test]

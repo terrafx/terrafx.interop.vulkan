@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkVideoDecodeH264SessionParametersCreateInfoEXT" /> struct.</summary>
-    public static unsafe class VkVideoDecodeH264SessionParametersCreateInfoEXTTests
+    public static unsafe partial class VkVideoDecodeH264SessionParametersCreateInfoEXTTests
     {
         /// <summary>Validates that the <see cref="VkVideoDecodeH264SessionParametersCreateInfoEXT" /> struct is blittable.</summary>
         [Test]

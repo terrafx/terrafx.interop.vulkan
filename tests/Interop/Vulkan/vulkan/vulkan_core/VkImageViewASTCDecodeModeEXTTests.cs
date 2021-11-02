@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkImageViewASTCDecodeModeEXT" /> struct.</summary>
-    public static unsafe class VkImageViewASTCDecodeModeEXTTests
+    public static unsafe partial class VkImageViewASTCDecodeModeEXTTests
     {
         /// <summary>Validates that the <see cref="VkImageViewASTCDecodeModeEXT" /> struct is blittable.</summary>
         [Test]

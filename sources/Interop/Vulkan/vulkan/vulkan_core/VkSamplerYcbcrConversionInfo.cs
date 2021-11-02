@@ -12,7 +12,6 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkSamplerYcbcrConversion")]
-        public ulong conversion;
+        public VkSamplerYcbcrConversion conversion;
     }
 }

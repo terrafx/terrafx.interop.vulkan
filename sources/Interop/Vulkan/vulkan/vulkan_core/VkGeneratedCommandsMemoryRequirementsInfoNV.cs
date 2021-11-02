@@ -14,11 +14,9 @@ namespace TerraFX.Interop
 
         public VkPipelineBindPoint pipelineBindPoint;
 
-        [NativeTypeName("VkPipeline")]
-        public ulong pipeline;
+        public VkPipeline pipeline;
 
-        [NativeTypeName("VkIndirectCommandsLayoutNV")]
-        public ulong indirectCommandsLayout;
+        public VkIndirectCommandsLayoutNV indirectCommandsLayout;
 
         [NativeTypeName("uint32_t")]
         public uint maxSequencesCount;

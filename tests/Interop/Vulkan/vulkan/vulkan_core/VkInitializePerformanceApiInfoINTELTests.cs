@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkInitializePerformanceApiInfoINTEL" /> struct.</summary>
-    public static unsafe class VkInitializePerformanceApiInfoINTELTests
+    public static unsafe partial class VkInitializePerformanceApiInfoINTELTests
     {
         /// <summary>Validates that the <see cref="VkInitializePerformanceApiInfoINTEL" /> struct is blittable.</summary>
         [Test]

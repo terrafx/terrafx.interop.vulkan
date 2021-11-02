@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPresentFrameTokenGGP" /> struct.</summary>
-    public static unsafe class VkPresentFrameTokenGGPTests
+    public static unsafe partial class VkPresentFrameTokenGGPTests
     {
         /// <summary>Validates that the <see cref="VkPresentFrameTokenGGP" /> struct is blittable.</summary>
         [Test]

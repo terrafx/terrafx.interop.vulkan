@@ -11,13 +11,10 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint pipelineFragmentShadingRate;
+        public VkBool32 pipelineFragmentShadingRate;
 
-        [NativeTypeName("VkBool32")]
-        public uint primitiveFragmentShadingRate;
+        public VkBool32 primitiveFragmentShadingRate;
 
-        [NativeTypeName("VkBool32")]
-        public uint attachmentFragmentShadingRate;
+        public VkBool32 attachmentFragmentShadingRate;
     }
 }

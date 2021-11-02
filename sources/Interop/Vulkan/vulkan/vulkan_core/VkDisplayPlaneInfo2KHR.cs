@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkDisplayModeKHR")]
-        public ulong mode;
+        public VkDisplayModeKHR mode;
 
         [NativeTypeName("uint32_t")]
         public uint planeIndex;

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT" /> struct.</summary>
-    public static unsafe class VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTTests
+    public static unsafe partial class VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTTests
     {
         /// <summary>Validates that the <see cref="VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT" /> struct is blittable.</summary>
         [Test]

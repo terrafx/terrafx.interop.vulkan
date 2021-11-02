@@ -14,8 +14,7 @@ namespace TerraFX.Interop
 
         public VkPerformanceOverrideTypeINTEL type;
 
-        [NativeTypeName("VkBool32")]
-        public uint enable;
+        public VkBool32 enable;
 
         [NativeTypeName("uint64_t")]
         public ulong parameter;

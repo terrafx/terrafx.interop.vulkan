@@ -7,8 +7,7 @@ namespace TerraFX.Interop
 {
     public unsafe partial struct VkDisplayPropertiesKHR
     {
-        [NativeTypeName("VkDisplayKHR")]
-        public ulong display;
+        public VkDisplayKHR display;
 
         [NativeTypeName("const char *")]
         public sbyte* displayName;
@@ -19,10 +18,8 @@ namespace TerraFX.Interop
 
         public VkSurfaceTransformFlagsKHR supportedTransforms;
 
-        [NativeTypeName("VkBool32")]
-        public uint planeReorderPossible;
+        public VkBool32 planeReorderPossible;
 
-        [NativeTypeName("VkBool32")]
-        public uint persistentContent;
+        public VkBool32 persistentContent;
     }
 }

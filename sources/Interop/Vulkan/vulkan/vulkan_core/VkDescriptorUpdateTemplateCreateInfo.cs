@@ -23,13 +23,11 @@ namespace TerraFX.Interop
 
         public VkDescriptorUpdateTemplateType templateType;
 
-        [NativeTypeName("VkDescriptorSetLayout")]
-        public ulong descriptorSetLayout;
+        public VkDescriptorSetLayout descriptorSetLayout;
 
         public VkPipelineBindPoint pipelineBindPoint;
 
-        [NativeTypeName("VkPipelineLayout")]
-        public ulong pipelineLayout;
+        public VkPipelineLayout pipelineLayout;
 
         [NativeTypeName("uint32_t")]
         public uint set;

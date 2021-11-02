@@ -17,10 +17,8 @@ namespace TerraFX.Interop
         [NativeTypeName("VkDirectFBSurfaceCreateFlagsEXT")]
         public uint flags;
 
-        [NativeTypeName("IDirectFB *")]
         public IntPtr dfb;
 
-        [NativeTypeName("IDirectFBSurface *")]
         public IntPtr surface;
     }
 }

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkDeviceMemoryOverallocationCreateInfoAMD" /> struct.</summary>
-    public static unsafe class VkDeviceMemoryOverallocationCreateInfoAMDTests
+    public static unsafe partial class VkDeviceMemoryOverallocationCreateInfoAMDTests
     {
         /// <summary>Validates that the <see cref="VkDeviceMemoryOverallocationCreateInfoAMD" /> struct is blittable.</summary>
         [Test]

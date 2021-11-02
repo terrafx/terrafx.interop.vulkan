@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkChainHeader" /> struct.</summary>
-    public static unsafe class VkChainHeaderTests
+    public static unsafe partial class VkChainHeaderTests
     {
         /// <summary>Validates that the <see cref="VkChainHeader" /> struct is blittable.</summary>
         [Test]

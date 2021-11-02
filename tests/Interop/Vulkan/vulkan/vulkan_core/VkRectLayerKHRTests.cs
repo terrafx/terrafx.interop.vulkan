@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkRectLayerKHR" /> struct.</summary>
-    public static unsafe class VkRectLayerKHRTests
+    public static unsafe partial class VkRectLayerKHRTests
     {
         /// <summary>Validates that the <see cref="VkRectLayerKHR" /> struct is blittable.</summary>
         [Test]

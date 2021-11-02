@@ -11,8 +11,7 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkRenderPass")]
-        public ulong renderPass;
+        public VkRenderPass renderPass;
 
         [NativeTypeName("uint32_t")]
         public uint subpass;

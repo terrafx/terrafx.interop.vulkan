@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkImageSubresource" /> struct.</summary>
-    public static unsafe class VkImageSubresourceTests
+    public static unsafe partial class VkImageSubresourceTests
     {
         /// <summary>Validates that the <see cref="VkImageSubresource" /> struct is blittable.</summary>
         [Test]

@@ -12,11 +12,9 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong srcBuffer;
+        public VkBuffer srcBuffer;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong dstBuffer;
+        public VkBuffer dstBuffer;
 
         [NativeTypeName("uint32_t")]
         public uint regionCount;

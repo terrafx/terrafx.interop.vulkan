@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkIcdSurfaceDisplay" /> struct.</summary>
-    public static unsafe class VkIcdSurfaceDisplayTests
+    public static unsafe partial class VkIcdSurfaceDisplayTests
     {
         /// <summary>Validates that the <see cref="VkIcdSurfaceDisplay" /> struct is blittable.</summary>
         [Test]

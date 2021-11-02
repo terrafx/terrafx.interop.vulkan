@@ -19,7 +19,7 @@ namespace TerraFX.Interop
         public uint setLayoutCount;
 
         [NativeTypeName("const VkDescriptorSetLayout *")]
-        public ulong* pSetLayouts;
+        public VkDescriptorSetLayout* pSetLayouts;
 
         [NativeTypeName("uint32_t")]
         public uint pushConstantRangeCount;

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkDescriptorSetLayoutBinding" /> struct.</summary>
-    public static unsafe class VkDescriptorSetLayoutBindingTests
+    public static unsafe partial class VkDescriptorSetLayoutBindingTests
     {
         /// <summary>Validates that the <see cref="VkDescriptorSetLayoutBinding" /> struct is blittable.</summary>
         [Test]

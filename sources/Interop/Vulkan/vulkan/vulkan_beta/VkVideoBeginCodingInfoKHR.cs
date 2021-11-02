@@ -17,11 +17,9 @@ namespace TerraFX.Interop
 
         public VkVideoCodingQualityPresetFlagsKHR codecQualityPreset;
 
-        [NativeTypeName("VkVideoSessionKHR")]
-        public ulong videoSession;
+        public VkVideoSessionKHR videoSession;
 
-        [NativeTypeName("VkVideoSessionParametersKHR")]
-        public ulong videoSessionParameters;
+        public VkVideoSessionParametersKHR videoSessionParameters;
 
         [NativeTypeName("uint32_t")]
         public uint referenceSlotCount;

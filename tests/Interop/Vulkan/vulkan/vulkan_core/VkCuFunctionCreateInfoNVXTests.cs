@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkCuFunctionCreateInfoNVX" /> struct.</summary>
-    public static unsafe class VkCuFunctionCreateInfoNVXTests
+    public static unsafe partial class VkCuFunctionCreateInfoNVXTests
     {
         /// <summary>Validates that the <see cref="VkCuFunctionCreateInfoNVX" /> struct is blittable.</summary>
         [Test]

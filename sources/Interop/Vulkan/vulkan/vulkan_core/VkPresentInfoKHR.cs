@@ -16,13 +16,13 @@ namespace TerraFX.Interop
         public uint waitSemaphoreCount;
 
         [NativeTypeName("const VkSemaphore *")]
-        public ulong* pWaitSemaphores;
+        public VkSemaphore* pWaitSemaphores;
 
         [NativeTypeName("uint32_t")]
         public uint swapchainCount;
 
         [NativeTypeName("const VkSwapchainKHR *")]
-        public ulong* pSwapchains;
+        public VkSwapchainKHR* pSwapchains;
 
         [NativeTypeName("const uint32_t *")]
         public uint* pImageIndices;

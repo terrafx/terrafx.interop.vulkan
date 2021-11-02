@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint shadingRateImage;
+        public VkBool32 shadingRateImage;
 
-        [NativeTypeName("VkBool32")]
-        public uint shadingRateCoarseSampleOrder;
+        public VkBool32 shadingRateCoarseSampleOrder;
     }
 }

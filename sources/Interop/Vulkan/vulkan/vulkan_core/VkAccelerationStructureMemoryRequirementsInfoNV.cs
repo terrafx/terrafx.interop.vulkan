@@ -14,7 +14,6 @@ namespace TerraFX.Interop
 
         public VkAccelerationStructureMemoryRequirementsTypeNV type;
 
-        [NativeTypeName("VkAccelerationStructureNV")]
-        public ulong accelerationStructure;
+        public VkAccelerationStructureNV accelerationStructure;
     }
 }

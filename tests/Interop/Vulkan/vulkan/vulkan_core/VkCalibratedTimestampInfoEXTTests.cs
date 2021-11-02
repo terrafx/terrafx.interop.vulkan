@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkCalibratedTimestampInfoEXT" /> struct.</summary>
-    public static unsafe class VkCalibratedTimestampInfoEXTTests
+    public static unsafe partial class VkCalibratedTimestampInfoEXTTests
     {
         /// <summary>Validates that the <see cref="VkCalibratedTimestampInfoEXT" /> struct is blittable.</summary>
         [Test]

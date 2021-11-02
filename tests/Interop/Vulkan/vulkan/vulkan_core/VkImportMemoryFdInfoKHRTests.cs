@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkImportMemoryFdInfoKHR" /> struct.</summary>
-    public static unsafe class VkImportMemoryFdInfoKHRTests
+    public static unsafe partial class VkImportMemoryFdInfoKHRTests
     {
         /// <summary>Validates that the <see cref="VkImportMemoryFdInfoKHR" /> struct is blittable.</summary>
         [Test]

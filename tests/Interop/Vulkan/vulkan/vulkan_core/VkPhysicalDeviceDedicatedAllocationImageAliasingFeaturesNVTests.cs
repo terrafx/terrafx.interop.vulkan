@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV" /> struct.</summary>
-    public static unsafe class VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVTests
+    public static unsafe partial class VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVTests
     {
         /// <summary>Validates that the <see cref="VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV" /> struct is blittable.</summary>
         [Test]

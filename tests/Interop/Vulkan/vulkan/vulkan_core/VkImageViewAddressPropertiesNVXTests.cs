@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkImageViewAddressPropertiesNVX" /> struct.</summary>
-    public static unsafe class VkImageViewAddressPropertiesNVXTests
+    public static unsafe partial class VkImageViewAddressPropertiesNVXTests
     {
         /// <summary>Validates that the <see cref="VkImageViewAddressPropertiesNVX" /> struct is blittable.</summary>
         [Test]

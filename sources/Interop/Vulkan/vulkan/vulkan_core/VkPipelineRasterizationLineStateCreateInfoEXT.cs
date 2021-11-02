@@ -14,8 +14,7 @@ namespace TerraFX.Interop
 
         public VkLineRasterizationModeEXT lineRasterizationMode;
 
-        [NativeTypeName("VkBool32")]
-        public uint stippledLineEnable;
+        public VkBool32 stippledLineEnable;
 
         [NativeTypeName("uint32_t")]
         public uint lineStippleFactor;

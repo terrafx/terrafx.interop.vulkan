@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint sampleLocationsEnable;
+        public VkBool32 sampleLocationsEnable;
 
         public VkSampleLocationsInfoEXT sampleLocationsInfo;
     }

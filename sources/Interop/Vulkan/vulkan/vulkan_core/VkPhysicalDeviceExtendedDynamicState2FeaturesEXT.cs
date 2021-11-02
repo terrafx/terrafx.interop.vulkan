@@ -11,13 +11,10 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint extendedDynamicState2;
+        public VkBool32 extendedDynamicState2;
 
-        [NativeTypeName("VkBool32")]
-        public uint extendedDynamicState2LogicOp;
+        public VkBool32 extendedDynamicState2LogicOp;
 
-        [NativeTypeName("VkBool32")]
-        public uint extendedDynamicState2PatchControlPoints;
+        public VkBool32 extendedDynamicState2PatchControlPoints;
     }
 }

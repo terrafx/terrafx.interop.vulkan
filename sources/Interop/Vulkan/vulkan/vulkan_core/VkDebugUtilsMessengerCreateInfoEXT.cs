@@ -20,7 +20,7 @@ namespace TerraFX.Interop
         public VkDebugUtilsMessageTypeFlagsEXT messageType;
 
         [NativeTypeName("PFN_vkDebugUtilsMessengerCallbackEXT")]
-        public delegate* unmanaged<VkDebugUtilsMessageSeverityFlagsEXT, VkDebugUtilsMessageTypeFlagsEXT, VkDebugUtilsMessengerCallbackDataEXT*, void*, uint> pfnUserCallback;
+        public delegate* unmanaged<VkDebugUtilsMessageSeverityFlagsEXT, VkDebugUtilsMessageTypeFlagsEXT, VkDebugUtilsMessengerCallbackDataEXT*, void*, VkBool32> pfnUserCallback;
 
         public void* pUserData;
     }

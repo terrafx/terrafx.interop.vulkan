@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkSamplerYcbcrConversionCreateInfo" /> struct.</summary>
-    public static unsafe class VkSamplerYcbcrConversionCreateInfoTests
+    public static unsafe partial class VkSamplerYcbcrConversionCreateInfoTests
     {
         /// <summary>Validates that the <see cref="VkSamplerYcbcrConversionCreateInfo" /> struct is blittable.</summary>
         [Test]

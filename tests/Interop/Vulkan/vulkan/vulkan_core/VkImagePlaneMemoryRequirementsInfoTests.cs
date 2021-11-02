@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkImagePlaneMemoryRequirementsInfo" /> struct.</summary>
-    public static unsafe class VkImagePlaneMemoryRequirementsInfoTests
+    public static unsafe partial class VkImagePlaneMemoryRequirementsInfoTests
     {
         /// <summary>Validates that the <see cref="VkImagePlaneMemoryRequirementsInfo" /> struct is blittable.</summary>
         [Test]

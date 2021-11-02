@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSubgroupClock;
+        public VkBool32 shaderSubgroupClock;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderDeviceClock;
+        public VkBool32 shaderDeviceClock;
     }
 }

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkMacOSSurfaceCreateInfoMVK" /> struct.</summary>
-    public static unsafe class VkMacOSSurfaceCreateInfoMVKTests
+    public static unsafe partial class VkMacOSSurfaceCreateInfoMVKTests
     {
         /// <summary>Validates that the <see cref="VkMacOSSurfaceCreateInfoMVK" /> struct is blittable.</summary>
         [Test]

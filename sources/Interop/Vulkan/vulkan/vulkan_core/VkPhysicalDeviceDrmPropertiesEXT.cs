@@ -11,11 +11,9 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint hasPrimary;
+        public VkBool32 hasPrimary;
 
-        [NativeTypeName("VkBool32")]
-        public uint hasRender;
+        public VkBool32 hasRender;
 
         [NativeTypeName("int64_t")]
         public long primaryMajor;

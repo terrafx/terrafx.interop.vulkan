@@ -15,7 +15,6 @@ namespace TerraFX.Interop
         [NativeTypeName("VkPipelineRasterizationDepthClipStateCreateFlagsEXT")]
         public uint flags;
 
-        [NativeTypeName("VkBool32")]
-        public uint depthClipEnable;
+        public VkBool32 depthClipEnable;
     }
 }

@@ -12,12 +12,10 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkImageView")]
-        public ulong imageView;
+        public VkImageView imageView;
 
         public VkDescriptorType descriptorType;
 
-        [NativeTypeName("VkSampler")]
-        public ulong sampler;
+        public VkSampler sampler;
     }
 }

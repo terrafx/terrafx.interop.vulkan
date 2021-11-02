@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkCommandPool")]
-        public ulong commandPool;
+        public VkCommandPool commandPool;
 
         public VkCommandBufferLevel level;
 

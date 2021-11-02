@@ -12,11 +12,9 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkAccelerationStructureNV")]
-        public ulong accelerationStructure;
+        public VkAccelerationStructureNV accelerationStructure;
 
-        [NativeTypeName("VkDeviceMemory")]
-        public ulong memory;
+        public VkDeviceMemory memory;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong memoryOffset;

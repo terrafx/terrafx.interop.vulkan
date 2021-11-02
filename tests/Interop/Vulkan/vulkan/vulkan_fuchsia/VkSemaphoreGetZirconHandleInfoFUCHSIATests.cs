@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkSemaphoreGetZirconHandleInfoFUCHSIA" /> struct.</summary>
-    public static unsafe class VkSemaphoreGetZirconHandleInfoFUCHSIATests
+    public static unsafe partial class VkSemaphoreGetZirconHandleInfoFUCHSIATests
     {
         /// <summary>Validates that the <see cref="VkSemaphoreGetZirconHandleInfoFUCHSIA" /> struct is blittable.</summary>
         [Test]

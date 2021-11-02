@@ -7,8 +7,7 @@ namespace TerraFX.Interop
 {
     public partial struct VkDisplayModePropertiesKHR
     {
-        [NativeTypeName("VkDisplayModeKHR")]
-        public ulong displayMode;
+        public VkDisplayModeKHR displayMode;
 
         public VkDisplayModeParametersKHR parameters;
     }

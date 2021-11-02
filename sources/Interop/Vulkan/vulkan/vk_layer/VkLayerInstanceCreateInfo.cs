@@ -3,7 +3,6 @@
 // Ported from include/vulkan/vk_layer.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
 // Original source is Copyright © 2015-2017 The Khronos Group Inc. Copyright © 2015-2017 Valve Corporation. Copyright © 2015-2017 LunarG, Inc.
 
-using System;
 using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop
@@ -28,7 +27,7 @@ namespace TerraFX.Interop
 
             [FieldOffset(0)]
             [NativeTypeName("PFN_vkSetInstanceLoaderData")]
-            public delegate* unmanaged<IntPtr, void*, VkResult> pfnSetInstanceLoaderData;
+            public delegate* unmanaged<VkInstance, void*, VkResult> pfnSetInstanceLoaderData;
 
             [FieldOffset(0)]
             [NativeTypeName("struct (anonymous struct at C:/VulkanSDK/1.2.189.2/Include/vulkan/vk_layer.h:128:9)")]
@@ -41,10 +40,10 @@ namespace TerraFX.Interop
             public unsafe partial struct _layerDevice_e__Struct
             {
                 [NativeTypeName("PFN_vkLayerCreateDevice")]
-                public delegate* unmanaged<IntPtr, IntPtr, VkDeviceCreateInfo*, VkAllocationCallbacks*, IntPtr*, delegate* unmanaged<IntPtr, sbyte*, delegate* unmanaged<void>>, delegate* unmanaged<IntPtr, sbyte*, delegate* unmanaged<void>>*, VkResult> pfnLayerCreateDevice;
+                public delegate* unmanaged<VkInstance, VkPhysicalDevice, VkDeviceCreateInfo*, VkAllocationCallbacks*, VkDevice*, delegate* unmanaged<VkInstance, sbyte*, delegate* unmanaged<void>>, delegate* unmanaged<VkDevice, sbyte*, delegate* unmanaged<void>>*, VkResult> pfnLayerCreateDevice;
 
                 [NativeTypeName("PFN_vkLayerDestroyDevice")]
-                public delegate* unmanaged<IntPtr, VkAllocationCallbacks*, delegate* unmanaged<IntPtr, VkAllocationCallbacks*, void>, void> pfnLayerDestroyDevice;
+                public delegate* unmanaged<VkDevice, VkAllocationCallbacks*, delegate* unmanaged<VkDevice, VkAllocationCallbacks*, void>, void> pfnLayerDestroyDevice;
             }
         }
     }

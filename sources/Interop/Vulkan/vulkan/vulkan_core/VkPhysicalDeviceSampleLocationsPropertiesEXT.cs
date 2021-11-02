@@ -21,7 +21,6 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint sampleLocationSubPixelBits;
 
-        [NativeTypeName("VkBool32")]
-        public uint variableSampleLocations;
+        public VkBool32 variableSampleLocations;
     }
 }

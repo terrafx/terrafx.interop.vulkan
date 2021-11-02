@@ -18,8 +18,7 @@ namespace TerraFX.Interop
 
         public VkExtent2D codedExtent;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong srcBuffer;
+        public VkBuffer srcBuffer;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong srcBufferOffset;

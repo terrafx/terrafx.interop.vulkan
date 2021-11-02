@@ -12,7 +12,6 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint dedicatedAllocation;
+        public VkBool32 dedicatedAllocation;
     }
 }

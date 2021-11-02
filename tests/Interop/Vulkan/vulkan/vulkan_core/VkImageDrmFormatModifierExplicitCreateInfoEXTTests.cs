@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkImageDrmFormatModifierExplicitCreateInfoEXT" /> struct.</summary>
-    public static unsafe class VkImageDrmFormatModifierExplicitCreateInfoEXTTests
+    public static unsafe partial class VkImageDrmFormatModifierExplicitCreateInfoEXTTests
     {
         /// <summary>Validates that the <see cref="VkImageDrmFormatModifierExplicitCreateInfoEXT" /> struct is blittable.</summary>
         [Test]

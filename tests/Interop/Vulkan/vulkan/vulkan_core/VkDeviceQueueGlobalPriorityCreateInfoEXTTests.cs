@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkDeviceQueueGlobalPriorityCreateInfoEXT" /> struct.</summary>
-    public static unsafe class VkDeviceQueueGlobalPriorityCreateInfoEXTTests
+    public static unsafe partial class VkDeviceQueueGlobalPriorityCreateInfoEXTTests
     {
         /// <summary>Validates that the <see cref="VkDeviceQueueGlobalPriorityCreateInfoEXT" /> struct is blittable.</summary>
         [Test]

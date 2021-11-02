@@ -11,13 +11,10 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint vulkanMemoryModel;
+        public VkBool32 vulkanMemoryModel;
 
-        [NativeTypeName("VkBool32")]
-        public uint vulkanMemoryModelDeviceScope;
+        public VkBool32 vulkanMemoryModelDeviceScope;
 
-        [NativeTypeName("VkBool32")]
-        public uint vulkanMemoryModelAvailabilityVisibilityChains;
+        public VkBool32 vulkanMemoryModelAvailabilityVisibilityChains;
     }
 }

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPhysicalDeviceExtendedDynamicStateFeaturesEXT" /> struct.</summary>
-    public static unsafe class VkPhysicalDeviceExtendedDynamicStateFeaturesEXTTests
+    public static unsafe partial class VkPhysicalDeviceExtendedDynamicStateFeaturesEXTTests
     {
         /// <summary>Validates that the <see cref="VkPhysicalDeviceExtendedDynamicStateFeaturesEXT" /> struct is blittable.</summary>
         [Test]

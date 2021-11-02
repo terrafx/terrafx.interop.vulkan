@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkSamplerCustomBorderColorCreateInfoEXT" /> struct.</summary>
-    public static unsafe class VkSamplerCustomBorderColorCreateInfoEXTTests
+    public static unsafe partial class VkSamplerCustomBorderColorCreateInfoEXTTests
     {
         /// <summary>Validates that the <see cref="VkSamplerCustomBorderColorCreateInfoEXT" /> struct is blittable.</summary>
         [Test]

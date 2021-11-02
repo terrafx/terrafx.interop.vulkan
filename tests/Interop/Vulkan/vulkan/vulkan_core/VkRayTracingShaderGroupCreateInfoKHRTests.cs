@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkRayTracingShaderGroupCreateInfoKHR" /> struct.</summary>
-    public static unsafe class VkRayTracingShaderGroupCreateInfoKHRTests
+    public static unsafe partial class VkRayTracingShaderGroupCreateInfoKHRTests
     {
         /// <summary>Validates that the <see cref="VkRayTracingShaderGroupCreateInfoKHR" /> struct is blittable.</summary>
         [Test]

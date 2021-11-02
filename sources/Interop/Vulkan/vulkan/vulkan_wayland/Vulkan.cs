@@ -11,11 +11,10 @@ namespace TerraFX.Interop
     public static unsafe partial class Vulkan
     {
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateWaylandSurfaceKHR([NativeTypeName("VkInstance")] IntPtr instance, [NativeTypeName("const VkWaylandSurfaceCreateInfoKHR *")] VkWaylandSurfaceCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkSurfaceKHR *")] ulong* pSurface);
+        public static extern VkResult vkCreateWaylandSurfaceKHR(VkInstance instance, [NativeTypeName("const VkWaylandSurfaceCreateInfoKHR *")] VkWaylandSurfaceCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        [return: NativeTypeName("VkBool32")]
-        public static extern uint vkGetPhysicalDeviceWaylandPresentationSupportKHR([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex, [NativeTypeName("struct wl_display *")] IntPtr display);
+        public static extern VkBool32 vkGetPhysicalDeviceWaylandPresentationSupportKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex, [NativeTypeName("struct wl_display *")] IntPtr display);
 
         [NativeTypeName("#define VK_KHR_wayland_surface 1")]
         public const int VK_KHR_wayland_surface = 1;

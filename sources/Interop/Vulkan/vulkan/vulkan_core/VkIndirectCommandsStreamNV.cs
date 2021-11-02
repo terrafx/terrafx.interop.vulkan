@@ -7,8 +7,7 @@ namespace TerraFX.Interop
 {
     public partial struct VkIndirectCommandsStreamNV
     {
-        [NativeTypeName("VkBuffer")]
-        public ulong buffer;
+        public VkBuffer buffer;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong offset;

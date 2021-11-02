@@ -11,16 +11,12 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint storageBuffer16BitAccess;
+        public VkBool32 storageBuffer16BitAccess;
 
-        [NativeTypeName("VkBool32")]
-        public uint uniformAndStorageBuffer16BitAccess;
+        public VkBool32 uniformAndStorageBuffer16BitAccess;
 
-        [NativeTypeName("VkBool32")]
-        public uint storagePushConstant16;
+        public VkBool32 storagePushConstant16;
 
-        [NativeTypeName("VkBool32")]
-        public uint storageInputOutput16;
+        public VkBool32 storageInputOutput16;
     }
 }

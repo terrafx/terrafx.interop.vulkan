@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPipelineColorBlendAttachmentState" /> struct.</summary>
-    public static unsafe class VkPipelineColorBlendAttachmentStateTests
+    public static unsafe partial class VkPipelineColorBlendAttachmentStateTests
     {
         /// <summary>Validates that the <see cref="VkPipelineColorBlendAttachmentState" /> struct is blittable.</summary>
         [Test]

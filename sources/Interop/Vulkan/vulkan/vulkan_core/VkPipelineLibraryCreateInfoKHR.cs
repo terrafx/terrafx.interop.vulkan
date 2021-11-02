@@ -16,6 +16,6 @@ namespace TerraFX.Interop
         public uint libraryCount;
 
         [NativeTypeName("const VkPipeline *")]
-        public ulong* pLibraries;
+        public VkPipeline* pLibraries;
     }
 }

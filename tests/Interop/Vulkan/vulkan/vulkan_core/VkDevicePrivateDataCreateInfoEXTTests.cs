@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkDevicePrivateDataCreateInfoEXT" /> struct.</summary>
-    public static unsafe class VkDevicePrivateDataCreateInfoEXTTests
+    public static unsafe partial class VkDevicePrivateDataCreateInfoEXTTests
     {
         /// <summary>Validates that the <see cref="VkDevicePrivateDataCreateInfoEXT" /> struct is blittable.</summary>
         [Test]

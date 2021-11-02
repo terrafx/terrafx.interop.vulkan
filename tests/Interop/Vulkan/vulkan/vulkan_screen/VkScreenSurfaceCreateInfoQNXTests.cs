@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkScreenSurfaceCreateInfoQNX" /> struct.</summary>
-    public static unsafe class VkScreenSurfaceCreateInfoQNXTests
+    public static unsafe partial class VkScreenSurfaceCreateInfoQNXTests
     {
         /// <summary>Validates that the <see cref="VkScreenSurfaceCreateInfoQNX" /> struct is blittable.</summary>
         [Test]

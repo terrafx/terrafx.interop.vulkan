@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint cooperativeMatrix;
+        public VkBool32 cooperativeMatrix;
 
-        [NativeTypeName("VkBool32")]
-        public uint cooperativeMatrixRobustBufferAccess;
+        public VkBool32 cooperativeMatrixRobustBufferAccess;
     }
 }

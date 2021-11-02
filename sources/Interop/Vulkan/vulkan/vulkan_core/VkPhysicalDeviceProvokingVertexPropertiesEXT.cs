@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint provokingVertexModePerPipeline;
+        public VkBool32 provokingVertexModePerPipeline;
 
-        [NativeTypeName("VkBool32")]
-        public uint transformFeedbackPreservesTriangleFanProvokingVertex;
+        public VkBool32 transformFeedbackPreservesTriangleFanProvokingVertex;
     }
 }

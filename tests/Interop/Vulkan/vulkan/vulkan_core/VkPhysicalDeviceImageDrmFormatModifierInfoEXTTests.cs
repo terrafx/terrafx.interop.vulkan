@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPhysicalDeviceImageDrmFormatModifierInfoEXT" /> struct.</summary>
-    public static unsafe class VkPhysicalDeviceImageDrmFormatModifierInfoEXTTests
+    public static unsafe partial class VkPhysicalDeviceImageDrmFormatModifierInfoEXTTests
     {
         /// <summary>Validates that the <see cref="VkPhysicalDeviceImageDrmFormatModifierInfoEXT" /> struct is blittable.</summary>
         [Test]

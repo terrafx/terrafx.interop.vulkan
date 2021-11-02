@@ -17,7 +17,6 @@ namespace TerraFX.Interop
         [NativeTypeName("VkXcbSurfaceCreateFlagsKHR")]
         public uint flags;
 
-        [NativeTypeName("xcb_connection_t *")]
         public IntPtr connection;
 
         [NativeTypeName("xcb_window_t")]

@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkBufferImageCopy" /> struct.</summary>
-    public static unsafe class VkBufferImageCopyTests
+    public static unsafe partial class VkBufferImageCopyTests
     {
         /// <summary>Validates that the <see cref="VkBufferImageCopy" /> struct is blittable.</summary>
         [Test]

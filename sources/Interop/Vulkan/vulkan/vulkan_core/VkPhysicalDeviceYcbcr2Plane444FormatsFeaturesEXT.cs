@@ -11,7 +11,6 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint ycbcr2plane444Formats;
+        public VkBool32 ycbcr2plane444Formats;
     }
 }

@@ -11,13 +11,10 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentDensityMap;
+        public VkBool32 fragmentDensityMap;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentDensityMapDynamic;
+        public VkBool32 fragmentDensityMapDynamic;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentDensityMapNonSubsampledImages;
+        public VkBool32 fragmentDensityMapNonSubsampledImages;
     }
 }

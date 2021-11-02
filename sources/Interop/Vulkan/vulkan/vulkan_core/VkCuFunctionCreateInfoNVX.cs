@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkCuModuleNVX")]
-        public ulong module;
+        public VkCuModuleNVX module;
 
         [NativeTypeName("const char *")]
         public sbyte* pName;

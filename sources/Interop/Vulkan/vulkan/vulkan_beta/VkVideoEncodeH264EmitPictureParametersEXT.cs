@@ -15,8 +15,7 @@ namespace TerraFX.Interop
         [NativeTypeName("uint8_t")]
         public byte spsId;
 
-        [NativeTypeName("VkBool32")]
-        public uint emitSpsEnable;
+        public VkBool32 emitSpsEnable;
 
         [NativeTypeName("uint32_t")]
         public uint ppsIdEntryCount;

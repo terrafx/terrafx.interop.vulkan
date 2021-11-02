@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkDescriptorSet")]
-        public ulong srcSet;
+        public VkDescriptorSet srcSet;
 
         [NativeTypeName("uint32_t")]
         public uint srcBinding;
@@ -21,8 +20,7 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint srcArrayElement;
 
-        [NativeTypeName("VkDescriptorSet")]
-        public ulong dstSet;
+        public VkDescriptorSet dstSet;
 
         [NativeTypeName("uint32_t")]
         public uint dstBinding;

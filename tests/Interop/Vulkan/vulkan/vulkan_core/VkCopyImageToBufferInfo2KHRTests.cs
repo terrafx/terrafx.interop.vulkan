@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkCopyImageToBufferInfo2KHR" /> struct.</summary>
-    public static unsafe class VkCopyImageToBufferInfo2KHRTests
+    public static unsafe partial class VkCopyImageToBufferInfo2KHRTests
     {
         /// <summary>Validates that the <see cref="VkCopyImageToBufferInfo2KHR" /> struct is blittable.</summary>
         [Test]

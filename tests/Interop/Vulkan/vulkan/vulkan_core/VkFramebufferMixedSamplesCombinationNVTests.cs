@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkFramebufferMixedSamplesCombinationNV" /> struct.</summary>
-    public static unsafe class VkFramebufferMixedSamplesCombinationNVTests
+    public static unsafe partial class VkFramebufferMixedSamplesCombinationNVTests
     {
         /// <summary>Validates that the <see cref="VkFramebufferMixedSamplesCombinationNV" /> struct is blittable.</summary>
         [Test]

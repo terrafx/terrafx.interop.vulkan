@@ -12,11 +12,9 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkRenderPass")]
-        public ulong renderPass;
+        public VkRenderPass renderPass;
 
-        [NativeTypeName("VkFramebuffer")]
-        public ulong framebuffer;
+        public VkFramebuffer framebuffer;
 
         public VkRect2D renderArea;
 

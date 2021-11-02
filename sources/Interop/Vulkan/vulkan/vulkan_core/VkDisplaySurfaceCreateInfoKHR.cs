@@ -15,8 +15,7 @@ namespace TerraFX.Interop
         [NativeTypeName("VkDisplaySurfaceCreateFlagsKHR")]
         public uint flags;
 
-        [NativeTypeName("VkDisplayModeKHR")]
-        public ulong displayMode;
+        public VkDisplayModeKHR displayMode;
 
         [NativeTypeName("uint32_t")]
         public uint planeIndex;

@@ -9,8 +9,7 @@ namespace TerraFX.Interop
     {
         public VkIcdSurfaceBase @base;
 
-        [NativeTypeName("VkDisplayModeKHR")]
-        public ulong displayMode;
+        public VkDisplayModeKHR displayMode;
 
         [NativeTypeName("uint32_t")]
         public uint planeIndex;

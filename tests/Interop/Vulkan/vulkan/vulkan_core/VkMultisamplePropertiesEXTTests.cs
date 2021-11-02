@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkMultisamplePropertiesEXT" /> struct.</summary>
-    public static unsafe class VkMultisamplePropertiesEXTTests
+    public static unsafe partial class VkMultisamplePropertiesEXTTests
     {
         /// <summary>Validates that the <see cref="VkMultisamplePropertiesEXT" /> struct is blittable.</summary>
         [Test]

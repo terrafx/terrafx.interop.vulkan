@@ -18,18 +18,15 @@ namespace TerraFX.Interop
         [NativeTypeName("VkSampleCountFlagBits")]
         public VkSampleCountFlags rasterizationSamples;
 
-        [NativeTypeName("VkBool32")]
-        public uint sampleShadingEnable;
+        public VkBool32 sampleShadingEnable;
 
         public float minSampleShading;
 
         [NativeTypeName("const VkSampleMask *")]
         public uint* pSampleMask;
 
-        [NativeTypeName("VkBool32")]
-        public uint alphaToCoverageEnable;
+        public VkBool32 alphaToCoverageEnable;
 
-        [NativeTypeName("VkBool32")]
-        public uint alphaToOneEnable;
+        public VkBool32 alphaToOneEnable;
     }
 }

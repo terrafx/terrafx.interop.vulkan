@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkAttachmentReference2" /> struct.</summary>
-    public static unsafe class VkAttachmentReference2Tests
+    public static unsafe partial class VkAttachmentReference2Tests
     {
         /// <summary>Validates that the <see cref="VkAttachmentReference2" /> struct is blittable.</summary>
         [Test]

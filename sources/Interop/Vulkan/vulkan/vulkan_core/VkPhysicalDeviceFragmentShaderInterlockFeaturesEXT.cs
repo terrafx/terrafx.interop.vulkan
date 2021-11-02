@@ -11,13 +11,10 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentShaderSampleInterlock;
+        public VkBool32 fragmentShaderSampleInterlock;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentShaderPixelInterlock;
+        public VkBool32 fragmentShaderPixelInterlock;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentShaderShadingRateInterlock;
+        public VkBool32 fragmentShaderShadingRateInterlock;
     }
 }

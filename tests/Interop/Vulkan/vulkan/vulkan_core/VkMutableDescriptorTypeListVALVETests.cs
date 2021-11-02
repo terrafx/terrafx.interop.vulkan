@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkMutableDescriptorTypeListVALVE" /> struct.</summary>
-    public static unsafe class VkMutableDescriptorTypeListVALVETests
+    public static unsafe partial class VkMutableDescriptorTypeListVALVETests
     {
         /// <summary>Validates that the <see cref="VkMutableDescriptorTypeListVALVE" /> struct is blittable.</summary>
         [Test]

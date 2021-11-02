@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPhysicalDeviceExternalSemaphoreInfo" /> struct.</summary>
-    public static unsafe class VkPhysicalDeviceExternalSemaphoreInfoTests
+    public static unsafe partial class VkPhysicalDeviceExternalSemaphoreInfoTests
     {
         /// <summary>Validates that the <see cref="VkPhysicalDeviceExternalSemaphoreInfo" /> struct is blittable.</summary>
         [Test]

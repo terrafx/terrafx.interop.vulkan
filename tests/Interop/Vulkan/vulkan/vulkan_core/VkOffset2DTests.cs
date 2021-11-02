@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkOffset2D" /> struct.</summary>
-    public static unsafe class VkOffset2DTests
+    public static unsafe partial class VkOffset2DTests
     {
         /// <summary>Validates that the <see cref="VkOffset2D" /> struct is blittable.</summary>
         [Test]

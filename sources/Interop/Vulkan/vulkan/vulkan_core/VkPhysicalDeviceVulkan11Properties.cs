@@ -23,8 +23,7 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint deviceNodeMask;
 
-        [NativeTypeName("VkBool32")]
-        public uint deviceLUIDValid;
+        public VkBool32 deviceLUIDValid;
 
         [NativeTypeName("uint32_t")]
         public uint subgroupSize;
@@ -33,8 +32,7 @@ namespace TerraFX.Interop
 
         public VkSubgroupFeatureFlags subgroupSupportedOperations;
 
-        [NativeTypeName("VkBool32")]
-        public uint subgroupQuadOperationsInAllStages;
+        public VkBool32 subgroupQuadOperationsInAllStages;
 
         public VkPointClippingBehavior pointClippingBehavior;
 
@@ -44,8 +42,7 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint maxMultiviewInstanceIndex;
 
-        [NativeTypeName("VkBool32")]
-        public uint protectedNoFault;
+        public VkBool32 protectedNoFault;
 
         [NativeTypeName("uint32_t")]
         public uint maxPerSetDescriptors;

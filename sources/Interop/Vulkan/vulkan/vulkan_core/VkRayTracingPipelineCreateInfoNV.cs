@@ -29,11 +29,9 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint maxRecursionDepth;
 
-        [NativeTypeName("VkPipelineLayout")]
-        public ulong layout;
+        public VkPipelineLayout layout;
 
-        [NativeTypeName("VkPipeline")]
-        public ulong basePipelineHandle;
+        public VkPipeline basePipelineHandle;
 
         [NativeTypeName("int32_t")]
         public int basePipelineIndex;

@@ -16,6 +16,6 @@ namespace TerraFX.Interop
         public uint attachmentCount;
 
         [NativeTypeName("const VkBool32 *")]
-        public uint* pColorWriteEnables;
+        public VkBool32* pColorWriteEnables;
     }
 }

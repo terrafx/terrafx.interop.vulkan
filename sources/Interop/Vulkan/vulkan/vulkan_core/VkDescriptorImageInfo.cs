@@ -7,11 +7,9 @@ namespace TerraFX.Interop
 {
     public partial struct VkDescriptorImageInfo
     {
-        [NativeTypeName("VkSampler")]
-        public ulong sampler;
+        public VkSampler sampler;
 
-        [NativeTypeName("VkImageView")]
-        public ulong imageView;
+        public VkImageView imageView;
 
         public VkImageLayout imageLayout;
     }

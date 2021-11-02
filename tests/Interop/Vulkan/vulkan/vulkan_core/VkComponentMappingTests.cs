@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkComponentMapping" /> struct.</summary>
-    public static unsafe class VkComponentMappingTests
+    public static unsafe partial class VkComponentMappingTests
     {
         /// <summary>Validates that the <see cref="VkComponentMapping" /> struct is blittable.</summary>
         [Test]

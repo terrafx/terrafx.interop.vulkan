@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPhysicalDeviceInheritedViewportScissorFeaturesNV" /> struct.</summary>
-    public static unsafe class VkPhysicalDeviceInheritedViewportScissorFeaturesNVTests
+    public static unsafe partial class VkPhysicalDeviceInheritedViewportScissorFeaturesNVTests
     {
         /// <summary>Validates that the <see cref="VkPhysicalDeviceInheritedViewportScissorFeaturesNV" /> struct is blittable.</summary>
         [Test]

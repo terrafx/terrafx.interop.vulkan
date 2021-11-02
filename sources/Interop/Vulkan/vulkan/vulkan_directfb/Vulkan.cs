@@ -11,11 +11,10 @@ namespace TerraFX.Interop
     public static unsafe partial class Vulkan
     {
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateDirectFBSurfaceEXT([NativeTypeName("VkInstance")] IntPtr instance, [NativeTypeName("const VkDirectFBSurfaceCreateInfoEXT *")] VkDirectFBSurfaceCreateInfoEXT* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkSurfaceKHR *")] ulong* pSurface);
+        public static extern VkResult vkCreateDirectFBSurfaceEXT(VkInstance instance, [NativeTypeName("const VkDirectFBSurfaceCreateInfoEXT *")] VkDirectFBSurfaceCreateInfoEXT* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        [return: NativeTypeName("VkBool32")]
-        public static extern uint vkGetPhysicalDeviceDirectFBPresentationSupportEXT([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex, [NativeTypeName("IDirectFB *")] IntPtr dfb);
+        public static extern VkBool32 vkGetPhysicalDeviceDirectFBPresentationSupportEXT(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex, IntPtr dfb);
 
         [NativeTypeName("#define VK_EXT_directfb_surface 1")]
         public const int VK_EXT_directfb_surface = 1;

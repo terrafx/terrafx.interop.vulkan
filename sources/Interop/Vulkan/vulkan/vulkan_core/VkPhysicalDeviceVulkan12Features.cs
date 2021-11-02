@@ -11,145 +11,98 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint samplerMirrorClampToEdge;
+        public VkBool32 samplerMirrorClampToEdge;
 
-        [NativeTypeName("VkBool32")]
-        public uint drawIndirectCount;
+        public VkBool32 drawIndirectCount;
 
-        [NativeTypeName("VkBool32")]
-        public uint storageBuffer8BitAccess;
+        public VkBool32 storageBuffer8BitAccess;
 
-        [NativeTypeName("VkBool32")]
-        public uint uniformAndStorageBuffer8BitAccess;
+        public VkBool32 uniformAndStorageBuffer8BitAccess;
 
-        [NativeTypeName("VkBool32")]
-        public uint storagePushConstant8;
+        public VkBool32 storagePushConstant8;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderBufferInt64Atomics;
+        public VkBool32 shaderBufferInt64Atomics;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSharedInt64Atomics;
+        public VkBool32 shaderSharedInt64Atomics;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderFloat16;
+        public VkBool32 shaderFloat16;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderInt8;
+        public VkBool32 shaderInt8;
 
-        [NativeTypeName("VkBool32")]
-        public uint descriptorIndexing;
+        public VkBool32 descriptorIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderInputAttachmentArrayDynamicIndexing;
+        public VkBool32 shaderInputAttachmentArrayDynamicIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderUniformTexelBufferArrayDynamicIndexing;
+        public VkBool32 shaderUniformTexelBufferArrayDynamicIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderStorageTexelBufferArrayDynamicIndexing;
+        public VkBool32 shaderStorageTexelBufferArrayDynamicIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderUniformBufferArrayNonUniformIndexing;
+        public VkBool32 shaderUniformBufferArrayNonUniformIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSampledImageArrayNonUniformIndexing;
+        public VkBool32 shaderSampledImageArrayNonUniformIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderStorageBufferArrayNonUniformIndexing;
+        public VkBool32 shaderStorageBufferArrayNonUniformIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderStorageImageArrayNonUniformIndexing;
+        public VkBool32 shaderStorageImageArrayNonUniformIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderInputAttachmentArrayNonUniformIndexing;
+        public VkBool32 shaderInputAttachmentArrayNonUniformIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderUniformTexelBufferArrayNonUniformIndexing;
+        public VkBool32 shaderUniformTexelBufferArrayNonUniformIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderStorageTexelBufferArrayNonUniformIndexing;
+        public VkBool32 shaderStorageTexelBufferArrayNonUniformIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint descriptorBindingUniformBufferUpdateAfterBind;
+        public VkBool32 descriptorBindingUniformBufferUpdateAfterBind;
 
-        [NativeTypeName("VkBool32")]
-        public uint descriptorBindingSampledImageUpdateAfterBind;
+        public VkBool32 descriptorBindingSampledImageUpdateAfterBind;
 
-        [NativeTypeName("VkBool32")]
-        public uint descriptorBindingStorageImageUpdateAfterBind;
+        public VkBool32 descriptorBindingStorageImageUpdateAfterBind;
 
-        [NativeTypeName("VkBool32")]
-        public uint descriptorBindingStorageBufferUpdateAfterBind;
+        public VkBool32 descriptorBindingStorageBufferUpdateAfterBind;
 
-        [NativeTypeName("VkBool32")]
-        public uint descriptorBindingUniformTexelBufferUpdateAfterBind;
+        public VkBool32 descriptorBindingUniformTexelBufferUpdateAfterBind;
 
-        [NativeTypeName("VkBool32")]
-        public uint descriptorBindingStorageTexelBufferUpdateAfterBind;
+        public VkBool32 descriptorBindingStorageTexelBufferUpdateAfterBind;
 
-        [NativeTypeName("VkBool32")]
-        public uint descriptorBindingUpdateUnusedWhilePending;
+        public VkBool32 descriptorBindingUpdateUnusedWhilePending;
 
-        [NativeTypeName("VkBool32")]
-        public uint descriptorBindingPartiallyBound;
+        public VkBool32 descriptorBindingPartiallyBound;
 
-        [NativeTypeName("VkBool32")]
-        public uint descriptorBindingVariableDescriptorCount;
+        public VkBool32 descriptorBindingVariableDescriptorCount;
 
-        [NativeTypeName("VkBool32")]
-        public uint runtimeDescriptorArray;
+        public VkBool32 runtimeDescriptorArray;
 
-        [NativeTypeName("VkBool32")]
-        public uint samplerFilterMinmax;
+        public VkBool32 samplerFilterMinmax;
 
-        [NativeTypeName("VkBool32")]
-        public uint scalarBlockLayout;
+        public VkBool32 scalarBlockLayout;
 
-        [NativeTypeName("VkBool32")]
-        public uint imagelessFramebuffer;
+        public VkBool32 imagelessFramebuffer;
 
-        [NativeTypeName("VkBool32")]
-        public uint uniformBufferStandardLayout;
+        public VkBool32 uniformBufferStandardLayout;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSubgroupExtendedTypes;
+        public VkBool32 shaderSubgroupExtendedTypes;
 
-        [NativeTypeName("VkBool32")]
-        public uint separateDepthStencilLayouts;
+        public VkBool32 separateDepthStencilLayouts;
 
-        [NativeTypeName("VkBool32")]
-        public uint hostQueryReset;
+        public VkBool32 hostQueryReset;
 
-        [NativeTypeName("VkBool32")]
-        public uint timelineSemaphore;
+        public VkBool32 timelineSemaphore;
 
-        [NativeTypeName("VkBool32")]
-        public uint bufferDeviceAddress;
+        public VkBool32 bufferDeviceAddress;
 
-        [NativeTypeName("VkBool32")]
-        public uint bufferDeviceAddressCaptureReplay;
+        public VkBool32 bufferDeviceAddressCaptureReplay;
 
-        [NativeTypeName("VkBool32")]
-        public uint bufferDeviceAddressMultiDevice;
+        public VkBool32 bufferDeviceAddressMultiDevice;
 
-        [NativeTypeName("VkBool32")]
-        public uint vulkanMemoryModel;
+        public VkBool32 vulkanMemoryModel;
 
-        [NativeTypeName("VkBool32")]
-        public uint vulkanMemoryModelDeviceScope;
+        public VkBool32 vulkanMemoryModelDeviceScope;
 
-        [NativeTypeName("VkBool32")]
-        public uint vulkanMemoryModelAvailabilityVisibilityChains;
+        public VkBool32 vulkanMemoryModelAvailabilityVisibilityChains;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderOutputViewportIndex;
+        public VkBool32 shaderOutputViewportIndex;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderOutputLayer;
+        public VkBool32 shaderOutputLayer;
 
-        [NativeTypeName("VkBool32")]
-        public uint subgroupBroadcastDynamicId;
+        public VkBool32 subgroupBroadcastDynamicId;
     }
 }

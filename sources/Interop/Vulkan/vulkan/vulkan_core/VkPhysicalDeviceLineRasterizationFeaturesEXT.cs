@@ -11,22 +11,16 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint rectangularLines;
+        public VkBool32 rectangularLines;
 
-        [NativeTypeName("VkBool32")]
-        public uint bresenhamLines;
+        public VkBool32 bresenhamLines;
 
-        [NativeTypeName("VkBool32")]
-        public uint smoothLines;
+        public VkBool32 smoothLines;
 
-        [NativeTypeName("VkBool32")]
-        public uint stippledRectangularLines;
+        public VkBool32 stippledRectangularLines;
 
-        [NativeTypeName("VkBool32")]
-        public uint stippledBresenhamLines;
+        public VkBool32 stippledBresenhamLines;
 
-        [NativeTypeName("VkBool32")]
-        public uint stippledSmoothLines;
+        public VkBool32 stippledSmoothLines;
     }
 }

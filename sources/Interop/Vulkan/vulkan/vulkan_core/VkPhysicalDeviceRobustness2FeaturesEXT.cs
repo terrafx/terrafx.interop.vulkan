@@ -11,13 +11,10 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint robustBufferAccess2;
+        public VkBool32 robustBufferAccess2;
 
-        [NativeTypeName("VkBool32")]
-        public uint robustImageAccess2;
+        public VkBool32 robustImageAccess2;
 
-        [NativeTypeName("VkBool32")]
-        public uint nullDescriptor;
+        public VkBool32 nullDescriptor;
     }
 }

@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkFence")]
-        public ulong fence;
+        public VkFence fence;
 
         [NativeTypeName("VkExternalFenceHandleTypeFlagBits")]
         public VkExternalFenceHandleTypeFlags handleType;

@@ -12,13 +12,11 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkImage")]
-        public ulong srcImage;
+        public VkImage srcImage;
 
         public VkImageLayout srcImageLayout;
 
-        [NativeTypeName("VkImage")]
-        public ulong dstImage;
+        public VkImage dstImage;
 
         public VkImageLayout dstImageLayout;
 

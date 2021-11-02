@@ -14,8 +14,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkFence")]
-        public ulong fence;
+        public VkFence fence;
 
         public VkFenceImportFlags flags;
 

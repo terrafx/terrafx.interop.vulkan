@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkMetalSurfaceCreateInfoEXT" /> struct.</summary>
-    public static unsafe class VkMetalSurfaceCreateInfoEXTTests
+    public static unsafe partial class VkMetalSurfaceCreateInfoEXTTests
     {
         /// <summary>Validates that the <see cref="VkMetalSurfaceCreateInfoEXT" /> struct is blittable.</summary>
         [Test]

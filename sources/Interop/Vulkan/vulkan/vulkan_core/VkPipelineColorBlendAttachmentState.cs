@@ -7,8 +7,7 @@ namespace TerraFX.Interop
 {
     public partial struct VkPipelineColorBlendAttachmentState
     {
-        [NativeTypeName("VkBool32")]
-        public uint blendEnable;
+        public VkBool32 blendEnable;
 
         public VkBlendFactor srcColorBlendFactor;
 

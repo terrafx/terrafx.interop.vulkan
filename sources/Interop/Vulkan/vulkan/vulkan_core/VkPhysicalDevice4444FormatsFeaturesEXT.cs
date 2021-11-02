@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint formatA4R4G4B4;
+        public VkBool32 formatA4R4G4B4;
 
-        [NativeTypeName("VkBool32")]
-        public uint formatA4B4G4R4;
+        public VkBool32 formatA4B4G4R4;
     }
 }

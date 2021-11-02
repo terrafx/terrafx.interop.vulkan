@@ -14,8 +14,7 @@ namespace TerraFX.Interop
 
         public VkDeviceOrHostAddressConstKHR src;
 
-        [NativeTypeName("VkAccelerationStructureKHR")]
-        public ulong dst;
+        public VkAccelerationStructureKHR dst;
 
         public VkCopyAccelerationStructureModeKHR mode;
     }

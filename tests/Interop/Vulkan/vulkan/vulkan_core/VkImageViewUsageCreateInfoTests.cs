@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkImageViewUsageCreateInfo" /> struct.</summary>
-    public static unsafe class VkImageViewUsageCreateInfoTests
+    public static unsafe partial class VkImageViewUsageCreateInfoTests
     {
         /// <summary>Validates that the <see cref="VkImageViewUsageCreateInfo" /> struct is blittable.</summary>
         [Test]

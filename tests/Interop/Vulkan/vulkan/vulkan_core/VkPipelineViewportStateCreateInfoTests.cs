@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPipelineViewportStateCreateInfo" /> struct.</summary>
-    public static unsafe class VkPipelineViewportStateCreateInfoTests
+    public static unsafe partial class VkPipelineViewportStateCreateInfoTests
     {
         /// <summary>Validates that the <see cref="VkPipelineViewportStateCreateInfo" /> struct is blittable.</summary>
         [Test]

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPhysicalDeviceSamplerFilterMinmaxProperties" /> struct.</summary>
-    public static unsafe class VkPhysicalDeviceSamplerFilterMinmaxPropertiesTests
+    public static unsafe partial class VkPhysicalDeviceSamplerFilterMinmaxPropertiesTests
     {
         /// <summary>Validates that the <see cref="VkPhysicalDeviceSamplerFilterMinmaxProperties" /> struct is blittable.</summary>
         [Test]

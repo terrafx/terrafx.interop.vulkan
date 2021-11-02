@@ -18,7 +18,7 @@ namespace TerraFX.Interop
         public uint semaphoreCount;
 
         [NativeTypeName("const VkSemaphore *")]
-        public ulong* pSemaphores;
+        public VkSemaphore* pSemaphores;
 
         [NativeTypeName("const uint64_t *")]
         public ulong* pValues;

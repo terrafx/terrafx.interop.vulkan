@@ -14,14 +14,13 @@ namespace TerraFX.Interop
 
         public VkFramebufferCreateFlags flags;
 
-        [NativeTypeName("VkRenderPass")]
-        public ulong renderPass;
+        public VkRenderPass renderPass;
 
         [NativeTypeName("uint32_t")]
         public uint attachmentCount;
 
         [NativeTypeName("const VkImageView *")]
-        public ulong* pAttachments;
+        public VkImageView* pAttachments;
 
         [NativeTypeName("uint32_t")]
         public uint width;

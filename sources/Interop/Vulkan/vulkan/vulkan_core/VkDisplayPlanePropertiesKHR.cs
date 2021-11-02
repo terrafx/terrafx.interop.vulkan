@@ -7,8 +7,7 @@ namespace TerraFX.Interop
 {
     public partial struct VkDisplayPlanePropertiesKHR
     {
-        [NativeTypeName("VkDisplayKHR")]
-        public ulong currentDisplay;
+        public VkDisplayKHR currentDisplay;
 
         [NativeTypeName("uint32_t")]
         public uint currentStackIndex;

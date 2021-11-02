@@ -18,11 +18,9 @@ namespace TerraFX.Interop
 
         public VkBuildAccelerationStructureModeKHR mode;
 
-        [NativeTypeName("VkAccelerationStructureKHR")]
-        public ulong srcAccelerationStructure;
+        public VkAccelerationStructureKHR srcAccelerationStructure;
 
-        [NativeTypeName("VkAccelerationStructureKHR")]
-        public ulong dstAccelerationStructure;
+        public VkAccelerationStructureKHR dstAccelerationStructure;
 
         [NativeTypeName("uint32_t")]
         public uint geometryCount;

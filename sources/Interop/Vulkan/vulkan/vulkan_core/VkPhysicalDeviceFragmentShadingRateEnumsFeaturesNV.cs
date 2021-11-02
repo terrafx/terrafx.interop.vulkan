@@ -11,13 +11,10 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentShadingRateEnums;
+        public VkBool32 fragmentShadingRateEnums;
 
-        [NativeTypeName("VkBool32")]
-        public uint supersampleFragmentShadingRates;
+        public VkBool32 supersampleFragmentShadingRates;
 
-        [NativeTypeName("VkBool32")]
-        public uint noInvocationFragmentShadingRates;
+        public VkBool32 noInvocationFragmentShadingRates;
     }
 }

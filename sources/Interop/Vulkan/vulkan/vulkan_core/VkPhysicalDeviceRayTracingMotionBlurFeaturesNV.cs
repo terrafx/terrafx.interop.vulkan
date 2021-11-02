@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint rayTracingMotionBlur;
+        public VkBool32 rayTracingMotionBlur;
 
-        [NativeTypeName("VkBool32")]
-        public uint rayTracingMotionBlurPipelineTraceRaysIndirect;
+        public VkBool32 rayTracingMotionBlurPipelineTraceRaysIndirect;
     }
 }

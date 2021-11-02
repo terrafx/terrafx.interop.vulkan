@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint computeDerivativeGroupQuads;
+        public VkBool32 computeDerivativeGroupQuads;
 
-        [NativeTypeName("VkBool32")]
-        public uint computeDerivativeGroupLinear;
+        public VkBool32 computeDerivativeGroupLinear;
     }
 }

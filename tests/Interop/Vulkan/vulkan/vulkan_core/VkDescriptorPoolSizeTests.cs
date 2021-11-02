@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkDescriptorPoolSize" /> struct.</summary>
-    public static unsafe class VkDescriptorPoolSizeTests
+    public static unsafe partial class VkDescriptorPoolSizeTests
     {
         /// <summary>Validates that the <see cref="VkDescriptorPoolSize" /> struct is blittable.</summary>
         [Test]

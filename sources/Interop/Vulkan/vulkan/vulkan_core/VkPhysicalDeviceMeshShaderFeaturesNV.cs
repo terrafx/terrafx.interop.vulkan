@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint taskShader;
+        public VkBool32 taskShader;
 
-        [NativeTypeName("VkBool32")]
-        public uint meshShader;
+        public VkBool32 meshShader;
     }
 }

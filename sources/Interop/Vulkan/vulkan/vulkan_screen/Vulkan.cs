@@ -11,11 +11,10 @@ namespace TerraFX.Interop
     public static unsafe partial class Vulkan
     {
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateScreenSurfaceQNX([NativeTypeName("VkInstance")] IntPtr instance, [NativeTypeName("const VkScreenSurfaceCreateInfoQNX *")] VkScreenSurfaceCreateInfoQNX* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkSurfaceKHR *")] ulong* pSurface);
+        public static extern VkResult vkCreateScreenSurfaceQNX(VkInstance instance, [NativeTypeName("const VkScreenSurfaceCreateInfoQNX *")] VkScreenSurfaceCreateInfoQNX* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        [return: NativeTypeName("VkBool32")]
-        public static extern uint vkGetPhysicalDeviceScreenPresentationSupportQNX([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex, [NativeTypeName("struct _screen_window *")] IntPtr window);
+        public static extern VkBool32 vkGetPhysicalDeviceScreenPresentationSupportQNX(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex, [NativeTypeName("struct _screen_window *")] IntPtr window);
 
         [NativeTypeName("#define VK_QNX_screen_surface 1")]
         public const int VK_QNX_screen_surface = 1;

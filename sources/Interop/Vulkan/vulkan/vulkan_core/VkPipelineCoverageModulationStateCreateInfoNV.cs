@@ -17,8 +17,7 @@ namespace TerraFX.Interop
 
         public VkCoverageModulationModeNV coverageModulationMode;
 
-        [NativeTypeName("VkBool32")]
-        public uint coverageModulationTableEnable;
+        public VkBool32 coverageModulationTableEnable;
 
         [NativeTypeName("uint32_t")]
         public uint coverageModulationTableCount;

@@ -11,40 +11,28 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderBufferFloat32Atomics;
+        public VkBool32 shaderBufferFloat32Atomics;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderBufferFloat32AtomicAdd;
+        public VkBool32 shaderBufferFloat32AtomicAdd;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderBufferFloat64Atomics;
+        public VkBool32 shaderBufferFloat64Atomics;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderBufferFloat64AtomicAdd;
+        public VkBool32 shaderBufferFloat64AtomicAdd;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSharedFloat32Atomics;
+        public VkBool32 shaderSharedFloat32Atomics;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSharedFloat32AtomicAdd;
+        public VkBool32 shaderSharedFloat32AtomicAdd;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSharedFloat64Atomics;
+        public VkBool32 shaderSharedFloat64Atomics;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSharedFloat64AtomicAdd;
+        public VkBool32 shaderSharedFloat64AtomicAdd;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderImageFloat32Atomics;
+        public VkBool32 shaderImageFloat32Atomics;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderImageFloat32AtomicAdd;
+        public VkBool32 shaderImageFloat32AtomicAdd;
 
-        [NativeTypeName("VkBool32")]
-        public uint sparseImageFloat32Atomics;
+        public VkBool32 sparseImageFloat32Atomics;
 
-        [NativeTypeName("VkBool32")]
-        public uint sparseImageFloat32AtomicAdd;
+        public VkBool32 sparseImageFloat32AtomicAdd;
     }
 }

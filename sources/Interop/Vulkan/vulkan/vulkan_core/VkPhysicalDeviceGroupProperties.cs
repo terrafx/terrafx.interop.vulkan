@@ -3,9 +3,7 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
 // Original source is Copyright © 2015-2021 The Khronos Group Inc.
 
-using System;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop
 {
@@ -21,55 +19,54 @@ namespace TerraFX.Interop
         [NativeTypeName("VkPhysicalDevice [32]")]
         public _physicalDevices_e__FixedBuffer physicalDevices;
 
-        [NativeTypeName("VkBool32")]
-        public uint subsetAllocation;
+        public VkBool32 subsetAllocation;
 
-        public partial struct _physicalDevices_e__FixedBuffer
+        public unsafe partial struct _physicalDevices_e__FixedBuffer
         {
-            public IntPtr e0;
-            public IntPtr e1;
-            public IntPtr e2;
-            public IntPtr e3;
-            public IntPtr e4;
-            public IntPtr e5;
-            public IntPtr e6;
-            public IntPtr e7;
-            public IntPtr e8;
-            public IntPtr e9;
-            public IntPtr e10;
-            public IntPtr e11;
-            public IntPtr e12;
-            public IntPtr e13;
-            public IntPtr e14;
-            public IntPtr e15;
-            public IntPtr e16;
-            public IntPtr e17;
-            public IntPtr e18;
-            public IntPtr e19;
-            public IntPtr e20;
-            public IntPtr e21;
-            public IntPtr e22;
-            public IntPtr e23;
-            public IntPtr e24;
-            public IntPtr e25;
-            public IntPtr e26;
-            public IntPtr e27;
-            public IntPtr e28;
-            public IntPtr e29;
-            public IntPtr e30;
-            public IntPtr e31;
+            public VkPhysicalDevice e0;
+            public VkPhysicalDevice e1;
+            public VkPhysicalDevice e2;
+            public VkPhysicalDevice e3;
+            public VkPhysicalDevice e4;
+            public VkPhysicalDevice e5;
+            public VkPhysicalDevice e6;
+            public VkPhysicalDevice e7;
+            public VkPhysicalDevice e8;
+            public VkPhysicalDevice e9;
+            public VkPhysicalDevice e10;
+            public VkPhysicalDevice e11;
+            public VkPhysicalDevice e12;
+            public VkPhysicalDevice e13;
+            public VkPhysicalDevice e14;
+            public VkPhysicalDevice e15;
+            public VkPhysicalDevice e16;
+            public VkPhysicalDevice e17;
+            public VkPhysicalDevice e18;
+            public VkPhysicalDevice e19;
+            public VkPhysicalDevice e20;
+            public VkPhysicalDevice e21;
+            public VkPhysicalDevice e22;
+            public VkPhysicalDevice e23;
+            public VkPhysicalDevice e24;
+            public VkPhysicalDevice e25;
+            public VkPhysicalDevice e26;
+            public VkPhysicalDevice e27;
+            public VkPhysicalDevice e28;
+            public VkPhysicalDevice e29;
+            public VkPhysicalDevice e30;
+            public VkPhysicalDevice e31;
 
-            public ref IntPtr this[int index]
+            public ref VkPhysicalDevice this[int index]
             {
                 [MethodImpl(MethodImplOptions.AggressiveInlining)]
                 get
                 {
-                    return ref AsSpan()[index];
+                    fixed (VkPhysicalDevice* pThis = &e0)
+                    {
+                        return ref pThis[index];
+                    }
                 }
             }
-
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            public Span<IntPtr> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 32);
         }
     }
 }

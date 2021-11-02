@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="StdVideoEncodeH264SliceHeader" /> struct.</summary>
-    public static unsafe class StdVideoEncodeH264SliceHeaderTests
+    public static unsafe partial class StdVideoEncodeH264SliceHeaderTests
     {
         /// <summary>Validates that the <see cref="StdVideoEncodeH264SliceHeader" /> struct is blittable.</summary>
         [Test]

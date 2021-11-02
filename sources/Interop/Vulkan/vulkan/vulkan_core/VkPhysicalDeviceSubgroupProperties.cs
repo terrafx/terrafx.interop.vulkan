@@ -18,7 +18,6 @@ namespace TerraFX.Interop
 
         public VkSubgroupFeatureFlags supportedOperations;
 
-        [NativeTypeName("VkBool32")]
-        public uint quadOperationsInAllStages;
+        public VkBool32 quadOperationsInAllStages;
     }
 }

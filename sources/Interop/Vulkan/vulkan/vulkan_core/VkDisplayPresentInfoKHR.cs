@@ -16,7 +16,6 @@ namespace TerraFX.Interop
 
         public VkRect2D dstRect;
 
-        [NativeTypeName("VkBool32")]
-        public uint persistent;
+        public VkBool32 persistent;
     }
 }

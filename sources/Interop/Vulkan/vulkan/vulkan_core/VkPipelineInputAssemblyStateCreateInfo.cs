@@ -17,7 +17,6 @@ namespace TerraFX.Interop
 
         public VkPrimitiveTopology topology;
 
-        [NativeTypeName("VkBool32")]
-        public uint primitiveRestartEnable;
+        public VkBool32 primitiveRestartEnable;
     }
 }

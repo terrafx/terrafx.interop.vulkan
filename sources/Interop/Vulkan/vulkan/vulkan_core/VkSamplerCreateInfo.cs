@@ -28,13 +28,11 @@ namespace TerraFX.Interop
 
         public float mipLodBias;
 
-        [NativeTypeName("VkBool32")]
-        public uint anisotropyEnable;
+        public VkBool32 anisotropyEnable;
 
         public float maxAnisotropy;
 
-        [NativeTypeName("VkBool32")]
-        public uint compareEnable;
+        public VkBool32 compareEnable;
 
         public VkCompareOp compareOp;
 
@@ -44,7 +42,6 @@ namespace TerraFX.Interop
 
         public VkBorderColor borderColor;
 
-        [NativeTypeName("VkBool32")]
-        public uint unnormalizedCoordinates;
+        public VkBool32 unnormalizedCoordinates;
     }
 }

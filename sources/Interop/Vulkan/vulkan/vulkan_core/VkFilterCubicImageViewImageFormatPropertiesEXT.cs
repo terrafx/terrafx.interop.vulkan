@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint filterCubic;
+        public VkBool32 filterCubic;
 
-        [NativeTypeName("VkBool32")]
-        public uint filterCubicMinmax;
+        public VkBool32 filterCubicMinmax;
     }
 }

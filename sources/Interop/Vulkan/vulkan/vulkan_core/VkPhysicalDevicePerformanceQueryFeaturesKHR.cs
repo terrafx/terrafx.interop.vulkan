@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint performanceCounterQueryPools;
+        public VkBool32 performanceCounterQueryPools;
 
-        [NativeTypeName("VkBool32")]
-        public uint performanceCounterMultipleQueryPools;
+        public VkBool32 performanceCounterMultipleQueryPools;
     }
 }
