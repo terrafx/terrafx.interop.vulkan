@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkAndroidSurfaceCreateInfoKHR" /> struct.</summary>
-    public static unsafe class VkAndroidSurfaceCreateInfoKHRTests
+    public static unsafe partial class VkAndroidSurfaceCreateInfoKHRTests
     {
         /// <summary>Validates that the <see cref="VkAndroidSurfaceCreateInfoKHR" /> struct is blittable.</summary>
         [Test]

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkAllocationCallbacks" /> struct.</summary>
-    public static unsafe class VkAllocationCallbacksTests
+    public static unsafe partial class VkAllocationCallbacksTests
     {
         /// <summary>Validates that the <see cref="VkAllocationCallbacks" /> struct is blittable.</summary>
         [Test]

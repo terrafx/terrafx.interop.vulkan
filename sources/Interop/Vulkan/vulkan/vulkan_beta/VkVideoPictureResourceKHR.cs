@@ -19,7 +19,6 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint baseArrayLayer;
 
-        [NativeTypeName("VkImageView")]
-        public ulong imageViewBinding;
+        public VkImageView imageViewBinding;
     }
 }

@@ -11,16 +11,12 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint workgroupMemoryExplicitLayout;
+        public VkBool32 workgroupMemoryExplicitLayout;
 
-        [NativeTypeName("VkBool32")]
-        public uint workgroupMemoryExplicitLayoutScalarBlockLayout;
+        public VkBool32 workgroupMemoryExplicitLayoutScalarBlockLayout;
 
-        [NativeTypeName("VkBool32")]
-        public uint workgroupMemoryExplicitLayout8BitAccess;
+        public VkBool32 workgroupMemoryExplicitLayout8BitAccess;
 
-        [NativeTypeName("VkBool32")]
-        public uint workgroupMemoryExplicitLayout16BitAccess;
+        public VkBool32 workgroupMemoryExplicitLayout16BitAccess;
     }
 }

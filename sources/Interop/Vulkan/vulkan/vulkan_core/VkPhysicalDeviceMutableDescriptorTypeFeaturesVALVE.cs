@@ -11,7 +11,6 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint mutableDescriptorType;
+        public VkBool32 mutableDescriptorType;
     }
 }

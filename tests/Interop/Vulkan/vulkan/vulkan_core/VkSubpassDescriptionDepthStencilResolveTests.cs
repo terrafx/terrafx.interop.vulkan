@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkSubpassDescriptionDepthStencilResolve" /> struct.</summary>
-    public static unsafe class VkSubpassDescriptionDepthStencilResolveTests
+    public static unsafe partial class VkSubpassDescriptionDepthStencilResolveTests
     {
         /// <summary>Validates that the <see cref="VkSubpassDescriptionDepthStencilResolve" /> struct is blittable.</summary>
         [Test]

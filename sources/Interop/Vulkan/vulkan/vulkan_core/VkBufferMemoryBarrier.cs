@@ -22,8 +22,7 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint dstQueueFamilyIndex;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong buffer;
+        public VkBuffer buffer;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong offset;

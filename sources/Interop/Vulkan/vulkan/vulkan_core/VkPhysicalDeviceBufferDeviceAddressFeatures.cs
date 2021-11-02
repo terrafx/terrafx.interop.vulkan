@@ -11,13 +11,10 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint bufferDeviceAddress;
+        public VkBool32 bufferDeviceAddress;
 
-        [NativeTypeName("VkBool32")]
-        public uint bufferDeviceAddressCaptureReplay;
+        public VkBool32 bufferDeviceAddressCaptureReplay;
 
-        [NativeTypeName("VkBool32")]
-        public uint bufferDeviceAddressMultiDevice;
+        public VkBool32 bufferDeviceAddressMultiDevice;
     }
 }

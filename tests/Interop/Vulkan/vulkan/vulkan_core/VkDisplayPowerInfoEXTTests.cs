@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkDisplayPowerInfoEXT" /> struct.</summary>
-    public static unsafe class VkDisplayPowerInfoEXTTests
+    public static unsafe partial class VkDisplayPowerInfoEXTTests
     {
         /// <summary>Validates that the <see cref="VkDisplayPowerInfoEXT" /> struct is blittable.</summary>
         [Test]

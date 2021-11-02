@@ -16,7 +16,7 @@ namespace TerraFX.Interop
         public uint waitSemaphoreCount;
 
         [NativeTypeName("const VkSemaphore *")]
-        public ulong* pWaitSemaphores;
+        public VkSemaphore* pWaitSemaphores;
 
         [NativeTypeName("uint32_t")]
         public uint bufferBindCount;
@@ -40,6 +40,6 @@ namespace TerraFX.Interop
         public uint signalSemaphoreCount;
 
         [NativeTypeName("const VkSemaphore *")]
-        public ulong* pSignalSemaphores;
+        public VkSemaphore* pSignalSemaphores;
     }
 }

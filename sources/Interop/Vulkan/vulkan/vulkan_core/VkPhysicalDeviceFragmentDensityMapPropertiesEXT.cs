@@ -15,7 +15,6 @@ namespace TerraFX.Interop
 
         public VkExtent2D maxFragmentDensityTexelSize;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentDensityInvocations;
+        public VkBool32 fragmentDensityInvocations;
     }
 }

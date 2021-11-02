@@ -3,7 +3,6 @@
 // Ported from include/vulkan/vk_icd.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
 // Original source is Copyright © 2015-2016 The Khronos Group Inc. Copyright © 2015-2016 Valve Corporation. Copyright © 2015-2016 LunarG, Inc.
 
-using System;
 using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop
@@ -15,11 +14,11 @@ namespace TerraFX.Interop
 
         [DllImport("vulkan", ExactSpelling = true)]
         [return: NativeTypeName("PFN_vkVoidFunction")]
-        public static extern delegate* unmanaged<void> vk_icdGetInstanceProcAddr([NativeTypeName("VkInstance")] IntPtr instance, [NativeTypeName("const char *")] sbyte* pName);
+        public static extern delegate* unmanaged<void> vk_icdGetInstanceProcAddr(VkInstance instance, [NativeTypeName("const char *")] sbyte* pName);
 
         [DllImport("vulkan", ExactSpelling = true)]
         [return: NativeTypeName("PFN_vkVoidFunction")]
-        public static extern delegate* unmanaged<void> vk_icdGetPhysicalDeviceProcAddr([NativeTypeName("VkInstance")] IntPtr isntance, [NativeTypeName("const char *")] sbyte* pName);
+        public static extern delegate* unmanaged<void> vk_icdGetPhysicalDeviceProcAddr(VkInstance isntance, [NativeTypeName("const char *")] sbyte* pName);
 
         public static void set_loader_magic_value(void* pNewObject)
         {

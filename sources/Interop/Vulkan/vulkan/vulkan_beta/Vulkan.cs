@@ -11,46 +11,46 @@ namespace TerraFX.Interop
     public static unsafe partial class Vulkan
     {
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPhysicalDeviceVideoCapabilitiesKHR([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("const VkVideoProfileKHR *")] VkVideoProfileKHR* pVideoProfile, VkVideoCapabilitiesKHR* pCapabilities);
+        public static extern VkResult vkGetPhysicalDeviceVideoCapabilitiesKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkVideoProfileKHR *")] VkVideoProfileKHR* pVideoProfile, VkVideoCapabilitiesKHR* pCapabilities);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPhysicalDeviceVideoFormatPropertiesKHR([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("const VkPhysicalDeviceVideoFormatInfoKHR *")] VkPhysicalDeviceVideoFormatInfoKHR* pVideoFormatInfo, [NativeTypeName("uint32_t *")] uint* pVideoFormatPropertyCount, VkVideoFormatPropertiesKHR* pVideoFormatProperties);
+        public static extern VkResult vkGetPhysicalDeviceVideoFormatPropertiesKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkPhysicalDeviceVideoFormatInfoKHR *")] VkPhysicalDeviceVideoFormatInfoKHR* pVideoFormatInfo, [NativeTypeName("uint32_t *")] uint* pVideoFormatPropertyCount, VkVideoFormatPropertiesKHR* pVideoFormatProperties);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateVideoSessionKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkVideoSessionCreateInfoKHR *")] VkVideoSessionCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkVideoSessionKHR *")] ulong* pVideoSession);
+        public static extern VkResult vkCreateVideoSessionKHR(VkDevice device, [NativeTypeName("const VkVideoSessionCreateInfoKHR *")] VkVideoSessionCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkVideoSessionKHR* pVideoSession);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyVideoSessionKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkVideoSessionKHR")] ulong videoSession, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
+        public static extern void vkDestroyVideoSessionKHR(VkDevice device, VkVideoSessionKHR videoSession, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetVideoSessionMemoryRequirementsKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkVideoSessionKHR")] ulong videoSession, [NativeTypeName("uint32_t *")] uint* pVideoSessionMemoryRequirementsCount, VkVideoGetMemoryPropertiesKHR* pVideoSessionMemoryRequirements);
+        public static extern VkResult vkGetVideoSessionMemoryRequirementsKHR(VkDevice device, VkVideoSessionKHR videoSession, [NativeTypeName("uint32_t *")] uint* pVideoSessionMemoryRequirementsCount, VkVideoGetMemoryPropertiesKHR* pVideoSessionMemoryRequirements);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkBindVideoSessionMemoryKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkVideoSessionKHR")] ulong videoSession, [NativeTypeName("uint32_t")] uint videoSessionBindMemoryCount, [NativeTypeName("const VkVideoBindMemoryKHR *")] VkVideoBindMemoryKHR* pVideoSessionBindMemories);
+        public static extern VkResult vkBindVideoSessionMemoryKHR(VkDevice device, VkVideoSessionKHR videoSession, [NativeTypeName("uint32_t")] uint videoSessionBindMemoryCount, [NativeTypeName("const VkVideoBindMemoryKHR *")] VkVideoBindMemoryKHR* pVideoSessionBindMemories);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateVideoSessionParametersKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkVideoSessionParametersCreateInfoKHR *")] VkVideoSessionParametersCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkVideoSessionParametersKHR *")] ulong* pVideoSessionParameters);
+        public static extern VkResult vkCreateVideoSessionParametersKHR(VkDevice device, [NativeTypeName("const VkVideoSessionParametersCreateInfoKHR *")] VkVideoSessionParametersCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkVideoSessionParametersKHR* pVideoSessionParameters);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkUpdateVideoSessionParametersKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkVideoSessionParametersKHR")] ulong videoSessionParameters, [NativeTypeName("const VkVideoSessionParametersUpdateInfoKHR *")] VkVideoSessionParametersUpdateInfoKHR* pUpdateInfo);
+        public static extern VkResult vkUpdateVideoSessionParametersKHR(VkDevice device, VkVideoSessionParametersKHR videoSessionParameters, [NativeTypeName("const VkVideoSessionParametersUpdateInfoKHR *")] VkVideoSessionParametersUpdateInfoKHR* pUpdateInfo);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyVideoSessionParametersKHR([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkVideoSessionParametersKHR")] ulong videoSessionParameters, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
+        public static extern void vkDestroyVideoSessionParametersKHR(VkDevice device, VkVideoSessionParametersKHR videoSessionParameters, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBeginVideoCodingKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkVideoBeginCodingInfoKHR *")] VkVideoBeginCodingInfoKHR* pBeginInfo);
+        public static extern void vkCmdBeginVideoCodingKHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkVideoBeginCodingInfoKHR *")] VkVideoBeginCodingInfoKHR* pBeginInfo);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdEndVideoCodingKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkVideoEndCodingInfoKHR *")] VkVideoEndCodingInfoKHR* pEndCodingInfo);
+        public static extern void vkCmdEndVideoCodingKHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkVideoEndCodingInfoKHR *")] VkVideoEndCodingInfoKHR* pEndCodingInfo);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdControlVideoCodingKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkVideoCodingControlInfoKHR *")] VkVideoCodingControlInfoKHR* pCodingControlInfo);
+        public static extern void vkCmdControlVideoCodingKHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkVideoCodingControlInfoKHR *")] VkVideoCodingControlInfoKHR* pCodingControlInfo);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDecodeVideoKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkVideoDecodeInfoKHR *")] VkVideoDecodeInfoKHR* pFrameInfo);
+        public static extern void vkCmdDecodeVideoKHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkVideoDecodeInfoKHR *")] VkVideoDecodeInfoKHR* pFrameInfo);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdEncodeVideoKHR([NativeTypeName("VkCommandBuffer")] IntPtr commandBuffer, [NativeTypeName("const VkVideoEncodeInfoKHR *")] VkVideoEncodeInfoKHR* pEncodeInfo);
+        public static extern void vkCmdEncodeVideoKHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkVideoEncodeInfoKHR *")] VkVideoEncodeInfoKHR* pEncodeInfo);
 
         [NativeTypeName("#define VK_KHR_video_queue 1")]
         public const int VK_KHR_video_queue = 1;

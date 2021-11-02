@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkWriteDescriptorSetAccelerationStructureKHR" /> struct.</summary>
-    public static unsafe class VkWriteDescriptorSetAccelerationStructureKHRTests
+    public static unsafe partial class VkWriteDescriptorSetAccelerationStructureKHRTests
     {
         /// <summary>Validates that the <see cref="VkWriteDescriptorSetAccelerationStructureKHR" /> struct is blittable.</summary>
         [Test]

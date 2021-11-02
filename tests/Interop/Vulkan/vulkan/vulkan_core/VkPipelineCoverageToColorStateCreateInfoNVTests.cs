@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPipelineCoverageToColorStateCreateInfoNV" /> struct.</summary>
-    public static unsafe class VkPipelineCoverageToColorStateCreateInfoNVTests
+    public static unsafe partial class VkPipelineCoverageToColorStateCreateInfoNVTests
     {
         /// <summary>Validates that the <see cref="VkPipelineCoverageToColorStateCreateInfoNV" /> struct is blittable.</summary>
         [Test]

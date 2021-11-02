@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong vertexData;
+        public VkBuffer vertexData;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong vertexOffset;
@@ -26,8 +25,7 @@ namespace TerraFX.Interop
 
         public VkFormat vertexFormat;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong indexData;
+        public VkBuffer indexData;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong indexOffset;
@@ -37,8 +35,7 @@ namespace TerraFX.Interop
 
         public VkIndexType indexType;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong transformData;
+        public VkBuffer transformData;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong transformOffset;

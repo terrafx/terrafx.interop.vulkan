@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkVertexInputAttributeDescription2EXT" /> struct.</summary>
-    public static unsafe class VkVertexInputAttributeDescription2EXTTests
+    public static unsafe partial class VkVertexInputAttributeDescription2EXTTests
     {
         /// <summary>Validates that the <see cref="VkVertexInputAttributeDescription2EXT" /> struct is blittable.</summary>
         [Test]

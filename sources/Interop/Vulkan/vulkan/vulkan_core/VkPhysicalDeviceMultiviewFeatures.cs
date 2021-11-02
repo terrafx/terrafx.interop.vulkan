@@ -11,13 +11,10 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint multiview;
+        public VkBool32 multiview;
 
-        [NativeTypeName("VkBool32")]
-        public uint multiviewGeometryShader;
+        public VkBool32 multiviewGeometryShader;
 
-        [NativeTypeName("VkBool32")]
-        public uint multiviewTessellationShader;
+        public VkBool32 multiviewTessellationShader;
     }
 }

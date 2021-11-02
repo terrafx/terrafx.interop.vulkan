@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkNegotiateLayerInterface" /> struct.</summary>
-    public static unsafe class VkNegotiateLayerInterfaceTests
+    public static unsafe partial class VkNegotiateLayerInterfaceTests
     {
         /// <summary>Validates that the <see cref="VkNegotiateLayerInterface" /> struct is blittable.</summary>
         [Test]

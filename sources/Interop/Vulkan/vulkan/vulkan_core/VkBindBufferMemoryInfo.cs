@@ -12,11 +12,9 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong buffer;
+        public VkBuffer buffer;
 
-        [NativeTypeName("VkDeviceMemory")]
-        public ulong memory;
+        public VkDeviceMemory memory;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong memoryOffset;

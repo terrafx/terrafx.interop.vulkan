@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkEnumerateInstanceVersionChain" /> struct.</summary>
-    public static unsafe class VkEnumerateInstanceVersionChainTests
+    public static unsafe partial class VkEnumerateInstanceVersionChainTests
     {
         /// <summary>Validates that the <see cref="VkEnumerateInstanceVersionChain" /> struct is blittable.</summary>
         [Test]

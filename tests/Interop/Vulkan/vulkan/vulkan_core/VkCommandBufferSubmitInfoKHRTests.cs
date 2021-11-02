@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkCommandBufferSubmitInfoKHR" /> struct.</summary>
-    public static unsafe class VkCommandBufferSubmitInfoKHRTests
+    public static unsafe partial class VkCommandBufferSubmitInfoKHRTests
     {
         /// <summary>Validates that the <see cref="VkCommandBufferSubmitInfoKHR" /> struct is blittable.</summary>
         [Test]

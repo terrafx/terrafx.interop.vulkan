@@ -12,7 +12,6 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkSurfaceKHR")]
-        public ulong surface;
+        public VkSurfaceKHR surface;
     }
 }

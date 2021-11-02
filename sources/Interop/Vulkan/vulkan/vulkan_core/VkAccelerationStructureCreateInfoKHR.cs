@@ -14,8 +14,7 @@ namespace TerraFX.Interop
 
         public VkAccelerationStructureCreateFlagsKHR createFlags;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong buffer;
+        public VkBuffer buffer;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong offset;

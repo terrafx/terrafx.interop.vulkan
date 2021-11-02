@@ -267,8 +267,7 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint maxSampleMaskWords;
 
-        [NativeTypeName("VkBool32")]
-        public uint timestampComputeAndGraphics;
+        public VkBool32 timestampComputeAndGraphics;
 
         public float timestampPeriod;
 
@@ -294,11 +293,9 @@ namespace TerraFX.Interop
 
         public float lineWidthGranularity;
 
-        [NativeTypeName("VkBool32")]
-        public uint strictLines;
+        public VkBool32 strictLines;
 
-        [NativeTypeName("VkBool32")]
-        public uint standardSampleLocations;
+        public VkBool32 standardSampleLocations;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong optimalBufferCopyOffsetAlignment;

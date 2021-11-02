@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkBindAccelerationStructureMemoryInfoNV" /> struct.</summary>
-    public static unsafe class VkBindAccelerationStructureMemoryInfoNVTests
+    public static unsafe partial class VkBindAccelerationStructureMemoryInfoNVTests
     {
         /// <summary>Validates that the <see cref="VkBindAccelerationStructureMemoryInfoNV" /> struct is blittable.</summary>
         [Test]

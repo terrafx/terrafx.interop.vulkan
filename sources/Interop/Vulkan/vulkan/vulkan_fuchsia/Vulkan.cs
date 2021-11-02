@@ -11,19 +11,19 @@ namespace TerraFX.Interop
     public static unsafe partial class Vulkan
     {
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateImagePipeSurfaceFUCHSIA([NativeTypeName("VkInstance")] IntPtr instance, [NativeTypeName("const VkImagePipeSurfaceCreateInfoFUCHSIA *")] VkImagePipeSurfaceCreateInfoFUCHSIA* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkSurfaceKHR *")] ulong* pSurface);
+        public static extern VkResult vkCreateImagePipeSurfaceFUCHSIA(VkInstance instance, [NativeTypeName("const VkImagePipeSurfaceCreateInfoFUCHSIA *")] VkImagePipeSurfaceCreateInfoFUCHSIA* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetMemoryZirconHandleFUCHSIA([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkMemoryGetZirconHandleInfoFUCHSIA *")] VkMemoryGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, [NativeTypeName("zx_handle_t *")] uint* pZirconHandle);
+        public static extern VkResult vkGetMemoryZirconHandleFUCHSIA(VkDevice device, [NativeTypeName("const VkMemoryGetZirconHandleInfoFUCHSIA *")] VkMemoryGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, [NativeTypeName("zx_handle_t *")] uint* pZirconHandle);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetMemoryZirconHandlePropertiesFUCHSIA([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("VkExternalMemoryHandleTypeFlagBits")] VkExternalMemoryHandleTypeFlags handleType, [NativeTypeName("zx_handle_t")] uint zirconHandle, VkMemoryZirconHandlePropertiesFUCHSIA* pMemoryZirconHandleProperties);
+        public static extern VkResult vkGetMemoryZirconHandlePropertiesFUCHSIA(VkDevice device, [NativeTypeName("VkExternalMemoryHandleTypeFlagBits")] VkExternalMemoryHandleTypeFlags handleType, [NativeTypeName("zx_handle_t")] uint zirconHandle, VkMemoryZirconHandlePropertiesFUCHSIA* pMemoryZirconHandleProperties);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkImportSemaphoreZirconHandleFUCHSIA([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkImportSemaphoreZirconHandleInfoFUCHSIA *")] VkImportSemaphoreZirconHandleInfoFUCHSIA* pImportSemaphoreZirconHandleInfo);
+        public static extern VkResult vkImportSemaphoreZirconHandleFUCHSIA(VkDevice device, [NativeTypeName("const VkImportSemaphoreZirconHandleInfoFUCHSIA *")] VkImportSemaphoreZirconHandleInfoFUCHSIA* pImportSemaphoreZirconHandleInfo);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetSemaphoreZirconHandleFUCHSIA([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkSemaphoreGetZirconHandleInfoFUCHSIA *")] VkSemaphoreGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, [NativeTypeName("zx_handle_t *")] uint* pZirconHandle);
+        public static extern VkResult vkGetSemaphoreZirconHandleFUCHSIA(VkDevice device, [NativeTypeName("const VkSemaphoreGetZirconHandleInfoFUCHSIA *")] VkSemaphoreGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, [NativeTypeName("zx_handle_t *")] uint* pZirconHandle);
 
         [NativeTypeName("#define VK_FUCHSIA_imagepipe_surface 1")]
         public const int VK_FUCHSIA_imagepipe_surface = 1;

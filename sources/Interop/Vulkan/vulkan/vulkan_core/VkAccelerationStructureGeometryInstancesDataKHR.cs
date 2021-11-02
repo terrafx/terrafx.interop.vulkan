@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint arrayOfPointers;
+        public VkBool32 arrayOfPointers;
 
         public VkDeviceOrHostAddressConstKHR data;
     }

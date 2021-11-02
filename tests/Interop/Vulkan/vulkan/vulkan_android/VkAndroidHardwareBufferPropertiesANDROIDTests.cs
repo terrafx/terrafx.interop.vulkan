@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkAndroidHardwareBufferPropertiesANDROID" /> struct.</summary>
-    public static unsafe class VkAndroidHardwareBufferPropertiesANDROIDTests
+    public static unsafe partial class VkAndroidHardwareBufferPropertiesANDROIDTests
     {
         /// <summary>Validates that the <see cref="VkAndroidHardwareBufferPropertiesANDROID" /> struct is blittable.</summary>
         [Test]

@@ -12,10 +12,8 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkVideoSessionParametersKHR")]
-        public ulong videoSessionParametersTemplate;
+        public VkVideoSessionParametersKHR videoSessionParametersTemplate;
 
-        [NativeTypeName("VkVideoSessionKHR")]
-        public ulong videoSession;
+        public VkVideoSessionKHR videoSession;
     }
 }

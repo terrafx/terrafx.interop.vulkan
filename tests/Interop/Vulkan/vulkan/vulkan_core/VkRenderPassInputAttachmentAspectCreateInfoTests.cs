@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkRenderPassInputAttachmentAspectCreateInfo" /> struct.</summary>
-    public static unsafe class VkRenderPassInputAttachmentAspectCreateInfoTests
+    public static unsafe partial class VkRenderPassInputAttachmentAspectCreateInfoTests
     {
         /// <summary>Validates that the <see cref="VkRenderPassInputAttachmentAspectCreateInfo" /> struct is blittable.</summary>
         [Test]

@@ -23,7 +23,6 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint deviceNodeMask;
 
-        [NativeTypeName("VkBool32")]
-        public uint deviceLUIDValid;
+        public VkBool32 deviceLUIDValid;
     }
 }

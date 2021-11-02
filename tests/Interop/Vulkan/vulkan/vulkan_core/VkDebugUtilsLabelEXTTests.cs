@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkDebugUtilsLabelEXT" /> struct.</summary>
-    public static unsafe class VkDebugUtilsLabelEXTTests
+    public static unsafe partial class VkDebugUtilsLabelEXTTests
     {
         /// <summary>Validates that the <see cref="VkDebugUtilsLabelEXT" /> struct is blittable.</summary>
         [Test]

@@ -18,14 +18,11 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint maxFragmentShadingRateAttachmentTexelSizeAspectRatio;
 
-        [NativeTypeName("VkBool32")]
-        public uint primitiveFragmentShadingRateWithMultipleViewports;
+        public VkBool32 primitiveFragmentShadingRateWithMultipleViewports;
 
-        [NativeTypeName("VkBool32")]
-        public uint layeredShadingRateAttachments;
+        public VkBool32 layeredShadingRateAttachments;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentShadingRateNonTrivialCombinerOps;
+        public VkBool32 fragmentShadingRateNonTrivialCombinerOps;
 
         public VkExtent2D maxFragmentSize;
 
@@ -38,25 +35,18 @@ namespace TerraFX.Interop
         [NativeTypeName("VkSampleCountFlagBits")]
         public VkSampleCountFlags maxFragmentShadingRateRasterizationSamples;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentShadingRateWithShaderDepthStencilWrites;
+        public VkBool32 fragmentShadingRateWithShaderDepthStencilWrites;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentShadingRateWithSampleMask;
+        public VkBool32 fragmentShadingRateWithSampleMask;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentShadingRateWithShaderSampleMask;
+        public VkBool32 fragmentShadingRateWithShaderSampleMask;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentShadingRateWithConservativeRasterization;
+        public VkBool32 fragmentShadingRateWithConservativeRasterization;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentShadingRateWithFragmentShaderInterlock;
+        public VkBool32 fragmentShadingRateWithFragmentShaderInterlock;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentShadingRateWithCustomSampleLocations;
+        public VkBool32 fragmentShadingRateWithCustomSampleLocations;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentShadingRateStrictMultiplyCombiner;
+        public VkBool32 fragmentShadingRateStrictMultiplyCombiner;
     }
 }

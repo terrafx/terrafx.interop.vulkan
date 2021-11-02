@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkBindShaderGroupIndirectCommandNV" /> struct.</summary>
-    public static unsafe class VkBindShaderGroupIndirectCommandNVTests
+    public static unsafe partial class VkBindShaderGroupIndirectCommandNVTests
     {
         /// <summary>Validates that the <see cref="VkBindShaderGroupIndirectCommandNV" /> struct is blittable.</summary>
         [Test]

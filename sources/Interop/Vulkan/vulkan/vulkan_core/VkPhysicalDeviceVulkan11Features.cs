@@ -11,40 +11,28 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint storageBuffer16BitAccess;
+        public VkBool32 storageBuffer16BitAccess;
 
-        [NativeTypeName("VkBool32")]
-        public uint uniformAndStorageBuffer16BitAccess;
+        public VkBool32 uniformAndStorageBuffer16BitAccess;
 
-        [NativeTypeName("VkBool32")]
-        public uint storagePushConstant16;
+        public VkBool32 storagePushConstant16;
 
-        [NativeTypeName("VkBool32")]
-        public uint storageInputOutput16;
+        public VkBool32 storageInputOutput16;
 
-        [NativeTypeName("VkBool32")]
-        public uint multiview;
+        public VkBool32 multiview;
 
-        [NativeTypeName("VkBool32")]
-        public uint multiviewGeometryShader;
+        public VkBool32 multiviewGeometryShader;
 
-        [NativeTypeName("VkBool32")]
-        public uint multiviewTessellationShader;
+        public VkBool32 multiviewTessellationShader;
 
-        [NativeTypeName("VkBool32")]
-        public uint variablePointersStorageBuffer;
+        public VkBool32 variablePointersStorageBuffer;
 
-        [NativeTypeName("VkBool32")]
-        public uint variablePointers;
+        public VkBool32 variablePointers;
 
-        [NativeTypeName("VkBool32")]
-        public uint protectedMemory;
+        public VkBool32 protectedMemory;
 
-        [NativeTypeName("VkBool32")]
-        public uint samplerYcbcrConversion;
+        public VkBool32 samplerYcbcrConversion;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderDrawParameters;
+        public VkBool32 shaderDrawParameters;
     }
 }

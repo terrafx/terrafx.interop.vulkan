@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkCoarseSampleOrderCustomNV" /> struct.</summary>
-    public static unsafe class VkCoarseSampleOrderCustomNVTests
+    public static unsafe partial class VkCoarseSampleOrderCustomNVTests
     {
         /// <summary>Validates that the <see cref="VkCoarseSampleOrderCustomNV" /> struct is blittable.</summary>
         [Test]

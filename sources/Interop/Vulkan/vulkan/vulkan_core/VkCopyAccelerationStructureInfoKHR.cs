@@ -12,11 +12,9 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkAccelerationStructureKHR")]
-        public ulong src;
+        public VkAccelerationStructureKHR src;
 
-        [NativeTypeName("VkAccelerationStructureKHR")]
-        public ulong dst;
+        public VkAccelerationStructureKHR dst;
 
         public VkCopyAccelerationStructureModeKHR mode;
     }

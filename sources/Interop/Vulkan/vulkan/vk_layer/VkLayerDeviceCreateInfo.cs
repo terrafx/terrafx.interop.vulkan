@@ -3,7 +3,6 @@
 // Ported from include/vulkan/vk_layer.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
 // Original source is Copyright © 2015-2017 The Khronos Group Inc. Copyright © 2015-2017 Valve Corporation. Copyright © 2015-2017 LunarG, Inc.
 
-using System;
 using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop
@@ -28,7 +27,7 @@ namespace TerraFX.Interop
 
             [FieldOffset(0)]
             [NativeTypeName("PFN_vkSetDeviceLoaderData")]
-            public delegate* unmanaged<IntPtr, void*, VkResult> pfnSetDeviceLoaderData;
+            public delegate* unmanaged<VkDevice, void*, VkResult> pfnSetDeviceLoaderData;
         }
     }
 }

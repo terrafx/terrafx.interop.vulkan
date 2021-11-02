@@ -11,11 +11,9 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint subsampledLoads;
+        public VkBool32 subsampledLoads;
 
-        [NativeTypeName("VkBool32")]
-        public uint subsampledCoarseReconstructionEarlyAccess;
+        public VkBool32 subsampledCoarseReconstructionEarlyAccess;
 
         [NativeTypeName("uint32_t")]
         public uint maxSubsampledArrayLayers;

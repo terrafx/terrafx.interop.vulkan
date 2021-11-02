@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkGeometryAABBNV" /> struct.</summary>
-    public static unsafe class VkGeometryAABBNVTests
+    public static unsafe partial class VkGeometryAABBNVTests
     {
         /// <summary>Validates that the <see cref="VkGeometryAABBNV" /> struct is blittable.</summary>
         [Test]

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkLayerInstanceLink" /> struct.</summary>
-    public static unsafe class VkLayerInstanceLinkTests
+    public static unsafe partial class VkLayerInstanceLinkTests
     {
         /// <summary>Validates that the <see cref="VkLayerInstanceLink" /> struct is blittable.</summary>
         [Test]

@@ -7,19 +7,14 @@ namespace TerraFX.Interop
 {
     public partial struct VkPhysicalDeviceSparseProperties
     {
-        [NativeTypeName("VkBool32")]
-        public uint residencyStandard2DBlockShape;
+        public VkBool32 residencyStandard2DBlockShape;
 
-        [NativeTypeName("VkBool32")]
-        public uint residencyStandard2DMultisampleBlockShape;
+        public VkBool32 residencyStandard2DMultisampleBlockShape;
 
-        [NativeTypeName("VkBool32")]
-        public uint residencyStandard3DBlockShape;
+        public VkBool32 residencyStandard3DBlockShape;
 
-        [NativeTypeName("VkBool32")]
-        public uint residencyAlignedMipSize;
+        public VkBool32 residencyAlignedMipSize;
 
-        [NativeTypeName("VkBool32")]
-        public uint residencyNonResidentStrict;
+        public VkBool32 residencyNonResidentStrict;
     }
 }

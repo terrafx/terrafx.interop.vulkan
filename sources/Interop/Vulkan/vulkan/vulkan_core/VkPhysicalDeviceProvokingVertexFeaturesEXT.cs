@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint provokingVertexLast;
+        public VkBool32 provokingVertexLast;
 
-        [NativeTypeName("VkBool32")]
-        public uint transformFeedbackPreservesProvokingVertex;
+        public VkBool32 transformFeedbackPreservesProvokingVertex;
     }
 }

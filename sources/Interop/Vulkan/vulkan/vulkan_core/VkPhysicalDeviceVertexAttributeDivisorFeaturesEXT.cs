@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint vertexAttributeInstanceRateDivisor;
+        public VkBool32 vertexAttributeInstanceRateDivisor;
 
-        [NativeTypeName("VkBool32")]
-        public uint vertexAttributeInstanceRateZeroDivisor;
+        public VkBool32 vertexAttributeInstanceRateZeroDivisor;
     }
 }

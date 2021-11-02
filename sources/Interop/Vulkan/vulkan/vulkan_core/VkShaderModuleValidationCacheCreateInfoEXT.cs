@@ -12,7 +12,6 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkValidationCacheEXT")]
-        public ulong validationCache;
+        public VkValidationCacheEXT validationCache;
     }
 }

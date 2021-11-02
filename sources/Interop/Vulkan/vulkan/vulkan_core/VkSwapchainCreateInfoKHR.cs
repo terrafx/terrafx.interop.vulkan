@@ -14,8 +14,7 @@ namespace TerraFX.Interop
 
         public VkSwapchainCreateFlagsKHR flags;
 
-        [NativeTypeName("VkSurfaceKHR")]
-        public ulong surface;
+        public VkSurfaceKHR surface;
 
         [NativeTypeName("uint32_t")]
         public uint minImageCount;
@@ -47,10 +46,8 @@ namespace TerraFX.Interop
 
         public VkPresentModeKHR presentMode;
 
-        [NativeTypeName("VkBool32")]
-        public uint clipped;
+        public VkBool32 clipped;
 
-        [NativeTypeName("VkSwapchainKHR")]
-        public ulong oldSwapchain;
+        public VkSwapchainKHR oldSwapchain;
     }
 }

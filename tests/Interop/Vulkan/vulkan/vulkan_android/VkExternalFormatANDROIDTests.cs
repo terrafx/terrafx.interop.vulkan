@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkExternalFormatANDROID" /> struct.</summary>
-    public static unsafe class VkExternalFormatANDROIDTests
+    public static unsafe partial class VkExternalFormatANDROIDTests
     {
         /// <summary>Validates that the <see cref="VkExternalFormatANDROID" /> struct is blittable.</summary>
         [Test]

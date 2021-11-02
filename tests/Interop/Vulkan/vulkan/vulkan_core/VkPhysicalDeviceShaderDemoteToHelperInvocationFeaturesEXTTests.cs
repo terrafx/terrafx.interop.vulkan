@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT" /> struct.</summary>
-    public static unsafe class VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTTests
+    public static unsafe partial class VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTTests
     {
         /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT" /> struct is blittable.</summary>
         [Test]

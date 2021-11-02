@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderFloat16;
+        public VkBool32 shaderFloat16;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderInt8;
+        public VkBool32 shaderInt8;
     }
 }

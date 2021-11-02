@@ -14,13 +14,11 @@ namespace TerraFX.Interop
         [NativeTypeName("VkDeviceSize")]
         public ulong storageTexelBufferOffsetAlignmentBytes;
 
-        [NativeTypeName("VkBool32")]
-        public uint storageTexelBufferOffsetSingleTexelAlignment;
+        public VkBool32 storageTexelBufferOffsetSingleTexelAlignment;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong uniformTexelBufferOffsetAlignmentBytes;
 
-        [NativeTypeName("VkBool32")]
-        public uint uniformTexelBufferOffsetSingleTexelAlignment;
+        public VkBool32 uniformTexelBufferOffsetSingleTexelAlignment;
     }
 }

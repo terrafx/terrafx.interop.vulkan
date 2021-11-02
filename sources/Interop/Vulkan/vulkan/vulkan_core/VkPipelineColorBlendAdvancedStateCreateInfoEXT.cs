@@ -12,11 +12,9 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint srcPremultiplied;
+        public VkBool32 srcPremultiplied;
 
-        [NativeTypeName("VkBool32")]
-        public uint dstPremultiplied;
+        public VkBool32 dstPremultiplied;
 
         public VkBlendOverlapEXT blendOverlap;
     }

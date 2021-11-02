@@ -14,19 +14,14 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint advancedBlendMaxColorAttachments;
 
-        [NativeTypeName("VkBool32")]
-        public uint advancedBlendIndependentBlend;
+        public VkBool32 advancedBlendIndependentBlend;
 
-        [NativeTypeName("VkBool32")]
-        public uint advancedBlendNonPremultipliedSrcColor;
+        public VkBool32 advancedBlendNonPremultipliedSrcColor;
 
-        [NativeTypeName("VkBool32")]
-        public uint advancedBlendNonPremultipliedDstColor;
+        public VkBool32 advancedBlendNonPremultipliedDstColor;
 
-        [NativeTypeName("VkBool32")]
-        public uint advancedBlendCorrelatedOverlap;
+        public VkBool32 advancedBlendCorrelatedOverlap;
 
-        [NativeTypeName("VkBool32")]
-        public uint advancedBlendAllOperations;
+        public VkBool32 advancedBlendAllOperations;
     }
 }

@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong aabbData;
+        public VkBuffer aabbData;
 
         [NativeTypeName("uint32_t")]
         public uint numAABBs;

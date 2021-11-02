@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkWin32KeyedMutexAcquireReleaseInfoNV" /> struct.</summary>
-    public static unsafe class VkWin32KeyedMutexAcquireReleaseInfoNVTests
+    public static unsafe partial class VkWin32KeyedMutexAcquireReleaseInfoNVTests
     {
         /// <summary>Validates that the <see cref="VkWin32KeyedMutexAcquireReleaseInfoNV" /> struct is blittable.</summary>
         [Test]

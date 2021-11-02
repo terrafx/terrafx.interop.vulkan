@@ -12,17 +12,14 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkRenderPass")]
-        public ulong renderPass;
+        public VkRenderPass renderPass;
 
         [NativeTypeName("uint32_t")]
         public uint subpass;
 
-        [NativeTypeName("VkFramebuffer")]
-        public ulong framebuffer;
+        public VkFramebuffer framebuffer;
 
-        [NativeTypeName("VkBool32")]
-        public uint occlusionQueryEnable;
+        public VkBool32 occlusionQueryEnable;
 
         public VkQueryControlFlags queryFlags;
 

@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint variablePointersStorageBuffer;
+        public VkBool32 variablePointersStorageBuffer;
 
-        [NativeTypeName("VkBool32")]
-        public uint variablePointers;
+        public VkBool32 variablePointers;
     }
 }

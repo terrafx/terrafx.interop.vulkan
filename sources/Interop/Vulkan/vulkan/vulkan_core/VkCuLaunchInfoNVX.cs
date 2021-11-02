@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkCuFunctionNVX")]
-        public ulong function;
+        public VkCuFunctionNVX function;
 
         [NativeTypeName("uint32_t")]
         public uint gridDimX;

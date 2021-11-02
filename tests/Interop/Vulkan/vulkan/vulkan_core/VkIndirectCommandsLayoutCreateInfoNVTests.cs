@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkIndirectCommandsLayoutCreateInfoNV" /> struct.</summary>
-    public static unsafe class VkIndirectCommandsLayoutCreateInfoNVTests
+    public static unsafe partial class VkIndirectCommandsLayoutCreateInfoNVTests
     {
         /// <summary>Validates that the <see cref="VkIndirectCommandsLayoutCreateInfoNV" /> struct is blittable.</summary>
         [Test]

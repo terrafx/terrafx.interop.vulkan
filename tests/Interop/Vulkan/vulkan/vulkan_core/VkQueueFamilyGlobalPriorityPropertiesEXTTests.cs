@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkQueueFamilyGlobalPriorityPropertiesEXT" /> struct.</summary>
-    public static unsafe class VkQueueFamilyGlobalPriorityPropertiesEXTTests
+    public static unsafe partial class VkQueueFamilyGlobalPriorityPropertiesEXTTests
     {
         /// <summary>Validates that the <see cref="VkQueueFamilyGlobalPriorityPropertiesEXT" /> struct is blittable.</summary>
         [Test]

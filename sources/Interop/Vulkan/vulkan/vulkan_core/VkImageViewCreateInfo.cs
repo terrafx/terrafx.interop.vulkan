@@ -14,8 +14,7 @@ namespace TerraFX.Interop
 
         public VkImageViewCreateFlags flags;
 
-        [NativeTypeName("VkImage")]
-        public ulong image;
+        public VkImage image;
 
         public VkImageViewType viewType;
 

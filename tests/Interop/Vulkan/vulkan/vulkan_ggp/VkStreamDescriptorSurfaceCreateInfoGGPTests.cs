@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkStreamDescriptorSurfaceCreateInfoGGP" /> struct.</summary>
-    public static unsafe class VkStreamDescriptorSurfaceCreateInfoGGPTests
+    public static unsafe partial class VkStreamDescriptorSurfaceCreateInfoGGPTests
     {
         /// <summary>Validates that the <see cref="VkStreamDescriptorSurfaceCreateInfoGGP" /> struct is blittable.</summary>
         [Test]

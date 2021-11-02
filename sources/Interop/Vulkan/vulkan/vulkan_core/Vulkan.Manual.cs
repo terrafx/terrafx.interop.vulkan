@@ -14,5 +14,8 @@ namespace TerraFX.Interop
         public static uint VK_VERSION_MINOR(uint version) => (version >> 12) & 0x3FF;
 
         public static uint VK_VERSION_PATCH(uint version) => version & 0xFFF;
+
+        [NativeTypeName("#define VK_NULL_HANDLE 0ULL")]
+        public const ulong VK_NULL_HANDLE = 0UL;
     }
 }

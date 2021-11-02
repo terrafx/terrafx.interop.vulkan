@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="StdVideoH265HrdFlags" /> struct.</summary>
-    public static unsafe class StdVideoH265HrdFlagsTests
+    public static unsafe partial class StdVideoH265HrdFlagsTests
     {
         /// <summary>Validates that the <see cref="StdVideoH265HrdFlags" /> struct is blittable.</summary>
         [Test]

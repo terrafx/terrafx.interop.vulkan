@@ -11,10 +11,10 @@ namespace TerraFX.Interop
     public static unsafe partial class Vulkan
     {
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkAcquireXlibDisplayEXT([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("Display *")] IntPtr dpy, [NativeTypeName("VkDisplayKHR")] ulong display);
+        public static extern VkResult vkAcquireXlibDisplayEXT(VkPhysicalDevice physicalDevice, IntPtr dpy, VkDisplayKHR display);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetRandROutputDisplayEXT([NativeTypeName("VkPhysicalDevice")] IntPtr physicalDevice, [NativeTypeName("Display *")] IntPtr dpy, [NativeTypeName("RROutput")] nuint rrOutput, [NativeTypeName("VkDisplayKHR *")] ulong* pDisplay);
+        public static extern VkResult vkGetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, IntPtr dpy, [NativeTypeName("RROutput")] nuint rrOutput, VkDisplayKHR* pDisplay);
 
         [NativeTypeName("#define VK_EXT_acquire_xlib_display 1")]
         public const int VK_EXT_acquire_xlib_display = 1;

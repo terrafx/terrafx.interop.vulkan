@@ -16,6 +16,6 @@ namespace TerraFX.Interop
         public uint attachmentCount;
 
         [NativeTypeName("const VkImageView *")]
-        public ulong* pAttachments;
+        public VkImageView* pAttachments;
     }
 }

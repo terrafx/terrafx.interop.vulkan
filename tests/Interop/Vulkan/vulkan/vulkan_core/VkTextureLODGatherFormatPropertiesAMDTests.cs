@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkTextureLODGatherFormatPropertiesAMD" /> struct.</summary>
-    public static unsafe class VkTextureLODGatherFormatPropertiesAMDTests
+    public static unsafe partial class VkTextureLODGatherFormatPropertiesAMDTests
     {
         /// <summary>Validates that the <see cref="VkTextureLODGatherFormatPropertiesAMD" /> struct is blittable.</summary>
         [Test]

@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkSemaphore")]
-        public ulong semaphore;
+        public VkSemaphore semaphore;
 
         [NativeTypeName("VkExternalSemaphoreHandleTypeFlagBits")]
         public VkExternalSemaphoreHandleTypeFlags handleType;

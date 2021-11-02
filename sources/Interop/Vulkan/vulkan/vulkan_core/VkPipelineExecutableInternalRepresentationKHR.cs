@@ -17,8 +17,7 @@ namespace TerraFX.Interop
         [NativeTypeName("char [256]")]
         public fixed sbyte description[256];
 
-        [NativeTypeName("VkBool32")]
-        public uint isText;
+        public VkBool32 isText;
 
         [NativeTypeName("size_t")]
         public nuint dataSize;

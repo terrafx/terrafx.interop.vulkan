@@ -15,10 +15,8 @@ namespace TerraFX.Interop
 
         public VkResolveModeFlags supportedStencilResolveModes;
 
-        [NativeTypeName("VkBool32")]
-        public uint independentResolveNone;
+        public VkBool32 independentResolveNone;
 
-        [NativeTypeName("VkBool32")]
-        public uint independentResolve;
+        public VkBool32 independentResolve;
     }
 }

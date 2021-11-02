@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint customBorderColors;
+        public VkBool32 customBorderColors;
 
-        [NativeTypeName("VkBool32")]
-        public uint customBorderColorWithoutFormat;
+        public VkBool32 customBorderColorWithoutFormat;
     }
 }

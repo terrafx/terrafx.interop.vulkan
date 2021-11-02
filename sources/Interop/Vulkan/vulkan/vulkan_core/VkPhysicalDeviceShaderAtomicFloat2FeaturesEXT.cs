@@ -11,40 +11,28 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderBufferFloat16Atomics;
+        public VkBool32 shaderBufferFloat16Atomics;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderBufferFloat16AtomicAdd;
+        public VkBool32 shaderBufferFloat16AtomicAdd;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderBufferFloat16AtomicMinMax;
+        public VkBool32 shaderBufferFloat16AtomicMinMax;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderBufferFloat32AtomicMinMax;
+        public VkBool32 shaderBufferFloat32AtomicMinMax;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderBufferFloat64AtomicMinMax;
+        public VkBool32 shaderBufferFloat64AtomicMinMax;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSharedFloat16Atomics;
+        public VkBool32 shaderSharedFloat16Atomics;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSharedFloat16AtomicAdd;
+        public VkBool32 shaderSharedFloat16AtomicAdd;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSharedFloat16AtomicMinMax;
+        public VkBool32 shaderSharedFloat16AtomicMinMax;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSharedFloat32AtomicMinMax;
+        public VkBool32 shaderSharedFloat32AtomicMinMax;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSharedFloat64AtomicMinMax;
+        public VkBool32 shaderSharedFloat64AtomicMinMax;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderImageFloat32AtomicMinMax;
+        public VkBool32 shaderImageFloat32AtomicMinMax;
 
-        [NativeTypeName("VkBool32")]
-        public uint sparseImageFloat32AtomicMinMax;
+        public VkBool32 sparseImageFloat32AtomicMinMax;
     }
 }

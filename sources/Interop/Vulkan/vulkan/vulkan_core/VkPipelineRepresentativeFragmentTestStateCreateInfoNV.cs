@@ -12,7 +12,6 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint representativeFragmentTestEnable;
+        public VkBool32 representativeFragmentTestEnable;
     }
 }

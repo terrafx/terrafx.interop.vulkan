@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkDedicatedAllocationImageCreateInfoNV" /> struct.</summary>
-    public static unsafe class VkDedicatedAllocationImageCreateInfoNVTests
+    public static unsafe partial class VkDedicatedAllocationImageCreateInfoNVTests
     {
         /// <summary>Validates that the <see cref="VkDedicatedAllocationImageCreateInfoNV" /> struct is blittable.</summary>
         [Test]

@@ -7,8 +7,7 @@ namespace TerraFX.Interop
 {
     public unsafe partial struct VkSparseImageMemoryBindInfo
     {
-        [NativeTypeName("VkImage")]
-        public ulong image;
+        public VkImage image;
 
         [NativeTypeName("uint32_t")]
         public uint bindCount;

@@ -26,8 +26,7 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint dstQueueFamilyIndex;
 
-        [NativeTypeName("VkImage")]
-        public ulong image;
+        public VkImage image;
 
         public VkImageSubresourceRange subresourceRange;
     }

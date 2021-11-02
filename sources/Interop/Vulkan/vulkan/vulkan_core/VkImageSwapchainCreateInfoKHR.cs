@@ -12,7 +12,6 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkSwapchainKHR")]
-        public ulong swapchain;
+        public VkSwapchainKHR swapchain;
     }
 }

@@ -22,6 +22,6 @@ namespace TerraFX.Interop
         public uint pipelineCount;
 
         [NativeTypeName("const VkPipeline *")]
-        public ulong* pPipelines;
+        public VkPipeline* pPipelines;
     }
 }

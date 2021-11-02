@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint filterMinmaxSingleComponentFormats;
+        public VkBool32 filterMinmaxSingleComponentFormats;
 
-        [NativeTypeName("VkBool32")]
-        public uint filterMinmaxImageComponentMapping;
+        public VkBool32 filterMinmaxImageComponentMapping;
     }
 }

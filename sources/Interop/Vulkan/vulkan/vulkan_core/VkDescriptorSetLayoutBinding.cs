@@ -18,6 +18,6 @@ namespace TerraFX.Interop
         public VkShaderStageFlags stageFlags;
 
         [NativeTypeName("const VkSampler *")]
-        public ulong* pImmutableSamplers;
+        public VkSampler* pImmutableSamplers;
     }
 }

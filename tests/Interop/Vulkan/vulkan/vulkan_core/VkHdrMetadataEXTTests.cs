@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkHdrMetadataEXT" /> struct.</summary>
-    public static unsafe class VkHdrMetadataEXTTests
+    public static unsafe partial class VkHdrMetadataEXTTests
     {
         /// <summary>Validates that the <see cref="VkHdrMetadataEXT" /> struct is blittable.</summary>
         [Test]

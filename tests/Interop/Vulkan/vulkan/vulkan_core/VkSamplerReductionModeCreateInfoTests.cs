@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkSamplerReductionModeCreateInfo" /> struct.</summary>
-    public static unsafe class VkSamplerReductionModeCreateInfoTests
+    public static unsafe partial class VkSamplerReductionModeCreateInfoTests
     {
         /// <summary>Validates that the <see cref="VkSamplerReductionModeCreateInfo" /> struct is blittable.</summary>
         [Test]

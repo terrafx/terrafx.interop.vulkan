@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkLayerDeviceCreateInfo" /> struct.</summary>
-    public static unsafe class VkLayerDeviceCreateInfoTests
+    public static unsafe partial class VkLayerDeviceCreateInfoTests
     {
         /// <summary>Validates that the <see cref="VkLayerDeviceCreateInfo" /> struct is blittable.</summary>
         [Test]

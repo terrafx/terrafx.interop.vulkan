@@ -15,8 +15,7 @@ namespace TerraFX.Interop
         [NativeTypeName("VkPipelineCoverageToColorStateCreateFlagsNV")]
         public uint flags;
 
-        [NativeTypeName("VkBool32")]
-        public uint coverageToColorEnable;
+        public VkBool32 coverageToColorEnable;
 
         [NativeTypeName("uint32_t")]
         public uint coverageToColorLocation;

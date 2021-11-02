@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkShaderStatisticsInfoAMD" /> struct.</summary>
-    public static unsafe class VkShaderStatisticsInfoAMDTests
+    public static unsafe partial class VkShaderStatisticsInfoAMDTests
     {
         /// <summary>Validates that the <see cref="VkShaderStatisticsInfoAMD" /> struct is blittable.</summary>
         [Test]

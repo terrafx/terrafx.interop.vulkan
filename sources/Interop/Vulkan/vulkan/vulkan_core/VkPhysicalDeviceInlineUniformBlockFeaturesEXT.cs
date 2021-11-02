@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint inlineUniformBlock;
+        public VkBool32 inlineUniformBlock;
 
-        [NativeTypeName("VkBool32")]
-        public uint descriptorBindingInlineUniformBlockUpdateAfterBind;
+        public VkBool32 descriptorBindingInlineUniformBlockUpdateAfterBind;
     }
 }

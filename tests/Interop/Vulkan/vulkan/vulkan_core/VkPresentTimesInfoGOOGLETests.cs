@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPresentTimesInfoGOOGLE" /> struct.</summary>
-    public static unsafe class VkPresentTimesInfoGOOGLETests
+    public static unsafe partial class VkPresentTimesInfoGOOGLETests
     {
         /// <summary>Validates that the <see cref="VkPresentTimesInfoGOOGLE" /> struct is blittable.</summary>
         [Test]

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkSurfaceCapabilitiesFullScreenExclusiveEXT" /> struct.</summary>
-    public static unsafe class VkSurfaceCapabilitiesFullScreenExclusiveEXTTests
+    public static unsafe partial class VkSurfaceCapabilitiesFullScreenExclusiveEXTTests
     {
         /// <summary>Validates that the <see cref="VkSurfaceCapabilitiesFullScreenExclusiveEXT" /> struct is blittable.</summary>
         [Test]

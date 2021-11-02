@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkRefreshCycleDurationGOOGLE" /> struct.</summary>
-    public static unsafe class VkRefreshCycleDurationGOOGLETests
+    public static unsafe partial class VkRefreshCycleDurationGOOGLETests
     {
         /// <summary>Validates that the <see cref="VkRefreshCycleDurationGOOGLE" /> struct is blittable.</summary>
         [Test]

@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint subgroupSizeControl;
+        public VkBool32 subgroupSizeControl;
 
-        [NativeTypeName("VkBool32")]
-        public uint computeFullSubgroups;
+        public VkBool32 computeFullSubgroups;
     }
 }

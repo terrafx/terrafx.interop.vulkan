@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint viewportWScalingEnable;
+        public VkBool32 viewportWScalingEnable;
 
         [NativeTypeName("uint32_t")]
         public uint viewportCount;

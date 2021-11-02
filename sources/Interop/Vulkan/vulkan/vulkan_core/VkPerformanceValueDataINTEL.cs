@@ -22,8 +22,7 @@ namespace TerraFX.Interop
         public float valueFloat;
 
         [FieldOffset(0)]
-        [NativeTypeName("VkBool32")]
-        public uint valueBool;
+        public VkBool32 valueBool;
 
         [FieldOffset(0)]
         [NativeTypeName("const char *")]

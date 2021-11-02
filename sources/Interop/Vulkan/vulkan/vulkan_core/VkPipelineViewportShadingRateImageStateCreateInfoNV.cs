@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint shadingRateImageEnable;
+        public VkBool32 shadingRateImageEnable;
 
         [NativeTypeName("uint32_t")]
         public uint viewportCount;

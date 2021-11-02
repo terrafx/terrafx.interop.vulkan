@@ -17,8 +17,7 @@ namespace TerraFX.Interop
         [NativeTypeName("VkShaderStageFlagBits")]
         public VkShaderStageFlags stage;
 
-        [NativeTypeName("VkShaderModule")]
-        public ulong module;
+        public VkShaderModule module;
 
         [NativeTypeName("const char *")]
         public sbyte* pName;

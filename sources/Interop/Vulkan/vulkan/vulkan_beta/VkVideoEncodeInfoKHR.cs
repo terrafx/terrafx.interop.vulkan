@@ -19,8 +19,7 @@ namespace TerraFX.Interop
 
         public VkExtent2D codedExtent;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong dstBitstreamBuffer;
+        public VkBuffer dstBitstreamBuffer;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong dstBitstreamBufferOffset;

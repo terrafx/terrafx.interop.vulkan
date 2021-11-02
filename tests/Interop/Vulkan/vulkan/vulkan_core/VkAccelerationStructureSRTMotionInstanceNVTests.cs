@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkAccelerationStructureSRTMotionInstanceNV" /> struct.</summary>
-    public static unsafe class VkAccelerationStructureSRTMotionInstanceNVTests
+    public static unsafe partial class VkAccelerationStructureSRTMotionInstanceNVTests
     {
         /// <summary>Validates that the <see cref="VkAccelerationStructureSRTMotionInstanceNV" /> struct is blittable.</summary>
         [Test]

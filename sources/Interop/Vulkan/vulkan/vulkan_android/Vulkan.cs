@@ -11,13 +11,13 @@ namespace TerraFX.Interop
     public static unsafe partial class Vulkan
     {
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateAndroidSurfaceKHR([NativeTypeName("VkInstance")] IntPtr instance, [NativeTypeName("const VkAndroidSurfaceCreateInfoKHR *")] VkAndroidSurfaceCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkSurfaceKHR *")] ulong* pSurface);
+        public static extern VkResult vkCreateAndroidSurfaceKHR(VkInstance instance, [NativeTypeName("const VkAndroidSurfaceCreateInfoKHR *")] VkAndroidSurfaceCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetAndroidHardwareBufferPropertiesANDROID([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const struct AHardwareBuffer *")] IntPtr buffer, VkAndroidHardwareBufferPropertiesANDROID* pProperties);
+        public static extern VkResult vkGetAndroidHardwareBufferPropertiesANDROID(VkDevice device, [NativeTypeName("const struct AHardwareBuffer *")] IntPtr buffer, VkAndroidHardwareBufferPropertiesANDROID* pProperties);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetMemoryAndroidHardwareBufferANDROID([NativeTypeName("VkDevice")] IntPtr device, [NativeTypeName("const VkMemoryGetAndroidHardwareBufferInfoANDROID *")] VkMemoryGetAndroidHardwareBufferInfoANDROID* pInfo, [NativeTypeName("struct AHardwareBuffer **")] IntPtr* pBuffer);
+        public static extern VkResult vkGetMemoryAndroidHardwareBufferANDROID(VkDevice device, [NativeTypeName("const VkMemoryGetAndroidHardwareBufferInfoANDROID *")] VkMemoryGetAndroidHardwareBufferInfoANDROID* pInfo, [NativeTypeName("struct AHardwareBuffer **")] IntPtr* pBuffer);
 
         [NativeTypeName("#define VK_KHR_android_surface 1")]
         public const int VK_KHR_android_surface = 1;

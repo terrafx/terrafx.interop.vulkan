@@ -15,11 +15,9 @@ namespace TerraFX.Interop
         [NativeTypeName("VkPipelineRasterizationStateCreateFlags")]
         public uint flags;
 
-        [NativeTypeName("VkBool32")]
-        public uint depthClampEnable;
+        public VkBool32 depthClampEnable;
 
-        [NativeTypeName("VkBool32")]
-        public uint rasterizerDiscardEnable;
+        public VkBool32 rasterizerDiscardEnable;
 
         public VkPolygonMode polygonMode;
 
@@ -27,8 +25,7 @@ namespace TerraFX.Interop
 
         public VkFrontFace frontFace;
 
-        [NativeTypeName("VkBool32")]
-        public uint depthBiasEnable;
+        public VkBool32 depthBiasEnable;
 
         public float depthBiasConstantFactor;
 

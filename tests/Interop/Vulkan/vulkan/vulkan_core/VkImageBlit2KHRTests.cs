@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkImageBlit2KHR" /> struct.</summary>
-    public static unsafe class VkImageBlit2KHRTests
+    public static unsafe partial class VkImageBlit2KHRTests
     {
         /// <summary>Validates that the <see cref="VkImageBlit2KHR" /> struct is blittable.</summary>
         [Test]

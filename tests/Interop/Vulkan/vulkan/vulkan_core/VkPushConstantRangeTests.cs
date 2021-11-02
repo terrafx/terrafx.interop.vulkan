@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPushConstantRange" /> struct.</summary>
-    public static unsafe class VkPushConstantRangeTests
+    public static unsafe partial class VkPushConstantRangeTests
     {
         /// <summary>Validates that the <see cref="VkPushConstantRange" /> struct is blittable.</summary>
         [Test]

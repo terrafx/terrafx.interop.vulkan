@@ -14,11 +14,9 @@ namespace TerraFX.Interop
 
         public VkPipelineBindPoint pipelineBindPoint;
 
-        [NativeTypeName("VkPipeline")]
-        public ulong pipeline;
+        public VkPipeline pipeline;
 
-        [NativeTypeName("VkIndirectCommandsLayoutNV")]
-        public ulong indirectCommandsLayout;
+        public VkIndirectCommandsLayoutNV indirectCommandsLayout;
 
         [NativeTypeName("uint32_t")]
         public uint streamCount;
@@ -29,8 +27,7 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint sequencesCount;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong preprocessBuffer;
+        public VkBuffer preprocessBuffer;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong preprocessOffset;
@@ -38,14 +35,12 @@ namespace TerraFX.Interop
         [NativeTypeName("VkDeviceSize")]
         public ulong preprocessSize;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong sequencesCountBuffer;
+        public VkBuffer sequencesCountBuffer;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong sequencesCountOffset;
 
-        [NativeTypeName("VkBuffer")]
-        public ulong sequencesIndexBuffer;
+        public VkBuffer sequencesIndexBuffer;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong sequencesIndexOffset;

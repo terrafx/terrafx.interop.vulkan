@@ -11,7 +11,7 @@ namespace TerraFX.Interop
     public static unsafe partial class Vulkan
     {
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateStreamDescriptorSurfaceGGP([NativeTypeName("VkInstance")] IntPtr instance, [NativeTypeName("const VkStreamDescriptorSurfaceCreateInfoGGP *")] VkStreamDescriptorSurfaceCreateInfoGGP* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkSurfaceKHR *")] ulong* pSurface);
+        public static extern VkResult vkCreateStreamDescriptorSurfaceGGP(VkInstance instance, [NativeTypeName("const VkStreamDescriptorSurfaceCreateInfoGGP *")] VkStreamDescriptorSurfaceCreateInfoGGP* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface);
 
         [NativeTypeName("#define VK_GGP_stream_descriptor_surface 1")]
         public const int VK_GGP_stream_descriptor_surface = 1;

@@ -12,17 +12,14 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkSwapchainKHR")]
-        public ulong swapchain;
+        public VkSwapchainKHR swapchain;
 
         [NativeTypeName("uint64_t")]
         public ulong timeout;
 
-        [NativeTypeName("VkSemaphore")]
-        public ulong semaphore;
+        public VkSemaphore semaphore;
 
-        [NativeTypeName("VkFence")]
-        public ulong fence;
+        public VkFence fence;
 
         [NativeTypeName("uint32_t")]
         public uint deviceMask;

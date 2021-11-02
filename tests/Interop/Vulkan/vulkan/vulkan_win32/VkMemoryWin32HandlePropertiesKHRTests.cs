@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkMemoryWin32HandlePropertiesKHR" /> struct.</summary>
-    public static unsafe class VkMemoryWin32HandlePropertiesKHRTests
+    public static unsafe partial class VkMemoryWin32HandlePropertiesKHRTests
     {
         /// <summary>Validates that the <see cref="VkMemoryWin32HandlePropertiesKHR" /> struct is blittable.</summary>
         [Test]

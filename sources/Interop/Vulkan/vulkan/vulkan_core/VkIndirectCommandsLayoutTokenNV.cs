@@ -23,11 +23,9 @@ namespace TerraFX.Interop
         [NativeTypeName("uint32_t")]
         public uint vertexBindingUnit;
 
-        [NativeTypeName("VkBool32")]
-        public uint vertexDynamicStride;
+        public VkBool32 vertexDynamicStride;
 
-        [NativeTypeName("VkPipelineLayout")]
-        public ulong pushconstantPipelineLayout;
+        public VkPipelineLayout pushconstantPipelineLayout;
 
         public VkShaderStageFlags pushconstantShaderStageFlags;
 

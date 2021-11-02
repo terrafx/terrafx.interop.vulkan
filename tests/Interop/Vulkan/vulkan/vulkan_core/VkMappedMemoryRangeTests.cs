@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkMappedMemoryRange" /> struct.</summary>
-    public static unsafe class VkMappedMemoryRangeTests
+    public static unsafe partial class VkMappedMemoryRangeTests
     {
         /// <summary>Validates that the <see cref="VkMappedMemoryRange" /> struct is blittable.</summary>
         [Test]

@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkExternalImageFormatPropertiesNV" /> struct.</summary>
-    public static unsafe class VkExternalImageFormatPropertiesNVTests
+    public static unsafe partial class VkExternalImageFormatPropertiesNVTests
     {
         /// <summary>Validates that the <see cref="VkExternalImageFormatPropertiesNV" /> struct is blittable.</summary>
         [Test]

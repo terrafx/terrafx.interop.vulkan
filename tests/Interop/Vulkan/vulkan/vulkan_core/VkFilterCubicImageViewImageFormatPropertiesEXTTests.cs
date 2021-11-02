@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkFilterCubicImageViewImageFormatPropertiesEXT" /> struct.</summary>
-    public static unsafe class VkFilterCubicImageViewImageFormatPropertiesEXTTests
+    public static unsafe partial class VkFilterCubicImageViewImageFormatPropertiesEXTTests
     {
         /// <summary>Validates that the <see cref="VkFilterCubicImageViewImageFormatPropertiesEXT" /> struct is blittable.</summary>
         [Test]

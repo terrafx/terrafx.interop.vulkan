@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT" /> struct.</summary>
-    public static unsafe class VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXTTests
+    public static unsafe partial class VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXTTests
     {
         /// <summary>Validates that the <see cref="VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT" /> struct is blittable.</summary>
         [Test]

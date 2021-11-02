@@ -7,169 +7,114 @@ namespace TerraFX.Interop
 {
     public partial struct VkPhysicalDeviceFeatures
     {
-        [NativeTypeName("VkBool32")]
-        public uint robustBufferAccess;
+        public VkBool32 robustBufferAccess;
 
-        [NativeTypeName("VkBool32")]
-        public uint fullDrawIndexUint32;
+        public VkBool32 fullDrawIndexUint32;
 
-        [NativeTypeName("VkBool32")]
-        public uint imageCubeArray;
+        public VkBool32 imageCubeArray;
 
-        [NativeTypeName("VkBool32")]
-        public uint independentBlend;
+        public VkBool32 independentBlend;
 
-        [NativeTypeName("VkBool32")]
-        public uint geometryShader;
+        public VkBool32 geometryShader;
 
-        [NativeTypeName("VkBool32")]
-        public uint tessellationShader;
+        public VkBool32 tessellationShader;
 
-        [NativeTypeName("VkBool32")]
-        public uint sampleRateShading;
+        public VkBool32 sampleRateShading;
 
-        [NativeTypeName("VkBool32")]
-        public uint dualSrcBlend;
+        public VkBool32 dualSrcBlend;
 
-        [NativeTypeName("VkBool32")]
-        public uint logicOp;
+        public VkBool32 logicOp;
 
-        [NativeTypeName("VkBool32")]
-        public uint multiDrawIndirect;
+        public VkBool32 multiDrawIndirect;
 
-        [NativeTypeName("VkBool32")]
-        public uint drawIndirectFirstInstance;
+        public VkBool32 drawIndirectFirstInstance;
 
-        [NativeTypeName("VkBool32")]
-        public uint depthClamp;
+        public VkBool32 depthClamp;
 
-        [NativeTypeName("VkBool32")]
-        public uint depthBiasClamp;
+        public VkBool32 depthBiasClamp;
 
-        [NativeTypeName("VkBool32")]
-        public uint fillModeNonSolid;
+        public VkBool32 fillModeNonSolid;
 
-        [NativeTypeName("VkBool32")]
-        public uint depthBounds;
+        public VkBool32 depthBounds;
 
-        [NativeTypeName("VkBool32")]
-        public uint wideLines;
+        public VkBool32 wideLines;
 
-        [NativeTypeName("VkBool32")]
-        public uint largePoints;
+        public VkBool32 largePoints;
 
-        [NativeTypeName("VkBool32")]
-        public uint alphaToOne;
+        public VkBool32 alphaToOne;
 
-        [NativeTypeName("VkBool32")]
-        public uint multiViewport;
+        public VkBool32 multiViewport;
 
-        [NativeTypeName("VkBool32")]
-        public uint samplerAnisotropy;
+        public VkBool32 samplerAnisotropy;
 
-        [NativeTypeName("VkBool32")]
-        public uint textureCompressionETC2;
+        public VkBool32 textureCompressionETC2;
 
-        [NativeTypeName("VkBool32")]
-        public uint textureCompressionASTC_LDR;
+        public VkBool32 textureCompressionASTC_LDR;
 
-        [NativeTypeName("VkBool32")]
-        public uint textureCompressionBC;
+        public VkBool32 textureCompressionBC;
 
-        [NativeTypeName("VkBool32")]
-        public uint occlusionQueryPrecise;
+        public VkBool32 occlusionQueryPrecise;
 
-        [NativeTypeName("VkBool32")]
-        public uint pipelineStatisticsQuery;
+        public VkBool32 pipelineStatisticsQuery;
 
-        [NativeTypeName("VkBool32")]
-        public uint vertexPipelineStoresAndAtomics;
+        public VkBool32 vertexPipelineStoresAndAtomics;
 
-        [NativeTypeName("VkBool32")]
-        public uint fragmentStoresAndAtomics;
+        public VkBool32 fragmentStoresAndAtomics;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderTessellationAndGeometryPointSize;
+        public VkBool32 shaderTessellationAndGeometryPointSize;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderImageGatherExtended;
+        public VkBool32 shaderImageGatherExtended;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderStorageImageExtendedFormats;
+        public VkBool32 shaderStorageImageExtendedFormats;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderStorageImageMultisample;
+        public VkBool32 shaderStorageImageMultisample;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderStorageImageReadWithoutFormat;
+        public VkBool32 shaderStorageImageReadWithoutFormat;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderStorageImageWriteWithoutFormat;
+        public VkBool32 shaderStorageImageWriteWithoutFormat;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderUniformBufferArrayDynamicIndexing;
+        public VkBool32 shaderUniformBufferArrayDynamicIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSampledImageArrayDynamicIndexing;
+        public VkBool32 shaderSampledImageArrayDynamicIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderStorageBufferArrayDynamicIndexing;
+        public VkBool32 shaderStorageBufferArrayDynamicIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderStorageImageArrayDynamicIndexing;
+        public VkBool32 shaderStorageImageArrayDynamicIndexing;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderClipDistance;
+        public VkBool32 shaderClipDistance;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderCullDistance;
+        public VkBool32 shaderCullDistance;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderFloat64;
+        public VkBool32 shaderFloat64;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderInt64;
+        public VkBool32 shaderInt64;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderInt16;
+        public VkBool32 shaderInt16;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderResourceResidency;
+        public VkBool32 shaderResourceResidency;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderResourceMinLod;
+        public VkBool32 shaderResourceMinLod;
 
-        [NativeTypeName("VkBool32")]
-        public uint sparseBinding;
+        public VkBool32 sparseBinding;
 
-        [NativeTypeName("VkBool32")]
-        public uint sparseResidencyBuffer;
+        public VkBool32 sparseResidencyBuffer;
 
-        [NativeTypeName("VkBool32")]
-        public uint sparseResidencyImage2D;
+        public VkBool32 sparseResidencyImage2D;
 
-        [NativeTypeName("VkBool32")]
-        public uint sparseResidencyImage3D;
+        public VkBool32 sparseResidencyImage3D;
 
-        [NativeTypeName("VkBool32")]
-        public uint sparseResidency2Samples;
+        public VkBool32 sparseResidency2Samples;
 
-        [NativeTypeName("VkBool32")]
-        public uint sparseResidency4Samples;
+        public VkBool32 sparseResidency4Samples;
 
-        [NativeTypeName("VkBool32")]
-        public uint sparseResidency8Samples;
+        public VkBool32 sparseResidency8Samples;
 
-        [NativeTypeName("VkBool32")]
-        public uint sparseResidency16Samples;
+        public VkBool32 sparseResidency16Samples;
 
-        [NativeTypeName("VkBool32")]
-        public uint sparseResidencyAliased;
+        public VkBool32 sparseResidencyAliased;
 
-        [NativeTypeName("VkBool32")]
-        public uint variableMultisampleRate;
+        public VkBool32 variableMultisampleRate;
 
-        [NativeTypeName("VkBool32")]
-        public uint inheritedQueries;
+        public VkBool32 inheritedQueries;
     }
 }

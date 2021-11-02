@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint conditionalRendering;
+        public VkBool32 conditionalRendering;
 
-        [NativeTypeName("VkBool32")]
-        public uint inheritedConditionalRendering;
+        public VkBool32 inheritedConditionalRendering;
     }
 }

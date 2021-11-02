@@ -11,7 +11,6 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint cornerSampledImage;
+        public VkBool32 cornerSampledImage;
     }
 }

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkFramebufferAttachmentImageInfo" /> struct.</summary>
-    public static unsafe class VkFramebufferAttachmentImageInfoTests
+    public static unsafe partial class VkFramebufferAttachmentImageInfoTests
     {
         /// <summary>Validates that the <see cref="VkFramebufferAttachmentImageInfo" /> struct is blittable.</summary>
         [Test]

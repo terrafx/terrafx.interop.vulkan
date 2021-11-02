@@ -12,13 +12,12 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkDescriptorPool")]
-        public ulong descriptorPool;
+        public VkDescriptorPool descriptorPool;
 
         [NativeTypeName("uint32_t")]
         public uint descriptorSetCount;
 
         [NativeTypeName("const VkDescriptorSetLayout *")]
-        public ulong* pSetLayouts;
+        public VkDescriptorSetLayout* pSetLayouts;
     }
 }

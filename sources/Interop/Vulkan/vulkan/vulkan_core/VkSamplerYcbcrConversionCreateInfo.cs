@@ -26,7 +26,6 @@ namespace TerraFX.Interop
 
         public VkFilter chromaFilter;
 
-        [NativeTypeName("VkBool32")]
-        public uint forceExplicitReconstruction;
+        public VkBool32 forceExplicitReconstruction;
     }
 }

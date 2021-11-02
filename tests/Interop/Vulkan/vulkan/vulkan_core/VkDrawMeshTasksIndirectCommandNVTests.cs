@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkDrawMeshTasksIndirectCommandNV" /> struct.</summary>
-    public static unsafe class VkDrawMeshTasksIndirectCommandNVTests
+    public static unsafe partial class VkDrawMeshTasksIndirectCommandNVTests
     {
         /// <summary>Validates that the <see cref="VkDrawMeshTasksIndirectCommandNV" /> struct is blittable.</summary>
         [Test]

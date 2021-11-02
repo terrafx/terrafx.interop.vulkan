@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkSpecializationInfo" /> struct.</summary>
-    public static unsafe class VkSpecializationInfoTests
+    public static unsafe partial class VkSpecializationInfoTests
     {
         /// <summary>Validates that the <see cref="VkSpecializationInfo" /> struct is blittable.</summary>
         [Test]

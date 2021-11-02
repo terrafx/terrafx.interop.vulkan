@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkStencilOpState" /> struct.</summary>
-    public static unsafe class VkStencilOpStateTests
+    public static unsafe partial class VkStencilOpStateTests
     {
         /// <summary>Validates that the <see cref="VkStencilOpState" /> struct is blittable.</summary>
         [Test]

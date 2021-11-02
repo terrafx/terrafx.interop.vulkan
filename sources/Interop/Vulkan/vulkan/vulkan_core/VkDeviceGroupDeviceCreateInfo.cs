@@ -3,8 +3,6 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
 // Original source is Copyright © 2015-2021 The Khronos Group Inc.
 
-using System;
-
 namespace TerraFX.Interop
 {
     public unsafe partial struct VkDeviceGroupDeviceCreateInfo
@@ -18,6 +16,6 @@ namespace TerraFX.Interop
         public uint physicalDeviceCount;
 
         [NativeTypeName("const VkPhysicalDevice *")]
-        public IntPtr* pPhysicalDevices;
+        public VkPhysicalDevice* pPhysicalDevices;
     }
 }

@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderBufferInt64Atomics;
+        public VkBool32 shaderBufferInt64Atomics;
 
-        [NativeTypeName("VkBool32")]
-        public uint shaderSharedInt64Atomics;
+        public VkBool32 shaderSharedInt64Atomics;
     }
 }

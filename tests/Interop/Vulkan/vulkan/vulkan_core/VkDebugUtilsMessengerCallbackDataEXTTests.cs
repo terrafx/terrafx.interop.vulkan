@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkDebugUtilsMessengerCallbackDataEXT" /> struct.</summary>
-    public static unsafe class VkDebugUtilsMessengerCallbackDataEXTTests
+    public static unsafe partial class VkDebugUtilsMessengerCallbackDataEXTTests
     {
         /// <summary>Validates that the <see cref="VkDebugUtilsMessengerCallbackDataEXT" /> struct is blittable.</summary>
         [Test]

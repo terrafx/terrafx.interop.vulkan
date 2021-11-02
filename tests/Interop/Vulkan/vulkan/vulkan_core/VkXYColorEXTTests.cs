@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 namespace TerraFX.Interop.UnitTests
 {
     /// <summary>Provides validation of the <see cref="VkXYColorEXT" /> struct.</summary>
-    public static unsafe class VkXYColorEXTTests
+    public static unsafe partial class VkXYColorEXTTests
     {
         /// <summary>Validates that the <see cref="VkXYColorEXT" /> struct is blittable.</summary>
         [Test]

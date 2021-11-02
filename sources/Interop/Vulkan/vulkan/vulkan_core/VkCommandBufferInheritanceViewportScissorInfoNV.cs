@@ -12,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint viewportScissor2D;
+        public VkBool32 viewportScissor2D;
 
         [NativeTypeName("uint32_t")]
         public uint viewportDepthCount;

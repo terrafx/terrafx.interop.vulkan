@@ -16,7 +16,7 @@ namespace TerraFX.Interop
         public uint acquireCount;
 
         [NativeTypeName("const VkDeviceMemory *")]
-        public ulong* pAcquireSyncs;
+        public VkDeviceMemory* pAcquireSyncs;
 
         [NativeTypeName("const uint64_t *")]
         public ulong* pAcquireKeys;
@@ -28,7 +28,7 @@ namespace TerraFX.Interop
         public uint releaseCount;
 
         [NativeTypeName("const VkDeviceMemory *")]
-        public ulong* pReleaseSyncs;
+        public VkDeviceMemory* pReleaseSyncs;
 
         [NativeTypeName("const uint64_t *")]
         public ulong* pReleaseKeys;

@@ -7,8 +7,7 @@ namespace TerraFX.Interop
 {
     public unsafe partial struct VkSparseBufferMemoryBindInfo
     {
-        [NativeTypeName("VkBuffer")]
-        public ulong buffer;
+        public VkBuffer buffer;
 
         [NativeTypeName("uint32_t")]
         public uint bindCount;

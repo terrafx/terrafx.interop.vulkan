@@ -3,8 +3,6 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
 // Original source is Copyright © 2015-2021 The Khronos Group Inc.
 
-using System;
-
 namespace TerraFX.Interop
 {
     public unsafe partial struct VkCommandBufferSubmitInfoKHR
@@ -14,8 +12,7 @@ namespace TerraFX.Interop
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkCommandBuffer")]
-        public IntPtr commandBuffer;
+        public VkCommandBuffer commandBuffer;
 
         [NativeTypeName("uint32_t")]
         public uint deviceMask;

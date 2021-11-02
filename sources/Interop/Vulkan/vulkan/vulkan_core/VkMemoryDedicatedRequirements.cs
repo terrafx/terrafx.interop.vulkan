@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint prefersDedicatedAllocation;
+        public VkBool32 prefersDedicatedAllocation;
 
-        [NativeTypeName("VkBool32")]
-        public uint requiresDedicatedAllocation;
+        public VkBool32 requiresDedicatedAllocation;
     }
 }

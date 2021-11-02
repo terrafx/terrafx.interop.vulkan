@@ -3,8 +3,6 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
 // Original source is Copyright © 2015-2021 The Khronos Group Inc.
 
-using System;
-
 namespace TerraFX.Interop
 {
     public unsafe partial struct VkSubmitInfo
@@ -18,7 +16,7 @@ namespace TerraFX.Interop
         public uint waitSemaphoreCount;
 
         [NativeTypeName("const VkSemaphore *")]
-        public ulong* pWaitSemaphores;
+        public VkSemaphore* pWaitSemaphores;
 
         [NativeTypeName("const VkPipelineStageFlags *")]
         public VkPipelineStageFlags* pWaitDstStageMask;
@@ -27,12 +25,12 @@ namespace TerraFX.Interop
         public uint commandBufferCount;
 
         [NativeTypeName("const VkCommandBuffer *")]
-        public IntPtr* pCommandBuffers;
+        public VkCommandBuffer* pCommandBuffers;
 
         [NativeTypeName("uint32_t")]
         public uint signalSemaphoreCount;
 
         [NativeTypeName("const VkSemaphore *")]
-        public ulong* pSignalSemaphores;
+        public VkSemaphore* pSignalSemaphores;
     }
 }

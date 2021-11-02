@@ -13,8 +13,7 @@ namespace TerraFX.Interop
         [NativeTypeName("VkDeviceSize")]
         public ulong size;
 
-        [NativeTypeName("VkDeviceMemory")]
-        public ulong memory;
+        public VkDeviceMemory memory;
 
         [NativeTypeName("VkDeviceSize")]
         public ulong memoryOffset;

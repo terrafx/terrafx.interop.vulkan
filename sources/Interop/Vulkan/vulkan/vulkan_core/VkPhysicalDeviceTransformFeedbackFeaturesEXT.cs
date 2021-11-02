@@ -11,10 +11,8 @@ namespace TerraFX.Interop
 
         public void* pNext;
 
-        [NativeTypeName("VkBool32")]
-        public uint transformFeedback;
+        public VkBool32 transformFeedback;
 
-        [NativeTypeName("VkBool32")]
-        public uint geometryStreams;
+        public VkBool32 geometryStreams;
     }
 }
