@@ -1,4 +1,4 @@
-@../../remap-handles.rsp
-@../../remap-other.rsp
-@../../remap-transparent.rsp
-@../../remap-types.rsp
+@../../../remap-handles.rsp
+@../../../remap-other.rsp
+@../../../remap-transparent.rsp
+@../../../remap-types.rsp

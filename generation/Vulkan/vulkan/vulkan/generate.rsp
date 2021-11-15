@@ -1,0 +1,16 @@
+@../../../settings.rsp
+@../../../remap.rsp
+--exclude
+VULKAN_H_
+--file
+vulkan-vulkan.h
+--methodClassName
+Vulkan
+--namespace
+TerraFX.Interop.Vulkan
+--output
+../../../../sources/Interop/Vulkan/Vulkan/vulkan/vulkan
+--test-output
+../../../../tests/Interop/Vulkan/Vulkan/vulkan/vulkan
+--traverse
+C:/VulkanSDK/1.2.189.2/Include/vulkan/vulkan.h

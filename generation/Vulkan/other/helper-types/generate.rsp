@@ -1,0 +1,14 @@
+@../../../settings.rsp
+@../../../remap.rsp
+--config
+generate-helper-types
+--file
+other-helper-types.h
+--methodClassName
+Vulkan
+--namespace
+TerraFX.Interop.Vulkan
+--output
+../../../../sources/Interop/Vulkan/Vulkan/other/helper-types
+--test-output
+../../../../tests/Interop/Vulkan/Vulkan/other/helper-types

@@ -1,0 +1,14 @@
+@../../../settings.rsp
+@../../../remap.rsp
+--file
+vulkan-vk_icd.h
+--methodClassName
+Vulkan
+--namespace
+TerraFX.Interop.Vulkan
+--output
+../../../../sources/Interop/Vulkan/Vulkan/vulkan/vk_icd
+--test-output
+../../../../tests/Interop/Vulkan/Vulkan/vulkan/vk_icd
+--traverse
+C:/VulkanSDK/1.2.189.2/Include/vulkan/vk_icd.h

@@ -1,0 +1,16 @@
+@../../../settings.rsp
+@../../../remap.rsp
+--exclude
+VULKAN_DIRECTFB_H_
+--file
+vulkan-vulkan_directfb.h
+--methodClassName
+Vulkan
+--namespace
+TerraFX.Interop.Vulkan
+--output
+../../../../sources/Interop/Vulkan/Vulkan/vulkan/vulkan_directfb
+--test-output
+../../../../tests/Interop/Vulkan/Vulkan/vulkan/vulkan_directfb
+--traverse
+C:/VulkanSDK/1.2.189.2/Include/vulkan/vulkan_directfb.h

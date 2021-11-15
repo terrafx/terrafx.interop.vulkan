@@ -1,0 +1,14 @@
+@../../../settings.rsp
+@../../../remap.rsp
+--file
+vk_video-vulkan_video_codec_h264std_encode.h
+--methodClassName
+Vulkan
+--namespace
+TerraFX.Interop.Vulkan
+--output
+../../../../sources/Interop/Vulkan/Vulkan/vk_video/vulkan_video_codec_h264std_encode
+--test-output
+../../../../tests/Interop/Vulkan/Vulkan/vk_video/vulkan_video_codec_h264std_encode
+--traverse
+C:/VulkanSDK/1.2.189.2/Include/vk_video/vulkan_video_codec_h264std_encode.h

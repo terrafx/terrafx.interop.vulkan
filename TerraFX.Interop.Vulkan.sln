@@ -71,141 +71,145 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{48E1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "generation", "generation", "{7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}"
 	ProjectSection(SolutionItems) = preProject
-		generation\remap.rsp = generation\remap.rsp
-		generation\settings.rsp = generation\settings.rsp
+		generation\Vulkan\remap-handles.rsp = generation\Vulkan\remap-handles.rsp
+		generation\Vulkan\remap-other.rsp = generation\Vulkan\remap-other.rsp
+		generation\Vulkan\remap-transparent.rsp = generation\Vulkan\remap-transparent.rsp
+		generation\Vulkan\remap-types.rsp = generation\Vulkan\remap-types.rsp
+		generation\Vulkan\remap.rsp = generation\Vulkan\remap.rsp
+		generation\Vulkan\settings.rsp = generation\Vulkan\settings.rsp
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vk_icd", "vk_icd", "{5C8448A5-FFD6-4E71-BD87-F22279A5EFE4}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vk_icd\generate.rsp = generation\vulkan\vk_icd\generate.rsp
-		generation\vulkan\vk_icd\header.txt = generation\vulkan\vk_icd\header.txt
-		generation\vulkan\vk_icd\vulkan-vk_icd.h = generation\vulkan\vk_icd\vulkan-vk_icd.h
+		generation\Vulkan\vulkan\vk_icd\generate.rsp = generation\Vulkan\vulkan\vk_icd\generate.rsp
+		generation\Vulkan\vulkan\vk_icd\header.txt = generation\Vulkan\vulkan\vk_icd\header.txt
+		generation\Vulkan\vulkan\vk_icd\vulkan-vk_icd.h = generation\Vulkan\vulkan\vk_icd\vulkan-vk_icd.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vk_layer", "vk_layer", "{3B55A37B-0519-40BC-9338-1483B0C13AD2}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vk_layer\generate.rsp = generation\vulkan\vk_layer\generate.rsp
-		generation\vulkan\vk_layer\header.txt = generation\vulkan\vk_layer\header.txt
-		generation\vulkan\vk_layer\vulkan-vk_layer.h = generation\vulkan\vk_layer\vulkan-vk_layer.h
+		generation\Vulkan\vulkan\vk_layer\generate.rsp = generation\Vulkan\vulkan\vk_layer\generate.rsp
+		generation\Vulkan\vulkan\vk_layer\header.txt = generation\Vulkan\vulkan\vk_layer\header.txt
+		generation\Vulkan\vulkan\vk_layer\vulkan-vk_layer.h = generation\Vulkan\vulkan\vk_layer\vulkan-vk_layer.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_android", "vulkan_android", "{AE1C8774-7178-4627-99DA-8C5109C29499}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_android\generate.rsp = generation\vulkan\vulkan_android\generate.rsp
-		generation\vulkan\vulkan_android\header.txt = generation\vulkan\vulkan_android\header.txt
-		generation\vulkan\vulkan_android\vulkan-vulkan_android.h = generation\vulkan\vulkan_android\vulkan-vulkan_android.h
+		generation\Vulkan\vulkan\vulkan_android\generate.rsp = generation\Vulkan\vulkan\vulkan_android\generate.rsp
+		generation\Vulkan\vulkan\vulkan_android\header.txt = generation\Vulkan\vulkan\vulkan_android\header.txt
+		generation\Vulkan\vulkan\vulkan_android\vulkan-vulkan_android.h = generation\Vulkan\vulkan\vulkan_android\vulkan-vulkan_android.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_core", "vulkan_core", "{356D5A76-2073-4838-BC96-5A86072E84CF}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_core\generate.rsp = generation\vulkan\vulkan_core\generate.rsp
-		generation\vulkan\vulkan_core\header.txt = generation\vulkan\vulkan_core\header.txt
-		generation\vulkan\vulkan_core\vulkan-vulkan_core.h = generation\vulkan\vulkan_core\vulkan-vulkan_core.h
+		generation\Vulkan\vulkan\vulkan_core\generate.rsp = generation\Vulkan\vulkan\vulkan_core\generate.rsp
+		generation\Vulkan\vulkan\vulkan_core\header.txt = generation\Vulkan\vulkan\vulkan_core\header.txt
+		generation\Vulkan\vulkan\vulkan_core\vulkan-vulkan_core.h = generation\Vulkan\vulkan\vulkan_core\vulkan-vulkan_core.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_fuchsia", "vulkan_fuchsia", "{686211F7-8AEB-45EA-83E6-3BAC23CE1FC0}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_fuchsia\generate.rsp = generation\vulkan\vulkan_fuchsia\generate.rsp
-		generation\vulkan\vulkan_fuchsia\header.txt = generation\vulkan\vulkan_fuchsia\header.txt
-		generation\vulkan\vulkan_fuchsia\vulkan-vulkan_fuchsia.h = generation\vulkan\vulkan_fuchsia\vulkan-vulkan_fuchsia.h
+		generation\Vulkan\vulkan\vulkan_fuchsia\generate.rsp = generation\Vulkan\vulkan\vulkan_fuchsia\generate.rsp
+		generation\Vulkan\vulkan\vulkan_fuchsia\header.txt = generation\Vulkan\vulkan\vulkan_fuchsia\header.txt
+		generation\Vulkan\vulkan\vulkan_fuchsia\vulkan-vulkan_fuchsia.h = generation\Vulkan\vulkan\vulkan_fuchsia\vulkan-vulkan_fuchsia.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_ios", "vulkan_ios", "{2551C4D8-775C-4A75-A5BB-5528530D55B4}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_ios\generate.rsp = generation\vulkan\vulkan_ios\generate.rsp
-		generation\vulkan\vulkan_ios\header.txt = generation\vulkan\vulkan_ios\header.txt
-		generation\vulkan\vulkan_ios\vulkan-vulkan_ios.h = generation\vulkan\vulkan_ios\vulkan-vulkan_ios.h
+		generation\Vulkan\vulkan\vulkan_ios\generate.rsp = generation\Vulkan\vulkan\vulkan_ios\generate.rsp
+		generation\Vulkan\vulkan\vulkan_ios\header.txt = generation\Vulkan\vulkan\vulkan_ios\header.txt
+		generation\Vulkan\vulkan\vulkan_ios\vulkan-vulkan_ios.h = generation\Vulkan\vulkan\vulkan_ios\vulkan-vulkan_ios.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_macos", "vulkan_macos", "{68AB09B3-9C88-45FB-A8BF-693C15A8DD28}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_macos\generate.rsp = generation\vulkan\vulkan_macos\generate.rsp
-		generation\vulkan\vulkan_macos\header.txt = generation\vulkan\vulkan_macos\header.txt
-		generation\vulkan\vulkan_macos\vulkan-vulkan_macos.h = generation\vulkan\vulkan_macos\vulkan-vulkan_macos.h
+		generation\Vulkan\vulkan\vulkan_macos\generate.rsp = generation\Vulkan\vulkan\vulkan_macos\generate.rsp
+		generation\Vulkan\vulkan\vulkan_macos\header.txt = generation\Vulkan\vulkan\vulkan_macos\header.txt
+		generation\Vulkan\vulkan\vulkan_macos\vulkan-vulkan_macos.h = generation\Vulkan\vulkan\vulkan_macos\vulkan-vulkan_macos.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_metal", "vulkan_metal", "{5D60FBC6-5D94-480C-9627-E9D68CE843EF}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_metal\generate.rsp = generation\vulkan\vulkan_metal\generate.rsp
-		generation\vulkan\vulkan_metal\header.txt = generation\vulkan\vulkan_metal\header.txt
-		generation\vulkan\vulkan_metal\vulkan-vulkan_metal.h = generation\vulkan\vulkan_metal\vulkan-vulkan_metal.h
+		generation\Vulkan\vulkan\vulkan_metal\generate.rsp = generation\Vulkan\vulkan\vulkan_metal\generate.rsp
+		generation\Vulkan\vulkan\vulkan_metal\header.txt = generation\Vulkan\vulkan\vulkan_metal\header.txt
+		generation\Vulkan\vulkan\vulkan_metal\vulkan-vulkan_metal.h = generation\Vulkan\vulkan\vulkan_metal\vulkan-vulkan_metal.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_vi", "vulkan_vi", "{111DC295-53D5-409C-B7E9-8C488196FC72}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_vi\generate.rsp = generation\vulkan\vulkan_vi\generate.rsp
-		generation\vulkan\vulkan_vi\header.txt = generation\vulkan\vulkan_vi\header.txt
-		generation\vulkan\vulkan_vi\vulkan-vulkan_vi.h = generation\vulkan\vulkan_vi\vulkan-vulkan_vi.h
+		generation\Vulkan\vulkan\vulkan_vi\generate.rsp = generation\Vulkan\vulkan\vulkan_vi\generate.rsp
+		generation\Vulkan\vulkan\vulkan_vi\header.txt = generation\Vulkan\vulkan\vulkan_vi\header.txt
+		generation\Vulkan\vulkan\vulkan_vi\vulkan-vulkan_vi.h = generation\Vulkan\vulkan\vulkan_vi\vulkan-vulkan_vi.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_wayland", "vulkan_wayland", "{BBE2D0C0-5813-4085-B0A5-B5442C165316}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_wayland\generate.rsp = generation\vulkan\vulkan_wayland\generate.rsp
-		generation\vulkan\vulkan_wayland\header.txt = generation\vulkan\vulkan_wayland\header.txt
-		generation\vulkan\vulkan_wayland\vulkan-vulkan_wayland.h = generation\vulkan\vulkan_wayland\vulkan-vulkan_wayland.h
+		generation\Vulkan\vulkan\vulkan_wayland\generate.rsp = generation\Vulkan\vulkan\vulkan_wayland\generate.rsp
+		generation\Vulkan\vulkan\vulkan_wayland\header.txt = generation\Vulkan\vulkan\vulkan_wayland\header.txt
+		generation\Vulkan\vulkan\vulkan_wayland\vulkan-vulkan_wayland.h = generation\Vulkan\vulkan\vulkan_wayland\vulkan-vulkan_wayland.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_win32", "vulkan_win32", "{0D57A385-E69C-4F88-910B-DD346172C9EE}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_win32\generate.rsp = generation\vulkan\vulkan_win32\generate.rsp
-		generation\vulkan\vulkan_win32\header.txt = generation\vulkan\vulkan_win32\header.txt
-		generation\vulkan\vulkan_win32\vulkan-vulkan_win32.h = generation\vulkan\vulkan_win32\vulkan-vulkan_win32.h
+		generation\Vulkan\vulkan\vulkan_win32\generate.rsp = generation\Vulkan\vulkan\vulkan_win32\generate.rsp
+		generation\Vulkan\vulkan\vulkan_win32\header.txt = generation\Vulkan\vulkan\vulkan_win32\header.txt
+		generation\Vulkan\vulkan\vulkan_win32\vulkan-vulkan_win32.h = generation\Vulkan\vulkan\vulkan_win32\vulkan-vulkan_win32.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_xlib", "vulkan_xlib", "{14012392-945B-4E64-94FF-A043FE035F0B}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_xlib\generate.rsp = generation\vulkan\vulkan_xlib\generate.rsp
-		generation\vulkan\vulkan_xlib\header.txt = generation\vulkan\vulkan_xlib\header.txt
-		generation\vulkan\vulkan_xlib\vulkan-vulkan_xlib.h = generation\vulkan\vulkan_xlib\vulkan-vulkan_xlib.h
+		generation\Vulkan\vulkan\vulkan_xlib\generate.rsp = generation\Vulkan\vulkan\vulkan_xlib\generate.rsp
+		generation\Vulkan\vulkan\vulkan_xlib\header.txt = generation\Vulkan\vulkan\vulkan_xlib\header.txt
+		generation\Vulkan\vulkan\vulkan_xlib\vulkan-vulkan_xlib.h = generation\Vulkan\vulkan\vulkan_xlib\vulkan-vulkan_xlib.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_xcb", "vulkan_xcb", "{AFB2FD31-9D96-49AE-BFA3-A1A3150AE386}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_xcb\generate.rsp = generation\vulkan\vulkan_xcb\generate.rsp
-		generation\vulkan\vulkan_xcb\header.txt = generation\vulkan\vulkan_xcb\header.txt
-		generation\vulkan\vulkan_xcb\vulkan-vulkan_xcb.h = generation\vulkan\vulkan_xcb\vulkan-vulkan_xcb.h
+		generation\Vulkan\vulkan\vulkan_xcb\generate.rsp = generation\Vulkan\vulkan\vulkan_xcb\generate.rsp
+		generation\Vulkan\vulkan\vulkan_xcb\header.txt = generation\Vulkan\vulkan\vulkan_xcb\header.txt
+		generation\Vulkan\vulkan\vulkan_xcb\vulkan-vulkan_xcb.h = generation\Vulkan\vulkan\vulkan_xcb\vulkan-vulkan_xcb.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_xlib_xrandr", "vulkan_xlib_xrandr", "{CE39443C-CC77-4C5C-A90C-DED73C9F7C61}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_xlib_xrandr\generate.rsp = generation\vulkan\vulkan_xlib_xrandr\generate.rsp
-		generation\vulkan\vulkan_xlib_xrandr\header.txt = generation\vulkan\vulkan_xlib_xrandr\header.txt
-		generation\vulkan\vulkan_xlib_xrandr\vulkan-vulkan_xlib_xrandr.h = generation\vulkan\vulkan_xlib_xrandr\vulkan-vulkan_xlib_xrandr.h
+		generation\Vulkan\vulkan\vulkan_xlib_xrandr\generate.rsp = generation\Vulkan\vulkan\vulkan_xlib_xrandr\generate.rsp
+		generation\Vulkan\vulkan\vulkan_xlib_xrandr\header.txt = generation\Vulkan\vulkan\vulkan_xlib_xrandr\header.txt
+		generation\Vulkan\vulkan\vulkan_xlib_xrandr\vulkan-vulkan_xlib_xrandr.h = generation\Vulkan\vulkan\vulkan_xlib_xrandr\vulkan-vulkan_xlib_xrandr.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vk_platform", "vk_platform", "{5D5E3163-5BDB-4E6B-998D-4C1F5790D600}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vk_platform\generate.rsp = generation\vulkan\vk_platform\generate.rsp
-		generation\vulkan\vk_platform\header.txt = generation\vulkan\vk_platform\header.txt
-		generation\vulkan\vk_platform\vulkan-vk_platform.h = generation\vulkan\vk_platform\vulkan-vk_platform.h
+		generation\Vulkan\vulkan\vk_platform\generate.rsp = generation\Vulkan\vulkan\vk_platform\generate.rsp
+		generation\Vulkan\vulkan\vk_platform\header.txt = generation\Vulkan\vulkan\vk_platform\header.txt
+		generation\Vulkan\vulkan\vk_platform\vulkan-vk_platform.h = generation\Vulkan\vulkan\vk_platform\vulkan-vk_platform.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vk_sdk_platform", "vk_sdk_platform", "{728DCD9A-AF3B-40C2-A3E6-02AB8C40D5CC}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vk_sdk_platform\generate.rsp = generation\vulkan\vk_sdk_platform\generate.rsp
-		generation\vulkan\vk_sdk_platform\header.txt = generation\vulkan\vk_sdk_platform\header.txt
-		generation\vulkan\vk_sdk_platform\vulkan-vk_sdk_platform.h = generation\vulkan\vk_sdk_platform\vulkan-vk_sdk_platform.h
+		generation\Vulkan\vulkan\vk_sdk_platform\generate.rsp = generation\Vulkan\vulkan\vk_sdk_platform\generate.rsp
+		generation\Vulkan\vulkan\vk_sdk_platform\header.txt = generation\Vulkan\vulkan\vk_sdk_platform\header.txt
+		generation\Vulkan\vulkan\vk_sdk_platform\vulkan-vk_sdk_platform.h = generation\Vulkan\vulkan\vk_sdk_platform\vulkan-vk_sdk_platform.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan", "vulkan", "{00908E61-6A74-478C-ABD1-EA9A04587A42}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan\generate.rsp = generation\vulkan\vulkan\generate.rsp
-		generation\vulkan\vulkan\header.txt = generation\vulkan\vulkan\header.txt
-		generation\vulkan\vulkan\vulkan-vulkan.h = generation\vulkan\vulkan\vulkan-vulkan.h
+		generation\Vulkan\vulkan\vulkan\generate.rsp = generation\Vulkan\vulkan\vulkan\generate.rsp
+		generation\Vulkan\vulkan\vulkan\header.txt = generation\Vulkan\vulkan\vulkan\header.txt
+		generation\Vulkan\vulkan\vulkan\vulkan-vulkan.h = generation\Vulkan\vulkan\vulkan\vulkan-vulkan.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_beta", "vulkan_beta", "{5C3C3DDA-9D36-4B31-AF01-175E1381FA32}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_beta\generate.rsp = generation\vulkan\vulkan_beta\generate.rsp
-		generation\vulkan\vulkan_beta\header.txt = generation\vulkan\vulkan_beta\header.txt
-		generation\vulkan\vulkan_beta\vulkan-vulkan_beta.h = generation\vulkan\vulkan_beta\vulkan-vulkan_beta.h
+		generation\Vulkan\vulkan\vulkan_beta\generate.rsp = generation\Vulkan\vulkan\vulkan_beta\generate.rsp
+		generation\Vulkan\vulkan\vulkan_beta\header.txt = generation\Vulkan\vulkan\vulkan_beta\header.txt
+		generation\Vulkan\vulkan\vulkan_beta\vulkan-vulkan_beta.h = generation\Vulkan\vulkan\vulkan_beta\vulkan-vulkan_beta.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_ggp", "vulkan_ggp", "{0BF30806-FF4A-43D5-9D38-77F44BD727E2}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_ggp\generate.rsp = generation\vulkan\vulkan_ggp\generate.rsp
-		generation\vulkan\vulkan_ggp\header.txt = generation\vulkan\vulkan_ggp\header.txt
-		generation\vulkan\vulkan_ggp\vulkan-vulkan_ggp.h = generation\vulkan\vulkan_ggp\vulkan-vulkan_ggp.h
+		generation\Vulkan\vulkan\vulkan_ggp\generate.rsp = generation\Vulkan\vulkan\vulkan_ggp\generate.rsp
+		generation\Vulkan\vulkan\vulkan_ggp\header.txt = generation\Vulkan\vulkan\vulkan_ggp\header.txt
+		generation\Vulkan\vulkan\vulkan_ggp\vulkan-vulkan_ggp.h = generation\Vulkan\vulkan\vulkan_ggp\vulkan-vulkan_ggp.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{8B98276D-AB81-4492-81E3-BAB8F9494A99}"
@@ -217,69 +221,80 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_directfb", "vulkan_directfb", "{D2B26392-2F4C-4A6D-AAC9-3DB9F74C0CE9}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_directfb\generate.rsp = generation\vulkan\vulkan_directfb\generate.rsp
-		generation\vulkan\vulkan_directfb\header.txt = generation\vulkan\vulkan_directfb\header.txt
-		generation\vulkan\vulkan_directfb\vulkan-vulkan_directfb.h = generation\vulkan\vulkan_directfb\vulkan-vulkan_directfb.h
+		generation\Vulkan\vulkan\vulkan_directfb\generate.rsp = generation\Vulkan\vulkan\vulkan_directfb\generate.rsp
+		generation\Vulkan\vulkan\vulkan_directfb\header.txt = generation\Vulkan\vulkan\vulkan_directfb\header.txt
+		generation\Vulkan\vulkan\vulkan_directfb\vulkan-vulkan_directfb.h = generation\Vulkan\vulkan\vulkan_directfb\vulkan-vulkan_directfb.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan", "vulkan", "{A60F8633-35FC-4F61-A42A-420ED1BEB2DB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_screen", "vulkan_screen", "{277EB067-C8D5-4766-B3AA-BFBCFD06C984}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vulkan_screen\generate.rsp = generation\vulkan\vulkan_screen\generate.rsp
-		generation\vulkan\vulkan_screen\header.txt = generation\vulkan\vulkan_screen\header.txt
-		generation\vulkan\vulkan_screen\vulkan-vulkan_screen.h = generation\vulkan\vulkan_screen\vulkan-vulkan_screen.h
+		generation\Vulkan\vulkan\vulkan_screen\generate.rsp = generation\Vulkan\vulkan\vulkan_screen\generate.rsp
+		generation\Vulkan\vulkan\vulkan_screen\header.txt = generation\Vulkan\vulkan\vulkan_screen\header.txt
+		generation\Vulkan\vulkan\vulkan_screen\vulkan-vulkan_screen.h = generation\Vulkan\vulkan\vulkan_screen\vulkan-vulkan_screen.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vk_video", "vk_video", "{70F5B453-DC97-44B5-B557-22FA8093F38D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vk_enum_string_helper", "vk_enum_string_helper", "{678CBA13-C08F-4D99-AA6B-DAD5B0B03DFA}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vulkan\vk_enum_string_helper\generate.rsp = generation\vulkan\vk_enum_string_helper\generate.rsp
-		generation\vulkan\vk_enum_string_helper\header.txt = generation\vulkan\vk_enum_string_helper\header.txt
-		generation\vulkan\vk_enum_string_helper\vulkan-vk_enum_string_helper.h = generation\vulkan\vk_enum_string_helper\vulkan-vk_enum_string_helper.h
+		generation\Vulkan\vulkan\vk_enum_string_helper\generate.rsp = generation\Vulkan\vulkan\vk_enum_string_helper\generate.rsp
+		generation\Vulkan\vulkan\vk_enum_string_helper\header.txt = generation\Vulkan\vulkan\vk_enum_string_helper\header.txt
+		generation\Vulkan\vulkan\vk_enum_string_helper\vulkan-vk_enum_string_helper.h = generation\Vulkan\vulkan\vk_enum_string_helper\vulkan-vk_enum_string_helper.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_video_codec_h264std", "vulkan_video_codec_h264std", "{12D560FA-F1BD-4E62-A2C7-3518B9D1A6B2}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vk_video\vulkan_video_codec_h264std\generate.rsp = generation\vk_video\vulkan_video_codec_h264std\generate.rsp
-		generation\vk_video\vulkan_video_codec_h264std\header.txt = generation\vk_video\vulkan_video_codec_h264std\header.txt
-		generation\vk_video\vulkan_video_codec_h264std\vk_video-vulkan_video_codec_h264std.h = generation\vk_video\vulkan_video_codec_h264std\vk_video-vulkan_video_codec_h264std.h
+		generation\Vulkan\vk_video\vulkan_video_codec_h264std\generate.rsp = generation\Vulkan\vk_video\vulkan_video_codec_h264std\generate.rsp
+		generation\Vulkan\vk_video\vulkan_video_codec_h264std\header.txt = generation\Vulkan\vk_video\vulkan_video_codec_h264std\header.txt
+		generation\Vulkan\vk_video\vulkan_video_codec_h264std\vk_video-vulkan_video_codec_h264std.h = generation\Vulkan\vk_video\vulkan_video_codec_h264std\vk_video-vulkan_video_codec_h264std.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_video_codec_h264std_decode", "vulkan_video_codec_h264std_decode", "{32C9C394-6479-4B4F-AF42-7B4C085DE67B}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vk_video\vulkan_video_codec_h264std_decode\generate.rsp = generation\vk_video\vulkan_video_codec_h264std_decode\generate.rsp
-		generation\vk_video\vulkan_video_codec_h264std_decode\header.txt = generation\vk_video\vulkan_video_codec_h264std_decode\header.txt
-		generation\vk_video\vulkan_video_codec_h264std_decode\vk_video-vulkan_video_codec_h264std_decode.h = generation\vk_video\vulkan_video_codec_h264std_decode\vk_video-vulkan_video_codec_h264std_decode.h
+		generation\Vulkan\vk_video\vulkan_video_codec_h264std_decode\generate.rsp = generation\Vulkan\vk_video\vulkan_video_codec_h264std_decode\generate.rsp
+		generation\Vulkan\vk_video\vulkan_video_codec_h264std_decode\header.txt = generation\Vulkan\vk_video\vulkan_video_codec_h264std_decode\header.txt
+		generation\Vulkan\vk_video\vulkan_video_codec_h264std_decode\vk_video-vulkan_video_codec_h264std_decode.h = generation\Vulkan\vk_video\vulkan_video_codec_h264std_decode\vk_video-vulkan_video_codec_h264std_decode.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_video_codec_h264std_encode", "vulkan_video_codec_h264std_encode", "{9F4D701B-593C-42AC-8EAC-B51950CEB2E4}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vk_video\vulkan_video_codec_h264std_encode\generate.rsp = generation\vk_video\vulkan_video_codec_h264std_encode\generate.rsp
-		generation\vk_video\vulkan_video_codec_h264std_encode\header.txt = generation\vk_video\vulkan_video_codec_h264std_encode\header.txt
-		generation\vk_video\vulkan_video_codec_h264std_encode\vk_video-vulkan_video_codec_h264std_encode.h = generation\vk_video\vulkan_video_codec_h264std_encode\vk_video-vulkan_video_codec_h264std_encode.h
+		generation\Vulkan\vk_video\vulkan_video_codec_h264std_encode\generate.rsp = generation\Vulkan\vk_video\vulkan_video_codec_h264std_encode\generate.rsp
+		generation\Vulkan\vk_video\vulkan_video_codec_h264std_encode\header.txt = generation\Vulkan\vk_video\vulkan_video_codec_h264std_encode\header.txt
+		generation\Vulkan\vk_video\vulkan_video_codec_h264std_encode\vk_video-vulkan_video_codec_h264std_encode.h = generation\Vulkan\vk_video\vulkan_video_codec_h264std_encode\vk_video-vulkan_video_codec_h264std_encode.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_video_codec_h265std", "vulkan_video_codec_h265std", "{17DF0860-8D75-473C-B506-839226CD8692}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vk_video\vulkan_video_codec_h265std\generate.rsp = generation\vk_video\vulkan_video_codec_h265std\generate.rsp
-		generation\vk_video\vulkan_video_codec_h265std\header.txt = generation\vk_video\vulkan_video_codec_h265std\header.txt
-		generation\vk_video\vulkan_video_codec_h265std\vk_video-vulkan_video_codec_h265std.h = generation\vk_video\vulkan_video_codec_h265std\vk_video-vulkan_video_codec_h265std.h
+		generation\Vulkan\vk_video\vulkan_video_codec_h265std\generate.rsp = generation\Vulkan\vk_video\vulkan_video_codec_h265std\generate.rsp
+		generation\Vulkan\vk_video\vulkan_video_codec_h265std\header.txt = generation\Vulkan\vk_video\vulkan_video_codec_h265std\header.txt
+		generation\Vulkan\vk_video\vulkan_video_codec_h265std\vk_video-vulkan_video_codec_h265std.h = generation\Vulkan\vk_video\vulkan_video_codec_h265std\vk_video-vulkan_video_codec_h265std.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_video_codec_h265std_decode", "vulkan_video_codec_h265std_decode", "{D29C2169-CA3D-44D4-A3A7-43D5383697A1}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vk_video\vulkan_video_codec_h265std_decode\generate.rsp = generation\vk_video\vulkan_video_codec_h265std_decode\generate.rsp
-		generation\vk_video\vulkan_video_codec_h265std_decode\header.txt = generation\vk_video\vulkan_video_codec_h265std_decode\header.txt
-		generation\vk_video\vulkan_video_codec_h265std_decode\vk_video-vulkan_video_codec_h265std_decode.h = generation\vk_video\vulkan_video_codec_h265std_decode\vk_video-vulkan_video_codec_h265std_decode.h
+		generation\Vulkan\vk_video\vulkan_video_codec_h265std_decode\generate.rsp = generation\Vulkan\vk_video\vulkan_video_codec_h265std_decode\generate.rsp
+		generation\Vulkan\vk_video\vulkan_video_codec_h265std_decode\header.txt = generation\Vulkan\vk_video\vulkan_video_codec_h265std_decode\header.txt
+		generation\Vulkan\vk_video\vulkan_video_codec_h265std_decode\vk_video-vulkan_video_codec_h265std_decode.h = generation\Vulkan\vk_video\vulkan_video_codec_h265std_decode\vk_video-vulkan_video_codec_h265std_decode.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_video_codecs_common", "vulkan_video_codecs_common", "{B0BE7192-1080-4524-89EE-134E8BA49F43}"
 	ProjectSection(SolutionItems) = preProject
-		generation\vk_video\vulkan_video_codecs_common\generate.rsp = generation\vk_video\vulkan_video_codecs_common\generate.rsp
-		generation\vk_video\vulkan_video_codecs_common\header.txt = generation\vk_video\vulkan_video_codecs_common\header.txt
-		generation\vk_video\vulkan_video_codecs_common\vk_video-vulkan_video_codecs_common.h = generation\vk_video\vulkan_video_codecs_common\vk_video-vulkan_video_codecs_common.h
+		generation\Vulkan\vk_video\vulkan_video_codecs_common\generate.rsp = generation\Vulkan\vk_video\vulkan_video_codecs_common\generate.rsp
+		generation\Vulkan\vk_video\vulkan_video_codecs_common\header.txt = generation\Vulkan\vk_video\vulkan_video_codecs_common\header.txt
+		generation\Vulkan\vk_video\vulkan_video_codecs_common\vk_video-vulkan_video_codecs_common.h = generation\Vulkan\vk_video\vulkan_video_codecs_common\vk_video-vulkan_video_codecs_common.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vulkan", "Vulkan", "{F95949B0-75CD-4B37-BD45-C91EB90EE8D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "other", "other", "{359B88FB-0ED5-4135-822B-82350347138C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "helper-types", "helper-types", "{09775914-ED8B-4F3D-BB35-8D9F30464A8A}"
+	ProjectSection(SolutionItems) = preProject
+		generation\Vulkan\other\helper-types\generate.rsp = generation\Vulkan\other\helper-types\generate.rsp
+		generation\Vulkan\other\helper-types\header.txt = generation\Vulkan\other\helper-types\header.txt
+		generation\Vulkan\other\helper-types\other-helper-types.h = generation\Vulkan\other\helper-types\other-helper-types.h
 	EndProjectSection
 EndProject
 Global
@@ -328,9 +343,9 @@ Global
 		{0BF30806-FF4A-43D5-9D38-77F44BD727E2} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
 		{6B66365D-63B7-4988-89D3-58AB7F372854} = {8B98276D-AB81-4492-81E3-BAB8F9494A99}
 		{D2B26392-2F4C-4A6D-AAC9-3DB9F74C0CE9} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
-		{A60F8633-35FC-4F61-A42A-420ED1BEB2DB} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{A60F8633-35FC-4F61-A42A-420ED1BEB2DB} = {F95949B0-75CD-4B37-BD45-C91EB90EE8D2}
 		{277EB067-C8D5-4766-B3AA-BFBCFD06C984} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
-		{70F5B453-DC97-44B5-B557-22FA8093F38D} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{70F5B453-DC97-44B5-B557-22FA8093F38D} = {F95949B0-75CD-4B37-BD45-C91EB90EE8D2}
 		{678CBA13-C08F-4D99-AA6B-DAD5B0B03DFA} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
 		{12D560FA-F1BD-4E62-A2C7-3518B9D1A6B2} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
 		{32C9C394-6479-4B4F-AF42-7B4C085DE67B} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
@@ -338,6 +353,9 @@ Global
 		{17DF0860-8D75-473C-B506-839226CD8692} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
 		{D29C2169-CA3D-44D4-A3A7-43D5383697A1} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
 		{B0BE7192-1080-4524-89EE-134E8BA49F43} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
+		{F95949B0-75CD-4B37-BD45-C91EB90EE8D2} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
+		{359B88FB-0ED5-4135-822B-82350347138C} = {F95949B0-75CD-4B37-BD45-C91EB90EE8D2}
+		{09775914-ED8B-4F3D-BB35-8D9F30464A8A} = {359B88FB-0ED5-4135-822B-82350347138C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FE36DF8-2D9C-4F20-8787-45DC74B57461}
