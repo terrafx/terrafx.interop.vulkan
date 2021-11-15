@@ -17,22 +17,20 @@ exclude-enum-operators
 generate-aggressive-inlining
 generate-cpp-attributes
 generate-macro-bindings
+generate-marker-interfaces
 generate-native-inheritance-attribute
 generate-tests-nunit
 generate-unmanaged-constants
 generate-vtbl-index-attribute
 log-potential-typedef-remappings
 multi-file
+trimmable-vtbls
 --headerFile
 header.txt
 --include-directory
 C:/Program Files (x86)/Windows Kits/10/Include/10.0.20348.0/shared
 C:/Program Files (x86)/Windows Kits/10/Include/10.0.20348.0/um
 C:/VulkanSDK/1.2.189.2/Include
---methodClassName
-Vulkan
---namespace
-TerraFX.Interop
 --with-callconv
 *=Winapi
 --with-librarypath
