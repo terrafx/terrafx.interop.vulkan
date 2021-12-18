@@ -25,7 +25,7 @@ TerraFX.Interop.Vulkan
 --test-output
 ../../../../tests/Interop/Vulkan/Vulkan/vulkan/vulkan_core
 --traverse
-C:/VulkanSDK/1.2.189.2/Include/vulkan/vulkan_core.h
+C:/VulkanSDK/1.2.198.1/Include/vulkan/vulkan_core.h
 --with-attribute
 VkAccelerationStructureCreateFlagsKHR=Flags
 VkAccessFlags=Flags
