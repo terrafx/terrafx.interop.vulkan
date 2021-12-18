@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkDependencyFlags : uint
     {
         VK_DEPENDENCY_BY_REGION_BIT = 0x00000001,

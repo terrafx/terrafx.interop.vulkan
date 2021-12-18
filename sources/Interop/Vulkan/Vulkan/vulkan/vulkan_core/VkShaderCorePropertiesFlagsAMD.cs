@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkShaderCorePropertiesFlagsAMD : uint
     {
         VK_SHADER_CORE_PROPERTIES_FLAG_BITS_MAX_ENUM_AMD = 0x7FFFFFFF,

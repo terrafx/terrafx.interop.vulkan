@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkPipelineCreationFeedbackFlagsEXT : uint
     {
         VK_PIPELINE_CREATION_FEEDBACK_VALID_BIT_EXT = 0x00000001,

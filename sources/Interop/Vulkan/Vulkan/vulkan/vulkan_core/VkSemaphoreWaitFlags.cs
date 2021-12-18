@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkSemaphoreWaitFlags : uint
     {
         VK_SEMAPHORE_WAIT_ANY_BIT = 0x00000001,

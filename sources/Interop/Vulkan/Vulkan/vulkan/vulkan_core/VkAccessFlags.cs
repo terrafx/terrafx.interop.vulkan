@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkAccessFlags : uint
     {
         VK_ACCESS_INDIRECT_COMMAND_READ_BIT = 0x00000001,

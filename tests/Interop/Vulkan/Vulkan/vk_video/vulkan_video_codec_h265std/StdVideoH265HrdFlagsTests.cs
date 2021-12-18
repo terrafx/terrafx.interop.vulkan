@@ -29,7 +29,7 @@ namespace TerraFX.Interop.Vulkan.UnitTests
         [Test]
         public static void SizeOfTest()
         {
-            Assert.That(sizeof(StdVideoH265HrdFlags), Is.EqualTo(8));
+            Assert.That(sizeof(StdVideoH265HrdFlags), Is.EqualTo(4));
         }
     }
 }

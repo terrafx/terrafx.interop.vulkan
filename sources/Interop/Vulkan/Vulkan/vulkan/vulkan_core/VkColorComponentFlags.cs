@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkColorComponentFlags : uint
     {
         VK_COLOR_COMPONENT_R_BIT = 0x00000001,

@@ -4,6 +4,7 @@
 // Original source is Copyright © 2019-2021 The Khronos Group Inc.
 
 using NUnit.Framework;
+using System;
 using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop.Vulkan.UnitTests
@@ -29,7 +30,14 @@ namespace TerraFX.Interop.Vulkan.UnitTests
         [Test]
         public static void SizeOfTest()
         {
-            Assert.That(sizeof(StdVideoH264SequenceParameterSetVui), Is.EqualTo(336));
+            if (Environment.Is64BitProcess)
+            {
+                Assert.That(sizeof(StdVideoH264SequenceParameterSetVui), Is.EqualTo(40));
+            }
+            else
+            {
+                Assert.That(sizeof(StdVideoH264SequenceParameterSetVui), Is.EqualTo(32));
+            }
         }
     }
 }

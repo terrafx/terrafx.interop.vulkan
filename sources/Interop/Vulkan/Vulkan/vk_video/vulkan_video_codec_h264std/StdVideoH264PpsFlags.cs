@@ -140,7 +140,7 @@ namespace TerraFX.Interop.Vulkan
         }
 
         [NativeTypeName("uint32_t : 1")]
-        public uint scaling_matrix_present_flag
+        public uint pic_scaling_matrix_present_flag
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get

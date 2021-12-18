@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkBufferCreateFlags : uint
     {
         VK_BUFFER_CREATE_SPARSE_BINDING_BIT = 0x00000001,

@@ -3,9 +3,13 @@
 // Ported from include/vulkan/vk_layer.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.198
 // Original source is Copyright © 2015-2017 The Khronos Group Inc. Copyright © 2015-2017 Valve Corporation. Copyright © 2015-2017 LunarG, Inc.
 
+using System;
+
 namespace TerraFX.Interop.Vulkan
 {
-    public enum VkLoaderFeastureFlags
+    [NativeTypeName("int")]
+    [Flags]
+    public enum VkLoaderFeastureFlags : uint
     {
         VK_LOADER_FEATURE_PHYSICAL_DEVICE_SORTING = 0x00000001,
     }

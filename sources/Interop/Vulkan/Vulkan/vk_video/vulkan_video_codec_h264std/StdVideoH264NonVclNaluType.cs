@@ -7,13 +7,13 @@ namespace TerraFX.Interop.Vulkan
 {
     public enum StdVideoH264NonVclNaluType
     {
-        std_video_h264_non_vcl_nalu_type_sps = 0,
-        std_video_h264_non_vcl_nalu_type_pps = 1,
-        std_video_h264_non_vcl_nalu_type_aud = 2,
-        std_video_h264_non_vcl_nalu_type_prefix = 3,
-        std_video_h264_non_vcl_nalu_type_end_of_sequence = 4,
-        std_video_h264_non_vcl_nalu_type_end_of_stream = 5,
-        std_video_h264_non_vcl_nalu_type_precoded = 6,
-        std_video_h264_non_vcl_nalu_type_invalid = 0x7FFFFFFF,
+        STD_VIDEO_H264_NON_VCL_NALU_TYPE_SPS = 0,
+        STD_VIDEO_H264_NON_VCL_NALU_TYPE_PPS = 1,
+        STD_VIDEO_H264_NON_VCL_NALU_TYPE_AUD = 2,
+        STD_VIDEO_H264_NON_VCL_NALU_TYPE_PREFIX = 3,
+        STD_VIDEO_H264_NON_VCL_NALU_TYPE_END_OF_SEQUENCE = 4,
+        STD_VIDEO_H264_NON_VCL_NALU_TYPE_END_OF_STREAM = 5,
+        STD_VIDEO_H264_NON_VCL_NALU_TYPE_PRECODED = 6,
+        STD_VIDEO_H264_NON_VCL_NALU_TYPE_INVALID = 0x7FFFFFFF,
     }
 }

@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkAttachmentDescriptionFlags : uint
     {
         VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT = 0x00000001,

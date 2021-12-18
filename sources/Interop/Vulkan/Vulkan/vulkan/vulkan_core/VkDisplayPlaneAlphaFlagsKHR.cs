@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkDisplayPlaneAlphaFlagsKHR : uint
     {
         VK_DISPLAY_PLANE_ALPHA_OPAQUE_BIT_KHR = 0x00000001,

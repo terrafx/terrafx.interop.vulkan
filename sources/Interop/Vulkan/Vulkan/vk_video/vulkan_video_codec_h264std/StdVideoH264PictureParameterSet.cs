@@ -19,7 +19,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint8_t")]
         public byte num_ref_idx_l1_default_active_minus1;
 
-        public StdVideoH264WeightedBiPredIdc weighted_bipred_idc;
+        public StdVideoH264WeightedBipredIdc weighted_bipred_idc;
 
         [NativeTypeName("int8_t")]
         public sbyte pic_init_qp_minus26;

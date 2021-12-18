@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkCommandBufferResetFlags : uint
     {
         VK_COMMAND_BUFFER_RESET_RELEASE_RESOURCES_BIT = 0x00000001,

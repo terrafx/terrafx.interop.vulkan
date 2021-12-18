@@ -24,7 +24,7 @@ namespace TerraFX.Interop.Vulkan
 
         public StdVideoH265DecPicBufMgr* pDecPicBufMgr;
 
-        public StdVideoH265HrdParameters* hrd_parameters;
+        public StdVideoH265HrdParameters* pHrdParameters;
 
         public StdVideoH265VpsFlags flags;
     }

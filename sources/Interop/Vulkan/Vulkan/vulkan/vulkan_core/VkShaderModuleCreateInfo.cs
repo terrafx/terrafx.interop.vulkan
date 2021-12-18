@@ -12,7 +12,8 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        public VkShaderModuleCreateFlags flags;
+        [NativeTypeName("VkShaderModuleCreateFlags")]
+        public uint flags;
 
         [NativeTypeName("size_t")]
         public nuint codeSize;

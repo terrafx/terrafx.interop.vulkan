@@ -1,7 +1,7 @@
 @../../../settings.rsp
 @../../../remap.rsp
 --file
-vk_video-vulkan_video_codec_h265std_decode.h
+vk_video-vulkan_video_codec_h265std_encode.h
 --methodClassName
 Vulkan
 --namespace

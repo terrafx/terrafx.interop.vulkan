@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkEventCreateFlags : uint
     {
         VK_EVENT_CREATE_DEVICE_ONLY_BIT_KHR = 0x00000001,

@@ -2,7 +2,8 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace 
+TerraFX.Interop.Vulkan
 {
     public partial struct VkShaderModule : IComparable, IComparable<VkShaderModule>, IEquatable<VkShaderModule>, IFormattable
     {
@@ -69,7 +70,7 @@ namespace TerraFX.Interop.Vulkan
 
         public int CompareTo(object? obj)
         {
-            if (obj is VkShaderModule other)
+                if (obj is VkShaderModule other)
             {
                 return CompareTo(other);
             }

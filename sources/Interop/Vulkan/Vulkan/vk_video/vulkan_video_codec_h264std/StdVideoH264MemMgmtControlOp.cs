@@ -7,13 +7,13 @@ namespace TerraFX.Interop.Vulkan
 {
     public enum StdVideoH264MemMgmtControlOp
     {
-        std_video_h264_mem_mgmt_control_op_end = 0,
-        std_video_h264_mem_mgmt_control_op_unmark_short_term = 1,
-        std_video_h264_mem_mgmt_control_op_unmark_long_term = 2,
-        std_video_h264_mem_mgmt_control_op_mark_long_term = 3,
-        std_video_h264_mem_mgmt_control_op_set_max_long_term_index = 4,
-        std_video_h264_mem_mgmt_control_op_unmark_all = 5,
-        std_video_h264_mem_mgmt_control_op_mark_current_as_long_term = 6,
-        std_video_h264_mem_mgmt_control_op_invalid = 0x7FFFFFFF,
+        STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_END = 0,
+        STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_SHORT_TERM = 1,
+        STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_LONG_TERM = 2,
+        STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_MARK_LONG_TERM = 3,
+        STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_SET_MAX_LONG_TERM_INDEX = 4,
+        STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_ALL = 5,
+        STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_MARK_CURRENT_AS_LONG_TERM = 6,
+        STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_INVALID = 0x7FFFFFFF,
     }
 }

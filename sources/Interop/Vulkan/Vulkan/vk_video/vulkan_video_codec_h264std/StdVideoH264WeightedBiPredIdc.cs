@@ -5,11 +5,11 @@
 
 namespace TerraFX.Interop.Vulkan
 {
-    public enum StdVideoH264WeightedBiPredIdc
+    public enum StdVideoH264WeightedBipredIdc
     {
-        std_video_h264_default_weighted_b_slices_prediction_idc = 0,
-        std_video_h264_explicit_weighted_b_slices_prediction_idc = 1,
-        std_video_h264_implicit_weighted_b_slices_prediction_idc = 2,
-        std_video_h264_invalid_weighted_b_slices_prediction_idc = 0x7FFFFFFF,
+        STD_VIDEO_H264_WEIGHTED_BIPRED_IDC_DEFAULT = 0,
+        STD_VIDEO_H264_WEIGHTED_BIPRED_IDC_EXPLICIT = 1,
+        STD_VIDEO_H264_WEIGHTED_BIPRED_IDC_IMPLICIT = 2,
+        STD_VIDEO_H264_WEIGHTED_BIPRED_IDC_INVALID = 0x7FFFFFFF,
     }
 }

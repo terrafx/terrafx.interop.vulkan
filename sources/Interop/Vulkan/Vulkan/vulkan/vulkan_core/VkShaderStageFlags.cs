@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkShaderStageFlags : uint
     {
         VK_SHADER_STAGE_VERTEX_BIT = 0x00000001,

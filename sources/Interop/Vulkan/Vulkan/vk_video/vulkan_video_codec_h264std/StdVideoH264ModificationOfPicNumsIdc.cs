@@ -7,10 +7,10 @@ namespace TerraFX.Interop.Vulkan
 {
     public enum StdVideoH264ModificationOfPicNumsIdc
     {
-        std_video_h264_modification_of_pic_nums_idc_short_term_subtract = 0,
-        std_video_h264_modification_of_pic_nums_idc_short_term_add = 1,
-        std_video_h264_modification_of_pic_nums_idc_long_term = 2,
-        std_video_h264_modification_of_pic_nums_idc_end = 3,
-        std_video_h264_modification_of_pic_nums_idc_invalid = 0x7FFFFFFF,
+        STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_SHORT_TERM_SUBTRACT = 0,
+        STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_SHORT_TERM_ADD = 1,
+        STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_LONG_TERM = 2,
+        STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_END = 3,
+        STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_INVALID = 0x7FFFFFFF,
     }
 }

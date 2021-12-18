@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkRenderPassCreateFlags : uint
     {
         VK_RENDER_PASS_CREATE_TRANSFORM_BIT_QCOM = 0x00000002,

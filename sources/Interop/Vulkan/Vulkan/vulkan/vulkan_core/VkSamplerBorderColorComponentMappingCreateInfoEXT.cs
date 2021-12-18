@@ -3,14 +3,17 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.198
 // Original source is Copyright © 2015-2021 The Khronos Group Inc.
 
-using System;
-
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
-    [NativeTypeName("int")]
-    public enum VkShaderModuleCreateFlags : uint
+    public unsafe partial struct VkSamplerBorderColorComponentMappingCreateInfoEXT
     {
-        VK_SHADER_MODULE_CREATE_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
+        public VkStructureType sType;
+
+        [NativeTypeName("const void *")]
+        public void* pNext;
+
+        public VkComponentMapping components;
+
+        public VkBool32 srgb;
     }
 }

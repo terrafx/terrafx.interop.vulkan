@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkFenceCreateFlags : uint
     {
         VK_FENCE_CREATE_SIGNALED_BIT = 0x00000001,

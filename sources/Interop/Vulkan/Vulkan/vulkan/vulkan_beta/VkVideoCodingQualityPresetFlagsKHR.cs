@@ -8,7 +8,6 @@ namespace TerraFX.Interop.Vulkan
     [NativeTypeName("int")]
     public enum VkVideoCodingQualityPresetFlagsKHR : uint
     {
-        VK_VIDEO_CODING_QUALITY_PRESET_DEFAULT_BIT_KHR = 0,
         VK_VIDEO_CODING_QUALITY_PRESET_NORMAL_BIT_KHR = 0x00000001,
         VK_VIDEO_CODING_QUALITY_PRESET_POWER_BIT_KHR = 0x00000002,
         VK_VIDEO_CODING_QUALITY_PRESET_QUALITY_BIT_KHR = 0x00000004,

@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkSamplerCreateFlags : uint
     {
         VK_SAMPLER_CREATE_SUBSAMPLED_BIT_EXT = 0x00000001,

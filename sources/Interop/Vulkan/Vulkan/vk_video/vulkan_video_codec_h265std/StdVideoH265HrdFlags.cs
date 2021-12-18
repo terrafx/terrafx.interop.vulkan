@@ -75,13 +75,52 @@ namespace TerraFX.Interop.Vulkan
             }
         }
 
-        [NativeTypeName("uint8_t")]
-        public byte fixed_pic_rate_general_flag;
+        [NativeTypeName("uint32_t : 8")]
+        public uint fixed_pic_rate_general_flag
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get
+            {
+                return (_bitfield >> 4) & 0xFFu;
+            }
 
-        [NativeTypeName("uint8_t")]
-        public byte fixed_pic_rate_within_cvs_flag;
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            set
+            {
+                _bitfield = (_bitfield & ~(0xFFu << 4)) | ((value & 0xFFu) << 4);
+            }
+        }
 
-        [NativeTypeName("uint8_t")]
-        public byte low_delay_hrd_flag;
+        [NativeTypeName("uint32_t : 8")]
+        public uint fixed_pic_rate_within_cvs_flag
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get
+            {
+                return (_bitfield >> 12) & 0xFFu;
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            set
+            {
+                _bitfield = (_bitfield & ~(0xFFu << 12)) | ((value & 0xFFu) << 12);
+            }
+        }
+
+        [NativeTypeName("uint32_t : 8")]
+        public uint low_delay_hrd_flag
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get
+            {
+                return (_bitfield >> 20) & 0xFFu;
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            set
+            {
+                _bitfield = (_bitfield & ~(0xFFu << 20)) | ((value & 0xFFu) << 20);
+            }
+        }
     }
 }

@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkResolveModeFlags : uint
     {
         VK_RESOLVE_MODE_NONE = 0,

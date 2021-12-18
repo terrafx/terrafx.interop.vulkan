@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkSurfaceCounterFlagsEXT : uint
     {
         VK_SURFACE_COUNTER_VBLANK_BIT_EXT = 0x00000001,

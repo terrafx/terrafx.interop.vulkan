@@ -36,7 +36,7 @@ namespace TerraFX.Interop.Vulkan.UnitTests
             }
             else
             {
-                Assert.That(sizeof(StdVideoH265HrdParameters), Is.EqualTo(96));
+                Assert.That(sizeof(StdVideoH265HrdParameters), Is.EqualTo(92));
             }
         }
     }

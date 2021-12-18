@@ -9,5 +9,8 @@ namespace TerraFX.Interop.Vulkan
     {
         [NativeTypeName("#define VULKAN_VIDEO_CODEC_H264STD_DECODE_H_ 1")]
         public const int VULKAN_VIDEO_CODEC_H264STD_DECODE_H_ = 1;
+
+        [NativeTypeName("#define STD_VIDEO_DECODE_H264_MVC_REF_LIST_SIZE 15")]
+        public const int STD_VIDEO_DECODE_H264_MVC_REF_LIST_SIZE = 15;
     }
 }

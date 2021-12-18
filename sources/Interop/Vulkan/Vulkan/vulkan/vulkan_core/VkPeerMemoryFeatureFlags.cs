@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkPeerMemoryFeatureFlags : uint
     {
         VK_PEER_MEMORY_FEATURE_COPY_SRC_BIT = 0x00000001,

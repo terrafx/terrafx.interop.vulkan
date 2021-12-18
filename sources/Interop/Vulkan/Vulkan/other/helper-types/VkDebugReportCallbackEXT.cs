@@ -2,7 +2,8 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace 
+TerraFX.Interop.Vulkan
 {
     public partial struct VkDebugReportCallbackEXT : IComparable, IComparable<VkDebugReportCallbackEXT>, IEquatable<VkDebugReportCallbackEXT>, IFormattable
     {
@@ -69,7 +70,7 @@ namespace TerraFX.Interop.Vulkan
 
         public int CompareTo(object? obj)
         {
-            if (obj is VkDebugReportCallbackEXT other)
+                if (obj is VkDebugReportCallbackEXT other)
             {
                 return CompareTo(other);
             }

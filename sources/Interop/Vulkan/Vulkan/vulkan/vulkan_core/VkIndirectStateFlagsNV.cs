@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkIndirectStateFlagsNV : uint
     {
         VK_INDIRECT_STATE_FLAG_FRONTFACE_BIT_NV = 0x00000001,

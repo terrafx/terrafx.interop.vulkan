@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkStencilFaceFlags : uint
     {
         VK_STENCIL_FACE_FRONT_BIT = 0x00000001,

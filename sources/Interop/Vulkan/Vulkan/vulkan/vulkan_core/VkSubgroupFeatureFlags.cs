@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkSubgroupFeatureFlags : uint
     {
         VK_SUBGROUP_FEATURE_BASIC_BIT = 0x00000001,

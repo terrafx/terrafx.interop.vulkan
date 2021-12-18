@@ -2,7 +2,8 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace 
+TerraFX.Interop.Vulkan
 {
     public unsafe partial struct VkInstance : IComparable, IComparable<VkInstance>, IEquatable<VkInstance>, IFormattable
     {
@@ -73,7 +74,7 @@ namespace TerraFX.Interop.Vulkan
 
         public int CompareTo(object? obj)
         {
-            if (obj is VkInstance other)
+                if (obj is VkInstance other)
             {
                 return CompareTo(other);
             }

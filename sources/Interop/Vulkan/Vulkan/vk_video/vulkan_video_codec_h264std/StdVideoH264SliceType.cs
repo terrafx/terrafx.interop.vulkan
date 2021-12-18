@@ -7,9 +7,9 @@ namespace TerraFX.Interop.Vulkan
 {
     public enum StdVideoH264SliceType
     {
-        std_video_h264_slice_type_i = 0,
-        std_video_h264_slice_type_p = 1,
-        std_video_h264_slice_type_b = 2,
-        std_video_h264_slice_type_invalid = 0x7FFFFFFF,
+        STD_VIDEO_H264_SLICE_TYPE_P = 0,
+        STD_VIDEO_H264_SLICE_TYPE_B = 1,
+        STD_VIDEO_H264_SLICE_TYPE_I = 2,
+        STD_VIDEO_H264_SLICE_TYPE_INVALID = 0x7FFFFFFF,
     }
 }

@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkCommandPoolCreateFlags : uint
     {
         VK_COMMAND_POOL_CREATE_TRANSIENT_BIT = 0x00000001,

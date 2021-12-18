@@ -55,7 +55,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint vui_num_ticks_poc_diff_one_minus1;
 
-        public StdVideoH265HrdParameters* hrd_parameters;
+        public StdVideoH265HrdParameters* pHrdParameters;
 
         [NativeTypeName("uint16_t")]
         public ushort min_spatial_segmentation_idc;

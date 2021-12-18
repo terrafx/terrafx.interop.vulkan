@@ -7,9 +7,9 @@ namespace TerraFX.Interop.Vulkan
 {
     public enum StdVideoH264PocType
     {
-        std_video_h264_poc_type_0 = 0,
-        std_video_h264_poc_type_1 = 1,
-        std_video_h264_poc_type_2 = 2,
-        std_video_h264_poc_type_invalid = 0x7FFFFFFF,
+        STD_VIDEO_H264_POC_TYPE_0 = 0,
+        STD_VIDEO_H264_POC_TYPE_1 = 1,
+        STD_VIDEO_H264_POC_TYPE_2 = 2,
+        STD_VIDEO_H264_POC_TYPE_INVALID = 0x7FFFFFFF,
     }
 }

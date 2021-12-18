@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkSurfaceTransformFlagsKHR : uint
     {
         VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR = 0x00000001,

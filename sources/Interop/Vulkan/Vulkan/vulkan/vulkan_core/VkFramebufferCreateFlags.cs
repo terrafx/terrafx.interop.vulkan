@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkFramebufferCreateFlags : uint
     {
         VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT = 0x00000001,

@@ -62,8 +62,8 @@ namespace TerraFX.Interop.Vulkan
 
         public StdVideoH264SpsFlags flags;
 
-        [NativeTypeName("int32_t [255]")]
-        public fixed int offset_for_ref_frame[255];
+        [NativeTypeName("int32_t *")]
+        public int* pOffsetForRefFrame;
 
         public StdVideoH264ScalingLists* pScalingLists;
 

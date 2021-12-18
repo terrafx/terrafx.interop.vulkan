@@ -64,8 +64,8 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_KHR_video_decode_queue 1")]
         public const int VK_KHR_video_decode_queue = 1;
 
-        [NativeTypeName("#define VK_KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION 1")]
-        public const int VK_KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION = 1;
+        [NativeTypeName("#define VK_KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION 2")]
+        public const int VK_KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION = 2;
 
         [NativeTypeName("#define VK_KHR_VIDEO_DECODE_QUEUE_EXTENSION_NAME \"VK_KHR_video_decode_queue\"")]
         public static ReadOnlySpan<byte> VK_KHR_VIDEO_DECODE_QUEUE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x76, 0x69, 0x64, 0x65, 0x6F, 0x5F, 0x64, 0x65, 0x63, 0x6F, 0x64, 0x65, 0x5F, 0x71, 0x75, 0x65, 0x75, 0x65, 0x00 };
@@ -82,8 +82,8 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_KHR_video_encode_queue 1")]
         public const int VK_KHR_video_encode_queue = 1;
 
-        [NativeTypeName("#define VK_KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION 2")]
-        public const int VK_KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION = 2;
+        [NativeTypeName("#define VK_KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION 3")]
+        public const int VK_KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION = 3;
 
         [NativeTypeName("#define VK_KHR_VIDEO_ENCODE_QUEUE_EXTENSION_NAME \"VK_KHR_video_encode_queue\"")]
         public static ReadOnlySpan<byte> VK_KHR_VIDEO_ENCODE_QUEUE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x76, 0x69, 0x64, 0x65, 0x6F, 0x5F, 0x65, 0x6E, 0x63, 0x6F, 0x64, 0x65, 0x5F, 0x71, 0x75, 0x65, 0x75, 0x65, 0x00 };
@@ -96,6 +96,15 @@ namespace TerraFX.Interop.Vulkan
 
         [NativeTypeName("#define VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME \"VK_EXT_video_encode_h264\"")]
         public static ReadOnlySpan<byte> VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x76, 0x69, 0x64, 0x65, 0x6F, 0x5F, 0x65, 0x6E, 0x63, 0x6F, 0x64, 0x65, 0x5F, 0x68, 0x32, 0x36, 0x34, 0x00 };
+
+        [NativeTypeName("#define VK_EXT_video_encode_h265 1")]
+        public const int VK_EXT_video_encode_h265 = 1;
+
+        [NativeTypeName("#define VK_EXT_VIDEO_ENCODE_H265_SPEC_VERSION 2")]
+        public const int VK_EXT_VIDEO_ENCODE_H265_SPEC_VERSION = 2;
+
+        [NativeTypeName("#define VK_EXT_VIDEO_ENCODE_H265_EXTENSION_NAME \"VK_EXT_video_encode_h265\"")]
+        public static ReadOnlySpan<byte> VK_EXT_VIDEO_ENCODE_H265_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x76, 0x69, 0x64, 0x65, 0x6F, 0x5F, 0x65, 0x6E, 0x63, 0x6F, 0x64, 0x65, 0x5F, 0x68, 0x32, 0x36, 0x35, 0x00 };
 
         [NativeTypeName("#define VK_EXT_video_decode_h264 1")]
         public const int VK_EXT_video_decode_h264 = 1;

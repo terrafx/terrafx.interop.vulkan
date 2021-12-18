@@ -7,9 +7,10 @@ namespace TerraFX.Interop.Vulkan
 {
     public enum StdVideoH264PictureType
     {
-        std_video_h264_picture_type_i = 0,
-        std_video_h264_picture_type_p = 1,
-        std_video_h264_picture_type_b = 2,
-        std_video_h264_picture_type_invalid = 0x7FFFFFFF,
+        STD_VIDEO_H264_PICTURE_TYPE_P = 0,
+        STD_VIDEO_H264_PICTURE_TYPE_B = 1,
+        STD_VIDEO_H264_PICTURE_TYPE_I = 2,
+        STD_VIDEO_H264_PICTURE_TYPE_IDR = 5,
+        STD_VIDEO_H264_PICTURE_TYPE_INVALID = 0x7FFFFFFF,
     }
 }

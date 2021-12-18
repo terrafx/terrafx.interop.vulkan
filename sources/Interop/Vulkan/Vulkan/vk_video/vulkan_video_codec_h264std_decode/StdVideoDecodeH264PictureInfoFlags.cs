@@ -44,7 +44,7 @@ namespace TerraFX.Interop.Vulkan
         }
 
         [NativeTypeName("uint32_t : 1")]
-        public uint bottom_field_flag
+        public uint IdrPicFlag
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -60,7 +60,7 @@ namespace TerraFX.Interop.Vulkan
         }
 
         [NativeTypeName("uint32_t : 1")]
-        public uint is_reference
+        public uint bottom_field_flag
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -76,7 +76,7 @@ namespace TerraFX.Interop.Vulkan
         }
 
         [NativeTypeName("uint32_t : 1")]
-        public uint complementary_field_pair
+        public uint is_reference
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -88,6 +88,22 @@ namespace TerraFX.Interop.Vulkan
             set
             {
                 _bitfield = (_bitfield & ~(0x1u << 4)) | ((value & 0x1u) << 4);
+            }
+        }
+
+        [NativeTypeName("uint32_t : 1")]
+        public uint complementary_field_pair
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get
+            {
+                return (_bitfield >> 5) & 0x1u;
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            set
+            {
+                _bitfield = (_bitfield & ~(0x1u << 5)) | ((value & 0x1u) << 5);
             }
         }
     }

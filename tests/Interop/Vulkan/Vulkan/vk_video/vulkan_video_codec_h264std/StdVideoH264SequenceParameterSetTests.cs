@@ -32,11 +32,11 @@ namespace TerraFX.Interop.Vulkan.UnitTests
         {
             if (Environment.Is64BitProcess)
             {
-                Assert.That(sizeof(StdVideoH264SequenceParameterSet), Is.EqualTo(1104));
+                Assert.That(sizeof(StdVideoH264SequenceParameterSet), Is.EqualTo(96));
             }
             else
             {
-                Assert.That(sizeof(StdVideoH264SequenceParameterSet), Is.EqualTo(1096));
+                Assert.That(sizeof(StdVideoH264SequenceParameterSet), Is.EqualTo(80));
             }
         }
     }

@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkExternalFenceFeatureFlags : uint
     {
         VK_EXTERNAL_FENCE_FEATURE_EXPORTABLE_BIT = 0x00000001,

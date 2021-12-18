@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkSubmitFlagsKHR : uint
     {
         VK_SUBMIT_PROTECTED_BIT_KHR = 0x00000001,

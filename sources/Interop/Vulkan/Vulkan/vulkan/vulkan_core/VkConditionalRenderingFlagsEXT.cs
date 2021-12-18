@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkConditionalRenderingFlagsEXT : uint
     {
         VK_CONDITIONAL_RENDERING_INVERTED_BIT_EXT = 0x00000001,

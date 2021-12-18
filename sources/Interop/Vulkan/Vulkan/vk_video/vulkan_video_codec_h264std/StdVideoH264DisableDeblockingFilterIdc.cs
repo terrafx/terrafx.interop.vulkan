@@ -7,9 +7,9 @@ namespace TerraFX.Interop.Vulkan
 {
     public enum StdVideoH264DisableDeblockingFilterIdc
     {
-        std_video_h264_disable_deblocking_filter_idc_disabled = 0,
-        std_video_h264_disable_deblocking_filter_idc_enabled = 1,
-        std_video_h264_disable_deblocking_filter_idc_partial = 2,
-        std_video_h264_disable_deblocking_filter_idc_invalid = 0x7FFFFFFF,
+        STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_DISABLED = 0,
+        STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_ENABLED = 1,
+        STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_PARTIAL = 2,
+        STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_INVALID = 0x7FFFFFFF,
     }
 }

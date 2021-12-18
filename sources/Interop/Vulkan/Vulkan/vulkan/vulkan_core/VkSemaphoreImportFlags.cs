@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkSemaphoreImportFlags : uint
     {
         VK_SEMAPHORE_IMPORT_TEMPORARY_BIT = 0x00000001,

@@ -2,7 +2,8 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace 
+TerraFX.Interop.Vulkan
 {
     public partial struct VkVideoSessionParametersKHR : IComparable, IComparable<VkVideoSessionParametersKHR>, IEquatable<VkVideoSessionParametersKHR>, IFormattable
     {
@@ -69,7 +70,7 @@ namespace TerraFX.Interop.Vulkan
 
         public int CompareTo(object? obj)
         {
-            if (obj is VkVideoSessionParametersKHR other)
+                if (obj is VkVideoSessionParametersKHR other)
             {
                 return CompareTo(other);
             }

@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkQueryResultFlags : uint
     {
         VK_QUERY_RESULT_64_BIT = 0x00000001,

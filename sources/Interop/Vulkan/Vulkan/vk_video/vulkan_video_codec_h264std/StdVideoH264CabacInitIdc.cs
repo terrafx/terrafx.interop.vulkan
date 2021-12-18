@@ -7,9 +7,9 @@ namespace TerraFX.Interop.Vulkan
 {
     public enum StdVideoH264CabacInitIdc
     {
-        std_video_h264_cabac_init_idc_0 = 0,
-        std_video_h264_cabac_init_idc_1 = 1,
-        std_video_h264_cabac_init_idc_2 = 2,
-        std_video_h264_cabac_init_idc_invalid = 0x7FFFFFFF,
+        STD_VIDEO_H264_CABAC_INIT_IDC_0 = 0,
+        STD_VIDEO_H264_CABAC_INIT_IDC_1 = 1,
+        STD_VIDEO_H264_CABAC_INIT_IDC_2 = 2,
+        STD_VIDEO_H264_CABAC_INIT_IDC_INVALID = 0x7FFFFFFF,
     }
 }

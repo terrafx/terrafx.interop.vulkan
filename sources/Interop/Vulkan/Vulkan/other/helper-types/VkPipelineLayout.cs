@@ -2,7 +2,8 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace 
+TerraFX.Interop.Vulkan
 {
     public partial struct VkPipelineLayout : IComparable, IComparable<VkPipelineLayout>, IEquatable<VkPipelineLayout>, IFormattable
     {
@@ -69,7 +70,7 @@ namespace TerraFX.Interop.Vulkan
 
         public int CompareTo(object? obj)
         {
-            if (obj is VkPipelineLayout other)
+                if (obj is VkPipelineLayout other)
             {
                 return CompareTo(other);
             }

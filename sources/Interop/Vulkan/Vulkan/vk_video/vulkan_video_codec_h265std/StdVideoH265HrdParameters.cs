@@ -43,14 +43,14 @@ namespace TerraFX.Interop.Vulkan
         public fixed ushort elemental_duration_in_tc_minus1[7];
 
         [NativeTypeName("StdVideoH265SubLayerHrdParameters *[7]")]
-        public _SubLayerHrdParametersNal_e__FixedBuffer SubLayerHrdParametersNal;
+        public _pSubLayerHrdParametersNal_e__FixedBuffer pSubLayerHrdParametersNal;
 
         [NativeTypeName("StdVideoH265SubLayerHrdParameters *[7]")]
-        public _SubLayerHrdParametersVcl_e__FixedBuffer SubLayerHrdParametersVcl;
+        public _pSubLayerHrdParametersVcl_e__FixedBuffer pSubLayerHrdParametersVcl;
 
         public StdVideoH265HrdFlags flags;
 
-        public unsafe partial struct _SubLayerHrdParametersNal_e__FixedBuffer
+        public unsafe partial struct _pSubLayerHrdParametersNal_e__FixedBuffer
         {
             public StdVideoH265SubLayerHrdParameters* e0;
             public StdVideoH265SubLayerHrdParameters* e1;
@@ -73,7 +73,7 @@ namespace TerraFX.Interop.Vulkan
             }
         }
 
-        public unsafe partial struct _SubLayerHrdParametersVcl_e__FixedBuffer
+        public unsafe partial struct _pSubLayerHrdParametersVcl_e__FixedBuffer
         {
             public StdVideoH265SubLayerHrdParameters* e0;
             public StdVideoH265SubLayerHrdParameters* e1;

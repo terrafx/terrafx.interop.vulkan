@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkQueueFlags : uint
     {
         VK_QUEUE_GRAPHICS_BIT = 0x00000001,

@@ -7,10 +7,10 @@ namespace TerraFX.Interop.Vulkan
 {
     public enum StdVideoH264ProfileIdc
     {
-        std_video_h264_profile_idc_baseline = 66,
-        std_video_h264_profile_idc_main = 77,
-        std_video_h264_profile_idc_high = 100,
-        std_video_h264_profile_idc_high_444_predictive = 244,
-        std_video_h264_profile_idc_invalid = 0x7FFFFFFF,
+        STD_VIDEO_H264_PROFILE_IDC_BASELINE = 66,
+        STD_VIDEO_H264_PROFILE_IDC_MAIN = 77,
+        STD_VIDEO_H264_PROFILE_IDC_HIGH = 100,
+        STD_VIDEO_H264_PROFILE_IDC_HIGH_444_PREDICTIVE = 244,
+        STD_VIDEO_H264_PROFILE_IDC_INVALID = 0x7FFFFFFF,
     }
 }

@@ -2,7 +2,8 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace 
+TerraFX.Interop.Vulkan
 {
     public partial struct VkFramebuffer : IComparable, IComparable<VkFramebuffer>, IEquatable<VkFramebuffer>, IFormattable
     {
@@ -69,7 +70,7 @@ namespace TerraFX.Interop.Vulkan
 
         public int CompareTo(object? obj)
         {
-            if (obj is VkFramebuffer other)
+                if (obj is VkFramebuffer other)
             {
                 return CompareTo(other);
             }

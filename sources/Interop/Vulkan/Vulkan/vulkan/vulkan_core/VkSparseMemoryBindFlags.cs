@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkSparseMemoryBindFlags : uint
     {
         VK_SPARSE_MEMORY_BIND_METADATA_BIT = 0x00000001,

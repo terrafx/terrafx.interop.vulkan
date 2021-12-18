@@ -172,7 +172,7 @@ namespace TerraFX.Interop.Vulkan
         }
 
         [NativeTypeName("uint32_t : 1")]
-        public uint residual_colour_transform_flag
+        public uint separate_colour_plane_flag
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -204,7 +204,7 @@ namespace TerraFX.Interop.Vulkan
         }
 
         [NativeTypeName("uint32_t : 1")]
-        public uint first_picture_after_seek_flag
+        public uint qpprime_y_zero_transform_bypass_flag
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -220,7 +220,7 @@ namespace TerraFX.Interop.Vulkan
         }
 
         [NativeTypeName("uint32_t : 1")]
-        public uint qpprime_y_zero_transform_bypass_flag
+        public uint frame_cropping_flag
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -236,7 +236,7 @@ namespace TerraFX.Interop.Vulkan
         }
 
         [NativeTypeName("uint32_t : 1")]
-        public uint frame_cropping_flag
+        public uint seq_scaling_matrix_present_flag
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -252,7 +252,7 @@ namespace TerraFX.Interop.Vulkan
         }
 
         [NativeTypeName("uint32_t : 1")]
-        public uint scaling_matrix_present_flag
+        public uint vui_parameters_present_flag
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -264,22 +264,6 @@ namespace TerraFX.Interop.Vulkan
             set
             {
                 _bitfield = (_bitfield & ~(0x1u << 15)) | ((value & 0x1u) << 15);
-            }
-        }
-
-        [NativeTypeName("uint32_t : 1")]
-        public uint vui_parameters_present_flag
-        {
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get
-            {
-                return (_bitfield >> 16) & 0x1u;
-            }
-
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            set
-            {
-                _bitfield = (_bitfield & ~(0x1u << 16)) | ((value & 0x1u) << 16);
             }
         }
     }

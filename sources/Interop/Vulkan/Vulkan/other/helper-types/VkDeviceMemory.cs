@@ -2,7 +2,8 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace 
+TerraFX.Interop.Vulkan
 {
     public partial struct VkDeviceMemory : IComparable, IComparable<VkDeviceMemory>, IEquatable<VkDeviceMemory>, IFormattable
     {
@@ -69,7 +70,7 @@ namespace TerraFX.Interop.Vulkan
 
         public int CompareTo(object? obj)
         {
-            if (obj is VkDeviceMemory other)
+                if (obj is VkDeviceMemory other)
             {
                 return CompareTo(other);
             }

@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkMemoryAllocateFlags : uint
     {
         VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT = 0x00000001,

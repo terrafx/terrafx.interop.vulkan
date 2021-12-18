@@ -7,9 +7,10 @@ namespace TerraFX.Interop.Vulkan
 {
     public enum StdVideoH265ChromaFormatIdc
     {
-        std_video_h265_chroma_format_idc_monochrome = 0,
-        std_video_h265_chroma_format_idc_420 = 1,
-        std_video_h265_chroma_format_idc_422 = 2,
-        std_video_h265_chroma_format_idc_444 = 3,
+        STD_VIDEO_H265_CHROMA_FORMAT_IDC_MONOCHROME = 0,
+        STD_VIDEO_H265_CHROMA_FORMAT_IDC_420 = 1,
+        STD_VIDEO_H265_CHROMA_FORMAT_IDC_422 = 2,
+        STD_VIDEO_H265_CHROMA_FORMAT_IDC_444 = 3,
+        STD_VIDEO_H265_CHROMA_FORMAT_IDC_INVALID = 0x7FFFFFFF,
     }
 }

@@ -7,8 +7,8 @@ using System;
 
 namespace TerraFX.Interop.Vulkan
 {
-    [Flags]
     [NativeTypeName("int")]
+    [Flags]
     public enum VkPipelineStageFlags : uint
     {
         VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT = 0x00000001,
