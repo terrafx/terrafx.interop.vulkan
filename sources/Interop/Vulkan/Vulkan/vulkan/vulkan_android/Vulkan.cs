@@ -4,21 +4,11 @@
 // Original source is Copyright © 2015-2021 The Khronos Group Inc.
 
 using System;
-using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop.Vulkan
 {
-    public static unsafe partial class Vulkan
+    public static partial class Vulkan
     {
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateAndroidSurfaceKHR(VkInstance instance, [NativeTypeName("const VkAndroidSurfaceCreateInfoKHR *")] VkAndroidSurfaceCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetAndroidHardwareBufferPropertiesANDROID(VkDevice device, [NativeTypeName("const struct AHardwareBuffer *")] IntPtr buffer, VkAndroidHardwareBufferPropertiesANDROID* pProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetMemoryAndroidHardwareBufferANDROID(VkDevice device, [NativeTypeName("const VkMemoryGetAndroidHardwareBufferInfoANDROID *")] VkMemoryGetAndroidHardwareBufferInfoANDROID* pInfo, [NativeTypeName("struct AHardwareBuffer **")] IntPtr* pBuffer);
-
         [NativeTypeName("#define VK_KHR_android_surface 1")]
         public const int VK_KHR_android_surface = 1;
 

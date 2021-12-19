@@ -16,39 +16,6 @@ namespace TerraFX.Interop.Vulkan
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern VkBool32 vkGetPhysicalDeviceWin32PresentationSupportKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex);
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetMemoryWin32HandleKHR(VkDevice device, [NativeTypeName("const VkMemoryGetWin32HandleInfoKHR *")] VkMemoryGetWin32HandleInfoKHR* pGetWin32HandleInfo, [NativeTypeName("HANDLE *")] IntPtr* pHandle);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetMemoryWin32HandlePropertiesKHR(VkDevice device, [NativeTypeName("VkExternalMemoryHandleTypeFlagBits")] VkExternalMemoryHandleTypeFlags handleType, [NativeTypeName("HANDLE")] IntPtr handle, VkMemoryWin32HandlePropertiesKHR* pMemoryWin32HandleProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkImportSemaphoreWin32HandleKHR(VkDevice device, [NativeTypeName("const VkImportSemaphoreWin32HandleInfoKHR *")] VkImportSemaphoreWin32HandleInfoKHR* pImportSemaphoreWin32HandleInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetSemaphoreWin32HandleKHR(VkDevice device, [NativeTypeName("const VkSemaphoreGetWin32HandleInfoKHR *")] VkSemaphoreGetWin32HandleInfoKHR* pGetWin32HandleInfo, [NativeTypeName("HANDLE *")] IntPtr* pHandle);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkImportFenceWin32HandleKHR(VkDevice device, [NativeTypeName("const VkImportFenceWin32HandleInfoKHR *")] VkImportFenceWin32HandleInfoKHR* pImportFenceWin32HandleInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetFenceWin32HandleKHR(VkDevice device, [NativeTypeName("const VkFenceGetWin32HandleInfoKHR *")] VkFenceGetWin32HandleInfoKHR* pGetWin32HandleInfo, [NativeTypeName("HANDLE *")] IntPtr* pHandle);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetMemoryWin32HandleNV(VkDevice device, VkDeviceMemory memory, VkExternalMemoryHandleTypeFlagsNV handleType, [NativeTypeName("HANDLE *")] IntPtr* pHandle);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPhysicalDeviceSurfacePresentModes2EXT(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkPhysicalDeviceSurfaceInfo2KHR *")] VkPhysicalDeviceSurfaceInfo2KHR* pSurfaceInfo, [NativeTypeName("uint32_t *")] uint* pPresentModeCount, VkPresentModeKHR* pPresentModes);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkAcquireFullScreenExclusiveModeEXT(VkDevice device, VkSwapchainKHR swapchain);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkReleaseFullScreenExclusiveModeEXT(VkDevice device, VkSwapchainKHR swapchain);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetDeviceGroupSurfacePresentModes2EXT(VkDevice device, [NativeTypeName("const VkPhysicalDeviceSurfaceInfo2KHR *")] VkPhysicalDeviceSurfaceInfo2KHR* pSurfaceInfo, VkDeviceGroupPresentModeFlagsKHR* pModes);
-
         [NativeTypeName("#define VK_KHR_win32_surface 1")]
         public const int VK_KHR_win32_surface = 1;
 

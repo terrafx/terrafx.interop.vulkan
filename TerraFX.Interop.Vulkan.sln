@@ -71,8 +71,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{48E1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "generation", "generation", "{7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}"
 	ProjectSection(SolutionItems) = preProject
+		generation\remap-classes.rsp = generation\remap-classes.rsp
 		generation\remap-handles.rsp = generation\remap-handles.rsp
+		generation\remap-imports.rsp = generation\remap-imports.rsp
 		generation\remap-other.rsp = generation\remap-other.rsp
+		generation\remap-structs.rsp = generation\remap-structs.rsp
 		generation\remap-transparent.rsp = generation\remap-transparent.rsp
 		generation\remap-types.rsp = generation\remap-types.rsp
 		generation\remap.rsp = generation\remap.rsp

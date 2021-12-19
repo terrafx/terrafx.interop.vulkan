@@ -1,4 +1,7 @@
+@../../../remap-classes.rsp
 @../../../remap-handles.rsp
+@../../../remap-imports.rsp
 @../../../remap-other.rsp
+@../../../remap-structs.rsp
 @../../../remap-transparent.rsp
 @../../../remap-types.rsp

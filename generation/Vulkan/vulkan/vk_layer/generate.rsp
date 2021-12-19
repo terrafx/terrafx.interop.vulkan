@@ -1,5 +1,7 @@
 @../../../settings.rsp
 @../../../remap.rsp
+--exclude
+vkNegotiateLoaderLayerInterfaceVersion
 --file
 vulkan-vk_layer.h
 --methodClassName

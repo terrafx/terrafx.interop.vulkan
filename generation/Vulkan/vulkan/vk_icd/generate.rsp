@@ -1,5 +1,9 @@
 @../../../settings.rsp
 @../../../remap.rsp
+--exclude
+vk_icdGetInstanceProcAddr
+vk_icdGetPhysicalDeviceProcAddr
+vk_icdNegotiateLoaderICDInterfaceVersion
 --file
 vulkan-vk_icd.h
 --methodClassName

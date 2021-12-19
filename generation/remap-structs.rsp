@@ -1,0 +1,6 @@
+--with-type
+VkCommandBufferManualImports=struct
+VkDeviceManualImports=struct
+VkInstanceManualImports=struct
+VkPhysicalDeviceManualImports=struct
+VkQueueManualImports=struct

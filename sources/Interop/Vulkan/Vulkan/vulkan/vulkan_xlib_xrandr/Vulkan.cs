@@ -4,18 +4,11 @@
 // Original source is Copyright © 2015-2021 The Khronos Group Inc.
 
 using System;
-using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop.Vulkan
 {
-    public static unsafe partial class Vulkan
+    public static partial class Vulkan
     {
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkAcquireXlibDisplayEXT(VkPhysicalDevice physicalDevice, IntPtr dpy, VkDisplayKHR display);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, IntPtr dpy, [NativeTypeName("RROutput")] nuint rrOutput, VkDisplayKHR* pDisplay);
-
         [NativeTypeName("#define VK_EXT_acquire_xlib_display 1")]
         public const int VK_EXT_acquire_xlib_display = 1;
 

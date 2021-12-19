@@ -4,42 +4,11 @@
 // Original source is Copyright © 2015-2021 The Khronos Group Inc.
 
 using System;
-using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop.Vulkan
 {
-    public static unsafe partial class Vulkan
+    public static partial class Vulkan
     {
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateImagePipeSurfaceFUCHSIA(VkInstance instance, [NativeTypeName("const VkImagePipeSurfaceCreateInfoFUCHSIA *")] VkImagePipeSurfaceCreateInfoFUCHSIA* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetMemoryZirconHandleFUCHSIA(VkDevice device, [NativeTypeName("const VkMemoryGetZirconHandleInfoFUCHSIA *")] VkMemoryGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, [NativeTypeName("zx_handle_t *")] uint* pZirconHandle);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetMemoryZirconHandlePropertiesFUCHSIA(VkDevice device, [NativeTypeName("VkExternalMemoryHandleTypeFlagBits")] VkExternalMemoryHandleTypeFlags handleType, [NativeTypeName("zx_handle_t")] uint zirconHandle, VkMemoryZirconHandlePropertiesFUCHSIA* pMemoryZirconHandleProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkImportSemaphoreZirconHandleFUCHSIA(VkDevice device, [NativeTypeName("const VkImportSemaphoreZirconHandleInfoFUCHSIA *")] VkImportSemaphoreZirconHandleInfoFUCHSIA* pImportSemaphoreZirconHandleInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetSemaphoreZirconHandleFUCHSIA(VkDevice device, [NativeTypeName("const VkSemaphoreGetZirconHandleInfoFUCHSIA *")] VkSemaphoreGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, [NativeTypeName("zx_handle_t *")] uint* pZirconHandle);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateBufferCollectionFUCHSIA(VkDevice device, [NativeTypeName("const VkBufferCollectionCreateInfoFUCHSIA *")] VkBufferCollectionCreateInfoFUCHSIA* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkBufferCollectionFUCHSIA* pCollection);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkSetBufferCollectionImageConstraintsFUCHSIA(VkDevice device, VkBufferCollectionFUCHSIA collection, [NativeTypeName("const VkImageConstraintsInfoFUCHSIA *")] VkImageConstraintsInfoFUCHSIA* pImageConstraintsInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkSetBufferCollectionBufferConstraintsFUCHSIA(VkDevice device, VkBufferCollectionFUCHSIA collection, [NativeTypeName("const VkBufferConstraintsInfoFUCHSIA *")] VkBufferConstraintsInfoFUCHSIA* pBufferConstraintsInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyBufferCollectionFUCHSIA(VkDevice device, VkBufferCollectionFUCHSIA collection, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetBufferCollectionPropertiesFUCHSIA(VkDevice device, VkBufferCollectionFUCHSIA collection, VkBufferCollectionPropertiesFUCHSIA* pProperties);
-
         [NativeTypeName("#define VK_FUCHSIA_imagepipe_surface 1")]
         public const int VK_FUCHSIA_imagepipe_surface = 1;
 

@@ -4,15 +4,11 @@
 // Original source is Copyright © 2015-2021 The Khronos Group Inc.
 
 using System;
-using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop.Vulkan
 {
-    public static unsafe partial class Vulkan
+    public static partial class Vulkan
     {
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateMetalSurfaceEXT(VkInstance instance, [NativeTypeName("const VkMetalSurfaceCreateInfoEXT *")] VkMetalSurfaceCreateInfoEXT* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface);
-
         [NativeTypeName("#define VK_EXT_metal_surface 1")]
         public const int VK_EXT_metal_surface = 1;
 
