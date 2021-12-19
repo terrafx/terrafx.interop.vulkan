@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vk_video/vulkan_video_codec_h265std.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
+// Ported from include/vk_video/vulkan_video_codec_h265std.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.198
 // Original source is Copyright © 2019-2021 The Khronos Group Inc.
 
 using System.Runtime.CompilerServices;
@@ -75,13 +75,52 @@ namespace TerraFX.Interop.Vulkan
             }
         }
 
-        [NativeTypeName("uint8_t")]
-        public byte fixed_pic_rate_general_flag;
+        [NativeTypeName("uint32_t : 8")]
+        public uint fixed_pic_rate_general_flag
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get
+            {
+                return (_bitfield >> 4) & 0xFFu;
+            }
 
-        [NativeTypeName("uint8_t")]
-        public byte fixed_pic_rate_within_cvs_flag;
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            set
+            {
+                _bitfield = (_bitfield & ~(0xFFu << 4)) | ((value & 0xFFu) << 4);
+            }
+        }
 
-        [NativeTypeName("uint8_t")]
-        public byte low_delay_hrd_flag;
+        [NativeTypeName("uint32_t : 8")]
+        public uint fixed_pic_rate_within_cvs_flag
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get
+            {
+                return (_bitfield >> 12) & 0xFFu;
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            set
+            {
+                _bitfield = (_bitfield & ~(0xFFu << 12)) | ((value & 0xFFu) << 12);
+            }
+        }
+
+        [NativeTypeName("uint32_t : 8")]
+        public uint low_delay_hrd_flag
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get
+            {
+                return (_bitfield >> 20) & 0xFFu;
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            set
+            {
+                _bitfield = (_bitfield & ~(0xFFu << 20)) | ((value & 0xFFu) << 20);
+            }
+        }
     }
 }

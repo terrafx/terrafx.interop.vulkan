@@ -2,7 +2,8 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace 
+TerraFX.Interop.Vulkan
 {
     public partial struct VkDescriptorPool : IComparable, IComparable<VkDescriptorPool>, IEquatable<VkDescriptorPool>, IFormattable
     {
@@ -69,7 +70,7 @@ namespace TerraFX.Interop.Vulkan
 
         public int CompareTo(object? obj)
         {
-            if (obj is VkDescriptorPool other)
+                if (obj is VkDescriptorPool other)
             {
                 return CompareTo(other);
             }

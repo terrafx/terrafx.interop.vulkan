@@ -2,7 +2,8 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace 
+TerraFX.Interop.Vulkan
 {
     public partial struct VkSwapchainKHR : IComparable, IComparable<VkSwapchainKHR>, IEquatable<VkSwapchainKHR>, IFormattable
     {
@@ -69,7 +70,7 @@ namespace TerraFX.Interop.Vulkan
 
         public int CompareTo(object? obj)
         {
-            if (obj is VkSwapchainKHR other)
+                if (obj is VkSwapchainKHR other)
             {
                 return CompareTo(other);
             }

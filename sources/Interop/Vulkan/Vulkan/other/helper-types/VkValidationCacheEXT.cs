@@ -2,7 +2,8 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace 
+TerraFX.Interop.Vulkan
 {
     public partial struct VkValidationCacheEXT : IComparable, IComparable<VkValidationCacheEXT>, IEquatable<VkValidationCacheEXT>, IFormattable
     {
@@ -69,7 +70,7 @@ namespace TerraFX.Interop.Vulkan
 
         public int CompareTo(object? obj)
         {
-            if (obj is VkValidationCacheEXT other)
+                if (obj is VkValidationCacheEXT other)
             {
                 return CompareTo(other);
             }

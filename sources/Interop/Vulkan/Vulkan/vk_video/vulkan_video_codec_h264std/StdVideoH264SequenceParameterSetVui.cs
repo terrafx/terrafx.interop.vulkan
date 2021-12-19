@@ -1,11 +1,11 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vk_video/vulkan_video_codec_h264std.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
+// Ported from include/vk_video/vulkan_video_codec_h264std.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.198
 // Original source is Copyright © 2019-2021 The Khronos Group Inc.
 
 namespace TerraFX.Interop.Vulkan
 {
-    public partial struct StdVideoH264SequenceParameterSetVui
+    public unsafe partial struct StdVideoH264SequenceParameterSetVui
     {
         public StdVideoH264AspectRatioIdc aspect_ratio_idc;
 
@@ -33,10 +33,10 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint time_scale;
 
-        public StdVideoH264HrdParameters hrd_parameters;
+        public StdVideoH264HrdParameters* pHrdParameters;
 
         [NativeTypeName("uint8_t")]
-        public byte num_reorder_frames;
+        public byte max_num_reorder_frames;
 
         [NativeTypeName("uint8_t")]
         public byte max_dec_frame_buffering;

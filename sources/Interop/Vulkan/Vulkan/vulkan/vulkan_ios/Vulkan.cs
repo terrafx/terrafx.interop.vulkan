@@ -1,18 +1,14 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_ios.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
+// Ported from include/vulkan/vulkan_ios.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.198
 // Original source is Copyright © 2015-2021 The Khronos Group Inc.
 
 using System;
-using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop.Vulkan
 {
-    public static unsafe partial class Vulkan
+    public static partial class Vulkan
     {
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateIOSSurfaceMVK(VkInstance instance, [NativeTypeName("const VkIOSSurfaceCreateInfoMVK *")] VkIOSSurfaceCreateInfoMVK* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface);
-
         [NativeTypeName("#define VK_MVK_ios_surface 1")]
         public const int VK_MVK_ios_surface = 1;
 

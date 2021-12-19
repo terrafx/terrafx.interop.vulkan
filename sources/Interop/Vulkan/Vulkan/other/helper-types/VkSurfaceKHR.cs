@@ -2,7 +2,8 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace 
+TerraFX.Interop.Vulkan
 {
     public partial struct VkSurfaceKHR : IComparable, IComparable<VkSurfaceKHR>, IEquatable<VkSurfaceKHR>, IFormattable
     {
@@ -69,7 +70,7 @@ namespace TerraFX.Interop.Vulkan
 
         public int CompareTo(object? obj)
         {
-            if (obj is VkSurfaceKHR other)
+                if (obj is VkSurfaceKHR other)
             {
                 return CompareTo(other);
             }

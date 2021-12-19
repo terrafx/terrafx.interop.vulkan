@@ -2,7 +2,8 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace 
+TerraFX.Interop.Vulkan
 {
     public partial struct VkSemaphore : IComparable, IComparable<VkSemaphore>, IEquatable<VkSemaphore>, IFormattable
     {
@@ -69,7 +70,7 @@ namespace TerraFX.Interop.Vulkan
 
         public int CompareTo(object? obj)
         {
-            if (obj is VkSemaphore other)
+                if (obj is VkSemaphore other)
             {
                 return CompareTo(other);
             }

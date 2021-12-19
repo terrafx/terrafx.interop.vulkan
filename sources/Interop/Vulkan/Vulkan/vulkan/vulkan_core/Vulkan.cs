@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.198
 // Original source is Copyright © 2015-2021 The Khronos Group Inc.
 
 using System;
@@ -616,117 +616,6 @@ namespace TerraFX.Interop.Vulkan
         public static extern VkResult vkCreateSharedSwapchainsKHR(VkDevice device, [NativeTypeName("uint32_t")] uint swapchainCount, [NativeTypeName("const VkSwapchainCreateInfoKHR *")] VkSwapchainCreateInfoKHR* pCreateInfos, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchains);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetPhysicalDeviceFeatures2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceFeatures2* pFeatures);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetPhysicalDeviceProperties2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceProperties2* pProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetPhysicalDeviceFormatProperties2KHR(VkPhysicalDevice physicalDevice, VkFormat format, VkFormatProperties2* pFormatProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPhysicalDeviceImageFormatProperties2KHR(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkPhysicalDeviceImageFormatInfo2 *")] VkPhysicalDeviceImageFormatInfo2* pImageFormatInfo, VkImageFormatProperties2* pImageFormatProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetPhysicalDeviceQueueFamilyProperties2KHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pQueueFamilyPropertyCount, VkQueueFamilyProperties2* pQueueFamilyProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetPhysicalDeviceMemoryProperties2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceMemoryProperties2* pMemoryProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetPhysicalDeviceSparseImageFormatProperties2KHR(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkPhysicalDeviceSparseImageFormatInfo2 *")] VkPhysicalDeviceSparseImageFormatInfo2* pFormatInfo, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkSparseImageFormatProperties2* pProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetDeviceGroupPeerMemoryFeaturesKHR(VkDevice device, [NativeTypeName("uint32_t")] uint heapIndex, [NativeTypeName("uint32_t")] uint localDeviceIndex, [NativeTypeName("uint32_t")] uint remoteDeviceIndex, VkPeerMemoryFeatureFlags* pPeerMemoryFeatures);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetDeviceMaskKHR(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint deviceMask);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDispatchBaseKHR(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint baseGroupX, [NativeTypeName("uint32_t")] uint baseGroupY, [NativeTypeName("uint32_t")] uint baseGroupZ, [NativeTypeName("uint32_t")] uint groupCountX, [NativeTypeName("uint32_t")] uint groupCountY, [NativeTypeName("uint32_t")] uint groupCountZ);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkTrimCommandPoolKHR(VkDevice device, VkCommandPool commandPool, [NativeTypeName("VkCommandPoolTrimFlags")] uint flags);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkEnumeratePhysicalDeviceGroupsKHR(VkInstance instance, [NativeTypeName("uint32_t *")] uint* pPhysicalDeviceGroupCount, VkPhysicalDeviceGroupProperties* pPhysicalDeviceGroupProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetPhysicalDeviceExternalBufferPropertiesKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkPhysicalDeviceExternalBufferInfo *")] VkPhysicalDeviceExternalBufferInfo* pExternalBufferInfo, VkExternalBufferProperties* pExternalBufferProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetMemoryFdKHR(VkDevice device, [NativeTypeName("const VkMemoryGetFdInfoKHR *")] VkMemoryGetFdInfoKHR* pGetFdInfo, int* pFd);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetMemoryFdPropertiesKHR(VkDevice device, [NativeTypeName("VkExternalMemoryHandleTypeFlagBits")] VkExternalMemoryHandleTypeFlags handleType, int fd, VkMemoryFdPropertiesKHR* pMemoryFdProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetPhysicalDeviceExternalSemaphorePropertiesKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkPhysicalDeviceExternalSemaphoreInfo *")] VkPhysicalDeviceExternalSemaphoreInfo* pExternalSemaphoreInfo, VkExternalSemaphoreProperties* pExternalSemaphoreProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkImportSemaphoreFdKHR(VkDevice device, [NativeTypeName("const VkImportSemaphoreFdInfoKHR *")] VkImportSemaphoreFdInfoKHR* pImportSemaphoreFdInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetSemaphoreFdKHR(VkDevice device, [NativeTypeName("const VkSemaphoreGetFdInfoKHR *")] VkSemaphoreGetFdInfoKHR* pGetFdInfo, int* pFd);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdPushDescriptorSetKHR(VkCommandBuffer commandBuffer, VkPipelineBindPoint pipelineBindPoint, VkPipelineLayout layout, [NativeTypeName("uint32_t")] uint set, [NativeTypeName("uint32_t")] uint descriptorWriteCount, [NativeTypeName("const VkWriteDescriptorSet *")] VkWriteDescriptorSet* pDescriptorWrites);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdPushDescriptorSetWithTemplateKHR(VkCommandBuffer commandBuffer, VkDescriptorUpdateTemplate descriptorUpdateTemplate, VkPipelineLayout layout, [NativeTypeName("uint32_t")] uint set, [NativeTypeName("const void *")] void* pData);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateDescriptorUpdateTemplateKHR(VkDevice device, [NativeTypeName("const VkDescriptorUpdateTemplateCreateInfo *")] VkDescriptorUpdateTemplateCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkDescriptorUpdateTemplate* pDescriptorUpdateTemplate);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyDescriptorUpdateTemplateKHR(VkDevice device, VkDescriptorUpdateTemplate descriptorUpdateTemplate, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkUpdateDescriptorSetWithTemplateKHR(VkDevice device, VkDescriptorSet descriptorSet, VkDescriptorUpdateTemplate descriptorUpdateTemplate, [NativeTypeName("const void *")] void* pData);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateRenderPass2KHR(VkDevice device, [NativeTypeName("const VkRenderPassCreateInfo2 *")] VkRenderPassCreateInfo2* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkRenderPass* pRenderPass);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBeginRenderPass2KHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkRenderPassBeginInfo *")] VkRenderPassBeginInfo* pRenderPassBegin, [NativeTypeName("const VkSubpassBeginInfo *")] VkSubpassBeginInfo* pSubpassBeginInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdNextSubpass2KHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkSubpassBeginInfo *")] VkSubpassBeginInfo* pSubpassBeginInfo, [NativeTypeName("const VkSubpassEndInfo *")] VkSubpassEndInfo* pSubpassEndInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdEndRenderPass2KHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkSubpassEndInfo *")] VkSubpassEndInfo* pSubpassEndInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetSwapchainStatusKHR(VkDevice device, VkSwapchainKHR swapchain);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetPhysicalDeviceExternalFencePropertiesKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkPhysicalDeviceExternalFenceInfo *")] VkPhysicalDeviceExternalFenceInfo* pExternalFenceInfo, VkExternalFenceProperties* pExternalFenceProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkImportFenceFdKHR(VkDevice device, [NativeTypeName("const VkImportFenceFdInfoKHR *")] VkImportFenceFdInfoKHR* pImportFenceFdInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetFenceFdKHR(VkDevice device, [NativeTypeName("const VkFenceGetFdInfoKHR *")] VkFenceGetFdInfoKHR* pGetFdInfo, int* pFd);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex, [NativeTypeName("uint32_t *")] uint* pCounterCount, VkPerformanceCounterKHR* pCounters, VkPerformanceCounterDescriptionKHR* pCounterDescriptions);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkQueryPoolPerformanceCreateInfoKHR *")] VkQueryPoolPerformanceCreateInfoKHR* pPerformanceQueryCreateInfo, [NativeTypeName("uint32_t *")] uint* pNumPasses);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkAcquireProfilingLockKHR(VkDevice device, [NativeTypeName("const VkAcquireProfilingLockInfoKHR *")] VkAcquireProfilingLockInfoKHR* pInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkReleaseProfilingLockKHR(VkDevice device);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPhysicalDeviceSurfaceCapabilities2KHR(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkPhysicalDeviceSurfaceInfo2KHR *")] VkPhysicalDeviceSurfaceInfo2KHR* pSurfaceInfo, VkSurfaceCapabilities2KHR* pSurfaceCapabilities);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPhysicalDeviceSurfaceFormats2KHR(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkPhysicalDeviceSurfaceInfo2KHR *")] VkPhysicalDeviceSurfaceInfo2KHR* pSurfaceInfo, [NativeTypeName("uint32_t *")] uint* pSurfaceFormatCount, VkSurfaceFormat2KHR* pSurfaceFormats);
-
-        [DllImport("vulkan", ExactSpelling = true)]
         public static extern VkResult vkGetPhysicalDeviceDisplayProperties2KHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkDisplayProperties2KHR* pProperties);
 
         [DllImport("vulkan", ExactSpelling = true)]
@@ -737,91 +626,6 @@ namespace TerraFX.Interop.Vulkan
 
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern VkResult vkGetDisplayPlaneCapabilities2KHR(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkDisplayPlaneInfo2KHR *")] VkDisplayPlaneInfo2KHR* pDisplayPlaneInfo, VkDisplayPlaneCapabilities2KHR* pCapabilities);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetImageMemoryRequirements2KHR(VkDevice device, [NativeTypeName("const VkImageMemoryRequirementsInfo2 *")] VkImageMemoryRequirementsInfo2* pInfo, VkMemoryRequirements2* pMemoryRequirements);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetBufferMemoryRequirements2KHR(VkDevice device, [NativeTypeName("const VkBufferMemoryRequirementsInfo2 *")] VkBufferMemoryRequirementsInfo2* pInfo, VkMemoryRequirements2* pMemoryRequirements);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetImageSparseMemoryRequirements2KHR(VkDevice device, [NativeTypeName("const VkImageSparseMemoryRequirementsInfo2 *")] VkImageSparseMemoryRequirementsInfo2* pInfo, [NativeTypeName("uint32_t *")] uint* pSparseMemoryRequirementCount, VkSparseImageMemoryRequirements2* pSparseMemoryRequirements);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateSamplerYcbcrConversionKHR(VkDevice device, [NativeTypeName("const VkSamplerYcbcrConversionCreateInfo *")] VkSamplerYcbcrConversionCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSamplerYcbcrConversion* pYcbcrConversion);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroySamplerYcbcrConversionKHR(VkDevice device, VkSamplerYcbcrConversion ycbcrConversion, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkBindBufferMemory2KHR(VkDevice device, [NativeTypeName("uint32_t")] uint bindInfoCount, [NativeTypeName("const VkBindBufferMemoryInfo *")] VkBindBufferMemoryInfo* pBindInfos);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkBindImageMemory2KHR(VkDevice device, [NativeTypeName("uint32_t")] uint bindInfoCount, [NativeTypeName("const VkBindImageMemoryInfo *")] VkBindImageMemoryInfo* pBindInfos);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetDescriptorSetLayoutSupportKHR(VkDevice device, [NativeTypeName("const VkDescriptorSetLayoutCreateInfo *")] VkDescriptorSetLayoutCreateInfo* pCreateInfo, VkDescriptorSetLayoutSupport* pSupport);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDrawIndirectCountKHR(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, VkBuffer countBuffer, [NativeTypeName("VkDeviceSize")] ulong countBufferOffset, [NativeTypeName("uint32_t")] uint maxDrawCount, [NativeTypeName("uint32_t")] uint stride);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDrawIndexedIndirectCountKHR(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, VkBuffer countBuffer, [NativeTypeName("VkDeviceSize")] ulong countBufferOffset, [NativeTypeName("uint32_t")] uint maxDrawCount, [NativeTypeName("uint32_t")] uint stride);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetSemaphoreCounterValueKHR(VkDevice device, VkSemaphore semaphore, [NativeTypeName("uint64_t *")] ulong* pValue);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkWaitSemaphoresKHR(VkDevice device, [NativeTypeName("const VkSemaphoreWaitInfo *")] VkSemaphoreWaitInfo* pWaitInfo, [NativeTypeName("uint64_t")] ulong timeout);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkSignalSemaphoreKHR(VkDevice device, [NativeTypeName("const VkSemaphoreSignalInfo *")] VkSemaphoreSignalInfo* pSignalInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPhysicalDeviceFragmentShadingRatesKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pFragmentShadingRateCount, VkPhysicalDeviceFragmentShadingRateKHR* pFragmentShadingRates);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetFragmentShadingRateKHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkExtent2D *")] VkExtent2D* pFragmentSize, [NativeTypeName("const VkFragmentShadingRateCombinerOpKHR [2]")] VkFragmentShadingRateCombinerOpKHR* combinerOps);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkWaitForPresentKHR(VkDevice device, VkSwapchainKHR swapchain, [NativeTypeName("uint64_t")] ulong presentId, [NativeTypeName("uint64_t")] ulong timeout);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        [return: NativeTypeName("VkDeviceAddress")]
-        public static extern ulong vkGetBufferDeviceAddressKHR(VkDevice device, [NativeTypeName("const VkBufferDeviceAddressInfo *")] VkBufferDeviceAddressInfo* pInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        [return: NativeTypeName("uint64_t")]
-        public static extern ulong vkGetBufferOpaqueCaptureAddressKHR(VkDevice device, [NativeTypeName("const VkBufferDeviceAddressInfo *")] VkBufferDeviceAddressInfo* pInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        [return: NativeTypeName("uint64_t")]
-        public static extern ulong vkGetDeviceMemoryOpaqueCaptureAddressKHR(VkDevice device, [NativeTypeName("const VkDeviceMemoryOpaqueCaptureAddressInfo *")] VkDeviceMemoryOpaqueCaptureAddressInfo* pInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateDeferredOperationKHR(VkDevice device, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkDeferredOperationKHR* pDeferredOperation);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyDeferredOperationKHR(VkDevice device, VkDeferredOperationKHR operation, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        [return: NativeTypeName("uint32_t")]
-        public static extern uint vkGetDeferredOperationMaxConcurrencyKHR(VkDevice device, VkDeferredOperationKHR operation);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetDeferredOperationResultKHR(VkDevice device, VkDeferredOperationKHR operation);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkDeferredOperationJoinKHR(VkDevice device, VkDeferredOperationKHR operation);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPipelineExecutablePropertiesKHR(VkDevice device, [NativeTypeName("const VkPipelineInfoKHR *")] VkPipelineInfoKHR* pPipelineInfo, [NativeTypeName("uint32_t *")] uint* pExecutableCount, VkPipelineExecutablePropertiesKHR* pProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPipelineExecutableStatisticsKHR(VkDevice device, [NativeTypeName("const VkPipelineExecutableInfoKHR *")] VkPipelineExecutableInfoKHR* pExecutableInfo, [NativeTypeName("uint32_t *")] uint* pStatisticCount, VkPipelineExecutableStatisticKHR* pStatistics);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPipelineExecutableInternalRepresentationsKHR(VkDevice device, [NativeTypeName("const VkPipelineExecutableInfoKHR *")] VkPipelineExecutableInfoKHR* pExecutableInfo, [NativeTypeName("uint32_t *")] uint* pInternalRepresentationCount, VkPipelineExecutableInternalRepresentationKHR* pInternalRepresentations);
 
         [NativeTypeName("const VkPipelineStageFlagBits2KHR")]
         public const ulong VK_PIPELINE_STAGE_2_NONE_KHR = 0UL;
@@ -1051,534 +855,95 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("const VkAccessFlagBits2KHR")]
         public const ulong VK_ACCESS_2_INVOCATION_MASK_READ_BIT_HUAWEI = 0x8000000000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetEvent2KHR(VkCommandBuffer commandBuffer, VkEvent @event, [NativeTypeName("const VkDependencyInfoKHR *")] VkDependencyInfoKHR* pDependencyInfo);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT_KHR = 0x00000001UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdResetEvent2KHR(VkCommandBuffer commandBuffer, VkEvent @event, [NativeTypeName("VkPipelineStageFlags2KHR")] ulong stageMask);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_STORAGE_IMAGE_BIT_KHR = 0x00000002UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdWaitEvents2KHR(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint eventCount, [NativeTypeName("const VkEvent *")] VkEvent* pEvents, [NativeTypeName("const VkDependencyInfoKHR *")] VkDependencyInfoKHR* pDependencyInfos);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_STORAGE_IMAGE_ATOMIC_BIT_KHR = 0x00000004UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdPipelineBarrier2KHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkDependencyInfoKHR *")] VkDependencyInfoKHR* pDependencyInfo);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_UNIFORM_TEXEL_BUFFER_BIT_KHR = 0x00000008UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdWriteTimestamp2KHR(VkCommandBuffer commandBuffer, [NativeTypeName("VkPipelineStageFlags2KHR")] ulong stage, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint query);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_STORAGE_TEXEL_BUFFER_BIT_KHR = 0x00000010UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkQueueSubmit2KHR(VkQueue queue, [NativeTypeName("uint32_t")] uint submitCount, [NativeTypeName("const VkSubmitInfo2KHR *")] VkSubmitInfo2KHR* pSubmits, VkFence fence);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_STORAGE_TEXEL_BUFFER_ATOMIC_BIT_KHR = 0x00000020UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdWriteBufferMarker2AMD(VkCommandBuffer commandBuffer, [NativeTypeName("VkPipelineStageFlags2KHR")] ulong stage, VkBuffer dstBuffer, [NativeTypeName("VkDeviceSize")] ulong dstOffset, [NativeTypeName("uint32_t")] uint marker);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_VERTEX_BUFFER_BIT_KHR = 0x00000040UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetQueueCheckpointData2NV(VkQueue queue, [NativeTypeName("uint32_t *")] uint* pCheckpointDataCount, VkCheckpointData2NV* pCheckpointData);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BIT_KHR = 0x00000080UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdCopyBuffer2KHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCopyBufferInfo2KHR *")] VkCopyBufferInfo2KHR* pCopyBufferInfo);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BLEND_BIT_KHR = 0x00000100UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdCopyImage2KHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCopyImageInfo2KHR *")] VkCopyImageInfo2KHR* pCopyImageInfo);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_DEPTH_STENCIL_ATTACHMENT_BIT_KHR = 0x00000200UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdCopyBufferToImage2KHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCopyBufferToImageInfo2KHR *")] VkCopyBufferToImageInfo2KHR* pCopyBufferToImageInfo);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_BLIT_SRC_BIT_KHR = 0x00000400UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdCopyImageToBuffer2KHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCopyImageToBufferInfo2KHR *")] VkCopyImageToBufferInfo2KHR* pCopyImageToBufferInfo);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_BLIT_DST_BIT_KHR = 0x00000800UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBlitImage2KHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkBlitImageInfo2KHR *")] VkBlitImageInfo2KHR* pBlitImageInfo);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_LINEAR_BIT_KHR = 0x00001000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdResolveImage2KHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkResolveImageInfo2KHR *")] VkResolveImageInfo2KHR* pResolveImageInfo);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_CUBIC_BIT_EXT = 0x00002000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateDebugReportCallbackEXT(VkInstance instance, [NativeTypeName("const VkDebugReportCallbackCreateInfoEXT *")] VkDebugReportCallbackCreateInfoEXT* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkDebugReportCallbackEXT* pCallback);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_TRANSFER_SRC_BIT_KHR = 0x00004000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyDebugReportCallbackEXT(VkInstance instance, VkDebugReportCallbackEXT callback, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_TRANSFER_DST_BIT_KHR = 0x00008000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDebugReportMessageEXT(VkInstance instance, VkDebugReportFlagsEXT flags, VkDebugReportObjectTypeEXT objectType, [NativeTypeName("uint64_t")] ulong @object, [NativeTypeName("size_t")] nuint location, [NativeTypeName("int32_t")] int messageCode, [NativeTypeName("const char *")] sbyte* pLayerPrefix, [NativeTypeName("const char *")] sbyte* pMessage);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_MINMAX_BIT_KHR = 0x00010000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkDebugMarkerSetObjectTagEXT(VkDevice device, [NativeTypeName("const VkDebugMarkerObjectTagInfoEXT *")] VkDebugMarkerObjectTagInfoEXT* pTagInfo);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_MIDPOINT_CHROMA_SAMPLES_BIT_KHR = 0x00020000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkDebugMarkerSetObjectNameEXT(VkDevice device, [NativeTypeName("const VkDebugMarkerObjectNameInfoEXT *")] VkDebugMarkerObjectNameInfoEXT* pNameInfo);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_BIT_KHR = 0x00040000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDebugMarkerBeginEXT(VkCommandBuffer commandBuffer, [NativeTypeName("const VkDebugMarkerMarkerInfoEXT *")] VkDebugMarkerMarkerInfoEXT* pMarkerInfo);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_BIT_KHR = 0x00080000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDebugMarkerEndEXT(VkCommandBuffer commandBuffer);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_BIT_KHR = 0x00100000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDebugMarkerInsertEXT(VkCommandBuffer commandBuffer, [NativeTypeName("const VkDebugMarkerMarkerInfoEXT *")] VkDebugMarkerMarkerInfoEXT* pMarkerInfo);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_BIT_KHR = 0x00200000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBindTransformFeedbackBuffersEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstBinding, [NativeTypeName("uint32_t")] uint bindingCount, [NativeTypeName("const VkBuffer *")] VkBuffer* pBuffers, [NativeTypeName("const VkDeviceSize *")] ulong* pOffsets, [NativeTypeName("const VkDeviceSize *")] ulong* pSizes);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_DISJOINT_BIT_KHR = 0x00400000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBeginTransformFeedbackEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstCounterBuffer, [NativeTypeName("uint32_t")] uint counterBufferCount, [NativeTypeName("const VkBuffer *")] VkBuffer* pCounterBuffers, [NativeTypeName("const VkDeviceSize *")] ulong* pCounterBufferOffsets);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_COSITED_CHROMA_SAMPLES_BIT_KHR = 0x00800000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdEndTransformFeedbackEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstCounterBuffer, [NativeTypeName("uint32_t")] uint counterBufferCount, [NativeTypeName("const VkBuffer *")] VkBuffer* pCounterBuffers, [NativeTypeName("const VkDeviceSize *")] ulong* pCounterBufferOffsets);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT_KHR = 0x80000000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBeginQueryIndexedEXT(VkCommandBuffer commandBuffer, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint query, VkQueryControlFlags flags, [NativeTypeName("uint32_t")] uint index);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_STORAGE_WRITE_WITHOUT_FORMAT_BIT_KHR = 0x100000000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdEndQueryIndexedEXT(VkCommandBuffer commandBuffer, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint query, [NativeTypeName("uint32_t")] uint index);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_DEPTH_COMPARISON_BIT_KHR = 0x200000000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDrawIndirectByteCountEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint instanceCount, [NativeTypeName("uint32_t")] uint firstInstance, VkBuffer counterBuffer, [NativeTypeName("VkDeviceSize")] ulong counterBufferOffset, [NativeTypeName("uint32_t")] uint counterOffset, [NativeTypeName("uint32_t")] uint vertexStride);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_ACCELERATION_STRUCTURE_VERTEX_BUFFER_BIT_KHR = 0x20000000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateCuModuleNVX(VkDevice device, [NativeTypeName("const VkCuModuleCreateInfoNVX *")] VkCuModuleCreateInfoNVX* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkCuModuleNVX* pModule);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_FRAGMENT_DENSITY_MAP_BIT_EXT = 0x01000000UL;
 
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateCuFunctionNVX(VkDevice device, [NativeTypeName("const VkCuFunctionCreateInfoNVX *")] VkCuFunctionCreateInfoNVX* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkCuFunctionNVX* pFunction);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyCuModuleNVX(VkDevice device, VkCuModuleNVX module, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyCuFunctionNVX(VkDevice device, VkCuFunctionNVX function, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdCuLaunchKernelNVX(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCuLaunchInfoNVX *")] VkCuLaunchInfoNVX* pLaunchInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        [return: NativeTypeName("uint32_t")]
-        public static extern uint vkGetImageViewHandleNVX(VkDevice device, [NativeTypeName("const VkImageViewHandleInfoNVX *")] VkImageViewHandleInfoNVX* pInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetImageViewAddressNVX(VkDevice device, VkImageView imageView, VkImageViewAddressPropertiesNVX* pProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDrawIndirectCountAMD(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, VkBuffer countBuffer, [NativeTypeName("VkDeviceSize")] ulong countBufferOffset, [NativeTypeName("uint32_t")] uint maxDrawCount, [NativeTypeName("uint32_t")] uint stride);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDrawIndexedIndirectCountAMD(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, VkBuffer countBuffer, [NativeTypeName("VkDeviceSize")] ulong countBufferOffset, [NativeTypeName("uint32_t")] uint maxDrawCount, [NativeTypeName("uint32_t")] uint stride);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetShaderInfoAMD(VkDevice device, VkPipeline pipeline, [NativeTypeName("VkShaderStageFlagBits")] VkShaderStageFlags shaderStage, VkShaderInfoTypeAMD infoType, [NativeTypeName("size_t *")] nuint* pInfoSize, void* pInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPhysicalDeviceExternalImageFormatPropertiesNV(VkPhysicalDevice physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, VkImageUsageFlags usage, VkImageCreateFlags flags, VkExternalMemoryHandleTypeFlagsNV externalHandleType, VkExternalImageFormatPropertiesNV* pExternalImageFormatProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBeginConditionalRenderingEXT(VkCommandBuffer commandBuffer, [NativeTypeName("const VkConditionalRenderingBeginInfoEXT *")] VkConditionalRenderingBeginInfoEXT* pConditionalRenderingBegin);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdEndConditionalRenderingEXT(VkCommandBuffer commandBuffer);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetViewportWScalingNV(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstViewport, [NativeTypeName("uint32_t")] uint viewportCount, [NativeTypeName("const VkViewportWScalingNV *")] VkViewportWScalingNV* pViewportWScalings);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkReleaseDisplayEXT(VkPhysicalDevice physicalDevice, VkDisplayKHR display);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPhysicalDeviceSurfaceCapabilities2EXT(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkSurfaceCapabilities2EXT* pSurfaceCapabilities);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkDisplayPowerControlEXT(VkDevice device, VkDisplayKHR display, [NativeTypeName("const VkDisplayPowerInfoEXT *")] VkDisplayPowerInfoEXT* pDisplayPowerInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkRegisterDeviceEventEXT(VkDevice device, [NativeTypeName("const VkDeviceEventInfoEXT *")] VkDeviceEventInfoEXT* pDeviceEventInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkFence* pFence);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkRegisterDisplayEventEXT(VkDevice device, VkDisplayKHR display, [NativeTypeName("const VkDisplayEventInfoEXT *")] VkDisplayEventInfoEXT* pDisplayEventInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkFence* pFence);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetSwapchainCounterEXT(VkDevice device, VkSwapchainKHR swapchain, [NativeTypeName("VkSurfaceCounterFlagBitsEXT")] VkSurfaceCounterFlagsEXT counter, [NativeTypeName("uint64_t *")] ulong* pCounterValue);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetRefreshCycleDurationGOOGLE(VkDevice device, VkSwapchainKHR swapchain, VkRefreshCycleDurationGOOGLE* pDisplayTimingProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPastPresentationTimingGOOGLE(VkDevice device, VkSwapchainKHR swapchain, [NativeTypeName("uint32_t *")] uint* pPresentationTimingCount, VkPastPresentationTimingGOOGLE* pPresentationTimings);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetDiscardRectangleEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstDiscardRectangle, [NativeTypeName("uint32_t")] uint discardRectangleCount, [NativeTypeName("const VkRect2D *")] VkRect2D* pDiscardRectangles);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkSetHdrMetadataEXT(VkDevice device, [NativeTypeName("uint32_t")] uint swapchainCount, [NativeTypeName("const VkSwapchainKHR *")] VkSwapchainKHR* pSwapchains, [NativeTypeName("const VkHdrMetadataEXT *")] VkHdrMetadataEXT* pMetadata);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkSetDebugUtilsObjectNameEXT(VkDevice device, [NativeTypeName("const VkDebugUtilsObjectNameInfoEXT *")] VkDebugUtilsObjectNameInfoEXT* pNameInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkSetDebugUtilsObjectTagEXT(VkDevice device, [NativeTypeName("const VkDebugUtilsObjectTagInfoEXT *")] VkDebugUtilsObjectTagInfoEXT* pTagInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkQueueBeginDebugUtilsLabelEXT(VkQueue queue, [NativeTypeName("const VkDebugUtilsLabelEXT *")] VkDebugUtilsLabelEXT* pLabelInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkQueueEndDebugUtilsLabelEXT(VkQueue queue);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkQueueInsertDebugUtilsLabelEXT(VkQueue queue, [NativeTypeName("const VkDebugUtilsLabelEXT *")] VkDebugUtilsLabelEXT* pLabelInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBeginDebugUtilsLabelEXT(VkCommandBuffer commandBuffer, [NativeTypeName("const VkDebugUtilsLabelEXT *")] VkDebugUtilsLabelEXT* pLabelInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdEndDebugUtilsLabelEXT(VkCommandBuffer commandBuffer);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdInsertDebugUtilsLabelEXT(VkCommandBuffer commandBuffer, [NativeTypeName("const VkDebugUtilsLabelEXT *")] VkDebugUtilsLabelEXT* pLabelInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateDebugUtilsMessengerEXT(VkInstance instance, [NativeTypeName("const VkDebugUtilsMessengerCreateInfoEXT *")] VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkDebugUtilsMessengerEXT* pMessenger);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerEXT messenger, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkSubmitDebugUtilsMessageEXT(VkInstance instance, [NativeTypeName("VkDebugUtilsMessageSeverityFlagBitsEXT")] VkDebugUtilsMessageSeverityFlagsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageTypes, [NativeTypeName("const VkDebugUtilsMessengerCallbackDataEXT *")] VkDebugUtilsMessengerCallbackDataEXT* pCallbackData);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetSampleLocationsEXT(VkCommandBuffer commandBuffer, [NativeTypeName("const VkSampleLocationsInfoEXT *")] VkSampleLocationsInfoEXT* pSampleLocationsInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetPhysicalDeviceMultisamplePropertiesEXT(VkPhysicalDevice physicalDevice, [NativeTypeName("VkSampleCountFlagBits")] VkSampleCountFlags samples, VkMultisamplePropertiesEXT* pMultisampleProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetImageDrmFormatModifierPropertiesEXT(VkDevice device, VkImage image, VkImageDrmFormatModifierPropertiesEXT* pProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateValidationCacheEXT(VkDevice device, [NativeTypeName("const VkValidationCacheCreateInfoEXT *")] VkValidationCacheCreateInfoEXT* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkValidationCacheEXT* pValidationCache);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyValidationCacheEXT(VkDevice device, VkValidationCacheEXT validationCache, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkMergeValidationCachesEXT(VkDevice device, VkValidationCacheEXT dstCache, [NativeTypeName("uint32_t")] uint srcCacheCount, [NativeTypeName("const VkValidationCacheEXT *")] VkValidationCacheEXT* pSrcCaches);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetValidationCacheDataEXT(VkDevice device, VkValidationCacheEXT validationCache, [NativeTypeName("size_t *")] nuint* pDataSize, void* pData);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBindShadingRateImageNV(VkCommandBuffer commandBuffer, VkImageView imageView, VkImageLayout imageLayout);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetViewportShadingRatePaletteNV(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstViewport, [NativeTypeName("uint32_t")] uint viewportCount, [NativeTypeName("const VkShadingRatePaletteNV *")] VkShadingRatePaletteNV* pShadingRatePalettes);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetCoarseSampleOrderNV(VkCommandBuffer commandBuffer, VkCoarseSampleOrderTypeNV sampleOrderType, [NativeTypeName("uint32_t")] uint customSampleOrderCount, [NativeTypeName("const VkCoarseSampleOrderCustomNV *")] VkCoarseSampleOrderCustomNV* pCustomSampleOrders);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateAccelerationStructureNV(VkDevice device, [NativeTypeName("const VkAccelerationStructureCreateInfoNV *")] VkAccelerationStructureCreateInfoNV* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkAccelerationStructureNV* pAccelerationStructure);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyAccelerationStructureNV(VkDevice device, VkAccelerationStructureNV accelerationStructure, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetAccelerationStructureMemoryRequirementsNV(VkDevice device, [NativeTypeName("const VkAccelerationStructureMemoryRequirementsInfoNV *")] VkAccelerationStructureMemoryRequirementsInfoNV* pInfo, [NativeTypeName("VkMemoryRequirements2KHR *")] VkMemoryRequirements2* pMemoryRequirements);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkBindAccelerationStructureMemoryNV(VkDevice device, [NativeTypeName("uint32_t")] uint bindInfoCount, [NativeTypeName("const VkBindAccelerationStructureMemoryInfoNV *")] VkBindAccelerationStructureMemoryInfoNV* pBindInfos);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBuildAccelerationStructureNV(VkCommandBuffer commandBuffer, [NativeTypeName("const VkAccelerationStructureInfoNV *")] VkAccelerationStructureInfoNV* pInfo, VkBuffer instanceData, [NativeTypeName("VkDeviceSize")] ulong instanceOffset, VkBool32 update, VkAccelerationStructureNV dst, VkAccelerationStructureNV src, VkBuffer scratch, [NativeTypeName("VkDeviceSize")] ulong scratchOffset);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdCopyAccelerationStructureNV(VkCommandBuffer commandBuffer, VkAccelerationStructureNV dst, VkAccelerationStructureNV src, VkCopyAccelerationStructureModeKHR mode);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdTraceRaysNV(VkCommandBuffer commandBuffer, VkBuffer raygenShaderBindingTableBuffer, [NativeTypeName("VkDeviceSize")] ulong raygenShaderBindingOffset, VkBuffer missShaderBindingTableBuffer, [NativeTypeName("VkDeviceSize")] ulong missShaderBindingOffset, [NativeTypeName("VkDeviceSize")] ulong missShaderBindingStride, VkBuffer hitShaderBindingTableBuffer, [NativeTypeName("VkDeviceSize")] ulong hitShaderBindingOffset, [NativeTypeName("VkDeviceSize")] ulong hitShaderBindingStride, VkBuffer callableShaderBindingTableBuffer, [NativeTypeName("VkDeviceSize")] ulong callableShaderBindingOffset, [NativeTypeName("VkDeviceSize")] ulong callableShaderBindingStride, [NativeTypeName("uint32_t")] uint width, [NativeTypeName("uint32_t")] uint height, [NativeTypeName("uint32_t")] uint depth);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateRayTracingPipelinesNV(VkDevice device, VkPipelineCache pipelineCache, [NativeTypeName("uint32_t")] uint createInfoCount, [NativeTypeName("const VkRayTracingPipelineCreateInfoNV *")] VkRayTracingPipelineCreateInfoNV* pCreateInfos, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkPipeline* pPipelines);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetRayTracingShaderGroupHandlesKHR(VkDevice device, VkPipeline pipeline, [NativeTypeName("uint32_t")] uint firstGroup, [NativeTypeName("uint32_t")] uint groupCount, [NativeTypeName("size_t")] nuint dataSize, void* pData);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetRayTracingShaderGroupHandlesNV(VkDevice device, VkPipeline pipeline, [NativeTypeName("uint32_t")] uint firstGroup, [NativeTypeName("uint32_t")] uint groupCount, [NativeTypeName("size_t")] nuint dataSize, void* pData);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetAccelerationStructureHandleNV(VkDevice device, VkAccelerationStructureNV accelerationStructure, [NativeTypeName("size_t")] nuint dataSize, void* pData);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdWriteAccelerationStructuresPropertiesNV(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint accelerationStructureCount, [NativeTypeName("const VkAccelerationStructureNV *")] VkAccelerationStructureNV* pAccelerationStructures, VkQueryType queryType, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint firstQuery);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCompileDeferredNV(VkDevice device, VkPipeline pipeline, [NativeTypeName("uint32_t")] uint shader);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetMemoryHostPointerPropertiesEXT(VkDevice device, [NativeTypeName("VkExternalMemoryHandleTypeFlagBits")] VkExternalMemoryHandleTypeFlags handleType, [NativeTypeName("const void *")] void* pHostPointer, VkMemoryHostPointerPropertiesEXT* pMemoryHostPointerProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdWriteBufferMarkerAMD(VkCommandBuffer commandBuffer, [NativeTypeName("VkPipelineStageFlagBits")] VkPipelineStageFlags pipelineStage, VkBuffer dstBuffer, [NativeTypeName("VkDeviceSize")] ulong dstOffset, [NativeTypeName("uint32_t")] uint marker);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPhysicalDeviceCalibrateableTimeDomainsEXT(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pTimeDomainCount, VkTimeDomainEXT* pTimeDomains);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetCalibratedTimestampsEXT(VkDevice device, [NativeTypeName("uint32_t")] uint timestampCount, [NativeTypeName("const VkCalibratedTimestampInfoEXT *")] VkCalibratedTimestampInfoEXT* pTimestampInfos, [NativeTypeName("uint64_t *")] ulong* pTimestamps, [NativeTypeName("uint64_t *")] ulong* pMaxDeviation);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDrawMeshTasksNV(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint taskCount, [NativeTypeName("uint32_t")] uint firstTask);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDrawMeshTasksIndirectNV(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, [NativeTypeName("uint32_t")] uint drawCount, [NativeTypeName("uint32_t")] uint stride);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDrawMeshTasksIndirectCountNV(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, VkBuffer countBuffer, [NativeTypeName("VkDeviceSize")] ulong countBufferOffset, [NativeTypeName("uint32_t")] uint maxDrawCount, [NativeTypeName("uint32_t")] uint stride);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetExclusiveScissorNV(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstExclusiveScissor, [NativeTypeName("uint32_t")] uint exclusiveScissorCount, [NativeTypeName("const VkRect2D *")] VkRect2D* pExclusiveScissors);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetCheckpointNV(VkCommandBuffer commandBuffer, [NativeTypeName("const void *")] void* pCheckpointMarker);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetQueueCheckpointDataNV(VkQueue queue, [NativeTypeName("uint32_t *")] uint* pCheckpointDataCount, VkCheckpointDataNV* pCheckpointData);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkInitializePerformanceApiINTEL(VkDevice device, [NativeTypeName("const VkInitializePerformanceApiInfoINTEL *")] VkInitializePerformanceApiInfoINTEL* pInitializeInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkUninitializePerformanceApiINTEL(VkDevice device);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCmdSetPerformanceMarkerINTEL(VkCommandBuffer commandBuffer, [NativeTypeName("const VkPerformanceMarkerInfoINTEL *")] VkPerformanceMarkerInfoINTEL* pMarkerInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCmdSetPerformanceStreamMarkerINTEL(VkCommandBuffer commandBuffer, [NativeTypeName("const VkPerformanceStreamMarkerInfoINTEL *")] VkPerformanceStreamMarkerInfoINTEL* pMarkerInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCmdSetPerformanceOverrideINTEL(VkCommandBuffer commandBuffer, [NativeTypeName("const VkPerformanceOverrideInfoINTEL *")] VkPerformanceOverrideInfoINTEL* pOverrideInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkAcquirePerformanceConfigurationINTEL(VkDevice device, [NativeTypeName("const VkPerformanceConfigurationAcquireInfoINTEL *")] VkPerformanceConfigurationAcquireInfoINTEL* pAcquireInfo, VkPerformanceConfigurationINTEL* pConfiguration);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkReleasePerformanceConfigurationINTEL(VkDevice device, VkPerformanceConfigurationINTEL configuration);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkQueueSetPerformanceConfigurationINTEL(VkQueue queue, VkPerformanceConfigurationINTEL configuration);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPerformanceParameterINTEL(VkDevice device, VkPerformanceParameterTypeINTEL parameter, VkPerformanceValueINTEL* pValue);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkSetLocalDimmingAMD(VkDevice device, VkSwapchainKHR swapChain, VkBool32 localDimmingEnable);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        [return: NativeTypeName("VkDeviceAddress")]
-        public static extern ulong vkGetBufferDeviceAddressEXT(VkDevice device, [NativeTypeName("const VkBufferDeviceAddressInfo *")] VkBufferDeviceAddressInfo* pInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPhysicalDeviceToolPropertiesEXT(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pToolCount, VkPhysicalDeviceToolPropertiesEXT* pToolProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPhysicalDeviceCooperativeMatrixPropertiesNV(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkCooperativeMatrixPropertiesNV* pProperties);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pCombinationCount, VkFramebufferMixedSamplesCombinationNV* pCombinations);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateHeadlessSurfaceEXT(VkInstance instance, [NativeTypeName("const VkHeadlessSurfaceCreateInfoEXT *")] VkHeadlessSurfaceCreateInfoEXT* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetLineStippleEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint lineStippleFactor, [NativeTypeName("uint16_t")] ushort lineStipplePattern);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkResetQueryPoolEXT(VkDevice device, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint firstQuery, [NativeTypeName("uint32_t")] uint queryCount);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetCullModeEXT(VkCommandBuffer commandBuffer, VkCullModeFlags cullMode);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetFrontFaceEXT(VkCommandBuffer commandBuffer, VkFrontFace frontFace);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetPrimitiveTopologyEXT(VkCommandBuffer commandBuffer, VkPrimitiveTopology primitiveTopology);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetViewportWithCountEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint viewportCount, [NativeTypeName("const VkViewport *")] VkViewport* pViewports);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetScissorWithCountEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint scissorCount, [NativeTypeName("const VkRect2D *")] VkRect2D* pScissors);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBindVertexBuffers2EXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstBinding, [NativeTypeName("uint32_t")] uint bindingCount, [NativeTypeName("const VkBuffer *")] VkBuffer* pBuffers, [NativeTypeName("const VkDeviceSize *")] ulong* pOffsets, [NativeTypeName("const VkDeviceSize *")] ulong* pSizes, [NativeTypeName("const VkDeviceSize *")] ulong* pStrides);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetDepthTestEnableEXT(VkCommandBuffer commandBuffer, VkBool32 depthTestEnable);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetDepthWriteEnableEXT(VkCommandBuffer commandBuffer, VkBool32 depthWriteEnable);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetDepthCompareOpEXT(VkCommandBuffer commandBuffer, VkCompareOp depthCompareOp);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetDepthBoundsTestEnableEXT(VkCommandBuffer commandBuffer, VkBool32 depthBoundsTestEnable);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetStencilTestEnableEXT(VkCommandBuffer commandBuffer, VkBool32 stencilTestEnable);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetStencilOpEXT(VkCommandBuffer commandBuffer, VkStencilFaceFlags faceMask, VkStencilOp failOp, VkStencilOp passOp, VkStencilOp depthFailOp, VkCompareOp compareOp);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetGeneratedCommandsMemoryRequirementsNV(VkDevice device, [NativeTypeName("const VkGeneratedCommandsMemoryRequirementsInfoNV *")] VkGeneratedCommandsMemoryRequirementsInfoNV* pInfo, VkMemoryRequirements2* pMemoryRequirements);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdPreprocessGeneratedCommandsNV(VkCommandBuffer commandBuffer, [NativeTypeName("const VkGeneratedCommandsInfoNV *")] VkGeneratedCommandsInfoNV* pGeneratedCommandsInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdExecuteGeneratedCommandsNV(VkCommandBuffer commandBuffer, VkBool32 isPreprocessed, [NativeTypeName("const VkGeneratedCommandsInfoNV *")] VkGeneratedCommandsInfoNV* pGeneratedCommandsInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBindPipelineShaderGroupNV(VkCommandBuffer commandBuffer, VkPipelineBindPoint pipelineBindPoint, VkPipeline pipeline, [NativeTypeName("uint32_t")] uint groupIndex);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateIndirectCommandsLayoutNV(VkDevice device, [NativeTypeName("const VkIndirectCommandsLayoutCreateInfoNV *")] VkIndirectCommandsLayoutCreateInfoNV* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkIndirectCommandsLayoutNV* pIndirectCommandsLayout);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyIndirectCommandsLayoutNV(VkDevice device, VkIndirectCommandsLayoutNV indirectCommandsLayout, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkAcquireDrmDisplayEXT(VkPhysicalDevice physicalDevice, [NativeTypeName("int32_t")] int drmFd, VkDisplayKHR display);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetDrmDisplayEXT(VkPhysicalDevice physicalDevice, [NativeTypeName("int32_t")] int drmFd, [NativeTypeName("uint32_t")] uint connectorId, VkDisplayKHR* display);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreatePrivateDataSlotEXT(VkDevice device, [NativeTypeName("const VkPrivateDataSlotCreateInfoEXT *")] VkPrivateDataSlotCreateInfoEXT* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkPrivateDataSlotEXT* pPrivateDataSlot);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyPrivateDataSlotEXT(VkDevice device, VkPrivateDataSlotEXT privateDataSlot, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkSetPrivateDataEXT(VkDevice device, VkObjectType objectType, [NativeTypeName("uint64_t")] ulong objectHandle, VkPrivateDataSlotEXT privateDataSlot, [NativeTypeName("uint64_t")] ulong data);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetPrivateDataEXT(VkDevice device, VkObjectType objectType, [NativeTypeName("uint64_t")] ulong objectHandle, VkPrivateDataSlotEXT privateDataSlot, [NativeTypeName("uint64_t *")] ulong* pData);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetFragmentShadingRateEnumNV(VkCommandBuffer commandBuffer, VkFragmentShadingRateNV shadingRate, [NativeTypeName("const VkFragmentShadingRateCombinerOpKHR [2]")] VkFragmentShadingRateCombinerOpKHR* combinerOps);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkAcquireWinrtDisplayNV(VkPhysicalDevice physicalDevice, VkDisplayKHR display);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetWinrtDisplayNV(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t")] uint deviceRelativeId, VkDisplayKHR* pDisplay);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetVertexInputEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint vertexBindingDescriptionCount, [NativeTypeName("const VkVertexInputBindingDescription2EXT *")] VkVertexInputBindingDescription2EXT* pVertexBindingDescriptions, [NativeTypeName("uint32_t")] uint vertexAttributeDescriptionCount, [NativeTypeName("const VkVertexInputAttributeDescription2EXT *")] VkVertexInputAttributeDescription2EXT* pVertexAttributeDescriptions);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI(VkDevice device, VkRenderPass renderpass, VkExtent2D* pMaxWorkgroupSize);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSubpassShadingHUAWEI(VkCommandBuffer commandBuffer);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBindInvocationMaskHUAWEI(VkCommandBuffer commandBuffer, VkImageView imageView, VkImageLayout imageLayout);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetMemoryRemoteAddressNV(VkDevice device, [NativeTypeName("const VkMemoryGetRemoteAddressInfoNV *")] VkMemoryGetRemoteAddressInfoNV* pMemoryGetRemoteAddressInfo, [NativeTypeName("VkRemoteAddressNV *")] void** pAddress);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetPatchControlPointsEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint patchControlPoints);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetRasterizerDiscardEnableEXT(VkCommandBuffer commandBuffer, VkBool32 rasterizerDiscardEnable);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetDepthBiasEnableEXT(VkCommandBuffer commandBuffer, VkBool32 depthBiasEnable);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetLogicOpEXT(VkCommandBuffer commandBuffer, VkLogicOp logicOp);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetPrimitiveRestartEnableEXT(VkCommandBuffer commandBuffer, VkBool32 primitiveRestartEnable);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetColorWriteEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint attachmentCount, [NativeTypeName("const VkBool32 *")] VkBool32* pColorWriteEnables);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDrawMultiEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint drawCount, [NativeTypeName("const VkMultiDrawInfoEXT *")] VkMultiDrawInfoEXT* pVertexInfo, [NativeTypeName("uint32_t")] uint instanceCount, [NativeTypeName("uint32_t")] uint firstInstance, [NativeTypeName("uint32_t")] uint stride);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdDrawMultiIndexedEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint drawCount, [NativeTypeName("const VkMultiDrawIndexedInfoEXT *")] VkMultiDrawIndexedInfoEXT* pIndexInfo, [NativeTypeName("uint32_t")] uint instanceCount, [NativeTypeName("uint32_t")] uint firstInstance, [NativeTypeName("uint32_t")] uint stride, [NativeTypeName("const int32_t *")] int* pVertexOffset);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateAccelerationStructureKHR(VkDevice device, [NativeTypeName("const VkAccelerationStructureCreateInfoKHR *")] VkAccelerationStructureCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkAccelerationStructureKHR* pAccelerationStructure);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyAccelerationStructureKHR(VkDevice device, VkAccelerationStructureKHR accelerationStructure, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBuildAccelerationStructuresKHR(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint infoCount, [NativeTypeName("const VkAccelerationStructureBuildGeometryInfoKHR *")] VkAccelerationStructureBuildGeometryInfoKHR* pInfos, [NativeTypeName("const VkAccelerationStructureBuildRangeInfoKHR *const *")] VkAccelerationStructureBuildRangeInfoKHR** ppBuildRangeInfos);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdBuildAccelerationStructuresIndirectKHR(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint infoCount, [NativeTypeName("const VkAccelerationStructureBuildGeometryInfoKHR *")] VkAccelerationStructureBuildGeometryInfoKHR* pInfos, [NativeTypeName("const VkDeviceAddress *")] ulong* pIndirectDeviceAddresses, [NativeTypeName("const uint32_t *")] uint* pIndirectStrides, [NativeTypeName("const uint32_t *const *")] uint** ppMaxPrimitiveCounts);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkBuildAccelerationStructuresKHR(VkDevice device, VkDeferredOperationKHR deferredOperation, [NativeTypeName("uint32_t")] uint infoCount, [NativeTypeName("const VkAccelerationStructureBuildGeometryInfoKHR *")] VkAccelerationStructureBuildGeometryInfoKHR* pInfos, [NativeTypeName("const VkAccelerationStructureBuildRangeInfoKHR *const *")] VkAccelerationStructureBuildRangeInfoKHR** ppBuildRangeInfos);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCopyAccelerationStructureKHR(VkDevice device, VkDeferredOperationKHR deferredOperation, [NativeTypeName("const VkCopyAccelerationStructureInfoKHR *")] VkCopyAccelerationStructureInfoKHR* pInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCopyAccelerationStructureToMemoryKHR(VkDevice device, VkDeferredOperationKHR deferredOperation, [NativeTypeName("const VkCopyAccelerationStructureToMemoryInfoKHR *")] VkCopyAccelerationStructureToMemoryInfoKHR* pInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCopyMemoryToAccelerationStructureKHR(VkDevice device, VkDeferredOperationKHR deferredOperation, [NativeTypeName("const VkCopyMemoryToAccelerationStructureInfoKHR *")] VkCopyMemoryToAccelerationStructureInfoKHR* pInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkWriteAccelerationStructuresPropertiesKHR(VkDevice device, [NativeTypeName("uint32_t")] uint accelerationStructureCount, [NativeTypeName("const VkAccelerationStructureKHR *")] VkAccelerationStructureKHR* pAccelerationStructures, VkQueryType queryType, [NativeTypeName("size_t")] nuint dataSize, void* pData, [NativeTypeName("size_t")] nuint stride);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdCopyAccelerationStructureKHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCopyAccelerationStructureInfoKHR *")] VkCopyAccelerationStructureInfoKHR* pInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdCopyAccelerationStructureToMemoryKHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCopyAccelerationStructureToMemoryInfoKHR *")] VkCopyAccelerationStructureToMemoryInfoKHR* pInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdCopyMemoryToAccelerationStructureKHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCopyMemoryToAccelerationStructureInfoKHR *")] VkCopyMemoryToAccelerationStructureInfoKHR* pInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        [return: NativeTypeName("VkDeviceAddress")]
-        public static extern ulong vkGetAccelerationStructureDeviceAddressKHR(VkDevice device, [NativeTypeName("const VkAccelerationStructureDeviceAddressInfoKHR *")] VkAccelerationStructureDeviceAddressInfoKHR* pInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdWriteAccelerationStructuresPropertiesKHR(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint accelerationStructureCount, [NativeTypeName("const VkAccelerationStructureKHR *")] VkAccelerationStructureKHR* pAccelerationStructures, VkQueryType queryType, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint firstQuery);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetDeviceAccelerationStructureCompatibilityKHR(VkDevice device, [NativeTypeName("const VkAccelerationStructureVersionInfoKHR *")] VkAccelerationStructureVersionInfoKHR* pVersionInfo, VkAccelerationStructureCompatibilityKHR* pCompatibility);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetAccelerationStructureBuildSizesKHR(VkDevice device, VkAccelerationStructureBuildTypeKHR buildType, [NativeTypeName("const VkAccelerationStructureBuildGeometryInfoKHR *")] VkAccelerationStructureBuildGeometryInfoKHR* pBuildInfo, [NativeTypeName("const uint32_t *")] uint* pMaxPrimitiveCounts, VkAccelerationStructureBuildSizesInfoKHR* pSizeInfo);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdTraceRaysKHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pRaygenShaderBindingTable, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pMissShaderBindingTable, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pHitShaderBindingTable, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pCallableShaderBindingTable, [NativeTypeName("uint32_t")] uint width, [NativeTypeName("uint32_t")] uint height, [NativeTypeName("uint32_t")] uint depth);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreateRayTracingPipelinesKHR(VkDevice device, VkDeferredOperationKHR deferredOperation, VkPipelineCache pipelineCache, [NativeTypeName("uint32_t")] uint createInfoCount, [NativeTypeName("const VkRayTracingPipelineCreateInfoKHR *")] VkRayTracingPipelineCreateInfoKHR* pCreateInfos, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkPipeline* pPipelines);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkGetRayTracingCaptureReplayShaderGroupHandlesKHR(VkDevice device, VkPipeline pipeline, [NativeTypeName("uint32_t")] uint firstGroup, [NativeTypeName("uint32_t")] uint groupCount, [NativeTypeName("size_t")] nuint dataSize, void* pData);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdTraceRaysIndirectKHR(VkCommandBuffer commandBuffer, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pRaygenShaderBindingTable, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pMissShaderBindingTable, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pHitShaderBindingTable, [NativeTypeName("const VkStridedDeviceAddressRegionKHR *")] VkStridedDeviceAddressRegionKHR* pCallableShaderBindingTable, [NativeTypeName("VkDeviceAddress")] ulong indirectDeviceAddress);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        [return: NativeTypeName("VkDeviceSize")]
-        public static extern ulong vkGetRayTracingShaderGroupStackSizeKHR(VkDevice device, VkPipeline pipeline, [NativeTypeName("uint32_t")] uint group, VkShaderGroupShaderKHR groupShader);
-
-        [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetRayTracingPipelineStackSizeKHR(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint pipelineStackSize);
+        [NativeTypeName("const VkFormatFeatureFlagBits2KHR")]
+        public const ulong VK_FORMAT_FEATURE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x40000000UL;
 
         [NativeTypeName("#define VK_VERSION_1_0 1")]
         public const int VK_VERSION_1_0 = 1;
@@ -1589,11 +954,11 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_API_VERSION_1_0 VK_MAKE_API_VERSION(0, 1, 0, 0)")]
         public const uint VK_API_VERSION_1_0 = ((((uint)(0)) << 29) | (((uint)(1)) << 22) | (((uint)(0)) << 12) | ((uint)(0)));
 
-        [NativeTypeName("#define VK_HEADER_VERSION 189")]
-        public const int VK_HEADER_VERSION = 189;
+        [NativeTypeName("#define VK_HEADER_VERSION 198")]
+        public const int VK_HEADER_VERSION = 198;
 
         [NativeTypeName("#define VK_HEADER_VERSION_COMPLETE VK_MAKE_API_VERSION(0, 1, 2, VK_HEADER_VERSION)")]
-        public const uint VK_HEADER_VERSION_COMPLETE = ((((uint)(0)) << 29) | (((uint)(1)) << 22) | (((uint)(2)) << 12) | ((uint)(189)));
+        public const uint VK_HEADER_VERSION_COMPLETE = ((((uint)(0)) << 29) | (((uint)(1)) << 22) | (((uint)(2)) << 12) | ((uint)(198)));
 
         [NativeTypeName("#define VK_UUID_SIZE 16U")]
         public const uint VK_UUID_SIZE = 16U;
@@ -1712,6 +1077,15 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_KHR_SAMPLER_MIRROR_CLAMP_TO_EDGE_EXTENSION_NAME \"VK_KHR_sampler_mirror_clamp_to_edge\"")]
         public static ReadOnlySpan<byte> VK_KHR_SAMPLER_MIRROR_CLAMP_TO_EDGE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x73, 0x61, 0x6D, 0x70, 0x6C, 0x65, 0x72, 0x5F, 0x6D, 0x69, 0x72, 0x72, 0x6F, 0x72, 0x5F, 0x63, 0x6C, 0x61, 0x6D, 0x70, 0x5F, 0x74, 0x6F, 0x5F, 0x65, 0x64, 0x67, 0x65, 0x00 };
 
+        [NativeTypeName("#define VK_KHR_dynamic_rendering 1")]
+        public const int VK_KHR_dynamic_rendering = 1;
+
+        [NativeTypeName("#define VK_KHR_DYNAMIC_RENDERING_SPEC_VERSION 1")]
+        public const int VK_KHR_DYNAMIC_RENDERING_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_DYNAMIC_RENDERING_EXTENSION_NAME \"VK_KHR_dynamic_rendering\"")]
+        public static ReadOnlySpan<byte> VK_KHR_DYNAMIC_RENDERING_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x64, 0x79, 0x6E, 0x61, 0x6D, 0x69, 0x63, 0x5F, 0x72, 0x65, 0x6E, 0x64, 0x65, 0x72, 0x69, 0x6E, 0x67, 0x00 };
+
         [NativeTypeName("#define VK_KHR_multiview 1")]
         public const int VK_KHR_multiview = 1;
 
@@ -1751,10 +1125,16 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_KHR_maintenance1 1")]
         public const int VK_KHR_maintenance1 = 1;
 
-        [NativeTypeName("#define VK_KHR_MAINTENANCE1_SPEC_VERSION 2")]
+        [NativeTypeName("#define VK_KHR_MAINTENANCE_1_SPEC_VERSION 2")]
+        public const int VK_KHR_MAINTENANCE_1_SPEC_VERSION = 2;
+
+        [NativeTypeName("#define VK_KHR_MAINTENANCE_1_EXTENSION_NAME \"VK_KHR_maintenance1\"")]
+        public static ReadOnlySpan<byte> VK_KHR_MAINTENANCE_1_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x6D, 0x61, 0x69, 0x6E, 0x74, 0x65, 0x6E, 0x61, 0x6E, 0x63, 0x65, 0x31, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_MAINTENANCE1_SPEC_VERSION VK_KHR_MAINTENANCE_1_SPEC_VERSION")]
         public const int VK_KHR_MAINTENANCE1_SPEC_VERSION = 2;
 
-        [NativeTypeName("#define VK_KHR_MAINTENANCE1_EXTENSION_NAME \"VK_KHR_maintenance1\"")]
+        [NativeTypeName("#define VK_KHR_MAINTENANCE1_EXTENSION_NAME VK_KHR_MAINTENANCE_1_EXTENSION_NAME")]
         public static ReadOnlySpan<byte> VK_KHR_MAINTENANCE1_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x6D, 0x61, 0x69, 0x6E, 0x74, 0x65, 0x6E, 0x61, 0x6E, 0x63, 0x65, 0x31, 0x00 };
 
         [NativeTypeName("#define VK_KHR_device_group_creation 1")]
@@ -1940,10 +1320,16 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_KHR_maintenance2 1")]
         public const int VK_KHR_maintenance2 = 1;
 
-        [NativeTypeName("#define VK_KHR_MAINTENANCE2_SPEC_VERSION 1")]
+        [NativeTypeName("#define VK_KHR_MAINTENANCE_2_SPEC_VERSION 1")]
+        public const int VK_KHR_MAINTENANCE_2_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_MAINTENANCE_2_EXTENSION_NAME \"VK_KHR_maintenance2\"")]
+        public static ReadOnlySpan<byte> VK_KHR_MAINTENANCE_2_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x6D, 0x61, 0x69, 0x6E, 0x74, 0x65, 0x6E, 0x61, 0x6E, 0x63, 0x65, 0x32, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_MAINTENANCE2_SPEC_VERSION VK_KHR_MAINTENANCE_2_SPEC_VERSION")]
         public const int VK_KHR_MAINTENANCE2_SPEC_VERSION = 1;
 
-        [NativeTypeName("#define VK_KHR_MAINTENANCE2_EXTENSION_NAME \"VK_KHR_maintenance2\"")]
+        [NativeTypeName("#define VK_KHR_MAINTENANCE2_EXTENSION_NAME VK_KHR_MAINTENANCE_2_EXTENSION_NAME")]
         public static ReadOnlySpan<byte> VK_KHR_MAINTENANCE2_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x6D, 0x61, 0x69, 0x6E, 0x74, 0x65, 0x6E, 0x61, 0x6E, 0x63, 0x65, 0x32, 0x00 };
 
         [NativeTypeName("#define VK_KHR_get_surface_capabilities2 1")]
@@ -2039,10 +1425,16 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_KHR_maintenance3 1")]
         public const int VK_KHR_maintenance3 = 1;
 
-        [NativeTypeName("#define VK_KHR_MAINTENANCE3_SPEC_VERSION 1")]
+        [NativeTypeName("#define VK_KHR_MAINTENANCE_3_SPEC_VERSION 1")]
+        public const int VK_KHR_MAINTENANCE_3_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_MAINTENANCE_3_EXTENSION_NAME \"VK_KHR_maintenance3\"")]
+        public static ReadOnlySpan<byte> VK_KHR_MAINTENANCE_3_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x6D, 0x61, 0x69, 0x6E, 0x74, 0x65, 0x6E, 0x61, 0x6E, 0x63, 0x65, 0x33, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_MAINTENANCE3_SPEC_VERSION VK_KHR_MAINTENANCE_3_SPEC_VERSION")]
         public const int VK_KHR_MAINTENANCE3_SPEC_VERSION = 1;
 
-        [NativeTypeName("#define VK_KHR_MAINTENANCE3_EXTENSION_NAME \"VK_KHR_maintenance3\"")]
+        [NativeTypeName("#define VK_KHR_MAINTENANCE3_EXTENSION_NAME VK_KHR_MAINTENANCE_3_EXTENSION_NAME")]
         public static ReadOnlySpan<byte> VK_KHR_MAINTENANCE3_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x6D, 0x61, 0x69, 0x6E, 0x74, 0x65, 0x6E, 0x61, 0x6E, 0x63, 0x65, 0x33, 0x00 };
 
         [NativeTypeName("#define VK_KHR_draw_indirect_count 1")]
@@ -2162,8 +1554,8 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_KHR_fragment_shading_rate 1")]
         public const int VK_KHR_fragment_shading_rate = 1;
 
-        [NativeTypeName("#define VK_KHR_FRAGMENT_SHADING_RATE_SPEC_VERSION 1")]
-        public const int VK_KHR_FRAGMENT_SHADING_RATE_SPEC_VERSION = 1;
+        [NativeTypeName("#define VK_KHR_FRAGMENT_SHADING_RATE_SPEC_VERSION 2")]
+        public const int VK_KHR_FRAGMENT_SHADING_RATE_SPEC_VERSION = 2;
 
         [NativeTypeName("#define VK_KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME \"VK_KHR_fragment_shading_rate\"")]
         public static ReadOnlySpan<byte> VK_KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x66, 0x72, 0x61, 0x67, 0x6D, 0x65, 0x6E, 0x74, 0x5F, 0x73, 0x68, 0x61, 0x64, 0x69, 0x6E, 0x67, 0x5F, 0x72, 0x61, 0x74, 0x65, 0x00 };
@@ -2240,6 +1632,15 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_KHR_PIPELINE_EXECUTABLE_PROPERTIES_EXTENSION_NAME \"VK_KHR_pipeline_executable_properties\"")]
         public static ReadOnlySpan<byte> VK_KHR_PIPELINE_EXECUTABLE_PROPERTIES_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x70, 0x69, 0x70, 0x65, 0x6C, 0x69, 0x6E, 0x65, 0x5F, 0x65, 0x78, 0x65, 0x63, 0x75, 0x74, 0x61, 0x62, 0x6C, 0x65, 0x5F, 0x70, 0x72, 0x6F, 0x70, 0x65, 0x72, 0x74, 0x69, 0x65, 0x73, 0x00 };
 
+        [NativeTypeName("#define VK_KHR_shader_integer_dot_product 1")]
+        public const int VK_KHR_shader_integer_dot_product = 1;
+
+        [NativeTypeName("#define VK_KHR_SHADER_INTEGER_DOT_PRODUCT_SPEC_VERSION 1")]
+        public const int VK_KHR_SHADER_INTEGER_DOT_PRODUCT_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_SHADER_INTEGER_DOT_PRODUCT_EXTENSION_NAME \"VK_KHR_shader_integer_dot_product\"")]
+        public static ReadOnlySpan<byte> VK_KHR_SHADER_INTEGER_DOT_PRODUCT_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x73, 0x68, 0x61, 0x64, 0x65, 0x72, 0x5F, 0x69, 0x6E, 0x74, 0x65, 0x67, 0x65, 0x72, 0x5F, 0x64, 0x6F, 0x74, 0x5F, 0x70, 0x72, 0x6F, 0x64, 0x75, 0x63, 0x74, 0x00 };
+
         [NativeTypeName("#define VK_KHR_pipeline_library 1")]
         public const int VK_KHR_pipeline_library = 1;
 
@@ -2311,6 +1712,24 @@ namespace TerraFX.Interop.Vulkan
 
         [NativeTypeName("#define VK_KHR_COPY_COMMANDS_2_EXTENSION_NAME \"VK_KHR_copy_commands2\"")]
         public static ReadOnlySpan<byte> VK_KHR_COPY_COMMANDS_2_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x63, 0x6F, 0x70, 0x79, 0x5F, 0x63, 0x6F, 0x6D, 0x6D, 0x61, 0x6E, 0x64, 0x73, 0x32, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_format_feature_flags2 1")]
+        public const int VK_KHR_format_feature_flags2 = 1;
+
+        [NativeTypeName("#define VK_KHR_FORMAT_FEATURE_FLAGS_2_SPEC_VERSION 1")]
+        public const int VK_KHR_FORMAT_FEATURE_FLAGS_2_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_FORMAT_FEATURE_FLAGS_2_EXTENSION_NAME \"VK_KHR_format_feature_flags2\"")]
+        public static ReadOnlySpan<byte> VK_KHR_FORMAT_FEATURE_FLAGS_2_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x66, 0x6F, 0x72, 0x6D, 0x61, 0x74, 0x5F, 0x66, 0x65, 0x61, 0x74, 0x75, 0x72, 0x65, 0x5F, 0x66, 0x6C, 0x61, 0x67, 0x73, 0x32, 0x00 };
+
+        [NativeTypeName("#define VK_KHR_maintenance4 1")]
+        public const int VK_KHR_maintenance4 = 1;
+
+        [NativeTypeName("#define VK_KHR_MAINTENANCE_4_SPEC_VERSION 1")]
+        public const int VK_KHR_MAINTENANCE_4_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_KHR_MAINTENANCE_4_EXTENSION_NAME \"VK_KHR_maintenance4\"")]
+        public static ReadOnlySpan<byte> VK_KHR_MAINTENANCE_4_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x6D, 0x61, 0x69, 0x6E, 0x74, 0x65, 0x6E, 0x61, 0x6E, 0x63, 0x65, 0x34, 0x00 };
 
         [NativeTypeName("#define VK_EXT_debug_report 1")]
         public const int VK_EXT_debug_report = 1;
@@ -2648,10 +2067,16 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_NV_viewport_array2 1")]
         public const int VK_NV_viewport_array2 = 1;
 
-        [NativeTypeName("#define VK_NV_VIEWPORT_ARRAY2_SPEC_VERSION 1")]
+        [NativeTypeName("#define VK_NV_VIEWPORT_ARRAY_2_SPEC_VERSION 1")]
+        public const int VK_NV_VIEWPORT_ARRAY_2_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_NV_VIEWPORT_ARRAY_2_EXTENSION_NAME \"VK_NV_viewport_array2\"")]
+        public static ReadOnlySpan<byte> VK_NV_VIEWPORT_ARRAY_2_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4E, 0x56, 0x5F, 0x76, 0x69, 0x65, 0x77, 0x70, 0x6F, 0x72, 0x74, 0x5F, 0x61, 0x72, 0x72, 0x61, 0x79, 0x32, 0x00 };
+
+        [NativeTypeName("#define VK_NV_VIEWPORT_ARRAY2_SPEC_VERSION VK_NV_VIEWPORT_ARRAY_2_SPEC_VERSION")]
         public const int VK_NV_VIEWPORT_ARRAY2_SPEC_VERSION = 1;
 
-        [NativeTypeName("#define VK_NV_VIEWPORT_ARRAY2_EXTENSION_NAME \"VK_NV_viewport_array2\"")]
+        [NativeTypeName("#define VK_NV_VIEWPORT_ARRAY2_EXTENSION_NAME VK_NV_VIEWPORT_ARRAY_2_EXTENSION_NAME")]
         public static ReadOnlySpan<byte> VK_NV_VIEWPORT_ARRAY2_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4E, 0x56, 0x5F, 0x76, 0x69, 0x65, 0x77, 0x70, 0x6F, 0x72, 0x74, 0x5F, 0x61, 0x72, 0x72, 0x61, 0x79, 0x32, 0x00 };
 
         [NativeTypeName("#define VK_NVX_multiview_per_view_attributes 1")]
@@ -2867,8 +2292,8 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_EXT_image_drm_format_modifier 1")]
         public const int VK_EXT_image_drm_format_modifier = 1;
 
-        [NativeTypeName("#define VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_SPEC_VERSION 1")]
-        public const int VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_SPEC_VERSION = 1;
+        [NativeTypeName("#define VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_SPEC_VERSION 2")]
+        public const int VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_SPEC_VERSION = 2;
 
         [NativeTypeName("#define VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME \"VK_EXT_image_drm_format_modifier\"")]
         public static ReadOnlySpan<byte> VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x69, 0x6D, 0x61, 0x67, 0x65, 0x5F, 0x64, 0x72, 0x6D, 0x5F, 0x66, 0x6F, 0x72, 0x6D, 0x61, 0x74, 0x5F, 0x6D, 0x6F, 0x64, 0x69, 0x66, 0x69, 0x65, 0x72, 0x00 };
@@ -3134,8 +2559,8 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_EXT_fragment_density_map 1")]
         public const int VK_EXT_fragment_density_map = 1;
 
-        [NativeTypeName("#define VK_EXT_FRAGMENT_DENSITY_MAP_SPEC_VERSION 1")]
-        public const int VK_EXT_FRAGMENT_DENSITY_MAP_SPEC_VERSION = 1;
+        [NativeTypeName("#define VK_EXT_FRAGMENT_DENSITY_MAP_SPEC_VERSION 2")]
+        public const int VK_EXT_FRAGMENT_DENSITY_MAP_SPEC_VERSION = 2;
 
         [NativeTypeName("#define VK_EXT_FRAGMENT_DENSITY_MAP_EXTENSION_NAME \"VK_EXT_fragment_density_map\"")]
         public static ReadOnlySpan<byte> VK_EXT_FRAGMENT_DENSITY_MAP_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x66, 0x72, 0x61, 0x67, 0x6D, 0x65, 0x6E, 0x74, 0x5F, 0x64, 0x65, 0x6E, 0x73, 0x69, 0x74, 0x79, 0x5F, 0x6D, 0x61, 0x70, 0x00 };
@@ -3152,10 +2577,16 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_GOOGLE_hlsl_functionality1 1")]
         public const int VK_GOOGLE_hlsl_functionality1 = 1;
 
-        [NativeTypeName("#define VK_GOOGLE_HLSL_FUNCTIONALITY1_SPEC_VERSION 1")]
+        [NativeTypeName("#define VK_GOOGLE_HLSL_FUNCTIONALITY_1_SPEC_VERSION 1")]
+        public const int VK_GOOGLE_HLSL_FUNCTIONALITY_1_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_GOOGLE_HLSL_FUNCTIONALITY_1_EXTENSION_NAME \"VK_GOOGLE_hlsl_functionality1\"")]
+        public static ReadOnlySpan<byte> VK_GOOGLE_HLSL_FUNCTIONALITY_1_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x47, 0x4F, 0x4F, 0x47, 0x4C, 0x45, 0x5F, 0x68, 0x6C, 0x73, 0x6C, 0x5F, 0x66, 0x75, 0x6E, 0x63, 0x74, 0x69, 0x6F, 0x6E, 0x61, 0x6C, 0x69, 0x74, 0x79, 0x31, 0x00 };
+
+        [NativeTypeName("#define VK_GOOGLE_HLSL_FUNCTIONALITY1_SPEC_VERSION VK_GOOGLE_HLSL_FUNCTIONALITY_1_SPEC_VERSION")]
         public const int VK_GOOGLE_HLSL_FUNCTIONALITY1_SPEC_VERSION = 1;
 
-        [NativeTypeName("#define VK_GOOGLE_HLSL_FUNCTIONALITY1_EXTENSION_NAME \"VK_GOOGLE_hlsl_functionality1\"")]
+        [NativeTypeName("#define VK_GOOGLE_HLSL_FUNCTIONALITY1_EXTENSION_NAME VK_GOOGLE_HLSL_FUNCTIONALITY_1_EXTENSION_NAME")]
         public static ReadOnlySpan<byte> VK_GOOGLE_HLSL_FUNCTIONALITY1_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x47, 0x4F, 0x4F, 0x47, 0x4C, 0x45, 0x5F, 0x68, 0x6C, 0x73, 0x6C, 0x5F, 0x66, 0x75, 0x6E, 0x63, 0x74, 0x69, 0x6F, 0x6E, 0x61, 0x6C, 0x69, 0x74, 0x79, 0x31, 0x00 };
 
         [NativeTypeName("#define VK_GOOGLE_decorate_string 1")]
@@ -3563,6 +2994,15 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_EXT_4444_FORMATS_EXTENSION_NAME \"VK_EXT_4444_formats\"")]
         public static ReadOnlySpan<byte> VK_EXT_4444_FORMATS_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x34, 0x34, 0x34, 0x34, 0x5F, 0x66, 0x6F, 0x72, 0x6D, 0x61, 0x74, 0x73, 0x00 };
 
+        [NativeTypeName("#define VK_EXT_rgba10x6_formats 1")]
+        public const int VK_EXT_rgba10x6_formats = 1;
+
+        [NativeTypeName("#define VK_EXT_RGBA10X6_FORMATS_SPEC_VERSION 1")]
+        public const int VK_EXT_RGBA10X6_FORMATS_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_RGBA10X6_FORMATS_EXTENSION_NAME \"VK_EXT_rgba10x6_formats\"")]
+        public static ReadOnlySpan<byte> VK_EXT_RGBA10X6_FORMATS_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x72, 0x67, 0x62, 0x61, 0x31, 0x30, 0x78, 0x36, 0x5F, 0x66, 0x6F, 0x72, 0x6D, 0x61, 0x74, 0x73, 0x00 };
+
         [NativeTypeName("#define VK_NV_acquire_winrt_display 1")]
         public const int VK_NV_acquire_winrt_display = 1;
 
@@ -3598,6 +3038,15 @@ namespace TerraFX.Interop.Vulkan
 
         [NativeTypeName("#define VK_EXT_PHYSICAL_DEVICE_DRM_EXTENSION_NAME \"VK_EXT_physical_device_drm\"")]
         public static ReadOnlySpan<byte> VK_EXT_PHYSICAL_DEVICE_DRM_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x70, 0x68, 0x79, 0x73, 0x69, 0x63, 0x61, 0x6C, 0x5F, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x5F, 0x64, 0x72, 0x6D, 0x00 };
+
+        [NativeTypeName("#define VK_EXT_primitive_topology_list_restart 1")]
+        public const int VK_EXT_primitive_topology_list_restart = 1;
+
+        [NativeTypeName("#define VK_EXT_PRIMITIVE_TOPOLOGY_LIST_RESTART_SPEC_VERSION 1")]
+        public const int VK_EXT_PRIMITIVE_TOPOLOGY_LIST_RESTART_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_PRIMITIVE_TOPOLOGY_LIST_RESTART_EXTENSION_NAME \"VK_EXT_primitive_topology_list_restart\"")]
+        public static ReadOnlySpan<byte> VK_EXT_PRIMITIVE_TOPOLOGY_LIST_RESTART_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x70, 0x72, 0x69, 0x6D, 0x69, 0x74, 0x69, 0x76, 0x65, 0x5F, 0x74, 0x6F, 0x70, 0x6F, 0x6C, 0x6F, 0x67, 0x79, 0x5F, 0x6C, 0x69, 0x73, 0x74, 0x5F, 0x72, 0x65, 0x73, 0x74, 0x61, 0x72, 0x74, 0x00 };
 
         [NativeTypeName("#define VK_HUAWEI_subpass_shading 1")]
         public const int VK_HUAWEI_subpass_shading = 1;
@@ -3674,11 +3123,29 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("#define VK_EXT_LOAD_STORE_OP_NONE_EXTENSION_NAME \"VK_EXT_load_store_op_none\"")]
         public static ReadOnlySpan<byte> VK_EXT_LOAD_STORE_OP_NONE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x6C, 0x6F, 0x61, 0x64, 0x5F, 0x73, 0x74, 0x6F, 0x72, 0x65, 0x5F, 0x6F, 0x70, 0x5F, 0x6E, 0x6F, 0x6E, 0x65, 0x00 };
 
+        [NativeTypeName("#define VK_EXT_border_color_swizzle 1")]
+        public const int VK_EXT_border_color_swizzle = 1;
+
+        [NativeTypeName("#define VK_EXT_BORDER_COLOR_SWIZZLE_SPEC_VERSION 1")]
+        public const int VK_EXT_BORDER_COLOR_SWIZZLE_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_BORDER_COLOR_SWIZZLE_EXTENSION_NAME \"VK_EXT_border_color_swizzle\"")]
+        public static ReadOnlySpan<byte> VK_EXT_BORDER_COLOR_SWIZZLE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x62, 0x6F, 0x72, 0x64, 0x65, 0x72, 0x5F, 0x63, 0x6F, 0x6C, 0x6F, 0x72, 0x5F, 0x73, 0x77, 0x69, 0x7A, 0x7A, 0x6C, 0x65, 0x00 };
+
+        [NativeTypeName("#define VK_EXT_pageable_device_local_memory 1")]
+        public const int VK_EXT_pageable_device_local_memory = 1;
+
+        [NativeTypeName("#define VK_EXT_PAGEABLE_DEVICE_LOCAL_MEMORY_SPEC_VERSION 1")]
+        public const int VK_EXT_PAGEABLE_DEVICE_LOCAL_MEMORY_SPEC_VERSION = 1;
+
+        [NativeTypeName("#define VK_EXT_PAGEABLE_DEVICE_LOCAL_MEMORY_EXTENSION_NAME \"VK_EXT_pageable_device_local_memory\"")]
+        public static ReadOnlySpan<byte> VK_EXT_PAGEABLE_DEVICE_LOCAL_MEMORY_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x70, 0x61, 0x67, 0x65, 0x61, 0x62, 0x6C, 0x65, 0x5F, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x5F, 0x6C, 0x6F, 0x63, 0x61, 0x6C, 0x5F, 0x6D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x00 };
+
         [NativeTypeName("#define VK_KHR_acceleration_structure 1")]
         public const int VK_KHR_acceleration_structure = 1;
 
-        [NativeTypeName("#define VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION 12")]
-        public const int VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION = 12;
+        [NativeTypeName("#define VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION 13")]
+        public const int VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION = 13;
 
         [NativeTypeName("#define VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME \"VK_KHR_acceleration_structure\"")]
         public static ReadOnlySpan<byte> VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x61, 0x63, 0x63, 0x65, 0x6C, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x5F, 0x73, 0x74, 0x72, 0x75, 0x63, 0x74, 0x75, 0x72, 0x65, 0x00 };

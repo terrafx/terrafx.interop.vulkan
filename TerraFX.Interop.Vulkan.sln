@@ -71,12 +71,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{48E1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "generation", "generation", "{7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}"
 	ProjectSection(SolutionItems) = preProject
-		generation\Vulkan\remap-handles.rsp = generation\Vulkan\remap-handles.rsp
-		generation\Vulkan\remap-other.rsp = generation\Vulkan\remap-other.rsp
-		generation\Vulkan\remap-transparent.rsp = generation\Vulkan\remap-transparent.rsp
-		generation\Vulkan\remap-types.rsp = generation\Vulkan\remap-types.rsp
-		generation\Vulkan\remap.rsp = generation\Vulkan\remap.rsp
-		generation\Vulkan\settings.rsp = generation\Vulkan\settings.rsp
+		generation\remap-classes.rsp = generation\remap-classes.rsp
+		generation\remap-handles.rsp = generation\remap-handles.rsp
+		generation\remap-imports.rsp = generation\remap-imports.rsp
+		generation\remap-other.rsp = generation\remap-other.rsp
+		generation\remap-structs.rsp = generation\remap-structs.rsp
+		generation\remap-transparent.rsp = generation\remap-transparent.rsp
+		generation\remap-types.rsp = generation\remap-types.rsp
+		generation\remap.rsp = generation\remap.rsp
+		generation\settings.rsp = generation\settings.rsp
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vk_icd", "vk_icd", "{5C8448A5-FFD6-4E71-BD87-F22279A5EFE4}"
@@ -297,6 +300,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "helper-types", "helper-type
 		generation\Vulkan\other\helper-types\other-helper-types.h = generation\Vulkan\other\helper-types\other-helper-types.h
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_video_codec_h265std_encode", "vulkan_video_codec_h265std_encode", "{130AD321-77EC-4B5D-BCDD-708380AB6150}"
+	ProjectSection(SolutionItems) = preProject
+		generation\Vulkan\vk_video\vulkan_video_codec_h265std_encode\generate.rsp = generation\Vulkan\vk_video\vulkan_video_codec_h265std_encode\generate.rsp
+		generation\Vulkan\vk_video\vulkan_video_codec_h265std_encode\header.txt = generation\Vulkan\vk_video\vulkan_video_codec_h265std_encode\header.txt
+		generation\Vulkan\vk_video\vulkan_video_codec_h265std_encode\vk_video-vulkan_video_codec_h265std_encode.h = generation\Vulkan\vk_video\vulkan_video_codec_h265std_encode\vk_video-vulkan_video_codec_h265std_encode.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -356,6 +366,7 @@ Global
 		{F95949B0-75CD-4B37-BD45-C91EB90EE8D2} = {7AA74179-9EED-497D-83D1-ECDA0DDFA6F7}
 		{359B88FB-0ED5-4135-822B-82350347138C} = {F95949B0-75CD-4B37-BD45-C91EB90EE8D2}
 		{09775914-ED8B-4F3D-BB35-8D9F30464A8A} = {359B88FB-0ED5-4135-822B-82350347138C}
+		{130AD321-77EC-4B5D-BCDD-708380AB6150} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FE36DF8-2D9C-4F20-8787-45DC74B57461}

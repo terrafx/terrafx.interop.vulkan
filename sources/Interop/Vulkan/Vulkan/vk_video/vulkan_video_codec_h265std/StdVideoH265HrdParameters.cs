@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vk_video/vulkan_video_codec_h265std.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
+// Ported from include/vk_video/vulkan_video_codec_h265std.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.198
 // Original source is Copyright © 2019-2021 The Khronos Group Inc.
 
 using System.Runtime.CompilerServices;
@@ -43,14 +43,14 @@ namespace TerraFX.Interop.Vulkan
         public fixed ushort elemental_duration_in_tc_minus1[7];
 
         [NativeTypeName("StdVideoH265SubLayerHrdParameters *[7]")]
-        public _SubLayerHrdParametersNal_e__FixedBuffer SubLayerHrdParametersNal;
+        public _pSubLayerHrdParametersNal_e__FixedBuffer pSubLayerHrdParametersNal;
 
         [NativeTypeName("StdVideoH265SubLayerHrdParameters *[7]")]
-        public _SubLayerHrdParametersVcl_e__FixedBuffer SubLayerHrdParametersVcl;
+        public _pSubLayerHrdParametersVcl_e__FixedBuffer pSubLayerHrdParametersVcl;
 
         public StdVideoH265HrdFlags flags;
 
-        public unsafe partial struct _SubLayerHrdParametersNal_e__FixedBuffer
+        public unsafe partial struct _pSubLayerHrdParametersNal_e__FixedBuffer
         {
             public StdVideoH265SubLayerHrdParameters* e0;
             public StdVideoH265SubLayerHrdParameters* e1;
@@ -73,7 +73,7 @@ namespace TerraFX.Interop.Vulkan
             }
         }
 
-        public unsafe partial struct _SubLayerHrdParametersVcl_e__FixedBuffer
+        public unsafe partial struct _pSubLayerHrdParametersVcl_e__FixedBuffer
         {
             public StdVideoH265SubLayerHrdParameters* e0;
             public StdVideoH265SubLayerHrdParameters* e1;

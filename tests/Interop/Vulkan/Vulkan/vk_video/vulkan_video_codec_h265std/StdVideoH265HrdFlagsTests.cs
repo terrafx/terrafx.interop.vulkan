@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vk_video/vulkan_video_codec_h265std.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.189
+// Ported from include/vk_video/vulkan_video_codec_h265std.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.198
 // Original source is Copyright © 2019-2021 The Khronos Group Inc.
 
 using NUnit.Framework;
@@ -29,7 +29,7 @@ namespace TerraFX.Interop.Vulkan.UnitTests
         [Test]
         public static void SizeOfTest()
         {
-            Assert.That(sizeof(StdVideoH265HrdFlags), Is.EqualTo(8));
+            Assert.That(sizeof(StdVideoH265HrdFlags), Is.EqualTo(4));
         }
     }
 }

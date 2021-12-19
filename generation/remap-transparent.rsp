@@ -3,6 +3,7 @@ VkAccelerationStructureKHR=ulong;HandleVulkan
 VkAccelerationStructureNV=ulong;HandleVulkan
 VkBool32=uint;Boolean
 VkBuffer=ulong;HandleVulkan
+VkBufferCollectionFUCHSIA=ulong;HandleVulkan
 VkBufferView=ulong;HandleVulkan
 VkCommandBuffer=void*;Handle
 VkCommandPool=ulong;HandleVulkan
