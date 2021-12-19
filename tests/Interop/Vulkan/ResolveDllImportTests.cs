@@ -36,16 +36,14 @@ namespace TerraFX.Interop.Vulkan.UnitTests
 
         private static void ProcessMethod(MethodInfo method)
         {
-            var customAttribute = method.GetCustomAttributes(typeof(DllImportAttribute)).SingleOrDefault();
-
-            if (customAttribute is not DllImportAttribute)
+            if (!method.Attributes.HasFlag(MethodAttributes.PinvokeImpl))
             {
                 return;
             }
 
             try
             {
-                RuntimeHelpers.PrepareMethod(method.MethodHandle);
+                Marshal.Prelink(method.MethodHandle);
             }
             catch (Exception exception)
             {
