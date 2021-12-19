@@ -5,10 +5,8 @@
 
 namespace TerraFX.Interop.Vulkan
 {
-    public unsafe partial struct VkPhysicalDeviceManualImports
+    public unsafe partial struct VkInstanceManualImports
     {
-        public delegate* unmanaged<VkPhysicalDevice, uint, VkBool32> vkGetPhysicalDeviceWin32PresentationSupportKHR;
-
-        public delegate* unmanaged<VkPhysicalDevice, VkPhysicalDeviceSurfaceInfo2KHR*, uint*, VkPresentModeKHR*, VkResult> vkGetPhysicalDeviceSurfacePresentModes2EXT;
+        public delegate* unmanaged<VkInstance, VkWin32SurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult> vkCreateWin32SurfaceKHR;
     }
 }
