@@ -49,11 +49,11 @@ namespace TerraFX.Interop.Vulkan.UnitTests
                 {
                     // This isn't good practice, but current CI can't really install and have the Vulkan SDK be
                     // available, so the tests fail. We want local testing to do the right thing still, however.
-                    Assert.Warn(exception.Message);
+                    Assert.Warn($"Warn: {exception.Message}");
                 }
                 else
                 {
-                    Assert.Fail(exception.Message);
+                    Assert.Fail($"Fail: {exception.Message}");
                 }
             }
         }
