@@ -1,5 +1,7 @@
 @../../../settings.rsp
 @../../../remap.rsp
+--exclude
+VULKAN_VIDEO_CODEC_H264STD_DECODE_H_
 --file
 vk_video-vulkan_video_codec_h264std_decode.h
 --methodClassName
@@ -11,4 +13,4 @@ TerraFX.Interop.Vulkan
 --test-output
 ../../../../tests/Interop/Vulkan/Vulkan/vk_video/vulkan_video_codec_h264std_decode
 --traverse
-C:/VulkanSDK/1.2.198.1/Include/vk_video/vulkan_video_codec_h264std_decode.h
+C:/VulkanSDK/1.3.204.0/Include/vk_video/vulkan_video_codec_h264std_decode.h

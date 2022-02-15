@@ -1,7 +1,7 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.198
-// Original source is Copyright © 2015-2021 The Khronos Group Inc.
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
+// Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan
 {
@@ -179,13 +179,13 @@ namespace TerraFX.Interop.Vulkan
 
         public delegate* unmanaged<VkDevice, VkIndirectCommandsLayoutNV, VkAllocationCallbacks*, void> vkDestroyIndirectCommandsLayoutNV;
 
-        public delegate* unmanaged<VkDevice, VkPrivateDataSlotCreateInfoEXT*, VkAllocationCallbacks*, VkPrivateDataSlotEXT*, VkResult> vkCreatePrivateDataSlotEXT;
+        public delegate* unmanaged<VkDevice, VkPrivateDataSlotCreateInfoEXT*, VkAllocationCallbacks*, VkPrivateDataSlot*, VkResult> vkCreatePrivateDataSlotEXT;
 
-        public delegate* unmanaged<VkDevice, VkPrivateDataSlotEXT, VkAllocationCallbacks*, void> vkDestroyPrivateDataSlotEXT;
+        public delegate* unmanaged<VkDevice, VkPrivateDataSlot, VkAllocationCallbacks*, void> vkDestroyPrivateDataSlotEXT;
 
-        public delegate* unmanaged<VkDevice, VkObjectType, ulong, VkPrivateDataSlotEXT, ulong, VkResult> vkSetPrivateDataEXT;
+        public delegate* unmanaged<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong, VkResult> vkSetPrivateDataEXT;
 
-        public delegate* unmanaged<VkDevice, VkObjectType, ulong, VkPrivateDataSlotEXT, ulong*, void> vkGetPrivateDataEXT;
+        public delegate* unmanaged<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong*, void> vkGetPrivateDataEXT;
 
         public delegate* unmanaged<VkDevice, VkRenderPass, VkExtent2D*, VkResult> vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI;
 

@@ -1,7 +1,7 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.198
-// Original source is Copyright © 2015-2021 The Khronos Group Inc.
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
+// Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 using System;
 
@@ -28,6 +28,7 @@ namespace TerraFX.Interop.Vulkan
         VK_ACCESS_HOST_WRITE_BIT = 0x00004000,
         VK_ACCESS_MEMORY_READ_BIT = 0x00008000,
         VK_ACCESS_MEMORY_WRITE_BIT = 0x00010000,
+        VK_ACCESS_NONE = 0,
         VK_ACCESS_TRANSFORM_FEEDBACK_WRITE_BIT_EXT = 0x02000000,
         VK_ACCESS_TRANSFORM_FEEDBACK_COUNTER_READ_BIT_EXT = 0x04000000,
         VK_ACCESS_TRANSFORM_FEEDBACK_COUNTER_WRITE_BIT_EXT = 0x08000000,
@@ -39,10 +40,10 @@ namespace TerraFX.Interop.Vulkan
         VK_ACCESS_FRAGMENT_SHADING_RATE_ATTACHMENT_READ_BIT_KHR = 0x00800000,
         VK_ACCESS_COMMAND_PREPROCESS_READ_BIT_NV = 0x00020000,
         VK_ACCESS_COMMAND_PREPROCESS_WRITE_BIT_NV = 0x00040000,
-        VK_ACCESS_NONE_KHR = 0,
         VK_ACCESS_SHADING_RATE_IMAGE_READ_BIT_NV = VK_ACCESS_FRAGMENT_SHADING_RATE_ATTACHMENT_READ_BIT_KHR,
         VK_ACCESS_ACCELERATION_STRUCTURE_READ_BIT_NV = VK_ACCESS_ACCELERATION_STRUCTURE_READ_BIT_KHR,
         VK_ACCESS_ACCELERATION_STRUCTURE_WRITE_BIT_NV = VK_ACCESS_ACCELERATION_STRUCTURE_WRITE_BIT_KHR,
+        VK_ACCESS_NONE_KHR = VK_ACCESS_NONE,
         VK_ACCESS_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
     }
 }

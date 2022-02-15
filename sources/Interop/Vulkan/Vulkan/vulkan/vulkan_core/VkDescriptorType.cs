@@ -1,7 +1,7 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.2.198
-// Original source is Copyright © 2015-2021 The Khronos Group Inc.
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
+// Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan
 {
@@ -18,10 +18,11 @@ namespace TerraFX.Interop.Vulkan
         VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC = 8,
         VK_DESCRIPTOR_TYPE_STORAGE_BUFFER_DYNAMIC = 9,
         VK_DESCRIPTOR_TYPE_INPUT_ATTACHMENT = 10,
-        VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK_EXT = 1000138000,
+        VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK = 1000138000,
         VK_DESCRIPTOR_TYPE_ACCELERATION_STRUCTURE_KHR = 1000150000,
         VK_DESCRIPTOR_TYPE_ACCELERATION_STRUCTURE_NV = 1000165000,
         VK_DESCRIPTOR_TYPE_MUTABLE_VALVE = 1000351000,
+        VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK_EXT = VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK,
         VK_DESCRIPTOR_TYPE_MAX_ENUM = 0x7FFFFFFF,
     }
 }
