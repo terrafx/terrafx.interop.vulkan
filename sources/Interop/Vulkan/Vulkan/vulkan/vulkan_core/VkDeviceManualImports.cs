@@ -179,13 +179,13 @@ namespace TerraFX.Interop.Vulkan
 
         public delegate* unmanaged<VkDevice, VkIndirectCommandsLayoutNV, VkAllocationCallbacks*, void> vkDestroyIndirectCommandsLayoutNV;
 
-        public delegate* unmanaged<VkDevice, VkPrivateDataSlotCreateInfoEXT*, VkAllocationCallbacks*, VkPrivateDataSlot_T**, VkResult> vkCreatePrivateDataSlotEXT;
+        public delegate* unmanaged<VkDevice, VkPrivateDataSlotCreateInfoEXT*, VkAllocationCallbacks*, VkPrivateDataSlot*, VkResult> vkCreatePrivateDataSlotEXT;
 
-        public delegate* unmanaged<VkDevice, VkPrivateDataSlot_T*, VkAllocationCallbacks*, void> vkDestroyPrivateDataSlotEXT;
+        public delegate* unmanaged<VkDevice, VkPrivateDataSlot, VkAllocationCallbacks*, void> vkDestroyPrivateDataSlotEXT;
 
-        public delegate* unmanaged<VkDevice, VkObjectType, ulong, VkPrivateDataSlot_T*, ulong, VkResult> vkSetPrivateDataEXT;
+        public delegate* unmanaged<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong, VkResult> vkSetPrivateDataEXT;
 
-        public delegate* unmanaged<VkDevice, VkObjectType, ulong, VkPrivateDataSlot_T*, ulong*, void> vkGetPrivateDataEXT;
+        public delegate* unmanaged<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong*, void> vkGetPrivateDataEXT;
 
         public delegate* unmanaged<VkDevice, VkRenderPass, VkExtent2D*, VkResult> vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI;
 

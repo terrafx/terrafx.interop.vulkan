@@ -1096,16 +1096,16 @@ namespace TerraFX.Interop.Vulkan
         public static extern VkResult vkGetPhysicalDeviceToolProperties(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pToolCount, [NativeTypeName("VkPhysicalDeviceToolProperties *")] VkPhysicalDeviceToolPropertiesEXT* pToolProperties);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkCreatePrivateDataSlot(VkDevice device, [NativeTypeName("const VkPrivateDataSlotCreateInfo *")] VkPrivateDataSlotCreateInfoEXT* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, [NativeTypeName("VkPrivateDataSlot *")] VkPrivateDataSlot_T** pPrivateDataSlot);
+        public static extern VkResult vkCreatePrivateDataSlot(VkDevice device, [NativeTypeName("const VkPrivateDataSlotCreateInfo *")] VkPrivateDataSlotCreateInfoEXT* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkPrivateDataSlot* pPrivateDataSlot);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkDestroyPrivateDataSlot(VkDevice device, [NativeTypeName("VkPrivateDataSlot")] VkPrivateDataSlot_T* privateDataSlot, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
+        public static extern void vkDestroyPrivateDataSlot(VkDevice device, VkPrivateDataSlot privateDataSlot, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern VkResult vkSetPrivateData(VkDevice device, VkObjectType objectType, [NativeTypeName("uint64_t")] ulong objectHandle, [NativeTypeName("VkPrivateDataSlot")] VkPrivateDataSlot_T* privateDataSlot, [NativeTypeName("uint64_t")] ulong data);
+        public static extern VkResult vkSetPrivateData(VkDevice device, VkObjectType objectType, [NativeTypeName("uint64_t")] ulong objectHandle, VkPrivateDataSlot privateDataSlot, [NativeTypeName("uint64_t")] ulong data);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkGetPrivateData(VkDevice device, VkObjectType objectType, [NativeTypeName("uint64_t")] ulong objectHandle, [NativeTypeName("VkPrivateDataSlot")] VkPrivateDataSlot_T* privateDataSlot, [NativeTypeName("uint64_t *")] ulong* pData);
+        public static extern void vkGetPrivateData(VkDevice device, VkObjectType objectType, [NativeTypeName("uint64_t")] ulong objectHandle, VkPrivateDataSlot privateDataSlot, [NativeTypeName("uint64_t *")] ulong* pData);
 
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern void vkCmdSetEvent2(VkCommandBuffer commandBuffer, VkEvent @event, [NativeTypeName("const VkDependencyInfo *")] VkDependencyInfoKHR* pDependencyInfo);
