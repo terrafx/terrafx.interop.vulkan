@@ -12,24 +12,24 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        public VkSubmitFlagsKHR flags;
+        public VkSubmitFlags flags;
 
         [NativeTypeName("uint32_t")]
         public uint waitSemaphoreInfoCount;
 
-        [NativeTypeName("const VkSemaphoreSubmitInfoKHR *")]
+        [NativeTypeName("const VkSemaphoreSubmitInfo *")]
         public VkSemaphoreSubmitInfoKHR* pWaitSemaphoreInfos;
 
         [NativeTypeName("uint32_t")]
         public uint commandBufferInfoCount;
 
-        [NativeTypeName("const VkCommandBufferSubmitInfoKHR *")]
+        [NativeTypeName("const VkCommandBufferSubmitInfo *")]
         public VkCommandBufferSubmitInfoKHR* pCommandBufferInfos;
 
         [NativeTypeName("uint32_t")]
         public uint signalSemaphoreInfoCount;
 
-        [NativeTypeName("const VkSemaphoreSubmitInfoKHR *")]
+        [NativeTypeName("const VkSemaphoreSubmitInfo *")]
         public VkSemaphoreSubmitInfoKHR* pSignalSemaphoreInfos;
     }
 }

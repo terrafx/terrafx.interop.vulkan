@@ -12,6 +12,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("const void *")]
         public void* pNext;
 
+        [NativeTypeName("VkQueueGlobalPriorityKHR")]
         public VkQueueGlobalPriorityEXT globalPriority;
     }
 }

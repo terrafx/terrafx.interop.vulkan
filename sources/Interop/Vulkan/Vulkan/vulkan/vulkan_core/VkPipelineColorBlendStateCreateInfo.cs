@@ -12,8 +12,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkPipelineColorBlendStateCreateFlags")]
-        public uint flags;
+        public VkPipelineColorBlendStateCreateFlags flags;
 
         public VkBool32 logicOpEnable;
 

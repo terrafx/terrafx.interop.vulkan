@@ -2,6 +2,7 @@
 @../../../remap.rsp
 --exclude
 VK_MAKE_VIDEO_STD_VERSION
+VULKAN_VIDEO_CODECS_COMMON_H_
 --file
 vk_video-vulkan_video_codecs_common.h
 --methodClassName

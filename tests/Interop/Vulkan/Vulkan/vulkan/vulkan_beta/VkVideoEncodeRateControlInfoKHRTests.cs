@@ -36,7 +36,7 @@ namespace TerraFX.Interop.Vulkan.UnitTests
             }
             else
             {
-                Assert.That(sizeof(VkVideoEncodeRateControlInfoKHR), Is.EqualTo(32));
+                Assert.That(sizeof(VkVideoEncodeRateControlInfoKHR), Is.EqualTo(24));
             }
         }
     }

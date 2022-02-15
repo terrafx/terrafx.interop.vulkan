@@ -17,7 +17,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("char [256]")]
         public fixed sbyte version[256];
 
-        public VkToolPurposeFlagsEXT purposes;
+        public VkToolPurposeFlags purposes;
 
         [NativeTypeName("char [256]")]
         public fixed sbyte description[256];

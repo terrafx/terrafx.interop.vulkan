@@ -32,7 +32,7 @@ namespace TerraFX.Interop.Vulkan.UnitTests
         {
             if (Environment.Is64BitProcess)
             {
-                Assert.That(sizeof(VkVideoEncodeInfoKHR), Is.EqualTo(128));
+                Assert.That(sizeof(VkVideoEncodeInfoKHR), Is.EqualTo(136));
             }
             else
             {

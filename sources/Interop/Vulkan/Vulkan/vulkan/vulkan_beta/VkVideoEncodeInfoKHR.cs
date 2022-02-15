@@ -37,5 +37,8 @@ namespace TerraFX.Interop.Vulkan
 
         [NativeTypeName("const VkVideoReferenceSlotKHR *")]
         public VkVideoReferenceSlotKHR* pReferenceSlots;
+
+        [NativeTypeName("uint32_t")]
+        public uint precedingExternallyEncodedBytes;
     }
 }

@@ -16,7 +16,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint64_t")]
         public ulong externalFormat;
 
-        [NativeTypeName("VkFormatFeatureFlags2KHR")]
+        [NativeTypeName("VkFormatFeatureFlags2")]
         public ulong formatFeatures;
 
         public VkComponentMapping samplerYcbcrConversionComponents;

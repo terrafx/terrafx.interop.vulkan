@@ -11,7 +11,7 @@ namespace TerraFX.Interop.Vulkan
 
         public void* pNext;
 
-        [NativeTypeName("VkPipelineStageFlags2KHR")]
+        [NativeTypeName("VkPipelineStageFlags2")]
         public ulong stage;
 
         public void* pCheckpointMarker;

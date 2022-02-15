@@ -17,19 +17,10 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("VkVideoEncodeRateControlModeFlagBitsKHR")]
         public VkVideoEncodeRateControlModeFlagsKHR rateControlMode;
 
-        [NativeTypeName("uint32_t")]
-        public uint averageBitrate;
+        [NativeTypeName("uint8_t")]
+        public byte layerCount;
 
-        [NativeTypeName("uint16_t")]
-        public ushort peakToAverageBitrateRatio;
-
-        [NativeTypeName("uint16_t")]
-        public ushort frameRateNumerator;
-
-        [NativeTypeName("uint16_t")]
-        public ushort frameRateDenominator;
-
-        [NativeTypeName("uint32_t")]
-        public uint virtualBufferSizeInMs;
+        [NativeTypeName("const VkVideoEncodeRateControlLayerInfoKHR *")]
+        public VkVideoEncodeRateControlLayerInfoKHR* pLayerConfigs;
     }
 }

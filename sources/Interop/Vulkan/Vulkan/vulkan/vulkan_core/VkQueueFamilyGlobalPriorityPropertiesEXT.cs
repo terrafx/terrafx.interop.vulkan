@@ -18,7 +18,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint priorityCount;
 
-        [NativeTypeName("VkQueueGlobalPriorityEXT [16]")]
+        [NativeTypeName("VkQueueGlobalPriorityKHR [16]")]
         public _priorities_e__FixedBuffer priorities;
 
         public partial struct _priorities_e__FixedBuffer

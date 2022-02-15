@@ -12,6 +12,6 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        public VkPrivateDataSlotCreateFlagsEXT flags;
+        public VkPrivateDataSlotCreateFlags flags;
     }
 }

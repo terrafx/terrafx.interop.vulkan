@@ -23,7 +23,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint regionCount;
 
-        [NativeTypeName("const VkImageBlit2KHR *")]
+        [NativeTypeName("const VkImageBlit2 *")]
         public VkImageBlit2KHR* pRegions;
 
         public VkFilter filter;

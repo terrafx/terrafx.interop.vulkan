@@ -5,11 +5,17 @@
 
 namespace TerraFX.Interop.Vulkan
 {
-    public enum VkRenderingFlagBitsKHR
+    public unsafe partial struct VkSubpassFragmentDensityMapOffsetEndInfoQCOM
     {
-        VK_RENDERING_CONTENTS_SECONDARY_COMMAND_BUFFERS_BIT_KHR = 0x00000001,
-        VK_RENDERING_SUSPENDING_BIT_KHR = 0x00000002,
-        VK_RENDERING_RESUMING_BIT_KHR = 0x00000004,
-        VK_RENDERING_FLAG_BITS_MAX_ENUM_KHR = 0x7FFFFFFF,
+        public VkStructureType sType;
+
+        [NativeTypeName("const void *")]
+        public void* pNext;
+
+        [NativeTypeName("uint32_t")]
+        public uint fragmentDensityOffsetCount;
+
+        [NativeTypeName("const VkOffset2D *")]
+        public VkOffset2D* pFragmentDensityOffsets;
     }
 }

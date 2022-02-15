@@ -21,5 +21,6 @@ namespace TerraFX.Interop.Vulkan
         STD_VIDEO_H265_LEVEL_6_1 = 11,
         STD_VIDEO_H265_LEVEL_6_2 = 12,
         STD_VIDEO_H265_LEVEL_INVALID = 0x7FFFFFFF,
+        STD_VIDEO_H265_LEVEL_MAX_ENUM = 0x7FFFFFFF,
     }
 }

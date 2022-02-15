@@ -11,13 +11,13 @@ namespace TerraFX.Interop.Vulkan
 
         public void* pNext;
 
-        [NativeTypeName("VkFormatFeatureFlags2KHR")]
+        [NativeTypeName("VkFormatFeatureFlags2")]
         public ulong linearTilingFeatures;
 
-        [NativeTypeName("VkFormatFeatureFlags2KHR")]
+        [NativeTypeName("VkFormatFeatureFlags2")]
         public ulong optimalTilingFeatures;
 
-        [NativeTypeName("VkFormatFeatureFlags2KHR")]
+        [NativeTypeName("VkFormatFeatureFlags2")]
         public ulong bufferFeatures;
     }
 }

@@ -17,19 +17,19 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint memoryBarrierCount;
 
-        [NativeTypeName("const VkMemoryBarrier2KHR *")]
+        [NativeTypeName("const VkMemoryBarrier2 *")]
         public VkMemoryBarrier2KHR* pMemoryBarriers;
 
         [NativeTypeName("uint32_t")]
         public uint bufferMemoryBarrierCount;
 
-        [NativeTypeName("const VkBufferMemoryBarrier2KHR *")]
+        [NativeTypeName("const VkBufferMemoryBarrier2 *")]
         public VkBufferMemoryBarrier2KHR* pBufferMemoryBarriers;
 
         [NativeTypeName("uint32_t")]
         public uint imageMemoryBarrierCount;
 
-        [NativeTypeName("const VkImageMemoryBarrier2KHR *")]
+        [NativeTypeName("const VkImageMemoryBarrier2 *")]
         public VkImageMemoryBarrier2KHR* pImageMemoryBarriers;
     }
 }

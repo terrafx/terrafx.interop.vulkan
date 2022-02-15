@@ -7,7 +7,7 @@ namespace TerraFX.Interop.Vulkan
 {
     public static partial class Vulkan
     {
-        [NativeTypeName("#define VULKAN_VIDEO_CODEC_COMMON_H_ 1")]
-        public const int VULKAN_VIDEO_CODEC_COMMON_H_ = 1;
+        [NativeTypeName("#define vulkan_video_codecs_common 1")]
+        public const int vulkan_video_codecs_common = 1;
     }
 }

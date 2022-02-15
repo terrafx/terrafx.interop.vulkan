@@ -12,11 +12,13 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("const void *")]
         public void* pNext;
 
+        [NativeTypeName("VkPipelineCreationFeedback *")]
         public VkPipelineCreationFeedbackEXT* pPipelineCreationFeedback;
 
         [NativeTypeName("uint32_t")]
         public uint pipelineStageCreationFeedbackCount;
 
+        [NativeTypeName("VkPipelineCreationFeedback *")]
         public VkPipelineCreationFeedbackEXT* pPipelineStageCreationFeedbacks;
     }
 }

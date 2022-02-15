@@ -29,14 +29,5 @@ namespace TerraFX.Interop.Vulkan
 
         [NativeTypeName("const VkVideoEncodeH264DpbSlotInfoEXT *")]
         public VkVideoEncodeH264DpbSlotInfoEXT* pRefFinalList1Entries;
-
-        [NativeTypeName("uint32_t")]
-        public uint precedingNaluBytes;
-
-        [NativeTypeName("uint8_t")]
-        public byte minQp;
-
-        [NativeTypeName("uint8_t")]
-        public byte maxQp;
     }
 }

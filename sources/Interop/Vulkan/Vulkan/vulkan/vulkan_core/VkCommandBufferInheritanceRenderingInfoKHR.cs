@@ -12,8 +12,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkRenderingFlagsKHR")]
-        public uint flags;
+        public VkRenderingFlags flags;
 
         [NativeTypeName("uint32_t")]
         public uint viewMask;

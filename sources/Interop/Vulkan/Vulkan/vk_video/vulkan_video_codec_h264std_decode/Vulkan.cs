@@ -7,8 +7,11 @@ namespace TerraFX.Interop.Vulkan
 {
     public static partial class Vulkan
     {
-        [NativeTypeName("#define VULKAN_VIDEO_CODEC_H264STD_DECODE_H_ 1")]
-        public const int VULKAN_VIDEO_CODEC_H264STD_DECODE_H_ = 1;
+        [NativeTypeName("#define vulkan_video_codec_h264std_decode 1")]
+        public const int vulkan_video_codec_h264std_decode = 1;
+
+        [NativeTypeName("#define STD_VIDEO_DECODE_H264_FIELD_ORDER_COUNT_LIST_SIZE 2")]
+        public const int STD_VIDEO_DECODE_H264_FIELD_ORDER_COUNT_LIST_SIZE = 2;
 
         [NativeTypeName("#define STD_VIDEO_DECODE_H264_MVC_REF_LIST_SIZE 15")]
         public const int STD_VIDEO_DECODE_H264_MVC_REF_LIST_SIZE = 15;

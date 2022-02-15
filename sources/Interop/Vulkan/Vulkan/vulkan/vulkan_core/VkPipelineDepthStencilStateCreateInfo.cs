@@ -12,8 +12,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkPipelineDepthStencilStateCreateFlags")]
-        public uint flags;
+        public VkPipelineDepthStencilStateCreateFlags flags;
 
         public VkBool32 depthTestEnable;
 

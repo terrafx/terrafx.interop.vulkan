@@ -17,7 +17,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint64_t")]
         public ulong value;
 
-        [NativeTypeName("VkPipelineStageFlags2KHR")]
+        [NativeTypeName("VkPipelineStageFlags2")]
         public ulong stageMask;
 
         [NativeTypeName("uint32_t")]

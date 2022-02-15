@@ -13,7 +13,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint drmFormatModifierPlaneCount;
 
-        [NativeTypeName("VkFormatFeatureFlags2KHR")]
+        [NativeTypeName("VkFormatFeatureFlags2")]
         public ulong drmFormatModifierTilingFeatures;
     }
 }

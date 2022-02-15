@@ -12,8 +12,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("const void *")]
         public void* pNext;
 
-        [NativeTypeName("VkRenderingFlagsKHR")]
-        public uint flags;
+        public VkRenderingFlags flags;
 
         public VkRect2D renderArea;
 
@@ -26,13 +25,13 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint colorAttachmentCount;
 
-        [NativeTypeName("const VkRenderingAttachmentInfoKHR *")]
+        [NativeTypeName("const VkRenderingAttachmentInfo *")]
         public VkRenderingAttachmentInfoKHR* pColorAttachments;
 
-        [NativeTypeName("const VkRenderingAttachmentInfoKHR *")]
+        [NativeTypeName("const VkRenderingAttachmentInfo *")]
         public VkRenderingAttachmentInfoKHR* pDepthAttachment;
 
-        [NativeTypeName("const VkRenderingAttachmentInfoKHR *")]
+        [NativeTypeName("const VkRenderingAttachmentInfo *")]
         public VkRenderingAttachmentInfoKHR* pStencilAttachment;
     }
 }
