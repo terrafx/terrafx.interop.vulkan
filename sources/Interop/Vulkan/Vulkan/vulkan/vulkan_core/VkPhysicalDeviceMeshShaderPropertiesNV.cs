@@ -17,7 +17,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint maxTaskWorkGroupInvocations;
 
-        [NativeTypeName("uint32_t [3]")]
+        [NativeTypeName("uint32_t[3]")]
         public fixed uint maxTaskWorkGroupSize[3];
 
         [NativeTypeName("uint32_t")]
@@ -29,7 +29,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint maxMeshWorkGroupInvocations;
 
-        [NativeTypeName("uint32_t [3]")]
+        [NativeTypeName("uint32_t[3]")]
         public fixed uint maxMeshWorkGroupSize[3];
 
         [NativeTypeName("uint32_t")]

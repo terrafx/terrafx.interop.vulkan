@@ -7,16 +7,16 @@ namespace TerraFX.Interop.Vulkan
 {
     public unsafe partial struct StdVideoH265SubLayerHrdParameters
     {
-        [NativeTypeName("uint32_t [32]")]
+        [NativeTypeName("uint32_t[32]")]
         public fixed uint bit_rate_value_minus1[32];
 
-        [NativeTypeName("uint32_t [32]")]
+        [NativeTypeName("uint32_t[32]")]
         public fixed uint cpb_size_value_minus1[32];
 
-        [NativeTypeName("uint32_t [32]")]
+        [NativeTypeName("uint32_t[32]")]
         public fixed uint cpb_size_du_value_minus1[32];
 
-        [NativeTypeName("uint32_t [32]")]
+        [NativeTypeName("uint32_t[32]")]
         public fixed uint bit_rate_du_value_minus1[32];
 
         [NativeTypeName("uint32_t")]

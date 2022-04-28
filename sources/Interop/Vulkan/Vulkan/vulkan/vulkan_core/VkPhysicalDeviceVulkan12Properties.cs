@@ -13,10 +13,10 @@ namespace TerraFX.Interop.Vulkan
 
         public VkDriverId driverID;
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte driverName[256];
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte driverInfo[256];
 
         public VkConformanceVersion conformanceVersion;

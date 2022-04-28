@@ -21,10 +21,10 @@ namespace TerraFX.Interop.Vulkan
 
         public VkPhysicalDeviceType deviceType;
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte deviceName[256];
 
-        [NativeTypeName("uint8_t [16]")]
+        [NativeTypeName("uint8_t[16]")]
         public fixed byte pipelineCacheUUID[16];
 
         public VkPhysicalDeviceLimits limits;

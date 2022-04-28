@@ -24,7 +24,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("const VkPipelineColorBlendAttachmentState *")]
         public VkPipelineColorBlendAttachmentState* pAttachments;
 
-        [NativeTypeName("float [4]")]
+        [NativeTypeName("float[4]")]
         public fixed float blendConstants[4];
     }
 }

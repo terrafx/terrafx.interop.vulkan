@@ -16,13 +16,13 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint8_t")]
         public byte cpb_size_scale;
 
-        [NativeTypeName("uint32_t [32]")]
+        [NativeTypeName("uint32_t[32]")]
         public fixed uint bit_rate_value_minus1[32];
 
-        [NativeTypeName("uint32_t [32]")]
+        [NativeTypeName("uint32_t[32]")]
         public fixed uint cpb_size_value_minus1[32];
 
-        [NativeTypeName("uint8_t [32]")]
+        [NativeTypeName("uint8_t[32]")]
         public fixed byte cbr_flag[32];
 
         [NativeTypeName("uint32_t")]

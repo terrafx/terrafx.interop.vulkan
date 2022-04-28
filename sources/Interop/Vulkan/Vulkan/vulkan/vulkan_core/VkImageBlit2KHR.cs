@@ -18,12 +18,12 @@ namespace TerraFX.Interop.Vulkan
 
         public VkImageSubresourceLayers srcSubresource;
 
-        [NativeTypeName("VkOffset3D [2]")]
+        [NativeTypeName("VkOffset3D[2]")]
         public _srcOffsets_e__FixedBuffer srcOffsets;
 
         public VkImageSubresourceLayers dstSubresource;
 
-        [NativeTypeName("VkOffset3D [2]")]
+        [NativeTypeName("VkOffset3D[2]")]
         public _dstOffsets_e__FixedBuffer dstOffsets;
 
         public partial struct _srcOffsets_e__FixedBuffer

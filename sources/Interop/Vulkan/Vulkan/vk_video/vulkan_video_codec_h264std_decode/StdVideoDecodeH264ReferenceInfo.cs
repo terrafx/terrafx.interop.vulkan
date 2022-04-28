@@ -13,7 +13,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint16_t")]
         public ushort reserved;
 
-        [NativeTypeName("int32_t [2]")]
+        [NativeTypeName("int32_t[2]")]
         public fixed int PicOrderCnt[2];
 
         public StdVideoDecodeH264ReferenceInfoFlags flags;

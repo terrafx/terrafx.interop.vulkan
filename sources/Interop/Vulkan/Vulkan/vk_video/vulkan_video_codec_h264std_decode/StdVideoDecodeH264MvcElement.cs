@@ -24,25 +24,25 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint16_t")]
         public ushort numOfAnchorRefsInL0;
 
-        [NativeTypeName("uint16_t [15]")]
+        [NativeTypeName("uint16_t[15]")]
         public fixed ushort viewIdOfAnchorRefsInL0[15];
 
         [NativeTypeName("uint16_t")]
         public ushort numOfAnchorRefsInL1;
 
-        [NativeTypeName("uint16_t [15]")]
+        [NativeTypeName("uint16_t[15]")]
         public fixed ushort viewIdOfAnchorRefsInL1[15];
 
         [NativeTypeName("uint16_t")]
         public ushort numOfNonAnchorRefsInL0;
 
-        [NativeTypeName("uint16_t [15]")]
+        [NativeTypeName("uint16_t[15]")]
         public fixed ushort viewIdOfNonAnchorRefsInL0[15];
 
         [NativeTypeName("uint16_t")]
         public ushort numOfNonAnchorRefsInL1;
 
-        [NativeTypeName("uint16_t [15]")]
+        [NativeTypeName("uint16_t[15]")]
         public fixed ushort viewIdOfNonAnchorRefsInL1[15];
     }
 }

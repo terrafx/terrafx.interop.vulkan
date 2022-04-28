@@ -307,7 +307,7 @@ namespace TerraFX.Interop.Vulkan
         public static extern void vkCmdSetDepthBias(VkCommandBuffer commandBuffer, float depthBiasConstantFactor, float depthBiasClamp, float depthBiasSlopeFactor);
 
         [DllImport("vulkan", ExactSpelling = true)]
-        public static extern void vkCmdSetBlendConstants(VkCommandBuffer commandBuffer, [NativeTypeName("const float [4]")] float* blendConstants);
+        public static extern void vkCmdSetBlendConstants(VkCommandBuffer commandBuffer, [NativeTypeName("const float[4]")] float* blendConstants);
 
         [DllImport("vulkan", ExactSpelling = true)]
         public static extern void vkCmdSetDepthBounds(VkCommandBuffer commandBuffer, float minDepthBounds, float maxDepthBounds);

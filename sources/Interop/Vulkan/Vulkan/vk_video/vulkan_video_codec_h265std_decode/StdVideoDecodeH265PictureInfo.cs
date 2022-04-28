@@ -28,13 +28,13 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint8_t")]
         public byte NumDeltaPocsOfRefRpsIdx;
 
-        [NativeTypeName("uint8_t [8]")]
+        [NativeTypeName("uint8_t[8]")]
         public fixed byte RefPicSetStCurrBefore[8];
 
-        [NativeTypeName("uint8_t [8]")]
+        [NativeTypeName("uint8_t[8]")]
         public fixed byte RefPicSetStCurrAfter[8];
 
-        [NativeTypeName("uint8_t [8]")]
+        [NativeTypeName("uint8_t[8]")]
         public fixed byte RefPicSetLtCurr[8];
 
         public StdVideoDecodeH265PictureInfoFlags flags;

@@ -7,7 +7,7 @@ namespace TerraFX.Interop.Vulkan
 {
     public unsafe partial struct VpProfileProperties
     {
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte profileName[256];
 
         [NativeTypeName("uint32_t")]

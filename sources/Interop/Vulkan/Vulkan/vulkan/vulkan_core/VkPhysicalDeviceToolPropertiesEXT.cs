@@ -11,18 +11,18 @@ namespace TerraFX.Interop.Vulkan
 
         public void* pNext;
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte name[256];
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte version[256];
 
         public VkToolPurposeFlags purposes;
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte description[256];
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte layer[256];
     }
 }

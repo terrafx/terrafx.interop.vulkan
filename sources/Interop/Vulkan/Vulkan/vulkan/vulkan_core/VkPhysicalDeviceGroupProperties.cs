@@ -16,7 +16,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint physicalDeviceCount;
 
-        [NativeTypeName("VkPhysicalDevice [32]")]
+        [NativeTypeName("VkPhysicalDevice[32]")]
         public _physicalDevices_e__FixedBuffer physicalDevices;
 
         public VkBool32 subsetAllocation;

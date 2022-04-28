@@ -18,7 +18,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint deviceID;
 
-        [NativeTypeName("uint8_t [16]")]
+        [NativeTypeName("uint8_t[16]")]
         public fixed byte pipelineCacheUUID[16];
     }
 }

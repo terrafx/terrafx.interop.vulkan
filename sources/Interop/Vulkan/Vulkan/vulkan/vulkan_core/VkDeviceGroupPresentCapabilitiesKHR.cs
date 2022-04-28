@@ -11,7 +11,7 @@ namespace TerraFX.Interop.Vulkan
 
         public void* pNext;
 
-        [NativeTypeName("uint32_t [32]")]
+        [NativeTypeName("uint32_t[32]")]
         public fixed uint presentMask[32];
 
         public VkDeviceGroupPresentModeFlagsKHR modes;

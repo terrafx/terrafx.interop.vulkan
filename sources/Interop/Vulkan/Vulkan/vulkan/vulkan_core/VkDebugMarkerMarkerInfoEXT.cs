@@ -15,7 +15,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("const char *")]
         public sbyte* pMarkerName;
 
-        [NativeTypeName("float [4]")]
+        [NativeTypeName("float[4]")]
         public fixed float color[4];
     }
 }

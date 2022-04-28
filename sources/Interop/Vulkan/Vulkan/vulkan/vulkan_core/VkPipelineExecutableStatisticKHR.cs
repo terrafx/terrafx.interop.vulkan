@@ -11,10 +11,10 @@ namespace TerraFX.Interop.Vulkan
 
         public void* pNext;
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte name[256];
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte description[256];
 
         public VkPipelineExecutableStatisticFormatKHR format;

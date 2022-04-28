@@ -36,10 +36,10 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint8_t")]
         public byte dpb_output_delay_length_minus1;
 
-        [NativeTypeName("uint8_t [7]")]
+        [NativeTypeName("uint8_t[7]")]
         public fixed byte cpb_cnt_minus1[7];
 
-        [NativeTypeName("uint16_t [7]")]
+        [NativeTypeName("uint16_t[7]")]
         public fixed ushort elemental_duration_in_tc_minus1[7];
 
         [NativeTypeName("StdVideoH265SubLayerHrdParameters *[7]")]
