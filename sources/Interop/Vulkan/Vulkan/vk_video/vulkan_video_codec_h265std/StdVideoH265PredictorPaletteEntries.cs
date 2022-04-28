@@ -7,7 +7,7 @@ namespace TerraFX.Interop.Vulkan
 {
     public unsafe partial struct StdVideoH265PredictorPaletteEntries
     {
-        [NativeTypeName("uint16_t [3][128]")]
+        [NativeTypeName("uint16_t[3][128]")]
         public fixed ushort PredictorPaletteEntries[3 * 128];
     }
 }

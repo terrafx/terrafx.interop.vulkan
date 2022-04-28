@@ -13,10 +13,10 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint8_t")]
         public byte use_default_scaling_matrix_mask;
 
-        [NativeTypeName("uint8_t [6][16]")]
+        [NativeTypeName("uint8_t[6][16]")]
         public fixed byte ScalingList4x4[6 * 16];
 
-        [NativeTypeName("uint8_t [2][64]")]
+        [NativeTypeName("uint8_t[2][64]")]
         public fixed byte ScalingList8x8[2 * 64];
     }
 }

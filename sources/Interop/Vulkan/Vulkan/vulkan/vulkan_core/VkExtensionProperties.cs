@@ -7,7 +7,7 @@ namespace TerraFX.Interop.Vulkan
 {
     public unsafe partial struct VkExtensionProperties
     {
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte extensionName[256];
 
         [NativeTypeName("uint32_t")]

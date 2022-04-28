@@ -40,10 +40,10 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint8_t")]
         public byte num_tile_rows_minus1;
 
-        [NativeTypeName("uint16_t [19]")]
+        [NativeTypeName("uint16_t[19]")]
         public fixed ushort column_width_minus1[19];
 
-        [NativeTypeName("uint16_t [21]")]
+        [NativeTypeName("uint16_t[21]")]
         public fixed ushort row_height_minus1[21];
 
         [NativeTypeName("int8_t")]
@@ -68,10 +68,10 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint8_t")]
         public byte chroma_qp_offset_list_len_minus1;
 
-        [NativeTypeName("int8_t [6]")]
+        [NativeTypeName("int8_t[6]")]
         public fixed sbyte cb_qp_offset_list[6];
 
-        [NativeTypeName("int8_t [6]")]
+        [NativeTypeName("int8_t[6]")]
         public fixed sbyte cr_qp_offset_list[6];
 
         [NativeTypeName("uint8_t")]

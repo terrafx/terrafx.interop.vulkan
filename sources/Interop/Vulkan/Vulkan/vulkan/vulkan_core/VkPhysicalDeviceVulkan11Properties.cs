@@ -11,13 +11,13 @@ namespace TerraFX.Interop.Vulkan
 
         public void* pNext;
 
-        [NativeTypeName("uint8_t [16]")]
+        [NativeTypeName("uint8_t[16]")]
         public fixed byte deviceUUID[16];
 
-        [NativeTypeName("uint8_t [16]")]
+        [NativeTypeName("uint8_t[16]")]
         public fixed byte driverUUID[16];
 
-        [NativeTypeName("uint8_t [8]")]
+        [NativeTypeName("uint8_t[8]")]
         public fixed byte deviceLUID[8];
 
         [NativeTypeName("uint32_t")]

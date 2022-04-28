@@ -163,13 +163,13 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint maxComputeSharedMemorySize;
 
-        [NativeTypeName("uint32_t [3]")]
+        [NativeTypeName("uint32_t[3]")]
         public fixed uint maxComputeWorkGroupCount[3];
 
         [NativeTypeName("uint32_t")]
         public uint maxComputeWorkGroupInvocations;
 
-        [NativeTypeName("uint32_t [3]")]
+        [NativeTypeName("uint32_t[3]")]
         public fixed uint maxComputeWorkGroupSize[3];
 
         [NativeTypeName("uint32_t")]
@@ -194,10 +194,10 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint maxViewports;
 
-        [NativeTypeName("uint32_t [2]")]
+        [NativeTypeName("uint32_t[2]")]
         public fixed uint maxViewportDimensions[2];
 
-        [NativeTypeName("float [2]")]
+        [NativeTypeName("float[2]")]
         public fixed float viewportBoundsRange[2];
 
         [NativeTypeName("uint32_t")]
@@ -283,10 +283,10 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint discreteQueuePriorities;
 
-        [NativeTypeName("float [2]")]
+        [NativeTypeName("float[2]")]
         public fixed float pointSizeRange[2];
 
-        [NativeTypeName("float [2]")]
+        [NativeTypeName("float[2]")]
         public fixed float lineWidthRange[2];
 
         public float pointSizeGranularity;

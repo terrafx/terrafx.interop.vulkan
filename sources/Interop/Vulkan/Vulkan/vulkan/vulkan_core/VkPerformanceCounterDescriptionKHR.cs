@@ -13,13 +13,13 @@ namespace TerraFX.Interop.Vulkan
 
         public VkPerformanceCounterDescriptionFlagsKHR flags;
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte name[256];
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte category[256];
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte description[256];
     }
 }

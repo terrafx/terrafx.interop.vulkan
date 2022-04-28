@@ -13,10 +13,10 @@ namespace TerraFX.Interop.Vulkan
 
         public VkShaderStageFlags stages;
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte name[256];
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte description[256];
 
         [NativeTypeName("uint32_t")]

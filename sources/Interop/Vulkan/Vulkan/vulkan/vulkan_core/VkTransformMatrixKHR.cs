@@ -7,7 +7,7 @@ namespace TerraFX.Interop.Vulkan
 {
     public unsafe partial struct VkTransformMatrixKHR
     {
-        [NativeTypeName("float [3][4]")]
+        [NativeTypeName("float[3][4]")]
         public fixed float matrix[3 * 4];
     }
 }

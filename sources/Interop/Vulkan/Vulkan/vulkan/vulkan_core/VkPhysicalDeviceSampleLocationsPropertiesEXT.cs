@@ -15,7 +15,7 @@ namespace TerraFX.Interop.Vulkan
 
         public VkExtent2D maxSampleLocationGridSize;
 
-        [NativeTypeName("float [2]")]
+        [NativeTypeName("float[2]")]
         public fixed float sampleLocationCoordinateRange[2];
 
         [NativeTypeName("uint32_t")]

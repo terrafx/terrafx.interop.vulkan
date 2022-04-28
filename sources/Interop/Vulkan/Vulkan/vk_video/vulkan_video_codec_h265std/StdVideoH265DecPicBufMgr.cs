@@ -7,13 +7,13 @@ namespace TerraFX.Interop.Vulkan
 {
     public unsafe partial struct StdVideoH265DecPicBufMgr
     {
-        [NativeTypeName("uint32_t [7]")]
+        [NativeTypeName("uint32_t[7]")]
         public fixed uint max_latency_increase_plus1[7];
 
-        [NativeTypeName("uint8_t [7]")]
+        [NativeTypeName("uint8_t[7]")]
         public fixed byte max_dec_pic_buffering_minus1[7];
 
-        [NativeTypeName("uint8_t [7]")]
+        [NativeTypeName("uint8_t[7]")]
         public fixed byte max_num_reorder_pics[7];
     }
 }

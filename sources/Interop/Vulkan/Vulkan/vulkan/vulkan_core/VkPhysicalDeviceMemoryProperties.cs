@@ -14,13 +14,13 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint memoryTypeCount;
 
-        [NativeTypeName("VkMemoryType [32]")]
+        [NativeTypeName("VkMemoryType[32]")]
         public _memoryTypes_e__FixedBuffer memoryTypes;
 
         [NativeTypeName("uint32_t")]
         public uint memoryHeapCount;
 
-        [NativeTypeName("VkMemoryHeap [16]")]
+        [NativeTypeName("VkMemoryHeap[16]")]
         public _memoryHeaps_e__FixedBuffer memoryHeaps;
 
         public partial struct _memoryTypes_e__FixedBuffer

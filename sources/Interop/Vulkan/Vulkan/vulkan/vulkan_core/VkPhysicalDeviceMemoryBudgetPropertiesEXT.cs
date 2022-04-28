@@ -11,10 +11,10 @@ namespace TerraFX.Interop.Vulkan
 
         public void* pNext;
 
-        [NativeTypeName("VkDeviceSize [16]")]
+        [NativeTypeName("VkDeviceSize[16]")]
         public fixed ulong heapBudget[16];
 
-        [NativeTypeName("VkDeviceSize [16]")]
+        [NativeTypeName("VkDeviceSize[16]")]
         public fixed ulong heapUsage[16];
     }
 }

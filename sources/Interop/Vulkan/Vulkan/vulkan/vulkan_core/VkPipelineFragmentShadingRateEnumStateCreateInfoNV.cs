@@ -20,7 +20,7 @@ namespace TerraFX.Interop.Vulkan
 
         public VkFragmentShadingRateNV shadingRate;
 
-        [NativeTypeName("VkFragmentShadingRateCombinerOpKHR [2]")]
+        [NativeTypeName("VkFragmentShadingRateCombinerOpKHR[2]")]
         public _combinerOps_e__FixedBuffer combinerOps;
 
         public partial struct _combinerOps_e__FixedBuffer

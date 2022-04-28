@@ -7,7 +7,7 @@ namespace TerraFX.Interop.Vulkan
 {
     public unsafe partial struct VkLayerProperties
     {
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte layerName[256];
 
         [NativeTypeName("uint32_t")]
@@ -16,7 +16,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint implementationVersion;
 
-        [NativeTypeName("char [256]")]
+        [NativeTypeName("char[256]")]
         public fixed sbyte description[256];
     }
 }

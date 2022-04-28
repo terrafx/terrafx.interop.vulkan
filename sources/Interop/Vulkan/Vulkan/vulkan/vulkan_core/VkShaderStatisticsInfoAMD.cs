@@ -23,7 +23,7 @@ namespace TerraFX.Interop.Vulkan
         [NativeTypeName("uint32_t")]
         public uint numAvailableSgprs;
 
-        [NativeTypeName("uint32_t [3]")]
+        [NativeTypeName("uint32_t[3]")]
         public fixed uint computeWorkGroupSize[3];
     }
 }
