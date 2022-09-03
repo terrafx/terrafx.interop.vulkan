@@ -29,6 +29,8 @@ log-potential-typedef-remappings
 multi-file
 preview-codegen
 trimmable-vtbls
+--define-macro
+VK_ENABLE_BETA_EXTENSIONS
 --headerFile
 header.txt
 --include-directory

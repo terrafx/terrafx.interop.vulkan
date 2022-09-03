@@ -85,6 +85,18 @@ public static unsafe partial class Vulkan
     [NativeTypeName("#define VP_LUNARG_DESKTOP_BASELINE_2022_MIN_API_VERSION VK_MAKE_VERSION(1, 1, 139)")]
     public const uint VP_LUNARG_DESKTOP_BASELINE_2022_MIN_API_VERSION = ((((uint)(1)) << 22) | (((uint)(1)) << 12) | ((uint)(139)));
 
+    [NativeTypeName("#define VP_LUNARG_desktop_portability_2022 1")]
+    public const int VP_LUNARG_desktop_portability_2022 = 1;
+
+    [NativeTypeName("#define VP_LUNARG_DESKTOP_PORTABILITY_2022_NAME \"VP_LUNARG_desktop_portability_2022\"")]
+    public static ReadOnlySpan<byte> VP_LUNARG_DESKTOP_PORTABILITY_2022_NAME => "VP_LUNARG_desktop_portability_2022"u8;
+
+    [NativeTypeName("#define VP_LUNARG_DESKTOP_PORTABILITY_2022_SPEC_VERSION 1")]
+    public const int VP_LUNARG_DESKTOP_PORTABILITY_2022_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VP_LUNARG_DESKTOP_PORTABILITY_2022_MIN_API_VERSION VK_MAKE_VERSION(1, 1, 208)")]
+    public const uint VP_LUNARG_DESKTOP_PORTABILITY_2022_MIN_API_VERSION = ((((uint)(1)) << 22) | (((uint)(1)) << 12) | ((uint)(208)));
+
     [NativeTypeName("#define VP_MAX_PROFILE_NAME_SIZE 256U")]
     public const uint VP_MAX_PROFILE_NAME_SIZE = 256U;
 }
