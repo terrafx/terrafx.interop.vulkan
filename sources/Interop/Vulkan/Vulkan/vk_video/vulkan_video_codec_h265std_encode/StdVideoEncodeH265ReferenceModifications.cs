@@ -12,12 +12,12 @@ public unsafe partial struct StdVideoEncodeH265ReferenceModifications
     [NativeTypeName("uint8_t")]
     public byte referenceList0ModificationsCount;
 
-    [NativeTypeName("uint8_t *")]
+    [NativeTypeName("const uint8_t *")]
     public byte* pReferenceList0Modifications;
 
     [NativeTypeName("uint8_t")]
     public byte referenceList1ModificationsCount;
 
-    [NativeTypeName("uint8_t *")]
+    [NativeTypeName("const uint8_t *")]
     public byte* pReferenceList1Modifications;
 }

@@ -12,8 +12,7 @@ public unsafe partial struct VkPipelineLayoutCreateInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkPipelineLayoutCreateFlags")]
-    public uint flags;
+    public VkPipelineLayoutCreateFlags flags;
 
     [NativeTypeName("uint32_t")]
     public uint setLayoutCount;

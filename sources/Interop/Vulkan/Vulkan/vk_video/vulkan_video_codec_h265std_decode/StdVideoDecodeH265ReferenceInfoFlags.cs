@@ -12,7 +12,7 @@ public partial struct StdVideoDecodeH265ReferenceInfoFlags
     public uint _bitfield;
 
     [NativeTypeName("uint32_t : 1")]
-    public uint is_long_term
+    public uint used_for_long_term_reference
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -28,7 +28,7 @@ public partial struct StdVideoDecodeH265ReferenceInfoFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint is_non_existing
+    public uint unused_for_reference
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -40,6 +40,22 @@ public partial struct StdVideoDecodeH265ReferenceInfoFlags
         set
         {
             _bitfield = (_bitfield & ~(0x1u << 1)) | ((value & 0x1u) << 1);
+        }
+    }
+
+    [NativeTypeName("uint32_t : 1")]
+    public uint is_non_existing
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get
+        {
+            return (_bitfield >> 2) & 0x1u;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        set
+        {
+            _bitfield = (_bitfield & ~(0x1u << 2)) | ((value & 0x1u) << 2);
         }
     }
 }

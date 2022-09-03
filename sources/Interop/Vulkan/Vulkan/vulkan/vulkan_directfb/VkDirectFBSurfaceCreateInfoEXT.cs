@@ -14,8 +14,7 @@ public unsafe partial struct VkDirectFBSurfaceCreateInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkDirectFBSurfaceCreateFlagsEXT")]
-    public uint flags;
+    public VkDirectFBSurfaceCreateFlagsEXT flags;
 
     public IntPtr dfb;
 

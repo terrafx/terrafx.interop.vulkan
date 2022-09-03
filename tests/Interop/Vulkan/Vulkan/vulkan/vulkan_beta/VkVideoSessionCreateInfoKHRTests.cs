@@ -32,11 +32,11 @@ public static unsafe partial class VkVideoSessionCreateInfoKHRTests
     {
         if (Environment.Is64BitProcess)
         {
-            Assert.That(sizeof(VkVideoSessionCreateInfoKHR), Is.EqualTo(56));
+            Assert.That(sizeof(VkVideoSessionCreateInfoKHR), Is.EqualTo(64));
         }
         else
         {
-            Assert.That(sizeof(VkVideoSessionCreateInfoKHR), Is.EqualTo(44));
+            Assert.That(sizeof(VkVideoSessionCreateInfoKHR), Is.EqualTo(48));
         }
     }
 }

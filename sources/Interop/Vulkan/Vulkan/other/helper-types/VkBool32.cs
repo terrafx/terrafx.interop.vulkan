@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkBool32 : IComparable, IComparable<VkBool32>, IEquatable<VkBool32>, IFormattable
+public readonly partial struct VkBool32 : IComparable, IComparable<VkBool32>, IEquatable<VkBool32>, IFormattable
 {
     public readonly uint Value;
 
@@ -41,23 +41,23 @@ public partial struct VkBool32 : IComparable, IComparable<VkBool32>, IEquatable<
 
     public static explicit operator byte(VkBool32 value) => (byte)(value.Value);
 
-    public static explicit operator VkBool32(short value) => new VkBool32((uint)(value));
+    public static explicit operator VkBool32(short value) => new VkBool32(unchecked((uint)(value)));
 
     public static explicit operator short(VkBool32 value) => (short)(value.Value);
 
-    public static explicit operator VkBool32(int value) => new VkBool32((uint)(value));
+    public static explicit operator VkBool32(int value) => new VkBool32(unchecked((uint)(value)));
 
     public static explicit operator int(VkBool32 value) => (int)(value.Value);
 
-    public static explicit operator VkBool32(long value) => new VkBool32((uint)(value));
+    public static explicit operator VkBool32(long value) => new VkBool32(unchecked((uint)(value)));
 
     public static implicit operator long(VkBool32 value) => value.Value;
 
-    public static explicit operator VkBool32(nint value) => new VkBool32((uint)(value));
+    public static explicit operator VkBool32(nint value) => new VkBool32(unchecked((uint)(value)));
 
     public static explicit operator nint(VkBool32 value) => (nint)(value.Value);
 
-    public static explicit operator VkBool32(sbyte value) => new VkBool32((uint)(value));
+    public static explicit operator VkBool32(sbyte value) => new VkBool32(unchecked((uint)(value)));
 
     public static explicit operator sbyte(VkBool32 value) => (sbyte)(value.Value);
 
@@ -69,11 +69,11 @@ public partial struct VkBool32 : IComparable, IComparable<VkBool32>, IEquatable<
 
     public static implicit operator uint(VkBool32 value) => value.Value;
 
-    public static explicit operator VkBool32(ulong value) => new VkBool32((uint)(value));
+    public static explicit operator VkBool32(ulong value) => new VkBool32(unchecked((uint)(value)));
 
     public static implicit operator ulong(VkBool32 value) => value.Value;
 
-    public static explicit operator VkBool32(nuint value) => new VkBool32((uint)(value));
+    public static explicit operator VkBool32(nuint value) => new VkBool32(unchecked((uint)(value)));
 
     public static implicit operator nuint(VkBool32 value) => value.Value;
 

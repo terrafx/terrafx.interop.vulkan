@@ -12,8 +12,7 @@ public unsafe partial struct VkDebugUtilsMessengerCreateInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkDebugUtilsMessengerCreateFlagsEXT")]
-    public uint flags;
+    public VkDebugUtilsMessengerCreateFlagsEXT flags;
 
     public VkDebugUtilsMessageSeverityFlagsEXT messageSeverity;
 

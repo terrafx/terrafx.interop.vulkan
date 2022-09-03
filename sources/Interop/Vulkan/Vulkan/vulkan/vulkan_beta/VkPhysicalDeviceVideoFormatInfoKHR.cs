@@ -12,7 +12,4 @@ public unsafe partial struct VkPhysicalDeviceVideoFormatInfoKHR
     public void* pNext;
 
     public VkImageUsageFlags imageUsage;
-
-    [NativeTypeName("const VkVideoProfilesKHR *")]
-    public VkVideoProfilesKHR* pVideoProfiles;
 }

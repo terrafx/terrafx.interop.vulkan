@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkCuFunctionNVX : IComparable, IComparable<VkCuFunctionNVX>, IEquatable<VkCuFunctionNVX>, IFormattable
+public readonly partial struct VkCuFunctionNVX : IComparable, IComparable<VkCuFunctionNVX>, IEquatable<VkCuFunctionNVX>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkCuFunctionNVX : IComparable, IComparable<VkCuFunctionNVX
 
     public static explicit operator byte(VkCuFunctionNVX value) => (byte)(value.Value);
 
-    public static explicit operator VkCuFunctionNVX(short value) => new VkCuFunctionNVX((ulong)(value));
+    public static explicit operator VkCuFunctionNVX(short value) => new VkCuFunctionNVX(unchecked((ulong)(value)));
 
     public static explicit operator short(VkCuFunctionNVX value) => (short)(value.Value);
 
-    public static explicit operator VkCuFunctionNVX(int value) => new VkCuFunctionNVX((ulong)(value));
+    public static explicit operator VkCuFunctionNVX(int value) => new VkCuFunctionNVX(unchecked((ulong)(value)));
 
     public static explicit operator int(VkCuFunctionNVX value) => (int)(value.Value);
 
-    public static explicit operator VkCuFunctionNVX(long value) => new VkCuFunctionNVX((ulong)(value));
+    public static explicit operator VkCuFunctionNVX(long value) => new VkCuFunctionNVX(unchecked((ulong)(value)));
 
     public static explicit operator long(VkCuFunctionNVX value) => (long)(value.Value);
 
-    public static explicit operator VkCuFunctionNVX(nint value) => new VkCuFunctionNVX((ulong)(value));
+    public static explicit operator VkCuFunctionNVX(nint value) => new VkCuFunctionNVX(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkCuFunctionNVX value) => (nint)(value.Value);
 
-    public static explicit operator VkCuFunctionNVX(sbyte value) => new VkCuFunctionNVX((ulong)(value));
+    public static explicit operator VkCuFunctionNVX(sbyte value) => new VkCuFunctionNVX(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkCuFunctionNVX value) => (sbyte)(value.Value);
 

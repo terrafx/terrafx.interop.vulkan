@@ -9,17 +9,17 @@ public partial struct StdVideoEncodeH264PictureInfo
 {
     public StdVideoEncodeH264PictureInfoFlags flags;
 
+    [NativeTypeName("uint8_t")]
+    public byte seq_parameter_set_id;
+
+    [NativeTypeName("uint8_t")]
+    public byte pic_parameter_set_id;
+
     public StdVideoH264PictureType pictureType;
 
     [NativeTypeName("uint32_t")]
-    public uint frameNum;
+    public uint frame_num;
 
-    [NativeTypeName("uint32_t")]
-    public uint pictureOrderCount;
-
-    [NativeTypeName("uint16_t")]
-    public ushort long_term_pic_num;
-
-    [NativeTypeName("uint16_t")]
-    public ushort long_term_frame_idx;
+    [NativeTypeName("int32_t")]
+    public int PicOrderCnt;
 }

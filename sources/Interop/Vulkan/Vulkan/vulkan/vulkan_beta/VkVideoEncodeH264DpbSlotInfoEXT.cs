@@ -15,6 +15,6 @@ public unsafe partial struct VkVideoEncodeH264DpbSlotInfoEXT
     [NativeTypeName("int8_t")]
     public sbyte slotIndex;
 
-    [NativeTypeName("const StdVideoEncodeH264PictureInfo *")]
-    public StdVideoEncodeH264PictureInfo* pStdPictureInfo;
+    [NativeTypeName("const StdVideoEncodeH264ReferenceInfo *")]
+    public StdVideoEncodeH264ReferenceInfo* pStdReferenceInfo;
 }

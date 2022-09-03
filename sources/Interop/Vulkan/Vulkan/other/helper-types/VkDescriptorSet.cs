@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkDescriptorSet : IComparable, IComparable<VkDescriptorSet>, IEquatable<VkDescriptorSet>, IFormattable
+public readonly partial struct VkDescriptorSet : IComparable, IComparable<VkDescriptorSet>, IEquatable<VkDescriptorSet>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkDescriptorSet : IComparable, IComparable<VkDescriptorSet
 
     public static explicit operator byte(VkDescriptorSet value) => (byte)(value.Value);
 
-    public static explicit operator VkDescriptorSet(short value) => new VkDescriptorSet((ulong)(value));
+    public static explicit operator VkDescriptorSet(short value) => new VkDescriptorSet(unchecked((ulong)(value)));
 
     public static explicit operator short(VkDescriptorSet value) => (short)(value.Value);
 
-    public static explicit operator VkDescriptorSet(int value) => new VkDescriptorSet((ulong)(value));
+    public static explicit operator VkDescriptorSet(int value) => new VkDescriptorSet(unchecked((ulong)(value)));
 
     public static explicit operator int(VkDescriptorSet value) => (int)(value.Value);
 
-    public static explicit operator VkDescriptorSet(long value) => new VkDescriptorSet((ulong)(value));
+    public static explicit operator VkDescriptorSet(long value) => new VkDescriptorSet(unchecked((ulong)(value)));
 
     public static explicit operator long(VkDescriptorSet value) => (long)(value.Value);
 
-    public static explicit operator VkDescriptorSet(nint value) => new VkDescriptorSet((ulong)(value));
+    public static explicit operator VkDescriptorSet(nint value) => new VkDescriptorSet(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkDescriptorSet value) => (nint)(value.Value);
 
-    public static explicit operator VkDescriptorSet(sbyte value) => new VkDescriptorSet((ulong)(value));
+    public static explicit operator VkDescriptorSet(sbyte value) => new VkDescriptorSet(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkDescriptorSet value) => (sbyte)(value.Value);
 

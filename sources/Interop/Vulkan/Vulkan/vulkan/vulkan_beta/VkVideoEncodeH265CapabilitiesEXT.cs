@@ -9,37 +9,60 @@ public unsafe partial struct VkVideoEncodeH265CapabilitiesEXT
 {
     public VkStructureType sType;
 
-    [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkVideoEncodeH265CapabilityFlagsEXT")]
-    public uint flags;
+    public VkVideoEncodeH265CapabilityFlagsEXT flags;
 
-    [NativeTypeName("VkVideoEncodeH265InputModeFlagsEXT")]
-    public uint inputModeFlags;
+    public VkVideoEncodeH265InputModeFlagsEXT inputModeFlags;
 
-    [NativeTypeName("VkVideoEncodeH265OutputModeFlagsEXT")]
-    public uint outputModeFlags;
+    public VkVideoEncodeH265OutputModeFlagsEXT outputModeFlags;
 
-    [NativeTypeName("VkVideoEncodeH265CtbSizeFlagsEXT")]
-    public uint ctbSizes;
+    public VkVideoEncodeH265CtbSizeFlagsEXT ctbSizes;
 
-    public VkExtent2D inputImageDataAlignment;
+    public VkVideoEncodeH265TransformBlockSizeFlagsEXT transformBlockSizes;
 
     [NativeTypeName("uint8_t")]
-    public byte maxNumL0ReferenceForP;
+    public byte maxPPictureL0ReferenceCount;
 
     [NativeTypeName("uint8_t")]
-    public byte maxNumL0ReferenceForB;
+    public byte maxBPictureL0ReferenceCount;
 
     [NativeTypeName("uint8_t")]
-    public byte maxNumL1Reference;
+    public byte maxL1ReferenceCount;
 
     [NativeTypeName("uint8_t")]
-    public byte maxNumSubLayers;
+    public byte maxSubLayersCount;
 
     [NativeTypeName("uint8_t")]
-    public byte qualityLevelCount;
+    public byte minLog2MinLumaCodingBlockSizeMinus3;
 
-    public VkExtensionProperties stdExtensionVersion;
+    [NativeTypeName("uint8_t")]
+    public byte maxLog2MinLumaCodingBlockSizeMinus3;
+
+    [NativeTypeName("uint8_t")]
+    public byte minLog2MinLumaTransformBlockSizeMinus2;
+
+    [NativeTypeName("uint8_t")]
+    public byte maxLog2MinLumaTransformBlockSizeMinus2;
+
+    [NativeTypeName("uint8_t")]
+    public byte minMaxTransformHierarchyDepthInter;
+
+    [NativeTypeName("uint8_t")]
+    public byte maxMaxTransformHierarchyDepthInter;
+
+    [NativeTypeName("uint8_t")]
+    public byte minMaxTransformHierarchyDepthIntra;
+
+    [NativeTypeName("uint8_t")]
+    public byte maxMaxTransformHierarchyDepthIntra;
+
+    [NativeTypeName("uint8_t")]
+    public byte maxDiffCuQpDeltaDepth;
+
+    [NativeTypeName("uint8_t")]
+    public byte minMaxNumMergeCand;
+
+    [NativeTypeName("uint8_t")]
+    public byte maxMaxNumMergeCand;
 }

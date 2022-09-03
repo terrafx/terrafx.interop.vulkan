@@ -9,6 +9,7 @@ public unsafe partial struct VkVideoProfileKHR
 {
     public VkStructureType sType;
 
+    [NativeTypeName("const void *")]
     public void* pNext;
 
     [NativeTypeName("VkVideoCodecOperationFlagBitsKHR")]

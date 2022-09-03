@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkDeviceMemory : IComparable, IComparable<VkDeviceMemory>, IEquatable<VkDeviceMemory>, IFormattable
+public readonly partial struct VkDeviceMemory : IComparable, IComparable<VkDeviceMemory>, IEquatable<VkDeviceMemory>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkDeviceMemory : IComparable, IComparable<VkDeviceMemory>,
 
     public static explicit operator byte(VkDeviceMemory value) => (byte)(value.Value);
 
-    public static explicit operator VkDeviceMemory(short value) => new VkDeviceMemory((ulong)(value));
+    public static explicit operator VkDeviceMemory(short value) => new VkDeviceMemory(unchecked((ulong)(value)));
 
     public static explicit operator short(VkDeviceMemory value) => (short)(value.Value);
 
-    public static explicit operator VkDeviceMemory(int value) => new VkDeviceMemory((ulong)(value));
+    public static explicit operator VkDeviceMemory(int value) => new VkDeviceMemory(unchecked((ulong)(value)));
 
     public static explicit operator int(VkDeviceMemory value) => (int)(value.Value);
 
-    public static explicit operator VkDeviceMemory(long value) => new VkDeviceMemory((ulong)(value));
+    public static explicit operator VkDeviceMemory(long value) => new VkDeviceMemory(unchecked((ulong)(value)));
 
     public static explicit operator long(VkDeviceMemory value) => (long)(value.Value);
 
-    public static explicit operator VkDeviceMemory(nint value) => new VkDeviceMemory((ulong)(value));
+    public static explicit operator VkDeviceMemory(nint value) => new VkDeviceMemory(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkDeviceMemory value) => (nint)(value.Value);
 
-    public static explicit operator VkDeviceMemory(sbyte value) => new VkDeviceMemory((ulong)(value));
+    public static explicit operator VkDeviceMemory(sbyte value) => new VkDeviceMemory(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkDeviceMemory value) => (sbyte)(value.Value);
 

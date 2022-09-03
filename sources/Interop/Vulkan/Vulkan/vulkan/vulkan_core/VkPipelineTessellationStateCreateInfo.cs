@@ -12,8 +12,7 @@ public unsafe partial struct VkPipelineTessellationStateCreateInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkPipelineTessellationStateCreateFlags")]
-    public uint flags;
+    public VkPipelineTessellationStateCreateFlags flags;
 
     [NativeTypeName("uint32_t")]
     public uint patchControlPoints;

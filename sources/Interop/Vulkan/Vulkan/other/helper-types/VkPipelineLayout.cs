@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkPipelineLayout : IComparable, IComparable<VkPipelineLayout>, IEquatable<VkPipelineLayout>, IFormattable
+public readonly partial struct VkPipelineLayout : IComparable, IComparable<VkPipelineLayout>, IEquatable<VkPipelineLayout>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkPipelineLayout : IComparable, IComparable<VkPipelineLayo
 
     public static explicit operator byte(VkPipelineLayout value) => (byte)(value.Value);
 
-    public static explicit operator VkPipelineLayout(short value) => new VkPipelineLayout((ulong)(value));
+    public static explicit operator VkPipelineLayout(short value) => new VkPipelineLayout(unchecked((ulong)(value)));
 
     public static explicit operator short(VkPipelineLayout value) => (short)(value.Value);
 
-    public static explicit operator VkPipelineLayout(int value) => new VkPipelineLayout((ulong)(value));
+    public static explicit operator VkPipelineLayout(int value) => new VkPipelineLayout(unchecked((ulong)(value)));
 
     public static explicit operator int(VkPipelineLayout value) => (int)(value.Value);
 
-    public static explicit operator VkPipelineLayout(long value) => new VkPipelineLayout((ulong)(value));
+    public static explicit operator VkPipelineLayout(long value) => new VkPipelineLayout(unchecked((ulong)(value)));
 
     public static explicit operator long(VkPipelineLayout value) => (long)(value.Value);
 
-    public static explicit operator VkPipelineLayout(nint value) => new VkPipelineLayout((ulong)(value));
+    public static explicit operator VkPipelineLayout(nint value) => new VkPipelineLayout(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkPipelineLayout value) => (nint)(value.Value);
 
-    public static explicit operator VkPipelineLayout(sbyte value) => new VkPipelineLayout((ulong)(value));
+    public static explicit operator VkPipelineLayout(sbyte value) => new VkPipelineLayout(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkPipelineLayout value) => (sbyte)(value.Value);
 

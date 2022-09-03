@@ -14,8 +14,7 @@ public unsafe partial struct VkWaylandSurfaceCreateInfoKHR
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkWaylandSurfaceCreateFlagsKHR")]
-    public uint flags;
+    public VkWaylandSurfaceCreateFlagsKHR flags;
 
     [NativeTypeName("struct wl_display *")]
     public IntPtr display;

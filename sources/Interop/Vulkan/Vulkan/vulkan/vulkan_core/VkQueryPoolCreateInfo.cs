@@ -12,8 +12,7 @@ public unsafe partial struct VkQueryPoolCreateInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkQueryPoolCreateFlags")]
-    public uint flags;
+    public VkQueryPoolCreateFlags flags;
 
     public VkQueryType queryType;
 

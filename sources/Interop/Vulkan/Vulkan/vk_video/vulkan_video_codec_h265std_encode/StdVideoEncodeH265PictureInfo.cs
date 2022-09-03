@@ -7,6 +7,8 @@ namespace TerraFX.Interop.Vulkan;
 
 public partial struct StdVideoEncodeH265PictureInfo
 {
+    public StdVideoEncodeH265PictureInfoFlags flags;
+
     public StdVideoH265PictureType PictureType;
 
     [NativeTypeName("uint8_t")]
@@ -15,11 +17,12 @@ public partial struct StdVideoEncodeH265PictureInfo
     [NativeTypeName("uint8_t")]
     public byte pps_seq_parameter_set_id;
 
+    [NativeTypeName("uint8_t")]
+    public byte pps_pic_parameter_set_id;
+
     [NativeTypeName("int32_t")]
     public int PicOrderCntVal;
 
     [NativeTypeName("uint8_t")]
     public byte TemporalId;
-
-    public StdVideoEncodeH265PictureInfoFlags flags;
 }

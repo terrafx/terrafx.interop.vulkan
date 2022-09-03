@@ -7,7 +7,7 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkQueueManualImports
 {
-    public delegate* unmanaged<VkQueue, uint, VkSubmitInfo2KHR*, VkFence, VkResult> vkQueueSubmit2KHR;
+    public delegate* unmanaged<VkQueue, uint, VkSubmitInfo2*, VkFence, VkResult> vkQueueSubmit2KHR;
 
     public delegate* unmanaged<VkQueue, uint*, VkCheckpointData2NV*, void> vkGetQueueCheckpointData2NV;
 

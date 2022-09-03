@@ -32,11 +32,11 @@ public static unsafe partial class VkVideoDecodeH265SessionParametersAddInfoEXTT
     {
         if (Environment.Is64BitProcess)
         {
-            Assert.That(sizeof(VkVideoDecodeH265SessionParametersAddInfoEXT), Is.EqualTo(48));
+            Assert.That(sizeof(VkVideoDecodeH265SessionParametersAddInfoEXT), Is.EqualTo(64));
         }
         else
         {
-            Assert.That(sizeof(VkVideoDecodeH265SessionParametersAddInfoEXT), Is.EqualTo(24));
+            Assert.That(sizeof(VkVideoDecodeH265SessionParametersAddInfoEXT), Is.EqualTo(32));
         }
     }
 }

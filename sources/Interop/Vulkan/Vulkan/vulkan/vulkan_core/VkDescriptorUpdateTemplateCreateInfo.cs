@@ -12,8 +12,7 @@ public unsafe partial struct VkDescriptorUpdateTemplateCreateInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkDescriptorUpdateTemplateCreateFlags")]
-    public uint flags;
+    public VkDescriptorUpdateTemplateCreateFlags flags;
 
     [NativeTypeName("uint32_t")]
     public uint descriptorUpdateEntryCount;

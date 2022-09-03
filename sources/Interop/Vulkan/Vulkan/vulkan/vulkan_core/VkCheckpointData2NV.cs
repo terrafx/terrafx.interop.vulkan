@@ -11,8 +11,7 @@ public unsafe partial struct VkCheckpointData2NV
 
     public void* pNext;
 
-    [NativeTypeName("VkPipelineStageFlags2")]
-    public ulong stage;
+    public VkPipelineStageFlags2 stage;
 
     public void* pCheckpointMarker;
 }

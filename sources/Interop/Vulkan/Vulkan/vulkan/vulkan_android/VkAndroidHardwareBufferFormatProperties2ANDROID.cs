@@ -16,8 +16,7 @@ public unsafe partial struct VkAndroidHardwareBufferFormatProperties2ANDROID
     [NativeTypeName("uint64_t")]
     public ulong externalFormat;
 
-    [NativeTypeName("VkFormatFeatureFlags2")]
-    public ulong formatFeatures;
+    public VkFormatFeatureFlags2 formatFeatures;
 
     public VkComponentMapping samplerYcbcrConversionComponents;
 

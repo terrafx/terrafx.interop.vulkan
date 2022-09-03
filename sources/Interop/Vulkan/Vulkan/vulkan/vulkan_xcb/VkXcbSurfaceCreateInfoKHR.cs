@@ -14,8 +14,7 @@ public unsafe partial struct VkXcbSurfaceCreateInfoKHR
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkXcbSurfaceCreateFlagsKHR")]
-    public uint flags;
+    public VkXcbSurfaceCreateFlagsKHR flags;
 
     public IntPtr connection;
 

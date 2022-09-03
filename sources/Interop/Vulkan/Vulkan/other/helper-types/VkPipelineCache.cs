@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkPipelineCache : IComparable, IComparable<VkPipelineCache>, IEquatable<VkPipelineCache>, IFormattable
+public readonly partial struct VkPipelineCache : IComparable, IComparable<VkPipelineCache>, IEquatable<VkPipelineCache>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkPipelineCache : IComparable, IComparable<VkPipelineCache
 
     public static explicit operator byte(VkPipelineCache value) => (byte)(value.Value);
 
-    public static explicit operator VkPipelineCache(short value) => new VkPipelineCache((ulong)(value));
+    public static explicit operator VkPipelineCache(short value) => new VkPipelineCache(unchecked((ulong)(value)));
 
     public static explicit operator short(VkPipelineCache value) => (short)(value.Value);
 
-    public static explicit operator VkPipelineCache(int value) => new VkPipelineCache((ulong)(value));
+    public static explicit operator VkPipelineCache(int value) => new VkPipelineCache(unchecked((ulong)(value)));
 
     public static explicit operator int(VkPipelineCache value) => (int)(value.Value);
 
-    public static explicit operator VkPipelineCache(long value) => new VkPipelineCache((ulong)(value));
+    public static explicit operator VkPipelineCache(long value) => new VkPipelineCache(unchecked((ulong)(value)));
 
     public static explicit operator long(VkPipelineCache value) => (long)(value.Value);
 
-    public static explicit operator VkPipelineCache(nint value) => new VkPipelineCache((ulong)(value));
+    public static explicit operator VkPipelineCache(nint value) => new VkPipelineCache(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkPipelineCache value) => (nint)(value.Value);
 
-    public static explicit operator VkPipelineCache(sbyte value) => new VkPipelineCache((ulong)(value));
+    public static explicit operator VkPipelineCache(sbyte value) => new VkPipelineCache(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkPipelineCache value) => (sbyte)(value.Value);
 

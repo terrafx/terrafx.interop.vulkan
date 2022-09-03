@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkPipeline : IComparable, IComparable<VkPipeline>, IEquatable<VkPipeline>, IFormattable
+public readonly partial struct VkPipeline : IComparable, IComparable<VkPipeline>, IEquatable<VkPipeline>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkPipeline : IComparable, IComparable<VkPipeline>, IEquata
 
     public static explicit operator byte(VkPipeline value) => (byte)(value.Value);
 
-    public static explicit operator VkPipeline(short value) => new VkPipeline((ulong)(value));
+    public static explicit operator VkPipeline(short value) => new VkPipeline(unchecked((ulong)(value)));
 
     public static explicit operator short(VkPipeline value) => (short)(value.Value);
 
-    public static explicit operator VkPipeline(int value) => new VkPipeline((ulong)(value));
+    public static explicit operator VkPipeline(int value) => new VkPipeline(unchecked((ulong)(value)));
 
     public static explicit operator int(VkPipeline value) => (int)(value.Value);
 
-    public static explicit operator VkPipeline(long value) => new VkPipeline((ulong)(value));
+    public static explicit operator VkPipeline(long value) => new VkPipeline(unchecked((ulong)(value)));
 
     public static explicit operator long(VkPipeline value) => (long)(value.Value);
 
-    public static explicit operator VkPipeline(nint value) => new VkPipeline((ulong)(value));
+    public static explicit operator VkPipeline(nint value) => new VkPipeline(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkPipeline value) => (nint)(value.Value);
 
-    public static explicit operator VkPipeline(sbyte value) => new VkPipeline((ulong)(value));
+    public static explicit operator VkPipeline(sbyte value) => new VkPipeline(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkPipeline value) => (sbyte)(value.Value);
 

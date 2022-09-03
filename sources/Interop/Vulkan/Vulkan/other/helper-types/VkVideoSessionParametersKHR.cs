@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkVideoSessionParametersKHR : IComparable, IComparable<VkVideoSessionParametersKHR>, IEquatable<VkVideoSessionParametersKHR>, IFormattable
+public readonly partial struct VkVideoSessionParametersKHR : IComparable, IComparable<VkVideoSessionParametersKHR>, IEquatable<VkVideoSessionParametersKHR>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkVideoSessionParametersKHR : IComparable, IComparable<VkV
 
     public static explicit operator byte(VkVideoSessionParametersKHR value) => (byte)(value.Value);
 
-    public static explicit operator VkVideoSessionParametersKHR(short value) => new VkVideoSessionParametersKHR((ulong)(value));
+    public static explicit operator VkVideoSessionParametersKHR(short value) => new VkVideoSessionParametersKHR(unchecked((ulong)(value)));
 
     public static explicit operator short(VkVideoSessionParametersKHR value) => (short)(value.Value);
 
-    public static explicit operator VkVideoSessionParametersKHR(int value) => new VkVideoSessionParametersKHR((ulong)(value));
+    public static explicit operator VkVideoSessionParametersKHR(int value) => new VkVideoSessionParametersKHR(unchecked((ulong)(value)));
 
     public static explicit operator int(VkVideoSessionParametersKHR value) => (int)(value.Value);
 
-    public static explicit operator VkVideoSessionParametersKHR(long value) => new VkVideoSessionParametersKHR((ulong)(value));
+    public static explicit operator VkVideoSessionParametersKHR(long value) => new VkVideoSessionParametersKHR(unchecked((ulong)(value)));
 
     public static explicit operator long(VkVideoSessionParametersKHR value) => (long)(value.Value);
 
-    public static explicit operator VkVideoSessionParametersKHR(nint value) => new VkVideoSessionParametersKHR((ulong)(value));
+    public static explicit operator VkVideoSessionParametersKHR(nint value) => new VkVideoSessionParametersKHR(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkVideoSessionParametersKHR value) => (nint)(value.Value);
 
-    public static explicit operator VkVideoSessionParametersKHR(sbyte value) => new VkVideoSessionParametersKHR((ulong)(value));
+    public static explicit operator VkVideoSessionParametersKHR(sbyte value) => new VkVideoSessionParametersKHR(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkVideoSessionParametersKHR value) => (sbyte)(value.Value);
 

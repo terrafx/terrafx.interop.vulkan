@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkIndirectCommandsLayoutNV : IComparable, IComparable<VkIndirectCommandsLayoutNV>, IEquatable<VkIndirectCommandsLayoutNV>, IFormattable
+public readonly partial struct VkIndirectCommandsLayoutNV : IComparable, IComparable<VkIndirectCommandsLayoutNV>, IEquatable<VkIndirectCommandsLayoutNV>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkIndirectCommandsLayoutNV : IComparable, IComparable<VkIn
 
     public static explicit operator byte(VkIndirectCommandsLayoutNV value) => (byte)(value.Value);
 
-    public static explicit operator VkIndirectCommandsLayoutNV(short value) => new VkIndirectCommandsLayoutNV((ulong)(value));
+    public static explicit operator VkIndirectCommandsLayoutNV(short value) => new VkIndirectCommandsLayoutNV(unchecked((ulong)(value)));
 
     public static explicit operator short(VkIndirectCommandsLayoutNV value) => (short)(value.Value);
 
-    public static explicit operator VkIndirectCommandsLayoutNV(int value) => new VkIndirectCommandsLayoutNV((ulong)(value));
+    public static explicit operator VkIndirectCommandsLayoutNV(int value) => new VkIndirectCommandsLayoutNV(unchecked((ulong)(value)));
 
     public static explicit operator int(VkIndirectCommandsLayoutNV value) => (int)(value.Value);
 
-    public static explicit operator VkIndirectCommandsLayoutNV(long value) => new VkIndirectCommandsLayoutNV((ulong)(value));
+    public static explicit operator VkIndirectCommandsLayoutNV(long value) => new VkIndirectCommandsLayoutNV(unchecked((ulong)(value)));
 
     public static explicit operator long(VkIndirectCommandsLayoutNV value) => (long)(value.Value);
 
-    public static explicit operator VkIndirectCommandsLayoutNV(nint value) => new VkIndirectCommandsLayoutNV((ulong)(value));
+    public static explicit operator VkIndirectCommandsLayoutNV(nint value) => new VkIndirectCommandsLayoutNV(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkIndirectCommandsLayoutNV value) => (nint)(value.Value);
 
-    public static explicit operator VkIndirectCommandsLayoutNV(sbyte value) => new VkIndirectCommandsLayoutNV((ulong)(value));
+    public static explicit operator VkIndirectCommandsLayoutNV(sbyte value) => new VkIndirectCommandsLayoutNV(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkIndirectCommandsLayoutNV value) => (sbyte)(value.Value);
 

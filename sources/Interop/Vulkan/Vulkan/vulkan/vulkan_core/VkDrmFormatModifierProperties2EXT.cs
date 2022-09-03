@@ -13,6 +13,5 @@ public partial struct VkDrmFormatModifierProperties2EXT
     [NativeTypeName("uint32_t")]
     public uint drmFormatModifierPlaneCount;
 
-    [NativeTypeName("VkFormatFeatureFlags2")]
-    public ulong drmFormatModifierTilingFeatures;
+    public VkFormatFeatureFlags2 drmFormatModifierTilingFeatures;
 }

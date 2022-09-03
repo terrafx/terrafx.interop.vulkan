@@ -12,8 +12,7 @@ public unsafe partial struct VkVideoBeginCodingInfoKHR
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkVideoBeginCodingFlagsKHR")]
-    public uint flags;
+    public VkVideoBeginCodingFlagsKHR flags;
 
     public VkVideoCodingQualityPresetFlagsKHR codecQualityPreset;
 

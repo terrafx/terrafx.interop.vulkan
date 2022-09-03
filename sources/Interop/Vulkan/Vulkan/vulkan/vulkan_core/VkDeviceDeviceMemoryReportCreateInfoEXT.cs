@@ -12,8 +12,7 @@ public unsafe partial struct VkDeviceDeviceMemoryReportCreateInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkDeviceMemoryReportFlagsEXT")]
-    public uint flags;
+    public VkDeviceMemoryReportFlagsEXT flags;
 
     [NativeTypeName("PFN_vkDeviceMemoryReportCallbackEXT")]
     public delegate* unmanaged<VkDeviceMemoryReportCallbackDataEXT*, void*, void> pfnUserCallback;

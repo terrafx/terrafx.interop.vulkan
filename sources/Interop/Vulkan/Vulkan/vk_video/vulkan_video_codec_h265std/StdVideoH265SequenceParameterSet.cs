@@ -7,6 +7,8 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct StdVideoH265SequenceParameterSet
 {
+    public StdVideoH265SpsFlags flags;
+
     public StdVideoH265ProfileIdc profile_idc;
 
     public StdVideoH265Level level_idc;
@@ -37,9 +39,6 @@ public unsafe partial struct StdVideoH265SequenceParameterSet
 
     [NativeTypeName("uint8_t")]
     public byte log2_max_pic_order_cnt_lsb_minus4;
-
-    [NativeTypeName("uint8_t")]
-    public byte sps_max_dec_pic_buffering_minus1;
 
     [NativeTypeName("uint8_t")]
     public byte log2_min_luma_coding_block_size_minus3;
@@ -89,12 +88,13 @@ public unsafe partial struct StdVideoH265SequenceParameterSet
     [NativeTypeName("uint32_t")]
     public uint conf_win_bottom_offset;
 
+    [NativeTypeName("const StdVideoH265DecPicBufMgr *")]
     public StdVideoH265DecPicBufMgr* pDecPicBufMgr;
 
-    public StdVideoH265SpsFlags flags;
-
+    [NativeTypeName("const StdVideoH265ScalingLists *")]
     public StdVideoH265ScalingLists* pScalingLists;
 
+    [NativeTypeName("const StdVideoH265SequenceParameterSetVui *")]
     public StdVideoH265SequenceParameterSetVui* pSequenceParameterSetVui;
 
     [NativeTypeName("uint8_t")]
@@ -109,5 +109,6 @@ public unsafe partial struct StdVideoH265SequenceParameterSet
     [NativeTypeName("uint8_t")]
     public byte sps_num_palette_predictor_initializer_minus1;
 
+    [NativeTypeName("const StdVideoH265PredictorPaletteEntries *")]
     public StdVideoH265PredictorPaletteEntries* pPredictorPaletteEntries;
 }

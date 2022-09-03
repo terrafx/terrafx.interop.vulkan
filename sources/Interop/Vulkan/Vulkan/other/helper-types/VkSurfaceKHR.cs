@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkSurfaceKHR : IComparable, IComparable<VkSurfaceKHR>, IEquatable<VkSurfaceKHR>, IFormattable
+public readonly partial struct VkSurfaceKHR : IComparable, IComparable<VkSurfaceKHR>, IEquatable<VkSurfaceKHR>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkSurfaceKHR : IComparable, IComparable<VkSurfaceKHR>, IEq
 
     public static explicit operator byte(VkSurfaceKHR value) => (byte)(value.Value);
 
-    public static explicit operator VkSurfaceKHR(short value) => new VkSurfaceKHR((ulong)(value));
+    public static explicit operator VkSurfaceKHR(short value) => new VkSurfaceKHR(unchecked((ulong)(value)));
 
     public static explicit operator short(VkSurfaceKHR value) => (short)(value.Value);
 
-    public static explicit operator VkSurfaceKHR(int value) => new VkSurfaceKHR((ulong)(value));
+    public static explicit operator VkSurfaceKHR(int value) => new VkSurfaceKHR(unchecked((ulong)(value)));
 
     public static explicit operator int(VkSurfaceKHR value) => (int)(value.Value);
 
-    public static explicit operator VkSurfaceKHR(long value) => new VkSurfaceKHR((ulong)(value));
+    public static explicit operator VkSurfaceKHR(long value) => new VkSurfaceKHR(unchecked((ulong)(value)));
 
     public static explicit operator long(VkSurfaceKHR value) => (long)(value.Value);
 
-    public static explicit operator VkSurfaceKHR(nint value) => new VkSurfaceKHR((ulong)(value));
+    public static explicit operator VkSurfaceKHR(nint value) => new VkSurfaceKHR(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkSurfaceKHR value) => (nint)(value.Value);
 
-    public static explicit operator VkSurfaceKHR(sbyte value) => new VkSurfaceKHR((ulong)(value));
+    public static explicit operator VkSurfaceKHR(sbyte value) => new VkSurfaceKHR(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkSurfaceKHR value) => (sbyte)(value.Value);
 

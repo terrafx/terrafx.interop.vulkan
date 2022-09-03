@@ -9,8 +9,7 @@ public partial struct VkAccelerationStructureMotionInstanceNV
 {
     public VkAccelerationStructureMotionInstanceTypeNV type;
 
-    [NativeTypeName("VkAccelerationStructureMotionInstanceFlagsNV")]
-    public uint flags;
+    public VkAccelerationStructureMotionInstanceFlagsNV flags;
 
     public VkAccelerationStructureMotionInstanceDataNV data;
 }

@@ -12,6 +12,5 @@ public unsafe partial struct VkHeadlessSurfaceCreateInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkHeadlessSurfaceCreateFlagsEXT")]
-    public uint flags;
+    public VkHeadlessSurfaceCreateFlagsEXT flags;
 }

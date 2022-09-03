@@ -12,7 +12,7 @@ public partial struct StdVideoEncodeH264SliceHeaderFlags
     public uint _bitfield;
 
     [NativeTypeName("uint32_t : 1")]
-    public uint idr_flag
+    public uint direct_spatial_mv_pred_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -28,7 +28,7 @@ public partial struct StdVideoEncodeH264SliceHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint is_reference_flag
+    public uint num_ref_idx_active_override_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -44,7 +44,7 @@ public partial struct StdVideoEncodeH264SliceHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint num_ref_idx_active_override_flag
+    public uint no_output_of_prior_pics_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -60,7 +60,7 @@ public partial struct StdVideoEncodeH264SliceHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint no_output_of_prior_pics_flag
+    public uint adaptive_ref_pic_marking_mode_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -76,7 +76,7 @@ public partial struct StdVideoEncodeH264SliceHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint long_term_reference_flag
+    public uint no_prior_references_available_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -88,38 +88,6 @@ public partial struct StdVideoEncodeH264SliceHeaderFlags
         set
         {
             _bitfield = (_bitfield & ~(0x1u << 4)) | ((value & 0x1u) << 4);
-        }
-    }
-
-    [NativeTypeName("uint32_t : 1")]
-    public uint adaptive_ref_pic_marking_mode_flag
-    {
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
-        {
-            return (_bitfield >> 5) & 0x1u;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        set
-        {
-            _bitfield = (_bitfield & ~(0x1u << 5)) | ((value & 0x1u) << 5);
-        }
-    }
-
-    [NativeTypeName("uint32_t : 1")]
-    public uint no_prior_references_available_flag
-    {
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
-        {
-            return (_bitfield >> 6) & 0x1u;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        set
-        {
-            _bitfield = (_bitfield & ~(0x1u << 6)) | ((value & 0x1u) << 6);
         }
     }
 }

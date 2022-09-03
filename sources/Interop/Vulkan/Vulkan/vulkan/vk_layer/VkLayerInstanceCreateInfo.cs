@@ -34,8 +34,7 @@ public unsafe partial struct VkLayerInstanceCreateInfo
         public _layerDevice_e__Struct layerDevice;
 
         [FieldOffset(0)]
-        [NativeTypeName("VkLoaderFeatureFlags")]
-        public uint loaderFeatures;
+        public VkLoaderFeatureFlags loaderFeatures;
 
         public unsafe partial struct _layerDevice_e__Struct
         {

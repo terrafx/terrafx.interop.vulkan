@@ -14,8 +14,7 @@ public unsafe partial struct VkWin32SurfaceCreateInfoKHR
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkWin32SurfaceCreateFlagsKHR")]
-    public uint flags;
+    public VkWin32SurfaceCreateFlagsKHR flags;
 
     [NativeTypeName("HINSTANCE")]
     public IntPtr hinstance;

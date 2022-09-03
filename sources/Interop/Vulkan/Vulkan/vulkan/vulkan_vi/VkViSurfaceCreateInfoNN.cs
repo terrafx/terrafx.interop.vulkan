@@ -12,8 +12,7 @@ public unsafe partial struct VkViSurfaceCreateInfoNN
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkViSurfaceCreateFlagsNN")]
-    public uint flags;
+    public VkViSurfaceCreateFlagsNN flags;
 
     public void* window;
 }

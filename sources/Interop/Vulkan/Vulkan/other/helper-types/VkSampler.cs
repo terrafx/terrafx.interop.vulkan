@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkSampler : IComparable, IComparable<VkSampler>, IEquatable<VkSampler>, IFormattable
+public readonly partial struct VkSampler : IComparable, IComparable<VkSampler>, IEquatable<VkSampler>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkSampler : IComparable, IComparable<VkSampler>, IEquatabl
 
     public static explicit operator byte(VkSampler value) => (byte)(value.Value);
 
-    public static explicit operator VkSampler(short value) => new VkSampler((ulong)(value));
+    public static explicit operator VkSampler(short value) => new VkSampler(unchecked((ulong)(value)));
 
     public static explicit operator short(VkSampler value) => (short)(value.Value);
 
-    public static explicit operator VkSampler(int value) => new VkSampler((ulong)(value));
+    public static explicit operator VkSampler(int value) => new VkSampler(unchecked((ulong)(value)));
 
     public static explicit operator int(VkSampler value) => (int)(value.Value);
 
-    public static explicit operator VkSampler(long value) => new VkSampler((ulong)(value));
+    public static explicit operator VkSampler(long value) => new VkSampler(unchecked((ulong)(value)));
 
     public static explicit operator long(VkSampler value) => (long)(value.Value);
 
-    public static explicit operator VkSampler(nint value) => new VkSampler((ulong)(value));
+    public static explicit operator VkSampler(nint value) => new VkSampler(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkSampler value) => (nint)(value.Value);
 
-    public static explicit operator VkSampler(sbyte value) => new VkSampler((ulong)(value));
+    public static explicit operator VkSampler(sbyte value) => new VkSampler(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkSampler value) => (sbyte)(value.Value);
 

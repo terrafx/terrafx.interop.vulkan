@@ -11,6 +11,5 @@ public unsafe partial struct VkQueueFamilyCheckpointProperties2NV
 
     public void* pNext;
 
-    [NativeTypeName("VkPipelineStageFlags2")]
-    public ulong checkpointExecutionStageMask;
+    public VkPipelineStageFlags2 checkpointExecutionStageMask;
 }

@@ -12,8 +12,7 @@ public unsafe partial struct VkImagePipeSurfaceCreateInfoFUCHSIA
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkImagePipeSurfaceCreateFlagsFUCHSIA")]
-    public uint flags;
+    public VkImagePipeSurfaceCreateFlagsFUCHSIA flags;
 
     [NativeTypeName("zx_handle_t")]
     public uint imagePipeHandle;

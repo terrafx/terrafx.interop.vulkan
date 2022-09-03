@@ -58,4 +58,36 @@ public partial struct StdVideoEncodeH265PictureInfoFlags
             _bitfield = (_bitfield & ~(0x1u << 2)) | ((value & 0x1u) << 2);
         }
     }
+
+    [NativeTypeName("uint32_t : 1")]
+    public uint discardable_flag
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get
+        {
+            return (_bitfield >> 3) & 0x1u;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        set
+        {
+            _bitfield = (_bitfield & ~(0x1u << 3)) | ((value & 0x1u) << 3);
+        }
+    }
+
+    [NativeTypeName("uint32_t : 1")]
+    public uint cross_layer_bla_flag
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get
+        {
+            return (_bitfield >> 4) & 0x1u;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        set
+        {
+            _bitfield = (_bitfield & ~(0x1u << 4)) | ((value & 0x1u) << 4);
+        }
+    }
 }

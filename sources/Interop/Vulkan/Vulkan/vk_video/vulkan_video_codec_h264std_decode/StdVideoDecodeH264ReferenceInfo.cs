@@ -7,6 +7,8 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct StdVideoDecodeH264ReferenceInfo
 {
+    public StdVideoDecodeH264ReferenceInfoFlags flags;
+
     [NativeTypeName("uint16_t")]
     public ushort FrameNum;
 
@@ -15,6 +17,4 @@ public unsafe partial struct StdVideoDecodeH264ReferenceInfo
 
     [NativeTypeName("int32_t[2]")]
     public fixed int PicOrderCnt[2];
-
-    public StdVideoDecodeH264ReferenceInfoFlags flags;
 }

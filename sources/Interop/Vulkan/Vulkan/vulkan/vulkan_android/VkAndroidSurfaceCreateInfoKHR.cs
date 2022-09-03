@@ -14,8 +14,7 @@ public unsafe partial struct VkAndroidSurfaceCreateInfoKHR
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkAndroidSurfaceCreateFlagsKHR")]
-    public uint flags;
+    public VkAndroidSurfaceCreateFlagsKHR flags;
 
     [NativeTypeName("struct ANativeWindow *")]
     public IntPtr window;

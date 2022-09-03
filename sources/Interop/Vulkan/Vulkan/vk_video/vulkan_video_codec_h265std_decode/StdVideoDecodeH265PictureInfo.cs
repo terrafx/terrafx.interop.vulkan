@@ -7,11 +7,13 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct StdVideoDecodeH265PictureInfo
 {
-    [NativeTypeName("uint8_t")]
-    public byte vps_video_parameter_set_id;
+    public StdVideoDecodeH265PictureInfoFlags flags;
 
     [NativeTypeName("uint8_t")]
-    public byte sps_seq_parameter_set_id;
+    public byte sps_video_parameter_set_id;
+
+    [NativeTypeName("uint8_t")]
+    public byte pps_seq_parameter_set_id;
 
     [NativeTypeName("uint8_t")]
     public byte pps_pic_parameter_set_id;
@@ -36,6 +38,4 @@ public unsafe partial struct StdVideoDecodeH265PictureInfo
 
     [NativeTypeName("uint8_t[8]")]
     public fixed byte RefPicSetLtCurr[8];
-
-    public StdVideoDecodeH265PictureInfoFlags flags;
 }

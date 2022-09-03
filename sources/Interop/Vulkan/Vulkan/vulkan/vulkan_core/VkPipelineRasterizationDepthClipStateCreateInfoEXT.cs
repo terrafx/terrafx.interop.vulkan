@@ -12,8 +12,7 @@ public unsafe partial struct VkPipelineRasterizationDepthClipStateCreateInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkPipelineRasterizationDepthClipStateCreateFlagsEXT")]
-    public uint flags;
+    public VkPipelineRasterizationDepthClipStateCreateFlagsEXT flags;
 
     public VkBool32 depthClipEnable;
 }

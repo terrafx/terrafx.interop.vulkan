@@ -380,7 +380,7 @@ public partial struct StdVideoH265SpsFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint sps_curr_pic_ref_enabled_flag
+    public uint sps_scc_extension_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -396,7 +396,7 @@ public partial struct StdVideoH265SpsFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint palette_mode_enabled_flag
+    public uint sps_curr_pic_ref_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -412,7 +412,7 @@ public partial struct StdVideoH265SpsFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint sps_palette_predictor_initializer_present_flag
+    public uint palette_mode_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -428,7 +428,7 @@ public partial struct StdVideoH265SpsFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint intra_boundary_filtering_disabled_flag
+    public uint sps_palette_predictor_initializer_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -440,6 +440,22 @@ public partial struct StdVideoH265SpsFlags
         set
         {
             _bitfield = (_bitfield & ~(0x1u << 26)) | ((value & 0x1u) << 26);
+        }
+    }
+
+    [NativeTypeName("uint32_t : 1")]
+    public uint intra_boundary_filtering_disabled_flag
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get
+        {
+            return (_bitfield >> 27) & 0x1u;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        set
+        {
+            _bitfield = (_bitfield & ~(0x1u << 27)) | ((value & 0x1u) << 27);
         }
     }
 }

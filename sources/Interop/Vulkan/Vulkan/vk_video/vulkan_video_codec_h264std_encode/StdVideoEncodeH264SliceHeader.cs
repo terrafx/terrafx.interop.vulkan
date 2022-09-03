@@ -9,13 +9,10 @@ public unsafe partial struct StdVideoEncodeH264SliceHeader
 {
     public StdVideoEncodeH264SliceHeaderFlags flags;
 
+    [NativeTypeName("uint32_t")]
+    public uint first_mb_in_slice;
+
     public StdVideoH264SliceType slice_type;
-
-    [NativeTypeName("uint8_t")]
-    public byte seq_parameter_set_id;
-
-    [NativeTypeName("uint8_t")]
-    public byte pic_parameter_set_id;
 
     [NativeTypeName("uint16_t")]
     public ushort idr_pic_id;
@@ -36,5 +33,6 @@ public unsafe partial struct StdVideoEncodeH264SliceHeader
     [NativeTypeName("int8_t")]
     public sbyte slice_beta_offset_div2;
 
-    public StdVideoEncodeH264RefMemMgmtCtrlOperations* pMemMgmtCtrlOperations;
+    [NativeTypeName("const StdVideoEncodeH264WeightTable *")]
+    public StdVideoEncodeH264WeightTable* pWeightTable;
 }

@@ -12,8 +12,7 @@ public unsafe partial struct VkMetalSurfaceCreateInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkMetalSurfaceCreateFlagsEXT")]
-    public uint flags;
+    public VkMetalSurfaceCreateFlagsEXT flags;
 
     [NativeTypeName("const CAMetalLayer *")]
     public void* pLayer;

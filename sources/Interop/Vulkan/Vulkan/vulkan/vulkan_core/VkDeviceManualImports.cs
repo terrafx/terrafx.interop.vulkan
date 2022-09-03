@@ -9,7 +9,7 @@ public unsafe partial struct VkDeviceManualImports
 {
     public delegate* unmanaged<VkDevice, uint, uint, uint, VkPeerMemoryFeatureFlags*, void> vkGetDeviceGroupPeerMemoryFeaturesKHR;
 
-    public delegate* unmanaged<VkDevice, VkCommandPool, uint, void> vkTrimCommandPoolKHR;
+    public delegate* unmanaged<VkDevice, VkCommandPool, VkCommandPoolTrimFlags, void> vkTrimCommandPoolKHR;
 
     public delegate* unmanaged<VkDevice, VkMemoryGetFdInfoKHR*, int*, VkResult> vkGetMemoryFdKHR;
 
@@ -83,11 +83,11 @@ public unsafe partial struct VkDeviceManualImports
 
     public delegate* unmanaged<VkDevice, VkPipelineExecutableInfoKHR*, uint*, VkPipelineExecutableInternalRepresentationKHR*, VkResult> vkGetPipelineExecutableInternalRepresentationsKHR;
 
-    public delegate* unmanaged<VkDevice, VkDeviceBufferMemoryRequirementsKHR*, VkMemoryRequirements2*, void> vkGetDeviceBufferMemoryRequirementsKHR;
+    public delegate* unmanaged<VkDevice, VkDeviceBufferMemoryRequirements*, VkMemoryRequirements2*, void> vkGetDeviceBufferMemoryRequirementsKHR;
 
-    public delegate* unmanaged<VkDevice, VkDeviceImageMemoryRequirementsKHR*, VkMemoryRequirements2*, void> vkGetDeviceImageMemoryRequirementsKHR;
+    public delegate* unmanaged<VkDevice, VkDeviceImageMemoryRequirements*, VkMemoryRequirements2*, void> vkGetDeviceImageMemoryRequirementsKHR;
 
-    public delegate* unmanaged<VkDevice, VkDeviceImageMemoryRequirementsKHR*, uint*, VkSparseImageMemoryRequirements2*, void> vkGetDeviceImageSparseMemoryRequirementsKHR;
+    public delegate* unmanaged<VkDevice, VkDeviceImageMemoryRequirements*, uint*, VkSparseImageMemoryRequirements2*, void> vkGetDeviceImageSparseMemoryRequirementsKHR;
 
     public delegate* unmanaged<VkDevice, VkDebugMarkerObjectTagInfoEXT*, VkResult> vkDebugMarkerSetObjectTagEXT;
 
@@ -179,7 +179,7 @@ public unsafe partial struct VkDeviceManualImports
 
     public delegate* unmanaged<VkDevice, VkIndirectCommandsLayoutNV, VkAllocationCallbacks*, void> vkDestroyIndirectCommandsLayoutNV;
 
-    public delegate* unmanaged<VkDevice, VkPrivateDataSlotCreateInfoEXT*, VkAllocationCallbacks*, VkPrivateDataSlot*, VkResult> vkCreatePrivateDataSlotEXT;
+    public delegate* unmanaged<VkDevice, VkPrivateDataSlotCreateInfo*, VkAllocationCallbacks*, VkPrivateDataSlot*, VkResult> vkCreatePrivateDataSlotEXT;
 
     public delegate* unmanaged<VkDevice, VkPrivateDataSlot, VkAllocationCallbacks*, void> vkDestroyPrivateDataSlotEXT;
 

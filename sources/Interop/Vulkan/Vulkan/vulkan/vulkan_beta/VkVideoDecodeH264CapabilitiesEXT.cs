@@ -11,10 +11,7 @@ public unsafe partial struct VkVideoDecodeH264CapabilitiesEXT
 
     public void* pNext;
 
-    [NativeTypeName("uint32_t")]
-    public uint maxLevel;
+    public StdVideoH264Level maxLevel;
 
     public VkOffset2D fieldOffsetGranularity;
-
-    public VkExtensionProperties stdExtensionVersion;
 }

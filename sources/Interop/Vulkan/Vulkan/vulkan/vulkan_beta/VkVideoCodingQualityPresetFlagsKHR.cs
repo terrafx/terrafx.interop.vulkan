@@ -3,9 +3,12 @@
 // Ported from include/vulkan/vulkan_beta.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.224
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
+using System;
+
 namespace TerraFX.Interop.Vulkan;
 
 [NativeTypeName("int")]
+[Flags]
 public enum VkVideoCodingQualityPresetFlagsKHR : uint
 {
     VK_VIDEO_CODING_QUALITY_PRESET_NORMAL_BIT_KHR = 0x00000001,

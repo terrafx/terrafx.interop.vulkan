@@ -16,5 +16,5 @@ public static partial class Vulkan
     public const int VK_EXT_DIRECTFB_SURFACE_SPEC_VERSION = 1;
 
     [NativeTypeName("#define VK_EXT_DIRECTFB_SURFACE_EXTENSION_NAME \"VK_EXT_directfb_surface\"")]
-    public static ReadOnlySpan<byte> VK_EXT_DIRECTFB_SURFACE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x45, 0x58, 0x54, 0x5F, 0x64, 0x69, 0x72, 0x65, 0x63, 0x74, 0x66, 0x62, 0x5F, 0x73, 0x75, 0x72, 0x66, 0x61, 0x63, 0x65, 0x00 };
+    public static ReadOnlySpan<byte> VK_EXT_DIRECTFB_SURFACE_EXTENSION_NAME => "VK_EXT_directfb_surface"u8;
 }

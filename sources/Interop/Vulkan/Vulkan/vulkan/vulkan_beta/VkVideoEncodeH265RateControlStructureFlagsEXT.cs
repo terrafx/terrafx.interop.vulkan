@@ -3,9 +3,13 @@
 // Ported from include/vulkan/vulkan_beta.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.224
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
+using System;
+
 namespace TerraFX.Interop.Vulkan;
 
-public enum VkVideoEncodeH265RateControlStructureFlagsEXT
+[NativeTypeName("int")]
+[Flags]
+public enum VkVideoEncodeH265RateControlStructureFlagsEXT : uint
 {
     VK_VIDEO_ENCODE_H265_RATE_CONTROL_STRUCTURE_UNKNOWN_EXT = 0,
     VK_VIDEO_ENCODE_H265_RATE_CONTROL_STRUCTURE_FLAT_BIT_EXT = 0x00000001,

@@ -12,8 +12,7 @@ public unsafe partial struct VkValidationCacheCreateInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkValidationCacheCreateFlagsEXT")]
-    public uint flags;
+    public VkValidationCacheCreateFlagsEXT flags;
 
     [NativeTypeName("size_t")]
     public nuint initialDataSize;

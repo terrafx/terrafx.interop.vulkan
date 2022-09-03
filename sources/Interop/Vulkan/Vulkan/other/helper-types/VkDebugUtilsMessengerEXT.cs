@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkDebugUtilsMessengerEXT : IComparable, IComparable<VkDebugUtilsMessengerEXT>, IEquatable<VkDebugUtilsMessengerEXT>, IFormattable
+public readonly partial struct VkDebugUtilsMessengerEXT : IComparable, IComparable<VkDebugUtilsMessengerEXT>, IEquatable<VkDebugUtilsMessengerEXT>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkDebugUtilsMessengerEXT : IComparable, IComparable<VkDebu
 
     public static explicit operator byte(VkDebugUtilsMessengerEXT value) => (byte)(value.Value);
 
-    public static explicit operator VkDebugUtilsMessengerEXT(short value) => new VkDebugUtilsMessengerEXT((ulong)(value));
+    public static explicit operator VkDebugUtilsMessengerEXT(short value) => new VkDebugUtilsMessengerEXT(unchecked((ulong)(value)));
 
     public static explicit operator short(VkDebugUtilsMessengerEXT value) => (short)(value.Value);
 
-    public static explicit operator VkDebugUtilsMessengerEXT(int value) => new VkDebugUtilsMessengerEXT((ulong)(value));
+    public static explicit operator VkDebugUtilsMessengerEXT(int value) => new VkDebugUtilsMessengerEXT(unchecked((ulong)(value)));
 
     public static explicit operator int(VkDebugUtilsMessengerEXT value) => (int)(value.Value);
 
-    public static explicit operator VkDebugUtilsMessengerEXT(long value) => new VkDebugUtilsMessengerEXT((ulong)(value));
+    public static explicit operator VkDebugUtilsMessengerEXT(long value) => new VkDebugUtilsMessengerEXT(unchecked((ulong)(value)));
 
     public static explicit operator long(VkDebugUtilsMessengerEXT value) => (long)(value.Value);
 
-    public static explicit operator VkDebugUtilsMessengerEXT(nint value) => new VkDebugUtilsMessengerEXT((ulong)(value));
+    public static explicit operator VkDebugUtilsMessengerEXT(nint value) => new VkDebugUtilsMessengerEXT(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkDebugUtilsMessengerEXT value) => (nint)(value.Value);
 
-    public static explicit operator VkDebugUtilsMessengerEXT(sbyte value) => new VkDebugUtilsMessengerEXT((ulong)(value));
+    public static explicit operator VkDebugUtilsMessengerEXT(sbyte value) => new VkDebugUtilsMessengerEXT(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkDebugUtilsMessengerEXT value) => (sbyte)(value.Value);
 

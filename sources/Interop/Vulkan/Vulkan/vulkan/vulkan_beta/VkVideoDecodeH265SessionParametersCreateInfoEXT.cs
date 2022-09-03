@@ -13,6 +13,9 @@ public unsafe partial struct VkVideoDecodeH265SessionParametersCreateInfoEXT
     public void* pNext;
 
     [NativeTypeName("uint32_t")]
+    public uint maxVpsStdCount;
+
+    [NativeTypeName("uint32_t")]
     public uint maxSpsStdCount;
 
     [NativeTypeName("uint32_t")]

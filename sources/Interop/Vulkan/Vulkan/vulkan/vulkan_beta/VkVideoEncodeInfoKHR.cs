@@ -17,8 +17,6 @@ public unsafe partial struct VkVideoEncodeInfoKHR
     [NativeTypeName("uint32_t")]
     public uint qualityLevel;
 
-    public VkExtent2D codedExtent;
-
     public VkBuffer dstBitstreamBuffer;
 
     [NativeTypeName("VkDeviceSize")]

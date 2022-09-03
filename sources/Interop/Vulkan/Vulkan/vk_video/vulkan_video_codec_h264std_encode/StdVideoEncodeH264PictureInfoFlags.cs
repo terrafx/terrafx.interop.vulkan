@@ -44,7 +44,7 @@ public partial struct StdVideoEncodeH264PictureInfoFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint long_term_reference_flag
+    public uint used_for_long_term_reference
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get

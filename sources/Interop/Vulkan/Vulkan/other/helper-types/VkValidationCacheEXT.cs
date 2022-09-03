@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkValidationCacheEXT : IComparable, IComparable<VkValidationCacheEXT>, IEquatable<VkValidationCacheEXT>, IFormattable
+public readonly partial struct VkValidationCacheEXT : IComparable, IComparable<VkValidationCacheEXT>, IEquatable<VkValidationCacheEXT>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkValidationCacheEXT : IComparable, IComparable<VkValidati
 
     public static explicit operator byte(VkValidationCacheEXT value) => (byte)(value.Value);
 
-    public static explicit operator VkValidationCacheEXT(short value) => new VkValidationCacheEXT((ulong)(value));
+    public static explicit operator VkValidationCacheEXT(short value) => new VkValidationCacheEXT(unchecked((ulong)(value)));
 
     public static explicit operator short(VkValidationCacheEXT value) => (short)(value.Value);
 
-    public static explicit operator VkValidationCacheEXT(int value) => new VkValidationCacheEXT((ulong)(value));
+    public static explicit operator VkValidationCacheEXT(int value) => new VkValidationCacheEXT(unchecked((ulong)(value)));
 
     public static explicit operator int(VkValidationCacheEXT value) => (int)(value.Value);
 
-    public static explicit operator VkValidationCacheEXT(long value) => new VkValidationCacheEXT((ulong)(value));
+    public static explicit operator VkValidationCacheEXT(long value) => new VkValidationCacheEXT(unchecked((ulong)(value)));
 
     public static explicit operator long(VkValidationCacheEXT value) => (long)(value.Value);
 
-    public static explicit operator VkValidationCacheEXT(nint value) => new VkValidationCacheEXT((ulong)(value));
+    public static explicit operator VkValidationCacheEXT(nint value) => new VkValidationCacheEXT(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkValidationCacheEXT value) => (nint)(value.Value);
 
-    public static explicit operator VkValidationCacheEXT(sbyte value) => new VkValidationCacheEXT((ulong)(value));
+    public static explicit operator VkValidationCacheEXT(sbyte value) => new VkValidationCacheEXT(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkValidationCacheEXT value) => (sbyte)(value.Value);
 

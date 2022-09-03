@@ -12,8 +12,7 @@ public unsafe partial struct VkPipelineRasterizationConservativeStateCreateInfoE
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkPipelineRasterizationConservativeStateCreateFlagsEXT")]
-    public uint flags;
+    public VkPipelineRasterizationConservativeStateCreateFlagsEXT flags;
 
     public VkConservativeRasterizationModeEXT conservativeRasterizationMode;
 

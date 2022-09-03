@@ -12,8 +12,7 @@ public unsafe partial struct VkDebugUtilsMessengerCallbackDataEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkDebugUtilsMessengerCallbackDataFlagsEXT")]
-    public uint flags;
+    public VkDebugUtilsMessengerCallbackDataFlagsEXT flags;
 
     [NativeTypeName("const char *")]
     public sbyte* pMessageIdName;

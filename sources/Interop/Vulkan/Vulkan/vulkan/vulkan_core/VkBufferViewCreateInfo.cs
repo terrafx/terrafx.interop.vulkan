@@ -12,8 +12,7 @@ public unsafe partial struct VkBufferViewCreateInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkBufferViewCreateFlags")]
-    public uint flags;
+    public VkBufferViewCreateFlags flags;
 
     public VkBuffer buffer;
 

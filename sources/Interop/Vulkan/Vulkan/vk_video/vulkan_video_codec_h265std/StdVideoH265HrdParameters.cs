@@ -9,6 +9,8 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct StdVideoH265HrdParameters
 {
+    public StdVideoH265HrdFlags flags;
+
     [NativeTypeName("uint8_t")]
     public byte tick_divisor_minus2;
 
@@ -42,13 +44,11 @@ public unsafe partial struct StdVideoH265HrdParameters
     [NativeTypeName("uint16_t[7]")]
     public fixed ushort elemental_duration_in_tc_minus1[7];
 
-    [NativeTypeName("StdVideoH265SubLayerHrdParameters *[7]")]
+    [NativeTypeName("const StdVideoH265SubLayerHrdParameters *[7]")]
     public _pSubLayerHrdParametersNal_e__FixedBuffer pSubLayerHrdParametersNal;
 
-    [NativeTypeName("StdVideoH265SubLayerHrdParameters *[7]")]
+    [NativeTypeName("const StdVideoH265SubLayerHrdParameters *[7]")]
     public _pSubLayerHrdParametersVcl_e__FixedBuffer pSubLayerHrdParametersVcl;
-
-    public StdVideoH265HrdFlags flags;
 
     public unsafe partial struct _pSubLayerHrdParametersNal_e__FixedBuffer
     {

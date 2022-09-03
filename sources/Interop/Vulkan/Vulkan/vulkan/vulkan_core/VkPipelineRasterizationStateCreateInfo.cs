@@ -12,8 +12,7 @@ public unsafe partial struct VkPipelineRasterizationStateCreateInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkPipelineRasterizationStateCreateFlags")]
-    public uint flags;
+    public VkPipelineRasterizationStateCreateFlags flags;
 
     public VkBool32 depthClampEnable;
 

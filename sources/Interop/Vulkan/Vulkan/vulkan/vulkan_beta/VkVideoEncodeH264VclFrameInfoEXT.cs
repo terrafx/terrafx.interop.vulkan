@@ -12,17 +12,8 @@ public unsafe partial struct VkVideoEncodeH264VclFrameInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("uint8_t")]
-    public byte refDefaultFinalList0EntryCount;
-
-    [NativeTypeName("const VkVideoEncodeH264DpbSlotInfoEXT *")]
-    public VkVideoEncodeH264DpbSlotInfoEXT* pRefDefaultFinalList0Entries;
-
-    [NativeTypeName("uint8_t")]
-    public byte refDefaultFinalList1EntryCount;
-
-    [NativeTypeName("const VkVideoEncodeH264DpbSlotInfoEXT *")]
-    public VkVideoEncodeH264DpbSlotInfoEXT* pRefDefaultFinalList1Entries;
+    [NativeTypeName("const VkVideoEncodeH264ReferenceListsEXT *")]
+    public VkVideoEncodeH264ReferenceListsEXT* pReferenceFinalLists;
 
     [NativeTypeName("uint32_t")]
     public uint naluSliceEntryCount;
@@ -30,6 +21,6 @@ public unsafe partial struct VkVideoEncodeH264VclFrameInfoEXT
     [NativeTypeName("const VkVideoEncodeH264NaluSliceEXT *")]
     public VkVideoEncodeH264NaluSliceEXT* pNaluSliceEntries;
 
-    [NativeTypeName("const VkVideoEncodeH264DpbSlotInfoEXT *")]
-    public VkVideoEncodeH264DpbSlotInfoEXT* pCurrentPictureInfo;
+    [NativeTypeName("const StdVideoEncodeH264PictureInfo *")]
+    public StdVideoEncodeH264PictureInfo* pCurrentPictureInfo;
 }

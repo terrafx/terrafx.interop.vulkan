@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkDisplayModeKHR : IComparable, IComparable<VkDisplayModeKHR>, IEquatable<VkDisplayModeKHR>, IFormattable
+public readonly partial struct VkDisplayModeKHR : IComparable, IComparable<VkDisplayModeKHR>, IEquatable<VkDisplayModeKHR>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkDisplayModeKHR : IComparable, IComparable<VkDisplayModeK
 
     public static explicit operator byte(VkDisplayModeKHR value) => (byte)(value.Value);
 
-    public static explicit operator VkDisplayModeKHR(short value) => new VkDisplayModeKHR((ulong)(value));
+    public static explicit operator VkDisplayModeKHR(short value) => new VkDisplayModeKHR(unchecked((ulong)(value)));
 
     public static explicit operator short(VkDisplayModeKHR value) => (short)(value.Value);
 
-    public static explicit operator VkDisplayModeKHR(int value) => new VkDisplayModeKHR((ulong)(value));
+    public static explicit operator VkDisplayModeKHR(int value) => new VkDisplayModeKHR(unchecked((ulong)(value)));
 
     public static explicit operator int(VkDisplayModeKHR value) => (int)(value.Value);
 
-    public static explicit operator VkDisplayModeKHR(long value) => new VkDisplayModeKHR((ulong)(value));
+    public static explicit operator VkDisplayModeKHR(long value) => new VkDisplayModeKHR(unchecked((ulong)(value)));
 
     public static explicit operator long(VkDisplayModeKHR value) => (long)(value.Value);
 
-    public static explicit operator VkDisplayModeKHR(nint value) => new VkDisplayModeKHR((ulong)(value));
+    public static explicit operator VkDisplayModeKHR(nint value) => new VkDisplayModeKHR(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkDisplayModeKHR value) => (nint)(value.Value);
 
-    public static explicit operator VkDisplayModeKHR(sbyte value) => new VkDisplayModeKHR((ulong)(value));
+    public static explicit operator VkDisplayModeKHR(sbyte value) => new VkDisplayModeKHR(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkDisplayModeKHR value) => (sbyte)(value.Value);
 

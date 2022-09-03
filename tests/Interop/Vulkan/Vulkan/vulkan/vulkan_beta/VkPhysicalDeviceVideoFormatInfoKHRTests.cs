@@ -32,11 +32,11 @@ public static unsafe partial class VkPhysicalDeviceVideoFormatInfoKHRTests
     {
         if (Environment.Is64BitProcess)
         {
-            Assert.That(sizeof(VkPhysicalDeviceVideoFormatInfoKHR), Is.EqualTo(32));
+            Assert.That(sizeof(VkPhysicalDeviceVideoFormatInfoKHR), Is.EqualTo(24));
         }
         else
         {
-            Assert.That(sizeof(VkPhysicalDeviceVideoFormatInfoKHR), Is.EqualTo(16));
+            Assert.That(sizeof(VkPhysicalDeviceVideoFormatInfoKHR), Is.EqualTo(12));
         }
     }
 }

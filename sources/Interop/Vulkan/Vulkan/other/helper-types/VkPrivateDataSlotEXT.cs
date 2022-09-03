@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkPrivateDataSlotEXT : IComparable, IComparable<VkPrivateDataSlotEXT>, IEquatable<VkPrivateDataSlotEXT>, IFormattable
+public readonly partial struct VkPrivateDataSlotEXT : IComparable, IComparable<VkPrivateDataSlotEXT>, IEquatable<VkPrivateDataSlotEXT>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkPrivateDataSlotEXT : IComparable, IComparable<VkPrivateD
 
     public static explicit operator byte(VkPrivateDataSlotEXT value) => (byte)(value.Value);
 
-    public static explicit operator VkPrivateDataSlotEXT(short value) => new VkPrivateDataSlotEXT((ulong)(value));
+    public static explicit operator VkPrivateDataSlotEXT(short value) => new VkPrivateDataSlotEXT(unchecked((ulong)(value)));
 
     public static explicit operator short(VkPrivateDataSlotEXT value) => (short)(value.Value);
 
-    public static explicit operator VkPrivateDataSlotEXT(int value) => new VkPrivateDataSlotEXT((ulong)(value));
+    public static explicit operator VkPrivateDataSlotEXT(int value) => new VkPrivateDataSlotEXT(unchecked((ulong)(value)));
 
     public static explicit operator int(VkPrivateDataSlotEXT value) => (int)(value.Value);
 
-    public static explicit operator VkPrivateDataSlotEXT(long value) => new VkPrivateDataSlotEXT((ulong)(value));
+    public static explicit operator VkPrivateDataSlotEXT(long value) => new VkPrivateDataSlotEXT(unchecked((ulong)(value)));
 
     public static explicit operator long(VkPrivateDataSlotEXT value) => (long)(value.Value);
 
-    public static explicit operator VkPrivateDataSlotEXT(nint value) => new VkPrivateDataSlotEXT((ulong)(value));
+    public static explicit operator VkPrivateDataSlotEXT(nint value) => new VkPrivateDataSlotEXT(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkPrivateDataSlotEXT value) => (nint)(value.Value);
 
-    public static explicit operator VkPrivateDataSlotEXT(sbyte value) => new VkPrivateDataSlotEXT((ulong)(value));
+    public static explicit operator VkPrivateDataSlotEXT(sbyte value) => new VkPrivateDataSlotEXT(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkPrivateDataSlotEXT value) => (sbyte)(value.Value);
 

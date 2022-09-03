@@ -12,8 +12,7 @@ public unsafe partial struct VkPipelineCoverageModulationStateCreateInfoNV
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkPipelineCoverageModulationStateCreateFlagsNV")]
-    public uint flags;
+    public VkPipelineCoverageModulationStateCreateFlagsNV flags;
 
     public VkCoverageModulationModeNV coverageModulationMode;
 

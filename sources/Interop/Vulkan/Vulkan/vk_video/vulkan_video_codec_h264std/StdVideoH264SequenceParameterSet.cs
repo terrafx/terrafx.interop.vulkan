@@ -7,6 +7,8 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct StdVideoH264SequenceParameterSet
 {
+    public StdVideoH264SpsFlags flags;
+
     public StdVideoH264ProfileIdc profile_idc;
 
     public StdVideoH264Level level_idc;
@@ -60,12 +62,12 @@ public unsafe partial struct StdVideoH264SequenceParameterSet
     [NativeTypeName("uint32_t")]
     public uint frame_crop_bottom_offset;
 
-    public StdVideoH264SpsFlags flags;
-
-    [NativeTypeName("int32_t *")]
+    [NativeTypeName("const int32_t *")]
     public int* pOffsetForRefFrame;
 
+    [NativeTypeName("const StdVideoH264ScalingLists *")]
     public StdVideoH264ScalingLists* pScalingLists;
 
+    [NativeTypeName("const StdVideoH264SequenceParameterSetVui *")]
     public StdVideoH264SequenceParameterSetVui* pSequenceParameterSetVui;
 }

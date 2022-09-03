@@ -13,5 +13,6 @@ public unsafe partial struct StdVideoDecodeH264Mvc
     [NativeTypeName("uint32_t")]
     public uint mvcElementCount;
 
+    [NativeTypeName("const StdVideoDecodeH264MvcElement *")]
     public StdVideoDecodeH264MvcElement* pMvcElements;
 }

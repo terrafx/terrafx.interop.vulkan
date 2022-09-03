@@ -14,10 +14,6 @@ public unsafe partial struct VkVideoDecodeInfoKHR
 
     public VkVideoDecodeFlagsKHR flags;
 
-    public VkOffset2D codedOffset;
-
-    public VkExtent2D codedExtent;
-
     public VkBuffer srcBuffer;
 
     [NativeTypeName("VkDeviceSize")]

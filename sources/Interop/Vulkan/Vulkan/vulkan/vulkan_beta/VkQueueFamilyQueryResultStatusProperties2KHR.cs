@@ -11,5 +11,5 @@ public unsafe partial struct VkQueueFamilyQueryResultStatusProperties2KHR
 
     public void* pNext;
 
-    public VkBool32 supported;
+    public VkBool32 queryResultStatusSupport;
 }

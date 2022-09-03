@@ -7,11 +7,11 @@ namespace TerraFX.Interop.Vulkan;
 
 public partial struct StdVideoEncodeH265ReferenceInfo
 {
+    public StdVideoEncodeH265ReferenceInfoFlags flags;
+
     [NativeTypeName("int32_t")]
     public int PicOrderCntVal;
 
     [NativeTypeName("uint8_t")]
     public byte TemporalId;
-
-    public StdVideoEncodeH265ReferenceInfoFlags flags;
 }

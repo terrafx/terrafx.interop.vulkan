@@ -7,6 +7,8 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct StdVideoH265SequenceParameterSetVui
 {
+    public StdVideoH265SpsVuiFlags flags;
+
     [NativeTypeName("uint8_t")]
     public byte aspect_ratio_idc;
 
@@ -55,6 +57,7 @@ public unsafe partial struct StdVideoH265SequenceParameterSetVui
     [NativeTypeName("uint32_t")]
     public uint vui_num_ticks_poc_diff_one_minus1;
 
+    [NativeTypeName("const StdVideoH265HrdParameters *")]
     public StdVideoH265HrdParameters* pHrdParameters;
 
     [NativeTypeName("uint16_t")]
@@ -71,6 +74,4 @@ public unsafe partial struct StdVideoH265SequenceParameterSetVui
 
     [NativeTypeName("uint8_t")]
     public byte log2_max_mv_length_vertical;
-
-    public StdVideoH265SpsVuiFlags flags;
 }

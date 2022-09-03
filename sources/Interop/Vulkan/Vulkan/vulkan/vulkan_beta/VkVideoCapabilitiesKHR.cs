@@ -30,4 +30,6 @@ public unsafe partial struct VkVideoCapabilitiesKHR
 
     [NativeTypeName("uint32_t")]
     public uint maxReferencePicturesActiveCount;
+
+    public VkExtensionProperties stdHeaderVersion;
 }

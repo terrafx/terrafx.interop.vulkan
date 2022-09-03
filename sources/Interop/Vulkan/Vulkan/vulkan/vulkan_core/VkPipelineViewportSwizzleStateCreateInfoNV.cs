@@ -12,8 +12,7 @@ public unsafe partial struct VkPipelineViewportSwizzleStateCreateInfoNV
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkPipelineViewportSwizzleStateCreateFlagsNV")]
-    public uint flags;
+    public VkPipelineViewportSwizzleStateCreateFlagsNV flags;
 
     [NativeTypeName("uint32_t")]
     public uint viewportCount;

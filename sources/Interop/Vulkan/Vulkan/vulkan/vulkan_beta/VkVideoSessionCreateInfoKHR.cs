@@ -31,4 +31,7 @@ public unsafe partial struct VkVideoSessionCreateInfoKHR
 
     [NativeTypeName("uint32_t")]
     public uint maxReferencePicturesActiveCount;
+
+    [NativeTypeName("const VkExtensionProperties *")]
+    public VkExtensionProperties* pStdHeaderVersion;
 }

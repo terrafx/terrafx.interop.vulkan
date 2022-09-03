@@ -16,8 +16,7 @@ public unsafe partial struct VkImageFormatConstraintsInfoFUCHSIA
 
     public VkFormatFeatureFlags requiredFormatFeatures;
 
-    [NativeTypeName("VkImageFormatConstraintsFlagsFUCHSIA")]
-    public uint flags;
+    public VkImageFormatConstraintsFlagsFUCHSIA flags;
 
     [NativeTypeName("uint64_t")]
     public ulong sysmemPixelFormat;

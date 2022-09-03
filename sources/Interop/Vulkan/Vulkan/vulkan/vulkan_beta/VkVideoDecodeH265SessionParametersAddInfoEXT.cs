@@ -13,6 +13,12 @@ public unsafe partial struct VkVideoDecodeH265SessionParametersAddInfoEXT
     public void* pNext;
 
     [NativeTypeName("uint32_t")]
+    public uint vpsStdCount;
+
+    [NativeTypeName("const StdVideoH265VideoParameterSet *")]
+    public StdVideoH265VideoParameterSet* pVpsStd;
+
+    [NativeTypeName("uint32_t")]
     public uint spsStdCount;
 
     [NativeTypeName("const StdVideoH265SequenceParameterSet *")]

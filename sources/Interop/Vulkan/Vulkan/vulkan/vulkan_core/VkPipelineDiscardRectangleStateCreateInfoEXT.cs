@@ -12,8 +12,7 @@ public unsafe partial struct VkPipelineDiscardRectangleStateCreateInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkPipelineDiscardRectangleStateCreateFlagsEXT")]
-    public uint flags;
+    public VkPipelineDiscardRectangleStateCreateFlagsEXT flags;
 
     public VkDiscardRectangleModeEXT discardRectangleMode;
 

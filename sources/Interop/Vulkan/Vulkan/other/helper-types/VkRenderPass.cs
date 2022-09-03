@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkRenderPass : IComparable, IComparable<VkRenderPass>, IEquatable<VkRenderPass>, IFormattable
+public readonly partial struct VkRenderPass : IComparable, IComparable<VkRenderPass>, IEquatable<VkRenderPass>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkRenderPass : IComparable, IComparable<VkRenderPass>, IEq
 
     public static explicit operator byte(VkRenderPass value) => (byte)(value.Value);
 
-    public static explicit operator VkRenderPass(short value) => new VkRenderPass((ulong)(value));
+    public static explicit operator VkRenderPass(short value) => new VkRenderPass(unchecked((ulong)(value)));
 
     public static explicit operator short(VkRenderPass value) => (short)(value.Value);
 
-    public static explicit operator VkRenderPass(int value) => new VkRenderPass((ulong)(value));
+    public static explicit operator VkRenderPass(int value) => new VkRenderPass(unchecked((ulong)(value)));
 
     public static explicit operator int(VkRenderPass value) => (int)(value.Value);
 
-    public static explicit operator VkRenderPass(long value) => new VkRenderPass((ulong)(value));
+    public static explicit operator VkRenderPass(long value) => new VkRenderPass(unchecked((ulong)(value)));
 
     public static explicit operator long(VkRenderPass value) => (long)(value.Value);
 
-    public static explicit operator VkRenderPass(nint value) => new VkRenderPass((ulong)(value));
+    public static explicit operator VkRenderPass(nint value) => new VkRenderPass(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkRenderPass value) => (nint)(value.Value);
 
-    public static explicit operator VkRenderPass(sbyte value) => new VkRenderPass((ulong)(value));
+    public static explicit operator VkRenderPass(sbyte value) => new VkRenderPass(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkRenderPass value) => (sbyte)(value.Value);
 

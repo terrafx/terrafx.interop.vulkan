@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkDeferredOperationKHR : IComparable, IComparable<VkDeferredOperationKHR>, IEquatable<VkDeferredOperationKHR>, IFormattable
+public readonly partial struct VkDeferredOperationKHR : IComparable, IComparable<VkDeferredOperationKHR>, IEquatable<VkDeferredOperationKHR>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkDeferredOperationKHR : IComparable, IComparable<VkDeferr
 
     public static explicit operator byte(VkDeferredOperationKHR value) => (byte)(value.Value);
 
-    public static explicit operator VkDeferredOperationKHR(short value) => new VkDeferredOperationKHR((ulong)(value));
+    public static explicit operator VkDeferredOperationKHR(short value) => new VkDeferredOperationKHR(unchecked((ulong)(value)));
 
     public static explicit operator short(VkDeferredOperationKHR value) => (short)(value.Value);
 
-    public static explicit operator VkDeferredOperationKHR(int value) => new VkDeferredOperationKHR((ulong)(value));
+    public static explicit operator VkDeferredOperationKHR(int value) => new VkDeferredOperationKHR(unchecked((ulong)(value)));
 
     public static explicit operator int(VkDeferredOperationKHR value) => (int)(value.Value);
 
-    public static explicit operator VkDeferredOperationKHR(long value) => new VkDeferredOperationKHR((ulong)(value));
+    public static explicit operator VkDeferredOperationKHR(long value) => new VkDeferredOperationKHR(unchecked((ulong)(value)));
 
     public static explicit operator long(VkDeferredOperationKHR value) => (long)(value.Value);
 
-    public static explicit operator VkDeferredOperationKHR(nint value) => new VkDeferredOperationKHR((ulong)(value));
+    public static explicit operator VkDeferredOperationKHR(nint value) => new VkDeferredOperationKHR(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkDeferredOperationKHR value) => (nint)(value.Value);
 
-    public static explicit operator VkDeferredOperationKHR(sbyte value) => new VkDeferredOperationKHR((ulong)(value));
+    public static explicit operator VkDeferredOperationKHR(sbyte value) => new VkDeferredOperationKHR(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkDeferredOperationKHR value) => (sbyte)(value.Value);
 

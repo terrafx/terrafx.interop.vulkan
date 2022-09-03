@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkSemaphore : IComparable, IComparable<VkSemaphore>, IEquatable<VkSemaphore>, IFormattable
+public readonly partial struct VkSemaphore : IComparable, IComparable<VkSemaphore>, IEquatable<VkSemaphore>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkSemaphore : IComparable, IComparable<VkSemaphore>, IEqua
 
     public static explicit operator byte(VkSemaphore value) => (byte)(value.Value);
 
-    public static explicit operator VkSemaphore(short value) => new VkSemaphore((ulong)(value));
+    public static explicit operator VkSemaphore(short value) => new VkSemaphore(unchecked((ulong)(value)));
 
     public static explicit operator short(VkSemaphore value) => (short)(value.Value);
 
-    public static explicit operator VkSemaphore(int value) => new VkSemaphore((ulong)(value));
+    public static explicit operator VkSemaphore(int value) => new VkSemaphore(unchecked((ulong)(value)));
 
     public static explicit operator int(VkSemaphore value) => (int)(value.Value);
 
-    public static explicit operator VkSemaphore(long value) => new VkSemaphore((ulong)(value));
+    public static explicit operator VkSemaphore(long value) => new VkSemaphore(unchecked((ulong)(value)));
 
     public static explicit operator long(VkSemaphore value) => (long)(value.Value);
 
-    public static explicit operator VkSemaphore(nint value) => new VkSemaphore((ulong)(value));
+    public static explicit operator VkSemaphore(nint value) => new VkSemaphore(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkSemaphore value) => (nint)(value.Value);
 
-    public static explicit operator VkSemaphore(sbyte value) => new VkSemaphore((ulong)(value));
+    public static explicit operator VkSemaphore(sbyte value) => new VkSemaphore(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkSemaphore value) => (sbyte)(value.Value);
 

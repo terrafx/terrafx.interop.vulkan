@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkDescriptorUpdateTemplate : IComparable, IComparable<VkDescriptorUpdateTemplate>, IEquatable<VkDescriptorUpdateTemplate>, IFormattable
+public readonly partial struct VkDescriptorUpdateTemplate : IComparable, IComparable<VkDescriptorUpdateTemplate>, IEquatable<VkDescriptorUpdateTemplate>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkDescriptorUpdateTemplate : IComparable, IComparable<VkDe
 
     public static explicit operator byte(VkDescriptorUpdateTemplate value) => (byte)(value.Value);
 
-    public static explicit operator VkDescriptorUpdateTemplate(short value) => new VkDescriptorUpdateTemplate((ulong)(value));
+    public static explicit operator VkDescriptorUpdateTemplate(short value) => new VkDescriptorUpdateTemplate(unchecked((ulong)(value)));
 
     public static explicit operator short(VkDescriptorUpdateTemplate value) => (short)(value.Value);
 
-    public static explicit operator VkDescriptorUpdateTemplate(int value) => new VkDescriptorUpdateTemplate((ulong)(value));
+    public static explicit operator VkDescriptorUpdateTemplate(int value) => new VkDescriptorUpdateTemplate(unchecked((ulong)(value)));
 
     public static explicit operator int(VkDescriptorUpdateTemplate value) => (int)(value.Value);
 
-    public static explicit operator VkDescriptorUpdateTemplate(long value) => new VkDescriptorUpdateTemplate((ulong)(value));
+    public static explicit operator VkDescriptorUpdateTemplate(long value) => new VkDescriptorUpdateTemplate(unchecked((ulong)(value)));
 
     public static explicit operator long(VkDescriptorUpdateTemplate value) => (long)(value.Value);
 
-    public static explicit operator VkDescriptorUpdateTemplate(nint value) => new VkDescriptorUpdateTemplate((ulong)(value));
+    public static explicit operator VkDescriptorUpdateTemplate(nint value) => new VkDescriptorUpdateTemplate(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkDescriptorUpdateTemplate value) => (nint)(value.Value);
 
-    public static explicit operator VkDescriptorUpdateTemplate(sbyte value) => new VkDescriptorUpdateTemplate((ulong)(value));
+    public static explicit operator VkDescriptorUpdateTemplate(sbyte value) => new VkDescriptorUpdateTemplate(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkDescriptorUpdateTemplate value) => (sbyte)(value.Value);
 

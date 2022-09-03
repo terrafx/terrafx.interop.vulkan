@@ -14,8 +14,7 @@ public unsafe partial struct VkScreenSurfaceCreateInfoQNX
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkScreenSurfaceCreateFlagsQNX")]
-    public uint flags;
+    public VkScreenSurfaceCreateFlagsQNX flags;
 
     [NativeTypeName("struct _screen_context *")]
     public IntPtr context;

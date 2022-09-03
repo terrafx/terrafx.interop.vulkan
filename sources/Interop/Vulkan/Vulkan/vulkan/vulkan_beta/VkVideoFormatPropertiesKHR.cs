@@ -12,4 +12,14 @@ public unsafe partial struct VkVideoFormatPropertiesKHR
     public void* pNext;
 
     public VkFormat format;
+
+    public VkComponentMapping componentMapping;
+
+    public VkImageCreateFlags imageCreateFlags;
+
+    public VkImageType imageType;
+
+    public VkImageTiling imageTiling;
+
+    public VkImageUsageFlags imageUsageFlags;
 }

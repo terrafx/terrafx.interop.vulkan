@@ -7,7 +7,7 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkCommandBufferManualImports
 {
-    public delegate* unmanaged<VkCommandBuffer, VkRenderingInfoKHR*, void> vkCmdBeginRenderingKHR;
+    public delegate* unmanaged<VkCommandBuffer, VkRenderingInfo*, void> vkCmdBeginRenderingKHR;
 
     public delegate* unmanaged<VkCommandBuffer, void> vkCmdEndRenderingKHR;
 
@@ -31,29 +31,29 @@ public unsafe partial struct VkCommandBufferManualImports
 
     public delegate* unmanaged<VkCommandBuffer, VkExtent2D*, VkFragmentShadingRateCombinerOpKHR*, void> vkCmdSetFragmentShadingRateKHR;
 
-    public delegate* unmanaged<VkCommandBuffer, VkEvent, VkDependencyInfoKHR*, void> vkCmdSetEvent2KHR;
+    public delegate* unmanaged<VkCommandBuffer, VkEvent, VkDependencyInfo*, void> vkCmdSetEvent2KHR;
 
-    public delegate* unmanaged<VkCommandBuffer, VkEvent, ulong, void> vkCmdResetEvent2KHR;
+    public delegate* unmanaged<VkCommandBuffer, VkEvent, VkPipelineStageFlags2, void> vkCmdResetEvent2KHR;
 
-    public delegate* unmanaged<VkCommandBuffer, uint, VkEvent*, VkDependencyInfoKHR*, void> vkCmdWaitEvents2KHR;
+    public delegate* unmanaged<VkCommandBuffer, uint, VkEvent*, VkDependencyInfo*, void> vkCmdWaitEvents2KHR;
 
-    public delegate* unmanaged<VkCommandBuffer, VkDependencyInfoKHR*, void> vkCmdPipelineBarrier2KHR;
+    public delegate* unmanaged<VkCommandBuffer, VkDependencyInfo*, void> vkCmdPipelineBarrier2KHR;
 
-    public delegate* unmanaged<VkCommandBuffer, ulong, VkQueryPool, uint, void> vkCmdWriteTimestamp2KHR;
+    public delegate* unmanaged<VkCommandBuffer, VkPipelineStageFlags2, VkQueryPool, uint, void> vkCmdWriteTimestamp2KHR;
 
-    public delegate* unmanaged<VkCommandBuffer, ulong, VkBuffer, ulong, uint, void> vkCmdWriteBufferMarker2AMD;
+    public delegate* unmanaged<VkCommandBuffer, VkPipelineStageFlags2, VkBuffer, ulong, uint, void> vkCmdWriteBufferMarker2AMD;
 
-    public delegate* unmanaged<VkCommandBuffer, VkCopyBufferInfo2KHR*, void> vkCmdCopyBuffer2KHR;
+    public delegate* unmanaged<VkCommandBuffer, VkCopyBufferInfo2*, void> vkCmdCopyBuffer2KHR;
 
-    public delegate* unmanaged<VkCommandBuffer, VkCopyImageInfo2KHR*, void> vkCmdCopyImage2KHR;
+    public delegate* unmanaged<VkCommandBuffer, VkCopyImageInfo2*, void> vkCmdCopyImage2KHR;
 
-    public delegate* unmanaged<VkCommandBuffer, VkCopyBufferToImageInfo2KHR*, void> vkCmdCopyBufferToImage2KHR;
+    public delegate* unmanaged<VkCommandBuffer, VkCopyBufferToImageInfo2*, void> vkCmdCopyBufferToImage2KHR;
 
-    public delegate* unmanaged<VkCommandBuffer, VkCopyImageToBufferInfo2KHR*, void> vkCmdCopyImageToBuffer2KHR;
+    public delegate* unmanaged<VkCommandBuffer, VkCopyImageToBufferInfo2*, void> vkCmdCopyImageToBuffer2KHR;
 
-    public delegate* unmanaged<VkCommandBuffer, VkBlitImageInfo2KHR*, void> vkCmdBlitImage2KHR;
+    public delegate* unmanaged<VkCommandBuffer, VkBlitImageInfo2*, void> vkCmdBlitImage2KHR;
 
-    public delegate* unmanaged<VkCommandBuffer, VkResolveImageInfo2KHR*, void> vkCmdResolveImage2KHR;
+    public delegate* unmanaged<VkCommandBuffer, VkResolveImageInfo2*, void> vkCmdResolveImage2KHR;
 
     public delegate* unmanaged<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void> vkCmdDebugMarkerBeginEXT;
 

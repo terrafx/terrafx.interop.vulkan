@@ -12,8 +12,7 @@ public unsafe partial struct VkDeviceCreateInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkDeviceCreateFlags")]
-    public uint flags;
+    public VkDeviceCreateFlags flags;
 
     [NativeTypeName("uint32_t")]
     public uint queueCreateInfoCount;

@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkImage : IComparable, IComparable<VkImage>, IEquatable<VkImage>, IFormattable
+public readonly partial struct VkImage : IComparable, IComparable<VkImage>, IEquatable<VkImage>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkImage : IComparable, IComparable<VkImage>, IEquatable<Vk
 
     public static explicit operator byte(VkImage value) => (byte)(value.Value);
 
-    public static explicit operator VkImage(short value) => new VkImage((ulong)(value));
+    public static explicit operator VkImage(short value) => new VkImage(unchecked((ulong)(value)));
 
     public static explicit operator short(VkImage value) => (short)(value.Value);
 
-    public static explicit operator VkImage(int value) => new VkImage((ulong)(value));
+    public static explicit operator VkImage(int value) => new VkImage(unchecked((ulong)(value)));
 
     public static explicit operator int(VkImage value) => (int)(value.Value);
 
-    public static explicit operator VkImage(long value) => new VkImage((ulong)(value));
+    public static explicit operator VkImage(long value) => new VkImage(unchecked((ulong)(value)));
 
     public static explicit operator long(VkImage value) => (long)(value.Value);
 
-    public static explicit operator VkImage(nint value) => new VkImage((ulong)(value));
+    public static explicit operator VkImage(nint value) => new VkImage(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkImage value) => (nint)(value.Value);
 
-    public static explicit operator VkImage(sbyte value) => new VkImage((ulong)(value));
+    public static explicit operator VkImage(sbyte value) => new VkImage(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkImage value) => (sbyte)(value.Value);
 

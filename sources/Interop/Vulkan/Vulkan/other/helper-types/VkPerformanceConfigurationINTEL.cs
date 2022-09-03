@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkPerformanceConfigurationINTEL : IComparable, IComparable<VkPerformanceConfigurationINTEL>, IEquatable<VkPerformanceConfigurationINTEL>, IFormattable
+public readonly partial struct VkPerformanceConfigurationINTEL : IComparable, IComparable<VkPerformanceConfigurationINTEL>, IEquatable<VkPerformanceConfigurationINTEL>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkPerformanceConfigurationINTEL : IComparable, IComparable
 
     public static explicit operator byte(VkPerformanceConfigurationINTEL value) => (byte)(value.Value);
 
-    public static explicit operator VkPerformanceConfigurationINTEL(short value) => new VkPerformanceConfigurationINTEL((ulong)(value));
+    public static explicit operator VkPerformanceConfigurationINTEL(short value) => new VkPerformanceConfigurationINTEL(unchecked((ulong)(value)));
 
     public static explicit operator short(VkPerformanceConfigurationINTEL value) => (short)(value.Value);
 
-    public static explicit operator VkPerformanceConfigurationINTEL(int value) => new VkPerformanceConfigurationINTEL((ulong)(value));
+    public static explicit operator VkPerformanceConfigurationINTEL(int value) => new VkPerformanceConfigurationINTEL(unchecked((ulong)(value)));
 
     public static explicit operator int(VkPerformanceConfigurationINTEL value) => (int)(value.Value);
 
-    public static explicit operator VkPerformanceConfigurationINTEL(long value) => new VkPerformanceConfigurationINTEL((ulong)(value));
+    public static explicit operator VkPerformanceConfigurationINTEL(long value) => new VkPerformanceConfigurationINTEL(unchecked((ulong)(value)));
 
     public static explicit operator long(VkPerformanceConfigurationINTEL value) => (long)(value.Value);
 
-    public static explicit operator VkPerformanceConfigurationINTEL(nint value) => new VkPerformanceConfigurationINTEL((ulong)(value));
+    public static explicit operator VkPerformanceConfigurationINTEL(nint value) => new VkPerformanceConfigurationINTEL(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkPerformanceConfigurationINTEL value) => (nint)(value.Value);
 
-    public static explicit operator VkPerformanceConfigurationINTEL(sbyte value) => new VkPerformanceConfigurationINTEL((ulong)(value));
+    public static explicit operator VkPerformanceConfigurationINTEL(sbyte value) => new VkPerformanceConfigurationINTEL(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkPerformanceConfigurationINTEL value) => (sbyte)(value.Value);
 

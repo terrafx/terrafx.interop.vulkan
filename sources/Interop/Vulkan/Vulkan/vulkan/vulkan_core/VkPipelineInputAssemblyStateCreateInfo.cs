@@ -12,8 +12,7 @@ public unsafe partial struct VkPipelineInputAssemblyStateCreateInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkPipelineInputAssemblyStateCreateFlags")]
-    public uint flags;
+    public VkPipelineInputAssemblyStateCreateFlags flags;
 
     public VkPrimitiveTopology topology;
 

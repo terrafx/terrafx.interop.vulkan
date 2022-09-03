@@ -20,6 +20,5 @@ public unsafe partial struct VkImageConstraintsInfoFUCHSIA
 
     public VkBufferCollectionConstraintsInfoFUCHSIA bufferCollectionConstraints;
 
-    [NativeTypeName("VkImageConstraintsInfoFlagsFUCHSIA")]
-    public uint flags;
+    public VkImageConstraintsInfoFlagsFUCHSIA flags;
 }

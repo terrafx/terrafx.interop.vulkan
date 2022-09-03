@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkDescriptorSetLayout : IComparable, IComparable<VkDescriptorSetLayout>, IEquatable<VkDescriptorSetLayout>, IFormattable
+public readonly partial struct VkDescriptorSetLayout : IComparable, IComparable<VkDescriptorSetLayout>, IEquatable<VkDescriptorSetLayout>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkDescriptorSetLayout : IComparable, IComparable<VkDescrip
 
     public static explicit operator byte(VkDescriptorSetLayout value) => (byte)(value.Value);
 
-    public static explicit operator VkDescriptorSetLayout(short value) => new VkDescriptorSetLayout((ulong)(value));
+    public static explicit operator VkDescriptorSetLayout(short value) => new VkDescriptorSetLayout(unchecked((ulong)(value)));
 
     public static explicit operator short(VkDescriptorSetLayout value) => (short)(value.Value);
 
-    public static explicit operator VkDescriptorSetLayout(int value) => new VkDescriptorSetLayout((ulong)(value));
+    public static explicit operator VkDescriptorSetLayout(int value) => new VkDescriptorSetLayout(unchecked((ulong)(value)));
 
     public static explicit operator int(VkDescriptorSetLayout value) => (int)(value.Value);
 
-    public static explicit operator VkDescriptorSetLayout(long value) => new VkDescriptorSetLayout((ulong)(value));
+    public static explicit operator VkDescriptorSetLayout(long value) => new VkDescriptorSetLayout(unchecked((ulong)(value)));
 
     public static explicit operator long(VkDescriptorSetLayout value) => (long)(value.Value);
 
-    public static explicit operator VkDescriptorSetLayout(nint value) => new VkDescriptorSetLayout((ulong)(value));
+    public static explicit operator VkDescriptorSetLayout(nint value) => new VkDescriptorSetLayout(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkDescriptorSetLayout value) => (nint)(value.Value);
 
-    public static explicit operator VkDescriptorSetLayout(sbyte value) => new VkDescriptorSetLayout((ulong)(value));
+    public static explicit operator VkDescriptorSetLayout(sbyte value) => new VkDescriptorSetLayout(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkDescriptorSetLayout value) => (sbyte)(value.Value);
 

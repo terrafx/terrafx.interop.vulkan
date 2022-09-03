@@ -9,7 +9,6 @@ public unsafe partial struct VkVideoEncodeH264CapabilitiesEXT
 {
     public VkStructureType sType;
 
-    [NativeTypeName("const void *")]
     public void* pNext;
 
     public VkVideoEncodeH264CapabilityFlagsEXT flags;
@@ -18,23 +17,26 @@ public unsafe partial struct VkVideoEncodeH264CapabilitiesEXT
 
     public VkVideoEncodeH264OutputModeFlagsEXT outputModeFlags;
 
-    public VkExtent2D minPictureSizeInMbs;
-
-    public VkExtent2D maxPictureSizeInMbs;
-
-    public VkExtent2D inputImageDataAlignment;
+    [NativeTypeName("uint8_t")]
+    public byte maxPPictureL0ReferenceCount;
 
     [NativeTypeName("uint8_t")]
-    public byte maxNumL0ReferenceForP;
+    public byte maxBPictureL0ReferenceCount;
 
     [NativeTypeName("uint8_t")]
-    public byte maxNumL0ReferenceForB;
+    public byte maxL1ReferenceCount;
 
-    [NativeTypeName("uint8_t")]
-    public byte maxNumL1Reference;
+    public VkBool32 motionVectorsOverPicBoundariesFlag;
 
-    [NativeTypeName("uint8_t")]
-    public byte qualityLevelCount;
+    [NativeTypeName("uint32_t")]
+    public uint maxBytesPerPicDenom;
 
-    public VkExtensionProperties stdExtensionVersion;
+    [NativeTypeName("uint32_t")]
+    public uint maxBitsPerMbDenom;
+
+    [NativeTypeName("uint32_t")]
+    public uint log2MaxMvLengthHorizontal;
+
+    [NativeTypeName("uint32_t")]
+    public uint log2MaxMvLengthVertical;
 }

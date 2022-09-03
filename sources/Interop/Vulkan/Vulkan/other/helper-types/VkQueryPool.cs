@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkQueryPool : IComparable, IComparable<VkQueryPool>, IEquatable<VkQueryPool>, IFormattable
+public readonly partial struct VkQueryPool : IComparable, IComparable<VkQueryPool>, IEquatable<VkQueryPool>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkQueryPool : IComparable, IComparable<VkQueryPool>, IEqua
 
     public static explicit operator byte(VkQueryPool value) => (byte)(value.Value);
 
-    public static explicit operator VkQueryPool(short value) => new VkQueryPool((ulong)(value));
+    public static explicit operator VkQueryPool(short value) => new VkQueryPool(unchecked((ulong)(value)));
 
     public static explicit operator short(VkQueryPool value) => (short)(value.Value);
 
-    public static explicit operator VkQueryPool(int value) => new VkQueryPool((ulong)(value));
+    public static explicit operator VkQueryPool(int value) => new VkQueryPool(unchecked((ulong)(value)));
 
     public static explicit operator int(VkQueryPool value) => (int)(value.Value);
 
-    public static explicit operator VkQueryPool(long value) => new VkQueryPool((ulong)(value));
+    public static explicit operator VkQueryPool(long value) => new VkQueryPool(unchecked((ulong)(value)));
 
     public static explicit operator long(VkQueryPool value) => (long)(value.Value);
 
-    public static explicit operator VkQueryPool(nint value) => new VkQueryPool((ulong)(value));
+    public static explicit operator VkQueryPool(nint value) => new VkQueryPool(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkQueryPool value) => (nint)(value.Value);
 
-    public static explicit operator VkQueryPool(sbyte value) => new VkQueryPool((ulong)(value));
+    public static explicit operator VkQueryPool(sbyte value) => new VkQueryPool(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkQueryPool value) => (sbyte)(value.Value);
 

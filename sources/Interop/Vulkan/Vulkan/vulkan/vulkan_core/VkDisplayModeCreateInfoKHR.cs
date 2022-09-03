@@ -12,8 +12,7 @@ public unsafe partial struct VkDisplayModeCreateInfoKHR
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkDisplayModeCreateFlagsKHR")]
-    public uint flags;
+    public VkDisplayModeCreateFlagsKHR flags;
 
     public VkDisplayModeParametersKHR parameters;
 }

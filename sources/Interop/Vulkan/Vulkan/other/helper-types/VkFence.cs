@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkFence : IComparable, IComparable<VkFence>, IEquatable<VkFence>, IFormattable
+public readonly partial struct VkFence : IComparable, IComparable<VkFence>, IEquatable<VkFence>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkFence : IComparable, IComparable<VkFence>, IEquatable<Vk
 
     public static explicit operator byte(VkFence value) => (byte)(value.Value);
 
-    public static explicit operator VkFence(short value) => new VkFence((ulong)(value));
+    public static explicit operator VkFence(short value) => new VkFence(unchecked((ulong)(value)));
 
     public static explicit operator short(VkFence value) => (short)(value.Value);
 
-    public static explicit operator VkFence(int value) => new VkFence((ulong)(value));
+    public static explicit operator VkFence(int value) => new VkFence(unchecked((ulong)(value)));
 
     public static explicit operator int(VkFence value) => (int)(value.Value);
 
-    public static explicit operator VkFence(long value) => new VkFence((ulong)(value));
+    public static explicit operator VkFence(long value) => new VkFence(unchecked((ulong)(value)));
 
     public static explicit operator long(VkFence value) => (long)(value.Value);
 
-    public static explicit operator VkFence(nint value) => new VkFence((ulong)(value));
+    public static explicit operator VkFence(nint value) => new VkFence(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkFence value) => (nint)(value.Value);
 
-    public static explicit operator VkFence(sbyte value) => new VkFence((ulong)(value));
+    public static explicit operator VkFence(sbyte value) => new VkFence(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkFence value) => (sbyte)(value.Value);
 

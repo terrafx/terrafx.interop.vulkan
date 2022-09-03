@@ -12,15 +12,18 @@ public unsafe partial struct StdVideoEncodeH264RefMemMgmtCtrlOperations
     [NativeTypeName("uint8_t")]
     public byte refList0ModOpCount;
 
+    [NativeTypeName("const StdVideoEncodeH264RefListModEntry *")]
     public StdVideoEncodeH264RefListModEntry* pRefList0ModOperations;
 
     [NativeTypeName("uint8_t")]
     public byte refList1ModOpCount;
 
+    [NativeTypeName("const StdVideoEncodeH264RefListModEntry *")]
     public StdVideoEncodeH264RefListModEntry* pRefList1ModOperations;
 
     [NativeTypeName("uint8_t")]
     public byte refPicMarkingOpCount;
 
+    [NativeTypeName("const StdVideoEncodeH264RefPicMarkingEntry *")]
     public StdVideoEncodeH264RefPicMarkingEntry* pRefPicMarkingOperations;
 }

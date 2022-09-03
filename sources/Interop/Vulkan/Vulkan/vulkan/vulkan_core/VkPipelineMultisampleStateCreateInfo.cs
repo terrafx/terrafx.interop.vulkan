@@ -12,8 +12,7 @@ public unsafe partial struct VkPipelineMultisampleStateCreateInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkPipelineMultisampleStateCreateFlags")]
-    public uint flags;
+    public VkPipelineMultisampleStateCreateFlags flags;
 
     [NativeTypeName("VkSampleCountFlagBits")]
     public VkSampleCountFlags rasterizationSamples;

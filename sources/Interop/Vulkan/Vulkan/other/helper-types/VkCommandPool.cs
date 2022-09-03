@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkCommandPool : IComparable, IComparable<VkCommandPool>, IEquatable<VkCommandPool>, IFormattable
+public readonly partial struct VkCommandPool : IComparable, IComparable<VkCommandPool>, IEquatable<VkCommandPool>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkCommandPool : IComparable, IComparable<VkCommandPool>, I
 
     public static explicit operator byte(VkCommandPool value) => (byte)(value.Value);
 
-    public static explicit operator VkCommandPool(short value) => new VkCommandPool((ulong)(value));
+    public static explicit operator VkCommandPool(short value) => new VkCommandPool(unchecked((ulong)(value)));
 
     public static explicit operator short(VkCommandPool value) => (short)(value.Value);
 
-    public static explicit operator VkCommandPool(int value) => new VkCommandPool((ulong)(value));
+    public static explicit operator VkCommandPool(int value) => new VkCommandPool(unchecked((ulong)(value)));
 
     public static explicit operator int(VkCommandPool value) => (int)(value.Value);
 
-    public static explicit operator VkCommandPool(long value) => new VkCommandPool((ulong)(value));
+    public static explicit operator VkCommandPool(long value) => new VkCommandPool(unchecked((ulong)(value)));
 
     public static explicit operator long(VkCommandPool value) => (long)(value.Value);
 
-    public static explicit operator VkCommandPool(nint value) => new VkCommandPool((ulong)(value));
+    public static explicit operator VkCommandPool(nint value) => new VkCommandPool(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkCommandPool value) => (nint)(value.Value);
 
-    public static explicit operator VkCommandPool(sbyte value) => new VkCommandPool((ulong)(value));
+    public static explicit operator VkCommandPool(sbyte value) => new VkCommandPool(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkCommandPool value) => (sbyte)(value.Value);
 

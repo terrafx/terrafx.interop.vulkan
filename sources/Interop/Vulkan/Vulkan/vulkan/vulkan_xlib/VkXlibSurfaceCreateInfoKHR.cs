@@ -14,8 +14,7 @@ public unsafe partial struct VkXlibSurfaceCreateInfoKHR
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkXlibSurfaceCreateFlagsKHR")]
-    public uint flags;
+    public VkXlibSurfaceCreateFlagsKHR flags;
 
     public IntPtr dpy;
 

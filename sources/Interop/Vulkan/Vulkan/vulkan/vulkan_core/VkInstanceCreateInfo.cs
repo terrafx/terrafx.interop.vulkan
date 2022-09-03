@@ -12,8 +12,7 @@ public unsafe partial struct VkInstanceCreateInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkInstanceCreateFlags")]
-    public uint flags;
+    public VkInstanceCreateFlags flags;
 
     [NativeTypeName("const VkApplicationInfo *")]
     public VkApplicationInfo* pApplicationInfo;

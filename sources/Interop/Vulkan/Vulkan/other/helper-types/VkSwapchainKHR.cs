@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkSwapchainKHR : IComparable, IComparable<VkSwapchainKHR>, IEquatable<VkSwapchainKHR>, IFormattable
+public readonly partial struct VkSwapchainKHR : IComparable, IComparable<VkSwapchainKHR>, IEquatable<VkSwapchainKHR>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkSwapchainKHR : IComparable, IComparable<VkSwapchainKHR>,
 
     public static explicit operator byte(VkSwapchainKHR value) => (byte)(value.Value);
 
-    public static explicit operator VkSwapchainKHR(short value) => new VkSwapchainKHR((ulong)(value));
+    public static explicit operator VkSwapchainKHR(short value) => new VkSwapchainKHR(unchecked((ulong)(value)));
 
     public static explicit operator short(VkSwapchainKHR value) => (short)(value.Value);
 
-    public static explicit operator VkSwapchainKHR(int value) => new VkSwapchainKHR((ulong)(value));
+    public static explicit operator VkSwapchainKHR(int value) => new VkSwapchainKHR(unchecked((ulong)(value)));
 
     public static explicit operator int(VkSwapchainKHR value) => (int)(value.Value);
 
-    public static explicit operator VkSwapchainKHR(long value) => new VkSwapchainKHR((ulong)(value));
+    public static explicit operator VkSwapchainKHR(long value) => new VkSwapchainKHR(unchecked((ulong)(value)));
 
     public static explicit operator long(VkSwapchainKHR value) => (long)(value.Value);
 
-    public static explicit operator VkSwapchainKHR(nint value) => new VkSwapchainKHR((ulong)(value));
+    public static explicit operator VkSwapchainKHR(nint value) => new VkSwapchainKHR(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkSwapchainKHR value) => (nint)(value.Value);
 
-    public static explicit operator VkSwapchainKHR(sbyte value) => new VkSwapchainKHR((ulong)(value));
+    public static explicit operator VkSwapchainKHR(sbyte value) => new VkSwapchainKHR(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkSwapchainKHR value) => (sbyte)(value.Value);
 

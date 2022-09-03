@@ -3,9 +3,13 @@
 // Ported from include/vulkan/vulkan_profiles.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.224
 // Original source is Copyright © 2021-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
+using System;
+
 namespace TerraFX.Interop.Vulkan;
 
-public enum VpDeviceCreateFlags
+[NativeTypeName("int")]
+[Flags]
+public enum VpDeviceCreateFlags : uint
 {
     VP_DEVICE_CREATE_MERGE_EXTENSIONS_BIT = 0x00000001,
     VP_DEVICE_CREATE_OVERRIDE_EXTENSIONS_BIT = 0x00000002,

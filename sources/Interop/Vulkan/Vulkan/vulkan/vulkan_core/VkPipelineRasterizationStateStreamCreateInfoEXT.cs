@@ -12,8 +12,7 @@ public unsafe partial struct VkPipelineRasterizationStateStreamCreateInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkPipelineRasterizationStateStreamCreateFlagsEXT")]
-    public uint flags;
+    public VkPipelineRasterizationStateStreamCreateFlagsEXT flags;
 
     [NativeTypeName("uint32_t")]
     public uint rasterizationStream;

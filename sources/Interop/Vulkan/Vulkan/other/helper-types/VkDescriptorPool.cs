@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkDescriptorPool : IComparable, IComparable<VkDescriptorPool>, IEquatable<VkDescriptorPool>, IFormattable
+public readonly partial struct VkDescriptorPool : IComparable, IComparable<VkDescriptorPool>, IEquatable<VkDescriptorPool>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkDescriptorPool : IComparable, IComparable<VkDescriptorPo
 
     public static explicit operator byte(VkDescriptorPool value) => (byte)(value.Value);
 
-    public static explicit operator VkDescriptorPool(short value) => new VkDescriptorPool((ulong)(value));
+    public static explicit operator VkDescriptorPool(short value) => new VkDescriptorPool(unchecked((ulong)(value)));
 
     public static explicit operator short(VkDescriptorPool value) => (short)(value.Value);
 
-    public static explicit operator VkDescriptorPool(int value) => new VkDescriptorPool((ulong)(value));
+    public static explicit operator VkDescriptorPool(int value) => new VkDescriptorPool(unchecked((ulong)(value)));
 
     public static explicit operator int(VkDescriptorPool value) => (int)(value.Value);
 
-    public static explicit operator VkDescriptorPool(long value) => new VkDescriptorPool((ulong)(value));
+    public static explicit operator VkDescriptorPool(long value) => new VkDescriptorPool(unchecked((ulong)(value)));
 
     public static explicit operator long(VkDescriptorPool value) => (long)(value.Value);
 
-    public static explicit operator VkDescriptorPool(nint value) => new VkDescriptorPool((ulong)(value));
+    public static explicit operator VkDescriptorPool(nint value) => new VkDescriptorPool(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkDescriptorPool value) => (nint)(value.Value);
 
-    public static explicit operator VkDescriptorPool(sbyte value) => new VkDescriptorPool((ulong)(value));
+    public static explicit operator VkDescriptorPool(sbyte value) => new VkDescriptorPool(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkDescriptorPool value) => (sbyte)(value.Value);
 

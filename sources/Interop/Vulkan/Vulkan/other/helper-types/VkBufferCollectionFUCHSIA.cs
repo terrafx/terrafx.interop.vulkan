@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkBufferCollectionFUCHSIA : IComparable, IComparable<VkBufferCollectionFUCHSIA>, IEquatable<VkBufferCollectionFUCHSIA>, IFormattable
+public readonly partial struct VkBufferCollectionFUCHSIA : IComparable, IComparable<VkBufferCollectionFUCHSIA>, IEquatable<VkBufferCollectionFUCHSIA>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkBufferCollectionFUCHSIA : IComparable, IComparable<VkBuf
 
     public static explicit operator byte(VkBufferCollectionFUCHSIA value) => (byte)(value.Value);
 
-    public static explicit operator VkBufferCollectionFUCHSIA(short value) => new VkBufferCollectionFUCHSIA((ulong)(value));
+    public static explicit operator VkBufferCollectionFUCHSIA(short value) => new VkBufferCollectionFUCHSIA(unchecked((ulong)(value)));
 
     public static explicit operator short(VkBufferCollectionFUCHSIA value) => (short)(value.Value);
 
-    public static explicit operator VkBufferCollectionFUCHSIA(int value) => new VkBufferCollectionFUCHSIA((ulong)(value));
+    public static explicit operator VkBufferCollectionFUCHSIA(int value) => new VkBufferCollectionFUCHSIA(unchecked((ulong)(value)));
 
     public static explicit operator int(VkBufferCollectionFUCHSIA value) => (int)(value.Value);
 
-    public static explicit operator VkBufferCollectionFUCHSIA(long value) => new VkBufferCollectionFUCHSIA((ulong)(value));
+    public static explicit operator VkBufferCollectionFUCHSIA(long value) => new VkBufferCollectionFUCHSIA(unchecked((ulong)(value)));
 
     public static explicit operator long(VkBufferCollectionFUCHSIA value) => (long)(value.Value);
 
-    public static explicit operator VkBufferCollectionFUCHSIA(nint value) => new VkBufferCollectionFUCHSIA((ulong)(value));
+    public static explicit operator VkBufferCollectionFUCHSIA(nint value) => new VkBufferCollectionFUCHSIA(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkBufferCollectionFUCHSIA value) => (nint)(value.Value);
 
-    public static explicit operator VkBufferCollectionFUCHSIA(sbyte value) => new VkBufferCollectionFUCHSIA((ulong)(value));
+    public static explicit operator VkBufferCollectionFUCHSIA(sbyte value) => new VkBufferCollectionFUCHSIA(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkBufferCollectionFUCHSIA value) => (sbyte)(value.Value);
 

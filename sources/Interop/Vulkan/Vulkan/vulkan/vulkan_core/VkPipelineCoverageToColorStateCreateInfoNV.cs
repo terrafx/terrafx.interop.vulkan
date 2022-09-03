@@ -12,8 +12,7 @@ public unsafe partial struct VkPipelineCoverageToColorStateCreateInfoNV
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkPipelineCoverageToColorStateCreateFlagsNV")]
-    public uint flags;
+    public VkPipelineCoverageToColorStateCreateFlagsNV flags;
 
     public VkBool32 coverageToColorEnable;
 

@@ -9,7 +9,6 @@ public unsafe partial struct VkPhysicalDeviceRasterizationOrderAttachmentAccessF
 {
     public VkStructureType sType;
 
-    [NativeTypeName("const void *")]
     public void* pNext;
 
     public VkBool32 rasterizationOrderColorAttachmentAccess;

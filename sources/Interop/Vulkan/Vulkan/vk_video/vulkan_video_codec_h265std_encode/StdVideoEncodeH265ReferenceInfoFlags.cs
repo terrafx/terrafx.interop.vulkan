@@ -12,7 +12,7 @@ public partial struct StdVideoEncodeH265ReferenceInfoFlags
     public uint _bitfield;
 
     [NativeTypeName("uint32_t : 1")]
-    public uint is_long_term
+    public uint used_for_long_term_reference
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -28,7 +28,7 @@ public partial struct StdVideoEncodeH265ReferenceInfoFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint isUsedFlag
+    public uint unused_for_reference
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get

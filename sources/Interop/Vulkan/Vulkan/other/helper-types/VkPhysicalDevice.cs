@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public unsafe partial struct VkPhysicalDevice : IComparable, IComparable<VkPhysicalDevice>, IEquatable<VkPhysicalDevice>, IFormattable
+public readonly unsafe partial struct VkPhysicalDevice : IComparable, IComparable<VkPhysicalDevice>, IEquatable<VkPhysicalDevice>, IFormattable
 {
     public readonly void* Value;
 
@@ -31,43 +31,43 @@ public unsafe partial struct VkPhysicalDevice : IComparable, IComparable<VkPhysi
 
     public static implicit operator void*(VkPhysicalDevice value) => value.Value;
 
-    public static explicit operator VkPhysicalDevice(byte value) => new VkPhysicalDevice((void*)(value));
+    public static explicit operator VkPhysicalDevice(byte value) => new VkPhysicalDevice(unchecked((void*)(value)));
 
     public static explicit operator byte(VkPhysicalDevice value) => (byte)(value.Value);
 
-    public static explicit operator VkPhysicalDevice(short value) => new VkPhysicalDevice((void*)(value));
+    public static explicit operator VkPhysicalDevice(short value) => new VkPhysicalDevice(unchecked((void*)(value)));
 
     public static explicit operator short(VkPhysicalDevice value) => (short)(value.Value);
 
-    public static explicit operator VkPhysicalDevice(int value) => new VkPhysicalDevice((void*)(value));
+    public static explicit operator VkPhysicalDevice(int value) => new VkPhysicalDevice(unchecked((void*)(value)));
 
     public static explicit operator int(VkPhysicalDevice value) => (int)(value.Value);
 
-    public static explicit operator VkPhysicalDevice(long value) => new VkPhysicalDevice((void*)(value));
+    public static explicit operator VkPhysicalDevice(long value) => new VkPhysicalDevice(unchecked((void*)(value)));
 
     public static explicit operator long(VkPhysicalDevice value) => (long)(value.Value);
 
-    public static explicit operator VkPhysicalDevice(nint value) => new VkPhysicalDevice((void*)(value));
+    public static explicit operator VkPhysicalDevice(nint value) => new VkPhysicalDevice(unchecked((void*)(value)));
 
     public static implicit operator nint(VkPhysicalDevice value) => (nint)(value.Value);
 
-    public static explicit operator VkPhysicalDevice(sbyte value) => new VkPhysicalDevice((void*)(value));
+    public static explicit operator VkPhysicalDevice(sbyte value) => new VkPhysicalDevice(unchecked((void*)(value)));
 
     public static explicit operator sbyte(VkPhysicalDevice value) => (sbyte)(value.Value);
 
-    public static explicit operator VkPhysicalDevice(ushort value) => new VkPhysicalDevice((void*)(value));
+    public static explicit operator VkPhysicalDevice(ushort value) => new VkPhysicalDevice(unchecked((void*)(value)));
 
     public static explicit operator ushort(VkPhysicalDevice value) => (ushort)(value.Value);
 
-    public static explicit operator VkPhysicalDevice(uint value) => new VkPhysicalDevice((void*)(value));
+    public static explicit operator VkPhysicalDevice(uint value) => new VkPhysicalDevice(unchecked((void*)(value)));
 
     public static explicit operator uint(VkPhysicalDevice value) => (uint)(value.Value);
 
-    public static explicit operator VkPhysicalDevice(ulong value) => new VkPhysicalDevice((void*)(value));
+    public static explicit operator VkPhysicalDevice(ulong value) => new VkPhysicalDevice(unchecked((void*)(value)));
 
     public static explicit operator ulong(VkPhysicalDevice value) => (ulong)(value.Value);
 
-    public static explicit operator VkPhysicalDevice(nuint value) => new VkPhysicalDevice((void*)(value));
+    public static explicit operator VkPhysicalDevice(nuint value) => new VkPhysicalDevice(unchecked((void*)(value)));
 
     public static implicit operator nuint(VkPhysicalDevice value) => (nuint)(value.Value);
 

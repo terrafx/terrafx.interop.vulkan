@@ -15,6 +15,5 @@ public unsafe partial struct VkAccelerationStructureMotionInfoNV
     [NativeTypeName("uint32_t")]
     public uint maxInstances;
 
-    [NativeTypeName("VkAccelerationStructureMotionInfoFlagsNV")]
-    public uint flags;
+    public VkAccelerationStructureMotionInfoFlagsNV flags;
 }

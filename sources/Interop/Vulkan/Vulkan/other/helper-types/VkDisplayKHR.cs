@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkDisplayKHR : IComparable, IComparable<VkDisplayKHR>, IEquatable<VkDisplayKHR>, IFormattable
+public readonly partial struct VkDisplayKHR : IComparable, IComparable<VkDisplayKHR>, IEquatable<VkDisplayKHR>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkDisplayKHR : IComparable, IComparable<VkDisplayKHR>, IEq
 
     public static explicit operator byte(VkDisplayKHR value) => (byte)(value.Value);
 
-    public static explicit operator VkDisplayKHR(short value) => new VkDisplayKHR((ulong)(value));
+    public static explicit operator VkDisplayKHR(short value) => new VkDisplayKHR(unchecked((ulong)(value)));
 
     public static explicit operator short(VkDisplayKHR value) => (short)(value.Value);
 
-    public static explicit operator VkDisplayKHR(int value) => new VkDisplayKHR((ulong)(value));
+    public static explicit operator VkDisplayKHR(int value) => new VkDisplayKHR(unchecked((ulong)(value)));
 
     public static explicit operator int(VkDisplayKHR value) => (int)(value.Value);
 
-    public static explicit operator VkDisplayKHR(long value) => new VkDisplayKHR((ulong)(value));
+    public static explicit operator VkDisplayKHR(long value) => new VkDisplayKHR(unchecked((ulong)(value)));
 
     public static explicit operator long(VkDisplayKHR value) => (long)(value.Value);
 
-    public static explicit operator VkDisplayKHR(nint value) => new VkDisplayKHR((ulong)(value));
+    public static explicit operator VkDisplayKHR(nint value) => new VkDisplayKHR(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkDisplayKHR value) => (nint)(value.Value);
 
-    public static explicit operator VkDisplayKHR(sbyte value) => new VkDisplayKHR((ulong)(value));
+    public static explicit operator VkDisplayKHR(sbyte value) => new VkDisplayKHR(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkDisplayKHR value) => (sbyte)(value.Value);
 

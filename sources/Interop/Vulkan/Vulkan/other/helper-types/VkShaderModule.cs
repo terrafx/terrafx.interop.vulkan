@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkShaderModule : IComparable, IComparable<VkShaderModule>, IEquatable<VkShaderModule>, IFormattable
+public readonly partial struct VkShaderModule : IComparable, IComparable<VkShaderModule>, IEquatable<VkShaderModule>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkShaderModule : IComparable, IComparable<VkShaderModule>,
 
     public static explicit operator byte(VkShaderModule value) => (byte)(value.Value);
 
-    public static explicit operator VkShaderModule(short value) => new VkShaderModule((ulong)(value));
+    public static explicit operator VkShaderModule(short value) => new VkShaderModule(unchecked((ulong)(value)));
 
     public static explicit operator short(VkShaderModule value) => (short)(value.Value);
 
-    public static explicit operator VkShaderModule(int value) => new VkShaderModule((ulong)(value));
+    public static explicit operator VkShaderModule(int value) => new VkShaderModule(unchecked((ulong)(value)));
 
     public static explicit operator int(VkShaderModule value) => (int)(value.Value);
 
-    public static explicit operator VkShaderModule(long value) => new VkShaderModule((ulong)(value));
+    public static explicit operator VkShaderModule(long value) => new VkShaderModule(unchecked((ulong)(value)));
 
     public static explicit operator long(VkShaderModule value) => (long)(value.Value);
 
-    public static explicit operator VkShaderModule(nint value) => new VkShaderModule((ulong)(value));
+    public static explicit operator VkShaderModule(nint value) => new VkShaderModule(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkShaderModule value) => (nint)(value.Value);
 
-    public static explicit operator VkShaderModule(sbyte value) => new VkShaderModule((ulong)(value));
+    public static explicit operator VkShaderModule(sbyte value) => new VkShaderModule(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkShaderModule value) => (sbyte)(value.Value);
 

@@ -12,8 +12,7 @@ public unsafe partial struct VkMacOSSurfaceCreateInfoMVK
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkMacOSSurfaceCreateFlagsMVK")]
-    public uint flags;
+    public VkMacOSSurfaceCreateFlagsMVK flags;
 
     [NativeTypeName("const void *")]
     public void* pView;

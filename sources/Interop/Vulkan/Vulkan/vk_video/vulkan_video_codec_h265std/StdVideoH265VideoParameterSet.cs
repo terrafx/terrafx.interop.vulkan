@@ -7,6 +7,8 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct StdVideoH265VideoParameterSet
 {
+    public StdVideoH265VpsFlags flags;
+
     [NativeTypeName("uint8_t")]
     public byte vps_video_parameter_set_id;
 
@@ -22,9 +24,9 @@ public unsafe partial struct StdVideoH265VideoParameterSet
     [NativeTypeName("uint32_t")]
     public uint vps_num_ticks_poc_diff_one_minus1;
 
+    [NativeTypeName("const StdVideoH265DecPicBufMgr *")]
     public StdVideoH265DecPicBufMgr* pDecPicBufMgr;
 
+    [NativeTypeName("const StdVideoH265HrdParameters *")]
     public StdVideoH265HrdParameters* pHrdParameters;
-
-    public StdVideoH265VpsFlags flags;
 }

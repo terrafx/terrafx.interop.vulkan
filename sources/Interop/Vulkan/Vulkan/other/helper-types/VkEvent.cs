@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkEvent : IComparable, IComparable<VkEvent>, IEquatable<VkEvent>, IFormattable
+public readonly partial struct VkEvent : IComparable, IComparable<VkEvent>, IEquatable<VkEvent>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkEvent : IComparable, IComparable<VkEvent>, IEquatable<Vk
 
     public static explicit operator byte(VkEvent value) => (byte)(value.Value);
 
-    public static explicit operator VkEvent(short value) => new VkEvent((ulong)(value));
+    public static explicit operator VkEvent(short value) => new VkEvent(unchecked((ulong)(value)));
 
     public static explicit operator short(VkEvent value) => (short)(value.Value);
 
-    public static explicit operator VkEvent(int value) => new VkEvent((ulong)(value));
+    public static explicit operator VkEvent(int value) => new VkEvent(unchecked((ulong)(value)));
 
     public static explicit operator int(VkEvent value) => (int)(value.Value);
 
-    public static explicit operator VkEvent(long value) => new VkEvent((ulong)(value));
+    public static explicit operator VkEvent(long value) => new VkEvent(unchecked((ulong)(value)));
 
     public static explicit operator long(VkEvent value) => (long)(value.Value);
 
-    public static explicit operator VkEvent(nint value) => new VkEvent((ulong)(value));
+    public static explicit operator VkEvent(nint value) => new VkEvent(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkEvent value) => (nint)(value.Value);
 
-    public static explicit operator VkEvent(sbyte value) => new VkEvent((ulong)(value));
+    public static explicit operator VkEvent(sbyte value) => new VkEvent(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkEvent value) => (sbyte)(value.Value);
 

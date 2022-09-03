@@ -12,6 +12,5 @@ public unsafe partial struct VkSemaphoreCreateInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkSemaphoreCreateFlags")]
-    public uint flags;
+    public VkSemaphoreCreateFlags flags;
 }

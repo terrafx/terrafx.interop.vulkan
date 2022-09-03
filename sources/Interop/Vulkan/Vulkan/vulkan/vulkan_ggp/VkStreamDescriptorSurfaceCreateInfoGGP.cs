@@ -12,8 +12,7 @@ public unsafe partial struct VkStreamDescriptorSurfaceCreateInfoGGP
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkStreamDescriptorSurfaceCreateFlagsGGP")]
-    public uint flags;
+    public VkStreamDescriptorSurfaceCreateFlagsGGP flags;
 
     [NativeTypeName("GgpStreamDescriptor")]
     public uint streamDescriptor;

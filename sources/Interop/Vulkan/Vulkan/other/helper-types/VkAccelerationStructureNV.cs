@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkAccelerationStructureNV : IComparable, IComparable<VkAccelerationStructureNV>, IEquatable<VkAccelerationStructureNV>, IFormattable
+public readonly partial struct VkAccelerationStructureNV : IComparable, IComparable<VkAccelerationStructureNV>, IEquatable<VkAccelerationStructureNV>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkAccelerationStructureNV : IComparable, IComparable<VkAcc
 
     public static explicit operator byte(VkAccelerationStructureNV value) => (byte)(value.Value);
 
-    public static explicit operator VkAccelerationStructureNV(short value) => new VkAccelerationStructureNV((ulong)(value));
+    public static explicit operator VkAccelerationStructureNV(short value) => new VkAccelerationStructureNV(unchecked((ulong)(value)));
 
     public static explicit operator short(VkAccelerationStructureNV value) => (short)(value.Value);
 
-    public static explicit operator VkAccelerationStructureNV(int value) => new VkAccelerationStructureNV((ulong)(value));
+    public static explicit operator VkAccelerationStructureNV(int value) => new VkAccelerationStructureNV(unchecked((ulong)(value)));
 
     public static explicit operator int(VkAccelerationStructureNV value) => (int)(value.Value);
 
-    public static explicit operator VkAccelerationStructureNV(long value) => new VkAccelerationStructureNV((ulong)(value));
+    public static explicit operator VkAccelerationStructureNV(long value) => new VkAccelerationStructureNV(unchecked((ulong)(value)));
 
     public static explicit operator long(VkAccelerationStructureNV value) => (long)(value.Value);
 
-    public static explicit operator VkAccelerationStructureNV(nint value) => new VkAccelerationStructureNV((ulong)(value));
+    public static explicit operator VkAccelerationStructureNV(nint value) => new VkAccelerationStructureNV(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkAccelerationStructureNV value) => (nint)(value.Value);
 
-    public static explicit operator VkAccelerationStructureNV(sbyte value) => new VkAccelerationStructureNV((ulong)(value));
+    public static explicit operator VkAccelerationStructureNV(sbyte value) => new VkAccelerationStructureNV(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkAccelerationStructureNV value) => (sbyte)(value.Value);
 

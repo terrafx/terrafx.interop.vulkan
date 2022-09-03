@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkBufferView : IComparable, IComparable<VkBufferView>, IEquatable<VkBufferView>, IFormattable
+public readonly partial struct VkBufferView : IComparable, IComparable<VkBufferView>, IEquatable<VkBufferView>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkBufferView : IComparable, IComparable<VkBufferView>, IEq
 
     public static explicit operator byte(VkBufferView value) => (byte)(value.Value);
 
-    public static explicit operator VkBufferView(short value) => new VkBufferView((ulong)(value));
+    public static explicit operator VkBufferView(short value) => new VkBufferView(unchecked((ulong)(value)));
 
     public static explicit operator short(VkBufferView value) => (short)(value.Value);
 
-    public static explicit operator VkBufferView(int value) => new VkBufferView((ulong)(value));
+    public static explicit operator VkBufferView(int value) => new VkBufferView(unchecked((ulong)(value)));
 
     public static explicit operator int(VkBufferView value) => (int)(value.Value);
 
-    public static explicit operator VkBufferView(long value) => new VkBufferView((ulong)(value));
+    public static explicit operator VkBufferView(long value) => new VkBufferView(unchecked((ulong)(value)));
 
     public static explicit operator long(VkBufferView value) => (long)(value.Value);
 
-    public static explicit operator VkBufferView(nint value) => new VkBufferView((ulong)(value));
+    public static explicit operator VkBufferView(nint value) => new VkBufferView(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkBufferView value) => (nint)(value.Value);
 
-    public static explicit operator VkBufferView(sbyte value) => new VkBufferView((ulong)(value));
+    public static explicit operator VkBufferView(sbyte value) => new VkBufferView(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkBufferView value) => (sbyte)(value.Value);
 

@@ -12,8 +12,7 @@ public unsafe partial struct VkPipelineVertexInputStateCreateInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkPipelineVertexInputStateCreateFlags")]
-    public uint flags;
+    public VkPipelineVertexInputStateCreateFlags flags;
 
     [NativeTypeName("uint32_t")]
     public uint vertexBindingDescriptionCount;

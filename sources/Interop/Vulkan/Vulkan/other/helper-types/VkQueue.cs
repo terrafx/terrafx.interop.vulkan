@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public unsafe partial struct VkQueue : IComparable, IComparable<VkQueue>, IEquatable<VkQueue>, IFormattable
+public readonly unsafe partial struct VkQueue : IComparable, IComparable<VkQueue>, IEquatable<VkQueue>, IFormattable
 {
     public readonly void* Value;
 
@@ -31,43 +31,43 @@ public unsafe partial struct VkQueue : IComparable, IComparable<VkQueue>, IEquat
 
     public static implicit operator void*(VkQueue value) => value.Value;
 
-    public static explicit operator VkQueue(byte value) => new VkQueue((void*)(value));
+    public static explicit operator VkQueue(byte value) => new VkQueue(unchecked((void*)(value)));
 
     public static explicit operator byte(VkQueue value) => (byte)(value.Value);
 
-    public static explicit operator VkQueue(short value) => new VkQueue((void*)(value));
+    public static explicit operator VkQueue(short value) => new VkQueue(unchecked((void*)(value)));
 
     public static explicit operator short(VkQueue value) => (short)(value.Value);
 
-    public static explicit operator VkQueue(int value) => new VkQueue((void*)(value));
+    public static explicit operator VkQueue(int value) => new VkQueue(unchecked((void*)(value)));
 
     public static explicit operator int(VkQueue value) => (int)(value.Value);
 
-    public static explicit operator VkQueue(long value) => new VkQueue((void*)(value));
+    public static explicit operator VkQueue(long value) => new VkQueue(unchecked((void*)(value)));
 
     public static explicit operator long(VkQueue value) => (long)(value.Value);
 
-    public static explicit operator VkQueue(nint value) => new VkQueue((void*)(value));
+    public static explicit operator VkQueue(nint value) => new VkQueue(unchecked((void*)(value)));
 
     public static implicit operator nint(VkQueue value) => (nint)(value.Value);
 
-    public static explicit operator VkQueue(sbyte value) => new VkQueue((void*)(value));
+    public static explicit operator VkQueue(sbyte value) => new VkQueue(unchecked((void*)(value)));
 
     public static explicit operator sbyte(VkQueue value) => (sbyte)(value.Value);
 
-    public static explicit operator VkQueue(ushort value) => new VkQueue((void*)(value));
+    public static explicit operator VkQueue(ushort value) => new VkQueue(unchecked((void*)(value)));
 
     public static explicit operator ushort(VkQueue value) => (ushort)(value.Value);
 
-    public static explicit operator VkQueue(uint value) => new VkQueue((void*)(value));
+    public static explicit operator VkQueue(uint value) => new VkQueue(unchecked((void*)(value)));
 
     public static explicit operator uint(VkQueue value) => (uint)(value.Value);
 
-    public static explicit operator VkQueue(ulong value) => new VkQueue((void*)(value));
+    public static explicit operator VkQueue(ulong value) => new VkQueue(unchecked((void*)(value)));
 
     public static explicit operator ulong(VkQueue value) => (ulong)(value.Value);
 
-    public static explicit operator VkQueue(nuint value) => new VkQueue((void*)(value));
+    public static explicit operator VkQueue(nuint value) => new VkQueue(unchecked((void*)(value)));
 
     public static implicit operator nuint(VkQueue value) => (nuint)(value.Value);
 

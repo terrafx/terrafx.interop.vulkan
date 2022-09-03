@@ -12,8 +12,7 @@ public unsafe partial struct VkPipelineDynamicStateCreateInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("VkPipelineDynamicStateCreateFlags")]
-    public uint flags;
+    public VkPipelineDynamicStateCreateFlags flags;
 
     [NativeTypeName("uint32_t")]
     public uint dynamicStateCount;

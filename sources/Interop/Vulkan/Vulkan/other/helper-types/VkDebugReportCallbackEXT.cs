@@ -4,7 +4,7 @@ using System;
 
 namespace TerraFX.Interop.Vulkan;
 
-public partial struct VkDebugReportCallbackEXT : IComparable, IComparable<VkDebugReportCallbackEXT>, IEquatable<VkDebugReportCallbackEXT>, IFormattable
+public readonly partial struct VkDebugReportCallbackEXT : IComparable, IComparable<VkDebugReportCallbackEXT>, IEquatable<VkDebugReportCallbackEXT>, IFormattable
 {
     public readonly ulong Value;
 
@@ -31,23 +31,23 @@ public partial struct VkDebugReportCallbackEXT : IComparable, IComparable<VkDebu
 
     public static explicit operator byte(VkDebugReportCallbackEXT value) => (byte)(value.Value);
 
-    public static explicit operator VkDebugReportCallbackEXT(short value) => new VkDebugReportCallbackEXT((ulong)(value));
+    public static explicit operator VkDebugReportCallbackEXT(short value) => new VkDebugReportCallbackEXT(unchecked((ulong)(value)));
 
     public static explicit operator short(VkDebugReportCallbackEXT value) => (short)(value.Value);
 
-    public static explicit operator VkDebugReportCallbackEXT(int value) => new VkDebugReportCallbackEXT((ulong)(value));
+    public static explicit operator VkDebugReportCallbackEXT(int value) => new VkDebugReportCallbackEXT(unchecked((ulong)(value)));
 
     public static explicit operator int(VkDebugReportCallbackEXT value) => (int)(value.Value);
 
-    public static explicit operator VkDebugReportCallbackEXT(long value) => new VkDebugReportCallbackEXT((ulong)(value));
+    public static explicit operator VkDebugReportCallbackEXT(long value) => new VkDebugReportCallbackEXT(unchecked((ulong)(value)));
 
     public static explicit operator long(VkDebugReportCallbackEXT value) => (long)(value.Value);
 
-    public static explicit operator VkDebugReportCallbackEXT(nint value) => new VkDebugReportCallbackEXT((ulong)(value));
+    public static explicit operator VkDebugReportCallbackEXT(nint value) => new VkDebugReportCallbackEXT(unchecked((ulong)(value)));
 
     public static explicit operator nint(VkDebugReportCallbackEXT value) => (nint)(value.Value);
 
-    public static explicit operator VkDebugReportCallbackEXT(sbyte value) => new VkDebugReportCallbackEXT((ulong)(value));
+    public static explicit operator VkDebugReportCallbackEXT(sbyte value) => new VkDebugReportCallbackEXT(unchecked((ulong)(value)));
 
     public static explicit operator sbyte(VkDebugReportCallbackEXT value) => (sbyte)(value.Value);
 
