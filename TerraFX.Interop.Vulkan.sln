@@ -76,7 +76,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "generation", "generation", 
 		generation\remap-classes.rsp = generation\remap-classes.rsp
 		generation\remap-handles.rsp = generation\remap-handles.rsp
 		generation\remap-imports.rsp = generation\remap-imports.rsp
-		generation\remap-other.rsp = generation\remap-other.rsp
 		generation\remap-structs.rsp = generation\remap-structs.rsp
 		generation\remap-transparent.rsp = generation\remap-transparent.rsp
 		generation\remap-types.rsp = generation\remap-types.rsp
@@ -316,6 +315,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEM
 		.github\ISSUE_TEMPLATE\regression.md = .github\ISSUE_TEMPLATE\regression.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_profiles", "vulkan_profiles", "{191B9CB7-6528-4550-89C7-4F2F52A0FCFD}"
+	ProjectSection(SolutionItems) = preProject
+		generation\Vulkan\vulkan\vulkan_profiles\generate.rsp = generation\Vulkan\vulkan\vulkan_profiles\generate.rsp
+		generation\Vulkan\vulkan\vulkan_profiles\header.txt = generation\Vulkan\vulkan\vulkan_profiles\header.txt
+		generation\Vulkan\vulkan\vulkan_profiles\vulkan-vulkan_profiles.h = generation\Vulkan\vulkan\vulkan_profiles\vulkan-vulkan_profiles.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -377,6 +383,7 @@ Global
 		{09775914-ED8B-4F3D-BB35-8D9F30464A8A} = {359B88FB-0ED5-4135-822B-82350347138C}
 		{130AD321-77EC-4B5D-BCDD-708380AB6150} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
 		{634B8A0D-A2BD-4AC3-B56B-B6578E238AA1} = {8B98276D-AB81-4492-81E3-BAB8F9494A99}
+		{191B9CB7-6528-4550-89C7-4F2F52A0FCFD} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FE36DF8-2D9C-4F20-8787-45DC74B57461}

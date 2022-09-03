@@ -16,21 +16,25 @@ exclude-empty-records
 exclude-enum-operators
 generate-aggressive-inlining
 generate-cpp-attributes
+generate-file-scoped-namespaces
+generate-guid-member
 generate-macro-bindings
 generate-marker-interfaces
 generate-native-inheritance-attribute
+generate-setslastsystemerror-attribute
 generate-tests-nunit
 generate-unmanaged-constants
 generate-vtbl-index-attribute
 log-potential-typedef-remappings
 multi-file
+preview-codegen
 trimmable-vtbls
 --headerFile
 header.txt
 --include-directory
-C:/Program Files (x86)/Windows Kits/10/Include/10.0.20348.0/shared
-C:/Program Files (x86)/Windows Kits/10/Include/10.0.20348.0/um
-C:/VulkanSDK/1.3.204.0/Include
+C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared
+C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/um
+C:/VulkanSDK/1.3.224.1/Include
 --with-callconv
 *=Winapi
 --with-librarypath
