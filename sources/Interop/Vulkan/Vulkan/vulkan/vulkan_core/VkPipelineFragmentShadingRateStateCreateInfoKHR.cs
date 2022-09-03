@@ -4,6 +4,7 @@
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -26,6 +27,7 @@ namespace TerraFX.Interop.Vulkan
             public VkFragmentShadingRateCombinerOpKHR e0;
             public VkFragmentShadingRateCombinerOpKHR e1;
 
+            [UnscopedRef]
             public ref VkFragmentShadingRateCombinerOpKHR this[int index]
             {
                 [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -36,6 +38,7 @@ namespace TerraFX.Interop.Vulkan
             }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [UnscopedRef]
             public Span<VkFragmentShadingRateCombinerOpKHR> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 2);
         }
     }

@@ -74,9 +74,9 @@ function Build {
   logFile="$LogDir/$configuration/build.binlog"
 
   if [[ -z "$properties" ]]; then
-    dotnet build -c "$configuration" --no-restore -v "$verbosity" /bl:"$logFile" /err "$solution"
+    dotnet build -c "$configuration" --no-restore -v "$verbosity" /p:Platform="Any CPU" /bl:"$logFile" /err "$solution"
   else
-    dotnet build -c "$configuration" --no-restore -v "$verbosity" /bl:"$logFile" /err "${properties[@]}" "$solution"
+    dotnet build -c "$configuration" --no-restore -v "$verbosity" /p:Platform="Any CPU" /bl:"$logFile" /err "${properties[@]}" "$solution"
   fi
 
   LASTEXITCODE=$?
@@ -118,9 +118,9 @@ function Pack {
   logFile="$LogDir/$configuration/pack.binlog"
 
   if [[ -z "$properties" ]]; then
-    dotnet pack -c "$configuration" --no-build --no-restore -v "$verbosity" /bl:"$logFile" /err "$solution"
+    dotnet pack -c "$configuration" --no-build --no-restore -v "$verbosity" /p:Platform="Any CPU" /bl:"$logFile" /err "$solution"
   else
-    dotnet pack -c "$configuration" --no-build --no-restore -v "$verbosity" /bl:"$logFile" /err "${properties[@]}" "$solution"
+    dotnet pack -c "$configuration" --no-build --no-restore -v "$verbosity" /p:Platform="Any CPU" /bl:"$logFile" /err "${properties[@]}" "$solution"
   fi
 
   LASTEXITCODE=$?
@@ -135,9 +135,9 @@ function Restore {
   logFile="$LogDir/$configuration/restore.binlog"
 
   if [[ -z "$properties" ]]; then
-    dotnet restore -v "$verbosity" /bl:"$logFile" /err "$solution"
+    dotnet restore -v "$verbosity" /p:Platform="Any CPU" /bl:"$logFile" /err "$solution"
   else
-    dotnet restore -v "$verbosity" /bl:"$logFile" /err "${properties[@]}" "$solution"
+    dotnet restore -v "$verbosity" /p:Platform="Any CPU" /bl:"$logFile" /err "${properties[@]}" "$solution"
   fi
 
   LASTEXITCODE=$?
@@ -152,9 +152,9 @@ function Test {
   logFile="$LogDir/$configuration/test.binlog"
 
   if [[ -z "$properties" ]]; then
-    dotnet test -c "$configuration" --no-build --no-restore -v "$verbosity" /bl:"$logFile" /err "$solution"
+    dotnet test -c "$configuration" --no-build --no-restore -v "$verbosity" /p:Platform="Any CPU" /bl:"$logFile" /err "$solution"
   else
-    dotnet test -c "$configuration" --no-build --no-restore -v "$verbosity" /bl:"$logFile" /err "${properties[@]}" "$solution"
+    dotnet test -c "$configuration" --no-build --no-restore -v "$verbosity" /p:Platform="Any CPU" /bl:"$logFile" /err "${properties[@]}" "$solution"
   fi
 
   LASTEXITCODE=$?
@@ -205,7 +205,7 @@ if [[ ! -z "$architecture" ]]; then
   CreateDirectory "$DotNetInstallDirectory"
 
   . "$DotNetInstallScript" --channel 6.0 --version latest --install-dir "$DotNetInstallDirectory" --architecture "$architecture"
-  . "$DotNetInstallScript" --channel 7.0 --version 7.0.100-preview.3.22179.4 --install-dir "$DotNetInstallDirectory" --architecture "$architecture"
+  . "$DotNetInstallScript" --channel 7.0 --version latest --install-dir "$DotNetInstallDirectory" --architecture "$architecture" --quality preview
 
   PATH="$DotNetInstallDirectory:$PATH:"
 fi

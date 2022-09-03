@@ -4,6 +4,7 @@
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -40,6 +41,7 @@ namespace TerraFX.Interop.Vulkan
             public VkQueueGlobalPriorityEXT e14;
             public VkQueueGlobalPriorityEXT e15;
 
+            [UnscopedRef]
             public ref VkQueueGlobalPriorityEXT this[int index]
             {
                 [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -50,6 +52,7 @@ namespace TerraFX.Interop.Vulkan
             }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [UnscopedRef]
             public Span<VkQueueGlobalPriorityEXT> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 16);
         }
     }
