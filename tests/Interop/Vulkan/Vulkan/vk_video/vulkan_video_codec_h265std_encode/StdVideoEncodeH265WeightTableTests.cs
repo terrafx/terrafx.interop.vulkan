@@ -29,6 +29,6 @@ public static unsafe partial class StdVideoEncodeH265WeightTableTests
     [Test]
     public static void SizeOfTest()
     {
-        Assert.That(sizeof(StdVideoEncodeH265WeightTable), Is.EqualTo(194));
+        Assert.That(sizeof(StdVideoEncodeH265WeightTable), Is.EqualTo(190));
     }
 }
