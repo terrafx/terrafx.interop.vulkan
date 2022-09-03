@@ -7,69 +7,69 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 
 #pragma warning disable IL2026
+#pragma warning disable IL2072
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation that the <see cref="DllImportAttribute" /> attributed methods can be resolved.</summary>
+public static unsafe partial class ResolveDllImportTests
 {
-    /// <summary>Provides validation that the <see cref="DllImportAttribute" /> attributed methods can be resolved.</summary>
-    public static unsafe partial class ResolveDllImportTests
+    /// <summary>Validates that thhe <see cref="DllImportAttribute" /> attributed methods can be resolved.</summary>
+    [Test]
+    [Platform("Linux")]
+    [Platform("Win32")]
+    public static void ResolveDllImportTest()
     {
-        /// <summary>Validates that thhe <see cref="DllImportAttribute" /> attributed methods can be resolved.</summary>
-        [Test]
-        [Platform("Linux")]
-        [Platform("Win32")]
-        public static void ResolveDllImportTest()
+        Assert.Multiple(() => {
+            var assembly = typeof(Vulkan).Assembly;
+            ProcessAssembly(assembly);
+        });
+    }
+
+    private static void ProcessAssembly(Assembly assembly)
+    {
+        foreach (var type in assembly.GetTypes())
         {
-            Assert.Multiple(() => {
-                var assembly = typeof(Vulkan).Assembly;
-                ProcessAssembly(assembly);
-            });
+            ProcessType(type);
+        }
+    }
+
+    private static void ProcessMethod(MethodInfo method)
+    {
+        if (!method.Attributes.HasFlag(MethodAttributes.PinvokeImpl))
+        {
+            return;
         }
 
-        private static void ProcessAssembly(Assembly assembly)
+        try
         {
-            foreach (var type in assembly.GetTypes())
+            Marshal.Prelink(method);
+        }
+        catch (Exception exception)
+        {
+            if (OperatingSystem.IsWindows() && (Environment.GetEnvironmentVariable("GITHUB_RUN_ID") is not null))
             {
-                ProcessType(type);
+                // This isn't good practice, but current CI can't really install and have the Vulkan SDK be
+                // available, so the tests fail. We want local testing to do the right thing still, however.
+                Assert.Warn($"Warn: {exception.Message}");
+            }
+            else
+            {
+                Assert.Fail($"Fail: {exception.Message}");
             }
         }
+    }
 
-        private static void ProcessMethod(MethodInfo method)
+    private static void ProcessType([DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicMethods | DynamicallyAccessedMemberTypes.NonPublicMethods | DynamicallyAccessedMemberTypes.PublicNestedTypes | DynamicallyAccessedMemberTypes.NonPublicNestedTypes)] Type type)
+    {
+        foreach (var method in type.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static))
         {
-            if (!method.Attributes.HasFlag(MethodAttributes.PinvokeImpl))
-            {
-                return;
-            }
-
-            try
-            {
-                Marshal.Prelink(method);
-            }
-            catch (Exception exception)
-            {
-                if (OperatingSystem.IsWindows() && (Environment.GetEnvironmentVariable("GITHUB_RUN_ID") is not null))
-                {
-                    // This isn't good practice, but current CI can't really install and have the Vulkan SDK be
-                    // available, so the tests fail. We want local testing to do the right thing still, however.
-                    Assert.Warn($"Warn: {exception.Message}");
-                }
-                else
-                {
-                    Assert.Fail($"Fail: {exception.Message}");
-                }
-            }
+            ProcessMethod(method);
         }
 
-        private static void ProcessType([DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicMethods | DynamicallyAccessedMemberTypes.NonPublicMethods | DynamicallyAccessedMemberTypes.PublicNestedTypes | DynamicallyAccessedMemberTypes.NonPublicNestedTypes)] Type type)
+        foreach (var nestedType in type.GetNestedTypes(BindingFlags.Public | BindingFlags.NonPublic))
         {
-            foreach (var method in type.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static))
-            {
-                ProcessMethod(method);
-            }
-
-            foreach (var nestedType in type.GetNestedTypes(BindingFlags.Public | BindingFlags.NonPublic))
-            {
-                ProcessType(nestedType);
-            }
+            ProcessType(nestedType);
         }
     }
 }

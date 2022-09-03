@@ -1,18 +1,17 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.224
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkSparseImageMemoryBindInfo
 {
-    public unsafe partial struct VkSparseImageMemoryBindInfo
-    {
-        public VkImage image;
+    public VkImage image;
 
-        [NativeTypeName("uint32_t")]
-        public uint bindCount;
+    [NativeTypeName("uint32_t")]
+    public uint bindCount;
 
-        [NativeTypeName("const VkSparseImageMemoryBind *")]
-        public VkSparseImageMemoryBind* pBinds;
-    }
+    [NativeTypeName("const VkSparseImageMemoryBind *")]
+    public VkSparseImageMemoryBind* pBinds;
 }

@@ -1,22 +1,21 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.224
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[StructLayout(LayoutKind.Explicit)]
+public partial struct VkAccelerationStructureGeometryDataKHR
 {
-    [StructLayout(LayoutKind.Explicit)]
-    public partial struct VkAccelerationStructureGeometryDataKHR
-    {
-        [FieldOffset(0)]
-        public VkAccelerationStructureGeometryTrianglesDataKHR triangles;
+    [FieldOffset(0)]
+    public VkAccelerationStructureGeometryTrianglesDataKHR triangles;
 
-        [FieldOffset(0)]
-        public VkAccelerationStructureGeometryAabbsDataKHR aabbs;
+    [FieldOffset(0)]
+    public VkAccelerationStructureGeometryAabbsDataKHR aabbs;
 
-        [FieldOffset(0)]
-        public VkAccelerationStructureGeometryInstancesDataKHR instances;
-    }
+    [FieldOffset(0)]
+    public VkAccelerationStructureGeometryInstancesDataKHR instances;
 }

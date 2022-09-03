@@ -1,29 +1,28 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.224
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public partial struct VkAttachmentDescription
 {
-    public partial struct VkAttachmentDescription
-    {
-        public VkAttachmentDescriptionFlags flags;
+    public VkAttachmentDescriptionFlags flags;
 
-        public VkFormat format;
+    public VkFormat format;
 
-        [NativeTypeName("VkSampleCountFlagBits")]
-        public VkSampleCountFlags samples;
+    [NativeTypeName("VkSampleCountFlagBits")]
+    public VkSampleCountFlags samples;
 
-        public VkAttachmentLoadOp loadOp;
+    public VkAttachmentLoadOp loadOp;
 
-        public VkAttachmentStoreOp storeOp;
+    public VkAttachmentStoreOp storeOp;
 
-        public VkAttachmentLoadOp stencilLoadOp;
+    public VkAttachmentLoadOp stencilLoadOp;
 
-        public VkAttachmentStoreOp stencilStoreOp;
+    public VkAttachmentStoreOp stencilStoreOp;
 
-        public VkImageLayout initialLayout;
+    public VkImageLayout initialLayout;
 
-        public VkImageLayout finalLayout;
-    }
+    public VkImageLayout finalLayout;
 }

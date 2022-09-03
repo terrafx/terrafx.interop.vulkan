@@ -20,7 +20,7 @@ $ErrorActionPreference = "Stop"
 
 function Build() {
   $logFile = Join-Path -Path $LogDir -ChildPath "$configuration\build.binlog"
-  & dotnet build -c "$configuration" --no-restore -v "$verbosity" /bl:"$logFile" /err "$properties" "$solution"
+  & dotnet build -c "$configuration" --no-restore -v "$verbosity" /p:Platform="Any CPU" /bl:"$logFile" /err "$properties" "$solution"
 
   if ($LastExitCode -ne 0) {
     throw "'Build' failed for '$solution'"
@@ -68,7 +68,7 @@ function Help() {
 
 function Pack() {
   $logFile = Join-Path -Path $LogDir -ChildPath "$configuration\pack.binlog"
-  & dotnet pack -c "$configuration" --no-build --no-restore -v "$verbosity" /bl:"$logFile" /err "$properties" "$solution"
+  & dotnet pack -c "$configuration" --no-build --no-restore -v "$verbosity" /p:Platform="Any CPU" /bl:"$logFile" /err "$properties" "$solution"
 
   if ($LastExitCode -ne 0) {
     throw "'Pack' failed for '$solution'"
@@ -77,7 +77,7 @@ function Pack() {
 
 function Restore() {
   $logFile = Join-Path -Path $LogDir -ChildPath "$configuration\restore.binlog"
-  & dotnet restore -v "$verbosity" /bl:"$logFile" /err "$properties" "$solution"
+  & dotnet restore -v "$verbosity" /p:Platform="Any CPU" /bl:"$logFile" /err "$properties" "$solution"
 
   if ($LastExitCode -ne 0) {
     throw "'Restore' failed for '$solution'"
@@ -86,7 +86,7 @@ function Restore() {
 
 function Test() {
   $logFile = Join-Path -Path $LogDir -ChildPath "$configuration\test.binlog"
-  & dotnet test -c "$configuration" --no-build --no-restore -v "$verbosity" /bl:"$logFile" /err "$properties" "$solution"
+  & dotnet test -c "$configuration" --no-build --no-restore -v "$verbosity" /p:Platform="Any CPU" /bl:"$logFile" /err "$properties" "$solution"
 
   if ($LastExitCode -ne 0) {
     throw "'Test' failed for '$solution'"
@@ -134,7 +134,7 @@ try {
     Create-Directory -Path $DotNetInstallDirectory
 
     & $DotNetInstallScript -Channel 6.0 -Version latest -InstallDir $DotNetInstallDirectory -Architecture $architecture
-    & $DotNetInstallScript -Channel 7.0 -Version 7.0.100-preview.3.22179.4 -InstallDir $DotNetInstallDirectory -Architecture $architecture
+    & $DotNetInstallScript -Channel 7.0 -Version latest -InstallDir $DotNetInstallDirectory -Architecture $architecture -Quality preview
 
     $env:PATH="$DotNetInstallDirectory;$env:PATH"
   }

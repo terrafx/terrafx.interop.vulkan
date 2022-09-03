@@ -1,30 +1,29 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vk_icd.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
+// Ported from include/vulkan/vk_icd.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.224
 // Original source is Copyright © 2015-2016 The Khronos Group Inc. Copyright © 2015-2016 Valve Corporation. Copyright © 2015-2016 LunarG, Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public partial struct VkIcdSurfaceDisplay
 {
-    public partial struct VkIcdSurfaceDisplay
-    {
-        public VkIcdSurfaceBase @base;
+    public VkIcdSurfaceBase @base;
 
-        public VkDisplayModeKHR displayMode;
+    public VkDisplayModeKHR displayMode;
 
-        [NativeTypeName("uint32_t")]
-        public uint planeIndex;
+    [NativeTypeName("uint32_t")]
+    public uint planeIndex;
 
-        [NativeTypeName("uint32_t")]
-        public uint planeStackIndex;
+    [NativeTypeName("uint32_t")]
+    public uint planeStackIndex;
 
-        [NativeTypeName("VkSurfaceTransformFlagBitsKHR")]
-        public VkSurfaceTransformFlagsKHR transform;
+    [NativeTypeName("VkSurfaceTransformFlagBitsKHR")]
+    public VkSurfaceTransformFlagsKHR transform;
 
-        public float globalAlpha;
+    public float globalAlpha;
 
-        [NativeTypeName("VkDisplayPlaneAlphaFlagBitsKHR")]
-        public VkDisplayPlaneAlphaFlagsKHR alphaMode;
+    [NativeTypeName("VkDisplayPlaneAlphaFlagBitsKHR")]
+    public VkDisplayPlaneAlphaFlagsKHR alphaMode;
 
-        public VkExtent2D imageExtent;
-    }
+    public VkExtent2D imageExtent;
 }

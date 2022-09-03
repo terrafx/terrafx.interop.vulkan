@@ -1,39 +1,37 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.224
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkDeviceCreateInfo
 {
-    public unsafe partial struct VkDeviceCreateInfo
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("VkDeviceCreateFlags")]
-        public uint flags;
+    public VkDeviceCreateFlags flags;
 
-        [NativeTypeName("uint32_t")]
-        public uint queueCreateInfoCount;
+    [NativeTypeName("uint32_t")]
+    public uint queueCreateInfoCount;
 
-        [NativeTypeName("const VkDeviceQueueCreateInfo *")]
-        public VkDeviceQueueCreateInfo* pQueueCreateInfos;
+    [NativeTypeName("const VkDeviceQueueCreateInfo *")]
+    public VkDeviceQueueCreateInfo* pQueueCreateInfos;
 
-        [NativeTypeName("uint32_t")]
-        public uint enabledLayerCount;
+    [NativeTypeName("uint32_t")]
+    public uint enabledLayerCount;
 
-        [NativeTypeName("const char *const *")]
-        public sbyte** ppEnabledLayerNames;
+    [NativeTypeName("const char *const *")]
+    public sbyte** ppEnabledLayerNames;
 
-        [NativeTypeName("uint32_t")]
-        public uint enabledExtensionCount;
+    [NativeTypeName("uint32_t")]
+    public uint enabledExtensionCount;
 
-        [NativeTypeName("const char *const *")]
-        public sbyte** ppEnabledExtensionNames;
+    [NativeTypeName("const char *const *")]
+    public sbyte** ppEnabledExtensionNames;
 
-        [NativeTypeName("const VkPhysicalDeviceFeatures *")]
-        public VkPhysicalDeviceFeatures* pEnabledFeatures;
-    }
+    [NativeTypeName("const VkPhysicalDeviceFeatures *")]
+    public VkPhysicalDeviceFeatures* pEnabledFeatures;
 }

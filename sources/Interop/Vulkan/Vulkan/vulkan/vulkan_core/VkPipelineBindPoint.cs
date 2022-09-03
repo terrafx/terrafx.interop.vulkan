@@ -1,17 +1,16 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.224
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public enum VkPipelineBindPoint
 {
-    public enum VkPipelineBindPoint
-    {
-        VK_PIPELINE_BIND_POINT_GRAPHICS = 0,
-        VK_PIPELINE_BIND_POINT_COMPUTE = 1,
-        VK_PIPELINE_BIND_POINT_RAY_TRACING_KHR = 1000165000,
-        VK_PIPELINE_BIND_POINT_SUBPASS_SHADING_HUAWEI = 1000369003,
-        VK_PIPELINE_BIND_POINT_RAY_TRACING_NV = VK_PIPELINE_BIND_POINT_RAY_TRACING_KHR,
-        VK_PIPELINE_BIND_POINT_MAX_ENUM = 0x7FFFFFFF,
-    }
+    VK_PIPELINE_BIND_POINT_GRAPHICS = 0,
+    VK_PIPELINE_BIND_POINT_COMPUTE = 1,
+    VK_PIPELINE_BIND_POINT_RAY_TRACING_KHR = 1000165000,
+    VK_PIPELINE_BIND_POINT_SUBPASS_SHADING_HUAWEI = 1000369003,
+    VK_PIPELINE_BIND_POINT_RAY_TRACING_NV = VK_PIPELINE_BIND_POINT_RAY_TRACING_KHR,
+    VK_PIPELINE_BIND_POINT_MAX_ENUM = 0x7FFFFFFF,
 }

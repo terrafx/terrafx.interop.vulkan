@@ -15,4 +15,4 @@ TerraFX.Interop.Vulkan
 --test-output
 ../../../../tests/Interop/Vulkan/Vulkan/vulkan/vulkan_macos
 --traverse
-C:/VulkanSDK/1.3.204.0/Include/vulkan/vulkan_macos.h
+C:/VulkanSDK/1.3.224.1/Include/vulkan/vulkan_macos.h

@@ -1,26 +1,24 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.224
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkPipelineDiscardRectangleStateCreateInfoEXT
 {
-    public unsafe partial struct VkPipelineDiscardRectangleStateCreateInfoEXT
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("VkPipelineDiscardRectangleStateCreateFlagsEXT")]
-        public uint flags;
+    public VkPipelineDiscardRectangleStateCreateFlagsEXT flags;
 
-        public VkDiscardRectangleModeEXT discardRectangleMode;
+    public VkDiscardRectangleModeEXT discardRectangleMode;
 
-        [NativeTypeName("uint32_t")]
-        public uint discardRectangleCount;
+    [NativeTypeName("uint32_t")]
+    public uint discardRectangleCount;
 
-        [NativeTypeName("const VkRect2D *")]
-        public VkRect2D* pDiscardRectangles;
-    }
+    [NativeTypeName("const VkRect2D *")]
+    public VkRect2D* pDiscardRectangles;
 }
