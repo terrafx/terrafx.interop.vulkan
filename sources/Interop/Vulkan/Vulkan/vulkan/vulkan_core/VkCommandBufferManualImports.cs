@@ -55,6 +55,8 @@ public unsafe partial struct VkCommandBufferManualImports
 
     public delegate* unmanaged<VkCommandBuffer, VkResolveImageInfo2*, void> vkCmdResolveImage2KHR;
 
+    public delegate* unmanaged<VkCommandBuffer, ulong, void> vkCmdTraceRaysIndirect2KHR;
+
     public delegate* unmanaged<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void> vkCmdDebugMarkerBeginEXT;
 
     public delegate* unmanaged<VkCommandBuffer, void> vkCmdDebugMarkerEndEXT;

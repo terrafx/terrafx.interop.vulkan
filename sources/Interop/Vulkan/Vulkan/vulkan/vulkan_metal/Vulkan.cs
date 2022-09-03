@@ -4,15 +4,11 @@
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 using System;
-using System.Runtime.InteropServices;
 
 namespace TerraFX.Interop.Vulkan;
 
-public static unsafe partial class Vulkan
+public static partial class Vulkan
 {
-    [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkExportMetalObjectsEXT(VkDevice device, VkExportMetalObjectsInfoEXT* pMetalObjectsInfo);
-
     [NativeTypeName("#define VK_EXT_metal_surface 1")]
     public const int VK_EXT_metal_surface = 1;
 
