@@ -738,33 +738,6 @@ public static unsafe partial class Vulkan
     [DllImport("vulkan", ExactSpelling = true)]
     public static extern VkResult vkGetDisplayPlaneCapabilities2KHR(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkDisplayPlaneInfo2KHR *")] VkDisplayPlaneInfo2KHR* pDisplayPlaneInfo, VkDisplayPlaneCapabilities2KHR* pCapabilities);
 
-    [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdTraceRaysIndirect2KHR(VkCommandBuffer commandBuffer, [NativeTypeName("VkDeviceAddress")] ulong indirectDeviceAddress);
-
-    [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkGetImageSubresourceLayout2EXT(VkDevice device, VkImage image, [NativeTypeName("const VkImageSubresource2EXT *")] VkImageSubresource2EXT* pSubresource, VkSubresourceLayout2EXT* pLayout);
-
-    [DllImport("vulkan", ExactSpelling = true)]
-    public static extern VkResult vkGetPipelinePropertiesEXT(VkDevice device, [NativeTypeName("const VkPipelineInfoEXT *")] VkPipelineInfoKHR* pPipelineInfo, VkBaseOutStructure* pPipelineProperties);
-
-    [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkGetDescriptorSetLayoutHostMappingInfoVALVE(VkDevice device, [NativeTypeName("const VkDescriptorSetBindingReferenceVALVE *")] VkDescriptorSetBindingReferenceVALVE* pBindingReference, VkDescriptorSetLayoutHostMappingInfoVALVE* pHostMapping);
-
-    [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkGetDescriptorSetHostMappingVALVE(VkDevice device, VkDescriptorSet descriptorSet, void** ppData);
-
-    [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkGetShaderModuleIdentifierEXT(VkDevice device, VkShaderModule shaderModule, VkShaderModuleIdentifierEXT* pIdentifier);
-
-    [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkGetShaderModuleCreateInfoIdentifierEXT(VkDevice device, [NativeTypeName("const VkShaderModuleCreateInfo *")] VkShaderModuleCreateInfo* pCreateInfo, VkShaderModuleIdentifierEXT* pIdentifier);
-
-    [DllImport("vulkan", ExactSpelling = true)]
-    public static extern VkResult vkGetFramebufferTilePropertiesQCOM(VkDevice device, VkFramebuffer framebuffer, [NativeTypeName("uint32_t *")] uint* pPropertiesCount, VkTilePropertiesQCOM* pProperties);
-
-    [DllImport("vulkan", ExactSpelling = true)]
-    public static extern VkResult vkGetDynamicRenderingTilePropertiesQCOM(VkDevice device, [NativeTypeName("const VkRenderingInfo *")] VkRenderingInfo* pRenderingInfo, VkTilePropertiesQCOM* pProperties);
-
     [NativeTypeName("#define VK_VERSION_1_0 1")]
     public const int VK_VERSION_1_0 = 1;
 
