@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceRGBA10X6FormatsFeaturesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceRGBA10X6FormatsFeaturesEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT), Is.EqualTo(12));
         }
     }
 }

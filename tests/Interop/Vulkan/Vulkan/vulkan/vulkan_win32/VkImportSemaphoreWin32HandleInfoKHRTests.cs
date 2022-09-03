@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkImportSemaphoreWin32HandleInfoKHR" /> struct.</summary>
+public static unsafe partial class VkImportSemaphoreWin32HandleInfoKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkImportSemaphoreWin32HandleInfoKHR" /> struct.</summary>
-    public static unsafe partial class VkImportSemaphoreWin32HandleInfoKHRTests
+    /// <summary>Validates that the <see cref="VkImportSemaphoreWin32HandleInfoKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkImportSemaphoreWin32HandleInfoKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkImportSemaphoreWin32HandleInfoKHR>(), Is.EqualTo(sizeof(VkImportSemaphoreWin32HandleInfoKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkImportSemaphoreWin32HandleInfoKHR>(), Is.EqualTo(sizeof(VkImportSemaphoreWin32HandleInfoKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkImportSemaphoreWin32HandleInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkImportSemaphoreWin32HandleInfoKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkImportSemaphoreWin32HandleInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkImportSemaphoreWin32HandleInfoKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkImportSemaphoreWin32HandleInfoKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkImportSemaphoreWin32HandleInfoKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkImportSemaphoreWin32HandleInfoKHR), Is.EqualTo(48));
-            }
-            else
-            {
-                Assert.That(sizeof(VkImportSemaphoreWin32HandleInfoKHR), Is.EqualTo(32));
-            }
+            Assert.That(sizeof(VkImportSemaphoreWin32HandleInfoKHR), Is.EqualTo(48));
+        }
+        else
+        {
+            Assert.That(sizeof(VkImportSemaphoreWin32HandleInfoKHR), Is.EqualTo(32));
         }
     }
 }

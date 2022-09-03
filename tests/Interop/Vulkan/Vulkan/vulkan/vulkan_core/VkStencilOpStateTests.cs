@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkStencilOpState" /> struct.</summary>
+public static unsafe partial class VkStencilOpStateTests
 {
-    /// <summary>Provides validation of the <see cref="VkStencilOpState" /> struct.</summary>
-    public static unsafe partial class VkStencilOpStateTests
+    /// <summary>Validates that the <see cref="VkStencilOpState" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkStencilOpState" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkStencilOpState>(), Is.EqualTo(sizeof(VkStencilOpState)));
-        }
+        Assert.That(Marshal.SizeOf<VkStencilOpState>(), Is.EqualTo(sizeof(VkStencilOpState)));
+    }
 
-        /// <summary>Validates that the <see cref="VkStencilOpState" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkStencilOpState).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkStencilOpState" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkStencilOpState).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkStencilOpState" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkStencilOpState), Is.EqualTo(28));
-        }
+    /// <summary>Validates that the <see cref="VkStencilOpState" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkStencilOpState), Is.EqualTo(28));
     }
 }

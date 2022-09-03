@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkValidationFeaturesEXT" /> struct.</summary>
+public static unsafe partial class VkValidationFeaturesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkValidationFeaturesEXT" /> struct.</summary>
-    public static unsafe partial class VkValidationFeaturesEXTTests
+    /// <summary>Validates that the <see cref="VkValidationFeaturesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkValidationFeaturesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkValidationFeaturesEXT>(), Is.EqualTo(sizeof(VkValidationFeaturesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkValidationFeaturesEXT>(), Is.EqualTo(sizeof(VkValidationFeaturesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkValidationFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkValidationFeaturesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkValidationFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkValidationFeaturesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkValidationFeaturesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkValidationFeaturesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkValidationFeaturesEXT), Is.EqualTo(48));
-            }
-            else
-            {
-                Assert.That(sizeof(VkValidationFeaturesEXT), Is.EqualTo(24));
-            }
+            Assert.That(sizeof(VkValidationFeaturesEXT), Is.EqualTo(48));
+        }
+        else
+        {
+            Assert.That(sizeof(VkValidationFeaturesEXT), Is.EqualTo(24));
         }
     }
 }

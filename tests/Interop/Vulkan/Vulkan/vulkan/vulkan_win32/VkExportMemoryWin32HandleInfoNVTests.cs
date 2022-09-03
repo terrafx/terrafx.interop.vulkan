@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkExportMemoryWin32HandleInfoNV" /> struct.</summary>
+public static unsafe partial class VkExportMemoryWin32HandleInfoNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkExportMemoryWin32HandleInfoNV" /> struct.</summary>
-    public static unsafe partial class VkExportMemoryWin32HandleInfoNVTests
+    /// <summary>Validates that the <see cref="VkExportMemoryWin32HandleInfoNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkExportMemoryWin32HandleInfoNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkExportMemoryWin32HandleInfoNV>(), Is.EqualTo(sizeof(VkExportMemoryWin32HandleInfoNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkExportMemoryWin32HandleInfoNV>(), Is.EqualTo(sizeof(VkExportMemoryWin32HandleInfoNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkExportMemoryWin32HandleInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkExportMemoryWin32HandleInfoNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkExportMemoryWin32HandleInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkExportMemoryWin32HandleInfoNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkExportMemoryWin32HandleInfoNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkExportMemoryWin32HandleInfoNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkExportMemoryWin32HandleInfoNV), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkExportMemoryWin32HandleInfoNV), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkExportMemoryWin32HandleInfoNV), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkExportMemoryWin32HandleInfoNV), Is.EqualTo(16));
         }
     }
 }

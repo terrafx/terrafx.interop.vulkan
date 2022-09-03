@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkFilterCubicImageViewImageFormatPropertiesEXT" /> struct.</summary>
+public static unsafe partial class VkFilterCubicImageViewImageFormatPropertiesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkFilterCubicImageViewImageFormatPropertiesEXT" /> struct.</summary>
-    public static unsafe partial class VkFilterCubicImageViewImageFormatPropertiesEXTTests
+    /// <summary>Validates that the <see cref="VkFilterCubicImageViewImageFormatPropertiesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkFilterCubicImageViewImageFormatPropertiesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkFilterCubicImageViewImageFormatPropertiesEXT>(), Is.EqualTo(sizeof(VkFilterCubicImageViewImageFormatPropertiesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkFilterCubicImageViewImageFormatPropertiesEXT>(), Is.EqualTo(sizeof(VkFilterCubicImageViewImageFormatPropertiesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkFilterCubicImageViewImageFormatPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkFilterCubicImageViewImageFormatPropertiesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkFilterCubicImageViewImageFormatPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkFilterCubicImageViewImageFormatPropertiesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkFilterCubicImageViewImageFormatPropertiesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkFilterCubicImageViewImageFormatPropertiesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkFilterCubicImageViewImageFormatPropertiesEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkFilterCubicImageViewImageFormatPropertiesEXT), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkFilterCubicImageViewImageFormatPropertiesEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkFilterCubicImageViewImageFormatPropertiesEXT), Is.EqualTo(16));
         }
     }
 }

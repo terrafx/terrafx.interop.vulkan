@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkTraceRaysIndirectCommandKHR" /> struct.</summary>
+public static unsafe partial class VkTraceRaysIndirectCommandKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkTraceRaysIndirectCommandKHR" /> struct.</summary>
-    public static unsafe partial class VkTraceRaysIndirectCommandKHRTests
+    /// <summary>Validates that the <see cref="VkTraceRaysIndirectCommandKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkTraceRaysIndirectCommandKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkTraceRaysIndirectCommandKHR>(), Is.EqualTo(sizeof(VkTraceRaysIndirectCommandKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkTraceRaysIndirectCommandKHR>(), Is.EqualTo(sizeof(VkTraceRaysIndirectCommandKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkTraceRaysIndirectCommandKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkTraceRaysIndirectCommandKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkTraceRaysIndirectCommandKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkTraceRaysIndirectCommandKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkTraceRaysIndirectCommandKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkTraceRaysIndirectCommandKHR), Is.EqualTo(12));
-        }
+    /// <summary>Validates that the <see cref="VkTraceRaysIndirectCommandKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkTraceRaysIndirectCommandKHR), Is.EqualTo(12));
     }
 }

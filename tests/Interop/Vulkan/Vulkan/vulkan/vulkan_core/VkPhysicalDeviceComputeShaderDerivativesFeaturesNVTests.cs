@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceComputeShaderDerivativesFeaturesNV" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceComputeShaderDerivativesFeaturesNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceComputeShaderDerivativesFeaturesNV" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceComputeShaderDerivativesFeaturesNVTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceComputeShaderDerivativesFeaturesNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceComputeShaderDerivativesFeaturesNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceComputeShaderDerivativesFeaturesNV>(), Is.EqualTo(sizeof(VkPhysicalDeviceComputeShaderDerivativesFeaturesNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceComputeShaderDerivativesFeaturesNV>(), Is.EqualTo(sizeof(VkPhysicalDeviceComputeShaderDerivativesFeaturesNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceComputeShaderDerivativesFeaturesNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceComputeShaderDerivativesFeaturesNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceComputeShaderDerivativesFeaturesNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceComputeShaderDerivativesFeaturesNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceComputeShaderDerivativesFeaturesNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceComputeShaderDerivativesFeaturesNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceComputeShaderDerivativesFeaturesNV), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceComputeShaderDerivativesFeaturesNV), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceComputeShaderDerivativesFeaturesNV), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceComputeShaderDerivativesFeaturesNV), Is.EqualTo(16));
         }
     }
 }

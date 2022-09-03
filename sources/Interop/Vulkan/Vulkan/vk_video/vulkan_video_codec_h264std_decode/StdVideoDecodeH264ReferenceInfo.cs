@@ -3,19 +3,18 @@
 // Ported from include/vk_video/vulkan_video_codec_h264std_decode.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct StdVideoDecodeH264ReferenceInfo
 {
-    public unsafe partial struct StdVideoDecodeH264ReferenceInfo
-    {
-        [NativeTypeName("uint16_t")]
-        public ushort FrameNum;
+    [NativeTypeName("uint16_t")]
+    public ushort FrameNum;
 
-        [NativeTypeName("uint16_t")]
-        public ushort reserved;
+    [NativeTypeName("uint16_t")]
+    public ushort reserved;
 
-        [NativeTypeName("int32_t[2]")]
-        public fixed int PicOrderCnt[2];
+    [NativeTypeName("int32_t[2]")]
+    public fixed int PicOrderCnt[2];
 
-        public StdVideoDecodeH264ReferenceInfoFlags flags;
-    }
+    public StdVideoDecodeH264ReferenceInfoFlags flags;
 }

@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VpProfileProperties" /> struct.</summary>
+public static unsafe partial class VpProfilePropertiesTests
 {
-    /// <summary>Provides validation of the <see cref="VpProfileProperties" /> struct.</summary>
-    public static unsafe partial class VpProfilePropertiesTests
+    /// <summary>Validates that the <see cref="VpProfileProperties" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VpProfileProperties" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VpProfileProperties>(), Is.EqualTo(sizeof(VpProfileProperties)));
-        }
+        Assert.That(Marshal.SizeOf<VpProfileProperties>(), Is.EqualTo(sizeof(VpProfileProperties)));
+    }
 
-        /// <summary>Validates that the <see cref="VpProfileProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VpProfileProperties).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VpProfileProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VpProfileProperties).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VpProfileProperties" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VpProfileProperties), Is.EqualTo(260));
-        }
+    /// <summary>Validates that the <see cref="VpProfileProperties" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VpProfileProperties), Is.EqualTo(260));
     }
 }

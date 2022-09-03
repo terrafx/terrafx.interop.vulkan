@@ -5,14 +5,13 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[NativeTypeName("int")]
+[Flags]
+public enum VkSemaphoreWaitFlags : uint
 {
-    [NativeTypeName("int")]
-    [Flags]
-    public enum VkSemaphoreWaitFlags : uint
-    {
-        VK_SEMAPHORE_WAIT_ANY_BIT = 0x00000001,
-        VK_SEMAPHORE_WAIT_ANY_BIT_KHR = VK_SEMAPHORE_WAIT_ANY_BIT,
-        VK_SEMAPHORE_WAIT_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
-    }
+    VK_SEMAPHORE_WAIT_ANY_BIT = 0x00000001,
+    VK_SEMAPHORE_WAIT_ANY_BIT_KHR = VK_SEMAPHORE_WAIT_ANY_BIT,
+    VK_SEMAPHORE_WAIT_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
 }

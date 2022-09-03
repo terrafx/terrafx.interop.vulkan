@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkConditionalRenderingBeginInfoEXT" /> struct.</summary>
+public static unsafe partial class VkConditionalRenderingBeginInfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkConditionalRenderingBeginInfoEXT" /> struct.</summary>
-    public static unsafe partial class VkConditionalRenderingBeginInfoEXTTests
+    /// <summary>Validates that the <see cref="VkConditionalRenderingBeginInfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkConditionalRenderingBeginInfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkConditionalRenderingBeginInfoEXT>(), Is.EqualTo(sizeof(VkConditionalRenderingBeginInfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkConditionalRenderingBeginInfoEXT>(), Is.EqualTo(sizeof(VkConditionalRenderingBeginInfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkConditionalRenderingBeginInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkConditionalRenderingBeginInfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkConditionalRenderingBeginInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkConditionalRenderingBeginInfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkConditionalRenderingBeginInfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkConditionalRenderingBeginInfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkConditionalRenderingBeginInfoEXT), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(VkConditionalRenderingBeginInfoEXT), Is.EqualTo(32));
-            }
+            Assert.That(sizeof(VkConditionalRenderingBeginInfoEXT), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(VkConditionalRenderingBeginInfoEXT), Is.EqualTo(32));
         }
     }
 }

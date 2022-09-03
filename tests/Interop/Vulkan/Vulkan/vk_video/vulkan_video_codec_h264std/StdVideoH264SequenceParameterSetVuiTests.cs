@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="StdVideoH264SequenceParameterSetVui" /> struct.</summary>
+public static unsafe partial class StdVideoH264SequenceParameterSetVuiTests
 {
-    /// <summary>Provides validation of the <see cref="StdVideoH264SequenceParameterSetVui" /> struct.</summary>
-    public static unsafe partial class StdVideoH264SequenceParameterSetVuiTests
+    /// <summary>Validates that the <see cref="StdVideoH264SequenceParameterSetVui" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="StdVideoH264SequenceParameterSetVui" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<StdVideoH264SequenceParameterSetVui>(), Is.EqualTo(sizeof(StdVideoH264SequenceParameterSetVui)));
-        }
+        Assert.That(Marshal.SizeOf<StdVideoH264SequenceParameterSetVui>(), Is.EqualTo(sizeof(StdVideoH264SequenceParameterSetVui)));
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoH264SequenceParameterSetVui" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(StdVideoH264SequenceParameterSetVui).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="StdVideoH264SequenceParameterSetVui" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(StdVideoH264SequenceParameterSetVui).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoH264SequenceParameterSetVui" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="StdVideoH264SequenceParameterSetVui" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(StdVideoH264SequenceParameterSetVui), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(StdVideoH264SequenceParameterSetVui), Is.EqualTo(32));
-            }
+            Assert.That(sizeof(StdVideoH264SequenceParameterSetVui), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(StdVideoH264SequenceParameterSetVui), Is.EqualTo(32));
         }
     }
 }

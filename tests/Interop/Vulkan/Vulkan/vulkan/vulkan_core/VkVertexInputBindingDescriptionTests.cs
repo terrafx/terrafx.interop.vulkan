@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkVertexInputBindingDescription" /> struct.</summary>
+public static unsafe partial class VkVertexInputBindingDescriptionTests
 {
-    /// <summary>Provides validation of the <see cref="VkVertexInputBindingDescription" /> struct.</summary>
-    public static unsafe partial class VkVertexInputBindingDescriptionTests
+    /// <summary>Validates that the <see cref="VkVertexInputBindingDescription" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkVertexInputBindingDescription" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkVertexInputBindingDescription>(), Is.EqualTo(sizeof(VkVertexInputBindingDescription)));
-        }
+        Assert.That(Marshal.SizeOf<VkVertexInputBindingDescription>(), Is.EqualTo(sizeof(VkVertexInputBindingDescription)));
+    }
 
-        /// <summary>Validates that the <see cref="VkVertexInputBindingDescription" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkVertexInputBindingDescription).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkVertexInputBindingDescription" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkVertexInputBindingDescription).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkVertexInputBindingDescription" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkVertexInputBindingDescription), Is.EqualTo(12));
-        }
+    /// <summary>Validates that the <see cref="VkVertexInputBindingDescription" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkVertexInputBindingDescription), Is.EqualTo(12));
     }
 }

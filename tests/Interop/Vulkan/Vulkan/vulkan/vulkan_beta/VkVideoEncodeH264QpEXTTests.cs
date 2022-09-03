@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkVideoEncodeH264QpEXT" /> struct.</summary>
+public static unsafe partial class VkVideoEncodeH264QpEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkVideoEncodeH264QpEXT" /> struct.</summary>
-    public static unsafe partial class VkVideoEncodeH264QpEXTTests
+    /// <summary>Validates that the <see cref="VkVideoEncodeH264QpEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkVideoEncodeH264QpEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkVideoEncodeH264QpEXT>(), Is.EqualTo(sizeof(VkVideoEncodeH264QpEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkVideoEncodeH264QpEXT>(), Is.EqualTo(sizeof(VkVideoEncodeH264QpEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoEncodeH264QpEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkVideoEncodeH264QpEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkVideoEncodeH264QpEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkVideoEncodeH264QpEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoEncodeH264QpEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkVideoEncodeH264QpEXT), Is.EqualTo(12));
-        }
+    /// <summary>Validates that the <see cref="VkVideoEncodeH264QpEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkVideoEncodeH264QpEXT), Is.EqualTo(12));
     }
 }

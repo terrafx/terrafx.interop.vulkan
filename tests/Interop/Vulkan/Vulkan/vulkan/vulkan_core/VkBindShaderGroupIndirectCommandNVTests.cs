@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkBindShaderGroupIndirectCommandNV" /> struct.</summary>
+public static unsafe partial class VkBindShaderGroupIndirectCommandNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkBindShaderGroupIndirectCommandNV" /> struct.</summary>
-    public static unsafe partial class VkBindShaderGroupIndirectCommandNVTests
+    /// <summary>Validates that the <see cref="VkBindShaderGroupIndirectCommandNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkBindShaderGroupIndirectCommandNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkBindShaderGroupIndirectCommandNV>(), Is.EqualTo(sizeof(VkBindShaderGroupIndirectCommandNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkBindShaderGroupIndirectCommandNV>(), Is.EqualTo(sizeof(VkBindShaderGroupIndirectCommandNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkBindShaderGroupIndirectCommandNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkBindShaderGroupIndirectCommandNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkBindShaderGroupIndirectCommandNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkBindShaderGroupIndirectCommandNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkBindShaderGroupIndirectCommandNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkBindShaderGroupIndirectCommandNV), Is.EqualTo(4));
-        }
+    /// <summary>Validates that the <see cref="VkBindShaderGroupIndirectCommandNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkBindShaderGroupIndirectCommandNV), Is.EqualTo(4));
     }
 }

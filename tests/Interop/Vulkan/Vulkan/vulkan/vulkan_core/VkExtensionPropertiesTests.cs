@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkExtensionProperties" /> struct.</summary>
+public static unsafe partial class VkExtensionPropertiesTests
 {
-    /// <summary>Provides validation of the <see cref="VkExtensionProperties" /> struct.</summary>
-    public static unsafe partial class VkExtensionPropertiesTests
+    /// <summary>Validates that the <see cref="VkExtensionProperties" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkExtensionProperties" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkExtensionProperties>(), Is.EqualTo(sizeof(VkExtensionProperties)));
-        }
+        Assert.That(Marshal.SizeOf<VkExtensionProperties>(), Is.EqualTo(sizeof(VkExtensionProperties)));
+    }
 
-        /// <summary>Validates that the <see cref="VkExtensionProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkExtensionProperties).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkExtensionProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkExtensionProperties).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkExtensionProperties" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkExtensionProperties), Is.EqualTo(260));
-        }
+    /// <summary>Validates that the <see cref="VkExtensionProperties" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkExtensionProperties), Is.EqualTo(260));
     }
 }

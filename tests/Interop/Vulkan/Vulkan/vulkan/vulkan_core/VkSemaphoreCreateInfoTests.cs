@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSemaphoreCreateInfo" /> struct.</summary>
+public static unsafe partial class VkSemaphoreCreateInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkSemaphoreCreateInfo" /> struct.</summary>
-    public static unsafe partial class VkSemaphoreCreateInfoTests
+    /// <summary>Validates that the <see cref="VkSemaphoreCreateInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSemaphoreCreateInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSemaphoreCreateInfo>(), Is.EqualTo(sizeof(VkSemaphoreCreateInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkSemaphoreCreateInfo>(), Is.EqualTo(sizeof(VkSemaphoreCreateInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSemaphoreCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSemaphoreCreateInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSemaphoreCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSemaphoreCreateInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSemaphoreCreateInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkSemaphoreCreateInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkSemaphoreCreateInfo), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkSemaphoreCreateInfo), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkSemaphoreCreateInfo), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkSemaphoreCreateInfo), Is.EqualTo(12));
         }
     }
 }

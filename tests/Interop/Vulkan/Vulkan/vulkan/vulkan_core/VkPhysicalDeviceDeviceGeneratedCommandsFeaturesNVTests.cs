@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNVTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV>(), Is.EqualTo(sizeof(VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV>(), Is.EqualTo(sizeof(VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV), Is.EqualTo(12));
         }
     }
 }

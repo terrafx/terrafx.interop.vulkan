@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPipelineColorBlendAdvancedStateCreateInfoEXT" /> struct.</summary>
+public static unsafe partial class VkPipelineColorBlendAdvancedStateCreateInfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPipelineColorBlendAdvancedStateCreateInfoEXT" /> struct.</summary>
-    public static unsafe partial class VkPipelineColorBlendAdvancedStateCreateInfoEXTTests
+    /// <summary>Validates that the <see cref="VkPipelineColorBlendAdvancedStateCreateInfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPipelineColorBlendAdvancedStateCreateInfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPipelineColorBlendAdvancedStateCreateInfoEXT>(), Is.EqualTo(sizeof(VkPipelineColorBlendAdvancedStateCreateInfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPipelineColorBlendAdvancedStateCreateInfoEXT>(), Is.EqualTo(sizeof(VkPipelineColorBlendAdvancedStateCreateInfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineColorBlendAdvancedStateCreateInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPipelineColorBlendAdvancedStateCreateInfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPipelineColorBlendAdvancedStateCreateInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPipelineColorBlendAdvancedStateCreateInfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineColorBlendAdvancedStateCreateInfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPipelineColorBlendAdvancedStateCreateInfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPipelineColorBlendAdvancedStateCreateInfoEXT), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPipelineColorBlendAdvancedStateCreateInfoEXT), Is.EqualTo(20));
-            }
+            Assert.That(sizeof(VkPipelineColorBlendAdvancedStateCreateInfoEXT), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPipelineColorBlendAdvancedStateCreateInfoEXT), Is.EqualTo(20));
         }
     }
 }

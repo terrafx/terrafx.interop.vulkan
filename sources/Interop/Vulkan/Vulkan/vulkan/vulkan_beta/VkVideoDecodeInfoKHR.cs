@@ -3,38 +3,37 @@
 // Ported from include/vulkan/vulkan_beta.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkVideoDecodeInfoKHR
 {
-    public unsafe partial struct VkVideoDecodeInfoKHR
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        public VkVideoDecodeFlagsKHR flags;
+    public VkVideoDecodeFlagsKHR flags;
 
-        public VkOffset2D codedOffset;
+    public VkOffset2D codedOffset;
 
-        public VkExtent2D codedExtent;
+    public VkExtent2D codedExtent;
 
-        public VkBuffer srcBuffer;
+    public VkBuffer srcBuffer;
 
-        [NativeTypeName("VkDeviceSize")]
-        public ulong srcBufferOffset;
+    [NativeTypeName("VkDeviceSize")]
+    public ulong srcBufferOffset;
 
-        [NativeTypeName("VkDeviceSize")]
-        public ulong srcBufferRange;
+    [NativeTypeName("VkDeviceSize")]
+    public ulong srcBufferRange;
 
-        public VkVideoPictureResourceKHR dstPictureResource;
+    public VkVideoPictureResourceKHR dstPictureResource;
 
-        [NativeTypeName("const VkVideoReferenceSlotKHR *")]
-        public VkVideoReferenceSlotKHR* pSetupReferenceSlot;
+    [NativeTypeName("const VkVideoReferenceSlotKHR *")]
+    public VkVideoReferenceSlotKHR* pSetupReferenceSlot;
 
-        [NativeTypeName("uint32_t")]
-        public uint referenceSlotCount;
+    [NativeTypeName("uint32_t")]
+    public uint referenceSlotCount;
 
-        [NativeTypeName("const VkVideoReferenceSlotKHR *")]
-        public VkVideoReferenceSlotKHR* pReferenceSlots;
-    }
+    [NativeTypeName("const VkVideoReferenceSlotKHR *")]
+    public VkVideoReferenceSlotKHR* pReferenceSlots;
 }

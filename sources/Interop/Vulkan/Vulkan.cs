@@ -4,103 +4,102 @@ using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public static unsafe partial class Vulkan
 {
-    public static unsafe partial class Vulkan
+    public static event DllImportResolver? ResolveLibrary;
+
+    static Vulkan()
     {
-        public static event DllImportResolver? ResolveLibrary;
+        NativeLibrary.SetDllImportResolver(Assembly.GetExecutingAssembly(), OnDllImport);
+    }
 
-        static Vulkan()
+    private static IntPtr OnDllImport(string libraryName, Assembly assembly, DllImportSearchPath? searchPath)
+    {
+        if (TryResolveLibrary(libraryName, assembly, searchPath, out var nativeLibrary))
         {
-            NativeLibrary.SetDllImportResolver(Assembly.GetExecutingAssembly(), OnDllImport);
+            return nativeLibrary;
         }
 
-        private static IntPtr OnDllImport(string libraryName, Assembly assembly, DllImportSearchPath? searchPath)
+        if (libraryName.Equals("vulkan") && TryResolveVulkan(assembly, searchPath, out nativeLibrary))
         {
-            if (TryResolveLibrary(libraryName, assembly, searchPath, out var nativeLibrary))
-            {
-                return nativeLibrary;
-            }
-
-            if (libraryName.Equals("vulkan") && TryResolveVulkan(assembly, searchPath, out nativeLibrary))
-            {
-                return nativeLibrary;
-            }
-
-            return IntPtr.Zero;
+            return nativeLibrary;
         }
 
-        private static bool TryResolveVulkan(Assembly assembly, DllImportSearchPath? searchPath, out IntPtr nativeLibrary)
+        return IntPtr.Zero;
+    }
+
+    private static bool TryResolveVulkan(Assembly assembly, DllImportSearchPath? searchPath, out IntPtr nativeLibrary)
+    {
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            if (NativeLibrary.TryLoad("vulkan-1", assembly, searchPath, out nativeLibrary))
             {
-                if (NativeLibrary.TryLoad("vulkan-1", assembly, searchPath, out nativeLibrary))
+                return true;
+            }
+
+            if (NativeLibrary.TryLoad("vulkan", assembly, searchPath, out nativeLibrary))
+            {
+                return true;
+            }
+        }
+        else
+        {
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            {
+                if (NativeLibrary.TryLoad("libvulkan.so.1.3.204", assembly, searchPath, out nativeLibrary))
                 {
                     return true;
                 }
 
-                if (NativeLibrary.TryLoad("vulkan", assembly, searchPath, out nativeLibrary))
+                if (NativeLibrary.TryLoad("vulkan.so.1", assembly, searchPath, out nativeLibrary))
                 {
                     return true;
                 }
             }
-            else
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
-                if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                if (NativeLibrary.TryLoad("libvulkan.1.3.204.dylib", assembly, searchPath, out nativeLibrary))
                 {
-                    if (NativeLibrary.TryLoad("libvulkan.so.1.3.204", assembly, searchPath, out nativeLibrary))
-                    {
-                        return true;
-                    }
-
-                    if (NativeLibrary.TryLoad("vulkan.so.1", assembly, searchPath, out nativeLibrary))
-                    {
-                        return true;
-                    }
-                }
-                else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-                {
-                    if (NativeLibrary.TryLoad("libvulkan.1.3.204.dylib", assembly, searchPath, out nativeLibrary))
-                    {
-                        return true;
-                    }
-
-                    if (NativeLibrary.TryLoad("libvulkan.1.dylib", assembly, searchPath, out nativeLibrary))
-                    {
-                        return true;
-                    }
+                    return true;
                 }
 
-                if (NativeLibrary.TryLoad("libvulkan", assembly, searchPath, out nativeLibrary))
+                if (NativeLibrary.TryLoad("libvulkan.1.dylib", assembly, searchPath, out nativeLibrary))
                 {
                     return true;
                 }
             }
 
-            return false;
+            if (NativeLibrary.TryLoad("libvulkan", assembly, searchPath, out nativeLibrary))
+            {
+                return true;
+            }
         }
 
-        private static bool TryResolveLibrary(string libraryName, Assembly assembly, DllImportSearchPath? searchPath, out IntPtr nativeLibrary)
+        return false;
+    }
+
+    private static bool TryResolveLibrary(string libraryName, Assembly assembly, DllImportSearchPath? searchPath, out IntPtr nativeLibrary)
+    {
+        var resolveLibrary = ResolveLibrary;
+
+        if (resolveLibrary != null)
         {
-            var resolveLibrary = ResolveLibrary;
+            var resolvers = resolveLibrary.GetInvocationList();
 
-            if (resolveLibrary != null)
+            foreach (DllImportResolver resolver in resolvers)
             {
-                var resolvers = resolveLibrary.GetInvocationList();
+                nativeLibrary = resolver(libraryName, assembly, searchPath);
 
-                foreach (DllImportResolver resolver in resolvers)
+                if (nativeLibrary != IntPtr.Zero)
                 {
-                    nativeLibrary = resolver(libraryName, assembly, searchPath);
-
-                    if (nativeLibrary != IntPtr.Zero)
-                    {
-                        return true;
-                    }
+                    return true;
                 }
             }
-
-            nativeLibrary = IntPtr.Zero;
-            return false;
         }
+
+        nativeLibrary = IntPtr.Zero;
+        return false;
     }
 }

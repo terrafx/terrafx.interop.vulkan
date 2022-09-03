@@ -5,13 +5,12 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
-{
-    public partial struct VkIcdSurfaceAndroid
-    {
-        public VkIcdSurfaceBase @base;
+namespace TerraFX.Interop.Vulkan;
 
-        [NativeTypeName("struct ANativeWindow *")]
-        public IntPtr window;
-    }
+public partial struct VkIcdSurfaceAndroid
+{
+    public VkIcdSurfaceBase @base;
+
+    [NativeTypeName("struct ANativeWindow *")]
+    public IntPtr window;
 }

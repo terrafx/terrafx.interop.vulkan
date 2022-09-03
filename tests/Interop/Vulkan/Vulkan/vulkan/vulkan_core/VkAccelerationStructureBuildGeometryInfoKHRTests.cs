@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkAccelerationStructureBuildGeometryInfoKHR" /> struct.</summary>
+public static unsafe partial class VkAccelerationStructureBuildGeometryInfoKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkAccelerationStructureBuildGeometryInfoKHR" /> struct.</summary>
-    public static unsafe partial class VkAccelerationStructureBuildGeometryInfoKHRTests
+    /// <summary>Validates that the <see cref="VkAccelerationStructureBuildGeometryInfoKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkAccelerationStructureBuildGeometryInfoKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkAccelerationStructureBuildGeometryInfoKHR>(), Is.EqualTo(sizeof(VkAccelerationStructureBuildGeometryInfoKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkAccelerationStructureBuildGeometryInfoKHR>(), Is.EqualTo(sizeof(VkAccelerationStructureBuildGeometryInfoKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkAccelerationStructureBuildGeometryInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkAccelerationStructureBuildGeometryInfoKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkAccelerationStructureBuildGeometryInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkAccelerationStructureBuildGeometryInfoKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkAccelerationStructureBuildGeometryInfoKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkAccelerationStructureBuildGeometryInfoKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkAccelerationStructureBuildGeometryInfoKHR), Is.EqualTo(80));
-            }
-            else
-            {
-                Assert.That(sizeof(VkAccelerationStructureBuildGeometryInfoKHR), Is.EqualTo(64));
-            }
+            Assert.That(sizeof(VkAccelerationStructureBuildGeometryInfoKHR), Is.EqualTo(80));
+        }
+        else
+        {
+            Assert.That(sizeof(VkAccelerationStructureBuildGeometryInfoKHR), Is.EqualTo(64));
         }
     }
 }

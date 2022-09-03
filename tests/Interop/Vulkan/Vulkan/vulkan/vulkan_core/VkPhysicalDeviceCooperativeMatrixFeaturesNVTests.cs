@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceCooperativeMatrixFeaturesNV" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceCooperativeMatrixFeaturesNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceCooperativeMatrixFeaturesNV" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceCooperativeMatrixFeaturesNVTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceCooperativeMatrixFeaturesNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceCooperativeMatrixFeaturesNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceCooperativeMatrixFeaturesNV>(), Is.EqualTo(sizeof(VkPhysicalDeviceCooperativeMatrixFeaturesNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceCooperativeMatrixFeaturesNV>(), Is.EqualTo(sizeof(VkPhysicalDeviceCooperativeMatrixFeaturesNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceCooperativeMatrixFeaturesNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceCooperativeMatrixFeaturesNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceCooperativeMatrixFeaturesNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceCooperativeMatrixFeaturesNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceCooperativeMatrixFeaturesNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceCooperativeMatrixFeaturesNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceCooperativeMatrixFeaturesNV), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceCooperativeMatrixFeaturesNV), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceCooperativeMatrixFeaturesNV), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceCooperativeMatrixFeaturesNV), Is.EqualTo(16));
         }
     }
 }

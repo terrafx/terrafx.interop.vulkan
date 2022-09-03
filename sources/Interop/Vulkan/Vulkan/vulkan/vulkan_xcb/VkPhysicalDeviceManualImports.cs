@@ -5,10 +5,9 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkPhysicalDeviceManualImports
 {
-    public unsafe partial struct VkPhysicalDeviceManualImports
-    {
-        public delegate* unmanaged<VkPhysicalDevice, uint, IntPtr, uint, VkBool32> vkGetPhysicalDeviceXcbPresentationSupportKHR;
-    }
+    public delegate* unmanaged<VkPhysicalDevice, uint, IntPtr, uint, VkBool32> vkGetPhysicalDeviceXcbPresentationSupportKHR;
 }

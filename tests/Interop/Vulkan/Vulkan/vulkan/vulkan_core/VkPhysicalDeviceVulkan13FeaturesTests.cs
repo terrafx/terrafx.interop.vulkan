@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceVulkan13Features" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceVulkan13FeaturesTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceVulkan13Features" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceVulkan13FeaturesTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceVulkan13Features" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceVulkan13Features" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceVulkan13Features>(), Is.EqualTo(sizeof(VkPhysicalDeviceVulkan13Features)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceVulkan13Features>(), Is.EqualTo(sizeof(VkPhysicalDeviceVulkan13Features)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceVulkan13Features" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceVulkan13Features).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceVulkan13Features" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceVulkan13Features).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceVulkan13Features" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceVulkan13Features" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceVulkan13Features), Is.EqualTo(80));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceVulkan13Features), Is.EqualTo(68));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceVulkan13Features), Is.EqualTo(80));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceVulkan13Features), Is.EqualTo(68));
         }
     }
 }

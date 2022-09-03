@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkExportMemoryAllocateInfoNV" /> struct.</summary>
+public static unsafe partial class VkExportMemoryAllocateInfoNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkExportMemoryAllocateInfoNV" /> struct.</summary>
-    public static unsafe partial class VkExportMemoryAllocateInfoNVTests
+    /// <summary>Validates that the <see cref="VkExportMemoryAllocateInfoNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkExportMemoryAllocateInfoNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkExportMemoryAllocateInfoNV>(), Is.EqualTo(sizeof(VkExportMemoryAllocateInfoNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkExportMemoryAllocateInfoNV>(), Is.EqualTo(sizeof(VkExportMemoryAllocateInfoNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkExportMemoryAllocateInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkExportMemoryAllocateInfoNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkExportMemoryAllocateInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkExportMemoryAllocateInfoNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkExportMemoryAllocateInfoNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkExportMemoryAllocateInfoNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkExportMemoryAllocateInfoNV), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkExportMemoryAllocateInfoNV), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkExportMemoryAllocateInfoNV), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkExportMemoryAllocateInfoNV), Is.EqualTo(12));
         }
     }
 }

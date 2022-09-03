@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkImageFormatProperties" /> struct.</summary>
+public static unsafe partial class VkImageFormatPropertiesTests
 {
-    /// <summary>Provides validation of the <see cref="VkImageFormatProperties" /> struct.</summary>
-    public static unsafe partial class VkImageFormatPropertiesTests
+    /// <summary>Validates that the <see cref="VkImageFormatProperties" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkImageFormatProperties" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkImageFormatProperties>(), Is.EqualTo(sizeof(VkImageFormatProperties)));
-        }
+        Assert.That(Marshal.SizeOf<VkImageFormatProperties>(), Is.EqualTo(sizeof(VkImageFormatProperties)));
+    }
 
-        /// <summary>Validates that the <see cref="VkImageFormatProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkImageFormatProperties).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkImageFormatProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkImageFormatProperties).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkImageFormatProperties" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkImageFormatProperties), Is.EqualTo(32));
-        }
+    /// <summary>Validates that the <see cref="VkImageFormatProperties" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkImageFormatProperties), Is.EqualTo(32));
     }
 }

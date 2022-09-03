@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkIcdSurfaceDisplay" /> struct.</summary>
+public static unsafe partial class VkIcdSurfaceDisplayTests
 {
-    /// <summary>Provides validation of the <see cref="VkIcdSurfaceDisplay" /> struct.</summary>
-    public static unsafe partial class VkIcdSurfaceDisplayTests
+    /// <summary>Validates that the <see cref="VkIcdSurfaceDisplay" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkIcdSurfaceDisplay" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkIcdSurfaceDisplay>(), Is.EqualTo(sizeof(VkIcdSurfaceDisplay)));
-        }
+        Assert.That(Marshal.SizeOf<VkIcdSurfaceDisplay>(), Is.EqualTo(sizeof(VkIcdSurfaceDisplay)));
+    }
 
-        /// <summary>Validates that the <see cref="VkIcdSurfaceDisplay" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkIcdSurfaceDisplay).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkIcdSurfaceDisplay" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkIcdSurfaceDisplay).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkIcdSurfaceDisplay" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkIcdSurfaceDisplay), Is.EqualTo(48));
-        }
+    /// <summary>Validates that the <see cref="VkIcdSurfaceDisplay" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkIcdSurfaceDisplay), Is.EqualTo(48));
     }
 }

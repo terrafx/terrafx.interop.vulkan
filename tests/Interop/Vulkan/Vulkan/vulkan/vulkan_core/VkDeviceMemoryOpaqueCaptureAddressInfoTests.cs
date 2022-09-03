@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDeviceMemoryOpaqueCaptureAddressInfo" /> struct.</summary>
+public static unsafe partial class VkDeviceMemoryOpaqueCaptureAddressInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkDeviceMemoryOpaqueCaptureAddressInfo" /> struct.</summary>
-    public static unsafe partial class VkDeviceMemoryOpaqueCaptureAddressInfoTests
+    /// <summary>Validates that the <see cref="VkDeviceMemoryOpaqueCaptureAddressInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDeviceMemoryOpaqueCaptureAddressInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDeviceMemoryOpaqueCaptureAddressInfo>(), Is.EqualTo(sizeof(VkDeviceMemoryOpaqueCaptureAddressInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkDeviceMemoryOpaqueCaptureAddressInfo>(), Is.EqualTo(sizeof(VkDeviceMemoryOpaqueCaptureAddressInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceMemoryOpaqueCaptureAddressInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDeviceMemoryOpaqueCaptureAddressInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDeviceMemoryOpaqueCaptureAddressInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDeviceMemoryOpaqueCaptureAddressInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceMemoryOpaqueCaptureAddressInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkDeviceMemoryOpaqueCaptureAddressInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkDeviceMemoryOpaqueCaptureAddressInfo), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkDeviceMemoryOpaqueCaptureAddressInfo), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkDeviceMemoryOpaqueCaptureAddressInfo), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkDeviceMemoryOpaqueCaptureAddressInfo), Is.EqualTo(16));
         }
     }
 }

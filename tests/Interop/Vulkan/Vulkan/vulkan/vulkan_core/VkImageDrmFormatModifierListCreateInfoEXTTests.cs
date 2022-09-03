@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkImageDrmFormatModifierListCreateInfoEXT" /> struct.</summary>
+public static unsafe partial class VkImageDrmFormatModifierListCreateInfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkImageDrmFormatModifierListCreateInfoEXT" /> struct.</summary>
-    public static unsafe partial class VkImageDrmFormatModifierListCreateInfoEXTTests
+    /// <summary>Validates that the <see cref="VkImageDrmFormatModifierListCreateInfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkImageDrmFormatModifierListCreateInfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkImageDrmFormatModifierListCreateInfoEXT>(), Is.EqualTo(sizeof(VkImageDrmFormatModifierListCreateInfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkImageDrmFormatModifierListCreateInfoEXT>(), Is.EqualTo(sizeof(VkImageDrmFormatModifierListCreateInfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkImageDrmFormatModifierListCreateInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkImageDrmFormatModifierListCreateInfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkImageDrmFormatModifierListCreateInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkImageDrmFormatModifierListCreateInfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkImageDrmFormatModifierListCreateInfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkImageDrmFormatModifierListCreateInfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkImageDrmFormatModifierListCreateInfoEXT), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkImageDrmFormatModifierListCreateInfoEXT), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkImageDrmFormatModifierListCreateInfoEXT), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkImageDrmFormatModifierListCreateInfoEXT), Is.EqualTo(16));
         }
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDeviceDeviceMemoryReportCreateInfoEXT" /> struct.</summary>
+public static unsafe partial class VkDeviceDeviceMemoryReportCreateInfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkDeviceDeviceMemoryReportCreateInfoEXT" /> struct.</summary>
-    public static unsafe partial class VkDeviceDeviceMemoryReportCreateInfoEXTTests
+    /// <summary>Validates that the <see cref="VkDeviceDeviceMemoryReportCreateInfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDeviceDeviceMemoryReportCreateInfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDeviceDeviceMemoryReportCreateInfoEXT>(), Is.EqualTo(sizeof(VkDeviceDeviceMemoryReportCreateInfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkDeviceDeviceMemoryReportCreateInfoEXT>(), Is.EqualTo(sizeof(VkDeviceDeviceMemoryReportCreateInfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceDeviceMemoryReportCreateInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDeviceDeviceMemoryReportCreateInfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDeviceDeviceMemoryReportCreateInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDeviceDeviceMemoryReportCreateInfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceDeviceMemoryReportCreateInfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkDeviceDeviceMemoryReportCreateInfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkDeviceDeviceMemoryReportCreateInfoEXT), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(VkDeviceDeviceMemoryReportCreateInfoEXT), Is.EqualTo(20));
-            }
+            Assert.That(sizeof(VkDeviceDeviceMemoryReportCreateInfoEXT), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(VkDeviceDeviceMemoryReportCreateInfoEXT), Is.EqualTo(20));
         }
     }
 }

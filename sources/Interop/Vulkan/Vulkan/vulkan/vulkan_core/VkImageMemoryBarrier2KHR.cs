@@ -3,39 +3,38 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkImageMemoryBarrier2KHR
 {
-    public unsafe partial struct VkImageMemoryBarrier2KHR
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("VkPipelineStageFlags2")]
-        public ulong srcStageMask;
+    [NativeTypeName("VkPipelineStageFlags2")]
+    public ulong srcStageMask;
 
-        [NativeTypeName("VkAccessFlags2")]
-        public ulong srcAccessMask;
+    [NativeTypeName("VkAccessFlags2")]
+    public ulong srcAccessMask;
 
-        [NativeTypeName("VkPipelineStageFlags2")]
-        public ulong dstStageMask;
+    [NativeTypeName("VkPipelineStageFlags2")]
+    public ulong dstStageMask;
 
-        [NativeTypeName("VkAccessFlags2")]
-        public ulong dstAccessMask;
+    [NativeTypeName("VkAccessFlags2")]
+    public ulong dstAccessMask;
 
-        public VkImageLayout oldLayout;
+    public VkImageLayout oldLayout;
 
-        public VkImageLayout newLayout;
+    public VkImageLayout newLayout;
 
-        [NativeTypeName("uint32_t")]
-        public uint srcQueueFamilyIndex;
+    [NativeTypeName("uint32_t")]
+    public uint srcQueueFamilyIndex;
 
-        [NativeTypeName("uint32_t")]
-        public uint dstQueueFamilyIndex;
+    [NativeTypeName("uint32_t")]
+    public uint dstQueueFamilyIndex;
 
-        public VkImage image;
+    public VkImage image;
 
-        public VkImageSubresourceRange subresourceRange;
-    }
+    public VkImageSubresourceRange subresourceRange;
 }

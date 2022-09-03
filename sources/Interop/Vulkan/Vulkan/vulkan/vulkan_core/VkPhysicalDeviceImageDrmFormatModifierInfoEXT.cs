@@ -3,24 +3,23 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkPhysicalDeviceImageDrmFormatModifierInfoEXT
 {
-    public unsafe partial struct VkPhysicalDeviceImageDrmFormatModifierInfoEXT
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("uint64_t")]
-        public ulong drmFormatModifier;
+    [NativeTypeName("uint64_t")]
+    public ulong drmFormatModifier;
 
-        public VkSharingMode sharingMode;
+    public VkSharingMode sharingMode;
 
-        [NativeTypeName("uint32_t")]
-        public uint queueFamilyIndexCount;
+    [NativeTypeName("uint32_t")]
+    public uint queueFamilyIndexCount;
 
-        [NativeTypeName("const uint32_t *")]
-        public uint* pQueueFamilyIndices;
-    }
+    [NativeTypeName("const uint32_t *")]
+    public uint* pQueueFamilyIndices;
 }

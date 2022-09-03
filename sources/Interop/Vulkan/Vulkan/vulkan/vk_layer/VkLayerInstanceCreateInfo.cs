@@ -5,46 +5,45 @@
 
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkLayerInstanceCreateInfo
 {
-    public unsafe partial struct VkLayerInstanceCreateInfo
+    public VkStructureType sType;
+
+    [NativeTypeName("const void *")]
+    public void* pNext;
+
+    public VkLayerFunction function;
+
+    [NativeTypeName("union (anonymous union at C:/VulkanSDK/1.3.204.0/Include/vulkan/vk_layer.h:125:5)")]
+    public _u_e__Union u;
+
+    [StructLayout(LayoutKind.Explicit)]
+    public unsafe partial struct _u_e__Union
     {
-        public VkStructureType sType;
+        [FieldOffset(0)]
+        public VkLayerInstanceLink* pLayerInfo;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+        [FieldOffset(0)]
+        [NativeTypeName("PFN_vkSetInstanceLoaderData")]
+        public delegate* unmanaged<VkInstance, void*, VkResult> pfnSetInstanceLoaderData;
 
-        public VkLayerFunction function;
+        [FieldOffset(0)]
+        [NativeTypeName("struct (anonymous struct at C:/VulkanSDK/1.3.204.0/Include/vulkan/vk_layer.h:128:9)")]
+        public _layerDevice_e__Struct layerDevice;
 
-        [NativeTypeName("union (anonymous union at C:/VulkanSDK/1.3.204.0/Include/vulkan/vk_layer.h:125:5)")]
-        public _u_e__Union u;
+        [FieldOffset(0)]
+        [NativeTypeName("VkLoaderFeatureFlags")]
+        public uint loaderFeatures;
 
-        [StructLayout(LayoutKind.Explicit)]
-        public unsafe partial struct _u_e__Union
+        public unsafe partial struct _layerDevice_e__Struct
         {
-            [FieldOffset(0)]
-            public VkLayerInstanceLink* pLayerInfo;
+            [NativeTypeName("PFN_vkLayerCreateDevice")]
+            public delegate* unmanaged<VkInstance, VkPhysicalDevice, VkDeviceCreateInfo*, VkAllocationCallbacks*, VkDevice*, delegate* unmanaged<VkInstance, sbyte*, delegate* unmanaged<void>>, delegate* unmanaged<VkDevice, sbyte*, delegate* unmanaged<void>>*, VkResult> pfnLayerCreateDevice;
 
-            [FieldOffset(0)]
-            [NativeTypeName("PFN_vkSetInstanceLoaderData")]
-            public delegate* unmanaged<VkInstance, void*, VkResult> pfnSetInstanceLoaderData;
-
-            [FieldOffset(0)]
-            [NativeTypeName("struct (anonymous struct at C:/VulkanSDK/1.3.204.0/Include/vulkan/vk_layer.h:128:9)")]
-            public _layerDevice_e__Struct layerDevice;
-
-            [FieldOffset(0)]
-            [NativeTypeName("VkLoaderFeatureFlags")]
-            public uint loaderFeatures;
-
-            public unsafe partial struct _layerDevice_e__Struct
-            {
-                [NativeTypeName("PFN_vkLayerCreateDevice")]
-                public delegate* unmanaged<VkInstance, VkPhysicalDevice, VkDeviceCreateInfo*, VkAllocationCallbacks*, VkDevice*, delegate* unmanaged<VkInstance, sbyte*, delegate* unmanaged<void>>, delegate* unmanaged<VkDevice, sbyte*, delegate* unmanaged<void>>*, VkResult> pfnLayerCreateDevice;
-
-                [NativeTypeName("PFN_vkLayerDestroyDevice")]
-                public delegate* unmanaged<VkDevice, VkAllocationCallbacks*, delegate* unmanaged<VkDevice, VkAllocationCallbacks*, void>, void> pfnLayerDestroyDevice;
-            }
+            [NativeTypeName("PFN_vkLayerDestroyDevice")]
+            public delegate* unmanaged<VkDevice, VkAllocationCallbacks*, delegate* unmanaged<VkDevice, VkAllocationCallbacks*, void>, void> pfnLayerDestroyDevice;
         }
     }
 }

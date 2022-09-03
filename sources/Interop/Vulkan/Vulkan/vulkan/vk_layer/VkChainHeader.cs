@@ -3,16 +3,15 @@
 // Ported from include/vulkan/vk_layer.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2017 The Khronos Group Inc. Copyright © 2015-2017 Valve Corporation. Copyright © 2015-2017 LunarG, Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public partial struct VkChainHeader
 {
-    public partial struct VkChainHeader
-    {
-        public VkChainType type;
+    public VkChainType type;
 
-        [NativeTypeName("uint32_t")]
-        public uint version;
+    [NativeTypeName("uint32_t")]
+    public uint version;
 
-        [NativeTypeName("uint32_t")]
-        public uint size;
-    }
+    [NativeTypeName("uint32_t")]
+    public uint size;
 }

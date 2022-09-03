@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPipelineCoverageToColorStateCreateInfoNV" /> struct.</summary>
+public static unsafe partial class VkPipelineCoverageToColorStateCreateInfoNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkPipelineCoverageToColorStateCreateInfoNV" /> struct.</summary>
-    public static unsafe partial class VkPipelineCoverageToColorStateCreateInfoNVTests
+    /// <summary>Validates that the <see cref="VkPipelineCoverageToColorStateCreateInfoNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPipelineCoverageToColorStateCreateInfoNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPipelineCoverageToColorStateCreateInfoNV>(), Is.EqualTo(sizeof(VkPipelineCoverageToColorStateCreateInfoNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkPipelineCoverageToColorStateCreateInfoNV>(), Is.EqualTo(sizeof(VkPipelineCoverageToColorStateCreateInfoNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineCoverageToColorStateCreateInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPipelineCoverageToColorStateCreateInfoNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPipelineCoverageToColorStateCreateInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPipelineCoverageToColorStateCreateInfoNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineCoverageToColorStateCreateInfoNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPipelineCoverageToColorStateCreateInfoNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPipelineCoverageToColorStateCreateInfoNV), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPipelineCoverageToColorStateCreateInfoNV), Is.EqualTo(20));
-            }
+            Assert.That(sizeof(VkPipelineCoverageToColorStateCreateInfoNV), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPipelineCoverageToColorStateCreateInfoNV), Is.EqualTo(20));
         }
     }
 }

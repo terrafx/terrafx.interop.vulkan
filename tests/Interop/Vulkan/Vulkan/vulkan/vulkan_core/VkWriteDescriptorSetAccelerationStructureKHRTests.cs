@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkWriteDescriptorSetAccelerationStructureKHR" /> struct.</summary>
+public static unsafe partial class VkWriteDescriptorSetAccelerationStructureKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkWriteDescriptorSetAccelerationStructureKHR" /> struct.</summary>
-    public static unsafe partial class VkWriteDescriptorSetAccelerationStructureKHRTests
+    /// <summary>Validates that the <see cref="VkWriteDescriptorSetAccelerationStructureKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkWriteDescriptorSetAccelerationStructureKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkWriteDescriptorSetAccelerationStructureKHR>(), Is.EqualTo(sizeof(VkWriteDescriptorSetAccelerationStructureKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkWriteDescriptorSetAccelerationStructureKHR>(), Is.EqualTo(sizeof(VkWriteDescriptorSetAccelerationStructureKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkWriteDescriptorSetAccelerationStructureKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkWriteDescriptorSetAccelerationStructureKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkWriteDescriptorSetAccelerationStructureKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkWriteDescriptorSetAccelerationStructureKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkWriteDescriptorSetAccelerationStructureKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkWriteDescriptorSetAccelerationStructureKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkWriteDescriptorSetAccelerationStructureKHR), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkWriteDescriptorSetAccelerationStructureKHR), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkWriteDescriptorSetAccelerationStructureKHR), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkWriteDescriptorSetAccelerationStructureKHR), Is.EqualTo(16));
         }
     }
 }

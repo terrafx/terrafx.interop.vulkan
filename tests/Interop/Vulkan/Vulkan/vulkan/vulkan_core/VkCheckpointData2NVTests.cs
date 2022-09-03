@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkCheckpointData2NV" /> struct.</summary>
+public static unsafe partial class VkCheckpointData2NVTests
 {
-    /// <summary>Provides validation of the <see cref="VkCheckpointData2NV" /> struct.</summary>
-    public static unsafe partial class VkCheckpointData2NVTests
+    /// <summary>Validates that the <see cref="VkCheckpointData2NV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkCheckpointData2NV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkCheckpointData2NV>(), Is.EqualTo(sizeof(VkCheckpointData2NV)));
-        }
+        Assert.That(Marshal.SizeOf<VkCheckpointData2NV>(), Is.EqualTo(sizeof(VkCheckpointData2NV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkCheckpointData2NV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkCheckpointData2NV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkCheckpointData2NV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkCheckpointData2NV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkCheckpointData2NV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkCheckpointData2NV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkCheckpointData2NV), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkCheckpointData2NV), Is.EqualTo(24));
-            }
+            Assert.That(sizeof(VkCheckpointData2NV), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkCheckpointData2NV), Is.EqualTo(24));
         }
     }
 }

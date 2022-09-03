@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkBindImageMemoryInfo" /> struct.</summary>
+public static unsafe partial class VkBindImageMemoryInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkBindImageMemoryInfo" /> struct.</summary>
-    public static unsafe partial class VkBindImageMemoryInfoTests
+    /// <summary>Validates that the <see cref="VkBindImageMemoryInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkBindImageMemoryInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkBindImageMemoryInfo>(), Is.EqualTo(sizeof(VkBindImageMemoryInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkBindImageMemoryInfo>(), Is.EqualTo(sizeof(VkBindImageMemoryInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkBindImageMemoryInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkBindImageMemoryInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkBindImageMemoryInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkBindImageMemoryInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkBindImageMemoryInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkBindImageMemoryInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkBindImageMemoryInfo), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(VkBindImageMemoryInfo), Is.EqualTo(32));
-            }
+            Assert.That(sizeof(VkBindImageMemoryInfo), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(VkBindImageMemoryInfo), Is.EqualTo(32));
         }
     }
 }

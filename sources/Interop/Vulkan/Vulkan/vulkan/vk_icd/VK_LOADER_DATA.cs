@@ -5,16 +5,15 @@
 
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan
-{
-    [StructLayout(LayoutKind.Explicit)]
-    public unsafe partial struct VK_LOADER_DATA
-    {
-        [FieldOffset(0)]
-        [NativeTypeName("uintptr_t")]
-        public nuint loaderMagic;
+namespace TerraFX.Interop.Vulkan;
 
-        [FieldOffset(0)]
-        public void* loaderData;
-    }
+[StructLayout(LayoutKind.Explicit)]
+public unsafe partial struct VK_LOADER_DATA
+{
+    [FieldOffset(0)]
+    [NativeTypeName("uintptr_t")]
+    public nuint loaderMagic;
+
+    [FieldOffset(0)]
+    public void* loaderData;
 }

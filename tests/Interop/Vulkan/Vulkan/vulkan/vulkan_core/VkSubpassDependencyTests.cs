@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSubpassDependency" /> struct.</summary>
+public static unsafe partial class VkSubpassDependencyTests
 {
-    /// <summary>Provides validation of the <see cref="VkSubpassDependency" /> struct.</summary>
-    public static unsafe partial class VkSubpassDependencyTests
+    /// <summary>Validates that the <see cref="VkSubpassDependency" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSubpassDependency" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSubpassDependency>(), Is.EqualTo(sizeof(VkSubpassDependency)));
-        }
+        Assert.That(Marshal.SizeOf<VkSubpassDependency>(), Is.EqualTo(sizeof(VkSubpassDependency)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSubpassDependency" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSubpassDependency).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSubpassDependency" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSubpassDependency).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSubpassDependency" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkSubpassDependency), Is.EqualTo(28));
-        }
+    /// <summary>Validates that the <see cref="VkSubpassDependency" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkSubpassDependency), Is.EqualTo(28));
     }
 }

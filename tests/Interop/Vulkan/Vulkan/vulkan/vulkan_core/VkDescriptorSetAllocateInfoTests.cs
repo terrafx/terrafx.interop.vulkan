@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDescriptorSetAllocateInfo" /> struct.</summary>
+public static unsafe partial class VkDescriptorSetAllocateInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkDescriptorSetAllocateInfo" /> struct.</summary>
-    public static unsafe partial class VkDescriptorSetAllocateInfoTests
+    /// <summary>Validates that the <see cref="VkDescriptorSetAllocateInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDescriptorSetAllocateInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDescriptorSetAllocateInfo>(), Is.EqualTo(sizeof(VkDescriptorSetAllocateInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkDescriptorSetAllocateInfo>(), Is.EqualTo(sizeof(VkDescriptorSetAllocateInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDescriptorSetAllocateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDescriptorSetAllocateInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDescriptorSetAllocateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDescriptorSetAllocateInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDescriptorSetAllocateInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkDescriptorSetAllocateInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkDescriptorSetAllocateInfo), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(VkDescriptorSetAllocateInfo), Is.EqualTo(24));
-            }
+            Assert.That(sizeof(VkDescriptorSetAllocateInfo), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(VkDescriptorSetAllocateInfo), Is.EqualTo(24));
         }
     }
 }

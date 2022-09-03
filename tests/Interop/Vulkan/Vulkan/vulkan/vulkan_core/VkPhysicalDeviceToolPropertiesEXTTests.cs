@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceToolPropertiesEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceToolPropertiesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceToolPropertiesEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceToolPropertiesEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceToolPropertiesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceToolPropertiesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceToolPropertiesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceToolPropertiesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceToolPropertiesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceToolPropertiesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceToolPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceToolPropertiesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceToolPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceToolPropertiesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceToolPropertiesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceToolPropertiesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceToolPropertiesEXT), Is.EqualTo(1048));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceToolPropertiesEXT), Is.EqualTo(1036));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceToolPropertiesEXT), Is.EqualTo(1048));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceToolPropertiesEXT), Is.EqualTo(1036));
         }
     }
 }

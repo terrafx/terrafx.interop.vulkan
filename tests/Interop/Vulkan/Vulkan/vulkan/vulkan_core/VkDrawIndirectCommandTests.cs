@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDrawIndirectCommand" /> struct.</summary>
+public static unsafe partial class VkDrawIndirectCommandTests
 {
-    /// <summary>Provides validation of the <see cref="VkDrawIndirectCommand" /> struct.</summary>
-    public static unsafe partial class VkDrawIndirectCommandTests
+    /// <summary>Validates that the <see cref="VkDrawIndirectCommand" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDrawIndirectCommand" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDrawIndirectCommand>(), Is.EqualTo(sizeof(VkDrawIndirectCommand)));
-        }
+        Assert.That(Marshal.SizeOf<VkDrawIndirectCommand>(), Is.EqualTo(sizeof(VkDrawIndirectCommand)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDrawIndirectCommand" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDrawIndirectCommand).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDrawIndirectCommand" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDrawIndirectCommand).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDrawIndirectCommand" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkDrawIndirectCommand), Is.EqualTo(16));
-        }
+    /// <summary>Validates that the <see cref="VkDrawIndirectCommand" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkDrawIndirectCommand), Is.EqualTo(16));
     }
 }

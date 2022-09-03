@@ -3,33 +3,32 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkSubmitInfo2KHR
 {
-    public unsafe partial struct VkSubmitInfo2KHR
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        public VkSubmitFlags flags;
+    public VkSubmitFlags flags;
 
-        [NativeTypeName("uint32_t")]
-        public uint waitSemaphoreInfoCount;
+    [NativeTypeName("uint32_t")]
+    public uint waitSemaphoreInfoCount;
 
-        [NativeTypeName("const VkSemaphoreSubmitInfo *")]
-        public VkSemaphoreSubmitInfoKHR* pWaitSemaphoreInfos;
+    [NativeTypeName("const VkSemaphoreSubmitInfo *")]
+    public VkSemaphoreSubmitInfoKHR* pWaitSemaphoreInfos;
 
-        [NativeTypeName("uint32_t")]
-        public uint commandBufferInfoCount;
+    [NativeTypeName("uint32_t")]
+    public uint commandBufferInfoCount;
 
-        [NativeTypeName("const VkCommandBufferSubmitInfo *")]
-        public VkCommandBufferSubmitInfoKHR* pCommandBufferInfos;
+    [NativeTypeName("const VkCommandBufferSubmitInfo *")]
+    public VkCommandBufferSubmitInfoKHR* pCommandBufferInfos;
 
-        [NativeTypeName("uint32_t")]
-        public uint signalSemaphoreInfoCount;
+    [NativeTypeName("uint32_t")]
+    public uint signalSemaphoreInfoCount;
 
-        [NativeTypeName("const VkSemaphoreSubmitInfo *")]
-        public VkSemaphoreSubmitInfoKHR* pSignalSemaphoreInfos;
-    }
+    [NativeTypeName("const VkSemaphoreSubmitInfo *")]
+    public VkSemaphoreSubmitInfoKHR* pSignalSemaphoreInfos;
 }

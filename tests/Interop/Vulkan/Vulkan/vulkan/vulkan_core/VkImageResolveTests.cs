@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkImageResolve" /> struct.</summary>
+public static unsafe partial class VkImageResolveTests
 {
-    /// <summary>Provides validation of the <see cref="VkImageResolve" /> struct.</summary>
-    public static unsafe partial class VkImageResolveTests
+    /// <summary>Validates that the <see cref="VkImageResolve" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkImageResolve" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkImageResolve>(), Is.EqualTo(sizeof(VkImageResolve)));
-        }
+        Assert.That(Marshal.SizeOf<VkImageResolve>(), Is.EqualTo(sizeof(VkImageResolve)));
+    }
 
-        /// <summary>Validates that the <see cref="VkImageResolve" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkImageResolve).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkImageResolve" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkImageResolve).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkImageResolve" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkImageResolve), Is.EqualTo(68));
-        }
+    /// <summary>Validates that the <see cref="VkImageResolve" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkImageResolve), Is.EqualTo(68));
     }
 }

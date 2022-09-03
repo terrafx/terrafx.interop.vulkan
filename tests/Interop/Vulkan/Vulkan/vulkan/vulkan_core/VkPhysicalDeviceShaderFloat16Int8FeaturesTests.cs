@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceShaderFloat16Int8Features" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceShaderFloat16Int8FeaturesTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceShaderFloat16Int8Features" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceShaderFloat16Int8FeaturesTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderFloat16Int8Features" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderFloat16Int8Features" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceShaderFloat16Int8Features>(), Is.EqualTo(sizeof(VkPhysicalDeviceShaderFloat16Int8Features)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceShaderFloat16Int8Features>(), Is.EqualTo(sizeof(VkPhysicalDeviceShaderFloat16Int8Features)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderFloat16Int8Features" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceShaderFloat16Int8Features).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderFloat16Int8Features" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceShaderFloat16Int8Features).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderFloat16Int8Features" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderFloat16Int8Features" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceShaderFloat16Int8Features), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceShaderFloat16Int8Features), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceShaderFloat16Int8Features), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceShaderFloat16Int8Features), Is.EqualTo(16));
         }
     }
 }

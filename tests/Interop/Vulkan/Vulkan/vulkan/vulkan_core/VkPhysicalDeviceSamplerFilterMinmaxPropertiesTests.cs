@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceSamplerFilterMinmaxProperties" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceSamplerFilterMinmaxPropertiesTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceSamplerFilterMinmaxProperties" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceSamplerFilterMinmaxPropertiesTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceSamplerFilterMinmaxProperties" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceSamplerFilterMinmaxProperties" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceSamplerFilterMinmaxProperties>(), Is.EqualTo(sizeof(VkPhysicalDeviceSamplerFilterMinmaxProperties)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceSamplerFilterMinmaxProperties>(), Is.EqualTo(sizeof(VkPhysicalDeviceSamplerFilterMinmaxProperties)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceSamplerFilterMinmaxProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceSamplerFilterMinmaxProperties).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceSamplerFilterMinmaxProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceSamplerFilterMinmaxProperties).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceSamplerFilterMinmaxProperties" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceSamplerFilterMinmaxProperties" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceSamplerFilterMinmaxProperties), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceSamplerFilterMinmaxProperties), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceSamplerFilterMinmaxProperties), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceSamplerFilterMinmaxProperties), Is.EqualTo(16));
         }
     }
 }

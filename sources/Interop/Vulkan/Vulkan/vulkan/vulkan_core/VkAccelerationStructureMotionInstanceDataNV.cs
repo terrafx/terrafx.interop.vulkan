@@ -5,18 +5,17 @@
 
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[StructLayout(LayoutKind.Explicit)]
+public partial struct VkAccelerationStructureMotionInstanceDataNV
 {
-    [StructLayout(LayoutKind.Explicit)]
-    public partial struct VkAccelerationStructureMotionInstanceDataNV
-    {
-        [FieldOffset(0)]
-        public VkAccelerationStructureInstanceKHR staticInstance;
+    [FieldOffset(0)]
+    public VkAccelerationStructureInstanceKHR staticInstance;
 
-        [FieldOffset(0)]
-        public VkAccelerationStructureMatrixMotionInstanceNV matrixMotionInstance;
+    [FieldOffset(0)]
+    public VkAccelerationStructureMatrixMotionInstanceNV matrixMotionInstance;
 
-        [FieldOffset(0)]
-        public VkAccelerationStructureSRTMotionInstanceNV srtMotionInstance;
-    }
+    [FieldOffset(0)]
+    public VkAccelerationStructureSRTMotionInstanceNV srtMotionInstance;
 }

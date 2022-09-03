@@ -5,13 +5,12 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[NativeTypeName("int")]
+[Flags]
+public enum VkRenderPassCreateFlags : uint
 {
-    [NativeTypeName("int")]
-    [Flags]
-    public enum VkRenderPassCreateFlags : uint
-    {
-        VK_RENDER_PASS_CREATE_TRANSFORM_BIT_QCOM = 0x00000002,
-        VK_RENDER_PASS_CREATE_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
-    }
+    VK_RENDER_PASS_CREATE_TRANSFORM_BIT_QCOM = 0x00000002,
+    VK_RENDER_PASS_CREATE_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
 }

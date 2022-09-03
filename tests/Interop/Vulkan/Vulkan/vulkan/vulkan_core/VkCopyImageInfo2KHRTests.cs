@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkCopyImageInfo2KHR" /> struct.</summary>
+public static unsafe partial class VkCopyImageInfo2KHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkCopyImageInfo2KHR" /> struct.</summary>
-    public static unsafe partial class VkCopyImageInfo2KHRTests
+    /// <summary>Validates that the <see cref="VkCopyImageInfo2KHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkCopyImageInfo2KHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkCopyImageInfo2KHR>(), Is.EqualTo(sizeof(VkCopyImageInfo2KHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkCopyImageInfo2KHR>(), Is.EqualTo(sizeof(VkCopyImageInfo2KHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkCopyImageInfo2KHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkCopyImageInfo2KHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkCopyImageInfo2KHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkCopyImageInfo2KHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkCopyImageInfo2KHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkCopyImageInfo2KHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkCopyImageInfo2KHR), Is.EqualTo(56));
-            }
-            else
-            {
-                Assert.That(sizeof(VkCopyImageInfo2KHR), Is.EqualTo(48));
-            }
+            Assert.That(sizeof(VkCopyImageInfo2KHR), Is.EqualTo(56));
+        }
+        else
+        {
+            Assert.That(sizeof(VkCopyImageInfo2KHR), Is.EqualTo(48));
         }
     }
 }

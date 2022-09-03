@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDisplayPresentInfoKHR" /> struct.</summary>
+public static unsafe partial class VkDisplayPresentInfoKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkDisplayPresentInfoKHR" /> struct.</summary>
-    public static unsafe partial class VkDisplayPresentInfoKHRTests
+    /// <summary>Validates that the <see cref="VkDisplayPresentInfoKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDisplayPresentInfoKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDisplayPresentInfoKHR>(), Is.EqualTo(sizeof(VkDisplayPresentInfoKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkDisplayPresentInfoKHR>(), Is.EqualTo(sizeof(VkDisplayPresentInfoKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDisplayPresentInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDisplayPresentInfoKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDisplayPresentInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDisplayPresentInfoKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDisplayPresentInfoKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkDisplayPresentInfoKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkDisplayPresentInfoKHR), Is.EqualTo(56));
-            }
-            else
-            {
-                Assert.That(sizeof(VkDisplayPresentInfoKHR), Is.EqualTo(44));
-            }
+            Assert.That(sizeof(VkDisplayPresentInfoKHR), Is.EqualTo(56));
+        }
+        else
+        {
+            Assert.That(sizeof(VkDisplayPresentInfoKHR), Is.EqualTo(44));
         }
     }
 }

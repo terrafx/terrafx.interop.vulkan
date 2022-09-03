@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkBindVertexBufferIndirectCommandNV" /> struct.</summary>
+public static unsafe partial class VkBindVertexBufferIndirectCommandNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkBindVertexBufferIndirectCommandNV" /> struct.</summary>
-    public static unsafe partial class VkBindVertexBufferIndirectCommandNVTests
+    /// <summary>Validates that the <see cref="VkBindVertexBufferIndirectCommandNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkBindVertexBufferIndirectCommandNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkBindVertexBufferIndirectCommandNV>(), Is.EqualTo(sizeof(VkBindVertexBufferIndirectCommandNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkBindVertexBufferIndirectCommandNV>(), Is.EqualTo(sizeof(VkBindVertexBufferIndirectCommandNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkBindVertexBufferIndirectCommandNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkBindVertexBufferIndirectCommandNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkBindVertexBufferIndirectCommandNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkBindVertexBufferIndirectCommandNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkBindVertexBufferIndirectCommandNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkBindVertexBufferIndirectCommandNV), Is.EqualTo(16));
-        }
+    /// <summary>Validates that the <see cref="VkBindVertexBufferIndirectCommandNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkBindVertexBufferIndirectCommandNV), Is.EqualTo(16));
     }
 }

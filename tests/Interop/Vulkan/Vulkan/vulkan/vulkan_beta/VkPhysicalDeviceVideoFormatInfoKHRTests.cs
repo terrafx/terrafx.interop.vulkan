@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceVideoFormatInfoKHR" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceVideoFormatInfoKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceVideoFormatInfoKHR" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceVideoFormatInfoKHRTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceVideoFormatInfoKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceVideoFormatInfoKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceVideoFormatInfoKHR>(), Is.EqualTo(sizeof(VkPhysicalDeviceVideoFormatInfoKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceVideoFormatInfoKHR>(), Is.EqualTo(sizeof(VkPhysicalDeviceVideoFormatInfoKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceVideoFormatInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceVideoFormatInfoKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceVideoFormatInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceVideoFormatInfoKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceVideoFormatInfoKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceVideoFormatInfoKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceVideoFormatInfoKHR), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceVideoFormatInfoKHR), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceVideoFormatInfoKHR), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceVideoFormatInfoKHR), Is.EqualTo(16));
         }
     }
 }

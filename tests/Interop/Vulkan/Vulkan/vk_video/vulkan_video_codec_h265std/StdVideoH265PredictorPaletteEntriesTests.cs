@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="StdVideoH265PredictorPaletteEntries" /> struct.</summary>
+public static unsafe partial class StdVideoH265PredictorPaletteEntriesTests
 {
-    /// <summary>Provides validation of the <see cref="StdVideoH265PredictorPaletteEntries" /> struct.</summary>
-    public static unsafe partial class StdVideoH265PredictorPaletteEntriesTests
+    /// <summary>Validates that the <see cref="StdVideoH265PredictorPaletteEntries" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="StdVideoH265PredictorPaletteEntries" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<StdVideoH265PredictorPaletteEntries>(), Is.EqualTo(sizeof(StdVideoH265PredictorPaletteEntries)));
-        }
+        Assert.That(Marshal.SizeOf<StdVideoH265PredictorPaletteEntries>(), Is.EqualTo(sizeof(StdVideoH265PredictorPaletteEntries)));
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoH265PredictorPaletteEntries" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(StdVideoH265PredictorPaletteEntries).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="StdVideoH265PredictorPaletteEntries" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(StdVideoH265PredictorPaletteEntries).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoH265PredictorPaletteEntries" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(StdVideoH265PredictorPaletteEntries), Is.EqualTo(768));
-        }
+    /// <summary>Validates that the <see cref="StdVideoH265PredictorPaletteEntries" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(StdVideoH265PredictorPaletteEntries), Is.EqualTo(768));
     }
 }

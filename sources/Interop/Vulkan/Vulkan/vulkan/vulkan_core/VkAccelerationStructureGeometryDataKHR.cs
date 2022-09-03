@@ -5,18 +5,17 @@
 
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[StructLayout(LayoutKind.Explicit)]
+public partial struct VkAccelerationStructureGeometryDataKHR
 {
-    [StructLayout(LayoutKind.Explicit)]
-    public partial struct VkAccelerationStructureGeometryDataKHR
-    {
-        [FieldOffset(0)]
-        public VkAccelerationStructureGeometryTrianglesDataKHR triangles;
+    [FieldOffset(0)]
+    public VkAccelerationStructureGeometryTrianglesDataKHR triangles;
 
-        [FieldOffset(0)]
-        public VkAccelerationStructureGeometryAabbsDataKHR aabbs;
+    [FieldOffset(0)]
+    public VkAccelerationStructureGeometryAabbsDataKHR aabbs;
 
-        [FieldOffset(0)]
-        public VkAccelerationStructureGeometryInstancesDataKHR instances;
-    }
+    [FieldOffset(0)]
+    public VkAccelerationStructureGeometryInstancesDataKHR instances;
 }

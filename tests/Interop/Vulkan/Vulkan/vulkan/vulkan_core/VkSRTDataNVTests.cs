@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSRTDataNV" /> struct.</summary>
+public static unsafe partial class VkSRTDataNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkSRTDataNV" /> struct.</summary>
-    public static unsafe partial class VkSRTDataNVTests
+    /// <summary>Validates that the <see cref="VkSRTDataNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSRTDataNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSRTDataNV>(), Is.EqualTo(sizeof(VkSRTDataNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkSRTDataNV>(), Is.EqualTo(sizeof(VkSRTDataNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSRTDataNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSRTDataNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSRTDataNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSRTDataNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSRTDataNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkSRTDataNV), Is.EqualTo(64));
-        }
+    /// <summary>Validates that the <see cref="VkSRTDataNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkSRTDataNV), Is.EqualTo(64));
     }
 }

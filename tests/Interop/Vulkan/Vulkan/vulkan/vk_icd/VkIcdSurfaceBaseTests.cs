@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkIcdSurfaceBase" /> struct.</summary>
+public static unsafe partial class VkIcdSurfaceBaseTests
 {
-    /// <summary>Provides validation of the <see cref="VkIcdSurfaceBase" /> struct.</summary>
-    public static unsafe partial class VkIcdSurfaceBaseTests
+    /// <summary>Validates that the <see cref="VkIcdSurfaceBase" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkIcdSurfaceBase" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkIcdSurfaceBase>(), Is.EqualTo(sizeof(VkIcdSurfaceBase)));
-        }
+        Assert.That(Marshal.SizeOf<VkIcdSurfaceBase>(), Is.EqualTo(sizeof(VkIcdSurfaceBase)));
+    }
 
-        /// <summary>Validates that the <see cref="VkIcdSurfaceBase" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkIcdSurfaceBase).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkIcdSurfaceBase" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkIcdSurfaceBase).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkIcdSurfaceBase" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkIcdSurfaceBase), Is.EqualTo(4));
-        }
+    /// <summary>Validates that the <see cref="VkIcdSurfaceBase" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkIcdSurfaceBase), Is.EqualTo(4));
     }
 }

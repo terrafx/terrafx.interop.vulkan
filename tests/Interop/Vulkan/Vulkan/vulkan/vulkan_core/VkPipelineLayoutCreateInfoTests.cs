@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPipelineLayoutCreateInfo" /> struct.</summary>
+public static unsafe partial class VkPipelineLayoutCreateInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkPipelineLayoutCreateInfo" /> struct.</summary>
-    public static unsafe partial class VkPipelineLayoutCreateInfoTests
+    /// <summary>Validates that the <see cref="VkPipelineLayoutCreateInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPipelineLayoutCreateInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPipelineLayoutCreateInfo>(), Is.EqualTo(sizeof(VkPipelineLayoutCreateInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkPipelineLayoutCreateInfo>(), Is.EqualTo(sizeof(VkPipelineLayoutCreateInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineLayoutCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPipelineLayoutCreateInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPipelineLayoutCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPipelineLayoutCreateInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineLayoutCreateInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPipelineLayoutCreateInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPipelineLayoutCreateInfo), Is.EqualTo(48));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPipelineLayoutCreateInfo), Is.EqualTo(28));
-            }
+            Assert.That(sizeof(VkPipelineLayoutCreateInfo), Is.EqualTo(48));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPipelineLayoutCreateInfo), Is.EqualTo(28));
         }
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNVTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV>(), Is.EqualTo(sizeof(VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV>(), Is.EqualTo(sizeof(VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV), Is.EqualTo(20));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV), Is.EqualTo(20));
         }
     }
 }

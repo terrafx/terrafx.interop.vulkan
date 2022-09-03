@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="StdVideoH265SpsVuiFlags" /> struct.</summary>
+public static unsafe partial class StdVideoH265SpsVuiFlagsTests
 {
-    /// <summary>Provides validation of the <see cref="StdVideoH265SpsVuiFlags" /> struct.</summary>
-    public static unsafe partial class StdVideoH265SpsVuiFlagsTests
+    /// <summary>Validates that the <see cref="StdVideoH265SpsVuiFlags" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="StdVideoH265SpsVuiFlags" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<StdVideoH265SpsVuiFlags>(), Is.EqualTo(sizeof(StdVideoH265SpsVuiFlags)));
-        }
+        Assert.That(Marshal.SizeOf<StdVideoH265SpsVuiFlags>(), Is.EqualTo(sizeof(StdVideoH265SpsVuiFlags)));
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoH265SpsVuiFlags" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(StdVideoH265SpsVuiFlags).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="StdVideoH265SpsVuiFlags" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(StdVideoH265SpsVuiFlags).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoH265SpsVuiFlags" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(StdVideoH265SpsVuiFlags), Is.EqualTo(4));
-        }
+    /// <summary>Validates that the <see cref="StdVideoH265SpsVuiFlags" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(StdVideoH265SpsVuiFlags), Is.EqualTo(4));
     }
 }

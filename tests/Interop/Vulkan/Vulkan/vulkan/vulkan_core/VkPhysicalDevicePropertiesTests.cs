@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceProperties" /> struct.</summary>
+public static unsafe partial class VkPhysicalDevicePropertiesTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceProperties" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDevicePropertiesTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceProperties" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceProperties" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceProperties>(), Is.EqualTo(sizeof(VkPhysicalDeviceProperties)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceProperties>(), Is.EqualTo(sizeof(VkPhysicalDeviceProperties)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceProperties).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceProperties).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceProperties" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceProperties" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceProperties), Is.EqualTo(824));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceProperties), Is.EqualTo(816));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceProperties), Is.EqualTo(824));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceProperties), Is.EqualTo(816));
         }
     }
 }

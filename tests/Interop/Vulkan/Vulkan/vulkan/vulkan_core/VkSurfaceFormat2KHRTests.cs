@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSurfaceFormat2KHR" /> struct.</summary>
+public static unsafe partial class VkSurfaceFormat2KHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkSurfaceFormat2KHR" /> struct.</summary>
-    public static unsafe partial class VkSurfaceFormat2KHRTests
+    /// <summary>Validates that the <see cref="VkSurfaceFormat2KHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSurfaceFormat2KHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSurfaceFormat2KHR>(), Is.EqualTo(sizeof(VkSurfaceFormat2KHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkSurfaceFormat2KHR>(), Is.EqualTo(sizeof(VkSurfaceFormat2KHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSurfaceFormat2KHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSurfaceFormat2KHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSurfaceFormat2KHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSurfaceFormat2KHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSurfaceFormat2KHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkSurfaceFormat2KHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkSurfaceFormat2KHR), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkSurfaceFormat2KHR), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkSurfaceFormat2KHR), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkSurfaceFormat2KHR), Is.EqualTo(16));
         }
     }
 }

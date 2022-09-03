@@ -3,45 +3,44 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkSamplerCreateInfo
 {
-    public unsafe partial struct VkSamplerCreateInfo
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        public VkSamplerCreateFlags flags;
+    public VkSamplerCreateFlags flags;
 
-        public VkFilter magFilter;
+    public VkFilter magFilter;
 
-        public VkFilter minFilter;
+    public VkFilter minFilter;
 
-        public VkSamplerMipmapMode mipmapMode;
+    public VkSamplerMipmapMode mipmapMode;
 
-        public VkSamplerAddressMode addressModeU;
+    public VkSamplerAddressMode addressModeU;
 
-        public VkSamplerAddressMode addressModeV;
+    public VkSamplerAddressMode addressModeV;
 
-        public VkSamplerAddressMode addressModeW;
+    public VkSamplerAddressMode addressModeW;
 
-        public float mipLodBias;
+    public float mipLodBias;
 
-        public VkBool32 anisotropyEnable;
+    public VkBool32 anisotropyEnable;
 
-        public float maxAnisotropy;
+    public float maxAnisotropy;
 
-        public VkBool32 compareEnable;
+    public VkBool32 compareEnable;
 
-        public VkCompareOp compareOp;
+    public VkCompareOp compareOp;
 
-        public float minLod;
+    public float minLod;
 
-        public float maxLod;
+    public float maxLod;
 
-        public VkBorderColor borderColor;
+    public VkBorderColor borderColor;
 
-        public VkBool32 unnormalizedCoordinates;
-    }
+    public VkBool32 unnormalizedCoordinates;
 }

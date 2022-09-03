@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDrmFormatModifierPropertiesListEXT" /> struct.</summary>
+public static unsafe partial class VkDrmFormatModifierPropertiesListEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkDrmFormatModifierPropertiesListEXT" /> struct.</summary>
-    public static unsafe partial class VkDrmFormatModifierPropertiesListEXTTests
+    /// <summary>Validates that the <see cref="VkDrmFormatModifierPropertiesListEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDrmFormatModifierPropertiesListEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDrmFormatModifierPropertiesListEXT>(), Is.EqualTo(sizeof(VkDrmFormatModifierPropertiesListEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkDrmFormatModifierPropertiesListEXT>(), Is.EqualTo(sizeof(VkDrmFormatModifierPropertiesListEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDrmFormatModifierPropertiesListEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDrmFormatModifierPropertiesListEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDrmFormatModifierPropertiesListEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDrmFormatModifierPropertiesListEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDrmFormatModifierPropertiesListEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkDrmFormatModifierPropertiesListEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkDrmFormatModifierPropertiesListEXT), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkDrmFormatModifierPropertiesListEXT), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkDrmFormatModifierPropertiesListEXT), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkDrmFormatModifierPropertiesListEXT), Is.EqualTo(16));
         }
     }
 }

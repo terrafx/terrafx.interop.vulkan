@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkExportFenceWin32HandleInfoKHR" /> struct.</summary>
+public static unsafe partial class VkExportFenceWin32HandleInfoKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkExportFenceWin32HandleInfoKHR" /> struct.</summary>
-    public static unsafe partial class VkExportFenceWin32HandleInfoKHRTests
+    /// <summary>Validates that the <see cref="VkExportFenceWin32HandleInfoKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkExportFenceWin32HandleInfoKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkExportFenceWin32HandleInfoKHR>(), Is.EqualTo(sizeof(VkExportFenceWin32HandleInfoKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkExportFenceWin32HandleInfoKHR>(), Is.EqualTo(sizeof(VkExportFenceWin32HandleInfoKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkExportFenceWin32HandleInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkExportFenceWin32HandleInfoKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkExportFenceWin32HandleInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkExportFenceWin32HandleInfoKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkExportFenceWin32HandleInfoKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkExportFenceWin32HandleInfoKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkExportFenceWin32HandleInfoKHR), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(VkExportFenceWin32HandleInfoKHR), Is.EqualTo(20));
-            }
+            Assert.That(sizeof(VkExportFenceWin32HandleInfoKHR), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(VkExportFenceWin32HandleInfoKHR), Is.EqualTo(20));
         }
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDescriptorSetLayoutSupport" /> struct.</summary>
+public static unsafe partial class VkDescriptorSetLayoutSupportTests
 {
-    /// <summary>Provides validation of the <see cref="VkDescriptorSetLayoutSupport" /> struct.</summary>
-    public static unsafe partial class VkDescriptorSetLayoutSupportTests
+    /// <summary>Validates that the <see cref="VkDescriptorSetLayoutSupport" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDescriptorSetLayoutSupport" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDescriptorSetLayoutSupport>(), Is.EqualTo(sizeof(VkDescriptorSetLayoutSupport)));
-        }
+        Assert.That(Marshal.SizeOf<VkDescriptorSetLayoutSupport>(), Is.EqualTo(sizeof(VkDescriptorSetLayoutSupport)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDescriptorSetLayoutSupport" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDescriptorSetLayoutSupport).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDescriptorSetLayoutSupport" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDescriptorSetLayoutSupport).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDescriptorSetLayoutSupport" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkDescriptorSetLayoutSupport" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkDescriptorSetLayoutSupport), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkDescriptorSetLayoutSupport), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkDescriptorSetLayoutSupport), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkDescriptorSetLayoutSupport), Is.EqualTo(12));
         }
     }
 }

@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPresentTimeGOOGLE" /> struct.</summary>
+public static unsafe partial class VkPresentTimeGOOGLETests
 {
-    /// <summary>Provides validation of the <see cref="VkPresentTimeGOOGLE" /> struct.</summary>
-    public static unsafe partial class VkPresentTimeGOOGLETests
+    /// <summary>Validates that the <see cref="VkPresentTimeGOOGLE" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPresentTimeGOOGLE" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPresentTimeGOOGLE>(), Is.EqualTo(sizeof(VkPresentTimeGOOGLE)));
-        }
+        Assert.That(Marshal.SizeOf<VkPresentTimeGOOGLE>(), Is.EqualTo(sizeof(VkPresentTimeGOOGLE)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPresentTimeGOOGLE" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPresentTimeGOOGLE).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPresentTimeGOOGLE" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPresentTimeGOOGLE).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPresentTimeGOOGLE" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkPresentTimeGOOGLE), Is.EqualTo(16));
-        }
+    /// <summary>Validates that the <see cref="VkPresentTimeGOOGLE" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkPresentTimeGOOGLE), Is.EqualTo(16));
     }
 }

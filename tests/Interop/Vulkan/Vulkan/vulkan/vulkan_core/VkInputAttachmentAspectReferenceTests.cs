@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkInputAttachmentAspectReference" /> struct.</summary>
+public static unsafe partial class VkInputAttachmentAspectReferenceTests
 {
-    /// <summary>Provides validation of the <see cref="VkInputAttachmentAspectReference" /> struct.</summary>
-    public static unsafe partial class VkInputAttachmentAspectReferenceTests
+    /// <summary>Validates that the <see cref="VkInputAttachmentAspectReference" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkInputAttachmentAspectReference" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkInputAttachmentAspectReference>(), Is.EqualTo(sizeof(VkInputAttachmentAspectReference)));
-        }
+        Assert.That(Marshal.SizeOf<VkInputAttachmentAspectReference>(), Is.EqualTo(sizeof(VkInputAttachmentAspectReference)));
+    }
 
-        /// <summary>Validates that the <see cref="VkInputAttachmentAspectReference" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkInputAttachmentAspectReference).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkInputAttachmentAspectReference" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkInputAttachmentAspectReference).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkInputAttachmentAspectReference" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkInputAttachmentAspectReference), Is.EqualTo(12));
-        }
+    /// <summary>Validates that the <see cref="VkInputAttachmentAspectReference" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkInputAttachmentAspectReference), Is.EqualTo(12));
     }
 }

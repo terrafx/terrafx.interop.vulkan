@@ -3,33 +3,32 @@
 // Ported from include/vulkan/vulkan_beta.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkVideoSessionCreateInfoKHR
 {
-    public unsafe partial struct VkVideoSessionCreateInfoKHR
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("uint32_t")]
-        public uint queueFamilyIndex;
+    [NativeTypeName("uint32_t")]
+    public uint queueFamilyIndex;
 
-        public VkVideoSessionCreateFlagsKHR flags;
+    public VkVideoSessionCreateFlagsKHR flags;
 
-        [NativeTypeName("const VkVideoProfileKHR *")]
-        public VkVideoProfileKHR* pVideoProfile;
+    [NativeTypeName("const VkVideoProfileKHR *")]
+    public VkVideoProfileKHR* pVideoProfile;
 
-        public VkFormat pictureFormat;
+    public VkFormat pictureFormat;
 
-        public VkExtent2D maxCodedExtent;
+    public VkExtent2D maxCodedExtent;
 
-        public VkFormat referencePicturesFormat;
+    public VkFormat referencePicturesFormat;
 
-        [NativeTypeName("uint32_t")]
-        public uint maxReferencePicturesSlotsCount;
+    [NativeTypeName("uint32_t")]
+    public uint maxReferencePicturesSlotsCount;
 
-        [NativeTypeName("uint32_t")]
-        public uint maxReferencePicturesActiveCount;
-    }
+    [NativeTypeName("uint32_t")]
+    public uint maxReferencePicturesActiveCount;
 }

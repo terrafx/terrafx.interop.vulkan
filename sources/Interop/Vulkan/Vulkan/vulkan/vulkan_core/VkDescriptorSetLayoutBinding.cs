@@ -3,21 +3,20 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkDescriptorSetLayoutBinding
 {
-    public unsafe partial struct VkDescriptorSetLayoutBinding
-    {
-        [NativeTypeName("uint32_t")]
-        public uint binding;
+    [NativeTypeName("uint32_t")]
+    public uint binding;
 
-        public VkDescriptorType descriptorType;
+    public VkDescriptorType descriptorType;
 
-        [NativeTypeName("uint32_t")]
-        public uint descriptorCount;
+    [NativeTypeName("uint32_t")]
+    public uint descriptorCount;
 
-        public VkShaderStageFlags stageFlags;
+    public VkShaderStageFlags stageFlags;
 
-        [NativeTypeName("const VkSampler *")]
-        public VkSampler* pImmutableSamplers;
-    }
+    [NativeTypeName("const VkSampler *")]
+    public VkSampler* pImmutableSamplers;
 }

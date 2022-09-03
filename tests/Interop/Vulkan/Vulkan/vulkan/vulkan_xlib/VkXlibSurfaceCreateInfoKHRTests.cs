@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkXlibSurfaceCreateInfoKHR" /> struct.</summary>
+public static unsafe partial class VkXlibSurfaceCreateInfoKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkXlibSurfaceCreateInfoKHR" /> struct.</summary>
-    public static unsafe partial class VkXlibSurfaceCreateInfoKHRTests
+    /// <summary>Validates that the <see cref="VkXlibSurfaceCreateInfoKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkXlibSurfaceCreateInfoKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkXlibSurfaceCreateInfoKHR>(), Is.EqualTo(sizeof(VkXlibSurfaceCreateInfoKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkXlibSurfaceCreateInfoKHR>(), Is.EqualTo(sizeof(VkXlibSurfaceCreateInfoKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkXlibSurfaceCreateInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkXlibSurfaceCreateInfoKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkXlibSurfaceCreateInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkXlibSurfaceCreateInfoKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkXlibSurfaceCreateInfoKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkXlibSurfaceCreateInfoKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkXlibSurfaceCreateInfoKHR), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(VkXlibSurfaceCreateInfoKHR), Is.EqualTo(20));
-            }
+            Assert.That(sizeof(VkXlibSurfaceCreateInfoKHR), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(VkXlibSurfaceCreateInfoKHR), Is.EqualTo(20));
         }
     }
 }

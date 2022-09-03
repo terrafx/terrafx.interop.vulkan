@@ -3,26 +3,25 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkPipelineCoverageModulationStateCreateInfoNV
 {
-    public unsafe partial struct VkPipelineCoverageModulationStateCreateInfoNV
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("VkPipelineCoverageModulationStateCreateFlagsNV")]
-        public uint flags;
+    [NativeTypeName("VkPipelineCoverageModulationStateCreateFlagsNV")]
+    public uint flags;
 
-        public VkCoverageModulationModeNV coverageModulationMode;
+    public VkCoverageModulationModeNV coverageModulationMode;
 
-        public VkBool32 coverageModulationTableEnable;
+    public VkBool32 coverageModulationTableEnable;
 
-        [NativeTypeName("uint32_t")]
-        public uint coverageModulationTableCount;
+    [NativeTypeName("uint32_t")]
+    public uint coverageModulationTableCount;
 
-        [NativeTypeName("const float *")]
-        public float* pCoverageModulationTable;
-    }
+    [NativeTypeName("const float *")]
+    public float* pCoverageModulationTable;
 }

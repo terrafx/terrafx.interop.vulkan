@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceBorderColorSwizzleFeaturesEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceBorderColorSwizzleFeaturesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceBorderColorSwizzleFeaturesEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceBorderColorSwizzleFeaturesEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceBorderColorSwizzleFeaturesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceBorderColorSwizzleFeaturesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceBorderColorSwizzleFeaturesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceBorderColorSwizzleFeaturesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceBorderColorSwizzleFeaturesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceBorderColorSwizzleFeaturesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceBorderColorSwizzleFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceBorderColorSwizzleFeaturesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceBorderColorSwizzleFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceBorderColorSwizzleFeaturesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceBorderColorSwizzleFeaturesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceBorderColorSwizzleFeaturesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceBorderColorSwizzleFeaturesEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceBorderColorSwizzleFeaturesEXT), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceBorderColorSwizzleFeaturesEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceBorderColorSwizzleFeaturesEXT), Is.EqualTo(16));
         }
     }
 }

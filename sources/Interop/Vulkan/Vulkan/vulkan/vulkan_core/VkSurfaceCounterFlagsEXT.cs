@@ -5,14 +5,13 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[NativeTypeName("int")]
+[Flags]
+public enum VkSurfaceCounterFlagsEXT : uint
 {
-    [NativeTypeName("int")]
-    [Flags]
-    public enum VkSurfaceCounterFlagsEXT : uint
-    {
-        VK_SURFACE_COUNTER_VBLANK_BIT_EXT = 0x00000001,
-        VK_SURFACE_COUNTER_VBLANK_EXT = VK_SURFACE_COUNTER_VBLANK_BIT_EXT,
-        VK_SURFACE_COUNTER_FLAG_BITS_MAX_ENUM_EXT = 0x7FFFFFFF,
-    }
+    VK_SURFACE_COUNTER_VBLANK_BIT_EXT = 0x00000001,
+    VK_SURFACE_COUNTER_VBLANK_EXT = VK_SURFACE_COUNTER_VBLANK_BIT_EXT,
+    VK_SURFACE_COUNTER_FLAG_BITS_MAX_ENUM_EXT = 0x7FFFFFFF,
 }

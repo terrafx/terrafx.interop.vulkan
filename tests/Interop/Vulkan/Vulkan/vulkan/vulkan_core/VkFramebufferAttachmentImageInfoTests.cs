@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkFramebufferAttachmentImageInfo" /> struct.</summary>
+public static unsafe partial class VkFramebufferAttachmentImageInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkFramebufferAttachmentImageInfo" /> struct.</summary>
-    public static unsafe partial class VkFramebufferAttachmentImageInfoTests
+    /// <summary>Validates that the <see cref="VkFramebufferAttachmentImageInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkFramebufferAttachmentImageInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkFramebufferAttachmentImageInfo>(), Is.EqualTo(sizeof(VkFramebufferAttachmentImageInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkFramebufferAttachmentImageInfo>(), Is.EqualTo(sizeof(VkFramebufferAttachmentImageInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkFramebufferAttachmentImageInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkFramebufferAttachmentImageInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkFramebufferAttachmentImageInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkFramebufferAttachmentImageInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkFramebufferAttachmentImageInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkFramebufferAttachmentImageInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkFramebufferAttachmentImageInfo), Is.EqualTo(48));
-            }
-            else
-            {
-                Assert.That(sizeof(VkFramebufferAttachmentImageInfo), Is.EqualTo(36));
-            }
+            Assert.That(sizeof(VkFramebufferAttachmentImageInfo), Is.EqualTo(48));
+        }
+        else
+        {
+            Assert.That(sizeof(VkFramebufferAttachmentImageInfo), Is.EqualTo(36));
         }
     }
 }

@@ -3,48 +3,47 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkCuLaunchInfoNVX
 {
-    public unsafe partial struct VkCuLaunchInfoNVX
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        public VkCuFunctionNVX function;
+    public VkCuFunctionNVX function;
 
-        [NativeTypeName("uint32_t")]
-        public uint gridDimX;
+    [NativeTypeName("uint32_t")]
+    public uint gridDimX;
 
-        [NativeTypeName("uint32_t")]
-        public uint gridDimY;
+    [NativeTypeName("uint32_t")]
+    public uint gridDimY;
 
-        [NativeTypeName("uint32_t")]
-        public uint gridDimZ;
+    [NativeTypeName("uint32_t")]
+    public uint gridDimZ;
 
-        [NativeTypeName("uint32_t")]
-        public uint blockDimX;
+    [NativeTypeName("uint32_t")]
+    public uint blockDimX;
 
-        [NativeTypeName("uint32_t")]
-        public uint blockDimY;
+    [NativeTypeName("uint32_t")]
+    public uint blockDimY;
 
-        [NativeTypeName("uint32_t")]
-        public uint blockDimZ;
+    [NativeTypeName("uint32_t")]
+    public uint blockDimZ;
 
-        [NativeTypeName("uint32_t")]
-        public uint sharedMemBytes;
+    [NativeTypeName("uint32_t")]
+    public uint sharedMemBytes;
 
-        [NativeTypeName("size_t")]
-        public nuint paramCount;
+    [NativeTypeName("size_t")]
+    public nuint paramCount;
 
-        [NativeTypeName("const void *const *")]
-        public void** pParams;
+    [NativeTypeName("const void *const *")]
+    public void** pParams;
 
-        [NativeTypeName("size_t")]
-        public nuint extraCount;
+    [NativeTypeName("size_t")]
+    public nuint extraCount;
 
-        [NativeTypeName("const void *const *")]
-        public void** pExtras;
-    }
+    [NativeTypeName("const void *const *")]
+    public void** pExtras;
 }

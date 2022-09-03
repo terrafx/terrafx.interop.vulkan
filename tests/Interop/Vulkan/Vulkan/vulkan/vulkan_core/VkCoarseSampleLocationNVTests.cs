@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkCoarseSampleLocationNV" /> struct.</summary>
+public static unsafe partial class VkCoarseSampleLocationNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkCoarseSampleLocationNV" /> struct.</summary>
-    public static unsafe partial class VkCoarseSampleLocationNVTests
+    /// <summary>Validates that the <see cref="VkCoarseSampleLocationNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkCoarseSampleLocationNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkCoarseSampleLocationNV>(), Is.EqualTo(sizeof(VkCoarseSampleLocationNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkCoarseSampleLocationNV>(), Is.EqualTo(sizeof(VkCoarseSampleLocationNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkCoarseSampleLocationNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkCoarseSampleLocationNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkCoarseSampleLocationNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkCoarseSampleLocationNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkCoarseSampleLocationNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkCoarseSampleLocationNV), Is.EqualTo(12));
-        }
+    /// <summary>Validates that the <see cref="VkCoarseSampleLocationNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkCoarseSampleLocationNV), Is.EqualTo(12));
     }
 }

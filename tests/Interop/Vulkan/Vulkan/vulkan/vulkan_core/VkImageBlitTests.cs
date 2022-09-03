@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkImageBlit" /> struct.</summary>
+public static unsafe partial class VkImageBlitTests
 {
-    /// <summary>Provides validation of the <see cref="VkImageBlit" /> struct.</summary>
-    public static unsafe partial class VkImageBlitTests
+    /// <summary>Validates that the <see cref="VkImageBlit" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkImageBlit" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkImageBlit>(), Is.EqualTo(sizeof(VkImageBlit)));
-        }
+        Assert.That(Marshal.SizeOf<VkImageBlit>(), Is.EqualTo(sizeof(VkImageBlit)));
+    }
 
-        /// <summary>Validates that the <see cref="VkImageBlit" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkImageBlit).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkImageBlit" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkImageBlit).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkImageBlit" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkImageBlit), Is.EqualTo(80));
-        }
+    /// <summary>Validates that the <see cref="VkImageBlit" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkImageBlit), Is.EqualTo(80));
     }
 }

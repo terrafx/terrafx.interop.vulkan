@@ -3,13 +3,12 @@
 // Ported from include/vulkan/vk_layer.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2017 The Khronos Group Inc. Copyright © 2015-2017 Valve Corporation. Copyright © 2015-2017 LunarG, Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
-{
-    public unsafe partial struct VkLayerDeviceInfo
-    {
-        public void* device_info;
+namespace TerraFX.Interop.Vulkan;
 
-        [NativeTypeName("PFN_vkGetInstanceProcAddr")]
-        public delegate* unmanaged<VkInstance, sbyte*, delegate* unmanaged<void>> pfnNextGetInstanceProcAddr;
-    }
+public unsafe partial struct VkLayerDeviceInfo
+{
+    public void* device_info;
+
+    [NativeTypeName("PFN_vkGetInstanceProcAddr")]
+    public delegate* unmanaged<VkInstance, sbyte*, delegate* unmanaged<void>> pfnNextGetInstanceProcAddr;
 }

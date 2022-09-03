@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="StdVideoDecodeH264MvcElementFlags" /> struct.</summary>
+public static unsafe partial class StdVideoDecodeH264MvcElementFlagsTests
 {
-    /// <summary>Provides validation of the <see cref="StdVideoDecodeH264MvcElementFlags" /> struct.</summary>
-    public static unsafe partial class StdVideoDecodeH264MvcElementFlagsTests
+    /// <summary>Validates that the <see cref="StdVideoDecodeH264MvcElementFlags" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="StdVideoDecodeH264MvcElementFlags" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<StdVideoDecodeH264MvcElementFlags>(), Is.EqualTo(sizeof(StdVideoDecodeH264MvcElementFlags)));
-        }
+        Assert.That(Marshal.SizeOf<StdVideoDecodeH264MvcElementFlags>(), Is.EqualTo(sizeof(StdVideoDecodeH264MvcElementFlags)));
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoDecodeH264MvcElementFlags" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(StdVideoDecodeH264MvcElementFlags).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="StdVideoDecodeH264MvcElementFlags" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(StdVideoDecodeH264MvcElementFlags).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoDecodeH264MvcElementFlags" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(StdVideoDecodeH264MvcElementFlags), Is.EqualTo(4));
-        }
+    /// <summary>Validates that the <see cref="StdVideoDecodeH264MvcElementFlags" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(StdVideoDecodeH264MvcElementFlags), Is.EqualTo(4));
     }
 }

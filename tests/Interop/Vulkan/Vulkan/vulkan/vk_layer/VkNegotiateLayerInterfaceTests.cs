@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkNegotiateLayerInterface" /> struct.</summary>
+public static unsafe partial class VkNegotiateLayerInterfaceTests
 {
-    /// <summary>Provides validation of the <see cref="VkNegotiateLayerInterface" /> struct.</summary>
-    public static unsafe partial class VkNegotiateLayerInterfaceTests
+    /// <summary>Validates that the <see cref="VkNegotiateLayerInterface" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkNegotiateLayerInterface" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkNegotiateLayerInterface>(), Is.EqualTo(sizeof(VkNegotiateLayerInterface)));
-        }
+        Assert.That(Marshal.SizeOf<VkNegotiateLayerInterface>(), Is.EqualTo(sizeof(VkNegotiateLayerInterface)));
+    }
 
-        /// <summary>Validates that the <see cref="VkNegotiateLayerInterface" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkNegotiateLayerInterface).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkNegotiateLayerInterface" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkNegotiateLayerInterface).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkNegotiateLayerInterface" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkNegotiateLayerInterface" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkNegotiateLayerInterface), Is.EqualTo(48));
-            }
-            else
-            {
-                Assert.That(sizeof(VkNegotiateLayerInterface), Is.EqualTo(24));
-            }
+            Assert.That(sizeof(VkNegotiateLayerInterface), Is.EqualTo(48));
+        }
+        else
+        {
+            Assert.That(sizeof(VkNegotiateLayerInterface), Is.EqualTo(24));
         }
     }
 }

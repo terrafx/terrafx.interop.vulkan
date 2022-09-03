@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceImageDrmFormatModifierInfoEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceImageDrmFormatModifierInfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceImageDrmFormatModifierInfoEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceImageDrmFormatModifierInfoEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceImageDrmFormatModifierInfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceImageDrmFormatModifierInfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceImageDrmFormatModifierInfoEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceImageDrmFormatModifierInfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceImageDrmFormatModifierInfoEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceImageDrmFormatModifierInfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceImageDrmFormatModifierInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceImageDrmFormatModifierInfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceImageDrmFormatModifierInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceImageDrmFormatModifierInfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceImageDrmFormatModifierInfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceImageDrmFormatModifierInfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceImageDrmFormatModifierInfoEXT), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceImageDrmFormatModifierInfoEXT), Is.EqualTo(32));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceImageDrmFormatModifierInfoEXT), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceImageDrmFormatModifierInfoEXT), Is.EqualTo(32));
         }
     }
 }

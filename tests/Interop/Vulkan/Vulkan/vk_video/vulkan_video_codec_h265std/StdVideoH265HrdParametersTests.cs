@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="StdVideoH265HrdParameters" /> struct.</summary>
+public static unsafe partial class StdVideoH265HrdParametersTests
 {
-    /// <summary>Provides validation of the <see cref="StdVideoH265HrdParameters" /> struct.</summary>
-    public static unsafe partial class StdVideoH265HrdParametersTests
+    /// <summary>Validates that the <see cref="StdVideoH265HrdParameters" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="StdVideoH265HrdParameters" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<StdVideoH265HrdParameters>(), Is.EqualTo(sizeof(StdVideoH265HrdParameters)));
-        }
+        Assert.That(Marshal.SizeOf<StdVideoH265HrdParameters>(), Is.EqualTo(sizeof(StdVideoH265HrdParameters)));
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoH265HrdParameters" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(StdVideoH265HrdParameters).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="StdVideoH265HrdParameters" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(StdVideoH265HrdParameters).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoH265HrdParameters" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="StdVideoH265HrdParameters" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(StdVideoH265HrdParameters), Is.EqualTo(152));
-            }
-            else
-            {
-                Assert.That(sizeof(StdVideoH265HrdParameters), Is.EqualTo(92));
-            }
+            Assert.That(sizeof(StdVideoH265HrdParameters), Is.EqualTo(152));
+        }
+        else
+        {
+            Assert.That(sizeof(StdVideoH265HrdParameters), Is.EqualTo(92));
         }
     }
 }

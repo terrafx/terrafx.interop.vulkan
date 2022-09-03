@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPipelineViewportWScalingStateCreateInfoNV" /> struct.</summary>
+public static unsafe partial class VkPipelineViewportWScalingStateCreateInfoNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkPipelineViewportWScalingStateCreateInfoNV" /> struct.</summary>
-    public static unsafe partial class VkPipelineViewportWScalingStateCreateInfoNVTests
+    /// <summary>Validates that the <see cref="VkPipelineViewportWScalingStateCreateInfoNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPipelineViewportWScalingStateCreateInfoNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPipelineViewportWScalingStateCreateInfoNV>(), Is.EqualTo(sizeof(VkPipelineViewportWScalingStateCreateInfoNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkPipelineViewportWScalingStateCreateInfoNV>(), Is.EqualTo(sizeof(VkPipelineViewportWScalingStateCreateInfoNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineViewportWScalingStateCreateInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPipelineViewportWScalingStateCreateInfoNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPipelineViewportWScalingStateCreateInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPipelineViewportWScalingStateCreateInfoNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineViewportWScalingStateCreateInfoNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPipelineViewportWScalingStateCreateInfoNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPipelineViewportWScalingStateCreateInfoNV), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPipelineViewportWScalingStateCreateInfoNV), Is.EqualTo(20));
-            }
+            Assert.That(sizeof(VkPipelineViewportWScalingStateCreateInfoNV), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPipelineViewportWScalingStateCreateInfoNV), Is.EqualTo(20));
         }
     }
 }

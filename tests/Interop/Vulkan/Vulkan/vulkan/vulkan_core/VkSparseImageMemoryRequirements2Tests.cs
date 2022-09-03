@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSparseImageMemoryRequirements2" /> struct.</summary>
+public static unsafe partial class VkSparseImageMemoryRequirements2Tests
 {
-    /// <summary>Provides validation of the <see cref="VkSparseImageMemoryRequirements2" /> struct.</summary>
-    public static unsafe partial class VkSparseImageMemoryRequirements2Tests
+    /// <summary>Validates that the <see cref="VkSparseImageMemoryRequirements2" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSparseImageMemoryRequirements2" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSparseImageMemoryRequirements2>(), Is.EqualTo(sizeof(VkSparseImageMemoryRequirements2)));
-        }
+        Assert.That(Marshal.SizeOf<VkSparseImageMemoryRequirements2>(), Is.EqualTo(sizeof(VkSparseImageMemoryRequirements2)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSparseImageMemoryRequirements2" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSparseImageMemoryRequirements2).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSparseImageMemoryRequirements2" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSparseImageMemoryRequirements2).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSparseImageMemoryRequirements2" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkSparseImageMemoryRequirements2" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkSparseImageMemoryRequirements2), Is.EqualTo(64));
-            }
-            else
-            {
-                Assert.That(sizeof(VkSparseImageMemoryRequirements2), Is.EqualTo(56));
-            }
+            Assert.That(sizeof(VkSparseImageMemoryRequirements2), Is.EqualTo(64));
+        }
+        else
+        {
+            Assert.That(sizeof(VkSparseImageMemoryRequirements2), Is.EqualTo(56));
         }
     }
 }

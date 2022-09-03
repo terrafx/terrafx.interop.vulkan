@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkExternalImageFormatPropertiesNV" /> struct.</summary>
+public static unsafe partial class VkExternalImageFormatPropertiesNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkExternalImageFormatPropertiesNV" /> struct.</summary>
-    public static unsafe partial class VkExternalImageFormatPropertiesNVTests
+    /// <summary>Validates that the <see cref="VkExternalImageFormatPropertiesNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkExternalImageFormatPropertiesNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkExternalImageFormatPropertiesNV>(), Is.EqualTo(sizeof(VkExternalImageFormatPropertiesNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkExternalImageFormatPropertiesNV>(), Is.EqualTo(sizeof(VkExternalImageFormatPropertiesNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkExternalImageFormatPropertiesNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkExternalImageFormatPropertiesNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkExternalImageFormatPropertiesNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkExternalImageFormatPropertiesNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkExternalImageFormatPropertiesNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkExternalImageFormatPropertiesNV), Is.EqualTo(48));
-        }
+    /// <summary>Validates that the <see cref="VkExternalImageFormatPropertiesNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkExternalImageFormatPropertiesNV), Is.EqualTo(48));
     }
 }

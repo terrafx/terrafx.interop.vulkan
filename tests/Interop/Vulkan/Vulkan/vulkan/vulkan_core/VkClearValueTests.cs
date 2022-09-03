@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkClearValue" /> struct.</summary>
+public static unsafe partial class VkClearValueTests
 {
-    /// <summary>Provides validation of the <see cref="VkClearValue" /> struct.</summary>
-    public static unsafe partial class VkClearValueTests
+    /// <summary>Validates that the <see cref="VkClearValue" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkClearValue" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkClearValue>(), Is.EqualTo(sizeof(VkClearValue)));
-        }
+        Assert.That(Marshal.SizeOf<VkClearValue>(), Is.EqualTo(sizeof(VkClearValue)));
+    }
 
-        /// <summary>Validates that the <see cref="VkClearValue" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutExplicitTest()
-        {
-            Assert.That(typeof(VkClearValue).IsExplicitLayout, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkClearValue" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutExplicitTest()
+    {
+        Assert.That(typeof(VkClearValue).IsExplicitLayout, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkClearValue" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkClearValue), Is.EqualTo(16));
-        }
+    /// <summary>Validates that the <see cref="VkClearValue" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkClearValue), Is.EqualTo(16));
     }
 }

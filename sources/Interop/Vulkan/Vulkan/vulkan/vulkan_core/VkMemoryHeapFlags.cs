@@ -5,15 +5,14 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[NativeTypeName("int")]
+[Flags]
+public enum VkMemoryHeapFlags : uint
 {
-    [NativeTypeName("int")]
-    [Flags]
-    public enum VkMemoryHeapFlags : uint
-    {
-        VK_MEMORY_HEAP_DEVICE_LOCAL_BIT = 0x00000001,
-        VK_MEMORY_HEAP_MULTI_INSTANCE_BIT = 0x00000002,
-        VK_MEMORY_HEAP_MULTI_INSTANCE_BIT_KHR = VK_MEMORY_HEAP_MULTI_INSTANCE_BIT,
-        VK_MEMORY_HEAP_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
-    }
+    VK_MEMORY_HEAP_DEVICE_LOCAL_BIT = 0x00000001,
+    VK_MEMORY_HEAP_MULTI_INSTANCE_BIT = 0x00000002,
+    VK_MEMORY_HEAP_MULTI_INSTANCE_BIT_KHR = VK_MEMORY_HEAP_MULTI_INSTANCE_BIT,
+    VK_MEMORY_HEAP_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
 }

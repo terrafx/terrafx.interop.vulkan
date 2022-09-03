@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkInstanceCreateInfo" /> struct.</summary>
+public static unsafe partial class VkInstanceCreateInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkInstanceCreateInfo" /> struct.</summary>
-    public static unsafe partial class VkInstanceCreateInfoTests
+    /// <summary>Validates that the <see cref="VkInstanceCreateInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkInstanceCreateInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkInstanceCreateInfo>(), Is.EqualTo(sizeof(VkInstanceCreateInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkInstanceCreateInfo>(), Is.EqualTo(sizeof(VkInstanceCreateInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkInstanceCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkInstanceCreateInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkInstanceCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkInstanceCreateInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkInstanceCreateInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkInstanceCreateInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkInstanceCreateInfo), Is.EqualTo(64));
-            }
-            else
-            {
-                Assert.That(sizeof(VkInstanceCreateInfo), Is.EqualTo(32));
-            }
+            Assert.That(sizeof(VkInstanceCreateInfo), Is.EqualTo(64));
+        }
+        else
+        {
+            Assert.That(sizeof(VkInstanceCreateInfo), Is.EqualTo(32));
         }
     }
 }

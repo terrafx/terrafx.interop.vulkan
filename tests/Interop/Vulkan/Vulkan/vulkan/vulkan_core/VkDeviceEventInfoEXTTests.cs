@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDeviceEventInfoEXT" /> struct.</summary>
+public static unsafe partial class VkDeviceEventInfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkDeviceEventInfoEXT" /> struct.</summary>
-    public static unsafe partial class VkDeviceEventInfoEXTTests
+    /// <summary>Validates that the <see cref="VkDeviceEventInfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDeviceEventInfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDeviceEventInfoEXT>(), Is.EqualTo(sizeof(VkDeviceEventInfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkDeviceEventInfoEXT>(), Is.EqualTo(sizeof(VkDeviceEventInfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceEventInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDeviceEventInfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDeviceEventInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDeviceEventInfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceEventInfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkDeviceEventInfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkDeviceEventInfoEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkDeviceEventInfoEXT), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkDeviceEventInfoEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkDeviceEventInfoEXT), Is.EqualTo(12));
         }
     }
 }

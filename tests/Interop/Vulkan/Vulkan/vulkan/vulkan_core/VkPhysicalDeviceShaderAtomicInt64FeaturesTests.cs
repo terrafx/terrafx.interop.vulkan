@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceShaderAtomicInt64Features" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceShaderAtomicInt64FeaturesTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceShaderAtomicInt64Features" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceShaderAtomicInt64FeaturesTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderAtomicInt64Features" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderAtomicInt64Features" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceShaderAtomicInt64Features>(), Is.EqualTo(sizeof(VkPhysicalDeviceShaderAtomicInt64Features)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceShaderAtomicInt64Features>(), Is.EqualTo(sizeof(VkPhysicalDeviceShaderAtomicInt64Features)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderAtomicInt64Features" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceShaderAtomicInt64Features).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderAtomicInt64Features" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceShaderAtomicInt64Features).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderAtomicInt64Features" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderAtomicInt64Features" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceShaderAtomicInt64Features), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceShaderAtomicInt64Features), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceShaderAtomicInt64Features), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceShaderAtomicInt64Features), Is.EqualTo(16));
         }
     }
 }

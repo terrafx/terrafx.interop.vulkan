@@ -3,20 +3,19 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public partial struct VkAabbPositionsKHR
 {
-    public partial struct VkAabbPositionsKHR
-    {
-        public float minX;
+    public float minX;
 
-        public float minY;
+    public float minY;
 
-        public float minZ;
+    public float minZ;
 
-        public float maxX;
+    public float maxX;
 
-        public float maxY;
+    public float maxY;
 
-        public float maxZ;
-    }
+    public float maxZ;
 }

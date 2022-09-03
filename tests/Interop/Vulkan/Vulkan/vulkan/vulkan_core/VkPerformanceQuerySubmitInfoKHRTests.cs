@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPerformanceQuerySubmitInfoKHR" /> struct.</summary>
+public static unsafe partial class VkPerformanceQuerySubmitInfoKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkPerformanceQuerySubmitInfoKHR" /> struct.</summary>
-    public static unsafe partial class VkPerformanceQuerySubmitInfoKHRTests
+    /// <summary>Validates that the <see cref="VkPerformanceQuerySubmitInfoKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPerformanceQuerySubmitInfoKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPerformanceQuerySubmitInfoKHR>(), Is.EqualTo(sizeof(VkPerformanceQuerySubmitInfoKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkPerformanceQuerySubmitInfoKHR>(), Is.EqualTo(sizeof(VkPerformanceQuerySubmitInfoKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPerformanceQuerySubmitInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPerformanceQuerySubmitInfoKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPerformanceQuerySubmitInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPerformanceQuerySubmitInfoKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPerformanceQuerySubmitInfoKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPerformanceQuerySubmitInfoKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPerformanceQuerySubmitInfoKHR), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPerformanceQuerySubmitInfoKHR), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPerformanceQuerySubmitInfoKHR), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPerformanceQuerySubmitInfoKHR), Is.EqualTo(12));
         }
     }
 }

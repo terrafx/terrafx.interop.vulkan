@@ -3,40 +3,39 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public partial struct VkSRTDataNV
 {
-    public partial struct VkSRTDataNV
-    {
-        public float sx;
+    public float sx;
 
-        public float a;
+    public float a;
 
-        public float b;
+    public float b;
 
-        public float pvx;
+    public float pvx;
 
-        public float sy;
+    public float sy;
 
-        public float c;
+    public float c;
 
-        public float pvy;
+    public float pvy;
 
-        public float sz;
+    public float sz;
 
-        public float pvz;
+    public float pvz;
 
-        public float qx;
+    public float qx;
 
-        public float qy;
+    public float qy;
 
-        public float qz;
+    public float qz;
 
-        public float qw;
+    public float qw;
 
-        public float tx;
+    public float tx;
 
-        public float ty;
+    public float ty;
 
-        public float tz;
-    }
+    public float tz;
 }

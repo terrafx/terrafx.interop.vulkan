@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceCoverageReductionModeFeaturesNV" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceCoverageReductionModeFeaturesNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceCoverageReductionModeFeaturesNV" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceCoverageReductionModeFeaturesNVTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceCoverageReductionModeFeaturesNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceCoverageReductionModeFeaturesNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceCoverageReductionModeFeaturesNV>(), Is.EqualTo(sizeof(VkPhysicalDeviceCoverageReductionModeFeaturesNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceCoverageReductionModeFeaturesNV>(), Is.EqualTo(sizeof(VkPhysicalDeviceCoverageReductionModeFeaturesNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceCoverageReductionModeFeaturesNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceCoverageReductionModeFeaturesNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceCoverageReductionModeFeaturesNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceCoverageReductionModeFeaturesNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceCoverageReductionModeFeaturesNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceCoverageReductionModeFeaturesNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceCoverageReductionModeFeaturesNV), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceCoverageReductionModeFeaturesNV), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceCoverageReductionModeFeaturesNV), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceCoverageReductionModeFeaturesNV), Is.EqualTo(12));
         }
     }
 }

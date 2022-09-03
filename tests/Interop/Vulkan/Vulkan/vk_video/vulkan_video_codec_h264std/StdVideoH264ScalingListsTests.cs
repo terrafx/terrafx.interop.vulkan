@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="StdVideoH264ScalingLists" /> struct.</summary>
+public static unsafe partial class StdVideoH264ScalingListsTests
 {
-    /// <summary>Provides validation of the <see cref="StdVideoH264ScalingLists" /> struct.</summary>
-    public static unsafe partial class StdVideoH264ScalingListsTests
+    /// <summary>Validates that the <see cref="StdVideoH264ScalingLists" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="StdVideoH264ScalingLists" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<StdVideoH264ScalingLists>(), Is.EqualTo(sizeof(StdVideoH264ScalingLists)));
-        }
+        Assert.That(Marshal.SizeOf<StdVideoH264ScalingLists>(), Is.EqualTo(sizeof(StdVideoH264ScalingLists)));
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoH264ScalingLists" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(StdVideoH264ScalingLists).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="StdVideoH264ScalingLists" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(StdVideoH264ScalingLists).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoH264ScalingLists" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(StdVideoH264ScalingLists), Is.EqualTo(226));
-        }
+    /// <summary>Validates that the <see cref="StdVideoH264ScalingLists" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(StdVideoH264ScalingLists), Is.EqualTo(226));
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkImportMemoryZirconHandleInfoFUCHSIA" /> struct.</summary>
+public static unsafe partial class VkImportMemoryZirconHandleInfoFUCHSIATests
 {
-    /// <summary>Provides validation of the <see cref="VkImportMemoryZirconHandleInfoFUCHSIA" /> struct.</summary>
-    public static unsafe partial class VkImportMemoryZirconHandleInfoFUCHSIATests
+    /// <summary>Validates that the <see cref="VkImportMemoryZirconHandleInfoFUCHSIA" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkImportMemoryZirconHandleInfoFUCHSIA" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkImportMemoryZirconHandleInfoFUCHSIA>(), Is.EqualTo(sizeof(VkImportMemoryZirconHandleInfoFUCHSIA)));
-        }
+        Assert.That(Marshal.SizeOf<VkImportMemoryZirconHandleInfoFUCHSIA>(), Is.EqualTo(sizeof(VkImportMemoryZirconHandleInfoFUCHSIA)));
+    }
 
-        /// <summary>Validates that the <see cref="VkImportMemoryZirconHandleInfoFUCHSIA" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkImportMemoryZirconHandleInfoFUCHSIA).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkImportMemoryZirconHandleInfoFUCHSIA" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkImportMemoryZirconHandleInfoFUCHSIA).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkImportMemoryZirconHandleInfoFUCHSIA" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkImportMemoryZirconHandleInfoFUCHSIA" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkImportMemoryZirconHandleInfoFUCHSIA), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkImportMemoryZirconHandleInfoFUCHSIA), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkImportMemoryZirconHandleInfoFUCHSIA), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkImportMemoryZirconHandleInfoFUCHSIA), Is.EqualTo(16));
         }
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDependencyInfoKHR" /> struct.</summary>
+public static unsafe partial class VkDependencyInfoKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkDependencyInfoKHR" /> struct.</summary>
-    public static unsafe partial class VkDependencyInfoKHRTests
+    /// <summary>Validates that the <see cref="VkDependencyInfoKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDependencyInfoKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDependencyInfoKHR>(), Is.EqualTo(sizeof(VkDependencyInfoKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkDependencyInfoKHR>(), Is.EqualTo(sizeof(VkDependencyInfoKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDependencyInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDependencyInfoKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDependencyInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDependencyInfoKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDependencyInfoKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkDependencyInfoKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkDependencyInfoKHR), Is.EqualTo(64));
-            }
-            else
-            {
-                Assert.That(sizeof(VkDependencyInfoKHR), Is.EqualTo(36));
-            }
+            Assert.That(sizeof(VkDependencyInfoKHR), Is.EqualTo(64));
+        }
+        else
+        {
+            Assert.That(sizeof(VkDependencyInfoKHR), Is.EqualTo(36));
         }
     }
 }

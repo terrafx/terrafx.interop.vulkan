@@ -5,58 +5,57 @@
 
 using System.Runtime.CompilerServices;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public partial struct StdVideoDecodeH264MvcElementFlags
 {
-    public partial struct StdVideoDecodeH264MvcElementFlags
+    public uint _bitfield;
+
+    [NativeTypeName("uint32_t : 1")]
+    public uint non_idr
     {
-        public uint _bitfield;
-
-        [NativeTypeName("uint32_t : 1")]
-        public uint non_idr
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get
         {
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get
-            {
-                return _bitfield & 0x1u;
-            }
-
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            set
-            {
-                _bitfield = (_bitfield & ~0x1u) | (value & 0x1u);
-            }
+            return _bitfield & 0x1u;
         }
 
-        [NativeTypeName("uint32_t : 1")]
-        public uint anchor_pic
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        set
         {
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get
-            {
-                return (_bitfield >> 1) & 0x1u;
-            }
+            _bitfield = (_bitfield & ~0x1u) | (value & 0x1u);
+        }
+    }
 
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            set
-            {
-                _bitfield = (_bitfield & ~(0x1u << 1)) | ((value & 0x1u) << 1);
-            }
+    [NativeTypeName("uint32_t : 1")]
+    public uint anchor_pic
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get
+        {
+            return (_bitfield >> 1) & 0x1u;
         }
 
-        [NativeTypeName("uint32_t : 1")]
-        public uint inter_view
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        set
         {
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get
-            {
-                return (_bitfield >> 2) & 0x1u;
-            }
+            _bitfield = (_bitfield & ~(0x1u << 1)) | ((value & 0x1u) << 1);
+        }
+    }
 
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            set
-            {
-                _bitfield = (_bitfield & ~(0x1u << 2)) | ((value & 0x1u) << 2);
-            }
+    [NativeTypeName("uint32_t : 1")]
+    public uint inter_view
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get
+        {
+            return (_bitfield >> 2) & 0x1u;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        set
+        {
+            _bitfield = (_bitfield & ~(0x1u << 2)) | ((value & 0x1u) << 2);
         }
     }
 }

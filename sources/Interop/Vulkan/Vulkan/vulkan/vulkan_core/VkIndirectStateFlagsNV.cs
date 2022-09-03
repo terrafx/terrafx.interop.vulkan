@@ -5,13 +5,12 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[NativeTypeName("int")]
+[Flags]
+public enum VkIndirectStateFlagsNV : uint
 {
-    [NativeTypeName("int")]
-    [Flags]
-    public enum VkIndirectStateFlagsNV : uint
-    {
-        VK_INDIRECT_STATE_FLAG_FRONTFACE_BIT_NV = 0x00000001,
-        VK_INDIRECT_STATE_FLAG_BITS_MAX_ENUM_NV = 0x7FFFFFFF,
-    }
+    VK_INDIRECT_STATE_FLAG_FRONTFACE_BIT_NV = 0x00000001,
+    VK_INDIRECT_STATE_FLAG_BITS_MAX_ENUM_NV = 0x7FFFFFFF,
 }

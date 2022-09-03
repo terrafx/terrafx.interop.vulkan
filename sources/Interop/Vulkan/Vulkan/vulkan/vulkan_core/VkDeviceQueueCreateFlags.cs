@@ -5,13 +5,12 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[NativeTypeName("int")]
+[Flags]
+public enum VkDeviceQueueCreateFlags : uint
 {
-    [NativeTypeName("int")]
-    [Flags]
-    public enum VkDeviceQueueCreateFlags : uint
-    {
-        VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT = 0x00000001,
-        VK_DEVICE_QUEUE_CREATE_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
-    }
+    VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT = 0x00000001,
+    VK_DEVICE_QUEUE_CREATE_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkCoarseSampleOrderCustomNV" /> struct.</summary>
+public static unsafe partial class VkCoarseSampleOrderCustomNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkCoarseSampleOrderCustomNV" /> struct.</summary>
-    public static unsafe partial class VkCoarseSampleOrderCustomNVTests
+    /// <summary>Validates that the <see cref="VkCoarseSampleOrderCustomNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkCoarseSampleOrderCustomNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkCoarseSampleOrderCustomNV>(), Is.EqualTo(sizeof(VkCoarseSampleOrderCustomNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkCoarseSampleOrderCustomNV>(), Is.EqualTo(sizeof(VkCoarseSampleOrderCustomNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkCoarseSampleOrderCustomNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkCoarseSampleOrderCustomNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkCoarseSampleOrderCustomNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkCoarseSampleOrderCustomNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkCoarseSampleOrderCustomNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkCoarseSampleOrderCustomNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkCoarseSampleOrderCustomNV), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkCoarseSampleOrderCustomNV), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkCoarseSampleOrderCustomNV), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkCoarseSampleOrderCustomNV), Is.EqualTo(16));
         }
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkMemoryFdPropertiesKHR" /> struct.</summary>
+public static unsafe partial class VkMemoryFdPropertiesKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkMemoryFdPropertiesKHR" /> struct.</summary>
-    public static unsafe partial class VkMemoryFdPropertiesKHRTests
+    /// <summary>Validates that the <see cref="VkMemoryFdPropertiesKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkMemoryFdPropertiesKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkMemoryFdPropertiesKHR>(), Is.EqualTo(sizeof(VkMemoryFdPropertiesKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkMemoryFdPropertiesKHR>(), Is.EqualTo(sizeof(VkMemoryFdPropertiesKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkMemoryFdPropertiesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkMemoryFdPropertiesKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkMemoryFdPropertiesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkMemoryFdPropertiesKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkMemoryFdPropertiesKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkMemoryFdPropertiesKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkMemoryFdPropertiesKHR), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkMemoryFdPropertiesKHR), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkMemoryFdPropertiesKHR), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkMemoryFdPropertiesKHR), Is.EqualTo(12));
         }
     }
 }

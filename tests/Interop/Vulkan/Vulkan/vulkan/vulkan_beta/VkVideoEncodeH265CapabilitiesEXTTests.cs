@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkVideoEncodeH265CapabilitiesEXT" /> struct.</summary>
+public static unsafe partial class VkVideoEncodeH265CapabilitiesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkVideoEncodeH265CapabilitiesEXT" /> struct.</summary>
-    public static unsafe partial class VkVideoEncodeH265CapabilitiesEXTTests
+    /// <summary>Validates that the <see cref="VkVideoEncodeH265CapabilitiesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkVideoEncodeH265CapabilitiesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkVideoEncodeH265CapabilitiesEXT>(), Is.EqualTo(sizeof(VkVideoEncodeH265CapabilitiesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkVideoEncodeH265CapabilitiesEXT>(), Is.EqualTo(sizeof(VkVideoEncodeH265CapabilitiesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoEncodeH265CapabilitiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkVideoEncodeH265CapabilitiesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkVideoEncodeH265CapabilitiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkVideoEncodeH265CapabilitiesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoEncodeH265CapabilitiesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkVideoEncodeH265CapabilitiesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkVideoEncodeH265CapabilitiesEXT), Is.EqualTo(312));
-            }
-            else
-            {
-                Assert.That(sizeof(VkVideoEncodeH265CapabilitiesEXT), Is.EqualTo(300));
-            }
+            Assert.That(sizeof(VkVideoEncodeH265CapabilitiesEXT), Is.EqualTo(312));
+        }
+        else
+        {
+            Assert.That(sizeof(VkVideoEncodeH265CapabilitiesEXT), Is.EqualTo(300));
         }
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VpInstanceCreateInfo" /> struct.</summary>
+public static unsafe partial class VpInstanceCreateInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VpInstanceCreateInfo" /> struct.</summary>
-    public static unsafe partial class VpInstanceCreateInfoTests
+    /// <summary>Validates that the <see cref="VpInstanceCreateInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VpInstanceCreateInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VpInstanceCreateInfo>(), Is.EqualTo(sizeof(VpInstanceCreateInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VpInstanceCreateInfo>(), Is.EqualTo(sizeof(VpInstanceCreateInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VpInstanceCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VpInstanceCreateInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VpInstanceCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VpInstanceCreateInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VpInstanceCreateInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VpInstanceCreateInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VpInstanceCreateInfo), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VpInstanceCreateInfo), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VpInstanceCreateInfo), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VpInstanceCreateInfo), Is.EqualTo(12));
         }
     }
 }

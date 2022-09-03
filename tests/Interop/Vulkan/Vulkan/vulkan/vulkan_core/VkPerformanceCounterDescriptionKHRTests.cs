@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPerformanceCounterDescriptionKHR" /> struct.</summary>
+public static unsafe partial class VkPerformanceCounterDescriptionKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkPerformanceCounterDescriptionKHR" /> struct.</summary>
-    public static unsafe partial class VkPerformanceCounterDescriptionKHRTests
+    /// <summary>Validates that the <see cref="VkPerformanceCounterDescriptionKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPerformanceCounterDescriptionKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPerformanceCounterDescriptionKHR>(), Is.EqualTo(sizeof(VkPerformanceCounterDescriptionKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkPerformanceCounterDescriptionKHR>(), Is.EqualTo(sizeof(VkPerformanceCounterDescriptionKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPerformanceCounterDescriptionKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPerformanceCounterDescriptionKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPerformanceCounterDescriptionKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPerformanceCounterDescriptionKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPerformanceCounterDescriptionKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPerformanceCounterDescriptionKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPerformanceCounterDescriptionKHR), Is.EqualTo(792));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPerformanceCounterDescriptionKHR), Is.EqualTo(780));
-            }
+            Assert.That(sizeof(VkPerformanceCounterDescriptionKHR), Is.EqualTo(792));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPerformanceCounterDescriptionKHR), Is.EqualTo(780));
         }
     }
 }

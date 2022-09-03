@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDeviceGroupSubmitInfo" /> struct.</summary>
+public static unsafe partial class VkDeviceGroupSubmitInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkDeviceGroupSubmitInfo" /> struct.</summary>
-    public static unsafe partial class VkDeviceGroupSubmitInfoTests
+    /// <summary>Validates that the <see cref="VkDeviceGroupSubmitInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDeviceGroupSubmitInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDeviceGroupSubmitInfo>(), Is.EqualTo(sizeof(VkDeviceGroupSubmitInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkDeviceGroupSubmitInfo>(), Is.EqualTo(sizeof(VkDeviceGroupSubmitInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceGroupSubmitInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDeviceGroupSubmitInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDeviceGroupSubmitInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDeviceGroupSubmitInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceGroupSubmitInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkDeviceGroupSubmitInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkDeviceGroupSubmitInfo), Is.EqualTo(64));
-            }
-            else
-            {
-                Assert.That(sizeof(VkDeviceGroupSubmitInfo), Is.EqualTo(32));
-            }
+            Assert.That(sizeof(VkDeviceGroupSubmitInfo), Is.EqualTo(64));
+        }
+        else
+        {
+            Assert.That(sizeof(VkDeviceGroupSubmitInfo), Is.EqualTo(32));
         }
     }
 }

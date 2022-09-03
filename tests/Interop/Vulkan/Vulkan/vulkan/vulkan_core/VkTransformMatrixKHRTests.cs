@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkTransformMatrixKHR" /> struct.</summary>
+public static unsafe partial class VkTransformMatrixKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkTransformMatrixKHR" /> struct.</summary>
-    public static unsafe partial class VkTransformMatrixKHRTests
+    /// <summary>Validates that the <see cref="VkTransformMatrixKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkTransformMatrixKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkTransformMatrixKHR>(), Is.EqualTo(sizeof(VkTransformMatrixKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkTransformMatrixKHR>(), Is.EqualTo(sizeof(VkTransformMatrixKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkTransformMatrixKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkTransformMatrixKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkTransformMatrixKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkTransformMatrixKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkTransformMatrixKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkTransformMatrixKHR), Is.EqualTo(48));
-        }
+    /// <summary>Validates that the <see cref="VkTransformMatrixKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkTransformMatrixKHR), Is.EqualTo(48));
     }
 }

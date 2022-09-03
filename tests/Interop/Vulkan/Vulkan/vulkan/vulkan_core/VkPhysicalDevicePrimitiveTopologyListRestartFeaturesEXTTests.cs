@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT>(), Is.EqualTo(sizeof(VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT>(), Is.EqualTo(sizeof(VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT), Is.EqualTo(16));
         }
     }
 }

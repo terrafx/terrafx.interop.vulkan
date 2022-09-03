@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPerformanceMarkerInfoINTEL" /> struct.</summary>
+public static unsafe partial class VkPerformanceMarkerInfoINTELTests
 {
-    /// <summary>Provides validation of the <see cref="VkPerformanceMarkerInfoINTEL" /> struct.</summary>
-    public static unsafe partial class VkPerformanceMarkerInfoINTELTests
+    /// <summary>Validates that the <see cref="VkPerformanceMarkerInfoINTEL" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPerformanceMarkerInfoINTEL" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPerformanceMarkerInfoINTEL>(), Is.EqualTo(sizeof(VkPerformanceMarkerInfoINTEL)));
-        }
+        Assert.That(Marshal.SizeOf<VkPerformanceMarkerInfoINTEL>(), Is.EqualTo(sizeof(VkPerformanceMarkerInfoINTEL)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPerformanceMarkerInfoINTEL" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPerformanceMarkerInfoINTEL).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPerformanceMarkerInfoINTEL" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPerformanceMarkerInfoINTEL).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPerformanceMarkerInfoINTEL" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPerformanceMarkerInfoINTEL" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPerformanceMarkerInfoINTEL), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPerformanceMarkerInfoINTEL), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkPerformanceMarkerInfoINTEL), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPerformanceMarkerInfoINTEL), Is.EqualTo(16));
         }
     }
 }

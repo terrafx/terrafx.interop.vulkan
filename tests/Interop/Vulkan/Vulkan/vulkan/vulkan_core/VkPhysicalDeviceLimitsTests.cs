@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceLimits" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceLimitsTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceLimits" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceLimitsTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceLimits" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceLimits" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceLimits>(), Is.EqualTo(sizeof(VkPhysicalDeviceLimits)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceLimits>(), Is.EqualTo(sizeof(VkPhysicalDeviceLimits)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceLimits" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceLimits).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceLimits" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceLimits).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceLimits" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceLimits" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceLimits), Is.EqualTo(504));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceLimits), Is.EqualTo(496));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceLimits), Is.EqualTo(504));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceLimits), Is.EqualTo(496));
         }
     }
 }

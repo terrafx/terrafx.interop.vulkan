@@ -5,42 +5,41 @@
 
 using System.Runtime.CompilerServices;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public partial struct StdVideoEncodeH264RefMgmtFlags
 {
-    public partial struct StdVideoEncodeH264RefMgmtFlags
+    public uint _bitfield;
+
+    [NativeTypeName("uint32_t : 1")]
+    public uint ref_pic_list_modification_l0_flag
     {
-        public uint _bitfield;
-
-        [NativeTypeName("uint32_t : 1")]
-        public uint ref_pic_list_modification_l0_flag
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get
         {
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get
-            {
-                return _bitfield & 0x1u;
-            }
-
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            set
-            {
-                _bitfield = (_bitfield & ~0x1u) | (value & 0x1u);
-            }
+            return _bitfield & 0x1u;
         }
 
-        [NativeTypeName("uint32_t : 1")]
-        public uint ref_pic_list_modification_l1_flag
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        set
         {
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get
-            {
-                return (_bitfield >> 1) & 0x1u;
-            }
+            _bitfield = (_bitfield & ~0x1u) | (value & 0x1u);
+        }
+    }
 
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            set
-            {
-                _bitfield = (_bitfield & ~(0x1u << 1)) | ((value & 0x1u) << 1);
-            }
+    [NativeTypeName("uint32_t : 1")]
+    public uint ref_pic_list_modification_l1_flag
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get
+        {
+            return (_bitfield >> 1) & 0x1u;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        set
+        {
+            _bitfield = (_bitfield & ~(0x1u << 1)) | ((value & 0x1u) << 1);
         }
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceShaderCoreProperties2AMD" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceShaderCoreProperties2AMDTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceShaderCoreProperties2AMD" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceShaderCoreProperties2AMDTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderCoreProperties2AMD" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderCoreProperties2AMD" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceShaderCoreProperties2AMD>(), Is.EqualTo(sizeof(VkPhysicalDeviceShaderCoreProperties2AMD)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceShaderCoreProperties2AMD>(), Is.EqualTo(sizeof(VkPhysicalDeviceShaderCoreProperties2AMD)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderCoreProperties2AMD" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceShaderCoreProperties2AMD).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderCoreProperties2AMD" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceShaderCoreProperties2AMD).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderCoreProperties2AMD" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderCoreProperties2AMD" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceShaderCoreProperties2AMD), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceShaderCoreProperties2AMD), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceShaderCoreProperties2AMD), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceShaderCoreProperties2AMD), Is.EqualTo(16));
         }
     }
 }

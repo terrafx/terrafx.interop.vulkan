@@ -5,13 +5,12 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[NativeTypeName("int")]
+[Flags]
+public enum VkAttachmentDescriptionFlags : uint
 {
-    [NativeTypeName("int")]
-    [Flags]
-    public enum VkAttachmentDescriptionFlags : uint
-    {
-        VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT = 0x00000001,
-        VK_ATTACHMENT_DESCRIPTION_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
-    }
+    VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT = 0x00000001,
+    VK_ATTACHMENT_DESCRIPTION_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
 }

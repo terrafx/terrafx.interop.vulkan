@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceVertexAttributeDivisorFeaturesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceVertexAttributeDivisorFeaturesEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT), Is.EqualTo(16));
         }
     }
 }

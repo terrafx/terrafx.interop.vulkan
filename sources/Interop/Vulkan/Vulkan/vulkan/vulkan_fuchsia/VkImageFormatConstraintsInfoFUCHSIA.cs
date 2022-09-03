@@ -3,29 +3,28 @@
 // Ported from include/vulkan/vulkan_fuchsia.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkImageFormatConstraintsInfoFUCHSIA
 {
-    public unsafe partial struct VkImageFormatConstraintsInfoFUCHSIA
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        public VkImageCreateInfo imageCreateInfo;
+    public VkImageCreateInfo imageCreateInfo;
 
-        public VkFormatFeatureFlags requiredFormatFeatures;
+    public VkFormatFeatureFlags requiredFormatFeatures;
 
-        [NativeTypeName("VkImageFormatConstraintsFlagsFUCHSIA")]
-        public uint flags;
+    [NativeTypeName("VkImageFormatConstraintsFlagsFUCHSIA")]
+    public uint flags;
 
-        [NativeTypeName("uint64_t")]
-        public ulong sysmemPixelFormat;
+    [NativeTypeName("uint64_t")]
+    public ulong sysmemPixelFormat;
 
-        [NativeTypeName("uint32_t")]
-        public uint colorSpaceCount;
+    [NativeTypeName("uint32_t")]
+    public uint colorSpaceCount;
 
-        [NativeTypeName("const VkSysmemColorSpaceFUCHSIA *")]
-        public VkSysmemColorSpaceFUCHSIA* pColorSpaces;
-    }
+    [NativeTypeName("const VkSysmemColorSpaceFUCHSIA *")]
+    public VkSysmemColorSpaceFUCHSIA* pColorSpaces;
 }

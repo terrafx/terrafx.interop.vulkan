@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPastPresentationTimingGOOGLE" /> struct.</summary>
+public static unsafe partial class VkPastPresentationTimingGOOGLETests
 {
-    /// <summary>Provides validation of the <see cref="VkPastPresentationTimingGOOGLE" /> struct.</summary>
-    public static unsafe partial class VkPastPresentationTimingGOOGLETests
+    /// <summary>Validates that the <see cref="VkPastPresentationTimingGOOGLE" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPastPresentationTimingGOOGLE" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPastPresentationTimingGOOGLE>(), Is.EqualTo(sizeof(VkPastPresentationTimingGOOGLE)));
-        }
+        Assert.That(Marshal.SizeOf<VkPastPresentationTimingGOOGLE>(), Is.EqualTo(sizeof(VkPastPresentationTimingGOOGLE)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPastPresentationTimingGOOGLE" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPastPresentationTimingGOOGLE).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPastPresentationTimingGOOGLE" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPastPresentationTimingGOOGLE).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPastPresentationTimingGOOGLE" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkPastPresentationTimingGOOGLE), Is.EqualTo(40));
-        }
+    /// <summary>Validates that the <see cref="VkPastPresentationTimingGOOGLE" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkPastPresentationTimingGOOGLE), Is.EqualTo(40));
     }
 }

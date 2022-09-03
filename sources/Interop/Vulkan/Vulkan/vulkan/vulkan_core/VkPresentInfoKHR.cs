@@ -3,30 +3,29 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkPresentInfoKHR
 {
-    public unsafe partial struct VkPresentInfoKHR
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("uint32_t")]
-        public uint waitSemaphoreCount;
+    [NativeTypeName("uint32_t")]
+    public uint waitSemaphoreCount;
 
-        [NativeTypeName("const VkSemaphore *")]
-        public VkSemaphore* pWaitSemaphores;
+    [NativeTypeName("const VkSemaphore *")]
+    public VkSemaphore* pWaitSemaphores;
 
-        [NativeTypeName("uint32_t")]
-        public uint swapchainCount;
+    [NativeTypeName("uint32_t")]
+    public uint swapchainCount;
 
-        [NativeTypeName("const VkSwapchainKHR *")]
-        public VkSwapchainKHR* pSwapchains;
+    [NativeTypeName("const VkSwapchainKHR *")]
+    public VkSwapchainKHR* pSwapchains;
 
-        [NativeTypeName("const uint32_t *")]
-        public uint* pImageIndices;
+    [NativeTypeName("const uint32_t *")]
+    public uint* pImageIndices;
 
-        public VkResult* pResults;
-    }
+    public VkResult* pResults;
 }

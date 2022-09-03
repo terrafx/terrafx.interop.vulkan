@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkVideoFormatPropertiesKHR" /> struct.</summary>
+public static unsafe partial class VkVideoFormatPropertiesKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkVideoFormatPropertiesKHR" /> struct.</summary>
-    public static unsafe partial class VkVideoFormatPropertiesKHRTests
+    /// <summary>Validates that the <see cref="VkVideoFormatPropertiesKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkVideoFormatPropertiesKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkVideoFormatPropertiesKHR>(), Is.EqualTo(sizeof(VkVideoFormatPropertiesKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkVideoFormatPropertiesKHR>(), Is.EqualTo(sizeof(VkVideoFormatPropertiesKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoFormatPropertiesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkVideoFormatPropertiesKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkVideoFormatPropertiesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkVideoFormatPropertiesKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoFormatPropertiesKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkVideoFormatPropertiesKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkVideoFormatPropertiesKHR), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkVideoFormatPropertiesKHR), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkVideoFormatPropertiesKHR), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkVideoFormatPropertiesKHR), Is.EqualTo(12));
         }
     }
 }

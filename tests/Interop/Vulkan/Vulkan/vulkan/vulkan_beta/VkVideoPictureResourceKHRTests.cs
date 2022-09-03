@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkVideoPictureResourceKHR" /> struct.</summary>
+public static unsafe partial class VkVideoPictureResourceKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkVideoPictureResourceKHR" /> struct.</summary>
-    public static unsafe partial class VkVideoPictureResourceKHRTests
+    /// <summary>Validates that the <see cref="VkVideoPictureResourceKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkVideoPictureResourceKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkVideoPictureResourceKHR>(), Is.EqualTo(sizeof(VkVideoPictureResourceKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkVideoPictureResourceKHR>(), Is.EqualTo(sizeof(VkVideoPictureResourceKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoPictureResourceKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkVideoPictureResourceKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkVideoPictureResourceKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkVideoPictureResourceKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoPictureResourceKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkVideoPictureResourceKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkVideoPictureResourceKHR), Is.EqualTo(48));
-            }
-            else
-            {
-                Assert.That(sizeof(VkVideoPictureResourceKHR), Is.EqualTo(40));
-            }
+            Assert.That(sizeof(VkVideoPictureResourceKHR), Is.EqualTo(48));
+        }
+        else
+        {
+            Assert.That(sizeof(VkVideoPictureResourceKHR), Is.EqualTo(40));
         }
     }
 }

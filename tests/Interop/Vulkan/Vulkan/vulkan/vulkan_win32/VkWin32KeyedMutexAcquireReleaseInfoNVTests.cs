@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkWin32KeyedMutexAcquireReleaseInfoNV" /> struct.</summary>
+public static unsafe partial class VkWin32KeyedMutexAcquireReleaseInfoNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkWin32KeyedMutexAcquireReleaseInfoNV" /> struct.</summary>
-    public static unsafe partial class VkWin32KeyedMutexAcquireReleaseInfoNVTests
+    /// <summary>Validates that the <see cref="VkWin32KeyedMutexAcquireReleaseInfoNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkWin32KeyedMutexAcquireReleaseInfoNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkWin32KeyedMutexAcquireReleaseInfoNV>(), Is.EqualTo(sizeof(VkWin32KeyedMutexAcquireReleaseInfoNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkWin32KeyedMutexAcquireReleaseInfoNV>(), Is.EqualTo(sizeof(VkWin32KeyedMutexAcquireReleaseInfoNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkWin32KeyedMutexAcquireReleaseInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkWin32KeyedMutexAcquireReleaseInfoNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkWin32KeyedMutexAcquireReleaseInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkWin32KeyedMutexAcquireReleaseInfoNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkWin32KeyedMutexAcquireReleaseInfoNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkWin32KeyedMutexAcquireReleaseInfoNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkWin32KeyedMutexAcquireReleaseInfoNV), Is.EqualTo(72));
-            }
-            else
-            {
-                Assert.That(sizeof(VkWin32KeyedMutexAcquireReleaseInfoNV), Is.EqualTo(36));
-            }
+            Assert.That(sizeof(VkWin32KeyedMutexAcquireReleaseInfoNV), Is.EqualTo(72));
+        }
+        else
+        {
+            Assert.That(sizeof(VkWin32KeyedMutexAcquireReleaseInfoNV), Is.EqualTo(36));
         }
     }
 }

@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSurfaceFormatKHR" /> struct.</summary>
+public static unsafe partial class VkSurfaceFormatKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkSurfaceFormatKHR" /> struct.</summary>
-    public static unsafe partial class VkSurfaceFormatKHRTests
+    /// <summary>Validates that the <see cref="VkSurfaceFormatKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSurfaceFormatKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSurfaceFormatKHR>(), Is.EqualTo(sizeof(VkSurfaceFormatKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkSurfaceFormatKHR>(), Is.EqualTo(sizeof(VkSurfaceFormatKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSurfaceFormatKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSurfaceFormatKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSurfaceFormatKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSurfaceFormatKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSurfaceFormatKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkSurfaceFormatKHR), Is.EqualTo(8));
-        }
+    /// <summary>Validates that the <see cref="VkSurfaceFormatKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkSurfaceFormatKHR), Is.EqualTo(8));
     }
 }

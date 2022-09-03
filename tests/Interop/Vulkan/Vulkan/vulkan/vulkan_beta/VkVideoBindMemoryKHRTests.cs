@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkVideoBindMemoryKHR" /> struct.</summary>
+public static unsafe partial class VkVideoBindMemoryKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkVideoBindMemoryKHR" /> struct.</summary>
-    public static unsafe partial class VkVideoBindMemoryKHRTests
+    /// <summary>Validates that the <see cref="VkVideoBindMemoryKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkVideoBindMemoryKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkVideoBindMemoryKHR>(), Is.EqualTo(sizeof(VkVideoBindMemoryKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkVideoBindMemoryKHR>(), Is.EqualTo(sizeof(VkVideoBindMemoryKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoBindMemoryKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkVideoBindMemoryKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkVideoBindMemoryKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkVideoBindMemoryKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoBindMemoryKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkVideoBindMemoryKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkVideoBindMemoryKHR), Is.EqualTo(48));
-            }
-            else
-            {
-                Assert.That(sizeof(VkVideoBindMemoryKHR), Is.EqualTo(40));
-            }
+            Assert.That(sizeof(VkVideoBindMemoryKHR), Is.EqualTo(48));
+        }
+        else
+        {
+            Assert.That(sizeof(VkVideoBindMemoryKHR), Is.EqualTo(40));
         }
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkMemoryGetFdInfoKHR" /> struct.</summary>
+public static unsafe partial class VkMemoryGetFdInfoKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkMemoryGetFdInfoKHR" /> struct.</summary>
-    public static unsafe partial class VkMemoryGetFdInfoKHRTests
+    /// <summary>Validates that the <see cref="VkMemoryGetFdInfoKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkMemoryGetFdInfoKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkMemoryGetFdInfoKHR>(), Is.EqualTo(sizeof(VkMemoryGetFdInfoKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkMemoryGetFdInfoKHR>(), Is.EqualTo(sizeof(VkMemoryGetFdInfoKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkMemoryGetFdInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkMemoryGetFdInfoKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkMemoryGetFdInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkMemoryGetFdInfoKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkMemoryGetFdInfoKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkMemoryGetFdInfoKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkMemoryGetFdInfoKHR), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkMemoryGetFdInfoKHR), Is.EqualTo(24));
-            }
+            Assert.That(sizeof(VkMemoryGetFdInfoKHR), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkMemoryGetFdInfoKHR), Is.EqualTo(24));
         }
     }
 }

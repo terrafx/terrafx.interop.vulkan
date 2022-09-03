@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkAttachmentSampleLocationsEXT" /> struct.</summary>
+public static unsafe partial class VkAttachmentSampleLocationsEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkAttachmentSampleLocationsEXT" /> struct.</summary>
-    public static unsafe partial class VkAttachmentSampleLocationsEXTTests
+    /// <summary>Validates that the <see cref="VkAttachmentSampleLocationsEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkAttachmentSampleLocationsEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkAttachmentSampleLocationsEXT>(), Is.EqualTo(sizeof(VkAttachmentSampleLocationsEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkAttachmentSampleLocationsEXT>(), Is.EqualTo(sizeof(VkAttachmentSampleLocationsEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkAttachmentSampleLocationsEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkAttachmentSampleLocationsEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkAttachmentSampleLocationsEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkAttachmentSampleLocationsEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkAttachmentSampleLocationsEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkAttachmentSampleLocationsEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkAttachmentSampleLocationsEXT), Is.EqualTo(48));
-            }
-            else
-            {
-                Assert.That(sizeof(VkAttachmentSampleLocationsEXT), Is.EqualTo(32));
-            }
+            Assert.That(sizeof(VkAttachmentSampleLocationsEXT), Is.EqualTo(48));
+        }
+        else
+        {
+            Assert.That(sizeof(VkAttachmentSampleLocationsEXT), Is.EqualTo(32));
         }
     }
 }

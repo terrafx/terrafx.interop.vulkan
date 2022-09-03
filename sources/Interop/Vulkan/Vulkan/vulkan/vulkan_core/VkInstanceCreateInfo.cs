@@ -3,31 +3,30 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkInstanceCreateInfo
 {
-    public unsafe partial struct VkInstanceCreateInfo
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("VkInstanceCreateFlags")]
-        public uint flags;
+    [NativeTypeName("VkInstanceCreateFlags")]
+    public uint flags;
 
-        [NativeTypeName("const VkApplicationInfo *")]
-        public VkApplicationInfo* pApplicationInfo;
+    [NativeTypeName("const VkApplicationInfo *")]
+    public VkApplicationInfo* pApplicationInfo;
 
-        [NativeTypeName("uint32_t")]
-        public uint enabledLayerCount;
+    [NativeTypeName("uint32_t")]
+    public uint enabledLayerCount;
 
-        [NativeTypeName("const char *const *")]
-        public sbyte** ppEnabledLayerNames;
+    [NativeTypeName("const char *const *")]
+    public sbyte** ppEnabledLayerNames;
 
-        [NativeTypeName("uint32_t")]
-        public uint enabledExtensionCount;
+    [NativeTypeName("uint32_t")]
+    public uint enabledExtensionCount;
 
-        [NativeTypeName("const char *const *")]
-        public sbyte** ppEnabledExtensionNames;
-    }
+    [NativeTypeName("const char *const *")]
+    public sbyte** ppEnabledExtensionNames;
 }

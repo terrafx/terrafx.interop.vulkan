@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDedicatedAllocationMemoryAllocateInfoNV" /> struct.</summary>
+public static unsafe partial class VkDedicatedAllocationMemoryAllocateInfoNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkDedicatedAllocationMemoryAllocateInfoNV" /> struct.</summary>
-    public static unsafe partial class VkDedicatedAllocationMemoryAllocateInfoNVTests
+    /// <summary>Validates that the <see cref="VkDedicatedAllocationMemoryAllocateInfoNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDedicatedAllocationMemoryAllocateInfoNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDedicatedAllocationMemoryAllocateInfoNV>(), Is.EqualTo(sizeof(VkDedicatedAllocationMemoryAllocateInfoNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkDedicatedAllocationMemoryAllocateInfoNV>(), Is.EqualTo(sizeof(VkDedicatedAllocationMemoryAllocateInfoNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDedicatedAllocationMemoryAllocateInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDedicatedAllocationMemoryAllocateInfoNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDedicatedAllocationMemoryAllocateInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDedicatedAllocationMemoryAllocateInfoNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDedicatedAllocationMemoryAllocateInfoNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkDedicatedAllocationMemoryAllocateInfoNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkDedicatedAllocationMemoryAllocateInfoNV), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkDedicatedAllocationMemoryAllocateInfoNV), Is.EqualTo(24));
-            }
+            Assert.That(sizeof(VkDedicatedAllocationMemoryAllocateInfoNV), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkDedicatedAllocationMemoryAllocateInfoNV), Is.EqualTo(24));
         }
     }
 }

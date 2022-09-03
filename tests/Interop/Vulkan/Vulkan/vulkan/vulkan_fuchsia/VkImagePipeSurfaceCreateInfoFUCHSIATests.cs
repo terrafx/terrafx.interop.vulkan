@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkImagePipeSurfaceCreateInfoFUCHSIA" /> struct.</summary>
+public static unsafe partial class VkImagePipeSurfaceCreateInfoFUCHSIATests
 {
-    /// <summary>Provides validation of the <see cref="VkImagePipeSurfaceCreateInfoFUCHSIA" /> struct.</summary>
-    public static unsafe partial class VkImagePipeSurfaceCreateInfoFUCHSIATests
+    /// <summary>Validates that the <see cref="VkImagePipeSurfaceCreateInfoFUCHSIA" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkImagePipeSurfaceCreateInfoFUCHSIA" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkImagePipeSurfaceCreateInfoFUCHSIA>(), Is.EqualTo(sizeof(VkImagePipeSurfaceCreateInfoFUCHSIA)));
-        }
+        Assert.That(Marshal.SizeOf<VkImagePipeSurfaceCreateInfoFUCHSIA>(), Is.EqualTo(sizeof(VkImagePipeSurfaceCreateInfoFUCHSIA)));
+    }
 
-        /// <summary>Validates that the <see cref="VkImagePipeSurfaceCreateInfoFUCHSIA" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkImagePipeSurfaceCreateInfoFUCHSIA).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkImagePipeSurfaceCreateInfoFUCHSIA" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkImagePipeSurfaceCreateInfoFUCHSIA).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkImagePipeSurfaceCreateInfoFUCHSIA" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkImagePipeSurfaceCreateInfoFUCHSIA" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkImagePipeSurfaceCreateInfoFUCHSIA), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkImagePipeSurfaceCreateInfoFUCHSIA), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkImagePipeSurfaceCreateInfoFUCHSIA), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkImagePipeSurfaceCreateInfoFUCHSIA), Is.EqualTo(16));
         }
     }
 }

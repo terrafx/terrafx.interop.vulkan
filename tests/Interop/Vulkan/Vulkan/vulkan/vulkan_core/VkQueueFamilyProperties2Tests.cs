@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkQueueFamilyProperties2" /> struct.</summary>
+public static unsafe partial class VkQueueFamilyProperties2Tests
 {
-    /// <summary>Provides validation of the <see cref="VkQueueFamilyProperties2" /> struct.</summary>
-    public static unsafe partial class VkQueueFamilyProperties2Tests
+    /// <summary>Validates that the <see cref="VkQueueFamilyProperties2" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkQueueFamilyProperties2" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkQueueFamilyProperties2>(), Is.EqualTo(sizeof(VkQueueFamilyProperties2)));
-        }
+        Assert.That(Marshal.SizeOf<VkQueueFamilyProperties2>(), Is.EqualTo(sizeof(VkQueueFamilyProperties2)));
+    }
 
-        /// <summary>Validates that the <see cref="VkQueueFamilyProperties2" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkQueueFamilyProperties2).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkQueueFamilyProperties2" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkQueueFamilyProperties2).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkQueueFamilyProperties2" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkQueueFamilyProperties2" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkQueueFamilyProperties2), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(VkQueueFamilyProperties2), Is.EqualTo(32));
-            }
+            Assert.That(sizeof(VkQueueFamilyProperties2), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(VkQueueFamilyProperties2), Is.EqualTo(32));
         }
     }
 }

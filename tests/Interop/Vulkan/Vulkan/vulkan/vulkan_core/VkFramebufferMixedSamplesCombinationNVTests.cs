@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkFramebufferMixedSamplesCombinationNV" /> struct.</summary>
+public static unsafe partial class VkFramebufferMixedSamplesCombinationNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkFramebufferMixedSamplesCombinationNV" /> struct.</summary>
-    public static unsafe partial class VkFramebufferMixedSamplesCombinationNVTests
+    /// <summary>Validates that the <see cref="VkFramebufferMixedSamplesCombinationNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkFramebufferMixedSamplesCombinationNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkFramebufferMixedSamplesCombinationNV>(), Is.EqualTo(sizeof(VkFramebufferMixedSamplesCombinationNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkFramebufferMixedSamplesCombinationNV>(), Is.EqualTo(sizeof(VkFramebufferMixedSamplesCombinationNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkFramebufferMixedSamplesCombinationNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkFramebufferMixedSamplesCombinationNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkFramebufferMixedSamplesCombinationNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkFramebufferMixedSamplesCombinationNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkFramebufferMixedSamplesCombinationNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkFramebufferMixedSamplesCombinationNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkFramebufferMixedSamplesCombinationNV), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkFramebufferMixedSamplesCombinationNV), Is.EqualTo(24));
-            }
+            Assert.That(sizeof(VkFramebufferMixedSamplesCombinationNV), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkFramebufferMixedSamplesCombinationNV), Is.EqualTo(24));
         }
     }
 }

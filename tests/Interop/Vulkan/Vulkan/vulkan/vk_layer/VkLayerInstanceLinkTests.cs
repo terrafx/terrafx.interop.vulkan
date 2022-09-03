@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkLayerInstanceLink" /> struct.</summary>
+public static unsafe partial class VkLayerInstanceLinkTests
 {
-    /// <summary>Provides validation of the <see cref="VkLayerInstanceLink" /> struct.</summary>
-    public static unsafe partial class VkLayerInstanceLinkTests
+    /// <summary>Validates that the <see cref="VkLayerInstanceLink" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkLayerInstanceLink" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkLayerInstanceLink>(), Is.EqualTo(sizeof(VkLayerInstanceLink)));
-        }
+        Assert.That(Marshal.SizeOf<VkLayerInstanceLink>(), Is.EqualTo(sizeof(VkLayerInstanceLink)));
+    }
 
-        /// <summary>Validates that the <see cref="VkLayerInstanceLink" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkLayerInstanceLink).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkLayerInstanceLink" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkLayerInstanceLink).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkLayerInstanceLink" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkLayerInstanceLink" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkLayerInstanceLink), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkLayerInstanceLink), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkLayerInstanceLink), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkLayerInstanceLink), Is.EqualTo(12));
         }
     }
 }

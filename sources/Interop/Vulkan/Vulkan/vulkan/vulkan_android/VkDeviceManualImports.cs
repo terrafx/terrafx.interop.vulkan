@@ -5,12 +5,11 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
-{
-    public unsafe partial struct VkDeviceManualImports
-    {
-        public delegate* unmanaged<VkDevice, IntPtr, VkAndroidHardwareBufferPropertiesANDROID*, VkResult> vkGetAndroidHardwareBufferPropertiesANDROID;
+namespace TerraFX.Interop.Vulkan;
 
-        public delegate* unmanaged<VkDevice, VkMemoryGetAndroidHardwareBufferInfoANDROID*, IntPtr*, VkResult> vkGetMemoryAndroidHardwareBufferANDROID;
-    }
+public unsafe partial struct VkDeviceManualImports
+{
+    public delegate* unmanaged<VkDevice, IntPtr, VkAndroidHardwareBufferPropertiesANDROID*, VkResult> vkGetAndroidHardwareBufferPropertiesANDROID;
+
+    public delegate* unmanaged<VkDevice, VkMemoryGetAndroidHardwareBufferInfoANDROID*, IntPtr*, VkResult> vkGetMemoryAndroidHardwareBufferANDROID;
 }

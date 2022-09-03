@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceShaderDrawParameterFeatures" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceShaderDrawParameterFeaturesTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceShaderDrawParameterFeatures" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceShaderDrawParameterFeaturesTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderDrawParameterFeatures" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderDrawParameterFeatures" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceShaderDrawParameterFeatures>(), Is.EqualTo(sizeof(VkPhysicalDeviceShaderDrawParameterFeatures)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceShaderDrawParameterFeatures>(), Is.EqualTo(sizeof(VkPhysicalDeviceShaderDrawParameterFeatures)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderDrawParameterFeatures" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceShaderDrawParameterFeatures).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderDrawParameterFeatures" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceShaderDrawParameterFeatures).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderDrawParameterFeatures" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceShaderDrawParameterFeatures" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceShaderDrawParameterFeatures), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceShaderDrawParameterFeatures), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceShaderDrawParameterFeatures), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceShaderDrawParameterFeatures), Is.EqualTo(12));
         }
     }
 }

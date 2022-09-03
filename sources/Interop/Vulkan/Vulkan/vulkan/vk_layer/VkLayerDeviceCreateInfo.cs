@@ -5,29 +5,28 @@
 
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkLayerDeviceCreateInfo
 {
-    public unsafe partial struct VkLayerDeviceCreateInfo
+    public VkStructureType sType;
+
+    [NativeTypeName("const void *")]
+    public void* pNext;
+
+    public VkLayerFunction function;
+
+    [NativeTypeName("union (anonymous union at C:/VulkanSDK/1.3.204.0/Include/vulkan/vk_layer.h:146:5)")]
+    public _u_e__Union u;
+
+    [StructLayout(LayoutKind.Explicit)]
+    public unsafe partial struct _u_e__Union
     {
-        public VkStructureType sType;
+        [FieldOffset(0)]
+        public VkLayerDeviceLink* pLayerInfo;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
-
-        public VkLayerFunction function;
-
-        [NativeTypeName("union (anonymous union at C:/VulkanSDK/1.3.204.0/Include/vulkan/vk_layer.h:146:5)")]
-        public _u_e__Union u;
-
-        [StructLayout(LayoutKind.Explicit)]
-        public unsafe partial struct _u_e__Union
-        {
-            [FieldOffset(0)]
-            public VkLayerDeviceLink* pLayerInfo;
-
-            [FieldOffset(0)]
-            [NativeTypeName("PFN_vkSetDeviceLoaderData")]
-            public delegate* unmanaged<VkDevice, void*, VkResult> pfnSetDeviceLoaderData;
-        }
+        [FieldOffset(0)]
+        [NativeTypeName("PFN_vkSetDeviceLoaderData")]
+        public delegate* unmanaged<VkDevice, void*, VkResult> pfnSetDeviceLoaderData;
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkVideoEncodeH265NaluSliceEXT" /> struct.</summary>
+public static unsafe partial class VkVideoEncodeH265NaluSliceEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkVideoEncodeH265NaluSliceEXT" /> struct.</summary>
-    public static unsafe partial class VkVideoEncodeH265NaluSliceEXTTests
+    /// <summary>Validates that the <see cref="VkVideoEncodeH265NaluSliceEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkVideoEncodeH265NaluSliceEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkVideoEncodeH265NaluSliceEXT>(), Is.EqualTo(sizeof(VkVideoEncodeH265NaluSliceEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkVideoEncodeH265NaluSliceEXT>(), Is.EqualTo(sizeof(VkVideoEncodeH265NaluSliceEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoEncodeH265NaluSliceEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkVideoEncodeH265NaluSliceEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkVideoEncodeH265NaluSliceEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkVideoEncodeH265NaluSliceEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoEncodeH265NaluSliceEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkVideoEncodeH265NaluSliceEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkVideoEncodeH265NaluSliceEXT), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(VkVideoEncodeH265NaluSliceEXT), Is.EqualTo(20));
-            }
+            Assert.That(sizeof(VkVideoEncodeH265NaluSliceEXT), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(VkVideoEncodeH265NaluSliceEXT), Is.EqualTo(20));
         }
     }
 }

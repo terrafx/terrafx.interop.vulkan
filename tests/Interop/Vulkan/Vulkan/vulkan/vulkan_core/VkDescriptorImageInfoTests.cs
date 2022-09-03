@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDescriptorImageInfo" /> struct.</summary>
+public static unsafe partial class VkDescriptorImageInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkDescriptorImageInfo" /> struct.</summary>
-    public static unsafe partial class VkDescriptorImageInfoTests
+    /// <summary>Validates that the <see cref="VkDescriptorImageInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDescriptorImageInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDescriptorImageInfo>(), Is.EqualTo(sizeof(VkDescriptorImageInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkDescriptorImageInfo>(), Is.EqualTo(sizeof(VkDescriptorImageInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDescriptorImageInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDescriptorImageInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDescriptorImageInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDescriptorImageInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDescriptorImageInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkDescriptorImageInfo), Is.EqualTo(24));
-        }
+    /// <summary>Validates that the <see cref="VkDescriptorImageInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkDescriptorImageInfo), Is.EqualTo(24));
     }
 }

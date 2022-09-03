@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceDescriptorIndexingFeatures" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceDescriptorIndexingFeaturesTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceDescriptorIndexingFeatures" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceDescriptorIndexingFeaturesTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceDescriptorIndexingFeatures" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceDescriptorIndexingFeatures" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceDescriptorIndexingFeatures>(), Is.EqualTo(sizeof(VkPhysicalDeviceDescriptorIndexingFeatures)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceDescriptorIndexingFeatures>(), Is.EqualTo(sizeof(VkPhysicalDeviceDescriptorIndexingFeatures)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceDescriptorIndexingFeatures" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceDescriptorIndexingFeatures).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceDescriptorIndexingFeatures" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceDescriptorIndexingFeatures).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceDescriptorIndexingFeatures" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceDescriptorIndexingFeatures" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceDescriptorIndexingFeatures), Is.EqualTo(96));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceDescriptorIndexingFeatures), Is.EqualTo(88));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceDescriptorIndexingFeatures), Is.EqualTo(96));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceDescriptorIndexingFeatures), Is.EqualTo(88));
         }
     }
 }

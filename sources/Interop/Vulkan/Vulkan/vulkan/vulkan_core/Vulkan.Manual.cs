@@ -3,19 +3,18 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2020 The Khronos Group Inc.
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public static unsafe partial class Vulkan
 {
-    public static unsafe partial class Vulkan
-    {
-        public static uint VK_MAKE_VERSION(uint major, uint minor, uint patch) => (major << 22) | (minor << 12) | patch;
+    public static uint VK_MAKE_VERSION(uint major, uint minor, uint patch) => (major << 22) | (minor << 12) | patch;
 
-        public static uint VK_VERSION_MAJOR(uint version) => version >> 22;
+    public static uint VK_VERSION_MAJOR(uint version) => version >> 22;
 
-        public static uint VK_VERSION_MINOR(uint version) => (version >> 12) & 0x3FF;
+    public static uint VK_VERSION_MINOR(uint version) => (version >> 12) & 0x3FF;
 
-        public static uint VK_VERSION_PATCH(uint version) => version & 0xFFF;
+    public static uint VK_VERSION_PATCH(uint version) => version & 0xFFF;
 
-        [NativeTypeName("#define VK_NULL_HANDLE 0ULL")]
-        public const ulong VK_NULL_HANDLE = 0UL;
-    }
+    [NativeTypeName("#define VK_NULL_HANDLE 0ULL")]
+    public const ulong VK_NULL_HANDLE = 0UL;
 }

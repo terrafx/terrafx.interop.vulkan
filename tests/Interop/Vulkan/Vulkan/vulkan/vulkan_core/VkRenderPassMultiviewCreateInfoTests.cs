@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkRenderPassMultiviewCreateInfo" /> struct.</summary>
+public static unsafe partial class VkRenderPassMultiviewCreateInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkRenderPassMultiviewCreateInfo" /> struct.</summary>
-    public static unsafe partial class VkRenderPassMultiviewCreateInfoTests
+    /// <summary>Validates that the <see cref="VkRenderPassMultiviewCreateInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkRenderPassMultiviewCreateInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkRenderPassMultiviewCreateInfo>(), Is.EqualTo(sizeof(VkRenderPassMultiviewCreateInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkRenderPassMultiviewCreateInfo>(), Is.EqualTo(sizeof(VkRenderPassMultiviewCreateInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkRenderPassMultiviewCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkRenderPassMultiviewCreateInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkRenderPassMultiviewCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkRenderPassMultiviewCreateInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkRenderPassMultiviewCreateInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkRenderPassMultiviewCreateInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkRenderPassMultiviewCreateInfo), Is.EqualTo(64));
-            }
-            else
-            {
-                Assert.That(sizeof(VkRenderPassMultiviewCreateInfo), Is.EqualTo(32));
-            }
+            Assert.That(sizeof(VkRenderPassMultiviewCreateInfo), Is.EqualTo(64));
+        }
+        else
+        {
+            Assert.That(sizeof(VkRenderPassMultiviewCreateInfo), Is.EqualTo(32));
         }
     }
 }

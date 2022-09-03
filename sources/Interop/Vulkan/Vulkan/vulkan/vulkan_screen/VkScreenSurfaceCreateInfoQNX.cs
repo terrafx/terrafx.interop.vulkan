@@ -5,22 +5,21 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkScreenSurfaceCreateInfoQNX
 {
-    public unsafe partial struct VkScreenSurfaceCreateInfoQNX
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("VkScreenSurfaceCreateFlagsQNX")]
-        public uint flags;
+    [NativeTypeName("VkScreenSurfaceCreateFlagsQNX")]
+    public uint flags;
 
-        [NativeTypeName("struct _screen_context *")]
-        public IntPtr context;
+    [NativeTypeName("struct _screen_context *")]
+    public IntPtr context;
 
-        [NativeTypeName("struct _screen_window *")]
-        public IntPtr window;
-    }
+    [NativeTypeName("struct _screen_window *")]
+    public IntPtr window;
 }

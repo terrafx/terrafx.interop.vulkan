@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDeviceCreateInfo" /> struct.</summary>
+public static unsafe partial class VkDeviceCreateInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkDeviceCreateInfo" /> struct.</summary>
-    public static unsafe partial class VkDeviceCreateInfoTests
+    /// <summary>Validates that the <see cref="VkDeviceCreateInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDeviceCreateInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDeviceCreateInfo>(), Is.EqualTo(sizeof(VkDeviceCreateInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkDeviceCreateInfo>(), Is.EqualTo(sizeof(VkDeviceCreateInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDeviceCreateInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDeviceCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDeviceCreateInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceCreateInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkDeviceCreateInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkDeviceCreateInfo), Is.EqualTo(72));
-            }
-            else
-            {
-                Assert.That(sizeof(VkDeviceCreateInfo), Is.EqualTo(40));
-            }
+            Assert.That(sizeof(VkDeviceCreateInfo), Is.EqualTo(72));
+        }
+        else
+        {
+            Assert.That(sizeof(VkDeviceCreateInfo), Is.EqualTo(40));
         }
     }
 }

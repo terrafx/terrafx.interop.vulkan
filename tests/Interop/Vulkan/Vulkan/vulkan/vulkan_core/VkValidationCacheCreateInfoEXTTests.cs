@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkValidationCacheCreateInfoEXT" /> struct.</summary>
+public static unsafe partial class VkValidationCacheCreateInfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkValidationCacheCreateInfoEXT" /> struct.</summary>
-    public static unsafe partial class VkValidationCacheCreateInfoEXTTests
+    /// <summary>Validates that the <see cref="VkValidationCacheCreateInfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkValidationCacheCreateInfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkValidationCacheCreateInfoEXT>(), Is.EqualTo(sizeof(VkValidationCacheCreateInfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkValidationCacheCreateInfoEXT>(), Is.EqualTo(sizeof(VkValidationCacheCreateInfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkValidationCacheCreateInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkValidationCacheCreateInfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkValidationCacheCreateInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkValidationCacheCreateInfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkValidationCacheCreateInfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkValidationCacheCreateInfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkValidationCacheCreateInfoEXT), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(VkValidationCacheCreateInfoEXT), Is.EqualTo(20));
-            }
+            Assert.That(sizeof(VkValidationCacheCreateInfoEXT), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(VkValidationCacheCreateInfoEXT), Is.EqualTo(20));
         }
     }
 }

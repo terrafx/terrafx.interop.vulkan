@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPerformanceValueDataINTEL" /> struct.</summary>
+public static unsafe partial class VkPerformanceValueDataINTELTests
 {
-    /// <summary>Provides validation of the <see cref="VkPerformanceValueDataINTEL" /> struct.</summary>
-    public static unsafe partial class VkPerformanceValueDataINTELTests
+    /// <summary>Validates that the <see cref="VkPerformanceValueDataINTEL" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPerformanceValueDataINTEL" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPerformanceValueDataINTEL>(), Is.EqualTo(sizeof(VkPerformanceValueDataINTEL)));
-        }
+        Assert.That(Marshal.SizeOf<VkPerformanceValueDataINTEL>(), Is.EqualTo(sizeof(VkPerformanceValueDataINTEL)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPerformanceValueDataINTEL" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutExplicitTest()
-        {
-            Assert.That(typeof(VkPerformanceValueDataINTEL).IsExplicitLayout, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPerformanceValueDataINTEL" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutExplicitTest()
+    {
+        Assert.That(typeof(VkPerformanceValueDataINTEL).IsExplicitLayout, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPerformanceValueDataINTEL" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkPerformanceValueDataINTEL), Is.EqualTo(8));
-        }
+    /// <summary>Validates that the <see cref="VkPerformanceValueDataINTEL" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkPerformanceValueDataINTEL), Is.EqualTo(8));
     }
 }

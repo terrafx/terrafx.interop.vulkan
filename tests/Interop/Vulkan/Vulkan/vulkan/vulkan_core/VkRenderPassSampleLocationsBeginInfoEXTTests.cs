@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkRenderPassSampleLocationsBeginInfoEXT" /> struct.</summary>
+public static unsafe partial class VkRenderPassSampleLocationsBeginInfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkRenderPassSampleLocationsBeginInfoEXT" /> struct.</summary>
-    public static unsafe partial class VkRenderPassSampleLocationsBeginInfoEXTTests
+    /// <summary>Validates that the <see cref="VkRenderPassSampleLocationsBeginInfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkRenderPassSampleLocationsBeginInfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkRenderPassSampleLocationsBeginInfoEXT>(), Is.EqualTo(sizeof(VkRenderPassSampleLocationsBeginInfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkRenderPassSampleLocationsBeginInfoEXT>(), Is.EqualTo(sizeof(VkRenderPassSampleLocationsBeginInfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkRenderPassSampleLocationsBeginInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkRenderPassSampleLocationsBeginInfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkRenderPassSampleLocationsBeginInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkRenderPassSampleLocationsBeginInfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkRenderPassSampleLocationsBeginInfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkRenderPassSampleLocationsBeginInfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkRenderPassSampleLocationsBeginInfoEXT), Is.EqualTo(48));
-            }
-            else
-            {
-                Assert.That(sizeof(VkRenderPassSampleLocationsBeginInfoEXT), Is.EqualTo(24));
-            }
+            Assert.That(sizeof(VkRenderPassSampleLocationsBeginInfoEXT), Is.EqualTo(48));
+        }
+        else
+        {
+            Assert.That(sizeof(VkRenderPassSampleLocationsBeginInfoEXT), Is.EqualTo(24));
         }
     }
 }

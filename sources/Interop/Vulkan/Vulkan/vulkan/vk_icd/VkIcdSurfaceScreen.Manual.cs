@@ -5,16 +5,15 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public partial struct VkIcdSurfaceScreen
 {
-    public partial struct VkIcdSurfaceScreen
-    {
-        public VkIcdSurfaceBase @base;
+    public VkIcdSurfaceBase @base;
 
-        [NativeTypeName("struct _screen_context *")]
-        public IntPtr context;
+    [NativeTypeName("struct _screen_context *")]
+    public IntPtr context;
 
-        [NativeTypeName("struct _screen_window *")]
-        public IntPtr window;
-    }
+    [NativeTypeName("struct _screen_window *")]
+    public IntPtr window;
 }

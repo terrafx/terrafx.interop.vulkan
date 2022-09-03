@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkRenderPassTransformBeginInfoQCOM" /> struct.</summary>
+public static unsafe partial class VkRenderPassTransformBeginInfoQCOMTests
 {
-    /// <summary>Provides validation of the <see cref="VkRenderPassTransformBeginInfoQCOM" /> struct.</summary>
-    public static unsafe partial class VkRenderPassTransformBeginInfoQCOMTests
+    /// <summary>Validates that the <see cref="VkRenderPassTransformBeginInfoQCOM" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkRenderPassTransformBeginInfoQCOM" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkRenderPassTransformBeginInfoQCOM>(), Is.EqualTo(sizeof(VkRenderPassTransformBeginInfoQCOM)));
-        }
+        Assert.That(Marshal.SizeOf<VkRenderPassTransformBeginInfoQCOM>(), Is.EqualTo(sizeof(VkRenderPassTransformBeginInfoQCOM)));
+    }
 
-        /// <summary>Validates that the <see cref="VkRenderPassTransformBeginInfoQCOM" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkRenderPassTransformBeginInfoQCOM).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkRenderPassTransformBeginInfoQCOM" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkRenderPassTransformBeginInfoQCOM).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkRenderPassTransformBeginInfoQCOM" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkRenderPassTransformBeginInfoQCOM" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkRenderPassTransformBeginInfoQCOM), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkRenderPassTransformBeginInfoQCOM), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkRenderPassTransformBeginInfoQCOM), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkRenderPassTransformBeginInfoQCOM), Is.EqualTo(12));
         }
     }
 }

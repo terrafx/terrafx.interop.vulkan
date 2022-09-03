@@ -5,15 +5,14 @@
 
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan
-{
-    [StructLayout(LayoutKind.Explicit)]
-    public partial struct VkClearValue
-    {
-        [FieldOffset(0)]
-        public VkClearColorValue color;
+namespace TerraFX.Interop.Vulkan;
 
-        [FieldOffset(0)]
-        public VkClearDepthStencilValue depthStencil;
-    }
+[StructLayout(LayoutKind.Explicit)]
+public partial struct VkClearValue
+{
+    [FieldOffset(0)]
+    public VkClearColorValue color;
+
+    [FieldOffset(0)]
+    public VkClearDepthStencilValue depthStencil;
 }

@@ -5,12 +5,11 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[NativeTypeName("int")]
+[Flags]
+public enum VkPipelineCompilerControlFlagsAMD : uint
 {
-    [NativeTypeName("int")]
-    [Flags]
-    public enum VkPipelineCompilerControlFlagsAMD : uint
-    {
-        VK_PIPELINE_COMPILER_CONTROL_FLAG_BITS_MAX_ENUM_AMD = 0x7FFFFFFF,
-    }
+    VK_PIPELINE_COMPILER_CONTROL_FLAG_BITS_MAX_ENUM_AMD = 0x7FFFFFFF,
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkExternalBufferProperties" /> struct.</summary>
+public static unsafe partial class VkExternalBufferPropertiesTests
 {
-    /// <summary>Provides validation of the <see cref="VkExternalBufferProperties" /> struct.</summary>
-    public static unsafe partial class VkExternalBufferPropertiesTests
+    /// <summary>Validates that the <see cref="VkExternalBufferProperties" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkExternalBufferProperties" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkExternalBufferProperties>(), Is.EqualTo(sizeof(VkExternalBufferProperties)));
-        }
+        Assert.That(Marshal.SizeOf<VkExternalBufferProperties>(), Is.EqualTo(sizeof(VkExternalBufferProperties)));
+    }
 
-        /// <summary>Validates that the <see cref="VkExternalBufferProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkExternalBufferProperties).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkExternalBufferProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkExternalBufferProperties).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkExternalBufferProperties" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkExternalBufferProperties" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkExternalBufferProperties), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkExternalBufferProperties), Is.EqualTo(20));
-            }
+            Assert.That(sizeof(VkExternalBufferProperties), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkExternalBufferProperties), Is.EqualTo(20));
         }
     }
 }

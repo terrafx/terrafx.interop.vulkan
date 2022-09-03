@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkImageSubresource" /> struct.</summary>
+public static unsafe partial class VkImageSubresourceTests
 {
-    /// <summary>Provides validation of the <see cref="VkImageSubresource" /> struct.</summary>
-    public static unsafe partial class VkImageSubresourceTests
+    /// <summary>Validates that the <see cref="VkImageSubresource" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkImageSubresource" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkImageSubresource>(), Is.EqualTo(sizeof(VkImageSubresource)));
-        }
+        Assert.That(Marshal.SizeOf<VkImageSubresource>(), Is.EqualTo(sizeof(VkImageSubresource)));
+    }
 
-        /// <summary>Validates that the <see cref="VkImageSubresource" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkImageSubresource).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkImageSubresource" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkImageSubresource).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkImageSubresource" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkImageSubresource), Is.EqualTo(12));
-        }
+    /// <summary>Validates that the <see cref="VkImageSubresource" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkImageSubresource), Is.EqualTo(12));
     }
 }

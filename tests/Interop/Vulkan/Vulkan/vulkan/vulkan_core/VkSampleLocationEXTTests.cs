@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSampleLocationEXT" /> struct.</summary>
+public static unsafe partial class VkSampleLocationEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkSampleLocationEXT" /> struct.</summary>
-    public static unsafe partial class VkSampleLocationEXTTests
+    /// <summary>Validates that the <see cref="VkSampleLocationEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSampleLocationEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSampleLocationEXT>(), Is.EqualTo(sizeof(VkSampleLocationEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkSampleLocationEXT>(), Is.EqualTo(sizeof(VkSampleLocationEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSampleLocationEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSampleLocationEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSampleLocationEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSampleLocationEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSampleLocationEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkSampleLocationEXT), Is.EqualTo(8));
-        }
+    /// <summary>Validates that the <see cref="VkSampleLocationEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkSampleLocationEXT), Is.EqualTo(8));
     }
 }

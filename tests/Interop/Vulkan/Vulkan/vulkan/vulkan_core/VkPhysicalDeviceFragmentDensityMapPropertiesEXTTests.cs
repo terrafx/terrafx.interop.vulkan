@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceFragmentDensityMapPropertiesEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceFragmentDensityMapPropertiesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceFragmentDensityMapPropertiesEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceFragmentDensityMapPropertiesEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceFragmentDensityMapPropertiesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceFragmentDensityMapPropertiesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceFragmentDensityMapPropertiesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceFragmentDensityMapPropertiesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceFragmentDensityMapPropertiesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceFragmentDensityMapPropertiesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceFragmentDensityMapPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceFragmentDensityMapPropertiesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceFragmentDensityMapPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceFragmentDensityMapPropertiesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceFragmentDensityMapPropertiesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceFragmentDensityMapPropertiesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceFragmentDensityMapPropertiesEXT), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceFragmentDensityMapPropertiesEXT), Is.EqualTo(28));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceFragmentDensityMapPropertiesEXT), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceFragmentDensityMapPropertiesEXT), Is.EqualTo(28));
         }
     }
 }

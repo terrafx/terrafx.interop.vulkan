@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkValidationFlagsEXT" /> struct.</summary>
+public static unsafe partial class VkValidationFlagsEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkValidationFlagsEXT" /> struct.</summary>
-    public static unsafe partial class VkValidationFlagsEXTTests
+    /// <summary>Validates that the <see cref="VkValidationFlagsEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkValidationFlagsEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkValidationFlagsEXT>(), Is.EqualTo(sizeof(VkValidationFlagsEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkValidationFlagsEXT>(), Is.EqualTo(sizeof(VkValidationFlagsEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkValidationFlagsEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkValidationFlagsEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkValidationFlagsEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkValidationFlagsEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkValidationFlagsEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkValidationFlagsEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkValidationFlagsEXT), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkValidationFlagsEXT), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkValidationFlagsEXT), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkValidationFlagsEXT), Is.EqualTo(16));
         }
     }
 }

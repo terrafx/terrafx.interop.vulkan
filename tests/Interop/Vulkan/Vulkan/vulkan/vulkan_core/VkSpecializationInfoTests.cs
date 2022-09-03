@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSpecializationInfo" /> struct.</summary>
+public static unsafe partial class VkSpecializationInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkSpecializationInfo" /> struct.</summary>
-    public static unsafe partial class VkSpecializationInfoTests
+    /// <summary>Validates that the <see cref="VkSpecializationInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSpecializationInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSpecializationInfo>(), Is.EqualTo(sizeof(VkSpecializationInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkSpecializationInfo>(), Is.EqualTo(sizeof(VkSpecializationInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSpecializationInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSpecializationInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSpecializationInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSpecializationInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSpecializationInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkSpecializationInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkSpecializationInfo), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkSpecializationInfo), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkSpecializationInfo), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkSpecializationInfo), Is.EqualTo(16));
         }
     }
 }

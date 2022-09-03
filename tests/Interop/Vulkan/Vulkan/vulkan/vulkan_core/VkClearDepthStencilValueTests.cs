@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkClearDepthStencilValue" /> struct.</summary>
+public static unsafe partial class VkClearDepthStencilValueTests
 {
-    /// <summary>Provides validation of the <see cref="VkClearDepthStencilValue" /> struct.</summary>
-    public static unsafe partial class VkClearDepthStencilValueTests
+    /// <summary>Validates that the <see cref="VkClearDepthStencilValue" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkClearDepthStencilValue" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkClearDepthStencilValue>(), Is.EqualTo(sizeof(VkClearDepthStencilValue)));
-        }
+        Assert.That(Marshal.SizeOf<VkClearDepthStencilValue>(), Is.EqualTo(sizeof(VkClearDepthStencilValue)));
+    }
 
-        /// <summary>Validates that the <see cref="VkClearDepthStencilValue" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkClearDepthStencilValue).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkClearDepthStencilValue" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkClearDepthStencilValue).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkClearDepthStencilValue" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkClearDepthStencilValue), Is.EqualTo(8));
-        }
+    /// <summary>Validates that the <see cref="VkClearDepthStencilValue" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkClearDepthStencilValue), Is.EqualTo(8));
     }
 }

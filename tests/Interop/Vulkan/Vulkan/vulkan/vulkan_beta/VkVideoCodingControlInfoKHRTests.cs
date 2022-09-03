@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkVideoCodingControlInfoKHR" /> struct.</summary>
+public static unsafe partial class VkVideoCodingControlInfoKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkVideoCodingControlInfoKHR" /> struct.</summary>
-    public static unsafe partial class VkVideoCodingControlInfoKHRTests
+    /// <summary>Validates that the <see cref="VkVideoCodingControlInfoKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkVideoCodingControlInfoKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkVideoCodingControlInfoKHR>(), Is.EqualTo(sizeof(VkVideoCodingControlInfoKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkVideoCodingControlInfoKHR>(), Is.EqualTo(sizeof(VkVideoCodingControlInfoKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoCodingControlInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkVideoCodingControlInfoKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkVideoCodingControlInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkVideoCodingControlInfoKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoCodingControlInfoKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkVideoCodingControlInfoKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkVideoCodingControlInfoKHR), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkVideoCodingControlInfoKHR), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkVideoCodingControlInfoKHR), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkVideoCodingControlInfoKHR), Is.EqualTo(12));
         }
     }
 }

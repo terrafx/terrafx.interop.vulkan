@@ -5,17 +5,16 @@
 
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan
-{
-    [StructLayout(LayoutKind.Explicit)]
-    public unsafe partial struct VkDeviceOrHostAddressConstKHR
-    {
-        [FieldOffset(0)]
-        [NativeTypeName("VkDeviceAddress")]
-        public ulong deviceAddress;
+namespace TerraFX.Interop.Vulkan;
 
-        [FieldOffset(0)]
-        [NativeTypeName("const void *")]
-        public void* hostAddress;
-    }
+[StructLayout(LayoutKind.Explicit)]
+public unsafe partial struct VkDeviceOrHostAddressConstKHR
+{
+    [FieldOffset(0)]
+    [NativeTypeName("VkDeviceAddress")]
+    public ulong deviceAddress;
+
+    [FieldOffset(0)]
+    [NativeTypeName("const void *")]
+    public void* hostAddress;
 }

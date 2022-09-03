@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSurfaceFullScreenExclusiveWin32InfoEXT" /> struct.</summary>
+public static unsafe partial class VkSurfaceFullScreenExclusiveWin32InfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkSurfaceFullScreenExclusiveWin32InfoEXT" /> struct.</summary>
-    public static unsafe partial class VkSurfaceFullScreenExclusiveWin32InfoEXTTests
+    /// <summary>Validates that the <see cref="VkSurfaceFullScreenExclusiveWin32InfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSurfaceFullScreenExclusiveWin32InfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSurfaceFullScreenExclusiveWin32InfoEXT>(), Is.EqualTo(sizeof(VkSurfaceFullScreenExclusiveWin32InfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkSurfaceFullScreenExclusiveWin32InfoEXT>(), Is.EqualTo(sizeof(VkSurfaceFullScreenExclusiveWin32InfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSurfaceFullScreenExclusiveWin32InfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSurfaceFullScreenExclusiveWin32InfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSurfaceFullScreenExclusiveWin32InfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSurfaceFullScreenExclusiveWin32InfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSurfaceFullScreenExclusiveWin32InfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkSurfaceFullScreenExclusiveWin32InfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkSurfaceFullScreenExclusiveWin32InfoEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkSurfaceFullScreenExclusiveWin32InfoEXT), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkSurfaceFullScreenExclusiveWin32InfoEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkSurfaceFullScreenExclusiveWin32InfoEXT), Is.EqualTo(12));
         }
     }
 }

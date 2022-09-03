@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDescriptorUpdateTemplateCreateInfo" /> struct.</summary>
+public static unsafe partial class VkDescriptorUpdateTemplateCreateInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkDescriptorUpdateTemplateCreateInfo" /> struct.</summary>
-    public static unsafe partial class VkDescriptorUpdateTemplateCreateInfoTests
+    /// <summary>Validates that the <see cref="VkDescriptorUpdateTemplateCreateInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDescriptorUpdateTemplateCreateInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDescriptorUpdateTemplateCreateInfo>(), Is.EqualTo(sizeof(VkDescriptorUpdateTemplateCreateInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkDescriptorUpdateTemplateCreateInfo>(), Is.EqualTo(sizeof(VkDescriptorUpdateTemplateCreateInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDescriptorUpdateTemplateCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDescriptorUpdateTemplateCreateInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDescriptorUpdateTemplateCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDescriptorUpdateTemplateCreateInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDescriptorUpdateTemplateCreateInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkDescriptorUpdateTemplateCreateInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkDescriptorUpdateTemplateCreateInfo), Is.EqualTo(72));
-            }
-            else
-            {
-                Assert.That(sizeof(VkDescriptorUpdateTemplateCreateInfo), Is.EqualTo(56));
-            }
+            Assert.That(sizeof(VkDescriptorUpdateTemplateCreateInfo), Is.EqualTo(72));
+        }
+        else
+        {
+            Assert.That(sizeof(VkDescriptorUpdateTemplateCreateInfo), Is.EqualTo(56));
         }
     }
 }

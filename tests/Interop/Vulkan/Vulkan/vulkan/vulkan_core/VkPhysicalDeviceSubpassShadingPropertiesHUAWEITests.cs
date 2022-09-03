@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceSubpassShadingPropertiesHUAWEI" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceSubpassShadingPropertiesHUAWEITests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceSubpassShadingPropertiesHUAWEI" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceSubpassShadingPropertiesHUAWEITests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceSubpassShadingPropertiesHUAWEI" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceSubpassShadingPropertiesHUAWEI" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceSubpassShadingPropertiesHUAWEI>(), Is.EqualTo(sizeof(VkPhysicalDeviceSubpassShadingPropertiesHUAWEI)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceSubpassShadingPropertiesHUAWEI>(), Is.EqualTo(sizeof(VkPhysicalDeviceSubpassShadingPropertiesHUAWEI)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceSubpassShadingPropertiesHUAWEI" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceSubpassShadingPropertiesHUAWEI).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceSubpassShadingPropertiesHUAWEI" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceSubpassShadingPropertiesHUAWEI).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceSubpassShadingPropertiesHUAWEI" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceSubpassShadingPropertiesHUAWEI" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceSubpassShadingPropertiesHUAWEI), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceSubpassShadingPropertiesHUAWEI), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceSubpassShadingPropertiesHUAWEI), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceSubpassShadingPropertiesHUAWEI), Is.EqualTo(12));
         }
     }
 }

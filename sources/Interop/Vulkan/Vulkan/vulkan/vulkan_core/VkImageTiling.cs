@@ -3,13 +3,12 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public enum VkImageTiling
 {
-    public enum VkImageTiling
-    {
-        VK_IMAGE_TILING_OPTIMAL = 0,
-        VK_IMAGE_TILING_LINEAR = 1,
-        VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT = 1000158000,
-        VK_IMAGE_TILING_MAX_ENUM = 0x7FFFFFFF,
-    }
+    VK_IMAGE_TILING_OPTIMAL = 0,
+    VK_IMAGE_TILING_LINEAR = 1,
+    VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT = 1000158000,
+    VK_IMAGE_TILING_MAX_ENUM = 0x7FFFFFFF,
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDeviceGroupDeviceCreateInfo" /> struct.</summary>
+public static unsafe partial class VkDeviceGroupDeviceCreateInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkDeviceGroupDeviceCreateInfo" /> struct.</summary>
-    public static unsafe partial class VkDeviceGroupDeviceCreateInfoTests
+    /// <summary>Validates that the <see cref="VkDeviceGroupDeviceCreateInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDeviceGroupDeviceCreateInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDeviceGroupDeviceCreateInfo>(), Is.EqualTo(sizeof(VkDeviceGroupDeviceCreateInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkDeviceGroupDeviceCreateInfo>(), Is.EqualTo(sizeof(VkDeviceGroupDeviceCreateInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceGroupDeviceCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDeviceGroupDeviceCreateInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDeviceGroupDeviceCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDeviceGroupDeviceCreateInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceGroupDeviceCreateInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkDeviceGroupDeviceCreateInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkDeviceGroupDeviceCreateInfo), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkDeviceGroupDeviceCreateInfo), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkDeviceGroupDeviceCreateInfo), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkDeviceGroupDeviceCreateInfo), Is.EqualTo(16));
         }
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkMutableDescriptorTypeListVALVE" /> struct.</summary>
+public static unsafe partial class VkMutableDescriptorTypeListVALVETests
 {
-    /// <summary>Provides validation of the <see cref="VkMutableDescriptorTypeListVALVE" /> struct.</summary>
-    public static unsafe partial class VkMutableDescriptorTypeListVALVETests
+    /// <summary>Validates that the <see cref="VkMutableDescriptorTypeListVALVE" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkMutableDescriptorTypeListVALVE" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkMutableDescriptorTypeListVALVE>(), Is.EqualTo(sizeof(VkMutableDescriptorTypeListVALVE)));
-        }
+        Assert.That(Marshal.SizeOf<VkMutableDescriptorTypeListVALVE>(), Is.EqualTo(sizeof(VkMutableDescriptorTypeListVALVE)));
+    }
 
-        /// <summary>Validates that the <see cref="VkMutableDescriptorTypeListVALVE" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkMutableDescriptorTypeListVALVE).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkMutableDescriptorTypeListVALVE" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkMutableDescriptorTypeListVALVE).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkMutableDescriptorTypeListVALVE" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkMutableDescriptorTypeListVALVE" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkMutableDescriptorTypeListVALVE), Is.EqualTo(16));
-            }
-            else
-            {
-                Assert.That(sizeof(VkMutableDescriptorTypeListVALVE), Is.EqualTo(8));
-            }
+            Assert.That(sizeof(VkMutableDescriptorTypeListVALVE), Is.EqualTo(16));
+        }
+        else
+        {
+            Assert.That(sizeof(VkMutableDescriptorTypeListVALVE), Is.EqualTo(8));
         }
     }
 }

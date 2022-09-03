@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceRayTracingPipelineFeaturesKHR" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceRayTracingPipelineFeaturesKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceRayTracingPipelineFeaturesKHR" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceRayTracingPipelineFeaturesKHRTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceRayTracingPipelineFeaturesKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceRayTracingPipelineFeaturesKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceRayTracingPipelineFeaturesKHR>(), Is.EqualTo(sizeof(VkPhysicalDeviceRayTracingPipelineFeaturesKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceRayTracingPipelineFeaturesKHR>(), Is.EqualTo(sizeof(VkPhysicalDeviceRayTracingPipelineFeaturesKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceRayTracingPipelineFeaturesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceRayTracingPipelineFeaturesKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceRayTracingPipelineFeaturesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceRayTracingPipelineFeaturesKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceRayTracingPipelineFeaturesKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceRayTracingPipelineFeaturesKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceRayTracingPipelineFeaturesKHR), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceRayTracingPipelineFeaturesKHR), Is.EqualTo(28));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceRayTracingPipelineFeaturesKHR), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceRayTracingPipelineFeaturesKHR), Is.EqualTo(28));
         }
     }
 }

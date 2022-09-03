@@ -5,22 +5,21 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkImportMemoryWin32HandleInfoKHR
 {
-    public unsafe partial struct VkImportMemoryWin32HandleInfoKHR
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("VkExternalMemoryHandleTypeFlagBits")]
-        public VkExternalMemoryHandleTypeFlags handleType;
+    [NativeTypeName("VkExternalMemoryHandleTypeFlagBits")]
+    public VkExternalMemoryHandleTypeFlags handleType;
 
-        [NativeTypeName("HANDLE")]
-        public IntPtr handle;
+    [NativeTypeName("HANDLE")]
+    public IntPtr handle;
 
-        [NativeTypeName("LPCWSTR")]
-        public ushort* name;
-    }
+    [NativeTypeName("LPCWSTR")]
+    public ushort* name;
 }

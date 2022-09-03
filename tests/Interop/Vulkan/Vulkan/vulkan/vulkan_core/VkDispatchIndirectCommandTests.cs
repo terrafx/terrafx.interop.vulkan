@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDispatchIndirectCommand" /> struct.</summary>
+public static unsafe partial class VkDispatchIndirectCommandTests
 {
-    /// <summary>Provides validation of the <see cref="VkDispatchIndirectCommand" /> struct.</summary>
-    public static unsafe partial class VkDispatchIndirectCommandTests
+    /// <summary>Validates that the <see cref="VkDispatchIndirectCommand" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDispatchIndirectCommand" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDispatchIndirectCommand>(), Is.EqualTo(sizeof(VkDispatchIndirectCommand)));
-        }
+        Assert.That(Marshal.SizeOf<VkDispatchIndirectCommand>(), Is.EqualTo(sizeof(VkDispatchIndirectCommand)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDispatchIndirectCommand" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDispatchIndirectCommand).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDispatchIndirectCommand" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDispatchIndirectCommand).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDispatchIndirectCommand" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkDispatchIndirectCommand), Is.EqualTo(12));
-        }
+    /// <summary>Validates that the <see cref="VkDispatchIndirectCommand" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkDispatchIndirectCommand), Is.EqualTo(12));
     }
 }

@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDrawMeshTasksIndirectCommandNV" /> struct.</summary>
+public static unsafe partial class VkDrawMeshTasksIndirectCommandNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkDrawMeshTasksIndirectCommandNV" /> struct.</summary>
-    public static unsafe partial class VkDrawMeshTasksIndirectCommandNVTests
+    /// <summary>Validates that the <see cref="VkDrawMeshTasksIndirectCommandNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDrawMeshTasksIndirectCommandNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDrawMeshTasksIndirectCommandNV>(), Is.EqualTo(sizeof(VkDrawMeshTasksIndirectCommandNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkDrawMeshTasksIndirectCommandNV>(), Is.EqualTo(sizeof(VkDrawMeshTasksIndirectCommandNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDrawMeshTasksIndirectCommandNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDrawMeshTasksIndirectCommandNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDrawMeshTasksIndirectCommandNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDrawMeshTasksIndirectCommandNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDrawMeshTasksIndirectCommandNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkDrawMeshTasksIndirectCommandNV), Is.EqualTo(8));
-        }
+    /// <summary>Validates that the <see cref="VkDrawMeshTasksIndirectCommandNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkDrawMeshTasksIndirectCommandNV), Is.EqualTo(8));
     }
 }

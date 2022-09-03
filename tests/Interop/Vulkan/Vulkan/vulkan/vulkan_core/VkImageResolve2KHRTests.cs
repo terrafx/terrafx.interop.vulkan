@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkImageResolve2KHR" /> struct.</summary>
+public static unsafe partial class VkImageResolve2KHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkImageResolve2KHR" /> struct.</summary>
-    public static unsafe partial class VkImageResolve2KHRTests
+    /// <summary>Validates that the <see cref="VkImageResolve2KHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkImageResolve2KHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkImageResolve2KHR>(), Is.EqualTo(sizeof(VkImageResolve2KHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkImageResolve2KHR>(), Is.EqualTo(sizeof(VkImageResolve2KHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkImageResolve2KHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkImageResolve2KHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkImageResolve2KHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkImageResolve2KHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkImageResolve2KHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkImageResolve2KHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkImageResolve2KHR), Is.EqualTo(88));
-            }
-            else
-            {
-                Assert.That(sizeof(VkImageResolve2KHR), Is.EqualTo(76));
-            }
+            Assert.That(sizeof(VkImageResolve2KHR), Is.EqualTo(88));
+        }
+        else
+        {
+            Assert.That(sizeof(VkImageResolve2KHR), Is.EqualTo(76));
         }
     }
 }

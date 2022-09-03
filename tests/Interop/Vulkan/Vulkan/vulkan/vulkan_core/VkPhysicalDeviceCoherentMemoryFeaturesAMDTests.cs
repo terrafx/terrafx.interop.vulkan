@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceCoherentMemoryFeaturesAMD" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceCoherentMemoryFeaturesAMDTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceCoherentMemoryFeaturesAMD" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceCoherentMemoryFeaturesAMDTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceCoherentMemoryFeaturesAMD" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceCoherentMemoryFeaturesAMD" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceCoherentMemoryFeaturesAMD>(), Is.EqualTo(sizeof(VkPhysicalDeviceCoherentMemoryFeaturesAMD)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceCoherentMemoryFeaturesAMD>(), Is.EqualTo(sizeof(VkPhysicalDeviceCoherentMemoryFeaturesAMD)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceCoherentMemoryFeaturesAMD" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceCoherentMemoryFeaturesAMD).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceCoherentMemoryFeaturesAMD" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceCoherentMemoryFeaturesAMD).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceCoherentMemoryFeaturesAMD" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceCoherentMemoryFeaturesAMD" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceCoherentMemoryFeaturesAMD), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceCoherentMemoryFeaturesAMD), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceCoherentMemoryFeaturesAMD), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceCoherentMemoryFeaturesAMD), Is.EqualTo(12));
         }
     }
 }

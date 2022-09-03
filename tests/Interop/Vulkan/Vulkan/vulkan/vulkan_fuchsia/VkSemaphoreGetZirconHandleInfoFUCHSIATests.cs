@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSemaphoreGetZirconHandleInfoFUCHSIA" /> struct.</summary>
+public static unsafe partial class VkSemaphoreGetZirconHandleInfoFUCHSIATests
 {
-    /// <summary>Provides validation of the <see cref="VkSemaphoreGetZirconHandleInfoFUCHSIA" /> struct.</summary>
-    public static unsafe partial class VkSemaphoreGetZirconHandleInfoFUCHSIATests
+    /// <summary>Validates that the <see cref="VkSemaphoreGetZirconHandleInfoFUCHSIA" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSemaphoreGetZirconHandleInfoFUCHSIA" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSemaphoreGetZirconHandleInfoFUCHSIA>(), Is.EqualTo(sizeof(VkSemaphoreGetZirconHandleInfoFUCHSIA)));
-        }
+        Assert.That(Marshal.SizeOf<VkSemaphoreGetZirconHandleInfoFUCHSIA>(), Is.EqualTo(sizeof(VkSemaphoreGetZirconHandleInfoFUCHSIA)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSemaphoreGetZirconHandleInfoFUCHSIA" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSemaphoreGetZirconHandleInfoFUCHSIA).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSemaphoreGetZirconHandleInfoFUCHSIA" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSemaphoreGetZirconHandleInfoFUCHSIA).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSemaphoreGetZirconHandleInfoFUCHSIA" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkSemaphoreGetZirconHandleInfoFUCHSIA" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkSemaphoreGetZirconHandleInfoFUCHSIA), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkSemaphoreGetZirconHandleInfoFUCHSIA), Is.EqualTo(24));
-            }
+            Assert.That(sizeof(VkSemaphoreGetZirconHandleInfoFUCHSIA), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkSemaphoreGetZirconHandleInfoFUCHSIA), Is.EqualTo(24));
         }
     }
 }

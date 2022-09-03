@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDescriptorBufferInfo" /> struct.</summary>
+public static unsafe partial class VkDescriptorBufferInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkDescriptorBufferInfo" /> struct.</summary>
-    public static unsafe partial class VkDescriptorBufferInfoTests
+    /// <summary>Validates that the <see cref="VkDescriptorBufferInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDescriptorBufferInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDescriptorBufferInfo>(), Is.EqualTo(sizeof(VkDescriptorBufferInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkDescriptorBufferInfo>(), Is.EqualTo(sizeof(VkDescriptorBufferInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDescriptorBufferInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDescriptorBufferInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDescriptorBufferInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDescriptorBufferInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDescriptorBufferInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkDescriptorBufferInfo), Is.EqualTo(24));
-        }
+    /// <summary>Validates that the <see cref="VkDescriptorBufferInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkDescriptorBufferInfo), Is.EqualTo(24));
     }
 }

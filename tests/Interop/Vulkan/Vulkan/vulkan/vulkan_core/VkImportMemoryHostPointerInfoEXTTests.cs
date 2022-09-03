@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkImportMemoryHostPointerInfoEXT" /> struct.</summary>
+public static unsafe partial class VkImportMemoryHostPointerInfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkImportMemoryHostPointerInfoEXT" /> struct.</summary>
-    public static unsafe partial class VkImportMemoryHostPointerInfoEXTTests
+    /// <summary>Validates that the <see cref="VkImportMemoryHostPointerInfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkImportMemoryHostPointerInfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkImportMemoryHostPointerInfoEXT>(), Is.EqualTo(sizeof(VkImportMemoryHostPointerInfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkImportMemoryHostPointerInfoEXT>(), Is.EqualTo(sizeof(VkImportMemoryHostPointerInfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkImportMemoryHostPointerInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkImportMemoryHostPointerInfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkImportMemoryHostPointerInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkImportMemoryHostPointerInfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkImportMemoryHostPointerInfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkImportMemoryHostPointerInfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkImportMemoryHostPointerInfoEXT), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkImportMemoryHostPointerInfoEXT), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkImportMemoryHostPointerInfoEXT), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkImportMemoryHostPointerInfoEXT), Is.EqualTo(16));
         }
     }
 }

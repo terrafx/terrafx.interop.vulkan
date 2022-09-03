@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkAccelerationStructureInstanceKHR" /> struct.</summary>
+public static unsafe partial class VkAccelerationStructureInstanceKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkAccelerationStructureInstanceKHR" /> struct.</summary>
-    public static unsafe partial class VkAccelerationStructureInstanceKHRTests
+    /// <summary>Validates that the <see cref="VkAccelerationStructureInstanceKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkAccelerationStructureInstanceKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkAccelerationStructureInstanceKHR>(), Is.EqualTo(sizeof(VkAccelerationStructureInstanceKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkAccelerationStructureInstanceKHR>(), Is.EqualTo(sizeof(VkAccelerationStructureInstanceKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkAccelerationStructureInstanceKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkAccelerationStructureInstanceKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkAccelerationStructureInstanceKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkAccelerationStructureInstanceKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkAccelerationStructureInstanceKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkAccelerationStructureInstanceKHR), Is.EqualTo(64));
-        }
+    /// <summary>Validates that the <see cref="VkAccelerationStructureInstanceKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkAccelerationStructureInstanceKHR), Is.EqualTo(64));
     }
 }

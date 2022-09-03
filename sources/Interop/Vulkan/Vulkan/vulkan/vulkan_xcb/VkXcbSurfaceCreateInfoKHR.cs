@@ -5,21 +5,20 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkXcbSurfaceCreateInfoKHR
 {
-    public unsafe partial struct VkXcbSurfaceCreateInfoKHR
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("VkXcbSurfaceCreateFlagsKHR")]
-        public uint flags;
+    [NativeTypeName("VkXcbSurfaceCreateFlagsKHR")]
+    public uint flags;
 
-        public IntPtr connection;
+    public IntPtr connection;
 
-        [NativeTypeName("xcb_window_t")]
-        public uint window;
-    }
+    [NativeTypeName("xcb_window_t")]
+    public uint window;
 }

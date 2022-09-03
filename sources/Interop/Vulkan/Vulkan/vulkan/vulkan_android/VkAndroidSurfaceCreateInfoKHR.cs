@@ -5,19 +5,18 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkAndroidSurfaceCreateInfoKHR
 {
-    public unsafe partial struct VkAndroidSurfaceCreateInfoKHR
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("VkAndroidSurfaceCreateFlagsKHR")]
-        public uint flags;
+    [NativeTypeName("VkAndroidSurfaceCreateFlagsKHR")]
+    public uint flags;
 
-        [NativeTypeName("struct ANativeWindow *")]
-        public IntPtr window;
-    }
+    [NativeTypeName("struct ANativeWindow *")]
+    public IntPtr window;
 }

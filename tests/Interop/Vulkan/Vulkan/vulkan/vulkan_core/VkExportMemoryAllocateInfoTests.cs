@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkExportMemoryAllocateInfo" /> struct.</summary>
+public static unsafe partial class VkExportMemoryAllocateInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkExportMemoryAllocateInfo" /> struct.</summary>
-    public static unsafe partial class VkExportMemoryAllocateInfoTests
+    /// <summary>Validates that the <see cref="VkExportMemoryAllocateInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkExportMemoryAllocateInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkExportMemoryAllocateInfo>(), Is.EqualTo(sizeof(VkExportMemoryAllocateInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkExportMemoryAllocateInfo>(), Is.EqualTo(sizeof(VkExportMemoryAllocateInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkExportMemoryAllocateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkExportMemoryAllocateInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkExportMemoryAllocateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkExportMemoryAllocateInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkExportMemoryAllocateInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkExportMemoryAllocateInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkExportMemoryAllocateInfo), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkExportMemoryAllocateInfo), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkExportMemoryAllocateInfo), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkExportMemoryAllocateInfo), Is.EqualTo(12));
         }
     }
 }

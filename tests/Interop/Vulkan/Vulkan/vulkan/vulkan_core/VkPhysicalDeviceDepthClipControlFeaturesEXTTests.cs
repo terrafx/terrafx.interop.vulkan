@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceDepthClipControlFeaturesEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceDepthClipControlFeaturesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceDepthClipControlFeaturesEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceDepthClipControlFeaturesEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceDepthClipControlFeaturesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceDepthClipControlFeaturesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceDepthClipControlFeaturesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceDepthClipControlFeaturesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceDepthClipControlFeaturesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceDepthClipControlFeaturesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceDepthClipControlFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceDepthClipControlFeaturesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceDepthClipControlFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceDepthClipControlFeaturesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceDepthClipControlFeaturesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceDepthClipControlFeaturesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceDepthClipControlFeaturesEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceDepthClipControlFeaturesEXT), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceDepthClipControlFeaturesEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceDepthClipControlFeaturesEXT), Is.EqualTo(12));
         }
     }
 }

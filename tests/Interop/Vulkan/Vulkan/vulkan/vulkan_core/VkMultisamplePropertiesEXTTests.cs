@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkMultisamplePropertiesEXT" /> struct.</summary>
+public static unsafe partial class VkMultisamplePropertiesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkMultisamplePropertiesEXT" /> struct.</summary>
-    public static unsafe partial class VkMultisamplePropertiesEXTTests
+    /// <summary>Validates that the <see cref="VkMultisamplePropertiesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkMultisamplePropertiesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkMultisamplePropertiesEXT>(), Is.EqualTo(sizeof(VkMultisamplePropertiesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkMultisamplePropertiesEXT>(), Is.EqualTo(sizeof(VkMultisamplePropertiesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkMultisamplePropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkMultisamplePropertiesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkMultisamplePropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkMultisamplePropertiesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkMultisamplePropertiesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkMultisamplePropertiesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkMultisamplePropertiesEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkMultisamplePropertiesEXT), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkMultisamplePropertiesEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkMultisamplePropertiesEXT), Is.EqualTo(16));
         }
     }
 }

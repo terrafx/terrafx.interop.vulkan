@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPipelineRepresentativeFragmentTestStateCreateInfoNV" /> struct.</summary>
+public static unsafe partial class VkPipelineRepresentativeFragmentTestStateCreateInfoNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkPipelineRepresentativeFragmentTestStateCreateInfoNV" /> struct.</summary>
-    public static unsafe partial class VkPipelineRepresentativeFragmentTestStateCreateInfoNVTests
+    /// <summary>Validates that the <see cref="VkPipelineRepresentativeFragmentTestStateCreateInfoNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPipelineRepresentativeFragmentTestStateCreateInfoNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPipelineRepresentativeFragmentTestStateCreateInfoNV>(), Is.EqualTo(sizeof(VkPipelineRepresentativeFragmentTestStateCreateInfoNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkPipelineRepresentativeFragmentTestStateCreateInfoNV>(), Is.EqualTo(sizeof(VkPipelineRepresentativeFragmentTestStateCreateInfoNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineRepresentativeFragmentTestStateCreateInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPipelineRepresentativeFragmentTestStateCreateInfoNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPipelineRepresentativeFragmentTestStateCreateInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPipelineRepresentativeFragmentTestStateCreateInfoNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineRepresentativeFragmentTestStateCreateInfoNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPipelineRepresentativeFragmentTestStateCreateInfoNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPipelineRepresentativeFragmentTestStateCreateInfoNV), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPipelineRepresentativeFragmentTestStateCreateInfoNV), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPipelineRepresentativeFragmentTestStateCreateInfoNV), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPipelineRepresentativeFragmentTestStateCreateInfoNV), Is.EqualTo(12));
         }
     }
 }

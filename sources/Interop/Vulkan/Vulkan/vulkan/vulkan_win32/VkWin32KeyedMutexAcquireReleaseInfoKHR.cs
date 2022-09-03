@@ -3,34 +3,33 @@
 // Ported from include/vulkan/vulkan_win32.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkWin32KeyedMutexAcquireReleaseInfoKHR
 {
-    public unsafe partial struct VkWin32KeyedMutexAcquireReleaseInfoKHR
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("uint32_t")]
-        public uint acquireCount;
+    [NativeTypeName("uint32_t")]
+    public uint acquireCount;
 
-        [NativeTypeName("const VkDeviceMemory *")]
-        public VkDeviceMemory* pAcquireSyncs;
+    [NativeTypeName("const VkDeviceMemory *")]
+    public VkDeviceMemory* pAcquireSyncs;
 
-        [NativeTypeName("const uint64_t *")]
-        public ulong* pAcquireKeys;
+    [NativeTypeName("const uint64_t *")]
+    public ulong* pAcquireKeys;
 
-        [NativeTypeName("const uint32_t *")]
-        public uint* pAcquireTimeouts;
+    [NativeTypeName("const uint32_t *")]
+    public uint* pAcquireTimeouts;
 
-        [NativeTypeName("uint32_t")]
-        public uint releaseCount;
+    [NativeTypeName("uint32_t")]
+    public uint releaseCount;
 
-        [NativeTypeName("const VkDeviceMemory *")]
-        public VkDeviceMemory* pReleaseSyncs;
+    [NativeTypeName("const VkDeviceMemory *")]
+    public VkDeviceMemory* pReleaseSyncs;
 
-        [NativeTypeName("const uint64_t *")]
-        public ulong* pReleaseKeys;
-    }
+    [NativeTypeName("const uint64_t *")]
+    public ulong* pReleaseKeys;
 }

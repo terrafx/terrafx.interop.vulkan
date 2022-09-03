@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDevicePortabilitySubsetFeaturesKHR" /> struct.</summary>
+public static unsafe partial class VkPhysicalDevicePortabilitySubsetFeaturesKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDevicePortabilitySubsetFeaturesKHR" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDevicePortabilitySubsetFeaturesKHRTests
+    /// <summary>Validates that the <see cref="VkPhysicalDevicePortabilitySubsetFeaturesKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDevicePortabilitySubsetFeaturesKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDevicePortabilitySubsetFeaturesKHR>(), Is.EqualTo(sizeof(VkPhysicalDevicePortabilitySubsetFeaturesKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDevicePortabilitySubsetFeaturesKHR>(), Is.EqualTo(sizeof(VkPhysicalDevicePortabilitySubsetFeaturesKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDevicePortabilitySubsetFeaturesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDevicePortabilitySubsetFeaturesKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDevicePortabilitySubsetFeaturesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDevicePortabilitySubsetFeaturesKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDevicePortabilitySubsetFeaturesKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDevicePortabilitySubsetFeaturesKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDevicePortabilitySubsetFeaturesKHR), Is.EqualTo(80));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDevicePortabilitySubsetFeaturesKHR), Is.EqualTo(68));
-            }
+            Assert.That(sizeof(VkPhysicalDevicePortabilitySubsetFeaturesKHR), Is.EqualTo(80));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDevicePortabilitySubsetFeaturesKHR), Is.EqualTo(68));
         }
     }
 }

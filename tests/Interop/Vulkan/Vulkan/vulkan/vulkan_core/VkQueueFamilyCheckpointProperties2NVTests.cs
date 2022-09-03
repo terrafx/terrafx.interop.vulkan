@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkQueueFamilyCheckpointProperties2NV" /> struct.</summary>
+public static unsafe partial class VkQueueFamilyCheckpointProperties2NVTests
 {
-    /// <summary>Provides validation of the <see cref="VkQueueFamilyCheckpointProperties2NV" /> struct.</summary>
-    public static unsafe partial class VkQueueFamilyCheckpointProperties2NVTests
+    /// <summary>Validates that the <see cref="VkQueueFamilyCheckpointProperties2NV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkQueueFamilyCheckpointProperties2NV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkQueueFamilyCheckpointProperties2NV>(), Is.EqualTo(sizeof(VkQueueFamilyCheckpointProperties2NV)));
-        }
+        Assert.That(Marshal.SizeOf<VkQueueFamilyCheckpointProperties2NV>(), Is.EqualTo(sizeof(VkQueueFamilyCheckpointProperties2NV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkQueueFamilyCheckpointProperties2NV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkQueueFamilyCheckpointProperties2NV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkQueueFamilyCheckpointProperties2NV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkQueueFamilyCheckpointProperties2NV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkQueueFamilyCheckpointProperties2NV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkQueueFamilyCheckpointProperties2NV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkQueueFamilyCheckpointProperties2NV), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkQueueFamilyCheckpointProperties2NV), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkQueueFamilyCheckpointProperties2NV), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkQueueFamilyCheckpointProperties2NV), Is.EqualTo(16));
         }
     }
 }

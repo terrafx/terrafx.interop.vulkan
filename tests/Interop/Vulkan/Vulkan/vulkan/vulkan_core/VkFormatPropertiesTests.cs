@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkFormatProperties" /> struct.</summary>
+public static unsafe partial class VkFormatPropertiesTests
 {
-    /// <summary>Provides validation of the <see cref="VkFormatProperties" /> struct.</summary>
-    public static unsafe partial class VkFormatPropertiesTests
+    /// <summary>Validates that the <see cref="VkFormatProperties" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkFormatProperties" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkFormatProperties>(), Is.EqualTo(sizeof(VkFormatProperties)));
-        }
+        Assert.That(Marshal.SizeOf<VkFormatProperties>(), Is.EqualTo(sizeof(VkFormatProperties)));
+    }
 
-        /// <summary>Validates that the <see cref="VkFormatProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkFormatProperties).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkFormatProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkFormatProperties).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkFormatProperties" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkFormatProperties), Is.EqualTo(12));
-        }
+    /// <summary>Validates that the <see cref="VkFormatProperties" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkFormatProperties), Is.EqualTo(12));
     }
 }

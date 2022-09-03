@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPipelineColorBlendAttachmentState" /> struct.</summary>
+public static unsafe partial class VkPipelineColorBlendAttachmentStateTests
 {
-    /// <summary>Provides validation of the <see cref="VkPipelineColorBlendAttachmentState" /> struct.</summary>
-    public static unsafe partial class VkPipelineColorBlendAttachmentStateTests
+    /// <summary>Validates that the <see cref="VkPipelineColorBlendAttachmentState" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPipelineColorBlendAttachmentState" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPipelineColorBlendAttachmentState>(), Is.EqualTo(sizeof(VkPipelineColorBlendAttachmentState)));
-        }
+        Assert.That(Marshal.SizeOf<VkPipelineColorBlendAttachmentState>(), Is.EqualTo(sizeof(VkPipelineColorBlendAttachmentState)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineColorBlendAttachmentState" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPipelineColorBlendAttachmentState).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPipelineColorBlendAttachmentState" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPipelineColorBlendAttachmentState).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineColorBlendAttachmentState" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkPipelineColorBlendAttachmentState), Is.EqualTo(32));
-        }
+    /// <summary>Validates that the <see cref="VkPipelineColorBlendAttachmentState" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkPipelineColorBlendAttachmentState), Is.EqualTo(32));
     }
 }

@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDisplayModePropertiesKHR" /> struct.</summary>
+public static unsafe partial class VkDisplayModePropertiesKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkDisplayModePropertiesKHR" /> struct.</summary>
-    public static unsafe partial class VkDisplayModePropertiesKHRTests
+    /// <summary>Validates that the <see cref="VkDisplayModePropertiesKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDisplayModePropertiesKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDisplayModePropertiesKHR>(), Is.EqualTo(sizeof(VkDisplayModePropertiesKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkDisplayModePropertiesKHR>(), Is.EqualTo(sizeof(VkDisplayModePropertiesKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDisplayModePropertiesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDisplayModePropertiesKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDisplayModePropertiesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDisplayModePropertiesKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDisplayModePropertiesKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkDisplayModePropertiesKHR), Is.EqualTo(24));
-        }
+    /// <summary>Validates that the <see cref="VkDisplayModePropertiesKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkDisplayModePropertiesKHR), Is.EqualTo(24));
     }
 }

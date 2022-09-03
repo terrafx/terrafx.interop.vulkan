@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkOffset3D" /> struct.</summary>
+public static unsafe partial class VkOffset3DTests
 {
-    /// <summary>Provides validation of the <see cref="VkOffset3D" /> struct.</summary>
-    public static unsafe partial class VkOffset3DTests
+    /// <summary>Validates that the <see cref="VkOffset3D" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkOffset3D" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkOffset3D>(), Is.EqualTo(sizeof(VkOffset3D)));
-        }
+        Assert.That(Marshal.SizeOf<VkOffset3D>(), Is.EqualTo(sizeof(VkOffset3D)));
+    }
 
-        /// <summary>Validates that the <see cref="VkOffset3D" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkOffset3D).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkOffset3D" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkOffset3D).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkOffset3D" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkOffset3D), Is.EqualTo(12));
-        }
+    /// <summary>Validates that the <see cref="VkOffset3D" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkOffset3D), Is.EqualTo(12));
     }
 }

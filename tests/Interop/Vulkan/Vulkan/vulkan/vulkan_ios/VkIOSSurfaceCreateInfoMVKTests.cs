@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkIOSSurfaceCreateInfoMVK" /> struct.</summary>
+public static unsafe partial class VkIOSSurfaceCreateInfoMVKTests
 {
-    /// <summary>Provides validation of the <see cref="VkIOSSurfaceCreateInfoMVK" /> struct.</summary>
-    public static unsafe partial class VkIOSSurfaceCreateInfoMVKTests
+    /// <summary>Validates that the <see cref="VkIOSSurfaceCreateInfoMVK" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkIOSSurfaceCreateInfoMVK" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkIOSSurfaceCreateInfoMVK>(), Is.EqualTo(sizeof(VkIOSSurfaceCreateInfoMVK)));
-        }
+        Assert.That(Marshal.SizeOf<VkIOSSurfaceCreateInfoMVK>(), Is.EqualTo(sizeof(VkIOSSurfaceCreateInfoMVK)));
+    }
 
-        /// <summary>Validates that the <see cref="VkIOSSurfaceCreateInfoMVK" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkIOSSurfaceCreateInfoMVK).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkIOSSurfaceCreateInfoMVK" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkIOSSurfaceCreateInfoMVK).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkIOSSurfaceCreateInfoMVK" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkIOSSurfaceCreateInfoMVK" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkIOSSurfaceCreateInfoMVK), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkIOSSurfaceCreateInfoMVK), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkIOSSurfaceCreateInfoMVK), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkIOSSurfaceCreateInfoMVK), Is.EqualTo(16));
         }
     }
 }

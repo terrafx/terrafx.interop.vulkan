@@ -5,17 +5,16 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public static partial class Vulkan
 {
-    public static partial class Vulkan
-    {
-        [NativeTypeName("#define VK_KHR_wayland_surface 1")]
-        public const int VK_KHR_wayland_surface = 1;
+    [NativeTypeName("#define VK_KHR_wayland_surface 1")]
+    public const int VK_KHR_wayland_surface = 1;
 
-        [NativeTypeName("#define VK_KHR_WAYLAND_SURFACE_SPEC_VERSION 6")]
-        public const int VK_KHR_WAYLAND_SURFACE_SPEC_VERSION = 6;
+    [NativeTypeName("#define VK_KHR_WAYLAND_SURFACE_SPEC_VERSION 6")]
+    public const int VK_KHR_WAYLAND_SURFACE_SPEC_VERSION = 6;
 
-        [NativeTypeName("#define VK_KHR_WAYLAND_SURFACE_EXTENSION_NAME \"VK_KHR_wayland_surface\"")]
-        public static ReadOnlySpan<byte> VK_KHR_WAYLAND_SURFACE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x77, 0x61, 0x79, 0x6C, 0x61, 0x6E, 0x64, 0x5F, 0x73, 0x75, 0x72, 0x66, 0x61, 0x63, 0x65, 0x00 };
-    }
+    [NativeTypeName("#define VK_KHR_WAYLAND_SURFACE_EXTENSION_NAME \"VK_KHR_wayland_surface\"")]
+    public static ReadOnlySpan<byte> VK_KHR_WAYLAND_SURFACE_EXTENSION_NAME => new byte[] { 0x56, 0x4B, 0x5F, 0x4B, 0x48, 0x52, 0x5F, 0x77, 0x61, 0x79, 0x6C, 0x61, 0x6E, 0x64, 0x5F, 0x73, 0x75, 0x72, 0x66, 0x61, 0x63, 0x65, 0x00 };
 }

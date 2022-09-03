@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSurfaceCapabilitiesKHR" /> struct.</summary>
+public static unsafe partial class VkSurfaceCapabilitiesKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkSurfaceCapabilitiesKHR" /> struct.</summary>
-    public static unsafe partial class VkSurfaceCapabilitiesKHRTests
+    /// <summary>Validates that the <see cref="VkSurfaceCapabilitiesKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSurfaceCapabilitiesKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSurfaceCapabilitiesKHR>(), Is.EqualTo(sizeof(VkSurfaceCapabilitiesKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkSurfaceCapabilitiesKHR>(), Is.EqualTo(sizeof(VkSurfaceCapabilitiesKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSurfaceCapabilitiesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSurfaceCapabilitiesKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSurfaceCapabilitiesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSurfaceCapabilitiesKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSurfaceCapabilitiesKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkSurfaceCapabilitiesKHR), Is.EqualTo(52));
-        }
+    /// <summary>Validates that the <see cref="VkSurfaceCapabilitiesKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkSurfaceCapabilitiesKHR), Is.EqualTo(52));
     }
 }

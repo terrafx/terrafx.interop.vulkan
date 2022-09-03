@@ -5,13 +5,12 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[NativeTypeName("int")]
+[Flags]
+public enum VkCommandPoolResetFlags : uint
 {
-    [NativeTypeName("int")]
-    [Flags]
-    public enum VkCommandPoolResetFlags : uint
-    {
-        VK_COMMAND_POOL_RESET_RELEASE_RESOURCES_BIT = 0x00000001,
-        VK_COMMAND_POOL_RESET_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
-    }
+    VK_COMMAND_POOL_RESET_RELEASE_RESOURCES_BIT = 0x00000001,
+    VK_COMMAND_POOL_RESET_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
 }

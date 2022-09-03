@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkVideoGetMemoryPropertiesKHR" /> struct.</summary>
+public static unsafe partial class VkVideoGetMemoryPropertiesKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkVideoGetMemoryPropertiesKHR" /> struct.</summary>
-    public static unsafe partial class VkVideoGetMemoryPropertiesKHRTests
+    /// <summary>Validates that the <see cref="VkVideoGetMemoryPropertiesKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkVideoGetMemoryPropertiesKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkVideoGetMemoryPropertiesKHR>(), Is.EqualTo(sizeof(VkVideoGetMemoryPropertiesKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkVideoGetMemoryPropertiesKHR>(), Is.EqualTo(sizeof(VkVideoGetMemoryPropertiesKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoGetMemoryPropertiesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkVideoGetMemoryPropertiesKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkVideoGetMemoryPropertiesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkVideoGetMemoryPropertiesKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoGetMemoryPropertiesKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkVideoGetMemoryPropertiesKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkVideoGetMemoryPropertiesKHR), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkVideoGetMemoryPropertiesKHR), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkVideoGetMemoryPropertiesKHR), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkVideoGetMemoryPropertiesKHR), Is.EqualTo(16));
         }
     }
 }

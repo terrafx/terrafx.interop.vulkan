@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceInvocationMaskFeaturesHUAWEI" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceInvocationMaskFeaturesHUAWEITests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceInvocationMaskFeaturesHUAWEI" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceInvocationMaskFeaturesHUAWEITests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceInvocationMaskFeaturesHUAWEI" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceInvocationMaskFeaturesHUAWEI" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceInvocationMaskFeaturesHUAWEI>(), Is.EqualTo(sizeof(VkPhysicalDeviceInvocationMaskFeaturesHUAWEI)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceInvocationMaskFeaturesHUAWEI>(), Is.EqualTo(sizeof(VkPhysicalDeviceInvocationMaskFeaturesHUAWEI)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceInvocationMaskFeaturesHUAWEI" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceInvocationMaskFeaturesHUAWEI).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceInvocationMaskFeaturesHUAWEI" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceInvocationMaskFeaturesHUAWEI).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceInvocationMaskFeaturesHUAWEI" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceInvocationMaskFeaturesHUAWEI" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceInvocationMaskFeaturesHUAWEI), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceInvocationMaskFeaturesHUAWEI), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceInvocationMaskFeaturesHUAWEI), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceInvocationMaskFeaturesHUAWEI), Is.EqualTo(12));
         }
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSwapchainDisplayNativeHdrCreateInfoAMD" /> struct.</summary>
+public static unsafe partial class VkSwapchainDisplayNativeHdrCreateInfoAMDTests
 {
-    /// <summary>Provides validation of the <see cref="VkSwapchainDisplayNativeHdrCreateInfoAMD" /> struct.</summary>
-    public static unsafe partial class VkSwapchainDisplayNativeHdrCreateInfoAMDTests
+    /// <summary>Validates that the <see cref="VkSwapchainDisplayNativeHdrCreateInfoAMD" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSwapchainDisplayNativeHdrCreateInfoAMD" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSwapchainDisplayNativeHdrCreateInfoAMD>(), Is.EqualTo(sizeof(VkSwapchainDisplayNativeHdrCreateInfoAMD)));
-        }
+        Assert.That(Marshal.SizeOf<VkSwapchainDisplayNativeHdrCreateInfoAMD>(), Is.EqualTo(sizeof(VkSwapchainDisplayNativeHdrCreateInfoAMD)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSwapchainDisplayNativeHdrCreateInfoAMD" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSwapchainDisplayNativeHdrCreateInfoAMD).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSwapchainDisplayNativeHdrCreateInfoAMD" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSwapchainDisplayNativeHdrCreateInfoAMD).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSwapchainDisplayNativeHdrCreateInfoAMD" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkSwapchainDisplayNativeHdrCreateInfoAMD" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkSwapchainDisplayNativeHdrCreateInfoAMD), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkSwapchainDisplayNativeHdrCreateInfoAMD), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkSwapchainDisplayNativeHdrCreateInfoAMD), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkSwapchainDisplayNativeHdrCreateInfoAMD), Is.EqualTo(12));
         }
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceTexelBufferAlignmentPropertiesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceTexelBufferAlignmentPropertiesEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT), Is.EqualTo(48));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT), Is.EqualTo(40));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT), Is.EqualTo(48));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT), Is.EqualTo(40));
         }
     }
 }

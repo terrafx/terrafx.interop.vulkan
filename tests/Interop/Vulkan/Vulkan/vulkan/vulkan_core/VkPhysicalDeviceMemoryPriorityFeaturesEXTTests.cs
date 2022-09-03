@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceMemoryPriorityFeaturesEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceMemoryPriorityFeaturesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceMemoryPriorityFeaturesEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceMemoryPriorityFeaturesEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceMemoryPriorityFeaturesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceMemoryPriorityFeaturesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceMemoryPriorityFeaturesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceMemoryPriorityFeaturesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceMemoryPriorityFeaturesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceMemoryPriorityFeaturesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceMemoryPriorityFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceMemoryPriorityFeaturesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceMemoryPriorityFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceMemoryPriorityFeaturesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceMemoryPriorityFeaturesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceMemoryPriorityFeaturesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceMemoryPriorityFeaturesEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceMemoryPriorityFeaturesEXT), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceMemoryPriorityFeaturesEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceMemoryPriorityFeaturesEXT), Is.EqualTo(12));
         }
     }
 }

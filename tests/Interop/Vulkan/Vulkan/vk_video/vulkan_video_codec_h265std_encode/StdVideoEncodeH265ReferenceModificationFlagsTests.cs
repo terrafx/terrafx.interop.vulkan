@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="StdVideoEncodeH265ReferenceModificationFlags" /> struct.</summary>
+public static unsafe partial class StdVideoEncodeH265ReferenceModificationFlagsTests
 {
-    /// <summary>Provides validation of the <see cref="StdVideoEncodeH265ReferenceModificationFlags" /> struct.</summary>
-    public static unsafe partial class StdVideoEncodeH265ReferenceModificationFlagsTests
+    /// <summary>Validates that the <see cref="StdVideoEncodeH265ReferenceModificationFlags" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="StdVideoEncodeH265ReferenceModificationFlags" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<StdVideoEncodeH265ReferenceModificationFlags>(), Is.EqualTo(sizeof(StdVideoEncodeH265ReferenceModificationFlags)));
-        }
+        Assert.That(Marshal.SizeOf<StdVideoEncodeH265ReferenceModificationFlags>(), Is.EqualTo(sizeof(StdVideoEncodeH265ReferenceModificationFlags)));
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoEncodeH265ReferenceModificationFlags" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(StdVideoEncodeH265ReferenceModificationFlags).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="StdVideoEncodeH265ReferenceModificationFlags" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(StdVideoEncodeH265ReferenceModificationFlags).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoEncodeH265ReferenceModificationFlags" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(StdVideoEncodeH265ReferenceModificationFlags), Is.EqualTo(4));
-        }
+    /// <summary>Validates that the <see cref="StdVideoEncodeH265ReferenceModificationFlags" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(StdVideoEncodeH265ReferenceModificationFlags), Is.EqualTo(4));
     }
 }

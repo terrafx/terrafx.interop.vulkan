@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSamplerCreateInfo" /> struct.</summary>
+public static unsafe partial class VkSamplerCreateInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkSamplerCreateInfo" /> struct.</summary>
-    public static unsafe partial class VkSamplerCreateInfoTests
+    /// <summary>Validates that the <see cref="VkSamplerCreateInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSamplerCreateInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSamplerCreateInfo>(), Is.EqualTo(sizeof(VkSamplerCreateInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkSamplerCreateInfo>(), Is.EqualTo(sizeof(VkSamplerCreateInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSamplerCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSamplerCreateInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSamplerCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSamplerCreateInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSamplerCreateInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkSamplerCreateInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkSamplerCreateInfo), Is.EqualTo(80));
-            }
-            else
-            {
-                Assert.That(sizeof(VkSamplerCreateInfo), Is.EqualTo(72));
-            }
+            Assert.That(sizeof(VkSamplerCreateInfo), Is.EqualTo(80));
+        }
+        else
+        {
+            Assert.That(sizeof(VkSamplerCreateInfo), Is.EqualTo(72));
         }
     }
 }

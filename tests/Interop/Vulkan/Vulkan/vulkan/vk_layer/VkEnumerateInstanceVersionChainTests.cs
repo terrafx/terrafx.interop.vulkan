@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkEnumerateInstanceVersionChain" /> struct.</summary>
+public static unsafe partial class VkEnumerateInstanceVersionChainTests
 {
-    /// <summary>Provides validation of the <see cref="VkEnumerateInstanceVersionChain" /> struct.</summary>
-    public static unsafe partial class VkEnumerateInstanceVersionChainTests
+    /// <summary>Validates that the <see cref="VkEnumerateInstanceVersionChain" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkEnumerateInstanceVersionChain" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkEnumerateInstanceVersionChain>(), Is.EqualTo(sizeof(VkEnumerateInstanceVersionChain)));
-        }
+        Assert.That(Marshal.SizeOf<VkEnumerateInstanceVersionChain>(), Is.EqualTo(sizeof(VkEnumerateInstanceVersionChain)));
+    }
 
-        /// <summary>Validates that the <see cref="VkEnumerateInstanceVersionChain" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkEnumerateInstanceVersionChain).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkEnumerateInstanceVersionChain" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkEnumerateInstanceVersionChain).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkEnumerateInstanceVersionChain" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkEnumerateInstanceVersionChain" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkEnumerateInstanceVersionChain), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkEnumerateInstanceVersionChain), Is.EqualTo(20));
-            }
+            Assert.That(sizeof(VkEnumerateInstanceVersionChain), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkEnumerateInstanceVersionChain), Is.EqualTo(20));
         }
     }
 }

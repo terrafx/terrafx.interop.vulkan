@@ -5,12 +5,11 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[NativeTypeName("int")]
+[Flags]
+public enum VkLoaderFeastureFlags : uint
 {
-    [NativeTypeName("int")]
-    [Flags]
-    public enum VkLoaderFeastureFlags : uint
-    {
-        VK_LOADER_FEATURE_PHYSICAL_DEVICE_SORTING = 0x00000001,
-    }
+    VK_LOADER_FEATURE_PHYSICAL_DEVICE_SORTING = 0x00000001,
 }

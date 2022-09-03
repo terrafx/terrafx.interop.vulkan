@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkViewportWScalingNV" /> struct.</summary>
+public static unsafe partial class VkViewportWScalingNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkViewportWScalingNV" /> struct.</summary>
-    public static unsafe partial class VkViewportWScalingNVTests
+    /// <summary>Validates that the <see cref="VkViewportWScalingNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkViewportWScalingNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkViewportWScalingNV>(), Is.EqualTo(sizeof(VkViewportWScalingNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkViewportWScalingNV>(), Is.EqualTo(sizeof(VkViewportWScalingNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkViewportWScalingNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkViewportWScalingNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkViewportWScalingNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkViewportWScalingNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkViewportWScalingNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkViewportWScalingNV), Is.EqualTo(8));
-        }
+    /// <summary>Validates that the <see cref="VkViewportWScalingNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkViewportWScalingNV), Is.EqualTo(8));
     }
 }

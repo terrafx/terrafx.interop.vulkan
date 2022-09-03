@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="StdVideoEncodeH264RefListModEntry" /> struct.</summary>
+public static unsafe partial class StdVideoEncodeH264RefListModEntryTests
 {
-    /// <summary>Provides validation of the <see cref="StdVideoEncodeH264RefListModEntry" /> struct.</summary>
-    public static unsafe partial class StdVideoEncodeH264RefListModEntryTests
+    /// <summary>Validates that the <see cref="StdVideoEncodeH264RefListModEntry" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="StdVideoEncodeH264RefListModEntry" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<StdVideoEncodeH264RefListModEntry>(), Is.EqualTo(sizeof(StdVideoEncodeH264RefListModEntry)));
-        }
+        Assert.That(Marshal.SizeOf<StdVideoEncodeH264RefListModEntry>(), Is.EqualTo(sizeof(StdVideoEncodeH264RefListModEntry)));
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoEncodeH264RefListModEntry" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(StdVideoEncodeH264RefListModEntry).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="StdVideoEncodeH264RefListModEntry" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(StdVideoEncodeH264RefListModEntry).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoEncodeH264RefListModEntry" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(StdVideoEncodeH264RefListModEntry), Is.EqualTo(8));
-        }
+    /// <summary>Validates that the <see cref="StdVideoEncodeH264RefListModEntry" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(StdVideoEncodeH264RefListModEntry), Is.EqualTo(8));
     }
 }

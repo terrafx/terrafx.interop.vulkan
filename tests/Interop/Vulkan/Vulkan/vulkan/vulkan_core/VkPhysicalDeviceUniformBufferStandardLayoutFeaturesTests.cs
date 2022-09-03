@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceUniformBufferStandardLayoutFeatures" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceUniformBufferStandardLayoutFeaturesTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceUniformBufferStandardLayoutFeatures" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceUniformBufferStandardLayoutFeaturesTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceUniformBufferStandardLayoutFeatures" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceUniformBufferStandardLayoutFeatures" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceUniformBufferStandardLayoutFeatures>(), Is.EqualTo(sizeof(VkPhysicalDeviceUniformBufferStandardLayoutFeatures)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceUniformBufferStandardLayoutFeatures>(), Is.EqualTo(sizeof(VkPhysicalDeviceUniformBufferStandardLayoutFeatures)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceUniformBufferStandardLayoutFeatures" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceUniformBufferStandardLayoutFeatures).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceUniformBufferStandardLayoutFeatures" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceUniformBufferStandardLayoutFeatures).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceUniformBufferStandardLayoutFeatures" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceUniformBufferStandardLayoutFeatures" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceUniformBufferStandardLayoutFeatures), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceUniformBufferStandardLayoutFeatures), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceUniformBufferStandardLayoutFeatures), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceUniformBufferStandardLayoutFeatures), Is.EqualTo(12));
         }
     }
 }

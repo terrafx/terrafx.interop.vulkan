@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkImageMemoryBarrier2KHR" /> struct.</summary>
+public static unsafe partial class VkImageMemoryBarrier2KHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkImageMemoryBarrier2KHR" /> struct.</summary>
-    public static unsafe partial class VkImageMemoryBarrier2KHRTests
+    /// <summary>Validates that the <see cref="VkImageMemoryBarrier2KHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkImageMemoryBarrier2KHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkImageMemoryBarrier2KHR>(), Is.EqualTo(sizeof(VkImageMemoryBarrier2KHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkImageMemoryBarrier2KHR>(), Is.EqualTo(sizeof(VkImageMemoryBarrier2KHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkImageMemoryBarrier2KHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkImageMemoryBarrier2KHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkImageMemoryBarrier2KHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkImageMemoryBarrier2KHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkImageMemoryBarrier2KHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkImageMemoryBarrier2KHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkImageMemoryBarrier2KHR), Is.EqualTo(96));
-            }
-            else
-            {
-                Assert.That(sizeof(VkImageMemoryBarrier2KHR), Is.EqualTo(88));
-            }
+            Assert.That(sizeof(VkImageMemoryBarrier2KHR), Is.EqualTo(96));
+        }
+        else
+        {
+            Assert.That(sizeof(VkImageMemoryBarrier2KHR), Is.EqualTo(88));
         }
     }
 }

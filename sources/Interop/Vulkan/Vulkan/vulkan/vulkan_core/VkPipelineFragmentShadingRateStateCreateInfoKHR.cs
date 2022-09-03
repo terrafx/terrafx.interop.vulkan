@@ -8,38 +8,37 @@ using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkPipelineFragmentShadingRateStateCreateInfoKHR
 {
-    public unsafe partial struct VkPipelineFragmentShadingRateStateCreateInfoKHR
+    public VkStructureType sType;
+
+    [NativeTypeName("const void *")]
+    public void* pNext;
+
+    public VkExtent2D fragmentSize;
+
+    [NativeTypeName("VkFragmentShadingRateCombinerOpKHR[2]")]
+    public _combinerOps_e__FixedBuffer combinerOps;
+
+    public partial struct _combinerOps_e__FixedBuffer
     {
-        public VkStructureType sType;
+        public VkFragmentShadingRateCombinerOpKHR e0;
+        public VkFragmentShadingRateCombinerOpKHR e1;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
-
-        public VkExtent2D fragmentSize;
-
-        [NativeTypeName("VkFragmentShadingRateCombinerOpKHR[2]")]
-        public _combinerOps_e__FixedBuffer combinerOps;
-
-        public partial struct _combinerOps_e__FixedBuffer
+        [UnscopedRef]
+        public ref VkFragmentShadingRateCombinerOpKHR this[int index]
         {
-            public VkFragmentShadingRateCombinerOpKHR e0;
-            public VkFragmentShadingRateCombinerOpKHR e1;
-
-            [UnscopedRef]
-            public ref VkFragmentShadingRateCombinerOpKHR this[int index]
-            {
-                [MethodImpl(MethodImplOptions.AggressiveInlining)]
-                get
-                {
-                    return ref AsSpan()[index];
-                }
-            }
-
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            [UnscopedRef]
-            public Span<VkFragmentShadingRateCombinerOpKHR> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 2);
+            get
+            {
+                return ref AsSpan()[index];
+            }
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [UnscopedRef]
+        public Span<VkFragmentShadingRateCombinerOpKHR> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 2);
     }
 }

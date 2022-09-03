@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceExternalSemaphoreInfo" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceExternalSemaphoreInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceExternalSemaphoreInfo" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceExternalSemaphoreInfoTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceExternalSemaphoreInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceExternalSemaphoreInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceExternalSemaphoreInfo>(), Is.EqualTo(sizeof(VkPhysicalDeviceExternalSemaphoreInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceExternalSemaphoreInfo>(), Is.EqualTo(sizeof(VkPhysicalDeviceExternalSemaphoreInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceExternalSemaphoreInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceExternalSemaphoreInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceExternalSemaphoreInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceExternalSemaphoreInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceExternalSemaphoreInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceExternalSemaphoreInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceExternalSemaphoreInfo), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceExternalSemaphoreInfo), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceExternalSemaphoreInfo), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceExternalSemaphoreInfo), Is.EqualTo(12));
         }
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkImageViewAddressPropertiesNVX" /> struct.</summary>
+public static unsafe partial class VkImageViewAddressPropertiesNVXTests
 {
-    /// <summary>Provides validation of the <see cref="VkImageViewAddressPropertiesNVX" /> struct.</summary>
-    public static unsafe partial class VkImageViewAddressPropertiesNVXTests
+    /// <summary>Validates that the <see cref="VkImageViewAddressPropertiesNVX" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkImageViewAddressPropertiesNVX" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkImageViewAddressPropertiesNVX>(), Is.EqualTo(sizeof(VkImageViewAddressPropertiesNVX)));
-        }
+        Assert.That(Marshal.SizeOf<VkImageViewAddressPropertiesNVX>(), Is.EqualTo(sizeof(VkImageViewAddressPropertiesNVX)));
+    }
 
-        /// <summary>Validates that the <see cref="VkImageViewAddressPropertiesNVX" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkImageViewAddressPropertiesNVX).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkImageViewAddressPropertiesNVX" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkImageViewAddressPropertiesNVX).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkImageViewAddressPropertiesNVX" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkImageViewAddressPropertiesNVX" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkImageViewAddressPropertiesNVX), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkImageViewAddressPropertiesNVX), Is.EqualTo(24));
-            }
+            Assert.That(sizeof(VkImageViewAddressPropertiesNVX), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkImageViewAddressPropertiesNVX), Is.EqualTo(24));
         }
     }
 }

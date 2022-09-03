@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceGroupProperties" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceGroupPropertiesTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceGroupProperties" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceGroupPropertiesTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceGroupProperties" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceGroupProperties" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceGroupProperties>(), Is.EqualTo(sizeof(VkPhysicalDeviceGroupProperties)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceGroupProperties>(), Is.EqualTo(sizeof(VkPhysicalDeviceGroupProperties)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceGroupProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceGroupProperties).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceGroupProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceGroupProperties).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceGroupProperties" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceGroupProperties" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceGroupProperties), Is.EqualTo(288));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceGroupProperties), Is.EqualTo(144));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceGroupProperties), Is.EqualTo(288));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceGroupProperties), Is.EqualTo(144));
         }
     }
 }

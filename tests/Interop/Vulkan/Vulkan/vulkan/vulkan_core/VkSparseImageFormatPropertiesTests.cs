@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSparseImageFormatProperties" /> struct.</summary>
+public static unsafe partial class VkSparseImageFormatPropertiesTests
 {
-    /// <summary>Provides validation of the <see cref="VkSparseImageFormatProperties" /> struct.</summary>
-    public static unsafe partial class VkSparseImageFormatPropertiesTests
+    /// <summary>Validates that the <see cref="VkSparseImageFormatProperties" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSparseImageFormatProperties" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSparseImageFormatProperties>(), Is.EqualTo(sizeof(VkSparseImageFormatProperties)));
-        }
+        Assert.That(Marshal.SizeOf<VkSparseImageFormatProperties>(), Is.EqualTo(sizeof(VkSparseImageFormatProperties)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSparseImageFormatProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSparseImageFormatProperties).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSparseImageFormatProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSparseImageFormatProperties).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSparseImageFormatProperties" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkSparseImageFormatProperties), Is.EqualTo(20));
-        }
+    /// <summary>Validates that the <see cref="VkSparseImageFormatProperties" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkSparseImageFormatProperties), Is.EqualTo(20));
     }
 }

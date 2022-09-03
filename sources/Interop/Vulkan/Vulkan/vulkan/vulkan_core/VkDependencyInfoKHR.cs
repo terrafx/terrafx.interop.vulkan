@@ -3,33 +3,32 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkDependencyInfoKHR
 {
-    public unsafe partial struct VkDependencyInfoKHR
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        public VkDependencyFlags dependencyFlags;
+    public VkDependencyFlags dependencyFlags;
 
-        [NativeTypeName("uint32_t")]
-        public uint memoryBarrierCount;
+    [NativeTypeName("uint32_t")]
+    public uint memoryBarrierCount;
 
-        [NativeTypeName("const VkMemoryBarrier2 *")]
-        public VkMemoryBarrier2KHR* pMemoryBarriers;
+    [NativeTypeName("const VkMemoryBarrier2 *")]
+    public VkMemoryBarrier2KHR* pMemoryBarriers;
 
-        [NativeTypeName("uint32_t")]
-        public uint bufferMemoryBarrierCount;
+    [NativeTypeName("uint32_t")]
+    public uint bufferMemoryBarrierCount;
 
-        [NativeTypeName("const VkBufferMemoryBarrier2 *")]
-        public VkBufferMemoryBarrier2KHR* pBufferMemoryBarriers;
+    [NativeTypeName("const VkBufferMemoryBarrier2 *")]
+    public VkBufferMemoryBarrier2KHR* pBufferMemoryBarriers;
 
-        [NativeTypeName("uint32_t")]
-        public uint imageMemoryBarrierCount;
+    [NativeTypeName("uint32_t")]
+    public uint imageMemoryBarrierCount;
 
-        [NativeTypeName("const VkImageMemoryBarrier2 *")]
-        public VkImageMemoryBarrier2KHR* pImageMemoryBarriers;
-    }
+    [NativeTypeName("const VkImageMemoryBarrier2 *")]
+    public VkImageMemoryBarrier2KHR* pImageMemoryBarriers;
 }

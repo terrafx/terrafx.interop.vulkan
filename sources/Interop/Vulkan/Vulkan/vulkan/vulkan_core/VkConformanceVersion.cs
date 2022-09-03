@@ -3,20 +3,19 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public partial struct VkConformanceVersion
 {
-    public partial struct VkConformanceVersion
-    {
-        [NativeTypeName("uint8_t")]
-        public byte major;
+    [NativeTypeName("uint8_t")]
+    public byte major;
 
-        [NativeTypeName("uint8_t")]
-        public byte minor;
+    [NativeTypeName("uint8_t")]
+    public byte minor;
 
-        [NativeTypeName("uint8_t")]
-        public byte subminor;
+    [NativeTypeName("uint8_t")]
+    public byte subminor;
 
-        [NativeTypeName("uint8_t")]
-        public byte patch;
-    }
+    [NativeTypeName("uint8_t")]
+    public byte patch;
 }

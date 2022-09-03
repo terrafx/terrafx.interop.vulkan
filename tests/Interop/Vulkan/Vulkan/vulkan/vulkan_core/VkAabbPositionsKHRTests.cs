@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkAabbPositionsKHR" /> struct.</summary>
+public static unsafe partial class VkAabbPositionsKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkAabbPositionsKHR" /> struct.</summary>
-    public static unsafe partial class VkAabbPositionsKHRTests
+    /// <summary>Validates that the <see cref="VkAabbPositionsKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkAabbPositionsKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkAabbPositionsKHR>(), Is.EqualTo(sizeof(VkAabbPositionsKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkAabbPositionsKHR>(), Is.EqualTo(sizeof(VkAabbPositionsKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkAabbPositionsKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkAabbPositionsKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkAabbPositionsKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkAabbPositionsKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkAabbPositionsKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkAabbPositionsKHR), Is.EqualTo(24));
-        }
+    /// <summary>Validates that the <see cref="VkAabbPositionsKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkAabbPositionsKHR), Is.EqualTo(24));
     }
 }

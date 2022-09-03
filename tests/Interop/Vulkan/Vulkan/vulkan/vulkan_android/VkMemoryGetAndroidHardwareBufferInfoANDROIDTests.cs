@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkMemoryGetAndroidHardwareBufferInfoANDROID" /> struct.</summary>
+public static unsafe partial class VkMemoryGetAndroidHardwareBufferInfoANDROIDTests
 {
-    /// <summary>Provides validation of the <see cref="VkMemoryGetAndroidHardwareBufferInfoANDROID" /> struct.</summary>
-    public static unsafe partial class VkMemoryGetAndroidHardwareBufferInfoANDROIDTests
+    /// <summary>Validates that the <see cref="VkMemoryGetAndroidHardwareBufferInfoANDROID" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkMemoryGetAndroidHardwareBufferInfoANDROID" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkMemoryGetAndroidHardwareBufferInfoANDROID>(), Is.EqualTo(sizeof(VkMemoryGetAndroidHardwareBufferInfoANDROID)));
-        }
+        Assert.That(Marshal.SizeOf<VkMemoryGetAndroidHardwareBufferInfoANDROID>(), Is.EqualTo(sizeof(VkMemoryGetAndroidHardwareBufferInfoANDROID)));
+    }
 
-        /// <summary>Validates that the <see cref="VkMemoryGetAndroidHardwareBufferInfoANDROID" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkMemoryGetAndroidHardwareBufferInfoANDROID).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkMemoryGetAndroidHardwareBufferInfoANDROID" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkMemoryGetAndroidHardwareBufferInfoANDROID).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkMemoryGetAndroidHardwareBufferInfoANDROID" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkMemoryGetAndroidHardwareBufferInfoANDROID" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkMemoryGetAndroidHardwareBufferInfoANDROID), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkMemoryGetAndroidHardwareBufferInfoANDROID), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkMemoryGetAndroidHardwareBufferInfoANDROID), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkMemoryGetAndroidHardwareBufferInfoANDROID), Is.EqualTo(16));
         }
     }
 }

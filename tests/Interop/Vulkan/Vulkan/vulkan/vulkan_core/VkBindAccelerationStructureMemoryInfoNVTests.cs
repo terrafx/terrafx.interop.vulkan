@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkBindAccelerationStructureMemoryInfoNV" /> struct.</summary>
+public static unsafe partial class VkBindAccelerationStructureMemoryInfoNVTests
 {
-    /// <summary>Provides validation of the <see cref="VkBindAccelerationStructureMemoryInfoNV" /> struct.</summary>
-    public static unsafe partial class VkBindAccelerationStructureMemoryInfoNVTests
+    /// <summary>Validates that the <see cref="VkBindAccelerationStructureMemoryInfoNV" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkBindAccelerationStructureMemoryInfoNV" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkBindAccelerationStructureMemoryInfoNV>(), Is.EqualTo(sizeof(VkBindAccelerationStructureMemoryInfoNV)));
-        }
+        Assert.That(Marshal.SizeOf<VkBindAccelerationStructureMemoryInfoNV>(), Is.EqualTo(sizeof(VkBindAccelerationStructureMemoryInfoNV)));
+    }
 
-        /// <summary>Validates that the <see cref="VkBindAccelerationStructureMemoryInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkBindAccelerationStructureMemoryInfoNV).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkBindAccelerationStructureMemoryInfoNV" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkBindAccelerationStructureMemoryInfoNV).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkBindAccelerationStructureMemoryInfoNV" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkBindAccelerationStructureMemoryInfoNV" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkBindAccelerationStructureMemoryInfoNV), Is.EqualTo(56));
-            }
-            else
-            {
-                Assert.That(sizeof(VkBindAccelerationStructureMemoryInfoNV), Is.EqualTo(40));
-            }
+            Assert.That(sizeof(VkBindAccelerationStructureMemoryInfoNV), Is.EqualTo(56));
+        }
+        else
+        {
+            Assert.That(sizeof(VkBindAccelerationStructureMemoryInfoNV), Is.EqualTo(40));
         }
     }
 }

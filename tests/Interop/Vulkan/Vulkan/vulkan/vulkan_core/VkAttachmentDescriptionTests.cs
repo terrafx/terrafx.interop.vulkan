@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkAttachmentDescription" /> struct.</summary>
+public static unsafe partial class VkAttachmentDescriptionTests
 {
-    /// <summary>Provides validation of the <see cref="VkAttachmentDescription" /> struct.</summary>
-    public static unsafe partial class VkAttachmentDescriptionTests
+    /// <summary>Validates that the <see cref="VkAttachmentDescription" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkAttachmentDescription" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkAttachmentDescription>(), Is.EqualTo(sizeof(VkAttachmentDescription)));
-        }
+        Assert.That(Marshal.SizeOf<VkAttachmentDescription>(), Is.EqualTo(sizeof(VkAttachmentDescription)));
+    }
 
-        /// <summary>Validates that the <see cref="VkAttachmentDescription" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkAttachmentDescription).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkAttachmentDescription" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkAttachmentDescription).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkAttachmentDescription" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkAttachmentDescription), Is.EqualTo(36));
-        }
+    /// <summary>Validates that the <see cref="VkAttachmentDescription" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkAttachmentDescription), Is.EqualTo(36));
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPipelineExecutableStatisticKHR" /> struct.</summary>
+public static unsafe partial class VkPipelineExecutableStatisticKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkPipelineExecutableStatisticKHR" /> struct.</summary>
-    public static unsafe partial class VkPipelineExecutableStatisticKHRTests
+    /// <summary>Validates that the <see cref="VkPipelineExecutableStatisticKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPipelineExecutableStatisticKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPipelineExecutableStatisticKHR>(), Is.EqualTo(sizeof(VkPipelineExecutableStatisticKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkPipelineExecutableStatisticKHR>(), Is.EqualTo(sizeof(VkPipelineExecutableStatisticKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineExecutableStatisticKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPipelineExecutableStatisticKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPipelineExecutableStatisticKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPipelineExecutableStatisticKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineExecutableStatisticKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPipelineExecutableStatisticKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPipelineExecutableStatisticKHR), Is.EqualTo(544));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPipelineExecutableStatisticKHR), Is.EqualTo(536));
-            }
+            Assert.That(sizeof(VkPipelineExecutableStatisticKHR), Is.EqualTo(544));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPipelineExecutableStatisticKHR), Is.EqualTo(536));
         }
     }
 }

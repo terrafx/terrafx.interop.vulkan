@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkWriteDescriptorSetInlineUniformBlockEXT" /> struct.</summary>
+public static unsafe partial class VkWriteDescriptorSetInlineUniformBlockEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkWriteDescriptorSetInlineUniformBlockEXT" /> struct.</summary>
-    public static unsafe partial class VkWriteDescriptorSetInlineUniformBlockEXTTests
+    /// <summary>Validates that the <see cref="VkWriteDescriptorSetInlineUniformBlockEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkWriteDescriptorSetInlineUniformBlockEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkWriteDescriptorSetInlineUniformBlockEXT>(), Is.EqualTo(sizeof(VkWriteDescriptorSetInlineUniformBlockEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkWriteDescriptorSetInlineUniformBlockEXT>(), Is.EqualTo(sizeof(VkWriteDescriptorSetInlineUniformBlockEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkWriteDescriptorSetInlineUniformBlockEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkWriteDescriptorSetInlineUniformBlockEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkWriteDescriptorSetInlineUniformBlockEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkWriteDescriptorSetInlineUniformBlockEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkWriteDescriptorSetInlineUniformBlockEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkWriteDescriptorSetInlineUniformBlockEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkWriteDescriptorSetInlineUniformBlockEXT), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkWriteDescriptorSetInlineUniformBlockEXT), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkWriteDescriptorSetInlineUniformBlockEXT), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkWriteDescriptorSetInlineUniformBlockEXT), Is.EqualTo(16));
         }
     }
 }

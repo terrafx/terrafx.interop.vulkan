@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT), Is.EqualTo(12));
         }
     }
 }

@@ -8,63 +8,62 @@ using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkImageBlit2KHR
 {
-    public unsafe partial struct VkImageBlit2KHR
+    public VkStructureType sType;
+
+    [NativeTypeName("const void *")]
+    public void* pNext;
+
+    public VkImageSubresourceLayers srcSubresource;
+
+    [NativeTypeName("VkOffset3D[2]")]
+    public _srcOffsets_e__FixedBuffer srcOffsets;
+
+    public VkImageSubresourceLayers dstSubresource;
+
+    [NativeTypeName("VkOffset3D[2]")]
+    public _dstOffsets_e__FixedBuffer dstOffsets;
+
+    public partial struct _srcOffsets_e__FixedBuffer
     {
-        public VkStructureType sType;
+        public VkOffset3D e0;
+        public VkOffset3D e1;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
-
-        public VkImageSubresourceLayers srcSubresource;
-
-        [NativeTypeName("VkOffset3D[2]")]
-        public _srcOffsets_e__FixedBuffer srcOffsets;
-
-        public VkImageSubresourceLayers dstSubresource;
-
-        [NativeTypeName("VkOffset3D[2]")]
-        public _dstOffsets_e__FixedBuffer dstOffsets;
-
-        public partial struct _srcOffsets_e__FixedBuffer
+        [UnscopedRef]
+        public ref VkOffset3D this[int index]
         {
-            public VkOffset3D e0;
-            public VkOffset3D e1;
-
-            [UnscopedRef]
-            public ref VkOffset3D this[int index]
-            {
-                [MethodImpl(MethodImplOptions.AggressiveInlining)]
-                get
-                {
-                    return ref AsSpan()[index];
-                }
-            }
-
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            [UnscopedRef]
-            public Span<VkOffset3D> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 2);
+            get
+            {
+                return ref AsSpan()[index];
+            }
         }
 
-        public partial struct _dstOffsets_e__FixedBuffer
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [UnscopedRef]
+        public Span<VkOffset3D> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 2);
+    }
+
+    public partial struct _dstOffsets_e__FixedBuffer
+    {
+        public VkOffset3D e0;
+        public VkOffset3D e1;
+
+        [UnscopedRef]
+        public ref VkOffset3D this[int index]
         {
-            public VkOffset3D e0;
-            public VkOffset3D e1;
-
-            [UnscopedRef]
-            public ref VkOffset3D this[int index]
-            {
-                [MethodImpl(MethodImplOptions.AggressiveInlining)]
-                get
-                {
-                    return ref AsSpan()[index];
-                }
-            }
-
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            [UnscopedRef]
-            public Span<VkOffset3D> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 2);
+            get
+            {
+                return ref AsSpan()[index];
+            }
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [UnscopedRef]
+        public Span<VkOffset3D> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 2);
     }
 }

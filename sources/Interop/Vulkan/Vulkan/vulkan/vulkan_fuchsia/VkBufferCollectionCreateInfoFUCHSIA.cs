@@ -3,16 +3,15 @@
 // Ported from include/vulkan/vulkan_fuchsia.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkBufferCollectionCreateInfoFUCHSIA
 {
-    public unsafe partial struct VkBufferCollectionCreateInfoFUCHSIA
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("zx_handle_t")]
-        public uint collectionToken;
-    }
+    [NativeTypeName("zx_handle_t")]
+    public uint collectionToken;
 }

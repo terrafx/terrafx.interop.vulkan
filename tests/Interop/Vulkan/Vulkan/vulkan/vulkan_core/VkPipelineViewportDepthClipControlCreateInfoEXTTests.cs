@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPipelineViewportDepthClipControlCreateInfoEXT" /> struct.</summary>
+public static unsafe partial class VkPipelineViewportDepthClipControlCreateInfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPipelineViewportDepthClipControlCreateInfoEXT" /> struct.</summary>
-    public static unsafe partial class VkPipelineViewportDepthClipControlCreateInfoEXTTests
+    /// <summary>Validates that the <see cref="VkPipelineViewportDepthClipControlCreateInfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPipelineViewportDepthClipControlCreateInfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPipelineViewportDepthClipControlCreateInfoEXT>(), Is.EqualTo(sizeof(VkPipelineViewportDepthClipControlCreateInfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPipelineViewportDepthClipControlCreateInfoEXT>(), Is.EqualTo(sizeof(VkPipelineViewportDepthClipControlCreateInfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineViewportDepthClipControlCreateInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPipelineViewportDepthClipControlCreateInfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPipelineViewportDepthClipControlCreateInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPipelineViewportDepthClipControlCreateInfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineViewportDepthClipControlCreateInfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPipelineViewportDepthClipControlCreateInfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPipelineViewportDepthClipControlCreateInfoEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPipelineViewportDepthClipControlCreateInfoEXT), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPipelineViewportDepthClipControlCreateInfoEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPipelineViewportDepthClipControlCreateInfoEXT), Is.EqualTo(12));
         }
     }
 }

@@ -5,12 +5,11 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
-{
-    public unsafe partial struct VkPhysicalDeviceManualImports
-    {
-        public delegate* unmanaged<VkPhysicalDevice, IntPtr, VkDisplayKHR, VkResult> vkAcquireXlibDisplayEXT;
+namespace TerraFX.Interop.Vulkan;
 
-        public delegate* unmanaged<VkPhysicalDevice, IntPtr, nuint, VkDisplayKHR*, VkResult> vkGetRandROutputDisplayEXT;
-    }
+public unsafe partial struct VkPhysicalDeviceManualImports
+{
+    public delegate* unmanaged<VkPhysicalDevice, IntPtr, VkDisplayKHR, VkResult> vkAcquireXlibDisplayEXT;
+
+    public delegate* unmanaged<VkPhysicalDevice, IntPtr, nuint, VkDisplayKHR*, VkResult> vkGetRandROutputDisplayEXT;
 }

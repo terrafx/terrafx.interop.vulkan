@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSubmitInfo" /> struct.</summary>
+public static unsafe partial class VkSubmitInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkSubmitInfo" /> struct.</summary>
-    public static unsafe partial class VkSubmitInfoTests
+    /// <summary>Validates that the <see cref="VkSubmitInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSubmitInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSubmitInfo>(), Is.EqualTo(sizeof(VkSubmitInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkSubmitInfo>(), Is.EqualTo(sizeof(VkSubmitInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSubmitInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSubmitInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSubmitInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSubmitInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSubmitInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkSubmitInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkSubmitInfo), Is.EqualTo(72));
-            }
-            else
-            {
-                Assert.That(sizeof(VkSubmitInfo), Is.EqualTo(36));
-            }
+            Assert.That(sizeof(VkSubmitInfo), Is.EqualTo(72));
+        }
+        else
+        {
+            Assert.That(sizeof(VkSubmitInfo), Is.EqualTo(36));
         }
     }
 }

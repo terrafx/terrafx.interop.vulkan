@@ -5,14 +5,13 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[NativeTypeName("int")]
+[Flags]
+public enum VkEventCreateFlags : uint
 {
-    [NativeTypeName("int")]
-    [Flags]
-    public enum VkEventCreateFlags : uint
-    {
-        VK_EVENT_CREATE_DEVICE_ONLY_BIT = 0x00000001,
-        VK_EVENT_CREATE_DEVICE_ONLY_BIT_KHR = VK_EVENT_CREATE_DEVICE_ONLY_BIT,
-        VK_EVENT_CREATE_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
-    }
+    VK_EVENT_CREATE_DEVICE_ONLY_BIT = 0x00000001,
+    VK_EVENT_CREATE_DEVICE_ONLY_BIT_KHR = VK_EVENT_CREATE_DEVICE_ONLY_BIT,
+    VK_EVENT_CREATE_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF,
 }

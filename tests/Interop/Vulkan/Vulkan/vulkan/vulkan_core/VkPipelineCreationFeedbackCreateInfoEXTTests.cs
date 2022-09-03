@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPipelineCreationFeedbackCreateInfoEXT" /> struct.</summary>
+public static unsafe partial class VkPipelineCreationFeedbackCreateInfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPipelineCreationFeedbackCreateInfoEXT" /> struct.</summary>
-    public static unsafe partial class VkPipelineCreationFeedbackCreateInfoEXTTests
+    /// <summary>Validates that the <see cref="VkPipelineCreationFeedbackCreateInfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPipelineCreationFeedbackCreateInfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPipelineCreationFeedbackCreateInfoEXT>(), Is.EqualTo(sizeof(VkPipelineCreationFeedbackCreateInfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPipelineCreationFeedbackCreateInfoEXT>(), Is.EqualTo(sizeof(VkPipelineCreationFeedbackCreateInfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineCreationFeedbackCreateInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPipelineCreationFeedbackCreateInfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPipelineCreationFeedbackCreateInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPipelineCreationFeedbackCreateInfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineCreationFeedbackCreateInfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPipelineCreationFeedbackCreateInfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPipelineCreationFeedbackCreateInfoEXT), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPipelineCreationFeedbackCreateInfoEXT), Is.EqualTo(20));
-            }
+            Assert.That(sizeof(VkPipelineCreationFeedbackCreateInfoEXT), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPipelineCreationFeedbackCreateInfoEXT), Is.EqualTo(20));
         }
     }
 }

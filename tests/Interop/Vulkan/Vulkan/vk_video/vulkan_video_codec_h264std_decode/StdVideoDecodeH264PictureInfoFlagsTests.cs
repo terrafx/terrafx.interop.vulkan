@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="StdVideoDecodeH264PictureInfoFlags" /> struct.</summary>
+public static unsafe partial class StdVideoDecodeH264PictureInfoFlagsTests
 {
-    /// <summary>Provides validation of the <see cref="StdVideoDecodeH264PictureInfoFlags" /> struct.</summary>
-    public static unsafe partial class StdVideoDecodeH264PictureInfoFlagsTests
+    /// <summary>Validates that the <see cref="StdVideoDecodeH264PictureInfoFlags" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="StdVideoDecodeH264PictureInfoFlags" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<StdVideoDecodeH264PictureInfoFlags>(), Is.EqualTo(sizeof(StdVideoDecodeH264PictureInfoFlags)));
-        }
+        Assert.That(Marshal.SizeOf<StdVideoDecodeH264PictureInfoFlags>(), Is.EqualTo(sizeof(StdVideoDecodeH264PictureInfoFlags)));
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoDecodeH264PictureInfoFlags" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(StdVideoDecodeH264PictureInfoFlags).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="StdVideoDecodeH264PictureInfoFlags" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(StdVideoDecodeH264PictureInfoFlags).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoDecodeH264PictureInfoFlags" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(StdVideoDecodeH264PictureInfoFlags), Is.EqualTo(4));
-        }
+    /// <summary>Validates that the <see cref="StdVideoDecodeH264PictureInfoFlags" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(StdVideoDecodeH264PictureInfoFlags), Is.EqualTo(4));
     }
 }

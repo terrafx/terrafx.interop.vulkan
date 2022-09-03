@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR>(), Is.EqualTo(sizeof(VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR>(), Is.EqualTo(sizeof(VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR), Is.EqualTo(24));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR), Is.EqualTo(24));
         }
     }
 }

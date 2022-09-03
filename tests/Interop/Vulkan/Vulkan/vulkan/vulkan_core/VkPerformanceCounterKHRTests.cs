@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPerformanceCounterKHR" /> struct.</summary>
+public static unsafe partial class VkPerformanceCounterKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkPerformanceCounterKHR" /> struct.</summary>
-    public static unsafe partial class VkPerformanceCounterKHRTests
+    /// <summary>Validates that the <see cref="VkPerformanceCounterKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPerformanceCounterKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPerformanceCounterKHR>(), Is.EqualTo(sizeof(VkPerformanceCounterKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkPerformanceCounterKHR>(), Is.EqualTo(sizeof(VkPerformanceCounterKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPerformanceCounterKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPerformanceCounterKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPerformanceCounterKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPerformanceCounterKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPerformanceCounterKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPerformanceCounterKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPerformanceCounterKHR), Is.EqualTo(48));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPerformanceCounterKHR), Is.EqualTo(36));
-            }
+            Assert.That(sizeof(VkPerformanceCounterKHR), Is.EqualTo(48));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPerformanceCounterKHR), Is.EqualTo(36));
         }
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPerformanceOverrideInfoINTEL" /> struct.</summary>
+public static unsafe partial class VkPerformanceOverrideInfoINTELTests
 {
-    /// <summary>Provides validation of the <see cref="VkPerformanceOverrideInfoINTEL" /> struct.</summary>
-    public static unsafe partial class VkPerformanceOverrideInfoINTELTests
+    /// <summary>Validates that the <see cref="VkPerformanceOverrideInfoINTEL" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPerformanceOverrideInfoINTEL" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPerformanceOverrideInfoINTEL>(), Is.EqualTo(sizeof(VkPerformanceOverrideInfoINTEL)));
-        }
+        Assert.That(Marshal.SizeOf<VkPerformanceOverrideInfoINTEL>(), Is.EqualTo(sizeof(VkPerformanceOverrideInfoINTEL)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPerformanceOverrideInfoINTEL" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPerformanceOverrideInfoINTEL).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPerformanceOverrideInfoINTEL" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPerformanceOverrideInfoINTEL).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPerformanceOverrideInfoINTEL" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPerformanceOverrideInfoINTEL" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPerformanceOverrideInfoINTEL), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPerformanceOverrideInfoINTEL), Is.EqualTo(24));
-            }
+            Assert.That(sizeof(VkPerformanceOverrideInfoINTEL), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPerformanceOverrideInfoINTEL), Is.EqualTo(24));
         }
     }
 }

@@ -5,13 +5,12 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
-{
-    public unsafe partial struct VkIcdSurfaceMetal
-    {
-        public VkIcdSurfaceBase @base;
+namespace TerraFX.Interop.Vulkan;
 
-        [NativeTypeName("const CAMetalLayer *")]
-        public IntPtr pView;
-    }
+public unsafe partial struct VkIcdSurfaceMetal
+{
+    public VkIcdSurfaceBase @base;
+
+    [NativeTypeName("const CAMetalLayer *")]
+    public IntPtr pView;
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkAccelerationStructureDeviceAddressInfoKHR" /> struct.</summary>
+public static unsafe partial class VkAccelerationStructureDeviceAddressInfoKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkAccelerationStructureDeviceAddressInfoKHR" /> struct.</summary>
-    public static unsafe partial class VkAccelerationStructureDeviceAddressInfoKHRTests
+    /// <summary>Validates that the <see cref="VkAccelerationStructureDeviceAddressInfoKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkAccelerationStructureDeviceAddressInfoKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkAccelerationStructureDeviceAddressInfoKHR>(), Is.EqualTo(sizeof(VkAccelerationStructureDeviceAddressInfoKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkAccelerationStructureDeviceAddressInfoKHR>(), Is.EqualTo(sizeof(VkAccelerationStructureDeviceAddressInfoKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkAccelerationStructureDeviceAddressInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkAccelerationStructureDeviceAddressInfoKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkAccelerationStructureDeviceAddressInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkAccelerationStructureDeviceAddressInfoKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkAccelerationStructureDeviceAddressInfoKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkAccelerationStructureDeviceAddressInfoKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkAccelerationStructureDeviceAddressInfoKHR), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkAccelerationStructureDeviceAddressInfoKHR), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkAccelerationStructureDeviceAddressInfoKHR), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkAccelerationStructureDeviceAddressInfoKHR), Is.EqualTo(16));
         }
     }
 }

@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkExternalMemoryProperties" /> struct.</summary>
+public static unsafe partial class VkExternalMemoryPropertiesTests
 {
-    /// <summary>Provides validation of the <see cref="VkExternalMemoryProperties" /> struct.</summary>
-    public static unsafe partial class VkExternalMemoryPropertiesTests
+    /// <summary>Validates that the <see cref="VkExternalMemoryProperties" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkExternalMemoryProperties" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkExternalMemoryProperties>(), Is.EqualTo(sizeof(VkExternalMemoryProperties)));
-        }
+        Assert.That(Marshal.SizeOf<VkExternalMemoryProperties>(), Is.EqualTo(sizeof(VkExternalMemoryProperties)));
+    }
 
-        /// <summary>Validates that the <see cref="VkExternalMemoryProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkExternalMemoryProperties).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkExternalMemoryProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkExternalMemoryProperties).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkExternalMemoryProperties" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkExternalMemoryProperties), Is.EqualTo(12));
-        }
+    /// <summary>Validates that the <see cref="VkExternalMemoryProperties" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkExternalMemoryProperties), Is.EqualTo(12));
     }
 }

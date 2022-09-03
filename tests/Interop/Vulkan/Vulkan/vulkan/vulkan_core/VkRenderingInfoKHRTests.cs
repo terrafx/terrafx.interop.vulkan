@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkRenderingInfoKHR" /> struct.</summary>
+public static unsafe partial class VkRenderingInfoKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkRenderingInfoKHR" /> struct.</summary>
-    public static unsafe partial class VkRenderingInfoKHRTests
+    /// <summary>Validates that the <see cref="VkRenderingInfoKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkRenderingInfoKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkRenderingInfoKHR>(), Is.EqualTo(sizeof(VkRenderingInfoKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkRenderingInfoKHR>(), Is.EqualTo(sizeof(VkRenderingInfoKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkRenderingInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkRenderingInfoKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkRenderingInfoKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkRenderingInfoKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkRenderingInfoKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkRenderingInfoKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkRenderingInfoKHR), Is.EqualTo(72));
-            }
-            else
-            {
-                Assert.That(sizeof(VkRenderingInfoKHR), Is.EqualTo(52));
-            }
+            Assert.That(sizeof(VkRenderingInfoKHR), Is.EqualTo(72));
+        }
+        else
+        {
+            Assert.That(sizeof(VkRenderingInfoKHR), Is.EqualTo(52));
         }
     }
 }

@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkSparseImageMemoryBind" /> struct.</summary>
+public static unsafe partial class VkSparseImageMemoryBindTests
 {
-    /// <summary>Provides validation of the <see cref="VkSparseImageMemoryBind" /> struct.</summary>
-    public static unsafe partial class VkSparseImageMemoryBindTests
+    /// <summary>Validates that the <see cref="VkSparseImageMemoryBind" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkSparseImageMemoryBind" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkSparseImageMemoryBind>(), Is.EqualTo(sizeof(VkSparseImageMemoryBind)));
-        }
+        Assert.That(Marshal.SizeOf<VkSparseImageMemoryBind>(), Is.EqualTo(sizeof(VkSparseImageMemoryBind)));
+    }
 
-        /// <summary>Validates that the <see cref="VkSparseImageMemoryBind" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkSparseImageMemoryBind).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkSparseImageMemoryBind" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkSparseImageMemoryBind).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkSparseImageMemoryBind" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkSparseImageMemoryBind), Is.EqualTo(64));
-        }
+    /// <summary>Validates that the <see cref="VkSparseImageMemoryBind" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkSparseImageMemoryBind), Is.EqualTo(64));
     }
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkBufferConstraintsInfoFUCHSIA" /> struct.</summary>
+public static unsafe partial class VkBufferConstraintsInfoFUCHSIATests
 {
-    /// <summary>Provides validation of the <see cref="VkBufferConstraintsInfoFUCHSIA" /> struct.</summary>
-    public static unsafe partial class VkBufferConstraintsInfoFUCHSIATests
+    /// <summary>Validates that the <see cref="VkBufferConstraintsInfoFUCHSIA" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkBufferConstraintsInfoFUCHSIA" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkBufferConstraintsInfoFUCHSIA>(), Is.EqualTo(sizeof(VkBufferConstraintsInfoFUCHSIA)));
-        }
+        Assert.That(Marshal.SizeOf<VkBufferConstraintsInfoFUCHSIA>(), Is.EqualTo(sizeof(VkBufferConstraintsInfoFUCHSIA)));
+    }
 
-        /// <summary>Validates that the <see cref="VkBufferConstraintsInfoFUCHSIA" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkBufferConstraintsInfoFUCHSIA).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkBufferConstraintsInfoFUCHSIA" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkBufferConstraintsInfoFUCHSIA).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkBufferConstraintsInfoFUCHSIA" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkBufferConstraintsInfoFUCHSIA" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkBufferConstraintsInfoFUCHSIA), Is.EqualTo(120));
-            }
-            else
-            {
-                Assert.That(sizeof(VkBufferConstraintsInfoFUCHSIA), Is.EqualTo(80));
-            }
+            Assert.That(sizeof(VkBufferConstraintsInfoFUCHSIA), Is.EqualTo(120));
+        }
+        else
+        {
+            Assert.That(sizeof(VkBufferConstraintsInfoFUCHSIA), Is.EqualTo(80));
         }
     }
 }

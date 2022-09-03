@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceLineRasterizationPropertiesEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceLineRasterizationPropertiesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceLineRasterizationPropertiesEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceLineRasterizationPropertiesEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceLineRasterizationPropertiesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceLineRasterizationPropertiesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceLineRasterizationPropertiesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceLineRasterizationPropertiesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceLineRasterizationPropertiesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceLineRasterizationPropertiesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceLineRasterizationPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceLineRasterizationPropertiesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceLineRasterizationPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceLineRasterizationPropertiesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceLineRasterizationPropertiesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceLineRasterizationPropertiesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceLineRasterizationPropertiesEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceLineRasterizationPropertiesEXT), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceLineRasterizationPropertiesEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceLineRasterizationPropertiesEXT), Is.EqualTo(12));
         }
     }
 }

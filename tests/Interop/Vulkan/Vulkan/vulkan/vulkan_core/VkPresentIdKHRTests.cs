@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPresentIdKHR" /> struct.</summary>
+public static unsafe partial class VkPresentIdKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkPresentIdKHR" /> struct.</summary>
-    public static unsafe partial class VkPresentIdKHRTests
+    /// <summary>Validates that the <see cref="VkPresentIdKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPresentIdKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPresentIdKHR>(), Is.EqualTo(sizeof(VkPresentIdKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkPresentIdKHR>(), Is.EqualTo(sizeof(VkPresentIdKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPresentIdKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPresentIdKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPresentIdKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPresentIdKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPresentIdKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPresentIdKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPresentIdKHR), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPresentIdKHR), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkPresentIdKHR), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPresentIdKHR), Is.EqualTo(16));
         }
     }
 }

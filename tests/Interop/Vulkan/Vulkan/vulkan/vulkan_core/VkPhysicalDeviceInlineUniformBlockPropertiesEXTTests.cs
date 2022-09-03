@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceInlineUniformBlockPropertiesEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceInlineUniformBlockPropertiesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceInlineUniformBlockPropertiesEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceInlineUniformBlockPropertiesEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceInlineUniformBlockPropertiesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceInlineUniformBlockPropertiesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceInlineUniformBlockPropertiesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceInlineUniformBlockPropertiesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceInlineUniformBlockPropertiesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceInlineUniformBlockPropertiesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceInlineUniformBlockPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceInlineUniformBlockPropertiesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceInlineUniformBlockPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceInlineUniformBlockPropertiesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceInlineUniformBlockPropertiesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceInlineUniformBlockPropertiesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceInlineUniformBlockPropertiesEXT), Is.EqualTo(40));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceInlineUniformBlockPropertiesEXT), Is.EqualTo(28));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceInlineUniformBlockPropertiesEXT), Is.EqualTo(40));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceInlineUniformBlockPropertiesEXT), Is.EqualTo(28));
         }
     }
 }

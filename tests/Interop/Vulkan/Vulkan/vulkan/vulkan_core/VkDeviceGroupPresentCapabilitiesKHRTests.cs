@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDeviceGroupPresentCapabilitiesKHR" /> struct.</summary>
+public static unsafe partial class VkDeviceGroupPresentCapabilitiesKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkDeviceGroupPresentCapabilitiesKHR" /> struct.</summary>
-    public static unsafe partial class VkDeviceGroupPresentCapabilitiesKHRTests
+    /// <summary>Validates that the <see cref="VkDeviceGroupPresentCapabilitiesKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDeviceGroupPresentCapabilitiesKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDeviceGroupPresentCapabilitiesKHR>(), Is.EqualTo(sizeof(VkDeviceGroupPresentCapabilitiesKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkDeviceGroupPresentCapabilitiesKHR>(), Is.EqualTo(sizeof(VkDeviceGroupPresentCapabilitiesKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceGroupPresentCapabilitiesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkDeviceGroupPresentCapabilitiesKHR).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDeviceGroupPresentCapabilitiesKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkDeviceGroupPresentCapabilitiesKHR).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceGroupPresentCapabilitiesKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkDeviceGroupPresentCapabilitiesKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkDeviceGroupPresentCapabilitiesKHR), Is.EqualTo(152));
-            }
-            else
-            {
-                Assert.That(sizeof(VkDeviceGroupPresentCapabilitiesKHR), Is.EqualTo(140));
-            }
+            Assert.That(sizeof(VkDeviceGroupPresentCapabilitiesKHR), Is.EqualTo(152));
+        }
+        else
+        {
+            Assert.That(sizeof(VkDeviceGroupPresentCapabilitiesKHR), Is.EqualTo(140));
         }
     }
 }

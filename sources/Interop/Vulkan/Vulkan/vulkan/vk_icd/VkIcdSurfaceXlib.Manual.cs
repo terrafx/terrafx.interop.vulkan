@@ -5,16 +5,15 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public partial struct VkIcdSurfaceXlib
 {
-    public partial struct VkIcdSurfaceXlib
-    {
-        public VkIcdSurfaceBase @base;
+    public VkIcdSurfaceBase @base;
 
-        [NativeTypeName("Display *")]
-        public UIntPtr dpy;
+    [NativeTypeName("Display *")]
+    public UIntPtr dpy;
 
-        [NativeTypeName("Window")]
-        public UIntPtr window;
-    }
+    [NativeTypeName("Window")]
+    public UIntPtr window;
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkImageViewCreateInfo" /> struct.</summary>
+public static unsafe partial class VkImageViewCreateInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkImageViewCreateInfo" /> struct.</summary>
-    public static unsafe partial class VkImageViewCreateInfoTests
+    /// <summary>Validates that the <see cref="VkImageViewCreateInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkImageViewCreateInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkImageViewCreateInfo>(), Is.EqualTo(sizeof(VkImageViewCreateInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkImageViewCreateInfo>(), Is.EqualTo(sizeof(VkImageViewCreateInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkImageViewCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkImageViewCreateInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkImageViewCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkImageViewCreateInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkImageViewCreateInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkImageViewCreateInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkImageViewCreateInfo), Is.EqualTo(80));
-            }
-            else
-            {
-                Assert.That(sizeof(VkImageViewCreateInfo), Is.EqualTo(72));
-            }
+            Assert.That(sizeof(VkImageViewCreateInfo), Is.EqualTo(80));
+        }
+        else
+        {
+            Assert.That(sizeof(VkImageViewCreateInfo), Is.EqualTo(72));
         }
     }
 }

@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkVertexInputBindingDivisorDescriptionEXT" /> struct.</summary>
+public static unsafe partial class VkVertexInputBindingDivisorDescriptionEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkVertexInputBindingDivisorDescriptionEXT" /> struct.</summary>
-    public static unsafe partial class VkVertexInputBindingDivisorDescriptionEXTTests
+    /// <summary>Validates that the <see cref="VkVertexInputBindingDivisorDescriptionEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkVertexInputBindingDivisorDescriptionEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkVertexInputBindingDivisorDescriptionEXT>(), Is.EqualTo(sizeof(VkVertexInputBindingDivisorDescriptionEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkVertexInputBindingDivisorDescriptionEXT>(), Is.EqualTo(sizeof(VkVertexInputBindingDivisorDescriptionEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkVertexInputBindingDivisorDescriptionEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkVertexInputBindingDivisorDescriptionEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkVertexInputBindingDivisorDescriptionEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkVertexInputBindingDivisorDescriptionEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkVertexInputBindingDivisorDescriptionEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkVertexInputBindingDivisorDescriptionEXT), Is.EqualTo(8));
-        }
+    /// <summary>Validates that the <see cref="VkVertexInputBindingDivisorDescriptionEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkVertexInputBindingDivisorDescriptionEXT), Is.EqualTo(8));
     }
 }

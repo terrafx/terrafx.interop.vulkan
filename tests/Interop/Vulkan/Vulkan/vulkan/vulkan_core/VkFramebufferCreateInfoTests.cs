@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkFramebufferCreateInfo" /> struct.</summary>
+public static unsafe partial class VkFramebufferCreateInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkFramebufferCreateInfo" /> struct.</summary>
-    public static unsafe partial class VkFramebufferCreateInfoTests
+    /// <summary>Validates that the <see cref="VkFramebufferCreateInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkFramebufferCreateInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkFramebufferCreateInfo>(), Is.EqualTo(sizeof(VkFramebufferCreateInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkFramebufferCreateInfo>(), Is.EqualTo(sizeof(VkFramebufferCreateInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkFramebufferCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkFramebufferCreateInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkFramebufferCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkFramebufferCreateInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkFramebufferCreateInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkFramebufferCreateInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkFramebufferCreateInfo), Is.EqualTo(64));
-            }
-            else
-            {
-                Assert.That(sizeof(VkFramebufferCreateInfo), Is.EqualTo(48));
-            }
+            Assert.That(sizeof(VkFramebufferCreateInfo), Is.EqualTo(64));
+        }
+        else
+        {
+            Assert.That(sizeof(VkFramebufferCreateInfo), Is.EqualTo(48));
         }
     }
 }

@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkComponentMapping" /> struct.</summary>
+public static unsafe partial class VkComponentMappingTests
 {
-    /// <summary>Provides validation of the <see cref="VkComponentMapping" /> struct.</summary>
-    public static unsafe partial class VkComponentMappingTests
+    /// <summary>Validates that the <see cref="VkComponentMapping" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkComponentMapping" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkComponentMapping>(), Is.EqualTo(sizeof(VkComponentMapping)));
-        }
+        Assert.That(Marshal.SizeOf<VkComponentMapping>(), Is.EqualTo(sizeof(VkComponentMapping)));
+    }
 
-        /// <summary>Validates that the <see cref="VkComponentMapping" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkComponentMapping).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkComponentMapping" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkComponentMapping).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkComponentMapping" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkComponentMapping), Is.EqualTo(16));
-        }
+    /// <summary>Validates that the <see cref="VkComponentMapping" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkComponentMapping), Is.EqualTo(16));
     }
 }

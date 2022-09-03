@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceImageViewImageFormatInfoEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceImageViewImageFormatInfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceImageViewImageFormatInfoEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceImageViewImageFormatInfoEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceImageViewImageFormatInfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceImageViewImageFormatInfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceImageViewImageFormatInfoEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceImageViewImageFormatInfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceImageViewImageFormatInfoEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceImageViewImageFormatInfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceImageViewImageFormatInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceImageViewImageFormatInfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceImageViewImageFormatInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceImageViewImageFormatInfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceImageViewImageFormatInfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceImageViewImageFormatInfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceImageViewImageFormatInfoEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceImageViewImageFormatInfoEXT), Is.EqualTo(12));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceImageViewImageFormatInfoEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceImageViewImageFormatInfoEXT), Is.EqualTo(12));
         }
     }
 }

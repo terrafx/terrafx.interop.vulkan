@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceProperties2" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceProperties2Tests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceProperties2" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceProperties2Tests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceProperties2" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceProperties2" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceProperties2>(), Is.EqualTo(sizeof(VkPhysicalDeviceProperties2)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceProperties2>(), Is.EqualTo(sizeof(VkPhysicalDeviceProperties2)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceProperties2" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceProperties2).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceProperties2" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceProperties2).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceProperties2" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceProperties2" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceProperties2), Is.EqualTo(840));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceProperties2), Is.EqualTo(824));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceProperties2), Is.EqualTo(840));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceProperties2), Is.EqualTo(824));
         }
     }
 }

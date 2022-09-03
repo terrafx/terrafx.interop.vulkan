@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkDeviceOrHostAddressKHR" /> struct.</summary>
+public static unsafe partial class VkDeviceOrHostAddressKHRTests
 {
-    /// <summary>Provides validation of the <see cref="VkDeviceOrHostAddressKHR" /> struct.</summary>
-    public static unsafe partial class VkDeviceOrHostAddressKHRTests
+    /// <summary>Validates that the <see cref="VkDeviceOrHostAddressKHR" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkDeviceOrHostAddressKHR" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkDeviceOrHostAddressKHR>(), Is.EqualTo(sizeof(VkDeviceOrHostAddressKHR)));
-        }
+        Assert.That(Marshal.SizeOf<VkDeviceOrHostAddressKHR>(), Is.EqualTo(sizeof(VkDeviceOrHostAddressKHR)));
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceOrHostAddressKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutExplicitTest()
-        {
-            Assert.That(typeof(VkDeviceOrHostAddressKHR).IsExplicitLayout, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkDeviceOrHostAddressKHR" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutExplicitTest()
+    {
+        Assert.That(typeof(VkDeviceOrHostAddressKHR).IsExplicitLayout, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkDeviceOrHostAddressKHR" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkDeviceOrHostAddressKHR), Is.EqualTo(8));
-        }
+    /// <summary>Validates that the <see cref="VkDeviceOrHostAddressKHR" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkDeviceOrHostAddressKHR), Is.EqualTo(8));
     }
 }

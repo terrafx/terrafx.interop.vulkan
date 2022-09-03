@@ -5,16 +5,15 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkImportAndroidHardwareBufferInfoANDROID
 {
-    public unsafe partial struct VkImportAndroidHardwareBufferInfoANDROID
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        [NativeTypeName("struct AHardwareBuffer *")]
-        public IntPtr buffer;
-    }
+    [NativeTypeName("struct AHardwareBuffer *")]
+    public IntPtr buffer;
 }

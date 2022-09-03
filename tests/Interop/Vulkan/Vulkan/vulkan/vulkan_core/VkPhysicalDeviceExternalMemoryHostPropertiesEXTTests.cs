@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceExternalMemoryHostPropertiesEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceExternalMemoryHostPropertiesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceExternalMemoryHostPropertiesEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceExternalMemoryHostPropertiesEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceExternalMemoryHostPropertiesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceExternalMemoryHostPropertiesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceExternalMemoryHostPropertiesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceExternalMemoryHostPropertiesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceExternalMemoryHostPropertiesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceExternalMemoryHostPropertiesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceExternalMemoryHostPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceExternalMemoryHostPropertiesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceExternalMemoryHostPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceExternalMemoryHostPropertiesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceExternalMemoryHostPropertiesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceExternalMemoryHostPropertiesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceExternalMemoryHostPropertiesEXT), Is.EqualTo(24));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceExternalMemoryHostPropertiesEXT), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceExternalMemoryHostPropertiesEXT), Is.EqualTo(24));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceExternalMemoryHostPropertiesEXT), Is.EqualTo(16));
         }
     }
 }

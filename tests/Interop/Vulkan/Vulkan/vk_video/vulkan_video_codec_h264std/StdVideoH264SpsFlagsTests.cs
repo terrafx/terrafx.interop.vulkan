@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="StdVideoH264SpsFlags" /> struct.</summary>
+public static unsafe partial class StdVideoH264SpsFlagsTests
 {
-    /// <summary>Provides validation of the <see cref="StdVideoH264SpsFlags" /> struct.</summary>
-    public static unsafe partial class StdVideoH264SpsFlagsTests
+    /// <summary>Validates that the <see cref="StdVideoH264SpsFlags" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="StdVideoH264SpsFlags" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<StdVideoH264SpsFlags>(), Is.EqualTo(sizeof(StdVideoH264SpsFlags)));
-        }
+        Assert.That(Marshal.SizeOf<StdVideoH264SpsFlags>(), Is.EqualTo(sizeof(StdVideoH264SpsFlags)));
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoH264SpsFlags" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(StdVideoH264SpsFlags).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="StdVideoH264SpsFlags" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(StdVideoH264SpsFlags).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="StdVideoH264SpsFlags" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(StdVideoH264SpsFlags), Is.EqualTo(4));
-        }
+    /// <summary>Validates that the <see cref="StdVideoH264SpsFlags" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(StdVideoH264SpsFlags), Is.EqualTo(4));
     }
 }

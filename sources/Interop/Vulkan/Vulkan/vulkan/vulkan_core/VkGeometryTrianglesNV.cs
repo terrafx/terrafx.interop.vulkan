@@ -3,41 +3,40 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkGeometryTrianglesNV
 {
-    public unsafe partial struct VkGeometryTrianglesNV
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        [NativeTypeName("const void *")]
-        public void* pNext;
+    [NativeTypeName("const void *")]
+    public void* pNext;
 
-        public VkBuffer vertexData;
+    public VkBuffer vertexData;
 
-        [NativeTypeName("VkDeviceSize")]
-        public ulong vertexOffset;
+    [NativeTypeName("VkDeviceSize")]
+    public ulong vertexOffset;
 
-        [NativeTypeName("uint32_t")]
-        public uint vertexCount;
+    [NativeTypeName("uint32_t")]
+    public uint vertexCount;
 
-        [NativeTypeName("VkDeviceSize")]
-        public ulong vertexStride;
+    [NativeTypeName("VkDeviceSize")]
+    public ulong vertexStride;
 
-        public VkFormat vertexFormat;
+    public VkFormat vertexFormat;
 
-        public VkBuffer indexData;
+    public VkBuffer indexData;
 
-        [NativeTypeName("VkDeviceSize")]
-        public ulong indexOffset;
+    [NativeTypeName("VkDeviceSize")]
+    public ulong indexOffset;
 
-        [NativeTypeName("uint32_t")]
-        public uint indexCount;
+    [NativeTypeName("uint32_t")]
+    public uint indexCount;
 
-        public VkIndexType indexType;
+    public VkIndexType indexType;
 
-        public VkBuffer transformData;
+    public VkBuffer transformData;
 
-        [NativeTypeName("VkDeviceSize")]
-        public ulong transformOffset;
-    }
+    [NativeTypeName("VkDeviceSize")]
+    public ulong transformOffset;
 }

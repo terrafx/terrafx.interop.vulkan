@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkVideoDecodeH264SessionParametersAddInfoEXT" /> struct.</summary>
+public static unsafe partial class VkVideoDecodeH264SessionParametersAddInfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkVideoDecodeH264SessionParametersAddInfoEXT" /> struct.</summary>
-    public static unsafe partial class VkVideoDecodeH264SessionParametersAddInfoEXTTests
+    /// <summary>Validates that the <see cref="VkVideoDecodeH264SessionParametersAddInfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkVideoDecodeH264SessionParametersAddInfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkVideoDecodeH264SessionParametersAddInfoEXT>(), Is.EqualTo(sizeof(VkVideoDecodeH264SessionParametersAddInfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkVideoDecodeH264SessionParametersAddInfoEXT>(), Is.EqualTo(sizeof(VkVideoDecodeH264SessionParametersAddInfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoDecodeH264SessionParametersAddInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkVideoDecodeH264SessionParametersAddInfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkVideoDecodeH264SessionParametersAddInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkVideoDecodeH264SessionParametersAddInfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkVideoDecodeH264SessionParametersAddInfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkVideoDecodeH264SessionParametersAddInfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkVideoDecodeH264SessionParametersAddInfoEXT), Is.EqualTo(48));
-            }
-            else
-            {
-                Assert.That(sizeof(VkVideoDecodeH264SessionParametersAddInfoEXT), Is.EqualTo(24));
-            }
+            Assert.That(sizeof(VkVideoDecodeH264SessionParametersAddInfoEXT), Is.EqualTo(48));
+        }
+        else
+        {
+            Assert.That(sizeof(VkVideoDecodeH264SessionParametersAddInfoEXT), Is.EqualTo(24));
         }
     }
 }

@@ -5,13 +5,12 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+[NativeTypeName("int")]
+[Flags]
+public enum VkConditionalRenderingFlagsEXT : uint
 {
-    [NativeTypeName("int")]
-    [Flags]
-    public enum VkConditionalRenderingFlagsEXT : uint
-    {
-        VK_CONDITIONAL_RENDERING_INVERTED_BIT_EXT = 0x00000001,
-        VK_CONDITIONAL_RENDERING_FLAG_BITS_MAX_ENUM_EXT = 0x7FFFFFFF,
-    }
+    VK_CONDITIONAL_RENDERING_INVERTED_BIT_EXT = 0x00000001,
+    VK_CONDITIONAL_RENDERING_FLAG_BITS_MAX_ENUM_EXT = 0x7FFFFFFF,
 }

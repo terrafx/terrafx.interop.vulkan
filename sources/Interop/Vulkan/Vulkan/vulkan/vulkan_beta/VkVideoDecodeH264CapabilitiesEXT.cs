@@ -3,19 +3,18 @@
 // Ported from include/vulkan/vulkan_beta.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.204
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public unsafe partial struct VkVideoDecodeH264CapabilitiesEXT
 {
-    public unsafe partial struct VkVideoDecodeH264CapabilitiesEXT
-    {
-        public VkStructureType sType;
+    public VkStructureType sType;
 
-        public void* pNext;
+    public void* pNext;
 
-        [NativeTypeName("uint32_t")]
-        public uint maxLevel;
+    [NativeTypeName("uint32_t")]
+    public uint maxLevel;
 
-        public VkOffset2D fieldOffsetGranularity;
+    public VkOffset2D fieldOffsetGranularity;
 
-        public VkExtensionProperties stdExtensionVersion;
-    }
+    public VkExtensionProperties stdExtensionVersion;
 }

@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPipelineColorWriteCreateInfoEXT" /> struct.</summary>
+public static unsafe partial class VkPipelineColorWriteCreateInfoEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPipelineColorWriteCreateInfoEXT" /> struct.</summary>
-    public static unsafe partial class VkPipelineColorWriteCreateInfoEXTTests
+    /// <summary>Validates that the <see cref="VkPipelineColorWriteCreateInfoEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPipelineColorWriteCreateInfoEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPipelineColorWriteCreateInfoEXT>(), Is.EqualTo(sizeof(VkPipelineColorWriteCreateInfoEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPipelineColorWriteCreateInfoEXT>(), Is.EqualTo(sizeof(VkPipelineColorWriteCreateInfoEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineColorWriteCreateInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPipelineColorWriteCreateInfoEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPipelineColorWriteCreateInfoEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPipelineColorWriteCreateInfoEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPipelineColorWriteCreateInfoEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPipelineColorWriteCreateInfoEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPipelineColorWriteCreateInfoEXT), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPipelineColorWriteCreateInfoEXT), Is.EqualTo(16));
-            }
+            Assert.That(sizeof(VkPipelineColorWriteCreateInfoEXT), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPipelineColorWriteCreateInfoEXT), Is.EqualTo(16));
         }
     }
 }

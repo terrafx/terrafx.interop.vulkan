@@ -6,30 +6,29 @@
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkLayerProperties" /> struct.</summary>
+public static unsafe partial class VkLayerPropertiesTests
 {
-    /// <summary>Provides validation of the <see cref="VkLayerProperties" /> struct.</summary>
-    public static unsafe partial class VkLayerPropertiesTests
+    /// <summary>Validates that the <see cref="VkLayerProperties" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkLayerProperties" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkLayerProperties>(), Is.EqualTo(sizeof(VkLayerProperties)));
-        }
+        Assert.That(Marshal.SizeOf<VkLayerProperties>(), Is.EqualTo(sizeof(VkLayerProperties)));
+    }
 
-        /// <summary>Validates that the <see cref="VkLayerProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkLayerProperties).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkLayerProperties" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkLayerProperties).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkLayerProperties" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
-        {
-            Assert.That(sizeof(VkLayerProperties), Is.EqualTo(520));
-        }
+    /// <summary>Validates that the <see cref="VkLayerProperties" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        Assert.That(sizeof(VkLayerProperties), Is.EqualTo(520));
     }
 }

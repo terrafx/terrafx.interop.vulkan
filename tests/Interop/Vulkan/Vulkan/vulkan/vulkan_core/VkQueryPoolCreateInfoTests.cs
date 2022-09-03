@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkQueryPoolCreateInfo" /> struct.</summary>
+public static unsafe partial class VkQueryPoolCreateInfoTests
 {
-    /// <summary>Provides validation of the <see cref="VkQueryPoolCreateInfo" /> struct.</summary>
-    public static unsafe partial class VkQueryPoolCreateInfoTests
+    /// <summary>Validates that the <see cref="VkQueryPoolCreateInfo" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkQueryPoolCreateInfo" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkQueryPoolCreateInfo>(), Is.EqualTo(sizeof(VkQueryPoolCreateInfo)));
-        }
+        Assert.That(Marshal.SizeOf<VkQueryPoolCreateInfo>(), Is.EqualTo(sizeof(VkQueryPoolCreateInfo)));
+    }
 
-        /// <summary>Validates that the <see cref="VkQueryPoolCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkQueryPoolCreateInfo).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkQueryPoolCreateInfo" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkQueryPoolCreateInfo).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkQueryPoolCreateInfo" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkQueryPoolCreateInfo" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkQueryPoolCreateInfo), Is.EqualTo(32));
-            }
-            else
-            {
-                Assert.That(sizeof(VkQueryPoolCreateInfo), Is.EqualTo(24));
-            }
+            Assert.That(sizeof(VkQueryPoolCreateInfo), Is.EqualTo(32));
+        }
+        else
+        {
+            Assert.That(sizeof(VkQueryPoolCreateInfo), Is.EqualTo(24));
         }
     }
 }

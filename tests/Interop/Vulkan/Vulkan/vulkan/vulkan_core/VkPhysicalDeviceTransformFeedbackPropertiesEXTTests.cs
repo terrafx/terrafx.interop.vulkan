@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkPhysicalDeviceTransformFeedbackPropertiesEXT" /> struct.</summary>
+public static unsafe partial class VkPhysicalDeviceTransformFeedbackPropertiesEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkPhysicalDeviceTransformFeedbackPropertiesEXT" /> struct.</summary>
-    public static unsafe partial class VkPhysicalDeviceTransformFeedbackPropertiesEXTTests
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceTransformFeedbackPropertiesEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceTransformFeedbackPropertiesEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkPhysicalDeviceTransformFeedbackPropertiesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceTransformFeedbackPropertiesEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkPhysicalDeviceTransformFeedbackPropertiesEXT>(), Is.EqualTo(sizeof(VkPhysicalDeviceTransformFeedbackPropertiesEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceTransformFeedbackPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkPhysicalDeviceTransformFeedbackPropertiesEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceTransformFeedbackPropertiesEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkPhysicalDeviceTransformFeedbackPropertiesEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkPhysicalDeviceTransformFeedbackPropertiesEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkPhysicalDeviceTransformFeedbackPropertiesEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkPhysicalDeviceTransformFeedbackPropertiesEXT), Is.EqualTo(64));
-            }
-            else
-            {
-                Assert.That(sizeof(VkPhysicalDeviceTransformFeedbackPropertiesEXT), Is.EqualTo(56));
-            }
+            Assert.That(sizeof(VkPhysicalDeviceTransformFeedbackPropertiesEXT), Is.EqualTo(64));
+        }
+        else
+        {
+            Assert.That(sizeof(VkPhysicalDeviceTransformFeedbackPropertiesEXT), Is.EqualTo(56));
         }
     }
 }

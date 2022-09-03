@@ -7,37 +7,36 @@ using NUnit.Framework;
 using System;
 using System.Runtime.InteropServices;
 
-namespace TerraFX.Interop.Vulkan.UnitTests
+namespace TerraFX.Interop.Vulkan.UnitTests;
+
+/// <summary>Provides validation of the <see cref="VkHdrMetadataEXT" /> struct.</summary>
+public static unsafe partial class VkHdrMetadataEXTTests
 {
-    /// <summary>Provides validation of the <see cref="VkHdrMetadataEXT" /> struct.</summary>
-    public static unsafe partial class VkHdrMetadataEXTTests
+    /// <summary>Validates that the <see cref="VkHdrMetadataEXT" /> struct is blittable.</summary>
+    [Test]
+    public static void IsBlittableTest()
     {
-        /// <summary>Validates that the <see cref="VkHdrMetadataEXT" /> struct is blittable.</summary>
-        [Test]
-        public static void IsBlittableTest()
-        {
-            Assert.That(Marshal.SizeOf<VkHdrMetadataEXT>(), Is.EqualTo(sizeof(VkHdrMetadataEXT)));
-        }
+        Assert.That(Marshal.SizeOf<VkHdrMetadataEXT>(), Is.EqualTo(sizeof(VkHdrMetadataEXT)));
+    }
 
-        /// <summary>Validates that the <see cref="VkHdrMetadataEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
-        [Test]
-        public static void IsLayoutSequentialTest()
-        {
-            Assert.That(typeof(VkHdrMetadataEXT).IsLayoutSequential, Is.True);
-        }
+    /// <summary>Validates that the <see cref="VkHdrMetadataEXT" /> struct has the right <see cref="LayoutKind" />.</summary>
+    [Test]
+    public static void IsLayoutSequentialTest()
+    {
+        Assert.That(typeof(VkHdrMetadataEXT).IsLayoutSequential, Is.True);
+    }
 
-        /// <summary>Validates that the <see cref="VkHdrMetadataEXT" /> struct has the correct size.</summary>
-        [Test]
-        public static void SizeOfTest()
+    /// <summary>Validates that the <see cref="VkHdrMetadataEXT" /> struct has the correct size.</summary>
+    [Test]
+    public static void SizeOfTest()
+    {
+        if (Environment.Is64BitProcess)
         {
-            if (Environment.Is64BitProcess)
-            {
-                Assert.That(sizeof(VkHdrMetadataEXT), Is.EqualTo(64));
-            }
-            else
-            {
-                Assert.That(sizeof(VkHdrMetadataEXT), Is.EqualTo(56));
-            }
+            Assert.That(sizeof(VkHdrMetadataEXT), Is.EqualTo(64));
+        }
+        else
+        {
+            Assert.That(sizeof(VkHdrMetadataEXT), Is.EqualTo(56));
         }
     }
 }

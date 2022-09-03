@@ -5,16 +5,15 @@
 
 using System;
 
-namespace TerraFX.Interop.Vulkan
+namespace TerraFX.Interop.Vulkan;
+
+public partial struct VkIcdSurfaceMir
 {
-    public partial struct VkIcdSurfaceMir
-    {
-        public VkIcdSurfaceBase @base;
+    public VkIcdSurfaceBase @base;
 
-        [NativeTypeName("MirConnection *")]
-        public IntPtr connection;
+    [NativeTypeName("MirConnection *")]
+    public IntPtr connection;
 
-        [NativeTypeName("MirSurface *")]
-        public IntPtr mirSurface;
-    }
+    [NativeTypeName("MirSurface *")]
+    public IntPtr mirSurface;
 }
