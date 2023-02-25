@@ -21,8 +21,7 @@ public unsafe partial struct VkVideoEncodeH265RateControlInfoEXT
     [NativeTypeName("uint32_t")]
     public uint consecutiveBFrameCount;
 
-    [NativeTypeName("VkVideoEncodeH265RateControlStructureFlagBitsEXT")]
-    public VkVideoEncodeH265RateControlStructureFlagsEXT rateControlStructure;
+    public VkVideoEncodeH265RateControlStructureEXT rateControlStructure;
 
     [NativeTypeName("uint8_t")]
     public byte subLayerCount;

@@ -7,15 +7,15 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct StdVideoH264ScalingLists
 {
-    [NativeTypeName("uint8_t")]
-    public byte scaling_list_present_mask;
+    [NativeTypeName("uint16_t")]
+    public ushort scaling_list_present_mask;
 
-    [NativeTypeName("uint8_t")]
-    public byte use_default_scaling_matrix_mask;
+    [NativeTypeName("uint16_t")]
+    public ushort use_default_scaling_matrix_mask;
 
     [NativeTypeName("uint8_t[6][16]")]
     public fixed byte ScalingList4x4[6 * 16];
 
-    [NativeTypeName("uint8_t[2][64]")]
-    public fixed byte ScalingList8x8[2 * 64];
+    [NativeTypeName("uint8_t[6][64]")]
+    public fixed byte ScalingList8x8[6 * 64];
 }

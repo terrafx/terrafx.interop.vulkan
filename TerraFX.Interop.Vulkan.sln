@@ -189,13 +189,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vk_platform", "vk_platform"
 		generation\Vulkan\vulkan\vk_platform\vulkan-vk_platform.h = generation\Vulkan\vulkan\vk_platform\vulkan-vk_platform.h
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vk_sdk_platform", "vk_sdk_platform", "{728DCD9A-AF3B-40C2-A3E6-02AB8C40D5CC}"
-	ProjectSection(SolutionItems) = preProject
-		generation\Vulkan\vulkan\vk_sdk_platform\generate.rsp = generation\Vulkan\vulkan\vk_sdk_platform\generate.rsp
-		generation\Vulkan\vulkan\vk_sdk_platform\header.txt = generation\Vulkan\vulkan\vk_sdk_platform\header.txt
-		generation\Vulkan\vulkan\vk_sdk_platform\vulkan-vk_sdk_platform.h = generation\Vulkan\vulkan\vk_sdk_platform\vulkan-vk_sdk_platform.h
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan", "vulkan", "{00908E61-6A74-478C-ABD1-EA9A04587A42}"
 	ProjectSection(SolutionItems) = preProject
 		generation\Vulkan\vulkan\vulkan\generate.rsp = generation\Vulkan\vulkan\vulkan\generate.rsp
@@ -363,7 +356,6 @@ Global
 		{AFB2FD31-9D96-49AE-BFA3-A1A3150AE386} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
 		{CE39443C-CC77-4C5C-A90C-DED73C9F7C61} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
 		{5D5E3163-5BDB-4E6B-998D-4C1F5790D600} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
-		{728DCD9A-AF3B-40C2-A3E6-02AB8C40D5CC} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
 		{00908E61-6A74-478C-ABD1-EA9A04587A42} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
 		{5C3C3DDA-9D36-4B31-AF01-175E1381FA32} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
 		{0BF30806-FF4A-43D5-9D38-77F44BD727E2} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}

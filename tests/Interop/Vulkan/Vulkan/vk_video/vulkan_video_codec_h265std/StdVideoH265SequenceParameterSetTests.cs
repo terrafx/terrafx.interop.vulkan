@@ -32,11 +32,11 @@ public static unsafe partial class StdVideoH265SequenceParameterSetTests
     {
         if (Environment.Is64BitProcess)
         {
-            Assert.That(sizeof(StdVideoH265SequenceParameterSet), Is.EqualTo(96));
+            Assert.That(sizeof(StdVideoH265SequenceParameterSet), Is.EqualTo(112));
         }
         else
         {
-            Assert.That(sizeof(StdVideoH265SequenceParameterSet), Is.EqualTo(76));
+            Assert.That(sizeof(StdVideoH265SequenceParameterSet), Is.EqualTo(84));
         }
     }
 }

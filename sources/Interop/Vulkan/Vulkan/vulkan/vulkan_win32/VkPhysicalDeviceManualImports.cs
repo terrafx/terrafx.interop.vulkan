@@ -10,4 +10,8 @@ public unsafe partial struct VkPhysicalDeviceManualImports
     public delegate* unmanaged<VkPhysicalDevice, uint, VkBool32> vkGetPhysicalDeviceWin32PresentationSupportKHR;
 
     public delegate* unmanaged<VkPhysicalDevice, VkPhysicalDeviceSurfaceInfo2KHR*, uint*, VkPresentModeKHR*, VkResult> vkGetPhysicalDeviceSurfacePresentModes2EXT;
+
+    public delegate* unmanaged<VkPhysicalDevice, VkDisplayKHR, VkResult> vkAcquireWinrtDisplayNV;
+
+    public delegate* unmanaged<VkPhysicalDevice, uint, VkDisplayKHR*, VkResult> vkGetWinrtDisplayNV;
 }

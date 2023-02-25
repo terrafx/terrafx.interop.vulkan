@@ -13,14 +13,14 @@ public unsafe partial struct VkVideoEncodeH264SessionParametersAddInfoEXT
     public void* pNext;
 
     [NativeTypeName("uint32_t")]
-    public uint spsStdCount;
+    public uint stdSPSCount;
 
     [NativeTypeName("const StdVideoH264SequenceParameterSet *")]
-    public StdVideoH264SequenceParameterSet* pSpsStd;
+    public StdVideoH264SequenceParameterSet* pStdSPSs;
 
     [NativeTypeName("uint32_t")]
-    public uint ppsStdCount;
+    public uint stdPPSCount;
 
     [NativeTypeName("const StdVideoH264PictureParameterSet *")]
-    public StdVideoH264PictureParameterSet* pPpsStd;
+    public StdVideoH264PictureParameterSet* pStdPPSs;
 }

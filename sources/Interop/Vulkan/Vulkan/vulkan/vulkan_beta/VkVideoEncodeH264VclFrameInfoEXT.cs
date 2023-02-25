@@ -12,14 +12,14 @@ public unsafe partial struct VkVideoEncodeH264VclFrameInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("const VkVideoEncodeH264ReferenceListsEXT *")]
-    public VkVideoEncodeH264ReferenceListsEXT* pReferenceFinalLists;
+    [NativeTypeName("const VkVideoEncodeH264ReferenceListsInfoEXT *")]
+    public VkVideoEncodeH264ReferenceListsInfoEXT* pReferenceFinalLists;
 
     [NativeTypeName("uint32_t")]
     public uint naluSliceEntryCount;
 
-    [NativeTypeName("const VkVideoEncodeH264NaluSliceEXT *")]
-    public VkVideoEncodeH264NaluSliceEXT* pNaluSliceEntries;
+    [NativeTypeName("const VkVideoEncodeH264NaluSliceInfoEXT *")]
+    public VkVideoEncodeH264NaluSliceInfoEXT* pNaluSliceEntries;
 
     [NativeTypeName("const StdVideoEncodeH264PictureInfo *")]
     public StdVideoEncodeH264PictureInfo* pCurrentPictureInfo;

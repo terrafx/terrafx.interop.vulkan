@@ -460,7 +460,7 @@ public partial struct StdVideoH265PpsFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint pps_palette_predictor_initializer_present_flag
+    public uint pps_palette_predictor_initializers_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get

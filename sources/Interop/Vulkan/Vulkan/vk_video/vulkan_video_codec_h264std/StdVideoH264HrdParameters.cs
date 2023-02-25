@@ -16,6 +16,9 @@ public unsafe partial struct StdVideoH264HrdParameters
     [NativeTypeName("uint8_t")]
     public byte cpb_size_scale;
 
+    [NativeTypeName("uint8_t")]
+    public byte reserved1;
+
     [NativeTypeName("uint32_t[32]")]
     public fixed uint bit_rate_value_minus1[32];
 

@@ -16,6 +16,9 @@ public unsafe partial struct StdVideoH265PictureParameterSet
     public byte pps_seq_parameter_set_id;
 
     [NativeTypeName("uint8_t")]
+    public byte sps_video_parameter_set_id;
+
+    [NativeTypeName("uint8_t")]
     public byte num_extra_slice_header_bits;
 
     [NativeTypeName("uint8_t")]
@@ -36,18 +39,6 @@ public unsafe partial struct StdVideoH265PictureParameterSet
     [NativeTypeName("int8_t")]
     public sbyte pps_cr_qp_offset;
 
-    [NativeTypeName("uint8_t")]
-    public byte num_tile_columns_minus1;
-
-    [NativeTypeName("uint8_t")]
-    public byte num_tile_rows_minus1;
-
-    [NativeTypeName("uint16_t[19]")]
-    public fixed ushort column_width_minus1[19];
-
-    [NativeTypeName("uint16_t[21]")]
-    public fixed ushort row_height_minus1[21];
-
     [NativeTypeName("int8_t")]
     public sbyte pps_beta_offset_div2;
 
@@ -56,9 +47,6 @@ public unsafe partial struct StdVideoH265PictureParameterSet
 
     [NativeTypeName("uint8_t")]
     public byte log2_parallel_merge_level_minus2;
-
-    [NativeTypeName("const StdVideoH265ScalingLists *")]
-    public StdVideoH265ScalingLists* pScalingLists;
 
     [NativeTypeName("uint8_t")]
     public byte log2_max_transform_skip_block_size_minus2;
@@ -88,16 +76,40 @@ public unsafe partial struct StdVideoH265PictureParameterSet
     public sbyte pps_act_cb_qp_offset_plus5;
 
     [NativeTypeName("int8_t")]
-    public sbyte pps_act_cr_qp_offset_plus5;
+    public sbyte pps_act_cr_qp_offset_plus3;
 
     [NativeTypeName("uint8_t")]
-    public byte pps_num_palette_predictor_initializer;
+    public byte pps_num_palette_predictor_initializers;
 
     [NativeTypeName("uint8_t")]
     public byte luma_bit_depth_entry_minus8;
 
     [NativeTypeName("uint8_t")]
     public byte chroma_bit_depth_entry_minus8;
+
+    [NativeTypeName("uint8_t")]
+    public byte num_tile_columns_minus1;
+
+    [NativeTypeName("uint8_t")]
+    public byte num_tile_rows_minus1;
+
+    [NativeTypeName("uint8_t")]
+    public byte reserved1;
+
+    [NativeTypeName("uint8_t")]
+    public byte reserved2;
+
+    [NativeTypeName("uint16_t[19]")]
+    public fixed ushort column_width_minus1[19];
+
+    [NativeTypeName("uint16_t[21]")]
+    public fixed ushort row_height_minus1[21];
+
+    [NativeTypeName("uint32_t")]
+    public uint reserved3;
+
+    [NativeTypeName("const StdVideoH265ScalingLists *")]
+    public StdVideoH265ScalingLists* pScalingLists;
 
     [NativeTypeName("const StdVideoH265PredictorPaletteEntries *")]
     public StdVideoH265PredictorPaletteEntries* pPredictorPaletteEntries;

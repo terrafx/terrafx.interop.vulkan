@@ -12,7 +12,8 @@ public unsafe partial struct VkVideoEncodeRateControlInfoKHR
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkVideoEncodeRateControlFlagsKHR flags;
+    [NativeTypeName("VkVideoEncodeRateControlFlagsKHR")]
+    public uint flags;
 
     [NativeTypeName("VkVideoEncodeRateControlModeFlagBitsKHR")]
     public VkVideoEncodeRateControlModeFlagsKHR rateControlMode;

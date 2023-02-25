@@ -15,6 +15,6 @@ public unsafe partial struct VkMutableDescriptorTypeCreateInfoVALVE
     [NativeTypeName("uint32_t")]
     public uint mutableDescriptorTypeListCount;
 
-    [NativeTypeName("const VkMutableDescriptorTypeListVALVE *")]
+    [NativeTypeName("const VkMutableDescriptorTypeListEXT *")]
     public VkMutableDescriptorTypeListVALVE* pMutableDescriptorTypeLists;
 }

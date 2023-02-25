@@ -36,7 +36,7 @@ public static unsafe partial class StdVideoH265PictureParameterSetTests
         }
         else
         {
-            Assert.That(sizeof(StdVideoH265PictureParameterSet), Is.EqualTo(132));
+            Assert.That(sizeof(StdVideoH265PictureParameterSet), Is.EqualTo(136));
         }
     }
 }

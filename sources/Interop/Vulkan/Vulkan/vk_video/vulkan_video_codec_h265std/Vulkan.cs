@@ -10,8 +10,8 @@ public static partial class Vulkan
     [NativeTypeName("#define vulkan_video_codec_h265std 1")]
     public const int vulkan_video_codec_h265std = 1;
 
-    [NativeTypeName("#define STD_VIDEO_H265_SUBLAYERS_MINUS1_LIST_SIZE 7")]
-    public const int STD_VIDEO_H265_SUBLAYERS_MINUS1_LIST_SIZE = 7;
+    [NativeTypeName("#define STD_VIDEO_H265_SUBLAYERS_LIST_SIZE 7")]
+    public const int STD_VIDEO_H265_SUBLAYERS_LIST_SIZE = 7;
 
     [NativeTypeName("#define STD_VIDEO_H265_CPB_CNT_LIST_SIZE 32")]
     public const int STD_VIDEO_H265_CPB_CNT_LIST_SIZE = 32;
@@ -46,18 +46,33 @@ public static partial class Vulkan
     [NativeTypeName("#define STD_VIDEO_H265_PREDICTOR_PALETTE_COMP_ENTRIES_LIST_SIZE 128")]
     public const int STD_VIDEO_H265_PREDICTOR_PALETTE_COMP_ENTRIES_LIST_SIZE = 128;
 
+    [NativeTypeName("#define STD_VIDEO_H265_MAX_DPB_SIZE 16")]
+    public const int STD_VIDEO_H265_MAX_DPB_SIZE = 16;
+
+    [NativeTypeName("#define STD_VIDEO_H265_MAX_LONG_TERM_REF_PICS_SPS 32")]
+    public const int STD_VIDEO_H265_MAX_LONG_TERM_REF_PICS_SPS = 32;
+
+    [NativeTypeName("#define STD_VIDEO_H265_CHROMA_QP_OFFSET_LIST_SIZE 6")]
+    public const int STD_VIDEO_H265_CHROMA_QP_OFFSET_LIST_SIZE = 6;
+
     [NativeTypeName("#define STD_VIDEO_H265_CHROMA_QP_OFFSET_TILE_COLS_LIST_SIZE 19")]
     public const int STD_VIDEO_H265_CHROMA_QP_OFFSET_TILE_COLS_LIST_SIZE = 19;
 
     [NativeTypeName("#define STD_VIDEO_H265_CHROMA_QP_OFFSET_TILE_ROWS_LIST_SIZE 21")]
     public const int STD_VIDEO_H265_CHROMA_QP_OFFSET_TILE_ROWS_LIST_SIZE = 21;
 
-    [NativeTypeName("#define STD_VIDEO_H265_CHROMA_QP_OFFSET_LIST_SIZE 6")]
-    public const int STD_VIDEO_H265_CHROMA_QP_OFFSET_LIST_SIZE = 6;
-
     [NativeTypeName("#define STD_VIDEO_H265_MAX_NUM_LIST_REF 15")]
     public const int STD_VIDEO_H265_MAX_NUM_LIST_REF = 15;
 
     [NativeTypeName("#define STD_VIDEO_H265_MAX_CHROMA_PLANES 2")]
     public const int STD_VIDEO_H265_MAX_CHROMA_PLANES = 2;
+
+    [NativeTypeName("#define STD_VIDEO_H265_MAX_SHORT_TERM_REF_PIC_SETS 64")]
+    public const int STD_VIDEO_H265_MAX_SHORT_TERM_REF_PIC_SETS = 64;
+
+    [NativeTypeName("#define STD_VIDEO_H265_MAX_LONG_TERM_PICS 16")]
+    public const int STD_VIDEO_H265_MAX_LONG_TERM_PICS = 16;
+
+    [NativeTypeName("#define STD_VIDEO_H265_MAX_DELTA_POC 48")]
+    public const int STD_VIDEO_H265_MAX_DELTA_POC = 48;
 }

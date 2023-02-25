@@ -9,9 +9,7 @@ public unsafe partial struct StdVideoH265SequenceParameterSet
 {
     public StdVideoH265SpsFlags flags;
 
-    public StdVideoH265ProfileIdc profile_idc;
-
-    public StdVideoH265Level level_idc;
+    public StdVideoH265ChromaFormatIdc chroma_format_idc;
 
     [NativeTypeName("uint32_t")]
     public uint pic_width_in_luma_samples;
@@ -27,9 +25,6 @@ public unsafe partial struct StdVideoH265SequenceParameterSet
 
     [NativeTypeName("uint8_t")]
     public byte sps_seq_parameter_set_id;
-
-    [NativeTypeName("uint8_t")]
-    public byte chroma_format_idc;
 
     [NativeTypeName("uint8_t")]
     public byte bit_depth_luma_minus8;
@@ -76,6 +71,24 @@ public unsafe partial struct StdVideoH265SequenceParameterSet
     [NativeTypeName("uint8_t")]
     public byte log2_diff_max_min_pcm_luma_coding_block_size;
 
+    [NativeTypeName("uint8_t")]
+    public byte reserved1;
+
+    [NativeTypeName("uint8_t")]
+    public byte reserved2;
+
+    [NativeTypeName("uint8_t")]
+    public byte palette_max_size;
+
+    [NativeTypeName("uint8_t")]
+    public byte delta_palette_max_predictor_size;
+
+    [NativeTypeName("uint8_t")]
+    public byte motion_vector_resolution_control_idc;
+
+    [NativeTypeName("uint8_t")]
+    public byte sps_num_palette_predictor_initializers_minus1;
+
     [NativeTypeName("uint32_t")]
     public uint conf_win_left_offset;
 
@@ -88,26 +101,23 @@ public unsafe partial struct StdVideoH265SequenceParameterSet
     [NativeTypeName("uint32_t")]
     public uint conf_win_bottom_offset;
 
+    [NativeTypeName("const StdVideoH265ProfileTierLevel *")]
+    public StdVideoH265ProfileTierLevel* pProfileTierLevel;
+
     [NativeTypeName("const StdVideoH265DecPicBufMgr *")]
     public StdVideoH265DecPicBufMgr* pDecPicBufMgr;
 
     [NativeTypeName("const StdVideoH265ScalingLists *")]
     public StdVideoH265ScalingLists* pScalingLists;
 
+    [NativeTypeName("const StdVideoH265ShortTermRefPicSet *")]
+    public StdVideoH265ShortTermRefPicSet* pShortTermRefPicSet;
+
+    [NativeTypeName("const StdVideoH265LongTermRefPicsSps *")]
+    public StdVideoH265LongTermRefPicsSps* pLongTermRefPicsSps;
+
     [NativeTypeName("const StdVideoH265SequenceParameterSetVui *")]
     public StdVideoH265SequenceParameterSetVui* pSequenceParameterSetVui;
-
-    [NativeTypeName("uint8_t")]
-    public byte palette_max_size;
-
-    [NativeTypeName("uint8_t")]
-    public byte delta_palette_max_predictor_size;
-
-    [NativeTypeName("uint8_t")]
-    public byte motion_vector_resolution_control_idc;
-
-    [NativeTypeName("uint8_t")]
-    public byte sps_num_palette_predictor_initializer_minus1;
 
     [NativeTypeName("const StdVideoH265PredictorPaletteEntries *")]
     public StdVideoH265PredictorPaletteEntries* pPredictorPaletteEntries;

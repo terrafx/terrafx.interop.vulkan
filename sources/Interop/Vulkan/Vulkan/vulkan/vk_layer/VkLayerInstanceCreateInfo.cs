@@ -16,7 +16,7 @@ public unsafe partial struct VkLayerInstanceCreateInfo
 
     public VkLayerFunction function;
 
-    [NativeTypeName("union (anonymous union at C:/VulkanSDK/1.3.239.0/Include/vulkan/vk_layer.h:125:5)")]
+    [NativeTypeName("union (anonymous union at C:/VulkanSDK/1.3.239.0/Include/vulkan/vk_layer.h:126:5)")]
     public _u_e__Union u;
 
     [StructLayout(LayoutKind.Explicit)]
@@ -30,7 +30,7 @@ public unsafe partial struct VkLayerInstanceCreateInfo
         public delegate* unmanaged<VkInstance, void*, VkResult> pfnSetInstanceLoaderData;
 
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at C:/VulkanSDK/1.3.239.0/Include/vulkan/vk_layer.h:128:9)")]
+        [NativeTypeName("struct (anonymous struct at C:/VulkanSDK/1.3.239.0/Include/vulkan/vk_layer.h:129:9)")]
         public _layerDevice_e__Struct layerDevice;
 
         [FieldOffset(0)]

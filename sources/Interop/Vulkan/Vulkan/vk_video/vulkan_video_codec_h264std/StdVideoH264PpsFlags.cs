@@ -76,7 +76,7 @@ public partial struct StdVideoH264PpsFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint weighted_bipred_idc_flag
+    public uint weighted_pred_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -92,7 +92,7 @@ public partial struct StdVideoH264PpsFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint weighted_pred_flag
+    public uint bottom_field_pic_order_in_frame_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -108,7 +108,7 @@ public partial struct StdVideoH264PpsFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint pic_order_present_flag
+    public uint entropy_coding_mode_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -124,7 +124,7 @@ public partial struct StdVideoH264PpsFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint entropy_coding_mode_flag
+    public uint pic_scaling_matrix_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -136,22 +136,6 @@ public partial struct StdVideoH264PpsFlags
         set
         {
             _bitfield = (_bitfield & ~(0x1u << 7)) | ((value & 0x1u) << 7);
-        }
-    }
-
-    [NativeTypeName("uint32_t : 1")]
-    public uint pic_scaling_matrix_present_flag
-    {
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
-        {
-            return (_bitfield >> 8) & 0x1u;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        set
-        {
-            _bitfield = (_bitfield & ~(0x1u << 8)) | ((value & 0x1u) << 8);
         }
     }
 }

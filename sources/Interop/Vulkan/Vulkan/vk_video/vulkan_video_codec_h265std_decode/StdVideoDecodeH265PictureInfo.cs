@@ -19,7 +19,7 @@ public unsafe partial struct StdVideoDecodeH265PictureInfo
     public byte pps_pic_parameter_set_id;
 
     [NativeTypeName("uint8_t")]
-    public byte num_short_term_ref_pic_sets;
+    public byte NumDeltaPocsOfRefRpsIdx;
 
     [NativeTypeName("int32_t")]
     public int PicOrderCntVal;
@@ -27,8 +27,8 @@ public unsafe partial struct StdVideoDecodeH265PictureInfo
     [NativeTypeName("uint16_t")]
     public ushort NumBitsForSTRefPicSetInSlice;
 
-    [NativeTypeName("uint8_t")]
-    public byte NumDeltaPocsOfRefRpsIdx;
+    [NativeTypeName("uint16_t")]
+    public ushort reserved;
 
     [NativeTypeName("uint8_t[8]")]
     public fixed byte RefPicSetStCurrBefore[8];

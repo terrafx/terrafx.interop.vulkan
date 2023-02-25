@@ -42,20 +42,4 @@ public partial struct StdVideoDecodeH265ReferenceInfoFlags
             _bitfield = (_bitfield & ~(0x1u << 1)) | ((value & 0x1u) << 1);
         }
     }
-
-    [NativeTypeName("uint32_t : 1")]
-    public uint is_non_existing
-    {
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
-        {
-            return (_bitfield >> 2) & 0x1u;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        set
-        {
-            _bitfield = (_bitfield & ~(0x1u << 2)) | ((value & 0x1u) << 2);
-        }
-    }
 }

@@ -19,8 +19,8 @@ public static partial class Vulkan
     [NativeTypeName("#define STD_VIDEO_H264_SCALING_LIST_4X4_NUM_ELEMENTS 16")]
     public const int STD_VIDEO_H264_SCALING_LIST_4X4_NUM_ELEMENTS = 16;
 
-    [NativeTypeName("#define STD_VIDEO_H264_SCALING_LIST_8X8_NUM_LISTS 2")]
-    public const int STD_VIDEO_H264_SCALING_LIST_8X8_NUM_LISTS = 2;
+    [NativeTypeName("#define STD_VIDEO_H264_SCALING_LIST_8X8_NUM_LISTS 6")]
+    public const int STD_VIDEO_H264_SCALING_LIST_8X8_NUM_LISTS = 6;
 
     [NativeTypeName("#define STD_VIDEO_H264_SCALING_LIST_8X8_NUM_ELEMENTS 64")]
     public const int STD_VIDEO_H264_SCALING_LIST_8X8_NUM_ELEMENTS = 64;

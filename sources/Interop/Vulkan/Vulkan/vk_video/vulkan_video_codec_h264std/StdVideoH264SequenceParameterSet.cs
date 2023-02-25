@@ -11,12 +11,12 @@ public unsafe partial struct StdVideoH264SequenceParameterSet
 
     public StdVideoH264ProfileIdc profile_idc;
 
-    public StdVideoH264Level level_idc;
+    public StdVideoH264LevelIdc level_idc;
+
+    public StdVideoH264ChromaFormatIdc chroma_format_idc;
 
     [NativeTypeName("uint8_t")]
     public byte seq_parameter_set_id;
-
-    public StdVideoH264ChromaFormatIdc chroma_format_idc;
 
     [NativeTypeName("uint8_t")]
     public byte bit_depth_luma_minus8;
@@ -29,9 +29,6 @@ public unsafe partial struct StdVideoH264SequenceParameterSet
 
     public StdVideoH264PocType pic_order_cnt_type;
 
-    [NativeTypeName("uint8_t")]
-    public byte log2_max_pic_order_cnt_lsb_minus4;
-
     [NativeTypeName("int32_t")]
     public int offset_for_non_ref_pic;
 
@@ -39,10 +36,16 @@ public unsafe partial struct StdVideoH264SequenceParameterSet
     public int offset_for_top_to_bottom_field;
 
     [NativeTypeName("uint8_t")]
+    public byte log2_max_pic_order_cnt_lsb_minus4;
+
+    [NativeTypeName("uint8_t")]
     public byte num_ref_frames_in_pic_order_cnt_cycle;
 
     [NativeTypeName("uint8_t")]
     public byte max_num_ref_frames;
+
+    [NativeTypeName("uint8_t")]
+    public byte reserved1;
 
     [NativeTypeName("uint32_t")]
     public uint pic_width_in_mbs_minus1;
@@ -61,6 +64,9 @@ public unsafe partial struct StdVideoH264SequenceParameterSet
 
     [NativeTypeName("uint32_t")]
     public uint frame_crop_bottom_offset;
+
+    [NativeTypeName("uint32_t")]
+    public uint reserved2;
 
     [NativeTypeName("const int32_t *")]
     public int* pOffsetForRefFrame;

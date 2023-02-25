@@ -21,8 +21,8 @@ public static unsafe partial class Vulkan
         return (loader_info->loaderMagic & 0xffffffff) == 0x01CDC0DE;
     }
 
-    [NativeTypeName("#define CURRENT_LOADER_ICD_INTERFACE_VERSION 6")]
-    public const int CURRENT_LOADER_ICD_INTERFACE_VERSION = 6;
+    [NativeTypeName("#define CURRENT_LOADER_ICD_INTERFACE_VERSION 7")]
+    public const int CURRENT_LOADER_ICD_INTERFACE_VERSION = 7;
 
     [NativeTypeName("#define MIN_SUPPORTED_LOADER_ICD_INTERFACE_VERSION 0")]
     public const int MIN_SUPPORTED_LOADER_ICD_INTERFACE_VERSION = 0;

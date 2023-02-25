@@ -9,8 +9,7 @@ public unsafe partial struct StdVideoH265SequenceParameterSetVui
 {
     public StdVideoH265SpsVuiFlags flags;
 
-    [NativeTypeName("uint8_t")]
-    public byte aspect_ratio_idc;
+    public StdVideoH265AspectRatioIdc aspect_ratio_idc;
 
     [NativeTypeName("uint16_t")]
     public ushort sar_width;
@@ -36,6 +35,12 @@ public unsafe partial struct StdVideoH265SequenceParameterSetVui
     [NativeTypeName("uint8_t")]
     public byte chroma_sample_loc_type_bottom_field;
 
+    [NativeTypeName("uint8_t")]
+    public byte reserved1;
+
+    [NativeTypeName("uint8_t")]
+    public byte reserved2;
+
     [NativeTypeName("uint16_t")]
     public ushort def_disp_win_left_offset;
 
@@ -57,11 +62,11 @@ public unsafe partial struct StdVideoH265SequenceParameterSetVui
     [NativeTypeName("uint32_t")]
     public uint vui_num_ticks_poc_diff_one_minus1;
 
-    [NativeTypeName("const StdVideoH265HrdParameters *")]
-    public StdVideoH265HrdParameters* pHrdParameters;
-
     [NativeTypeName("uint16_t")]
     public ushort min_spatial_segmentation_idc;
+
+    [NativeTypeName("uint16_t")]
+    public ushort reserved3;
 
     [NativeTypeName("uint8_t")]
     public byte max_bytes_per_pic_denom;
@@ -74,4 +79,7 @@ public unsafe partial struct StdVideoH265SequenceParameterSetVui
 
     [NativeTypeName("uint8_t")]
     public byte log2_max_mv_length_vertical;
+
+    [NativeTypeName("const StdVideoH265HrdParameters *")]
+    public StdVideoH265HrdParameters* pHrdParameters;
 }

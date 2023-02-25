@@ -36,7 +36,7 @@ public static unsafe partial class StdVideoH264SequenceParameterSetVuiTests
         }
         else
         {
-            Assert.That(sizeof(StdVideoH264SequenceParameterSetVui), Is.EqualTo(32));
+            Assert.That(sizeof(StdVideoH264SequenceParameterSetVui), Is.EqualTo(36));
         }
     }
 }

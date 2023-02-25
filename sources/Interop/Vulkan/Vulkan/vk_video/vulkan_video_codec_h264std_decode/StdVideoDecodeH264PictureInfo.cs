@@ -15,8 +15,11 @@ public unsafe partial struct StdVideoDecodeH264PictureInfo
     [NativeTypeName("uint8_t")]
     public byte pic_parameter_set_id;
 
-    [NativeTypeName("uint16_t")]
-    public ushort reserved;
+    [NativeTypeName("uint8_t")]
+    public byte reserved1;
+
+    [NativeTypeName("uint8_t")]
+    public byte reserved2;
 
     [NativeTypeName("uint16_t")]
     public ushort frame_num;

@@ -12,7 +12,8 @@ public unsafe partial struct VkVideoEncodeInfoKHR
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkVideoEncodeFlagsKHR flags;
+    [NativeTypeName("VkVideoEncodeFlagsKHR")]
+    public uint flags;
 
     [NativeTypeName("uint32_t")]
     public uint qualityLevel;
@@ -25,16 +26,16 @@ public unsafe partial struct VkVideoEncodeInfoKHR
     [NativeTypeName("VkDeviceSize")]
     public ulong dstBitstreamBufferMaxRange;
 
-    public VkVideoPictureResourceKHR srcPictureResource;
+    public VkVideoPictureResourceInfoKHR srcPictureResource;
 
-    [NativeTypeName("const VkVideoReferenceSlotKHR *")]
-    public VkVideoReferenceSlotKHR* pSetupReferenceSlot;
+    [NativeTypeName("const VkVideoReferenceSlotInfoKHR *")]
+    public VkVideoReferenceSlotInfoKHR* pSetupReferenceSlot;
 
     [NativeTypeName("uint32_t")]
     public uint referenceSlotCount;
 
-    [NativeTypeName("const VkVideoReferenceSlotKHR *")]
-    public VkVideoReferenceSlotKHR* pReferenceSlots;
+    [NativeTypeName("const VkVideoReferenceSlotInfoKHR *")]
+    public VkVideoReferenceSlotInfoKHR* pReferenceSlots;
 
     [NativeTypeName("uint32_t")]
     public uint precedingExternallyEncodedBytes;

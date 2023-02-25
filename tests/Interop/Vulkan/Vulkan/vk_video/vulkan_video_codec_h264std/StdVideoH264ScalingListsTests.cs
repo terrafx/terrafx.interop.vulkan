@@ -29,6 +29,6 @@ public static unsafe partial class StdVideoH264ScalingListsTests
     [Test]
     public static void SizeOfTest()
     {
-        Assert.That(sizeof(StdVideoH264ScalingLists), Is.EqualTo(226));
+        Assert.That(sizeof(StdVideoH264ScalingLists), Is.EqualTo(484));
     }
 }

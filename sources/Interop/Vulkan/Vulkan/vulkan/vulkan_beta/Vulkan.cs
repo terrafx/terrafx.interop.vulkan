@@ -9,24 +9,6 @@ namespace TerraFX.Interop.Vulkan;
 
 public static partial class Vulkan
 {
-    [NativeTypeName("#define VK_KHR_video_queue 1")]
-    public const int VK_KHR_video_queue = 1;
-
-    [NativeTypeName("#define VK_KHR_VIDEO_QUEUE_SPEC_VERSION 4")]
-    public const int VK_KHR_VIDEO_QUEUE_SPEC_VERSION = 4;
-
-    [NativeTypeName("#define VK_KHR_VIDEO_QUEUE_EXTENSION_NAME \"VK_KHR_video_queue\"")]
-    public static ReadOnlySpan<byte> VK_KHR_VIDEO_QUEUE_EXTENSION_NAME => "VK_KHR_video_queue"u8;
-
-    [NativeTypeName("#define VK_KHR_video_decode_queue 1")]
-    public const int VK_KHR_video_decode_queue = 1;
-
-    [NativeTypeName("#define VK_KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION 4")]
-    public const int VK_KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION = 4;
-
-    [NativeTypeName("#define VK_KHR_VIDEO_DECODE_QUEUE_EXTENSION_NAME \"VK_KHR_video_decode_queue\"")]
-    public static ReadOnlySpan<byte> VK_KHR_VIDEO_DECODE_QUEUE_EXTENSION_NAME => "VK_KHR_video_decode_queue"u8;
-
     [NativeTypeName("#define VK_KHR_portability_subset 1")]
     public const int VK_KHR_portability_subset = 1;
 
@@ -39,8 +21,8 @@ public static partial class Vulkan
     [NativeTypeName("#define VK_KHR_video_encode_queue 1")]
     public const int VK_KHR_video_encode_queue = 1;
 
-    [NativeTypeName("#define VK_KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION 5")]
-    public const int VK_KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION = 5;
+    [NativeTypeName("#define VK_KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION 7")]
+    public const int VK_KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION = 7;
 
     [NativeTypeName("#define VK_KHR_VIDEO_ENCODE_QUEUE_EXTENSION_NAME \"VK_KHR_video_encode_queue\"")]
     public static ReadOnlySpan<byte> VK_KHR_VIDEO_ENCODE_QUEUE_EXTENSION_NAME => "VK_KHR_video_encode_queue"u8;
@@ -48,8 +30,8 @@ public static partial class Vulkan
     [NativeTypeName("#define VK_EXT_video_encode_h264 1")]
     public const int VK_EXT_video_encode_h264 = 1;
 
-    [NativeTypeName("#define VK_EXT_VIDEO_ENCODE_H264_SPEC_VERSION 7")]
-    public const int VK_EXT_VIDEO_ENCODE_H264_SPEC_VERSION = 7;
+    [NativeTypeName("#define VK_EXT_VIDEO_ENCODE_H264_SPEC_VERSION 9")]
+    public const int VK_EXT_VIDEO_ENCODE_H264_SPEC_VERSION = 9;
 
     [NativeTypeName("#define VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME \"VK_EXT_video_encode_h264\"")]
     public static ReadOnlySpan<byte> VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME => "VK_EXT_video_encode_h264"u8;
@@ -57,27 +39,9 @@ public static partial class Vulkan
     [NativeTypeName("#define VK_EXT_video_encode_h265 1")]
     public const int VK_EXT_video_encode_h265 = 1;
 
-    [NativeTypeName("#define VK_EXT_VIDEO_ENCODE_H265_SPEC_VERSION 7")]
-    public const int VK_EXT_VIDEO_ENCODE_H265_SPEC_VERSION = 7;
+    [NativeTypeName("#define VK_EXT_VIDEO_ENCODE_H265_SPEC_VERSION 9")]
+    public const int VK_EXT_VIDEO_ENCODE_H265_SPEC_VERSION = 9;
 
     [NativeTypeName("#define VK_EXT_VIDEO_ENCODE_H265_EXTENSION_NAME \"VK_EXT_video_encode_h265\"")]
     public static ReadOnlySpan<byte> VK_EXT_VIDEO_ENCODE_H265_EXTENSION_NAME => "VK_EXT_video_encode_h265"u8;
-
-    [NativeTypeName("#define VK_EXT_video_decode_h264 1")]
-    public const int VK_EXT_video_decode_h264 = 1;
-
-    [NativeTypeName("#define VK_EXT_VIDEO_DECODE_H264_SPEC_VERSION 5")]
-    public const int VK_EXT_VIDEO_DECODE_H264_SPEC_VERSION = 5;
-
-    [NativeTypeName("#define VK_EXT_VIDEO_DECODE_H264_EXTENSION_NAME \"VK_EXT_video_decode_h264\"")]
-    public static ReadOnlySpan<byte> VK_EXT_VIDEO_DECODE_H264_EXTENSION_NAME => "VK_EXT_video_decode_h264"u8;
-
-    [NativeTypeName("#define VK_EXT_video_decode_h265 1")]
-    public const int VK_EXT_video_decode_h265 = 1;
-
-    [NativeTypeName("#define VK_EXT_VIDEO_DECODE_H265_SPEC_VERSION 3")]
-    public const int VK_EXT_VIDEO_DECODE_H265_SPEC_VERSION = 3;
-
-    [NativeTypeName("#define VK_EXT_VIDEO_DECODE_H265_EXTENSION_NAME \"VK_EXT_video_decode_h265\"")]
-    public static ReadOnlySpan<byte> VK_EXT_VIDEO_DECODE_H265_EXTENSION_NAME => "VK_EXT_video_decode_h265"u8;
 }

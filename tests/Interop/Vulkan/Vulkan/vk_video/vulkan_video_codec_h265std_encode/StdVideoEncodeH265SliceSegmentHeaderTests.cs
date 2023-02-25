@@ -32,7 +32,7 @@ public static unsafe partial class StdVideoEncodeH265SliceSegmentHeaderTests
     {
         if (Environment.Is64BitProcess)
         {
-            Assert.That(sizeof(StdVideoEncodeH265SliceSegmentHeader), Is.EqualTo(40));
+            Assert.That(sizeof(StdVideoEncodeH265SliceSegmentHeader), Is.EqualTo(48));
         }
         else
         {
