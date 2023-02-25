@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vk_video/vulkan_video_codec_h264std.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.224
+// Ported from include/vk_video/vulkan_video_codec_h264std.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 using System.Runtime.CompilerServices;
@@ -76,7 +76,7 @@ public partial struct StdVideoH264PpsFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint weighted_bipred_idc_flag
+    public uint weighted_pred_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -92,7 +92,7 @@ public partial struct StdVideoH264PpsFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint weighted_pred_flag
+    public uint bottom_field_pic_order_in_frame_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -108,7 +108,7 @@ public partial struct StdVideoH264PpsFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint pic_order_present_flag
+    public uint entropy_coding_mode_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -124,7 +124,7 @@ public partial struct StdVideoH264PpsFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint entropy_coding_mode_flag
+    public uint pic_scaling_matrix_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get
@@ -136,22 +136,6 @@ public partial struct StdVideoH264PpsFlags
         set
         {
             _bitfield = (_bitfield & ~(0x1u << 7)) | ((value & 0x1u) << 7);
-        }
-    }
-
-    [NativeTypeName("uint32_t : 1")]
-    public uint pic_scaling_matrix_present_flag
-    {
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
-        {
-            return (_bitfield >> 8) & 0x1u;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        set
-        {
-            _bitfield = (_bitfield & ~(0x1u << 8)) | ((value & 0x1u) << 8);
         }
     }
 }

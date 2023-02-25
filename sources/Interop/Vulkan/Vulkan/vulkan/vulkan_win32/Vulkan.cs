@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_win32.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.224
+// Ported from include/vulkan/vulkan_win32.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 using System;
@@ -80,4 +80,13 @@ public static partial class Vulkan
 
     [NativeTypeName("#define VK_EXT_FULL_SCREEN_EXCLUSIVE_EXTENSION_NAME \"VK_EXT_full_screen_exclusive\"")]
     public static ReadOnlySpan<byte> VK_EXT_FULL_SCREEN_EXCLUSIVE_EXTENSION_NAME => "VK_EXT_full_screen_exclusive"u8;
+
+    [NativeTypeName("#define VK_NV_acquire_winrt_display 1")]
+    public const int VK_NV_acquire_winrt_display = 1;
+
+    [NativeTypeName("#define VK_NV_ACQUIRE_WINRT_DISPLAY_SPEC_VERSION 1")]
+    public const int VK_NV_ACQUIRE_WINRT_DISPLAY_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_NV_ACQUIRE_WINRT_DISPLAY_EXTENSION_NAME \"VK_NV_acquire_winrt_display\"")]
+    public static ReadOnlySpan<byte> VK_NV_ACQUIRE_WINRT_DISPLAY_EXTENSION_NAME => "VK_NV_acquire_winrt_display"u8;
 }

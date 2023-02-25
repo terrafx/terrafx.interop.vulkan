@@ -13,7 +13,7 @@ TerraFX.Interop.Vulkan
 --test-output
 ../../../../tests/Interop/Vulkan/Vulkan/vulkan/vulkan_profiles
 --traverse
-C:/VulkanSDK/1.3.224.1/Include/vulkan/vulkan_profiles.h
+C:/VulkanSDK/1.3.239.0/Include/vulkan/vulkan_profiles.h
 --with-attribute
 VpDeviceCreateFlagBits=Flags
 VpInstanceCreateFlagBits=Flags
