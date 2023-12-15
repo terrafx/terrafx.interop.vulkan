@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceColorWriteEnableFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 colorWriteEnable;
+    [NativeTypeName("VkBool32")]
+    public uint colorWriteEnable;
 }

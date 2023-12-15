@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceBorderColorSwizzleFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 borderColorSwizzle;
+    [NativeTypeName("VkBool32")]
+    public uint borderColorSwizzle;
 
-    public VkBool32 borderColorSwizzleFromImage;
+    [NativeTypeName("VkBool32")]
+    public uint borderColorSwizzleFromImage;
 }

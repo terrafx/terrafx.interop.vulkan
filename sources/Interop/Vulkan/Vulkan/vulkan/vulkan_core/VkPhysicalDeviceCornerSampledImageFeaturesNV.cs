@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceCornerSampledImageFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 cornerSampledImage;
+    [NativeTypeName("VkBool32")]
+    public uint cornerSampledImage;
 }

@@ -11,9 +11,12 @@ public unsafe partial struct VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 fragmentShaderSampleInterlock;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentShaderSampleInterlock;
 
-    public VkBool32 fragmentShaderPixelInterlock;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentShaderPixelInterlock;
 
-    public VkBool32 fragmentShaderShadingRateInterlock;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentShaderShadingRateInterlock;
 }

@@ -16,7 +16,7 @@ public unsafe partial struct VkLayerDeviceCreateInfo
 
     public VkLayerFunction function;
 
-    [NativeTypeName("__AnonymousRecord_vk_layer_L147_C5")]
+    [NativeTypeName("__AnonymousRecord_vk_layer_L125_C5")]
     public _u_e__Union u;
 
     [StructLayout(LayoutKind.Explicit)]

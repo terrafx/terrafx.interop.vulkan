@@ -181,11 +181,13 @@ public unsafe partial struct VkDeviceManualImports
 
     public delegate* unmanaged<VkDevice, VkPerformanceParameterTypeINTEL, VkPerformanceValueINTEL*, VkResult> vkGetPerformanceParameterINTEL;
 
-    public delegate* unmanaged<VkDevice, VkSwapchainKHR, VkBool32, void> vkSetLocalDimmingAMD;
+    public delegate* unmanaged<VkDevice, VkSwapchainKHR, uint, void> vkSetLocalDimmingAMD;
 
     public delegate* unmanaged<VkDevice, VkBufferDeviceAddressInfo*, ulong> vkGetBufferDeviceAddressEXT;
 
     public delegate* unmanaged<VkDevice, VkQueryPool, uint, uint, void> vkResetQueryPoolEXT;
+
+    public delegate* unmanaged<VkDevice, VkImage, VkImageSubresource2KHR*, VkSubresourceLayout2KHR*, void> vkGetImageSubresourceLayout2EXT;
 
     public delegate* unmanaged<VkDevice, VkGeneratedCommandsMemoryRequirementsInfoNV*, VkMemoryRequirements2*, void> vkGetGeneratedCommandsMemoryRequirementsNV;
 
@@ -200,8 +202,6 @@ public unsafe partial struct VkDeviceManualImports
     public delegate* unmanaged<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong, VkResult> vkSetPrivateDataEXT;
 
     public delegate* unmanaged<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong*, void> vkGetPrivateDataEXT;
-
-    public delegate* unmanaged<VkDevice, VkImage, VkImageSubresource2EXT*, VkSubresourceLayout2EXT*, void> vkGetImageSubresourceLayout2EXT;
 
     public delegate* unmanaged<VkDevice, VkRenderPass, VkExtent2D*, VkResult> vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI;
 

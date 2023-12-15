@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceCoherentMemoryFeaturesAMD
 
     public void* pNext;
 
-    public VkBool32 deviceCoherentMemory;
+    [NativeTypeName("VkBool32")]
+    public uint deviceCoherentMemory;
 }

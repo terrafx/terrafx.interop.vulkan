@@ -11,9 +11,12 @@ public unsafe partial struct VkPhysicalDeviceRasterizationOrderAttachmentAccessF
 
     public void* pNext;
 
-    public VkBool32 rasterizationOrderColorAttachmentAccess;
+    [NativeTypeName("VkBool32")]
+    public uint rasterizationOrderColorAttachmentAccess;
 
-    public VkBool32 rasterizationOrderDepthAttachmentAccess;
+    [NativeTypeName("VkBool32")]
+    public uint rasterizationOrderDepthAttachmentAccess;
 
-    public VkBool32 rasterizationOrderStencilAttachmentAccess;
+    [NativeTypeName("VkBool32")]
+    public uint rasterizationOrderStencilAttachmentAccess;
 }

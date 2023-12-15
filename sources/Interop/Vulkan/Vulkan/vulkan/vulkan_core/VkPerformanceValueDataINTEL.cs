@@ -22,7 +22,8 @@ public unsafe partial struct VkPerformanceValueDataINTEL
     public float valueFloat;
 
     [FieldOffset(0)]
-    public VkBool32 valueBool;
+    [NativeTypeName("VkBool32")]
+    public uint valueBool;
 
     [FieldOffset(0)]
     [NativeTypeName("const char *")]

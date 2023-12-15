@@ -9,6 +9,8 @@ public partial struct StdVideoEncodeH264ReferenceInfo
 {
     public StdVideoEncodeH264ReferenceInfoFlags flags;
 
+    public StdVideoH264PictureType primary_pic_type;
+
     [NativeTypeName("uint32_t")]
     public uint FrameNum;
 
@@ -20,4 +22,7 @@ public partial struct StdVideoEncodeH264ReferenceInfo
 
     [NativeTypeName("uint16_t")]
     public ushort long_term_frame_idx;
+
+    [NativeTypeName("uint8_t")]
+    public byte temporal_id;
 }

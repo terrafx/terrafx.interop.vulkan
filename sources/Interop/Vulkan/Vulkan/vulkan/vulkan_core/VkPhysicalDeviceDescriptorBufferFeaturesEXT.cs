@@ -11,11 +11,15 @@ public unsafe partial struct VkPhysicalDeviceDescriptorBufferFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 descriptorBuffer;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBuffer;
 
-    public VkBool32 descriptorBufferCaptureReplay;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBufferCaptureReplay;
 
-    public VkBool32 descriptorBufferImageLayoutIgnored;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBufferImageLayoutIgnored;
 
-    public VkBool32 descriptorBufferPushDescriptors;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBufferPushDescriptors;
 }

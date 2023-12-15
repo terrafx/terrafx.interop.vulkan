@@ -25,7 +25,8 @@ public unsafe partial struct VkPhysicalDeviceVulkan11Properties
     [NativeTypeName("uint32_t")]
     public uint deviceNodeMask;
 
-    public VkBool32 deviceLUIDValid;
+    [NativeTypeName("VkBool32")]
+    public uint deviceLUIDValid;
 
     [NativeTypeName("uint32_t")]
     public uint subgroupSize;
@@ -34,7 +35,8 @@ public unsafe partial struct VkPhysicalDeviceVulkan11Properties
 
     public VkSubgroupFeatureFlags subgroupSupportedOperations;
 
-    public VkBool32 subgroupQuadOperationsInAllStages;
+    [NativeTypeName("VkBool32")]
+    public uint subgroupQuadOperationsInAllStages;
 
     public VkPointClippingBehavior pointClippingBehavior;
 
@@ -44,7 +46,8 @@ public unsafe partial struct VkPhysicalDeviceVulkan11Properties
     [NativeTypeName("uint32_t")]
     public uint maxMultiviewInstanceIndex;
 
-    public VkBool32 protectedNoFault;
+    [NativeTypeName("VkBool32")]
+    public uint protectedNoFault;
 
     [NativeTypeName("uint32_t")]
     public uint maxPerSetDescriptors;

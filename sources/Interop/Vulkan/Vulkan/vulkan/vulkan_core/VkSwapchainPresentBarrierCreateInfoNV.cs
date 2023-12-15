@@ -11,5 +11,6 @@ public unsafe partial struct VkSwapchainPresentBarrierCreateInfoNV
 
     public void* pNext;
 
-    public VkBool32 presentBarrierEnable;
+    [NativeTypeName("VkBool32")]
+    public uint presentBarrierEnable;
 }

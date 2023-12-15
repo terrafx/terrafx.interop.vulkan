@@ -26,5 +26,6 @@ public unsafe partial struct VkSamplerYcbcrConversionCreateInfo
 
     public VkFilter chromaFilter;
 
-    public VkBool32 forceExplicitReconstruction;
+    [NativeTypeName("VkBool32")]
+    public uint forceExplicitReconstruction;
 }

@@ -14,7 +14,8 @@ public unsafe partial struct VkPipelineCoverageToColorStateCreateInfoNV
 
     public VkPipelineCoverageToColorStateCreateFlagsNV flags;
 
-    public VkBool32 coverageToColorEnable;
+    [NativeTypeName("VkBool32")]
+    public uint coverageToColorEnable;
 
     [NativeTypeName("uint32_t")]
     public uint coverageToColorLocation;

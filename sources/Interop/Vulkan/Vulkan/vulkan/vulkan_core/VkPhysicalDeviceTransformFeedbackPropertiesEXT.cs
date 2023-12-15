@@ -29,11 +29,15 @@ public unsafe partial struct VkPhysicalDeviceTransformFeedbackPropertiesEXT
     [NativeTypeName("uint32_t")]
     public uint maxTransformFeedbackBufferDataStride;
 
-    public VkBool32 transformFeedbackQueries;
+    [NativeTypeName("VkBool32")]
+    public uint transformFeedbackQueries;
 
-    public VkBool32 transformFeedbackStreamsLinesTriangles;
+    [NativeTypeName("VkBool32")]
+    public uint transformFeedbackStreamsLinesTriangles;
 
-    public VkBool32 transformFeedbackRasterizationStreamSelect;
+    [NativeTypeName("VkBool32")]
+    public uint transformFeedbackRasterizationStreamSelect;
 
-    public VkBool32 transformFeedbackDraw;
+    [NativeTypeName("VkBool32")]
+    public uint transformFeedbackDraw;
 }

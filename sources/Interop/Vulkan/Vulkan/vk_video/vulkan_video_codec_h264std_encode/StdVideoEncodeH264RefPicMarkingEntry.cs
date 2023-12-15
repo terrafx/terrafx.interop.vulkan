@@ -7,7 +7,7 @@ namespace TerraFX.Interop.Vulkan;
 
 public partial struct StdVideoEncodeH264RefPicMarkingEntry
 {
-    public StdVideoH264MemMgmtControlOp operation;
+    public StdVideoH264MemMgmtControlOp memory_management_control_operation;
 
     [NativeTypeName("uint16_t")]
     public ushort difference_of_pic_nums_minus1;

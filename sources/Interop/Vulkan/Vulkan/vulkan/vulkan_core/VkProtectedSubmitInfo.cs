@@ -12,5 +12,6 @@ public unsafe partial struct VkProtectedSubmitInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 protectedSubmit;
+    [NativeTypeName("VkBool32")]
+    public uint protectedSubmit;
 }

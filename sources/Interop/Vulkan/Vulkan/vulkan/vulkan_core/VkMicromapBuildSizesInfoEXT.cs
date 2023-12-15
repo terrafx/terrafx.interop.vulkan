@@ -18,5 +18,6 @@ public unsafe partial struct VkMicromapBuildSizesInfoEXT
     [NativeTypeName("VkDeviceSize")]
     public ulong buildScratchSize;
 
-    public VkBool32 discardable;
+    [NativeTypeName("VkBool32")]
+    public uint discardable;
 }

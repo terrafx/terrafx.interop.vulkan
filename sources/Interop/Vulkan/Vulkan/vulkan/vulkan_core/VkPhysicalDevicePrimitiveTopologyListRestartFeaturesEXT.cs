@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDevicePrimitiveTopologyListRestartFeature
 
     public void* pNext;
 
-    public VkBool32 primitiveTopologyListRestart;
+    [NativeTypeName("VkBool32")]
+    public uint primitiveTopologyListRestart;
 
-    public VkBool32 primitiveTopologyPatchListRestart;
+    [NativeTypeName("VkBool32")]
+    public uint primitiveTopologyPatchListRestart;
 }

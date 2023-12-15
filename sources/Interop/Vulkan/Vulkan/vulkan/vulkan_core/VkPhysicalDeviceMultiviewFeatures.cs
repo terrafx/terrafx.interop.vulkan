@@ -11,9 +11,12 @@ public unsafe partial struct VkPhysicalDeviceMultiviewFeatures
 
     public void* pNext;
 
-    public VkBool32 multiview;
+    [NativeTypeName("VkBool32")]
+    public uint multiview;
 
-    public VkBool32 multiviewGeometryShader;
+    [NativeTypeName("VkBool32")]
+    public uint multiviewGeometryShader;
 
-    public VkBool32 multiviewTessellationShader;
+    [NativeTypeName("VkBool32")]
+    public uint multiviewTessellationShader;
 }

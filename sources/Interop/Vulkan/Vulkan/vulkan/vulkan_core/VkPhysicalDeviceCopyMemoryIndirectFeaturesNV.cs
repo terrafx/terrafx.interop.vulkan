@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceCopyMemoryIndirectFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 indirectCopy;
+    [NativeTypeName("VkBool32")]
+    public uint indirectCopy;
 }

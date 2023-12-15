@@ -14,19 +14,26 @@ public unsafe partial struct VkPhysicalDeviceDescriptorIndexingProperties
     [NativeTypeName("uint32_t")]
     public uint maxUpdateAfterBindDescriptorsInAllPools;
 
-    public VkBool32 shaderUniformBufferArrayNonUniformIndexingNative;
+    [NativeTypeName("VkBool32")]
+    public uint shaderUniformBufferArrayNonUniformIndexingNative;
 
-    public VkBool32 shaderSampledImageArrayNonUniformIndexingNative;
+    [NativeTypeName("VkBool32")]
+    public uint shaderSampledImageArrayNonUniformIndexingNative;
 
-    public VkBool32 shaderStorageBufferArrayNonUniformIndexingNative;
+    [NativeTypeName("VkBool32")]
+    public uint shaderStorageBufferArrayNonUniformIndexingNative;
 
-    public VkBool32 shaderStorageImageArrayNonUniformIndexingNative;
+    [NativeTypeName("VkBool32")]
+    public uint shaderStorageImageArrayNonUniformIndexingNative;
 
-    public VkBool32 shaderInputAttachmentArrayNonUniformIndexingNative;
+    [NativeTypeName("VkBool32")]
+    public uint shaderInputAttachmentArrayNonUniformIndexingNative;
 
-    public VkBool32 robustBufferAccessUpdateAfterBind;
+    [NativeTypeName("VkBool32")]
+    public uint robustBufferAccessUpdateAfterBind;
 
-    public VkBool32 quadDivergentImplicitLod;
+    [NativeTypeName("VkBool32")]
+    public uint quadDivergentImplicitLod;
 
     [NativeTypeName("uint32_t")]
     public uint maxPerStageDescriptorUpdateAfterBindSamplers;

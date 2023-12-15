@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 vertexAttributeInstanceRateDivisor;
+    [NativeTypeName("VkBool32")]
+    public uint vertexAttributeInstanceRateDivisor;
 
-    public VkBool32 vertexAttributeInstanceRateZeroDivisor;
+    [NativeTypeName("VkBool32")]
+    public uint vertexAttributeInstanceRateZeroDivisor;
 }

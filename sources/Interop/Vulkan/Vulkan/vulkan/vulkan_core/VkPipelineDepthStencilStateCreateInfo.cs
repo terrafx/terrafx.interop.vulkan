@@ -14,15 +14,19 @@ public unsafe partial struct VkPipelineDepthStencilStateCreateInfo
 
     public VkPipelineDepthStencilStateCreateFlags flags;
 
-    public VkBool32 depthTestEnable;
+    [NativeTypeName("VkBool32")]
+    public uint depthTestEnable;
 
-    public VkBool32 depthWriteEnable;
+    [NativeTypeName("VkBool32")]
+    public uint depthWriteEnable;
 
     public VkCompareOp depthCompareOp;
 
-    public VkBool32 depthBoundsTestEnable;
+    [NativeTypeName("VkBool32")]
+    public uint depthBoundsTestEnable;
 
-    public VkBool32 stencilTestEnable;
+    [NativeTypeName("VkBool32")]
+    public uint stencilTestEnable;
 
     public VkStencilOpState front;
 

@@ -11,5 +11,6 @@ public unsafe partial struct VkSubpassResolvePerformanceQueryEXT
 
     public void* pNext;
 
-    public VkBool32 optimal;
+    [NativeTypeName("VkBool32")]
+    public uint optimal;
 }

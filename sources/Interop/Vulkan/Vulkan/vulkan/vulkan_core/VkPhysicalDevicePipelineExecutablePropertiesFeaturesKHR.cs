@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDevicePipelineExecutablePropertiesFeature
 
     public void* pNext;
 
-    public VkBool32 pipelineExecutableInfo;
+    [NativeTypeName("VkBool32")]
+    public uint pipelineExecutableInfo;
 }

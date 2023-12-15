@@ -23,7 +23,8 @@ public unsafe partial struct VkPhysicalDeviceSampleLocationsPropertiesEXT
     [NativeTypeName("uint32_t")]
     public uint sampleLocationSubPixelBits;
 
-    public VkBool32 variableSampleLocations;
+    [NativeTypeName("VkBool32")]
+    public uint variableSampleLocations;
 
     [InlineArray(2)]
     public partial struct _sampleLocationCoordinateRange_e__FixedBuffer

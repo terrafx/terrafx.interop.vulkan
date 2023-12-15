@@ -23,7 +23,8 @@ public unsafe partial struct VkIndirectCommandsLayoutTokenNV
     [NativeTypeName("uint32_t")]
     public uint vertexBindingUnit;
 
-    public VkBool32 vertexDynamicStride;
+    [NativeTypeName("VkBool32")]
+    public uint vertexDynamicStride;
 
     public VkPipelineLayout pushconstantPipelineLayout;
 

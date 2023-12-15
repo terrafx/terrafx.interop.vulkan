@@ -12,5 +12,6 @@ public unsafe partial struct VkCommandBufferInheritanceConditionalRenderingInfoE
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 conditionalRenderingEnable;
+    [NativeTypeName("VkBool32")]
+    public uint conditionalRenderingEnable;
 }

@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 formatRgba10x6WithoutYCbCrSampler;
+    [NativeTypeName("VkBool32")]
+    public uint formatRgba10x6WithoutYCbCrSampler;
 }

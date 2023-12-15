@@ -35,6 +35,12 @@ public partial struct VkDeviceFaultVendorBinaryHeaderVersionOneEXT
     [NativeTypeName("uint32_t")]
     public uint engineNameOffset;
 
+    [NativeTypeName("uint32_t")]
+    public uint engineVersion;
+
+    [NativeTypeName("uint32_t")]
+    public uint apiVersion;
+
     [InlineArray(16)]
     public partial struct _pipelineCacheUUID_e__FixedBuffer
     {

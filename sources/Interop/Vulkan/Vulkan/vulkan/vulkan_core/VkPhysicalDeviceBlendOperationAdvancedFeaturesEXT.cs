@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 advancedBlendCoherentOperations;
+    [NativeTypeName("VkBool32")]
+    public uint advancedBlendCoherentOperations;
 }

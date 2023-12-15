@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceProtectedMemoryFeatures
 
     public void* pNext;
 
-    public VkBool32 protectedMemory;
+    [NativeTypeName("VkBool32")]
+    public uint protectedMemory;
 }

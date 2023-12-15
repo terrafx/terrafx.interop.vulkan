@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceProvokingVertexFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 provokingVertexLast;
+    [NativeTypeName("VkBool32")]
+    public uint provokingVertexLast;
 
-    public VkBool32 transformFeedbackPreservesProvokingVertex;
+    [NativeTypeName("VkBool32")]
+    public uint transformFeedbackPreservesProvokingVertex;
 }

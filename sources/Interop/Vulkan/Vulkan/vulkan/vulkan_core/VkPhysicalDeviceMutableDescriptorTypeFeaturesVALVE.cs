@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE
 
     public void* pNext;
 
-    public VkBool32 mutableDescriptorType;
+    [NativeTypeName("VkBool32")]
+    public uint mutableDescriptorType;
 }

@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceASTCDecodeFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 decodeModeSharedExponent;
+    [NativeTypeName("VkBool32")]
+    public uint decodeModeSharedExponent;
 }

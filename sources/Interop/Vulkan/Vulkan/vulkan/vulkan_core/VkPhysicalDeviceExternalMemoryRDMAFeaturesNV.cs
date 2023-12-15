@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceExternalMemoryRDMAFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 externalMemoryRDMA;
+    [NativeTypeName("VkBool32")]
+    public uint externalMemoryRDMA;
 }

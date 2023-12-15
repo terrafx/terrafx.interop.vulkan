@@ -7,7 +7,8 @@ namespace TerraFX.Interop.Vulkan;
 
 public partial struct VkPipelineColorBlendAttachmentState
 {
-    public VkBool32 blendEnable;
+    [NativeTypeName("VkBool32")]
+    public uint blendEnable;
 
     public VkBlendFactor srcColorBlendFactor;
 

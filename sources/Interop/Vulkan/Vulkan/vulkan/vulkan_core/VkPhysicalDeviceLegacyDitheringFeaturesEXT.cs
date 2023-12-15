@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceLegacyDitheringFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 legacyDithering;
+    [NativeTypeName("VkBool32")]
+    public uint legacyDithering;
 }

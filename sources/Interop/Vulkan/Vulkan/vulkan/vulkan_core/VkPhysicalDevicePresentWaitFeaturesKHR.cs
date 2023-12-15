@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDevicePresentWaitFeaturesKHR
 
     public void* pNext;
 
-    public VkBool32 presentWait;
+    [NativeTypeName("VkBool32")]
+    public uint presentWait;
 }

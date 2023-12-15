@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceConditionalRenderingFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 conditionalRendering;
+    [NativeTypeName("VkBool32")]
+    public uint conditionalRendering;
 
-    public VkBool32 inheritedConditionalRendering;
+    [NativeTypeName("VkBool32")]
+    public uint inheritedConditionalRendering;
 }

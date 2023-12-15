@@ -11,13 +11,18 @@ public unsafe partial struct VkPhysicalDeviceAccelerationStructureFeaturesKHR
 
     public void* pNext;
 
-    public VkBool32 accelerationStructure;
+    [NativeTypeName("VkBool32")]
+    public uint accelerationStructure;
 
-    public VkBool32 accelerationStructureCaptureReplay;
+    [NativeTypeName("VkBool32")]
+    public uint accelerationStructureCaptureReplay;
 
-    public VkBool32 accelerationStructureIndirectBuild;
+    [NativeTypeName("VkBool32")]
+    public uint accelerationStructureIndirectBuild;
 
-    public VkBool32 accelerationStructureHostCommands;
+    [NativeTypeName("VkBool32")]
+    public uint accelerationStructureHostCommands;
 
-    public VkBool32 descriptorBindingAccelerationStructureUpdateAfterBind;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBindingAccelerationStructureUpdateAfterBind;
 }

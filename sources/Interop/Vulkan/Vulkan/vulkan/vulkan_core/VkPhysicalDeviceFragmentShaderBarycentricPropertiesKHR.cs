@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceFragmentShaderBarycentricProperties
 
     public void* pNext;
 
-    public VkBool32 triStripVertexOrderIndependentOfProvokingVertex;
+    [NativeTypeName("VkBool32")]
+    public uint triStripVertexOrderIndependentOfProvokingVertex;
 }

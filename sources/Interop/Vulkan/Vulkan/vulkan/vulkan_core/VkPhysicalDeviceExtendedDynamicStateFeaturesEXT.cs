@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceExtendedDynamicStateFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 extendedDynamicState;
+    [NativeTypeName("VkBool32")]
+    public uint extendedDynamicState;
 }

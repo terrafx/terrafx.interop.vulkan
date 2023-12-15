@@ -26,4 +26,13 @@ public static partial class Vulkan
 
     [NativeTypeName("#define VK_ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME \"VK_ANDROID_external_memory_android_hardware_buffer\"")]
     public static ReadOnlySpan<byte> VK_ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME => "VK_ANDROID_external_memory_android_hardware_buffer"u8;
+
+    [NativeTypeName("#define VK_ANDROID_external_format_resolve 1")]
+    public const int VK_ANDROID_external_format_resolve = 1;
+
+    [NativeTypeName("#define VK_ANDROID_EXTERNAL_FORMAT_RESOLVE_SPEC_VERSION 1")]
+    public const int VK_ANDROID_EXTERNAL_FORMAT_RESOLVE_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_ANDROID_EXTERNAL_FORMAT_RESOLVE_EXTENSION_NAME \"VK_ANDROID_external_format_resolve\"")]
+    public static ReadOnlySpan<byte> VK_ANDROID_EXTERNAL_FORMAT_RESOLVE_EXTENSION_NAME => "VK_ANDROID_external_format_resolve"u8;
 }

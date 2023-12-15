@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceDepthClipEnableFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 depthClipEnable;
+    [NativeTypeName("VkBool32")]
+    public uint depthClipEnable;
 }

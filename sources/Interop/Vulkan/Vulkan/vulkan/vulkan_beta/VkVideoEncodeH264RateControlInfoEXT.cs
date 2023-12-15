@@ -12,6 +12,9 @@ public unsafe partial struct VkVideoEncodeH264RateControlInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
+    [NativeTypeName("VkVideoEncodeH264RateControlFlagsEXT")]
+    public uint flags;
+
     [NativeTypeName("uint32_t")]
     public uint gopFrameCount;
 
@@ -21,8 +24,6 @@ public unsafe partial struct VkVideoEncodeH264RateControlInfoEXT
     [NativeTypeName("uint32_t")]
     public uint consecutiveBFrameCount;
 
-    public VkVideoEncodeH264RateControlStructureEXT rateControlStructure;
-
-    [NativeTypeName("uint8_t")]
-    public byte temporalLayerCount;
+    [NativeTypeName("uint32_t")]
+    public uint temporalLayerCount;
 }

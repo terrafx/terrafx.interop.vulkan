@@ -19,7 +19,8 @@ public unsafe partial struct VkPhysicalDeviceGroupProperties
     [NativeTypeName("VkPhysicalDevice[32]")]
     public _physicalDevices_e__FixedBuffer physicalDevices;
 
-    public VkBool32 subsetAllocation;
+    [NativeTypeName("VkBool32")]
+    public uint subsetAllocation;
 
     public unsafe partial struct _physicalDevices_e__FixedBuffer
     {

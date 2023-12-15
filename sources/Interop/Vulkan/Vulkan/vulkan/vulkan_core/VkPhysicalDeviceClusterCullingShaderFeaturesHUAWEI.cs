@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI
 
     public void* pNext;
 
-    public VkBool32 clustercullingShader;
+    [NativeTypeName("VkBool32")]
+    public uint clustercullingShader;
 
-    public VkBool32 multiviewClusterCullingShader;
+    [NativeTypeName("VkBool32")]
+    public uint multiviewClusterCullingShader;
 }

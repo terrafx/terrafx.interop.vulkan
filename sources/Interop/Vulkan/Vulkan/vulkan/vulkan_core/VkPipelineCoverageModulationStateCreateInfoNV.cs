@@ -16,7 +16,8 @@ public unsafe partial struct VkPipelineCoverageModulationStateCreateInfoNV
 
     public VkCoverageModulationModeNV coverageModulationMode;
 
-    public VkBool32 coverageModulationTableEnable;
+    [NativeTypeName("VkBool32")]
+    public uint coverageModulationTableEnable;
 
     [NativeTypeName("uint32_t")]
     public uint coverageModulationTableCount;

@@ -311,13 +311,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEM
 		.github\ISSUE_TEMPLATE\regression.md = .github\ISSUE_TEMPLATE\regression.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_profiles", "vulkan_profiles", "{191B9CB7-6528-4550-89C7-4F2F52A0FCFD}"
-	ProjectSection(SolutionItems) = preProject
-		generation\Vulkan\vulkan\vulkan_profiles\generate.rsp = generation\Vulkan\vulkan\vulkan_profiles\generate.rsp
-		generation\Vulkan\vulkan\vulkan_profiles\header.txt = generation\Vulkan\vulkan\vulkan_profiles\header.txt
-		generation\Vulkan\vulkan\vulkan_profiles\vulkan-vulkan_profiles.h = generation\Vulkan\vulkan\vulkan_profiles\vulkan-vulkan_profiles.h
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zircon", "zircon", "{EDF4A882-882F-4C1D-86FA-BF3D3208D897}"
 	ProjectSection(SolutionItems) = preProject
 		generation\Vulkan\vulkan\vulkan_fuchsia\zircon\types.h = generation\Vulkan\vulkan\vulkan_fuchsia\zircon\types.h
@@ -413,7 +406,6 @@ Global
 		{09775914-ED8B-4F3D-BB35-8D9F30464A8A} = {359B88FB-0ED5-4135-822B-82350347138C}
 		{130AD321-77EC-4B5D-BCDD-708380AB6150} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
 		{634B8A0D-A2BD-4AC3-B56B-B6578E238AA1} = {8B98276D-AB81-4492-81E3-BAB8F9494A99}
-		{191B9CB7-6528-4550-89C7-4F2F52A0FCFD} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
 		{EDF4A882-882F-4C1D-86FA-BF3D3208D897} = {686211F7-8AEB-45EA-83E6-3BAC23CE1FC0}
 		{BE407AD5-6478-4B5F-9D2F-28E819248BE9} = {0BF30806-FF4A-43D5-9D38-77F44BD727E2}
 		{4C4DDDD4-0449-42BD-9952-34BFB0FA7EEF} = {277EB067-C8D5-4766-B3AA-BFBCFD06C984}

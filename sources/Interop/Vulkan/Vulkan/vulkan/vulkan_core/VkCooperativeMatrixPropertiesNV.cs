@@ -20,13 +20,18 @@ public unsafe partial struct VkCooperativeMatrixPropertiesNV
     [NativeTypeName("uint32_t")]
     public uint KSize;
 
-    public VkComponentTypeNV AType;
+    [NativeTypeName("VkComponentTypeNV")]
+    public VkComponentTypeKHR AType;
 
-    public VkComponentTypeNV BType;
+    [NativeTypeName("VkComponentTypeNV")]
+    public VkComponentTypeKHR BType;
 
-    public VkComponentTypeNV CType;
+    [NativeTypeName("VkComponentTypeNV")]
+    public VkComponentTypeKHR CType;
 
-    public VkComponentTypeNV DType;
+    [NativeTypeName("VkComponentTypeNV")]
+    public VkComponentTypeKHR DType;
 
-    public VkScopeNV scope;
+    [NativeTypeName("VkScopeNV")]
+    public VkScopeKHR scope;
 }

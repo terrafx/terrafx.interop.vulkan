@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 shaderImageInt64Atomics;
+    [NativeTypeName("VkBool32")]
+    public uint shaderImageInt64Atomics;
 
-    public VkBool32 sparseImageInt64Atomics;
+    [NativeTypeName("VkBool32")]
+    public uint sparseImageInt64Atomics;
 }

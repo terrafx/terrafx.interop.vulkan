@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceMultisampledRenderToSingleSampledFe
 
     public void* pNext;
 
-    public VkBool32 multisampledRenderToSingleSampled;
+    [NativeTypeName("VkBool32")]
+    public uint multisampledRenderToSingleSampled;
 }

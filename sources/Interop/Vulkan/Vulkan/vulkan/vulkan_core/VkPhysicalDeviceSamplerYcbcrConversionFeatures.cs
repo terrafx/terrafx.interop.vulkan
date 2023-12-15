@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceSamplerYcbcrConversionFeatures
 
     public void* pNext;
 
-    public VkBool32 samplerYcbcrConversion;
+    [NativeTypeName("VkBool32")]
+    public uint samplerYcbcrConversion;
 }

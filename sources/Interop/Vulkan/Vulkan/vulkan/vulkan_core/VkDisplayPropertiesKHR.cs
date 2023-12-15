@@ -18,7 +18,9 @@ public unsafe partial struct VkDisplayPropertiesKHR
 
     public VkSurfaceTransformFlagsKHR supportedTransforms;
 
-    public VkBool32 planeReorderPossible;
+    [NativeTypeName("VkBool32")]
+    public uint planeReorderPossible;
 
-    public VkBool32 persistentContent;
+    [NativeTypeName("VkBool32")]
+    public uint persistentContent;
 }

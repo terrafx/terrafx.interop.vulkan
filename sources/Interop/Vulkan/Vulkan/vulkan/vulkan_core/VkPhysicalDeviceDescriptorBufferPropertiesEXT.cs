@@ -11,11 +11,14 @@ public unsafe partial struct VkPhysicalDeviceDescriptorBufferPropertiesEXT
 
     public void* pNext;
 
-    public VkBool32 combinedImageSamplerDescriptorSingleArray;
+    [NativeTypeName("VkBool32")]
+    public uint combinedImageSamplerDescriptorSingleArray;
 
-    public VkBool32 bufferlessPushDescriptors;
+    [NativeTypeName("VkBool32")]
+    public uint bufferlessPushDescriptors;
 
-    public VkBool32 allowSamplerImageViewPostSubmitCreation;
+    [NativeTypeName("VkBool32")]
+    public uint allowSamplerImageViewPostSubmitCreation;
 
     [NativeTypeName("VkDeviceSize")]
     public ulong descriptorBufferOffsetAlignment;

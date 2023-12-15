@@ -11,9 +11,11 @@ public unsafe partial struct VkPhysicalDeviceDrmPropertiesEXT
 
     public void* pNext;
 
-    public VkBool32 hasPrimary;
+    [NativeTypeName("VkBool32")]
+    public uint hasPrimary;
 
-    public VkBool32 hasRender;
+    [NativeTypeName("VkBool32")]
+    public uint hasRender;
 
     [NativeTypeName("int64_t")]
     public long primaryMajor;

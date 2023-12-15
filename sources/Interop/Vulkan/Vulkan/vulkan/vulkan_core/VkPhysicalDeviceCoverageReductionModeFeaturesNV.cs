@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceCoverageReductionModeFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 coverageReductionMode;
+    [NativeTypeName("VkBool32")]
+    public uint coverageReductionMode;
 }

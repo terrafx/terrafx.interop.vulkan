@@ -14,9 +14,11 @@ public unsafe partial struct VkPipelineRasterizationStateCreateInfo
 
     public VkPipelineRasterizationStateCreateFlags flags;
 
-    public VkBool32 depthClampEnable;
+    [NativeTypeName("VkBool32")]
+    public uint depthClampEnable;
 
-    public VkBool32 rasterizerDiscardEnable;
+    [NativeTypeName("VkBool32")]
+    public uint rasterizerDiscardEnable;
 
     public VkPolygonMode polygonMode;
 
@@ -24,7 +26,8 @@ public unsafe partial struct VkPipelineRasterizationStateCreateInfo
 
     public VkFrontFace frontFace;
 
-    public VkBool32 depthBiasEnable;
+    [NativeTypeName("VkBool32")]
+    public uint depthBiasEnable;
 
     public float depthBiasConstantFactor;
 

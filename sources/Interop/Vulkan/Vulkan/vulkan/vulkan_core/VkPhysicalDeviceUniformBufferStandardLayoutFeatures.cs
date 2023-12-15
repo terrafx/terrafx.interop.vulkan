@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceUniformBufferStandardLayoutFeatures
 
     public void* pNext;
 
-    public VkBool32 uniformBufferStandardLayout;
+    [NativeTypeName("VkBool32")]
+    public uint uniformBufferStandardLayout;
 }

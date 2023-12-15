@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceComputeShaderDerivativesFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 computeDerivativeGroupQuads;
+    [NativeTypeName("VkBool32")]
+    public uint computeDerivativeGroupQuads;
 
-    public VkBool32 computeDerivativeGroupLinear;
+    [NativeTypeName("VkBool32")]
+    public uint computeDerivativeGroupLinear;
 }

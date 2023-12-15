@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceTextureCompressionASTCHDRFeatures
 
     public void* pNext;
 
-    public VkBool32 textureCompressionASTC_HDR;
+    [NativeTypeName("VkBool32")]
+    public uint textureCompressionASTC_HDR;
 }

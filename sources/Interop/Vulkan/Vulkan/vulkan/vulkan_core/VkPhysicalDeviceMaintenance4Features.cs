@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceMaintenance4Features
 
     public void* pNext;
 
-    public VkBool32 maintenance4;
+    [NativeTypeName("VkBool32")]
+    public uint maintenance4;
 }

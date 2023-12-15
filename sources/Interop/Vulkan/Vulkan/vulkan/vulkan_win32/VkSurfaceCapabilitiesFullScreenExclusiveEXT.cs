@@ -11,5 +11,6 @@ public unsafe partial struct VkSurfaceCapabilitiesFullScreenExclusiveEXT
 
     public void* pNext;
 
-    public VkBool32 fullScreenExclusiveSupported;
+    [NativeTypeName("VkBool32")]
+    public uint fullScreenExclusiveSupported;
 }

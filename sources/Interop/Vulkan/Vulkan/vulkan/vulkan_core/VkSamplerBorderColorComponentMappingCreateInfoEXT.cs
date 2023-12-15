@@ -14,5 +14,6 @@ public unsafe partial struct VkSamplerBorderColorComponentMappingCreateInfoEXT
 
     public VkComponentMapping components;
 
-    public VkBool32 srgb;
+    [NativeTypeName("VkBool32")]
+    public uint srgb;
 }

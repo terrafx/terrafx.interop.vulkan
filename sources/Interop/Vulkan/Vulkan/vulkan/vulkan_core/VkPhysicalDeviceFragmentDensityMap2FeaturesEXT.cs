@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceFragmentDensityMap2FeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 fragmentDensityMapDeferred;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentDensityMapDeferred;
 }

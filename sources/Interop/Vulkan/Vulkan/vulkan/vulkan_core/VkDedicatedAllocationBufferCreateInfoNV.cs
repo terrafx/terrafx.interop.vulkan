@@ -12,5 +12,6 @@ public unsafe partial struct VkDedicatedAllocationBufferCreateInfoNV
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 dedicatedAllocation;
+    [NativeTypeName("VkBool32")]
+    public uint dedicatedAllocation;
 }

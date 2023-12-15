@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceMemoryDecompressionFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 memoryDecompression;
+    [NativeTypeName("VkBool32")]
+    public uint memoryDecompression;
 }

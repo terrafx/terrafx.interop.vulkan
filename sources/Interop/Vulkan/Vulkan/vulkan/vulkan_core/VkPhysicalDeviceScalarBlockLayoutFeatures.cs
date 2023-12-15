@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceScalarBlockLayoutFeatures
 
     public void* pNext;
 
-    public VkBool32 scalarBlockLayout;
+    [NativeTypeName("VkBool32")]
+    public uint scalarBlockLayout;
 }

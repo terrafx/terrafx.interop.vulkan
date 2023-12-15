@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 subpassMergeFeedback;
+    [NativeTypeName("VkBool32")]
+    public uint subpassMergeFeedback;
 }

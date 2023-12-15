@@ -11,7 +11,9 @@ public unsafe partial struct VkMemoryDedicatedRequirements
 
     public void* pNext;
 
-    public VkBool32 prefersDedicatedAllocation;
+    [NativeTypeName("VkBool32")]
+    public uint prefersDedicatedAllocation;
 
-    public VkBool32 requiresDedicatedAllocation;
+    [NativeTypeName("VkBool32")]
+    public uint requiresDedicatedAllocation;
 }

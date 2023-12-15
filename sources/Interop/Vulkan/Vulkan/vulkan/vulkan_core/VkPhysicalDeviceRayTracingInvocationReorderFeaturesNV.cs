@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceRayTracingInvocationReorderFeatures
 
     public void* pNext;
 
-    public VkBool32 rayTracingInvocationReorder;
+    [NativeTypeName("VkBool32")]
+    public uint rayTracingInvocationReorder;
 }

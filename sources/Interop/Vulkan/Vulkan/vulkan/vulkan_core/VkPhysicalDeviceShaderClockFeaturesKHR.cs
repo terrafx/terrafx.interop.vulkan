@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceShaderClockFeaturesKHR
 
     public void* pNext;
 
-    public VkBool32 shaderSubgroupClock;
+    [NativeTypeName("VkBool32")]
+    public uint shaderSubgroupClock;
 
-    public VkBool32 shaderDeviceClock;
+    [NativeTypeName("VkBool32")]
+    public uint shaderDeviceClock;
 }

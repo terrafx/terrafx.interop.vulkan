@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceDescriptorSetHostMappingFeaturesVAL
 
     public void* pNext;
 
-    public VkBool32 descriptorSetHostMapping;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorSetHostMapping;
 }

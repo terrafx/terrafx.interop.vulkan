@@ -11,9 +11,11 @@ public unsafe partial struct VkPhysicalDeviceFragmentDensityMap2PropertiesEXT
 
     public void* pNext;
 
-    public VkBool32 subsampledLoads;
+    [NativeTypeName("VkBool32")]
+    public uint subsampledLoads;
 
-    public VkBool32 subsampledCoarseReconstructionEarlyAccess;
+    [NativeTypeName("VkBool32")]
+    public uint subsampledCoarseReconstructionEarlyAccess;
 
     [NativeTypeName("uint32_t")]
     public uint maxSubsampledArrayLayers;

@@ -12,5 +12,6 @@ public unsafe partial struct VkSwapchainDisplayNativeHdrCreateInfoAMD
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 localDimmingEnable;
+    [NativeTypeName("VkBool32")]
+    public uint localDimmingEnable;
 }

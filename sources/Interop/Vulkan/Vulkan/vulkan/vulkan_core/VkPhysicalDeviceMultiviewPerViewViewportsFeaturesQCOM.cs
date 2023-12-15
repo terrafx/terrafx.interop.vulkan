@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQC
 
     public void* pNext;
 
-    public VkBool32 multiviewPerViewViewports;
+    [NativeTypeName("VkBool32")]
+    public uint multiviewPerViewViewports;
 }

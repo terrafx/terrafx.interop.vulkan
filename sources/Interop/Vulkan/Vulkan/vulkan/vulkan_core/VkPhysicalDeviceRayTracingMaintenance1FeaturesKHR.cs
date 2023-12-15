@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceRayTracingMaintenance1FeaturesKHR
 
     public void* pNext;
 
-    public VkBool32 rayTracingMaintenance1;
+    [NativeTypeName("VkBool32")]
+    public uint rayTracingMaintenance1;
 
-    public VkBool32 rayTracingPipelineTraceRaysIndirect2;
+    [NativeTypeName("VkBool32")]
+    public uint rayTracingPipelineTraceRaysIndirect2;
 }

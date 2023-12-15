@@ -15,11 +15,17 @@ public unsafe partial struct VkVideoEncodeCapabilitiesKHR
 
     public VkVideoEncodeRateControlModeFlagsKHR rateControlModes;
 
-    [NativeTypeName("uint8_t")]
-    public byte rateControlLayerCount;
+    [NativeTypeName("uint32_t")]
+    public uint maxRateControlLayers;
 
-    [NativeTypeName("uint8_t")]
-    public byte qualityLevelCount;
+    [NativeTypeName("uint64_t")]
+    public ulong maxBitrate;
 
-    public VkExtent2D inputImageDataFillAlignment;
+    [NativeTypeName("uint32_t")]
+    public uint maxQualityLevels;
+
+    public VkExtent2D encodeInputPictureGranularity;
+
+    [NativeTypeName("VkVideoEncodeFeedbackFlagsKHR")]
+    public uint supportedEncodeFeedbackFlags;
 }

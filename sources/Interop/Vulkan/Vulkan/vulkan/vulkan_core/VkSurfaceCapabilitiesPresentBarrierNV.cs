@@ -11,5 +11,6 @@ public unsafe partial struct VkSurfaceCapabilitiesPresentBarrierNV
 
     public void* pNext;
 
-    public VkBool32 presentBarrierSupported;
+    [NativeTypeName("VkBool32")]
+    public uint presentBarrierSupported;
 }

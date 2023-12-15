@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceShaderImageFootprintFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 imageFootprint;
+    [NativeTypeName("VkBool32")]
+    public uint imageFootprint;
 }

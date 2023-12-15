@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceShaderSubgroupUniformControlFlowFea
 
     public void* pNext;
 
-    public VkBool32 shaderSubgroupUniformControlFlow;
+    [NativeTypeName("VkBool32")]
+    public uint shaderSubgroupUniformControlFlow;
 }

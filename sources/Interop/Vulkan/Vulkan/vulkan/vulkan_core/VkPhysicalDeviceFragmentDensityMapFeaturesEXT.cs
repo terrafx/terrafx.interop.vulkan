@@ -11,9 +11,12 @@ public unsafe partial struct VkPhysicalDeviceFragmentDensityMapFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 fragmentDensityMap;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentDensityMap;
 
-    public VkBool32 fragmentDensityMapDynamic;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentDensityMapDynamic;
 
-    public VkBool32 fragmentDensityMapNonSubsampledImages;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentDensityMapNonSubsampledImages;
 }

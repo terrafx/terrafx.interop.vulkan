@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceRayTracingMotionBlurFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 rayTracingMotionBlur;
+    [NativeTypeName("VkBool32")]
+    public uint rayTracingMotionBlur;
 
-    public VkBool32 rayTracingMotionBlurPipelineTraceRaysIndirect;
+    [NativeTypeName("VkBool32")]
+    public uint rayTracingMotionBlurPipelineTraceRaysIndirect;
 }

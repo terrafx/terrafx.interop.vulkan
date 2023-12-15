@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceDynamicRenderingFeatures
 
     public void* pNext;
 
-    public VkBool32 dynamicRendering;
+    [NativeTypeName("VkBool32")]
+    public uint dynamicRendering;
 }

@@ -12,7 +12,8 @@ public unsafe partial struct VkPipelineViewportShadingRateImageStateCreateInfoNV
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 shadingRateImageEnable;
+    [NativeTypeName("VkBool32")]
+    public uint shadingRateImageEnable;
 
     [NativeTypeName("uint32_t")]
     public uint viewportCount;

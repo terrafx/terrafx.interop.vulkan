@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceCustomBorderColorFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 customBorderColors;
+    [NativeTypeName("VkBool32")]
+    public uint customBorderColors;
 
-    public VkBool32 customBorderColorWithoutFormat;
+    [NativeTypeName("VkBool32")]
+    public uint customBorderColorWithoutFormat;
 }

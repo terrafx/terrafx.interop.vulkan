@@ -11,9 +11,12 @@ public unsafe partial struct VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 primitivesGeneratedQuery;
+    [NativeTypeName("VkBool32")]
+    public uint primitivesGeneratedQuery;
 
-    public VkBool32 primitivesGeneratedQueryWithRasterizerDiscard;
+    [NativeTypeName("VkBool32")]
+    public uint primitivesGeneratedQueryWithRasterizerDiscard;
 
-    public VkBool32 primitivesGeneratedQueryWithNonZeroStreams;
+    [NativeTypeName("VkBool32")]
+    public uint primitivesGeneratedQueryWithNonZeroStreams;
 }

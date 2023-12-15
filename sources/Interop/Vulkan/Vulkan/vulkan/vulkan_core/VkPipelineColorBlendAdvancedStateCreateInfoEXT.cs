@@ -12,9 +12,11 @@ public unsafe partial struct VkPipelineColorBlendAdvancedStateCreateInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 srcPremultiplied;
+    [NativeTypeName("VkBool32")]
+    public uint srcPremultiplied;
 
-    public VkBool32 dstPremultiplied;
+    [NativeTypeName("VkBool32")]
+    public uint dstPremultiplied;
 
     public VkBlendOverlapEXT blendOverlap;
 }

@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceSynchronization2Features
 
     public void* pNext;
 
-    public VkBool32 synchronization2;
+    [NativeTypeName("VkBool32")]
+    public uint synchronization2;
 }

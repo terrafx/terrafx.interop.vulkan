@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceImagelessFramebufferFeatures
 
     public void* pNext;
 
-    public VkBool32 imagelessFramebuffer;
+    [NativeTypeName("VkBool32")]
+    public uint imagelessFramebuffer;
 }

@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 nonSeamlessCubeMap;
+    [NativeTypeName("VkBool32")]
+    public uint nonSeamlessCubeMap;
 }

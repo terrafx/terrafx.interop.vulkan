@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceIndexTypeUint8FeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 indexTypeUint8;
+    [NativeTypeName("VkBool32")]
+    public uint indexTypeUint8;
 }

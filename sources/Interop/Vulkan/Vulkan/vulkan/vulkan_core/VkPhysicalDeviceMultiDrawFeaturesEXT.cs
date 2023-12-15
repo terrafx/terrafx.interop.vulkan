@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceMultiDrawFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 multiDraw;
+    [NativeTypeName("VkBool32")]
+    public uint multiDraw;
 }

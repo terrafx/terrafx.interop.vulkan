@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 swapchainMaintenance1;
+    [NativeTypeName("VkBool32")]
+    public uint swapchainMaintenance1;
 }

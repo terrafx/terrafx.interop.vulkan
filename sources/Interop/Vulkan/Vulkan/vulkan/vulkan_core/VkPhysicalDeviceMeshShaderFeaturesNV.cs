@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceMeshShaderFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 taskShader;
+    [NativeTypeName("VkBool32")]
+    public uint taskShader;
 
-    public VkBool32 meshShader;
+    [NativeTypeName("VkBool32")]
+    public uint meshShader;
 }

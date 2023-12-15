@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceAddressBindingReportFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 reportAddressBinding;
+    [NativeTypeName("VkBool32")]
+    public uint reportAddressBinding;
 }

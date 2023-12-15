@@ -12,7 +12,8 @@ public unsafe partial struct VkPipelineSampleLocationsStateCreateInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 sampleLocationsEnable;
+    [NativeTypeName("VkBool32")]
+    public uint sampleLocationsEnable;
 
     public VkSampleLocationsInfoEXT sampleLocationsInfo;
 }

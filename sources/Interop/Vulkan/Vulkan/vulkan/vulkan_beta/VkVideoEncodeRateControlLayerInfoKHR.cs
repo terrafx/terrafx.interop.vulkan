@@ -12,21 +12,15 @@ public unsafe partial struct VkVideoEncodeRateControlLayerInfoKHR
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("uint32_t")]
-    public uint averageBitrate;
+    [NativeTypeName("uint64_t")]
+    public ulong averageBitrate;
 
-    [NativeTypeName("uint32_t")]
-    public uint maxBitrate;
+    [NativeTypeName("uint64_t")]
+    public ulong maxBitrate;
 
     [NativeTypeName("uint32_t")]
     public uint frameRateNumerator;
 
     [NativeTypeName("uint32_t")]
     public uint frameRateDenominator;
-
-    [NativeTypeName("uint32_t")]
-    public uint virtualBufferSizeInMs;
-
-    [NativeTypeName("uint32_t")]
-    public uint initialVirtualBufferSizeInMs;
 }

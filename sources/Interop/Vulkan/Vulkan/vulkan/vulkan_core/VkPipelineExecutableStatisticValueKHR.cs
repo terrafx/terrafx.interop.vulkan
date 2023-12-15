@@ -11,7 +11,8 @@ namespace TerraFX.Interop.Vulkan;
 public partial struct VkPipelineExecutableStatisticValueKHR
 {
     [FieldOffset(0)]
-    public VkBool32 b32;
+    [NativeTypeName("VkBool32")]
+    public uint b32;
 
     [FieldOffset(0)]
     [NativeTypeName("int64_t")]

@@ -11,13 +11,18 @@ public unsafe partial struct VkPhysicalDeviceRayTracingPipelineFeaturesKHR
 
     public void* pNext;
 
-    public VkBool32 rayTracingPipeline;
+    [NativeTypeName("VkBool32")]
+    public uint rayTracingPipeline;
 
-    public VkBool32 rayTracingPipelineShaderGroupHandleCaptureReplay;
+    [NativeTypeName("VkBool32")]
+    public uint rayTracingPipelineShaderGroupHandleCaptureReplay;
 
-    public VkBool32 rayTracingPipelineShaderGroupHandleCaptureReplayMixed;
+    [NativeTypeName("VkBool32")]
+    public uint rayTracingPipelineShaderGroupHandleCaptureReplayMixed;
 
-    public VkBool32 rayTracingPipelineTraceRaysIndirect;
+    [NativeTypeName("VkBool32")]
+    public uint rayTracingPipelineTraceRaysIndirect;
 
-    public VkBool32 rayTraversalPrimitiveCulling;
+    [NativeTypeName("VkBool32")]
+    public uint rayTraversalPrimitiveCulling;
 }

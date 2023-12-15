@@ -16,5 +16,6 @@ public unsafe partial struct VkDisplayPresentInfoKHR
 
     public VkRect2D dstRect;
 
-    public VkBool32 persistent;
+    [NativeTypeName("VkBool32")]
+    public uint persistent;
 }

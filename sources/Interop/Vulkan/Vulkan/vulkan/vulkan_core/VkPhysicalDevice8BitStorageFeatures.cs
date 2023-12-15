@@ -11,9 +11,12 @@ public unsafe partial struct VkPhysicalDevice8BitStorageFeatures
 
     public void* pNext;
 
-    public VkBool32 storageBuffer8BitAccess;
+    [NativeTypeName("VkBool32")]
+    public uint storageBuffer8BitAccess;
 
-    public VkBool32 uniformAndStorageBuffer8BitAccess;
+    [NativeTypeName("VkBool32")]
+    public uint uniformAndStorageBuffer8BitAccess;
 
-    public VkBool32 storagePushConstant8;
+    [NativeTypeName("VkBool32")]
+    public uint storagePushConstant8;
 }

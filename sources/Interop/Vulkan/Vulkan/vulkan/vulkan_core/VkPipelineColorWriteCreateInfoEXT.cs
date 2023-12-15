@@ -16,5 +16,5 @@ public unsafe partial struct VkPipelineColorWriteCreateInfoEXT
     public uint attachmentCount;
 
     [NativeTypeName("const VkBool32 *")]
-    public VkBool32* pColorWriteEnables;
+    public uint* pColorWriteEnables;
 }

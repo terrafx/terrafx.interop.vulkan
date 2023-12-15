@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 deviceGeneratedCommands;
+    [NativeTypeName("VkBool32")]
+    public uint deviceGeneratedCommands;
 }

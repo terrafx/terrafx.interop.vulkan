@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceTilePropertiesFeaturesQCOM
 
     public void* pNext;
 
-    public VkBool32 tileProperties;
+    [NativeTypeName("VkBool32")]
+    public uint tileProperties;
 }

@@ -12,5 +12,6 @@ public unsafe partial struct VkRenderPassCreationControlEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 disallowMerging;
+    [NativeTypeName("VkBool32")]
+    public uint disallowMerging;
 }

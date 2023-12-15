@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceDedicatedAllocationImageAliasingFea
 
     public void* pNext;
 
-    public VkBool32 dedicatedAllocationImageAliasing;
+    [NativeTypeName("VkBool32")]
+    public uint dedicatedAllocationImageAliasing;
 }

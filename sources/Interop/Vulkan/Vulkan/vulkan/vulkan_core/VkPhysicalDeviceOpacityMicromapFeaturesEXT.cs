@@ -11,9 +11,12 @@ public unsafe partial struct VkPhysicalDeviceOpacityMicromapFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 micromap;
+    [NativeTypeName("VkBool32")]
+    public uint micromap;
 
-    public VkBool32 micromapCaptureReplay;
+    [NativeTypeName("VkBool32")]
+    public uint micromapCaptureReplay;
 
-    public VkBool32 micromapHostCommands;
+    [NativeTypeName("VkBool32")]
+    public uint micromapHostCommands;
 }

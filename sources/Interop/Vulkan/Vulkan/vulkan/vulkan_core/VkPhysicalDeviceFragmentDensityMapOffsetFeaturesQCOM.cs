@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCO
 
     public void* pNext;
 
-    public VkBool32 fragmentDensityMapOffset;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentDensityMapOffset;
 }

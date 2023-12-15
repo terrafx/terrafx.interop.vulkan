@@ -14,10 +14,12 @@ public unsafe partial struct VkPhysicalDeviceTexelBufferAlignmentProperties
     [NativeTypeName("VkDeviceSize")]
     public ulong storageTexelBufferOffsetAlignmentBytes;
 
-    public VkBool32 storageTexelBufferOffsetSingleTexelAlignment;
+    [NativeTypeName("VkBool32")]
+    public uint storageTexelBufferOffsetSingleTexelAlignment;
 
     [NativeTypeName("VkDeviceSize")]
     public ulong uniformTexelBufferOffsetAlignmentBytes;
 
-    public VkBool32 uniformTexelBufferOffsetSingleTexelAlignment;
+    [NativeTypeName("VkBool32")]
+    public uint uniformTexelBufferOffsetSingleTexelAlignment;
 }

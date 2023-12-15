@@ -12,6 +12,7 @@ public unsafe partial struct VkVideoDecodeH265PictureInfoKHR
     [NativeTypeName("const void *")]
     public void* pNext;
 
+    [NativeTypeName("const StdVideoDecodeH265PictureInfo *")]
     public StdVideoDecodeH265PictureInfo* pStdPictureInfo;
 
     [NativeTypeName("uint32_t")]

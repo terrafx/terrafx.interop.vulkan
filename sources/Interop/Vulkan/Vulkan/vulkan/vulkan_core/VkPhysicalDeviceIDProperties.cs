@@ -25,7 +25,8 @@ public unsafe partial struct VkPhysicalDeviceIDProperties
     [NativeTypeName("uint32_t")]
     public uint deviceNodeMask;
 
-    public VkBool32 deviceLUIDValid;
+    [NativeTypeName("VkBool32")]
+    public uint deviceLUIDValid;
 
     [InlineArray(16)]
     public partial struct _deviceUUID_e__FixedBuffer

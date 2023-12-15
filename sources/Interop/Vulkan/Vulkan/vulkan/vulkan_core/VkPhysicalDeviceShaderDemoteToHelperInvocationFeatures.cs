@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceShaderDemoteToHelperInvocationFeatu
 
     public void* pNext;
 
-    public VkBool32 shaderDemoteToHelperInvocation;
+    [NativeTypeName("VkBool32")]
+    public uint shaderDemoteToHelperInvocation;
 }

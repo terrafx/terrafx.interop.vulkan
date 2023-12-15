@@ -11,9 +11,12 @@ public unsafe partial struct VkPhysicalDeviceVulkanMemoryModelFeatures
 
     public void* pNext;
 
-    public VkBool32 vulkanMemoryModel;
+    [NativeTypeName("VkBool32")]
+    public uint vulkanMemoryModel;
 
-    public VkBool32 vulkanMemoryModelDeviceScope;
+    [NativeTypeName("VkBool32")]
+    public uint vulkanMemoryModelDeviceScope;
 
-    public VkBool32 vulkanMemoryModelAvailabilityVisibilityChains;
+    [NativeTypeName("VkBool32")]
+    public uint vulkanMemoryModelAvailabilityVisibilityChains;
 }

@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceImageViewMinLodFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 minLod;
+    [NativeTypeName("VkBool32")]
+    public uint minLod;
 }

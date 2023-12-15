@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceHostQueryResetFeatures
 
     public void* pNext;
 
-    public VkBool32 hostQueryReset;
+    [NativeTypeName("VkBool32")]
+    public uint hostQueryReset;
 }

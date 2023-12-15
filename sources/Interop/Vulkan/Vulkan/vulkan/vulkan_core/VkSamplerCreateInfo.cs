@@ -28,11 +28,13 @@ public unsafe partial struct VkSamplerCreateInfo
 
     public float mipLodBias;
 
-    public VkBool32 anisotropyEnable;
+    [NativeTypeName("VkBool32")]
+    public uint anisotropyEnable;
 
     public float maxAnisotropy;
 
-    public VkBool32 compareEnable;
+    [NativeTypeName("VkBool32")]
+    public uint compareEnable;
 
     public VkCompareOp compareOp;
 
@@ -42,5 +44,6 @@ public unsafe partial struct VkSamplerCreateInfo
 
     public VkBorderColor borderColor;
 
-    public VkBool32 unnormalizedCoordinates;
+    [NativeTypeName("VkBool32")]
+    public uint unnormalizedCoordinates;
 }

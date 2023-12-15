@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR
 
     public void* pNext;
 
-    public VkBool32 globalPriorityQuery;
+    [NativeTypeName("VkBool32")]
+    public uint globalPriorityQuery;
 }

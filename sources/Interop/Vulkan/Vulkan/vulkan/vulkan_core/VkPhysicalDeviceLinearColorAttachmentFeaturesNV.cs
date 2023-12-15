@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceLinearColorAttachmentFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 linearColorAttachment;
+    [NativeTypeName("VkBool32")]
+    public uint linearColorAttachment;
 }

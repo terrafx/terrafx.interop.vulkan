@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceInvocationMaskFeaturesHUAWEI
 
     public void* pNext;
 
-    public VkBool32 invocationMask;
+    [NativeTypeName("VkBool32")]
+    public uint invocationMask;
 }

@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeat
 
     public void* pNext;
 
-    public VkBool32 shaderEarlyAndLateFragmentTests;
+    [NativeTypeName("VkBool32")]
+    public uint shaderEarlyAndLateFragmentTests;
 }

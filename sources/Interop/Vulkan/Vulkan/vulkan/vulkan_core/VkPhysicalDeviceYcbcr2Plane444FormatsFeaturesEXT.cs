@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 ycbcr2plane444Formats;
+    [NativeTypeName("VkBool32")]
+    public uint ycbcr2plane444Formats;
 }

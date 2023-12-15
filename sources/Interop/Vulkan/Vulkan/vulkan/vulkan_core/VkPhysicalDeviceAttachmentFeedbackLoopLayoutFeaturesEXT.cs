@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeature
 
     public void* pNext;
 
-    public VkBool32 attachmentFeedbackLoopLayout;
+    [NativeTypeName("VkBool32")]
+    public uint attachmentFeedbackLoopLayout;
 }

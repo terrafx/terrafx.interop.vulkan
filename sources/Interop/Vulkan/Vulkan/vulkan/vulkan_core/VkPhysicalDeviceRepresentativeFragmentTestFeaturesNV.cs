@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceRepresentativeFragmentTestFeaturesN
 
     public void* pNext;
 
-    public VkBool32 representativeFragmentTest;
+    [NativeTypeName("VkBool32")]
+    public uint representativeFragmentTest;
 }

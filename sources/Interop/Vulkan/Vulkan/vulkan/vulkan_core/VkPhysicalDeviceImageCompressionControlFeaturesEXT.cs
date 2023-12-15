@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceImageCompressionControlFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 imageCompressionControl;
+    [NativeTypeName("VkBool32")]
+    public uint imageCompressionControl;
 }

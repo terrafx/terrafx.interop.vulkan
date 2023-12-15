@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEX
 
     public void* pNext;
 
-    public VkBool32 pageableDeviceLocalMemory;
+    [NativeTypeName("VkBool32")]
+    public uint pageableDeviceLocalMemory;
 }

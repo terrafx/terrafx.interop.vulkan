@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDevicePipelineCreationCacheControlFeature
 
     public void* pNext;
 
-    public VkBool32 pipelineCreationCacheControl;
+    [NativeTypeName("VkBool32")]
+    public uint pipelineCreationCacheControl;
 }

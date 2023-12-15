@@ -12,7 +12,8 @@ public unsafe partial struct VkPipelineViewportWScalingStateCreateInfoNV
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 viewportWScalingEnable;
+    [NativeTypeName("VkBool32")]
+    public uint viewportWScalingEnable;
 
     [NativeTypeName("uint32_t")]
     public uint viewportCount;

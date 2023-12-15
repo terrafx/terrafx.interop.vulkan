@@ -11,5 +11,6 @@ public unsafe partial struct VkTextureLODGatherFormatPropertiesAMD
 
     public void* pNext;
 
-    public VkBool32 supportsTextureGatherLODBiasAMD;
+    [NativeTypeName("VkBool32")]
+    public uint supportsTextureGatherLODBiasAMD;
 }

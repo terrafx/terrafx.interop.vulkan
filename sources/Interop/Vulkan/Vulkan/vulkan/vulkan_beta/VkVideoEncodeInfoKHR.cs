@@ -15,16 +15,13 @@ public unsafe partial struct VkVideoEncodeInfoKHR
     [NativeTypeName("VkVideoEncodeFlagsKHR")]
     public uint flags;
 
-    [NativeTypeName("uint32_t")]
-    public uint qualityLevel;
-
-    public VkBuffer dstBitstreamBuffer;
+    public VkBuffer dstBuffer;
 
     [NativeTypeName("VkDeviceSize")]
-    public ulong dstBitstreamBufferOffset;
+    public ulong dstBufferOffset;
 
     [NativeTypeName("VkDeviceSize")]
-    public ulong dstBitstreamBufferMaxRange;
+    public ulong dstBufferRange;
 
     public VkVideoPictureResourceInfoKHR srcPictureResource;
 

@@ -11,9 +11,12 @@ public unsafe partial struct VkPhysicalDeviceBufferDeviceAddressFeatures
 
     public void* pNext;
 
-    public VkBool32 bufferDeviceAddress;
+    [NativeTypeName("VkBool32")]
+    public uint bufferDeviceAddress;
 
-    public VkBool32 bufferDeviceAddressCaptureReplay;
+    [NativeTypeName("VkBool32")]
+    public uint bufferDeviceAddressCaptureReplay;
 
-    public VkBool32 bufferDeviceAddressMultiDevice;
+    [NativeTypeName("VkBool32")]
+    public uint bufferDeviceAddressMultiDevice;
 }

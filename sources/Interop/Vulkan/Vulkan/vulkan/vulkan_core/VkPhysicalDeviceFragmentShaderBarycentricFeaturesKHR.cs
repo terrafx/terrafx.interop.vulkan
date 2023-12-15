@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceFragmentShaderBarycentricFeaturesKH
 
     public void* pNext;
 
-    public VkBool32 fragmentShaderBarycentric;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentShaderBarycentric;
 }

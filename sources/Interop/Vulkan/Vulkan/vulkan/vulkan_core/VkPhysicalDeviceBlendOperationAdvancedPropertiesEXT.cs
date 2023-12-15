@@ -14,13 +14,18 @@ public unsafe partial struct VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT
     [NativeTypeName("uint32_t")]
     public uint advancedBlendMaxColorAttachments;
 
-    public VkBool32 advancedBlendIndependentBlend;
+    [NativeTypeName("VkBool32")]
+    public uint advancedBlendIndependentBlend;
 
-    public VkBool32 advancedBlendNonPremultipliedSrcColor;
+    [NativeTypeName("VkBool32")]
+    public uint advancedBlendNonPremultipliedSrcColor;
 
-    public VkBool32 advancedBlendNonPremultipliedDstColor;
+    [NativeTypeName("VkBool32")]
+    public uint advancedBlendNonPremultipliedDstColor;
 
-    public VkBool32 advancedBlendCorrelatedOverlap;
+    [NativeTypeName("VkBool32")]
+    public uint advancedBlendCorrelatedOverlap;
 
-    public VkBool32 advancedBlendAllOperations;
+    [NativeTypeName("VkBool32")]
+    public uint advancedBlendAllOperations;
 }

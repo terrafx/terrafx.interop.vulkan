@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDevicePresentIdFeaturesKHR
 
     public void* pNext;
 
-    public VkBool32 presentId;
+    [NativeTypeName("VkBool32")]
+    public uint presentId;
 }

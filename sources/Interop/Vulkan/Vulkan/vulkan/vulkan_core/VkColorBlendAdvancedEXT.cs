@@ -9,11 +9,14 @@ public partial struct VkColorBlendAdvancedEXT
 {
     public VkBlendOp advancedBlendOp;
 
-    public VkBool32 srcPremultiplied;
+    [NativeTypeName("VkBool32")]
+    public uint srcPremultiplied;
 
-    public VkBool32 dstPremultiplied;
+    [NativeTypeName("VkBool32")]
+    public uint dstPremultiplied;
 
     public VkBlendOverlapEXT blendOverlap;
 
-    public VkBool32 clampResults;
+    [NativeTypeName("VkBool32")]
+    public uint clampResults;
 }

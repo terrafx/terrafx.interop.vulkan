@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceShaderTerminateInvocationFeatures
 
     public void* pNext;
 
-    public VkBool32 shaderTerminateInvocation;
+    [NativeTypeName("VkBool32")]
+    public uint shaderTerminateInvocation;
 }

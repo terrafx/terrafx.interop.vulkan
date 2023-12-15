@@ -17,15 +17,21 @@ public unsafe partial struct VkPhysicalDeviceConservativeRasterizationProperties
 
     public float extraPrimitiveOverestimationSizeGranularity;
 
-    public VkBool32 primitiveUnderestimation;
+    [NativeTypeName("VkBool32")]
+    public uint primitiveUnderestimation;
 
-    public VkBool32 conservativePointAndLineRasterization;
+    [NativeTypeName("VkBool32")]
+    public uint conservativePointAndLineRasterization;
 
-    public VkBool32 degenerateTrianglesRasterized;
+    [NativeTypeName("VkBool32")]
+    public uint degenerateTrianglesRasterized;
 
-    public VkBool32 degenerateLinesRasterized;
+    [NativeTypeName("VkBool32")]
+    public uint degenerateLinesRasterized;
 
-    public VkBool32 fullyCoveredFragmentShaderInputVariable;
+    [NativeTypeName("VkBool32")]
+    public uint fullyCoveredFragmentShaderInputVariable;
 
-    public VkBool32 conservativeRasterizationPostDepthCoverage;
+    [NativeTypeName("VkBool32")]
+    public uint conservativeRasterizationPostDepthCoverage;
 }

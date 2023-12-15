@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceShaderDrawParameterFeatures
 
     public void* pNext;
 
-    public VkBool32 shaderDrawParameters;
+    [NativeTypeName("VkBool32")]
+    public uint shaderDrawParameters;
 }

@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDevicePrivateDataFeatures
 
     public void* pNext;
 
-    public VkBool32 privateData;
+    [NativeTypeName("VkBool32")]
+    public uint privateData;
 }

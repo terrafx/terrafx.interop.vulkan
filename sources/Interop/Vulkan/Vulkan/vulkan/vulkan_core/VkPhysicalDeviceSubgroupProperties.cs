@@ -18,5 +18,6 @@ public unsafe partial struct VkPhysicalDeviceSubgroupProperties
 
     public VkSubgroupFeatureFlags supportedOperations;
 
-    public VkBool32 quadOperationsInAllStages;
+    [NativeTypeName("VkBool32")]
+    public uint quadOperationsInAllStages;
 }

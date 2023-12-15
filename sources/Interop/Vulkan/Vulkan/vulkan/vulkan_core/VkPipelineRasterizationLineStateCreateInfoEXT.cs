@@ -14,7 +14,8 @@ public unsafe partial struct VkPipelineRasterizationLineStateCreateInfoEXT
 
     public VkLineRasterizationModeEXT lineRasterizationMode;
 
-    public VkBool32 stippledLineEnable;
+    [NativeTypeName("VkBool32")]
+    public uint stippledLineEnable;
 
     [NativeTypeName("uint32_t")]
     public uint lineStippleFactor;

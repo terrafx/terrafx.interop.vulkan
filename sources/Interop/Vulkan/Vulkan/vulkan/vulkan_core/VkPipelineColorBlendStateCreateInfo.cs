@@ -16,7 +16,8 @@ public unsafe partial struct VkPipelineColorBlendStateCreateInfo
 
     public VkPipelineColorBlendStateCreateFlags flags;
 
-    public VkBool32 logicOpEnable;
+    [NativeTypeName("VkBool32")]
+    public uint logicOpEnable;
 
     public VkLogicOp logicOp;
 

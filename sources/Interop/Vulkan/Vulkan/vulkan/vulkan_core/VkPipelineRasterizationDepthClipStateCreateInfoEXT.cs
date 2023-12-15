@@ -14,5 +14,6 @@ public unsafe partial struct VkPipelineRasterizationDepthClipStateCreateInfoEXT
 
     public VkPipelineRasterizationDepthClipStateCreateFlagsEXT flags;
 
-    public VkBool32 depthClipEnable;
+    [NativeTypeName("VkBool32")]
+    public uint depthClipEnable;
 }

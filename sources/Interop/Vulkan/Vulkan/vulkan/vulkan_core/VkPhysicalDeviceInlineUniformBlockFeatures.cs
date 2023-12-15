@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceInlineUniformBlockFeatures
 
     public void* pNext;
 
-    public VkBool32 inlineUniformBlock;
+    [NativeTypeName("VkBool32")]
+    public uint inlineUniformBlock;
 
-    public VkBool32 descriptorBindingInlineUniformBlockUpdateAfterBind;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBindingInlineUniformBlockUpdateAfterBind;
 }

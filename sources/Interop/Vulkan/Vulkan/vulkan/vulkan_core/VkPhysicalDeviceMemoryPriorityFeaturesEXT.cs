@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceMemoryPriorityFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 memoryPriority;
+    [NativeTypeName("VkBool32")]
+    public uint memoryPriority;
 }

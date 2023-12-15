@@ -11,5 +11,6 @@ public unsafe partial struct VkDescriptorSetLayoutSupport
 
     public void* pNext;
 
-    public VkBool32 supported;
+    [NativeTypeName("VkBool32")]
+    public uint supported;
 }

@@ -15,5 +15,6 @@ public unsafe partial struct VkPhysicalDeviceFragmentDensityMapPropertiesEXT
 
     public VkExtent2D maxFragmentDensityTexelSize;
 
-    public VkBool32 fragmentDensityInvocations;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentDensityInvocations;
 }

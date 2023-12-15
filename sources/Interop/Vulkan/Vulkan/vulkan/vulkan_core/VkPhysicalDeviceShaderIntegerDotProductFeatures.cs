@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceShaderIntegerDotProductFeatures
 
     public void* pNext;
 
-    public VkBool32 shaderIntegerDotProduct;
+    [NativeTypeName("VkBool32")]
+    public uint shaderIntegerDotProduct;
 }

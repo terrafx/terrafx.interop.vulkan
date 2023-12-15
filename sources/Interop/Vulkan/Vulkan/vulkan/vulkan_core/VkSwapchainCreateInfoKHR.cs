@@ -46,7 +46,8 @@ public unsafe partial struct VkSwapchainCreateInfoKHR
 
     public VkPresentModeKHR presentMode;
 
-    public VkBool32 clipped;
+    [NativeTypeName("VkBool32")]
+    public uint clipped;
 
     public VkSwapchainKHR oldSwapchain;
 }

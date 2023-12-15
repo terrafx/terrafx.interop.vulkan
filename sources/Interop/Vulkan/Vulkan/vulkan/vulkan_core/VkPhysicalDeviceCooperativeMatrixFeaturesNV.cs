@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceCooperativeMatrixFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 cooperativeMatrix;
+    [NativeTypeName("VkBool32")]
+    public uint cooperativeMatrix;
 
-    public VkBool32 cooperativeMatrixRobustBufferAccess;
+    [NativeTypeName("VkBool32")]
+    public uint cooperativeMatrixRobustBufferAccess;
 }

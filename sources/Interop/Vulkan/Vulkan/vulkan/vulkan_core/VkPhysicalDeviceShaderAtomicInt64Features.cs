@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceShaderAtomicInt64Features
 
     public void* pNext;
 
-    public VkBool32 shaderBufferInt64Atomics;
+    [NativeTypeName("VkBool32")]
+    public uint shaderBufferInt64Atomics;
 
-    public VkBool32 shaderSharedInt64Atomics;
+    [NativeTypeName("VkBool32")]
+    public uint shaderSharedInt64Atomics;
 }

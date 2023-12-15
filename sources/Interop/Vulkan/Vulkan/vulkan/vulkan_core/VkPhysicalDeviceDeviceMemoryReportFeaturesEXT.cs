@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceDeviceMemoryReportFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 deviceMemoryReport;
+    [NativeTypeName("VkBool32")]
+    public uint deviceMemoryReport;
 }

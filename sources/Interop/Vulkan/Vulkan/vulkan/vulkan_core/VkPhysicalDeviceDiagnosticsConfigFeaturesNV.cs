@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceDiagnosticsConfigFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 diagnosticsConfig;
+    [NativeTypeName("VkBool32")]
+    public uint diagnosticsConfig;
 }

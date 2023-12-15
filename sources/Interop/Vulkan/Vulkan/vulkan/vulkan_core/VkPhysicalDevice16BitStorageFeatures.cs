@@ -11,11 +11,15 @@ public unsafe partial struct VkPhysicalDevice16BitStorageFeatures
 
     public void* pNext;
 
-    public VkBool32 storageBuffer16BitAccess;
+    [NativeTypeName("VkBool32")]
+    public uint storageBuffer16BitAccess;
 
-    public VkBool32 uniformAndStorageBuffer16BitAccess;
+    [NativeTypeName("VkBool32")]
+    public uint uniformAndStorageBuffer16BitAccess;
 
-    public VkBool32 storagePushConstant16;
+    [NativeTypeName("VkBool32")]
+    public uint storagePushConstant16;
 
-    public VkBool32 storageInputOutput16;
+    [NativeTypeName("VkBool32")]
+    public uint storageInputOutput16;
 }

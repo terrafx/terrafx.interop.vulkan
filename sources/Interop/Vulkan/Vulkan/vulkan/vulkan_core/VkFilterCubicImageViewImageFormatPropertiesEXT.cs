@@ -11,7 +11,9 @@ public unsafe partial struct VkFilterCubicImageViewImageFormatPropertiesEXT
 
     public void* pNext;
 
-    public VkBool32 filterCubic;
+    [NativeTypeName("VkBool32")]
+    public uint filterCubic;
 
-    public VkBool32 filterCubicMinmax;
+    [NativeTypeName("VkBool32")]
+    public uint filterCubicMinmax;
 }

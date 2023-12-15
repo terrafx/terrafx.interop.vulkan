@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceImageCompressionControlSwapchainFea
 
     public void* pNext;
 
-    public VkBool32 imageCompressionControlSwapchain;
+    [NativeTypeName("VkBool32")]
+    public uint imageCompressionControlSwapchain;
 }

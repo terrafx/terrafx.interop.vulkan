@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceShaderFloat16Int8Features
 
     public void* pNext;
 
-    public VkBool32 shaderFloat16;
+    [NativeTypeName("VkBool32")]
+    public uint shaderFloat16;
 
-    public VkBool32 shaderInt8;
+    [NativeTypeName("VkBool32")]
+    public uint shaderInt8;
 }

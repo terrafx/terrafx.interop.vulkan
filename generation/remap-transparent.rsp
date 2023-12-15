@@ -1,7 +1,6 @@
 --with-transparent-struct
 VkAccelerationStructureKHR=ulong;HandleVulkan
 VkAccelerationStructureNV=ulong;HandleVulkan
-VkBool32=uint;Boolean
 VkBuffer=ulong;HandleVulkan
 VkBufferCollectionFUCHSIA=ulong;HandleVulkan
 VkBufferView=ulong;HandleVulkan
@@ -41,6 +40,7 @@ VkRenderPass=ulong;HandleVulkan
 VkSampler=ulong;HandleVulkan
 VkSamplerYcbcrConversion=ulong;HandleVulkan
 VkSemaphore=ulong;HandleVulkan
+VkShaderEXT=ulong;HandleVulkan
 VkShaderModule=ulong;HandleVulkan
 VkSurfaceKHR=ulong;HandleVulkan
 VkSwapchainKHR=ulong;HandleVulkan

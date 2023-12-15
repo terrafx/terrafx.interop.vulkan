@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceSamplerFilterMinmaxProperties
 
     public void* pNext;
 
-    public VkBool32 filterMinmaxSingleComponentFormats;
+    [NativeTypeName("VkBool32")]
+    public uint filterMinmaxSingleComponentFormats;
 
-    public VkBool32 filterMinmaxImageComponentMapping;
+    [NativeTypeName("VkBool32")]
+    public uint filterMinmaxImageComponentMapping;
 }

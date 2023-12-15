@@ -7,5 +7,5 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkPhysicalDeviceManualImports
 {
-    public delegate* unmanaged<VkPhysicalDevice, uint, void*, uint, VkBool32> vkGetPhysicalDeviceXcbPresentationSupportKHR;
+    public delegate* unmanaged<VkPhysicalDevice, uint, void*, uint, uint> vkGetPhysicalDeviceXcbPresentationSupportKHR;
 }

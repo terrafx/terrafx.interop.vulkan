@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatur
 
     public void* pNext;
 
-    public VkBool32 shaderZeroInitializeWorkgroupMemory;
+    [NativeTypeName("VkBool32")]
+    public uint shaderZeroInitializeWorkgroupMemory;
 }

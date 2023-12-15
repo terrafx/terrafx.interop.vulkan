@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceAmigoProfilingFeaturesSEC
 
     public void* pNext;
 
-    public VkBool32 amigoProfiling;
+    [NativeTypeName("VkBool32")]
+    public uint amigoProfiling;
 }

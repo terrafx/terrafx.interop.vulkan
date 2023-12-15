@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceFaultFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 deviceFault;
+    [NativeTypeName("VkBool32")]
+    public uint deviceFault;
 
-    public VkBool32 deviceFaultVendorBinary;
+    [NativeTypeName("VkBool32")]
+    public uint deviceFaultVendorBinary;
 }

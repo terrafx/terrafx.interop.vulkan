@@ -14,24 +14,21 @@ public unsafe partial struct StdVideoEncodeH264SliceHeader
 
     public StdVideoH264SliceType slice_type;
 
-    [NativeTypeName("uint16_t")]
-    public ushort idr_pic_id;
-
-    [NativeTypeName("uint8_t")]
-    public byte num_ref_idx_l0_active_minus1;
-
-    [NativeTypeName("uint8_t")]
-    public byte num_ref_idx_l1_active_minus1;
-
-    public StdVideoH264CabacInitIdc cabac_init_idc;
-
-    public StdVideoH264DisableDeblockingFilterIdc disable_deblocking_filter_idc;
-
     [NativeTypeName("int8_t")]
     public sbyte slice_alpha_c0_offset_div2;
 
     [NativeTypeName("int8_t")]
     public sbyte slice_beta_offset_div2;
+
+    [NativeTypeName("int8_t")]
+    public sbyte slice_qp_delta;
+
+    [NativeTypeName("uint8_t")]
+    public byte reserved1;
+
+    public StdVideoH264CabacInitIdc cabac_init_idc;
+
+    public StdVideoH264DisableDeblockingFilterIdc disable_deblocking_filter_idc;
 
     [NativeTypeName("const StdVideoEncodeH264WeightTable *")]
     public StdVideoEncodeH264WeightTable* pWeightTable;

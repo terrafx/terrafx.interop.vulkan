@@ -17,13 +17,17 @@ public unsafe partial struct VkPhysicalDeviceOpticalFlowPropertiesNV
     [NativeTypeName("VkOpticalFlowGridSizeFlagsNV")]
     public uint supportedHintGridSizes;
 
-    public VkBool32 hintSupported;
+    [NativeTypeName("VkBool32")]
+    public uint hintSupported;
 
-    public VkBool32 costSupported;
+    [NativeTypeName("VkBool32")]
+    public uint costSupported;
 
-    public VkBool32 bidirectionalFlowSupported;
+    [NativeTypeName("VkBool32")]
+    public uint bidirectionalFlowSupported;
 
-    public VkBool32 globalFlowSupported;
+    [NativeTypeName("VkBool32")]
+    public uint globalFlowSupported;
 
     [NativeTypeName("uint32_t")]
     public uint minWidth;

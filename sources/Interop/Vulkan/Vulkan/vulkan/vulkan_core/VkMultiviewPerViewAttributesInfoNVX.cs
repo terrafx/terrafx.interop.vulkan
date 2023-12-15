@@ -12,7 +12,9 @@ public unsafe partial struct VkMultiviewPerViewAttributesInfoNVX
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 perViewAttributes;
+    [NativeTypeName("VkBool32")]
+    public uint perViewAttributes;
 
-    public VkBool32 perViewAttributesPositionXOnly;
+    [NativeTypeName("VkBool32")]
+    public uint perViewAttributesPositionXOnly;
 }

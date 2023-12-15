@@ -30,4 +30,7 @@ public static partial class Vulkan
 
     [NativeTypeName("#define STD_VIDEO_H264_MAX_CHROMA_PLANES 2")]
     public const int STD_VIDEO_H264_MAX_CHROMA_PLANES = 2;
+
+    [NativeTypeName("#define STD_VIDEO_H264_NO_REFERENCE_PICTURE 0xFF")]
+    public const int STD_VIDEO_H264_NO_REFERENCE_PICTURE = 0xFF;
 }

@@ -15,7 +15,9 @@ public unsafe partial struct VkPhysicalDeviceDepthStencilResolveProperties
 
     public VkResolveModeFlags supportedStencilResolveModes;
 
-    public VkBool32 independentResolveNone;
+    [NativeTypeName("VkBool32")]
+    public uint independentResolveNone;
 
-    public VkBool32 independentResolve;
+    [NativeTypeName("VkBool32")]
+    public uint independentResolve;
 }

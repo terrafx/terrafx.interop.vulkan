@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceImageRobustnessFeatures
 
     public void* pNext;
 
-    public VkBool32 robustImageAccess;
+    [NativeTypeName("VkBool32")]
+    public uint robustImageAccess;
 }

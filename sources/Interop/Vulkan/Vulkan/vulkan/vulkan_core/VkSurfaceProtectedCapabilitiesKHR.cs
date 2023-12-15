@@ -12,5 +12,6 @@ public unsafe partial struct VkSurfaceProtectedCapabilitiesKHR
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 supportsProtected;
+    [NativeTypeName("VkBool32")]
+    public uint supportsProtected;
 }

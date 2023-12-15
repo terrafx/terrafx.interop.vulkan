@@ -12,5 +12,6 @@ public unsafe partial struct VkPipelineViewportDepthClipControlCreateInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 negativeOneToOne;
+    [NativeTypeName("VkBool32")]
+    public uint negativeOneToOne;
 }

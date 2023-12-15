@@ -11,13 +11,18 @@ public unsafe partial struct VkPhysicalDeviceMeshShaderFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 taskShader;
+    [NativeTypeName("VkBool32")]
+    public uint taskShader;
 
-    public VkBool32 meshShader;
+    [NativeTypeName("VkBool32")]
+    public uint meshShader;
 
-    public VkBool32 multiviewMeshShader;
+    [NativeTypeName("VkBool32")]
+    public uint multiviewMeshShader;
 
-    public VkBool32 primitiveFragmentShadingRateMeshShader;
+    [NativeTypeName("VkBool32")]
+    public uint primitiveFragmentShadingRateMeshShader;
 
-    public VkBool32 meshShaderQueries;
+    [NativeTypeName("VkBool32")]
+    public uint meshShaderQueries;
 }

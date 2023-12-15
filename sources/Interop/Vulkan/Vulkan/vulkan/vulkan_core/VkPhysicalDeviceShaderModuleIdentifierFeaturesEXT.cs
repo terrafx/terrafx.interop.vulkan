@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceShaderModuleIdentifierFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 shaderModuleIdentifier;
+    [NativeTypeName("VkBool32")]
+    public uint shaderModuleIdentifier;
 }

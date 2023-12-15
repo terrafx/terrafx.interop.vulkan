@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceTransformFeedbackFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 transformFeedback;
+    [NativeTypeName("VkBool32")]
+    public uint transformFeedback;
 
-    public VkBool32 geometryStreams;
+    [NativeTypeName("VkBool32")]
+    public uint geometryStreams;
 }

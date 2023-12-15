@@ -11,9 +11,12 @@ public unsafe partial struct VkPhysicalDeviceImageProcessingFeaturesQCOM
 
     public void* pNext;
 
-    public VkBool32 textureSampleWeighted;
+    [NativeTypeName("VkBool32")]
+    public uint textureSampleWeighted;
 
-    public VkBool32 textureBoxFilter;
+    [NativeTypeName("VkBool32")]
+    public uint textureBoxFilter;
 
-    public VkBool32 textureBlockMatch;
+    [NativeTypeName("VkBool32")]
+    public uint textureBlockMatch;
 }

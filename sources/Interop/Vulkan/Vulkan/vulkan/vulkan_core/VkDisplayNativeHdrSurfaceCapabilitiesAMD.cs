@@ -11,5 +11,6 @@ public unsafe partial struct VkDisplayNativeHdrSurfaceCapabilitiesAMD
 
     public void* pNext;
 
-    public VkBool32 localDimmingSupport;
+    [NativeTypeName("VkBool32")]
+    public uint localDimmingSupport;
 }

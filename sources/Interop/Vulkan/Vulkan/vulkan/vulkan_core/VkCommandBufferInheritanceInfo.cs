@@ -19,7 +19,8 @@ public unsafe partial struct VkCommandBufferInheritanceInfo
 
     public VkFramebuffer framebuffer;
 
-    public VkBool32 occlusionQueryEnable;
+    [NativeTypeName("VkBool32")]
+    public uint occlusionQueryEnable;
 
     public VkQueryControlFlags queryFlags;
 

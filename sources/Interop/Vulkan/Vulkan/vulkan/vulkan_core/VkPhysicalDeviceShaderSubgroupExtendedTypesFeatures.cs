@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures
 
     public void* pNext;
 
-    public VkBool32 shaderSubgroupExtendedTypes;
+    [NativeTypeName("VkBool32")]
+    public uint shaderSubgroupExtendedTypes;
 }

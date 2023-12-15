@@ -12,7 +12,8 @@ public unsafe partial struct VkAccelerationStructureGeometryInstancesDataKHR
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 arrayOfPointers;
+    [NativeTypeName("VkBool32")]
+    public uint arrayOfPointers;
 
     public VkDeviceOrHostAddressConstKHR data;
 }

@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceImage2DViewOf3DFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 image2DViewOf3D;
+    [NativeTypeName("VkBool32")]
+    public uint image2DViewOf3D;
 
-    public VkBool32 sampler2DViewOf3D;
+    [NativeTypeName("VkBool32")]
+    public uint sampler2DViewOf3D;
 }

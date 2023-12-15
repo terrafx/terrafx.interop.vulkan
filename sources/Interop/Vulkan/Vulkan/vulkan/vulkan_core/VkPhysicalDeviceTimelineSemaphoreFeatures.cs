@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceTimelineSemaphoreFeatures
 
     public void* pNext;
 
-    public VkBool32 timelineSemaphore;
+    [NativeTypeName("VkBool32")]
+    public uint timelineSemaphore;
 }

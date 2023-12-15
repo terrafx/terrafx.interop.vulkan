@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceDepthClampZeroOneFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 depthClampZeroOne;
+    [NativeTypeName("VkBool32")]
+    public uint depthClampZeroOne;
 }

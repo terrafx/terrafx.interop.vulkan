@@ -12,7 +12,8 @@ public unsafe partial struct VkMultisampledRenderToSingleSampledInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 multisampledRenderToSingleSampledEnable;
+    [NativeTypeName("VkBool32")]
+    public uint multisampledRenderToSingleSampledEnable;
 
     [NativeTypeName("VkSampleCountFlagBits")]
     public VkSampleCountFlags rasterizationSamples;

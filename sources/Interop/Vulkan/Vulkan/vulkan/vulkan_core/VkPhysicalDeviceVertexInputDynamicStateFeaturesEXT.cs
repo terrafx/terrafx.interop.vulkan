@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 vertexInputDynamicState;
+    [NativeTypeName("VkBool32")]
+    public uint vertexInputDynamicState;
 }

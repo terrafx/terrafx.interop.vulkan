@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceProvokingVertexPropertiesEXT
 
     public void* pNext;
 
-    public VkBool32 provokingVertexModePerPipeline;
+    [NativeTypeName("VkBool32")]
+    public uint provokingVertexModePerPipeline;
 
-    public VkBool32 transformFeedbackPreservesTriangleFanProvokingVertex;
+    [NativeTypeName("VkBool32")]
+    public uint transformFeedbackPreservesTriangleFanProvokingVertex;
 }

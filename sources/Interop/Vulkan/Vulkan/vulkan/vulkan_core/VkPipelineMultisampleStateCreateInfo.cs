@@ -17,14 +17,17 @@ public unsafe partial struct VkPipelineMultisampleStateCreateInfo
     [NativeTypeName("VkSampleCountFlagBits")]
     public VkSampleCountFlags rasterizationSamples;
 
-    public VkBool32 sampleShadingEnable;
+    [NativeTypeName("VkBool32")]
+    public uint sampleShadingEnable;
 
     public float minSampleShading;
 
     [NativeTypeName("const VkSampleMask *")]
     public uint* pSampleMask;
 
-    public VkBool32 alphaToCoverageEnable;
+    [NativeTypeName("VkBool32")]
+    public uint alphaToCoverageEnable;
 
-    public VkBool32 alphaToOneEnable;
+    [NativeTypeName("VkBool32")]
+    public uint alphaToOneEnable;
 }

@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceExclusiveScissorFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 exclusiveScissor;
+    [NativeTypeName("VkBool32")]
+    public uint exclusiveScissor;
 }

@@ -16,5 +16,6 @@ public unsafe partial struct VkPipelineInputAssemblyStateCreateInfo
 
     public VkPrimitiveTopology topology;
 
-    public VkBool32 primitiveRestartEnable;
+    [NativeTypeName("VkBool32")]
+    public uint primitiveRestartEnable;
 }

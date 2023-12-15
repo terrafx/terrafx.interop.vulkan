@@ -12,7 +12,7 @@ public partial struct StdVideoEncodeH265PictureInfoFlags
     public uint _bitfield;
 
     [NativeTypeName("uint32_t : 1")]
-    public uint is_reference_flag
+    public uint is_reference
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         readonly get
@@ -44,7 +44,7 @@ public partial struct StdVideoEncodeH265PictureInfoFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint long_term_flag
+    public uint used_for_long_term_reference
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         readonly get
@@ -88,6 +88,86 @@ public partial struct StdVideoEncodeH265PictureInfoFlags
         set
         {
             _bitfield = (_bitfield & ~(0x1u << 4)) | ((value & 0x1u) << 4);
+        }
+    }
+
+    [NativeTypeName("uint32_t : 1")]
+    public uint pic_output_flag
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        readonly get
+        {
+            return (_bitfield >> 5) & 0x1u;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        set
+        {
+            _bitfield = (_bitfield & ~(0x1u << 5)) | ((value & 0x1u) << 5);
+        }
+    }
+
+    [NativeTypeName("uint32_t : 1")]
+    public uint no_output_of_prior_pics_flag
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        readonly get
+        {
+            return (_bitfield >> 6) & 0x1u;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        set
+        {
+            _bitfield = (_bitfield & ~(0x1u << 6)) | ((value & 0x1u) << 6);
+        }
+    }
+
+    [NativeTypeName("uint32_t : 1")]
+    public uint short_term_ref_pic_set_sps_flag
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        readonly get
+        {
+            return (_bitfield >> 7) & 0x1u;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        set
+        {
+            _bitfield = (_bitfield & ~(0x1u << 7)) | ((value & 0x1u) << 7);
+        }
+    }
+
+    [NativeTypeName("uint32_t : 1")]
+    public uint slice_temporal_mvp_enabled_flag
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        readonly get
+        {
+            return (_bitfield >> 8) & 0x1u;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        set
+        {
+            _bitfield = (_bitfield & ~(0x1u << 8)) | ((value & 0x1u) << 8);
+        }
+    }
+
+    [NativeTypeName("uint32_t : 23")]
+    public uint reserved
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        readonly get
+        {
+            return (_bitfield >> 9) & 0x7FFFFFu;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        set
+        {
+            _bitfield = (_bitfield & ~(0x7FFFFFu << 9)) | ((value & 0x7FFFFFu) << 9);
         }
     }
 }

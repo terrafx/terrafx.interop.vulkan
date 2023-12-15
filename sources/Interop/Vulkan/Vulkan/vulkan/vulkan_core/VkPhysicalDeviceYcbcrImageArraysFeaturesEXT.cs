@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceYcbcrImageArraysFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 ycbcrImageArrays;
+    [NativeTypeName("VkBool32")]
+    public uint ycbcrImageArrays;
 }

@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDevicePerformanceQueryFeaturesKHR
 
     public void* pNext;
 
-    public VkBool32 performanceCounterQueryPools;
+    [NativeTypeName("VkBool32")]
+    public uint performanceCounterQueryPools;
 
-    public VkBool32 performanceCounterMultipleQueryPools;
+    [NativeTypeName("VkBool32")]
+    public uint performanceCounterMultipleQueryPools;
 }

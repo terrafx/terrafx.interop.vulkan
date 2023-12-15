@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 texelBufferAlignment;
+    [NativeTypeName("VkBool32")]
+    public uint texelBufferAlignment;
 }

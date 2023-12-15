@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEX
 
     public void* pNext;
 
-    public VkBool32 graphicsPipelineLibraryFastLinking;
+    [NativeTypeName("VkBool32")]
+    public uint graphicsPipelineLibraryFastLinking;
 
-    public VkBool32 graphicsPipelineLibraryIndependentInterpolationDecoration;
+    [NativeTypeName("VkBool32")]
+    public uint graphicsPipelineLibraryIndependentInterpolationDecoration;
 }

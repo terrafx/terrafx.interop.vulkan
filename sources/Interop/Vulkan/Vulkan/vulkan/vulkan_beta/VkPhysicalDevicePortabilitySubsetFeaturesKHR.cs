@@ -11,33 +11,48 @@ public unsafe partial struct VkPhysicalDevicePortabilitySubsetFeaturesKHR
 
     public void* pNext;
 
-    public VkBool32 constantAlphaColorBlendFactors;
+    [NativeTypeName("VkBool32")]
+    public uint constantAlphaColorBlendFactors;
 
-    public VkBool32 events;
+    [NativeTypeName("VkBool32")]
+    public uint events;
 
-    public VkBool32 imageViewFormatReinterpretation;
+    [NativeTypeName("VkBool32")]
+    public uint imageViewFormatReinterpretation;
 
-    public VkBool32 imageViewFormatSwizzle;
+    [NativeTypeName("VkBool32")]
+    public uint imageViewFormatSwizzle;
 
-    public VkBool32 imageView2DOn3DImage;
+    [NativeTypeName("VkBool32")]
+    public uint imageView2DOn3DImage;
 
-    public VkBool32 multisampleArrayImage;
+    [NativeTypeName("VkBool32")]
+    public uint multisampleArrayImage;
 
-    public VkBool32 mutableComparisonSamplers;
+    [NativeTypeName("VkBool32")]
+    public uint mutableComparisonSamplers;
 
-    public VkBool32 pointPolygons;
+    [NativeTypeName("VkBool32")]
+    public uint pointPolygons;
 
-    public VkBool32 samplerMipLodBias;
+    [NativeTypeName("VkBool32")]
+    public uint samplerMipLodBias;
 
-    public VkBool32 separateStencilMaskRef;
+    [NativeTypeName("VkBool32")]
+    public uint separateStencilMaskRef;
 
-    public VkBool32 shaderSampleRateInterpolationFunctions;
+    [NativeTypeName("VkBool32")]
+    public uint shaderSampleRateInterpolationFunctions;
 
-    public VkBool32 tessellationIsolines;
+    [NativeTypeName("VkBool32")]
+    public uint tessellationIsolines;
 
-    public VkBool32 tessellationPointMode;
+    [NativeTypeName("VkBool32")]
+    public uint tessellationPointMode;
 
-    public VkBool32 triangleFans;
+    [NativeTypeName("VkBool32")]
+    public uint triangleFans;
 
-    public VkBool32 vertexAttributeAccessBeyondStride;
+    [NativeTypeName("VkBool32")]
+    public uint vertexAttributeAccessBeyondStride;
 }

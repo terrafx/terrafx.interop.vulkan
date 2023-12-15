@@ -11,33 +11,48 @@ public unsafe partial struct VkPhysicalDeviceVulkan13Features
 
     public void* pNext;
 
-    public VkBool32 robustImageAccess;
+    [NativeTypeName("VkBool32")]
+    public uint robustImageAccess;
 
-    public VkBool32 inlineUniformBlock;
+    [NativeTypeName("VkBool32")]
+    public uint inlineUniformBlock;
 
-    public VkBool32 descriptorBindingInlineUniformBlockUpdateAfterBind;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBindingInlineUniformBlockUpdateAfterBind;
 
-    public VkBool32 pipelineCreationCacheControl;
+    [NativeTypeName("VkBool32")]
+    public uint pipelineCreationCacheControl;
 
-    public VkBool32 privateData;
+    [NativeTypeName("VkBool32")]
+    public uint privateData;
 
-    public VkBool32 shaderDemoteToHelperInvocation;
+    [NativeTypeName("VkBool32")]
+    public uint shaderDemoteToHelperInvocation;
 
-    public VkBool32 shaderTerminateInvocation;
+    [NativeTypeName("VkBool32")]
+    public uint shaderTerminateInvocation;
 
-    public VkBool32 subgroupSizeControl;
+    [NativeTypeName("VkBool32")]
+    public uint subgroupSizeControl;
 
-    public VkBool32 computeFullSubgroups;
+    [NativeTypeName("VkBool32")]
+    public uint computeFullSubgroups;
 
-    public VkBool32 synchronization2;
+    [NativeTypeName("VkBool32")]
+    public uint synchronization2;
 
-    public VkBool32 textureCompressionASTC_HDR;
+    [NativeTypeName("VkBool32")]
+    public uint textureCompressionASTC_HDR;
 
-    public VkBool32 shaderZeroInitializeWorkgroupMemory;
+    [NativeTypeName("VkBool32")]
+    public uint shaderZeroInitializeWorkgroupMemory;
 
-    public VkBool32 dynamicRendering;
+    [NativeTypeName("VkBool32")]
+    public uint dynamicRendering;
 
-    public VkBool32 shaderIntegerDotProduct;
+    [NativeTypeName("VkBool32")]
+    public uint shaderIntegerDotProduct;
 
-    public VkBool32 maintenance4;
+    [NativeTypeName("VkBool32")]
+    public uint maintenance4;
 }

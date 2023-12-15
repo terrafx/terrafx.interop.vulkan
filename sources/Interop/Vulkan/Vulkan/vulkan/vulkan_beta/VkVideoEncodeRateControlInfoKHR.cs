@@ -18,9 +18,15 @@ public unsafe partial struct VkVideoEncodeRateControlInfoKHR
     [NativeTypeName("VkVideoEncodeRateControlModeFlagBitsKHR")]
     public VkVideoEncodeRateControlModeFlagsKHR rateControlMode;
 
-    [NativeTypeName("uint8_t")]
-    public byte layerCount;
+    [NativeTypeName("uint32_t")]
+    public uint layerCount;
 
     [NativeTypeName("const VkVideoEncodeRateControlLayerInfoKHR *")]
-    public VkVideoEncodeRateControlLayerInfoKHR* pLayerConfigs;
+    public VkVideoEncodeRateControlLayerInfoKHR* pLayers;
+
+    [NativeTypeName("uint32_t")]
+    public uint virtualBufferSizeInMs;
+
+    [NativeTypeName("uint32_t")]
+    public uint initialVirtualBufferSizeInMs;
 }

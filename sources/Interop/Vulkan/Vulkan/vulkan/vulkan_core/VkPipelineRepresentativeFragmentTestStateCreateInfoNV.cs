@@ -12,5 +12,6 @@ public unsafe partial struct VkPipelineRepresentativeFragmentTestStateCreateInfo
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    public VkBool32 representativeFragmentTestEnable;
+    [NativeTypeName("VkBool32")]
+    public uint representativeFragmentTestEnable;
 }

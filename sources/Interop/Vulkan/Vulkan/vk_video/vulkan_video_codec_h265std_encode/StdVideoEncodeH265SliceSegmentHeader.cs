@@ -15,16 +15,7 @@ public unsafe partial struct StdVideoEncodeH265SliceSegmentHeader
     public uint slice_segment_address;
 
     [NativeTypeName("uint8_t")]
-    public byte short_term_ref_pic_set_idx;
-
-    [NativeTypeName("uint8_t")]
     public byte collocated_ref_idx;
-
-    [NativeTypeName("uint8_t")]
-    public byte num_ref_idx_l0_active_minus1;
-
-    [NativeTypeName("uint8_t")]
-    public byte num_ref_idx_l1_active_minus1;
 
     [NativeTypeName("uint8_t")]
     public byte MaxNumMergeCand;
@@ -50,11 +41,11 @@ public unsafe partial struct StdVideoEncodeH265SliceSegmentHeader
     [NativeTypeName("int8_t")]
     public sbyte slice_act_cr_qp_offset;
 
-    [NativeTypeName("const StdVideoH265ShortTermRefPicSet *")]
-    public StdVideoH265ShortTermRefPicSet* pShortTermRefPicSet;
+    [NativeTypeName("int8_t")]
+    public sbyte slice_qp_delta;
 
-    [NativeTypeName("const StdVideoEncodeH265SliceSegmentLongTermRefPics *")]
-    public StdVideoEncodeH265SliceSegmentLongTermRefPics* pLongTermRefPics;
+    [NativeTypeName("uint16_t")]
+    public ushort reserved1;
 
     [NativeTypeName("const StdVideoEncodeH265WeightTable *")]
     public StdVideoEncodeH265WeightTable* pWeightTable;

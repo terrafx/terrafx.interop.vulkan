@@ -85,13 +85,17 @@ public unsafe partial struct VkPhysicalDeviceMeshShaderPropertiesEXT
     [NativeTypeName("uint32_t")]
     public uint maxPreferredMeshWorkGroupInvocations;
 
-    public VkBool32 prefersLocalInvocationVertexOutput;
+    [NativeTypeName("VkBool32")]
+    public uint prefersLocalInvocationVertexOutput;
 
-    public VkBool32 prefersLocalInvocationPrimitiveOutput;
+    [NativeTypeName("VkBool32")]
+    public uint prefersLocalInvocationPrimitiveOutput;
 
-    public VkBool32 prefersCompactVertexOutput;
+    [NativeTypeName("VkBool32")]
+    public uint prefersCompactVertexOutput;
 
-    public VkBool32 prefersCompactPrimitiveOutput;
+    [NativeTypeName("VkBool32")]
+    public uint prefersCompactPrimitiveOutput;
 
     [InlineArray(3)]
     public partial struct _maxTaskWorkGroupCount_e__FixedBuffer

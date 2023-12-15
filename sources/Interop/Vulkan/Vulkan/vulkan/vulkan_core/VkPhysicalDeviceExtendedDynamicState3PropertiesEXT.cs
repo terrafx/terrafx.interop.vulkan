@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceExtendedDynamicState3PropertiesEXT
 
     public void* pNext;
 
-    public VkBool32 dynamicPrimitiveTopologyUnrestricted;
+    [NativeTypeName("VkBool32")]
+    public uint dynamicPrimitiveTopologyUnrestricted;
 }

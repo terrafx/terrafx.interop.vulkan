@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceVariablePointersFeatures
 
     public void* pNext;
 
-    public VkBool32 variablePointersStorageBuffer;
+    [NativeTypeName("VkBool32")]
+    public uint variablePointersStorageBuffer;
 
-    public VkBool32 variablePointers;
+    [NativeTypeName("VkBool32")]
+    public uint variablePointers;
 }

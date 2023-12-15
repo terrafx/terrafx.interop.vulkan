@@ -22,6 +22,9 @@ public unsafe partial struct VkPhysicalDeviceClusterCullingShaderPropertiesHUAWE
     [NativeTypeName("uint32_t")]
     public uint maxOutputClusterCount;
 
+    [NativeTypeName("VkDeviceSize")]
+    public ulong indirectBufferOffsetAlignment;
+
     [InlineArray(3)]
     public partial struct _maxWorkGroupCount_e__FixedBuffer
     {

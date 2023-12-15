@@ -12,22 +12,18 @@ public unsafe partial struct VkVideoEncodeH264RateControlLayerInfoEXT
     [NativeTypeName("const void *")]
     public void* pNext;
 
-    [NativeTypeName("uint8_t")]
-    public byte temporalLayerId;
-
-    public VkBool32 useInitialRcQp;
-
-    public VkVideoEncodeH264QpEXT initialRcQp;
-
-    public VkBool32 useMinQp;
+    [NativeTypeName("VkBool32")]
+    public uint useMinQp;
 
     public VkVideoEncodeH264QpEXT minQp;
 
-    public VkBool32 useMaxQp;
+    [NativeTypeName("VkBool32")]
+    public uint useMaxQp;
 
     public VkVideoEncodeH264QpEXT maxQp;
 
-    public VkBool32 useMaxFrameSize;
+    [NativeTypeName("VkBool32")]
+    public uint useMaxFrameSize;
 
     public VkVideoEncodeH264FrameSizeEXT maxFrameSize;
 }

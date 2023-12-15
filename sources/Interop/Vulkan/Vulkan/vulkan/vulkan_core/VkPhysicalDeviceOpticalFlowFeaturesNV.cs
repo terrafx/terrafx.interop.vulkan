@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceOpticalFlowFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 opticalFlow;
+    [NativeTypeName("VkBool32")]
+    public uint opticalFlow;
 }

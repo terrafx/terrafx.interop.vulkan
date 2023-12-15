@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceSubgroupSizeControlFeatures
 
     public void* pNext;
 
-    public VkBool32 subgroupSizeControl;
+    [NativeTypeName("VkBool32")]
+    public uint subgroupSizeControl;
 
-    public VkBool32 computeFullSubgroups;
+    [NativeTypeName("VkBool32")]
+    public uint computeFullSubgroups;
 }

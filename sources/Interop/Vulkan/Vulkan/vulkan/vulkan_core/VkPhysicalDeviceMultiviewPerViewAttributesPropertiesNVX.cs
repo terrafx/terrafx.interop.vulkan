@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceMultiviewPerViewAttributesPropertie
 
     public void* pNext;
 
-    public VkBool32 perViewPositionAllComponents;
+    [NativeTypeName("VkBool32")]
+    public uint perViewPositionAllComponents;
 }

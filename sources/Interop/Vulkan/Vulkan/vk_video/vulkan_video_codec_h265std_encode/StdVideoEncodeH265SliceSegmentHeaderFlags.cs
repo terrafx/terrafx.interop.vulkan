@@ -28,7 +28,7 @@ public partial struct StdVideoEncodeH265SliceSegmentHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint no_output_of_prior_pics_flag
+    public uint dependent_slice_segment_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         readonly get
@@ -44,7 +44,7 @@ public partial struct StdVideoEncodeH265SliceSegmentHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint dependent_slice_segment_flag
+    public uint slice_sao_luma_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         readonly get
@@ -60,7 +60,7 @@ public partial struct StdVideoEncodeH265SliceSegmentHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint pic_output_flag
+    public uint slice_sao_chroma_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         readonly get
@@ -76,7 +76,7 @@ public partial struct StdVideoEncodeH265SliceSegmentHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint short_term_ref_pic_set_sps_flag
+    public uint num_ref_idx_active_override_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         readonly get
@@ -92,7 +92,7 @@ public partial struct StdVideoEncodeH265SliceSegmentHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint slice_temporal_mvp_enable_flag
+    public uint mvd_l1_zero_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         readonly get
@@ -108,7 +108,7 @@ public partial struct StdVideoEncodeH265SliceSegmentHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint slice_sao_luma_flag
+    public uint cabac_init_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         readonly get
@@ -124,7 +124,7 @@ public partial struct StdVideoEncodeH265SliceSegmentHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint slice_sao_chroma_flag
+    public uint cu_chroma_qp_offset_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         readonly get
@@ -140,7 +140,7 @@ public partial struct StdVideoEncodeH265SliceSegmentHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint num_ref_idx_active_override_flag
+    public uint deblocking_filter_override_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         readonly get
@@ -156,7 +156,7 @@ public partial struct StdVideoEncodeH265SliceSegmentHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint mvd_l1_zero_flag
+    public uint slice_deblocking_filter_disabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         readonly get
@@ -172,7 +172,7 @@ public partial struct StdVideoEncodeH265SliceSegmentHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint cabac_init_flag
+    public uint collocated_from_l0_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         readonly get
@@ -188,7 +188,7 @@ public partial struct StdVideoEncodeH265SliceSegmentHeaderFlags
     }
 
     [NativeTypeName("uint32_t : 1")]
-    public uint cu_chroma_qp_offset_enabled_flag
+    public uint slice_loop_filter_across_slices_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         readonly get
@@ -203,67 +203,19 @@ public partial struct StdVideoEncodeH265SliceSegmentHeaderFlags
         }
     }
 
-    [NativeTypeName("uint32_t : 1")]
-    public uint deblocking_filter_override_flag
+    [NativeTypeName("uint32_t : 20")]
+    public uint reserved
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         readonly get
         {
-            return (_bitfield >> 12) & 0x1u;
+            return (_bitfield >> 12) & 0xFFFFFu;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         set
         {
-            _bitfield = (_bitfield & ~(0x1u << 12)) | ((value & 0x1u) << 12);
-        }
-    }
-
-    [NativeTypeName("uint32_t : 1")]
-    public uint slice_deblocking_filter_disabled_flag
-    {
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        readonly get
-        {
-            return (_bitfield >> 13) & 0x1u;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        set
-        {
-            _bitfield = (_bitfield & ~(0x1u << 13)) | ((value & 0x1u) << 13);
-        }
-    }
-
-    [NativeTypeName("uint32_t : 1")]
-    public uint collocated_from_l0_flag
-    {
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        readonly get
-        {
-            return (_bitfield >> 14) & 0x1u;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        set
-        {
-            _bitfield = (_bitfield & ~(0x1u << 14)) | ((value & 0x1u) << 14);
-        }
-    }
-
-    [NativeTypeName("uint32_t : 1")]
-    public uint slice_loop_filter_across_slices_enabled_flag
-    {
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        readonly get
-        {
-            return (_bitfield >> 15) & 0x1u;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        set
-        {
-            _bitfield = (_bitfield & ~(0x1u << 15)) | ((value & 0x1u) << 15);
+            _bitfield = (_bitfield & ~(0xFFFFFu << 12)) | ((value & 0xFFFFFu) << 12);
         }
     }
 }

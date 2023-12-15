@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDeviceRayQueryFeaturesKHR
 
     public void* pNext;
 
-    public VkBool32 rayQuery;
+    [NativeTypeName("VkBool32")]
+    public uint rayQuery;
 }

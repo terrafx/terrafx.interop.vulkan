@@ -11,7 +11,9 @@ public unsafe partial struct VkPhysicalDeviceShadingRateImageFeaturesNV
 
     public void* pNext;
 
-    public VkBool32 shadingRateImage;
+    [NativeTypeName("VkBool32")]
+    public uint shadingRateImage;
 
-    public VkBool32 shadingRateCoarseSampleOrder;
+    [NativeTypeName("VkBool32")]
+    public uint shadingRateCoarseSampleOrder;
 }

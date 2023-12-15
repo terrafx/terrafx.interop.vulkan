@@ -11,5 +11,6 @@ public unsafe partial struct VkPhysicalDevicePerformanceQueryPropertiesKHR
 
     public void* pNext;
 
-    public VkBool32 allowCommandBufferQueryCopies;
+    [NativeTypeName("VkBool32")]
+    public uint allowCommandBufferQueryCopies;
 }

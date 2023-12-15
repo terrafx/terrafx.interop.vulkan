@@ -16,7 +16,7 @@ public unsafe partial struct VkLayerInstanceCreateInfo
 
     public VkLayerFunction function;
 
-    [NativeTypeName("__AnonymousRecord_vk_layer_L126_C5")]
+    [NativeTypeName("__AnonymousRecord_vk_layer_L104_C5")]
     public _u_e__Union u;
 
     [StructLayout(LayoutKind.Explicit)]
@@ -30,7 +30,7 @@ public unsafe partial struct VkLayerInstanceCreateInfo
         public delegate* unmanaged<VkInstance, void*, VkResult> pfnSetInstanceLoaderData;
 
         [FieldOffset(0)]
-        [NativeTypeName("__AnonymousRecord_vk_layer_L129_C9")]
+        [NativeTypeName("__AnonymousRecord_vk_layer_L107_C9")]
         public _layerDevice_e__Struct layerDevice;
 
         [FieldOffset(0)]

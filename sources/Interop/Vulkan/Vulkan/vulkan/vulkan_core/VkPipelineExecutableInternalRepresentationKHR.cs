@@ -19,7 +19,8 @@ public unsafe partial struct VkPipelineExecutableInternalRepresentationKHR
     [NativeTypeName("char[256]")]
     public _description_e__FixedBuffer description;
 
-    public VkBool32 isText;
+    [NativeTypeName("VkBool32")]
+    public uint isText;
 
     [NativeTypeName("size_t")]
     public nuint dataSize;

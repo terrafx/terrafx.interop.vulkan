@@ -40,75 +40,107 @@ public unsafe partial struct VkPhysicalDeviceVulkan13Properties
     [NativeTypeName("uint32_t")]
     public uint maxInlineUniformTotalSize;
 
-    public VkBool32 integerDotProduct8BitUnsignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct8BitUnsignedAccelerated;
 
-    public VkBool32 integerDotProduct8BitSignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct8BitSignedAccelerated;
 
-    public VkBool32 integerDotProduct8BitMixedSignednessAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct8BitMixedSignednessAccelerated;
 
-    public VkBool32 integerDotProduct4x8BitPackedUnsignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct4x8BitPackedUnsignedAccelerated;
 
-    public VkBool32 integerDotProduct4x8BitPackedSignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct4x8BitPackedSignedAccelerated;
 
-    public VkBool32 integerDotProduct4x8BitPackedMixedSignednessAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct4x8BitPackedMixedSignednessAccelerated;
 
-    public VkBool32 integerDotProduct16BitUnsignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct16BitUnsignedAccelerated;
 
-    public VkBool32 integerDotProduct16BitSignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct16BitSignedAccelerated;
 
-    public VkBool32 integerDotProduct16BitMixedSignednessAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct16BitMixedSignednessAccelerated;
 
-    public VkBool32 integerDotProduct32BitUnsignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct32BitUnsignedAccelerated;
 
-    public VkBool32 integerDotProduct32BitSignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct32BitSignedAccelerated;
 
-    public VkBool32 integerDotProduct32BitMixedSignednessAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct32BitMixedSignednessAccelerated;
 
-    public VkBool32 integerDotProduct64BitUnsignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct64BitUnsignedAccelerated;
 
-    public VkBool32 integerDotProduct64BitSignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct64BitSignedAccelerated;
 
-    public VkBool32 integerDotProduct64BitMixedSignednessAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProduct64BitMixedSignednessAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating8BitUnsignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating8BitUnsignedAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating8BitSignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating8BitSignedAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating8BitMixedSignednessAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating8BitMixedSignednessAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating4x8BitPackedUnsignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating4x8BitPackedUnsignedAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating4x8BitPackedSignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating4x8BitPackedSignedAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating4x8BitPackedMixedSignednessAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating4x8BitPackedMixedSignednessAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating16BitUnsignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating16BitUnsignedAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating16BitSignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating16BitSignedAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating16BitMixedSignednessAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating16BitMixedSignednessAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating32BitUnsignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating32BitUnsignedAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating32BitSignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating32BitSignedAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating32BitMixedSignednessAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating32BitMixedSignednessAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating64BitUnsignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating64BitUnsignedAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating64BitSignedAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating64BitSignedAccelerated;
 
-    public VkBool32 integerDotProductAccumulatingSaturating64BitMixedSignednessAccelerated;
+    [NativeTypeName("VkBool32")]
+    public uint integerDotProductAccumulatingSaturating64BitMixedSignednessAccelerated;
 
     [NativeTypeName("VkDeviceSize")]
     public ulong storageTexelBufferOffsetAlignmentBytes;
 
-    public VkBool32 storageTexelBufferOffsetSingleTexelAlignment;
+    [NativeTypeName("VkBool32")]
+    public uint storageTexelBufferOffsetSingleTexelAlignment;
 
     [NativeTypeName("VkDeviceSize")]
     public ulong uniformTexelBufferOffsetAlignmentBytes;
 
-    public VkBool32 uniformTexelBufferOffsetSingleTexelAlignment;
+    [NativeTypeName("VkBool32")]
+    public uint uniformTexelBufferOffsetSingleTexelAlignment;
 
     [NativeTypeName("VkDeviceSize")]
     public ulong maxBufferSize;

@@ -14,7 +14,8 @@ public unsafe partial struct VkPerformanceOverrideInfoINTEL
 
     public VkPerformanceOverrideTypeINTEL type;
 
-    public VkBool32 enable;
+    [NativeTypeName("VkBool32")]
+    public uint enable;
 
     [NativeTypeName("uint64_t")]
     public ulong parameter;

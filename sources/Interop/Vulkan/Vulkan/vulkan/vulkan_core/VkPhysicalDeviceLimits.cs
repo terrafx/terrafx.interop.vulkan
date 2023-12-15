@@ -269,7 +269,8 @@ public partial struct VkPhysicalDeviceLimits
     [NativeTypeName("uint32_t")]
     public uint maxSampleMaskWords;
 
-    public VkBool32 timestampComputeAndGraphics;
+    [NativeTypeName("VkBool32")]
+    public uint timestampComputeAndGraphics;
 
     public float timestampPeriod;
 
@@ -295,9 +296,11 @@ public partial struct VkPhysicalDeviceLimits
 
     public float lineWidthGranularity;
 
-    public VkBool32 strictLines;
+    [NativeTypeName("VkBool32")]
+    public uint strictLines;
 
-    public VkBool32 standardSampleLocations;
+    [NativeTypeName("VkBool32")]
+    public uint standardSampleLocations;
 
     [NativeTypeName("VkDeviceSize")]
     public ulong optimalBufferCopyOffsetAlignment;
