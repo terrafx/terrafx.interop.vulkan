@@ -15,7 +15,7 @@ public partial struct StdVideoEncodeH265ReferenceModificationFlags
     public uint ref_pic_list_modification_flag_l0
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return _bitfield & 0x1u;
         }
@@ -31,7 +31,7 @@ public partial struct StdVideoEncodeH265ReferenceModificationFlags
     public uint ref_pic_list_modification_flag_l1
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 1) & 0x1u;
         }

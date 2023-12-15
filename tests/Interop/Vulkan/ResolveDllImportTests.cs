@@ -57,6 +57,8 @@ public static unsafe partial class ResolveDllImportTests
             {
                 Assert.Fail($"Fail: {exception.Message}");
             }
+
+            throw;
         }
     }
 

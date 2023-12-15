@@ -16,6 +16,7 @@ public unsafe partial struct VkXlibSurfaceCreateInfoKHR
 
     public VkXlibSurfaceCreateFlagsKHR flags;
 
+    [NativeTypeName("Display*")]
     public IntPtr dpy;
 
     [NativeTypeName("Window")]

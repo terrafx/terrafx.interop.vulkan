@@ -16,7 +16,9 @@ public unsafe partial struct VkDirectFBSurfaceCreateInfoEXT
 
     public VkDirectFBSurfaceCreateFlagsEXT flags;
 
+    [NativeTypeName("IDirectFB*")]
     public IntPtr dfb;
 
+    [NativeTypeName("IDirectFBSurface*")]
     public IntPtr surface;
 }

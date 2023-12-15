@@ -15,7 +15,7 @@ public partial struct StdVideoH265ProfileTierLevelFlags
     public uint general_tier_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return _bitfield & 0x1u;
         }
@@ -31,7 +31,7 @@ public partial struct StdVideoH265ProfileTierLevelFlags
     public uint general_progressive_source_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 1) & 0x1u;
         }
@@ -47,7 +47,7 @@ public partial struct StdVideoH265ProfileTierLevelFlags
     public uint general_interlaced_source_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 2) & 0x1u;
         }
@@ -63,7 +63,7 @@ public partial struct StdVideoH265ProfileTierLevelFlags
     public uint general_non_packed_constraint_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 3) & 0x1u;
         }
@@ -79,7 +79,7 @@ public partial struct StdVideoH265ProfileTierLevelFlags
     public uint general_frame_only_constraint_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 4) & 0x1u;
         }

@@ -15,7 +15,7 @@ public partial struct StdVideoH264PpsFlags
     public uint transform_8x8_mode_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return _bitfield & 0x1u;
         }
@@ -31,7 +31,7 @@ public partial struct StdVideoH264PpsFlags
     public uint redundant_pic_cnt_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 1) & 0x1u;
         }
@@ -47,7 +47,7 @@ public partial struct StdVideoH264PpsFlags
     public uint constrained_intra_pred_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 2) & 0x1u;
         }
@@ -63,7 +63,7 @@ public partial struct StdVideoH264PpsFlags
     public uint deblocking_filter_control_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 3) & 0x1u;
         }
@@ -79,7 +79,7 @@ public partial struct StdVideoH264PpsFlags
     public uint weighted_pred_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 4) & 0x1u;
         }
@@ -95,7 +95,7 @@ public partial struct StdVideoH264PpsFlags
     public uint bottom_field_pic_order_in_frame_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 5) & 0x1u;
         }
@@ -111,7 +111,7 @@ public partial struct StdVideoH264PpsFlags
     public uint entropy_coding_mode_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 6) & 0x1u;
         }
@@ -127,7 +127,7 @@ public partial struct StdVideoH264PpsFlags
     public uint pic_scaling_matrix_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 7) & 0x1u;
         }

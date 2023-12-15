@@ -15,7 +15,7 @@ public partial struct StdVideoEncodeH264ReferenceInfoFlags
     public uint used_for_long_term_reference
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return _bitfield & 0x1u;
         }

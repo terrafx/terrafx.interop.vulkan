@@ -15,7 +15,7 @@ public partial struct StdVideoEncodeH264PictureInfoFlags
     public uint idr_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return _bitfield & 0x1u;
         }
@@ -31,7 +31,7 @@ public partial struct StdVideoEncodeH264PictureInfoFlags
     public uint is_reference_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 1) & 0x1u;
         }
@@ -47,7 +47,7 @@ public partial struct StdVideoEncodeH264PictureInfoFlags
     public uint used_for_long_term_reference
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 2) & 0x1u;
         }

@@ -3,10 +3,18 @@
 // Ported from include/vk_video/vulkan_video_codec_h265std.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
+using System.Runtime.CompilerServices;
+
 namespace TerraFX.Interop.Vulkan;
 
-public unsafe partial struct StdVideoH265PredictorPaletteEntries
+public partial struct StdVideoH265PredictorPaletteEntries
 {
     [NativeTypeName("uint16_t[3][128]")]
-    public fixed ushort PredictorPaletteEntries[3 * 128];
+    public _PredictorPaletteEntries_e__FixedBuffer PredictorPaletteEntries;
+
+    [InlineArray(3 * 128)]
+    public partial struct _PredictorPaletteEntries_e__FixedBuffer
+    {
+        public ushort e0_0;
+    }
 }

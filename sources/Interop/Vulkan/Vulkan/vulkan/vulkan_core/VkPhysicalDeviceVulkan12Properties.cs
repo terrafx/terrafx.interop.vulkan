@@ -3,6 +3,8 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
+using System.Runtime.CompilerServices;
+
 namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkPhysicalDeviceVulkan12Properties
@@ -14,10 +16,10 @@ public unsafe partial struct VkPhysicalDeviceVulkan12Properties
     public VkDriverId driverID;
 
     [NativeTypeName("char[256]")]
-    public fixed sbyte driverName[256];
+    public _driverName_e__FixedBuffer driverName;
 
     [NativeTypeName("char[256]")]
-    public fixed sbyte driverInfo[256];
+    public _driverInfo_e__FixedBuffer driverInfo;
 
     public VkConformanceVersion conformanceVersion;
 
@@ -133,4 +135,16 @@ public unsafe partial struct VkPhysicalDeviceVulkan12Properties
     public ulong maxTimelineSemaphoreValueDifference;
 
     public VkSampleCountFlags framebufferIntegerColorSampleCounts;
+
+    [InlineArray(256)]
+    public partial struct _driverName_e__FixedBuffer
+    {
+        public sbyte e0;
+    }
+
+    [InlineArray(256)]
+    public partial struct _driverInfo_e__FixedBuffer
+    {
+        public sbyte e0;
+    }
 }

@@ -3,6 +3,8 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
+using System.Runtime.CompilerServices;
+
 namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkDeviceGroupPresentCapabilitiesKHR
@@ -12,7 +14,13 @@ public unsafe partial struct VkDeviceGroupPresentCapabilitiesKHR
     public void* pNext;
 
     [NativeTypeName("uint32_t[32]")]
-    public fixed uint presentMask[32];
+    public _presentMask_e__FixedBuffer presentMask;
 
     public VkDeviceGroupPresentModeFlagsKHR modes;
+
+    [InlineArray(32)]
+    public partial struct _presentMask_e__FixedBuffer
+    {
+        public uint e0;
+    }
 }

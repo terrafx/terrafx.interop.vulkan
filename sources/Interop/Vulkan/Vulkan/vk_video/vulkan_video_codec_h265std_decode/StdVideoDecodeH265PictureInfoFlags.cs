@@ -15,7 +15,7 @@ public partial struct StdVideoDecodeH265PictureInfoFlags
     public uint IrapPicFlag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return _bitfield & 0x1u;
         }
@@ -31,7 +31,7 @@ public partial struct StdVideoDecodeH265PictureInfoFlags
     public uint IdrPicFlag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 1) & 0x1u;
         }
@@ -47,7 +47,7 @@ public partial struct StdVideoDecodeH265PictureInfoFlags
     public uint IsReference
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 2) & 0x1u;
         }
@@ -63,7 +63,7 @@ public partial struct StdVideoDecodeH265PictureInfoFlags
     public uint short_term_ref_pic_set_sps_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 3) & 0x1u;
         }

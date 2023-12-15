@@ -16,6 +16,7 @@ public unsafe partial struct VkXcbSurfaceCreateInfoKHR
 
     public VkXcbSurfaceCreateFlagsKHR flags;
 
+    [NativeTypeName("xcb_connection_t*")]
     public IntPtr connection;
 
     [NativeTypeName("xcb_window_t")]
