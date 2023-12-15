@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vk_video/vulkan_video_codec_h265std_encode.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
+// Ported from include/vk_video/vulkan_video_codec_h265std_encode.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan;
@@ -15,16 +15,7 @@ public unsafe partial struct StdVideoEncodeH265SliceSegmentHeader
     public uint slice_segment_address;
 
     [NativeTypeName("uint8_t")]
-    public byte short_term_ref_pic_set_idx;
-
-    [NativeTypeName("uint8_t")]
     public byte collocated_ref_idx;
-
-    [NativeTypeName("uint8_t")]
-    public byte num_ref_idx_l0_active_minus1;
-
-    [NativeTypeName("uint8_t")]
-    public byte num_ref_idx_l1_active_minus1;
 
     [NativeTypeName("uint8_t")]
     public byte MaxNumMergeCand;
@@ -50,11 +41,11 @@ public unsafe partial struct StdVideoEncodeH265SliceSegmentHeader
     [NativeTypeName("int8_t")]
     public sbyte slice_act_cr_qp_offset;
 
-    [NativeTypeName("const StdVideoH265ShortTermRefPicSet *")]
-    public StdVideoH265ShortTermRefPicSet* pShortTermRefPicSet;
+    [NativeTypeName("int8_t")]
+    public sbyte slice_qp_delta;
 
-    [NativeTypeName("const StdVideoEncodeH265SliceSegmentLongTermRefPics *")]
-    public StdVideoEncodeH265SliceSegmentLongTermRefPics* pLongTermRefPics;
+    [NativeTypeName("uint16_t")]
+    public ushort reserved1;
 
     [NativeTypeName("const StdVideoEncodeH265WeightTable *")]
     public StdVideoEncodeH265WeightTable* pWeightTable;

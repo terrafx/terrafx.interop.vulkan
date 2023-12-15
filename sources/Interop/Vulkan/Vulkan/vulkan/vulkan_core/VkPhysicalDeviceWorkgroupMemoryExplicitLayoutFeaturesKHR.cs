@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan;
@@ -11,11 +11,15 @@ public unsafe partial struct VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeatur
 
     public void* pNext;
 
-    public VkBool32 workgroupMemoryExplicitLayout;
+    [NativeTypeName("VkBool32")]
+    public uint workgroupMemoryExplicitLayout;
 
-    public VkBool32 workgroupMemoryExplicitLayoutScalarBlockLayout;
+    [NativeTypeName("VkBool32")]
+    public uint workgroupMemoryExplicitLayoutScalarBlockLayout;
 
-    public VkBool32 workgroupMemoryExplicitLayout8BitAccess;
+    [NativeTypeName("VkBool32")]
+    public uint workgroupMemoryExplicitLayout8BitAccess;
 
-    public VkBool32 workgroupMemoryExplicitLayout16BitAccess;
+    [NativeTypeName("VkBool32")]
+    public uint workgroupMemoryExplicitLayout16BitAccess;
 }

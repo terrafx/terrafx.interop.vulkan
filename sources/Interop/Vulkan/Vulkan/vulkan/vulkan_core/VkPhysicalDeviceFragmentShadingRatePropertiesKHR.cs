@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan;
@@ -18,11 +18,14 @@ public unsafe partial struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR
     [NativeTypeName("uint32_t")]
     public uint maxFragmentShadingRateAttachmentTexelSizeAspectRatio;
 
-    public VkBool32 primitiveFragmentShadingRateWithMultipleViewports;
+    [NativeTypeName("VkBool32")]
+    public uint primitiveFragmentShadingRateWithMultipleViewports;
 
-    public VkBool32 layeredShadingRateAttachments;
+    [NativeTypeName("VkBool32")]
+    public uint layeredShadingRateAttachments;
 
-    public VkBool32 fragmentShadingRateNonTrivialCombinerOps;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentShadingRateNonTrivialCombinerOps;
 
     public VkExtent2D maxFragmentSize;
 
@@ -35,17 +38,24 @@ public unsafe partial struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR
     [NativeTypeName("VkSampleCountFlagBits")]
     public VkSampleCountFlags maxFragmentShadingRateRasterizationSamples;
 
-    public VkBool32 fragmentShadingRateWithShaderDepthStencilWrites;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentShadingRateWithShaderDepthStencilWrites;
 
-    public VkBool32 fragmentShadingRateWithSampleMask;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentShadingRateWithSampleMask;
 
-    public VkBool32 fragmentShadingRateWithShaderSampleMask;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentShadingRateWithShaderSampleMask;
 
-    public VkBool32 fragmentShadingRateWithConservativeRasterization;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentShadingRateWithConservativeRasterization;
 
-    public VkBool32 fragmentShadingRateWithFragmentShaderInterlock;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentShadingRateWithFragmentShaderInterlock;
 
-    public VkBool32 fragmentShadingRateWithCustomSampleLocations;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentShadingRateWithCustomSampleLocations;
 
-    public VkBool32 fragmentShadingRateStrictMultiplyCombiner;
+    [NativeTypeName("VkBool32")]
+    public uint fragmentShadingRateStrictMultiplyCombiner;
 }

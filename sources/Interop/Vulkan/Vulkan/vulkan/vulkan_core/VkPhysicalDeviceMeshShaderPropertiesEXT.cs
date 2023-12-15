@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 using System.Runtime.CompilerServices;
@@ -85,13 +85,17 @@ public unsafe partial struct VkPhysicalDeviceMeshShaderPropertiesEXT
     [NativeTypeName("uint32_t")]
     public uint maxPreferredMeshWorkGroupInvocations;
 
-    public VkBool32 prefersLocalInvocationVertexOutput;
+    [NativeTypeName("VkBool32")]
+    public uint prefersLocalInvocationVertexOutput;
 
-    public VkBool32 prefersLocalInvocationPrimitiveOutput;
+    [NativeTypeName("VkBool32")]
+    public uint prefersLocalInvocationPrimitiveOutput;
 
-    public VkBool32 prefersCompactVertexOutput;
+    [NativeTypeName("VkBool32")]
+    public uint prefersCompactVertexOutput;
 
-    public VkBool32 prefersCompactPrimitiveOutput;
+    [NativeTypeName("VkBool32")]
+    public uint prefersCompactPrimitiveOutput;
 
     [InlineArray(3)]
     public partial struct _maxTaskWorkGroupCount_e__FixedBuffer

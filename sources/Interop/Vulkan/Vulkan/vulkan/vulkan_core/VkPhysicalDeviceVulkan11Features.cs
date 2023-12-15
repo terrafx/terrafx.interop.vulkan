@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan;
@@ -11,27 +11,39 @@ public unsafe partial struct VkPhysicalDeviceVulkan11Features
 
     public void* pNext;
 
-    public VkBool32 storageBuffer16BitAccess;
+    [NativeTypeName("VkBool32")]
+    public uint storageBuffer16BitAccess;
 
-    public VkBool32 uniformAndStorageBuffer16BitAccess;
+    [NativeTypeName("VkBool32")]
+    public uint uniformAndStorageBuffer16BitAccess;
 
-    public VkBool32 storagePushConstant16;
+    [NativeTypeName("VkBool32")]
+    public uint storagePushConstant16;
 
-    public VkBool32 storageInputOutput16;
+    [NativeTypeName("VkBool32")]
+    public uint storageInputOutput16;
 
-    public VkBool32 multiview;
+    [NativeTypeName("VkBool32")]
+    public uint multiview;
 
-    public VkBool32 multiviewGeometryShader;
+    [NativeTypeName("VkBool32")]
+    public uint multiviewGeometryShader;
 
-    public VkBool32 multiviewTessellationShader;
+    [NativeTypeName("VkBool32")]
+    public uint multiviewTessellationShader;
 
-    public VkBool32 variablePointersStorageBuffer;
+    [NativeTypeName("VkBool32")]
+    public uint variablePointersStorageBuffer;
 
-    public VkBool32 variablePointers;
+    [NativeTypeName("VkBool32")]
+    public uint variablePointers;
 
-    public VkBool32 protectedMemory;
+    [NativeTypeName("VkBool32")]
+    public uint protectedMemory;
 
-    public VkBool32 samplerYcbcrConversion;
+    [NativeTypeName("VkBool32")]
+    public uint samplerYcbcrConversion;
 
-    public VkBool32 shaderDrawParameters;
+    [NativeTypeName("VkBool32")]
+    public uint shaderDrawParameters;
 }

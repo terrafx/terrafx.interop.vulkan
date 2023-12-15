@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 using System.Runtime.CompilerServices;
@@ -25,7 +25,8 @@ public unsafe partial struct VkPhysicalDeviceVulkan11Properties
     [NativeTypeName("uint32_t")]
     public uint deviceNodeMask;
 
-    public VkBool32 deviceLUIDValid;
+    [NativeTypeName("VkBool32")]
+    public uint deviceLUIDValid;
 
     [NativeTypeName("uint32_t")]
     public uint subgroupSize;
@@ -34,7 +35,8 @@ public unsafe partial struct VkPhysicalDeviceVulkan11Properties
 
     public VkSubgroupFeatureFlags subgroupSupportedOperations;
 
-    public VkBool32 subgroupQuadOperationsInAllStages;
+    [NativeTypeName("VkBool32")]
+    public uint subgroupQuadOperationsInAllStages;
 
     public VkPointClippingBehavior pointClippingBehavior;
 
@@ -44,7 +46,8 @@ public unsafe partial struct VkPhysicalDeviceVulkan11Properties
     [NativeTypeName("uint32_t")]
     public uint maxMultiviewInstanceIndex;
 
-    public VkBool32 protectedNoFault;
+    [NativeTypeName("VkBool32")]
+    public uint protectedNoFault;
 
     [NativeTypeName("uint32_t")]
     public uint maxPerSetDescriptors;

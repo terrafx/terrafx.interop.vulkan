@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan;
@@ -11,27 +11,39 @@ public unsafe partial struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 shaderBufferFloat32Atomics;
+    [NativeTypeName("VkBool32")]
+    public uint shaderBufferFloat32Atomics;
 
-    public VkBool32 shaderBufferFloat32AtomicAdd;
+    [NativeTypeName("VkBool32")]
+    public uint shaderBufferFloat32AtomicAdd;
 
-    public VkBool32 shaderBufferFloat64Atomics;
+    [NativeTypeName("VkBool32")]
+    public uint shaderBufferFloat64Atomics;
 
-    public VkBool32 shaderBufferFloat64AtomicAdd;
+    [NativeTypeName("VkBool32")]
+    public uint shaderBufferFloat64AtomicAdd;
 
-    public VkBool32 shaderSharedFloat32Atomics;
+    [NativeTypeName("VkBool32")]
+    public uint shaderSharedFloat32Atomics;
 
-    public VkBool32 shaderSharedFloat32AtomicAdd;
+    [NativeTypeName("VkBool32")]
+    public uint shaderSharedFloat32AtomicAdd;
 
-    public VkBool32 shaderSharedFloat64Atomics;
+    [NativeTypeName("VkBool32")]
+    public uint shaderSharedFloat64Atomics;
 
-    public VkBool32 shaderSharedFloat64AtomicAdd;
+    [NativeTypeName("VkBool32")]
+    public uint shaderSharedFloat64AtomicAdd;
 
-    public VkBool32 shaderImageFloat32Atomics;
+    [NativeTypeName("VkBool32")]
+    public uint shaderImageFloat32Atomics;
 
-    public VkBool32 shaderImageFloat32AtomicAdd;
+    [NativeTypeName("VkBool32")]
+    public uint shaderImageFloat32AtomicAdd;
 
-    public VkBool32 sparseImageFloat32Atomics;
+    [NativeTypeName("VkBool32")]
+    public uint sparseImageFloat32Atomics;
 
-    public VkBool32 sparseImageFloat32AtomicAdd;
+    [NativeTypeName("VkBool32")]
+    public uint sparseImageFloat32AtomicAdd;
 }

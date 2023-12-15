@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan;
@@ -111,7 +111,7 @@ public unsafe partial struct VkCommandBufferManualImports
 
     public delegate* unmanaged<VkCommandBuffer, VkCoarseSampleOrderTypeNV, uint, VkCoarseSampleOrderCustomNV*, void> vkCmdSetCoarseSampleOrderNV;
 
-    public delegate* unmanaged<VkCommandBuffer, VkAccelerationStructureInfoNV*, VkBuffer, ulong, VkBool32, VkAccelerationStructureNV, VkAccelerationStructureNV, VkBuffer, ulong, void> vkCmdBuildAccelerationStructureNV;
+    public delegate* unmanaged<VkCommandBuffer, VkAccelerationStructureInfoNV*, VkBuffer, ulong, uint, VkAccelerationStructureNV, VkAccelerationStructureNV, VkBuffer, ulong, void> vkCmdBuildAccelerationStructureNV;
 
     public delegate* unmanaged<VkCommandBuffer, VkAccelerationStructureNV, VkAccelerationStructureNV, VkCopyAccelerationStructureModeKHR, void> vkCmdCopyAccelerationStructureNV;
 
@@ -151,21 +151,21 @@ public unsafe partial struct VkCommandBufferManualImports
 
     public delegate* unmanaged<VkCommandBuffer, uint, uint, VkBuffer*, ulong*, ulong*, ulong*, void> vkCmdBindVertexBuffers2EXT;
 
-    public delegate* unmanaged<VkCommandBuffer, VkBool32, void> vkCmdSetDepthTestEnableEXT;
+    public delegate* unmanaged<VkCommandBuffer, uint, void> vkCmdSetDepthTestEnableEXT;
 
-    public delegate* unmanaged<VkCommandBuffer, VkBool32, void> vkCmdSetDepthWriteEnableEXT;
+    public delegate* unmanaged<VkCommandBuffer, uint, void> vkCmdSetDepthWriteEnableEXT;
 
     public delegate* unmanaged<VkCommandBuffer, VkCompareOp, void> vkCmdSetDepthCompareOpEXT;
 
-    public delegate* unmanaged<VkCommandBuffer, VkBool32, void> vkCmdSetDepthBoundsTestEnableEXT;
+    public delegate* unmanaged<VkCommandBuffer, uint, void> vkCmdSetDepthBoundsTestEnableEXT;
 
-    public delegate* unmanaged<VkCommandBuffer, VkBool32, void> vkCmdSetStencilTestEnableEXT;
+    public delegate* unmanaged<VkCommandBuffer, uint, void> vkCmdSetStencilTestEnableEXT;
 
     public delegate* unmanaged<VkCommandBuffer, VkStencilFaceFlags, VkStencilOp, VkStencilOp, VkStencilOp, VkCompareOp, void> vkCmdSetStencilOpEXT;
 
     public delegate* unmanaged<VkCommandBuffer, VkGeneratedCommandsInfoNV*, void> vkCmdPreprocessGeneratedCommandsNV;
 
-    public delegate* unmanaged<VkCommandBuffer, VkBool32, VkGeneratedCommandsInfoNV*, void> vkCmdExecuteGeneratedCommandsNV;
+    public delegate* unmanaged<VkCommandBuffer, uint, VkGeneratedCommandsInfoNV*, void> vkCmdExecuteGeneratedCommandsNV;
 
     public delegate* unmanaged<VkCommandBuffer, VkPipelineBindPoint, VkPipeline, uint, void> vkCmdBindPipelineShaderGroupNV;
 
@@ -179,15 +179,15 @@ public unsafe partial struct VkCommandBufferManualImports
 
     public delegate* unmanaged<VkCommandBuffer, uint, void> vkCmdSetPatchControlPointsEXT;
 
-    public delegate* unmanaged<VkCommandBuffer, VkBool32, void> vkCmdSetRasterizerDiscardEnableEXT;
+    public delegate* unmanaged<VkCommandBuffer, uint, void> vkCmdSetRasterizerDiscardEnableEXT;
 
-    public delegate* unmanaged<VkCommandBuffer, VkBool32, void> vkCmdSetDepthBiasEnableEXT;
+    public delegate* unmanaged<VkCommandBuffer, uint, void> vkCmdSetDepthBiasEnableEXT;
 
     public delegate* unmanaged<VkCommandBuffer, VkLogicOp, void> vkCmdSetLogicOpEXT;
 
-    public delegate* unmanaged<VkCommandBuffer, VkBool32, void> vkCmdSetPrimitiveRestartEnableEXT;
+    public delegate* unmanaged<VkCommandBuffer, uint, void> vkCmdSetPrimitiveRestartEnableEXT;
 
-    public delegate* unmanaged<VkCommandBuffer, uint, VkBool32*, void> vkCmdSetColorWriteEnableEXT;
+    public delegate* unmanaged<VkCommandBuffer, uint, uint*, void> vkCmdSetColorWriteEnableEXT;
 
     public delegate* unmanaged<VkCommandBuffer, uint, VkMultiDrawInfoEXT*, uint, uint, uint, void> vkCmdDrawMultiEXT;
 

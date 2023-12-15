@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan;
@@ -17,15 +17,21 @@ public unsafe partial struct VkPhysicalDeviceConservativeRasterizationProperties
 
     public float extraPrimitiveOverestimationSizeGranularity;
 
-    public VkBool32 primitiveUnderestimation;
+    [NativeTypeName("VkBool32")]
+    public uint primitiveUnderestimation;
 
-    public VkBool32 conservativePointAndLineRasterization;
+    [NativeTypeName("VkBool32")]
+    public uint conservativePointAndLineRasterization;
 
-    public VkBool32 degenerateTrianglesRasterized;
+    [NativeTypeName("VkBool32")]
+    public uint degenerateTrianglesRasterized;
 
-    public VkBool32 degenerateLinesRasterized;
+    [NativeTypeName("VkBool32")]
+    public uint degenerateLinesRasterized;
 
-    public VkBool32 fullyCoveredFragmentShaderInputVariable;
+    [NativeTypeName("VkBool32")]
+    public uint fullyCoveredFragmentShaderInputVariable;
 
-    public VkBool32 conservativeRasterizationPostDepthCoverage;
+    [NativeTypeName("VkBool32")]
+    public uint conservativeRasterizationPostDepthCoverage;
 }

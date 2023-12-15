@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan;
@@ -11,43 +11,63 @@ public unsafe partial struct VkPhysicalDeviceDescriptorIndexingFeatures
 
     public void* pNext;
 
-    public VkBool32 shaderInputAttachmentArrayDynamicIndexing;
+    [NativeTypeName("VkBool32")]
+    public uint shaderInputAttachmentArrayDynamicIndexing;
 
-    public VkBool32 shaderUniformTexelBufferArrayDynamicIndexing;
+    [NativeTypeName("VkBool32")]
+    public uint shaderUniformTexelBufferArrayDynamicIndexing;
 
-    public VkBool32 shaderStorageTexelBufferArrayDynamicIndexing;
+    [NativeTypeName("VkBool32")]
+    public uint shaderStorageTexelBufferArrayDynamicIndexing;
 
-    public VkBool32 shaderUniformBufferArrayNonUniformIndexing;
+    [NativeTypeName("VkBool32")]
+    public uint shaderUniformBufferArrayNonUniformIndexing;
 
-    public VkBool32 shaderSampledImageArrayNonUniformIndexing;
+    [NativeTypeName("VkBool32")]
+    public uint shaderSampledImageArrayNonUniformIndexing;
 
-    public VkBool32 shaderStorageBufferArrayNonUniformIndexing;
+    [NativeTypeName("VkBool32")]
+    public uint shaderStorageBufferArrayNonUniformIndexing;
 
-    public VkBool32 shaderStorageImageArrayNonUniformIndexing;
+    [NativeTypeName("VkBool32")]
+    public uint shaderStorageImageArrayNonUniformIndexing;
 
-    public VkBool32 shaderInputAttachmentArrayNonUniformIndexing;
+    [NativeTypeName("VkBool32")]
+    public uint shaderInputAttachmentArrayNonUniformIndexing;
 
-    public VkBool32 shaderUniformTexelBufferArrayNonUniformIndexing;
+    [NativeTypeName("VkBool32")]
+    public uint shaderUniformTexelBufferArrayNonUniformIndexing;
 
-    public VkBool32 shaderStorageTexelBufferArrayNonUniformIndexing;
+    [NativeTypeName("VkBool32")]
+    public uint shaderStorageTexelBufferArrayNonUniformIndexing;
 
-    public VkBool32 descriptorBindingUniformBufferUpdateAfterBind;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBindingUniformBufferUpdateAfterBind;
 
-    public VkBool32 descriptorBindingSampledImageUpdateAfterBind;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBindingSampledImageUpdateAfterBind;
 
-    public VkBool32 descriptorBindingStorageImageUpdateAfterBind;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBindingStorageImageUpdateAfterBind;
 
-    public VkBool32 descriptorBindingStorageBufferUpdateAfterBind;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBindingStorageBufferUpdateAfterBind;
 
-    public VkBool32 descriptorBindingUniformTexelBufferUpdateAfterBind;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBindingUniformTexelBufferUpdateAfterBind;
 
-    public VkBool32 descriptorBindingStorageTexelBufferUpdateAfterBind;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBindingStorageTexelBufferUpdateAfterBind;
 
-    public VkBool32 descriptorBindingUpdateUnusedWhilePending;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBindingUpdateUnusedWhilePending;
 
-    public VkBool32 descriptorBindingPartiallyBound;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBindingPartiallyBound;
 
-    public VkBool32 descriptorBindingVariableDescriptorCount;
+    [NativeTypeName("VkBool32")]
+    public uint descriptorBindingVariableDescriptorCount;
 
-    public VkBool32 runtimeDescriptorArray;
+    [NativeTypeName("VkBool32")]
+    public uint runtimeDescriptorArray;
 }

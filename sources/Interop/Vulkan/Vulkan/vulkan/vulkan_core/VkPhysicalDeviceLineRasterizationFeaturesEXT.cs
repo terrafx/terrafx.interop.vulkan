@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan;
@@ -11,15 +11,21 @@ public unsafe partial struct VkPhysicalDeviceLineRasterizationFeaturesEXT
 
     public void* pNext;
 
-    public VkBool32 rectangularLines;
+    [NativeTypeName("VkBool32")]
+    public uint rectangularLines;
 
-    public VkBool32 bresenhamLines;
+    [NativeTypeName("VkBool32")]
+    public uint bresenhamLines;
 
-    public VkBool32 smoothLines;
+    [NativeTypeName("VkBool32")]
+    public uint smoothLines;
 
-    public VkBool32 stippledRectangularLines;
+    [NativeTypeName("VkBool32")]
+    public uint stippledRectangularLines;
 
-    public VkBool32 stippledBresenhamLines;
+    [NativeTypeName("VkBool32")]
+    public uint stippledBresenhamLines;
 
-    public VkBool32 stippledSmoothLines;
+    [NativeTypeName("VkBool32")]
+    public uint stippledSmoothLines;
 }

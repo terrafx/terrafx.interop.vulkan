@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_beta.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
+// Ported from include/vulkan/vulkan_beta.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan;
@@ -13,56 +13,44 @@ public unsafe partial struct VkVideoEncodeH265CapabilitiesEXT
 
     public VkVideoEncodeH265CapabilityFlagsEXT flags;
 
-    public VkVideoEncodeH265InputModeFlagsEXT inputModeFlags;
+    public StdVideoH265LevelIdc maxLevelIdc;
 
-    public VkVideoEncodeH265OutputModeFlagsEXT outputModeFlags;
+    [NativeTypeName("uint32_t")]
+    public uint maxSliceSegmentCount;
+
+    public VkExtent2D maxTiles;
 
     public VkVideoEncodeH265CtbSizeFlagsEXT ctbSizes;
 
     public VkVideoEncodeH265TransformBlockSizeFlagsEXT transformBlockSizes;
 
-    [NativeTypeName("uint8_t")]
-    public byte maxPPictureL0ReferenceCount;
+    [NativeTypeName("uint32_t")]
+    public uint maxPPictureL0ReferenceCount;
 
-    [NativeTypeName("uint8_t")]
-    public byte maxBPictureL0ReferenceCount;
+    [NativeTypeName("uint32_t")]
+    public uint maxBPictureL0ReferenceCount;
 
-    [NativeTypeName("uint8_t")]
-    public byte maxL1ReferenceCount;
+    [NativeTypeName("uint32_t")]
+    public uint maxL1ReferenceCount;
 
-    [NativeTypeName("uint8_t")]
-    public byte maxSubLayersCount;
+    [NativeTypeName("uint32_t")]
+    public uint maxSubLayerCount;
 
-    [NativeTypeName("uint8_t")]
-    public byte minLog2MinLumaCodingBlockSizeMinus3;
+    [NativeTypeName("VkBool32")]
+    public uint expectDyadicTemporalSubLayerPattern;
 
-    [NativeTypeName("uint8_t")]
-    public byte maxLog2MinLumaCodingBlockSizeMinus3;
+    [NativeTypeName("int32_t")]
+    public int minQp;
 
-    [NativeTypeName("uint8_t")]
-    public byte minLog2MinLumaTransformBlockSizeMinus2;
+    [NativeTypeName("int32_t")]
+    public int maxQp;
 
-    [NativeTypeName("uint8_t")]
-    public byte maxLog2MinLumaTransformBlockSizeMinus2;
+    [NativeTypeName("VkBool32")]
+    public uint prefersGopRemainingFrames;
 
-    [NativeTypeName("uint8_t")]
-    public byte minMaxTransformHierarchyDepthInter;
+    [NativeTypeName("VkBool32")]
+    public uint requiresGopRemainingFrames;
 
-    [NativeTypeName("uint8_t")]
-    public byte maxMaxTransformHierarchyDepthInter;
-
-    [NativeTypeName("uint8_t")]
-    public byte minMaxTransformHierarchyDepthIntra;
-
-    [NativeTypeName("uint8_t")]
-    public byte maxMaxTransformHierarchyDepthIntra;
-
-    [NativeTypeName("uint8_t")]
-    public byte maxDiffCuQpDeltaDepth;
-
-    [NativeTypeName("uint8_t")]
-    public byte minMaxNumMergeCand;
-
-    [NativeTypeName("uint8_t")]
-    public byte maxMaxNumMergeCand;
+    [NativeTypeName("VkVideoEncodeH265StdFlagsEXT")]
+    public uint stdSyntaxFlags;
 }

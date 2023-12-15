@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 using System;
@@ -130,7 +130,7 @@ public static unsafe partial class Vulkan
     public static extern VkResult vkGetFenceStatus(VkDevice device, VkFence fence);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern VkResult vkWaitForFences(VkDevice device, [NativeTypeName("uint32_t")] uint fenceCount, [NativeTypeName("const VkFence *")] VkFence* pFences, VkBool32 waitAll, [NativeTypeName("uint64_t")] ulong timeout);
+    public static extern VkResult vkWaitForFences(VkDevice device, [NativeTypeName("uint32_t")] uint fenceCount, [NativeTypeName("const VkFence *")] VkFence* pFences, [NativeTypeName("VkBool32")] uint waitAll, [NativeTypeName("uint64_t")] ulong timeout);
 
     [DllImport("vulkan", ExactSpelling = true)]
     public static extern VkResult vkCreateSemaphore(VkDevice device, [NativeTypeName("const VkSemaphoreCreateInfo *")] VkSemaphoreCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSemaphore* pSemaphore);
@@ -556,6 +556,9 @@ public static unsafe partial class Vulkan
     public const ulong VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT = 0x00100000UL;
 
     [NativeTypeName("const VkPipelineStageFlagBits2")]
+    public const ulong VK_PIPELINE_STAGE_2_SUBPASS_SHADER_BIT_HUAWEI = 0x8000000000UL;
+
+    [NativeTypeName("const VkPipelineStageFlagBits2")]
     public const ulong VK_PIPELINE_STAGE_2_MICROMAP_BUILD_BIT_EXT = 0x40000000UL;
 
     [NativeTypeName("const VkPipelineStageFlagBits2")]
@@ -578,6 +581,9 @@ public static unsafe partial class Vulkan
 
     [NativeTypeName("const VkAccessFlagBits2")]
     public const ulong VK_ACCESS_2_OPTICAL_FLOW_WRITE_BIT_NV = 0x80000000000UL;
+
+    [NativeTypeName("const VkFormatFeatureFlagBits2")]
+    public const ulong VK_FORMAT_FEATURE_2_HOST_IMAGE_TRANSFER_BIT_EXT = 0x400000000000UL;
 
     [NativeTypeName("const VkFormatFeatureFlagBits2")]
     public const ulong VK_FORMAT_FEATURE_2_OPTICAL_FLOW_IMAGE_BIT_NV = 0x10000000000UL;
@@ -664,31 +670,31 @@ public static unsafe partial class Vulkan
     public static extern void vkCmdBindVertexBuffers2(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstBinding, [NativeTypeName("uint32_t")] uint bindingCount, [NativeTypeName("const VkBuffer *")] VkBuffer* pBuffers, [NativeTypeName("const VkDeviceSize *")] ulong* pOffsets, [NativeTypeName("const VkDeviceSize *")] ulong* pSizes, [NativeTypeName("const VkDeviceSize *")] ulong* pStrides);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetDepthTestEnable(VkCommandBuffer commandBuffer, VkBool32 depthTestEnable);
+    public static extern void vkCmdSetDepthTestEnable(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint depthTestEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetDepthWriteEnable(VkCommandBuffer commandBuffer, VkBool32 depthWriteEnable);
+    public static extern void vkCmdSetDepthWriteEnable(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint depthWriteEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
     public static extern void vkCmdSetDepthCompareOp(VkCommandBuffer commandBuffer, VkCompareOp depthCompareOp);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetDepthBoundsTestEnable(VkCommandBuffer commandBuffer, VkBool32 depthBoundsTestEnable);
+    public static extern void vkCmdSetDepthBoundsTestEnable(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint depthBoundsTestEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetStencilTestEnable(VkCommandBuffer commandBuffer, VkBool32 stencilTestEnable);
+    public static extern void vkCmdSetStencilTestEnable(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint stencilTestEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
     public static extern void vkCmdSetStencilOp(VkCommandBuffer commandBuffer, VkStencilFaceFlags faceMask, VkStencilOp failOp, VkStencilOp passOp, VkStencilOp depthFailOp, VkCompareOp compareOp);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetRasterizerDiscardEnable(VkCommandBuffer commandBuffer, VkBool32 rasterizerDiscardEnable);
+    public static extern void vkCmdSetRasterizerDiscardEnable(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint rasterizerDiscardEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetDepthBiasEnable(VkCommandBuffer commandBuffer, VkBool32 depthBiasEnable);
+    public static extern void vkCmdSetDepthBiasEnable(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint depthBiasEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetPrimitiveRestartEnable(VkCommandBuffer commandBuffer, VkBool32 primitiveRestartEnable);
+    public static extern void vkCmdSetPrimitiveRestartEnable(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint primitiveRestartEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
     public static extern void vkGetDeviceBufferMemoryRequirements(VkDevice device, [NativeTypeName("const VkDeviceBufferMemoryRequirements *")] VkDeviceBufferMemoryRequirements* pInfo, VkMemoryRequirements2* pMemoryRequirements);
@@ -703,7 +709,7 @@ public static unsafe partial class Vulkan
     public static extern void vkDestroySurfaceKHR(VkInstance instance, VkSurfaceKHR surface, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern VkResult vkGetPhysicalDeviceSurfaceSupportKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex, VkSurfaceKHR surface, VkBool32* pSupported);
+    public static extern VkResult vkGetPhysicalDeviceSurfaceSupportKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex, VkSurfaceKHR surface, [NativeTypeName("VkBool32 *")] uint* pSupported);
 
     [DllImport("vulkan", ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDeviceSurfaceCapabilitiesKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkSurfaceCapabilitiesKHR* pSurfaceCapabilities);
@@ -778,7 +784,226 @@ public static unsafe partial class Vulkan
     public static extern VkResult vkGetDisplayPlaneCapabilities2KHR(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkDisplayPlaneInfo2KHR *")] VkDisplayPlaneInfo2KHR* pDisplayPlaneInfo, VkDisplayPlaneCapabilities2KHR* pCapabilities);
 
     [DllImport("vulkan", ExactSpelling = true)]
+    public static extern VkResult vkMapMemory2KHR(VkDevice device, [NativeTypeName("const VkMemoryMapInfoKHR *")] VkMemoryMapInfoKHR* pMemoryMapInfo, void** ppData);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern VkResult vkUnmapMemory2KHR(VkDevice device, [NativeTypeName("const VkMemoryUnmapInfoKHR *")] VkMemoryUnmapInfoKHR* pMemoryUnmapInfo);
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_DISABLE_OPTIMIZATION_BIT_KHR = 0x00000001UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_ALLOW_DERIVATIVES_BIT_KHR = 0x00000002UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_DERIVATIVE_BIT_KHR = 0x00000004UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_VIEW_INDEX_FROM_DEVICE_INDEX_BIT_KHR = 0x00000008UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_DISPATCH_BASE_BIT_KHR = 0x00000010UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_DEFER_COMPILE_BIT_NV = 0x00000020UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_CAPTURE_STATISTICS_BIT_KHR = 0x00000040UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_CAPTURE_INTERNAL_REPRESENTATIONS_BIT_KHR = 0x00000080UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_FAIL_ON_PIPELINE_COMPILE_REQUIRED_BIT_KHR = 0x00000100UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_EARLY_RETURN_ON_FAILURE_BIT_KHR = 0x00000200UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_LINK_TIME_OPTIMIZATION_BIT_EXT = 0x00000400UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_RETAIN_LINK_TIME_OPTIMIZATION_INFO_BIT_EXT = 0x00800000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_LIBRARY_BIT_KHR = 0x00000800UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_RAY_TRACING_SKIP_TRIANGLES_BIT_KHR = 0x00001000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_RAY_TRACING_SKIP_AABBS_BIT_KHR = 0x00002000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_BIT_KHR = 0x00004000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_BIT_KHR = 0x00008000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_RAY_TRACING_NO_NULL_MISS_SHADERS_BIT_KHR = 0x00010000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_BIT_KHR = 0x00020000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_BIT_KHR = 0x00080000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_INDIRECT_BINDABLE_BIT_NV = 0x00040000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_RAY_TRACING_ALLOW_MOTION_BIT_NV = 0x00100000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x00200000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT = 0x00400000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_RAY_TRACING_OPACITY_MICROMAP_BIT_EXT = 0x01000000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_COLOR_ATTACHMENT_FEEDBACK_LOOP_BIT_EXT = 0x02000000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_DEPTH_STENCIL_ATTACHMENT_FEEDBACK_LOOP_BIT_EXT = 0x04000000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_NO_PROTECTED_ACCESS_BIT_EXT = 0x08000000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_PROTECTED_ACCESS_ONLY_BIT_EXT = 0x40000000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_RAY_TRACING_DISPLACEMENT_MICROMAP_BIT_NV = 0x10000000UL;
+
+    [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
+    public const ulong VK_PIPELINE_CREATE_2_DESCRIPTOR_BUFFER_BIT_EXT = 0x20000000UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_TRANSFER_SRC_BIT_KHR = 0x00000001UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_TRANSFER_DST_BIT_KHR = 0x00000002UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_UNIFORM_TEXEL_BUFFER_BIT_KHR = 0x00000004UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_STORAGE_TEXEL_BUFFER_BIT_KHR = 0x00000008UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_UNIFORM_BUFFER_BIT_KHR = 0x00000010UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_STORAGE_BUFFER_BIT_KHR = 0x00000020UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_INDEX_BUFFER_BIT_KHR = 0x00000040UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_VERTEX_BUFFER_BIT_KHR = 0x00000080UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_INDIRECT_BUFFER_BIT_KHR = 0x00000100UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_EXECUTION_GRAPH_SCRATCH_BIT_AMDX = 0x02000000UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_CONDITIONAL_RENDERING_BIT_EXT = 0x00000200UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_SHADER_BINDING_TABLE_BIT_KHR = 0x00000400UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_RAY_TRACING_BIT_NV = 0x00000400UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_TRANSFORM_FEEDBACK_BUFFER_BIT_EXT = 0x00000800UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_TRANSFORM_FEEDBACK_COUNTER_BUFFER_BIT_EXT = 0x00001000UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_VIDEO_DECODE_SRC_BIT_KHR = 0x00002000UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_VIDEO_DECODE_DST_BIT_KHR = 0x00004000UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_VIDEO_ENCODE_DST_BIT_KHR = 0x00008000UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_VIDEO_ENCODE_SRC_BIT_KHR = 0x00010000UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_SHADER_DEVICE_ADDRESS_BIT_KHR = 0x00020000UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_BIT_KHR = 0x00080000UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_ACCELERATION_STRUCTURE_STORAGE_BIT_KHR = 0x00100000UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_SAMPLER_DESCRIPTOR_BUFFER_BIT_EXT = 0x00200000UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_RESOURCE_DESCRIPTOR_BUFFER_BIT_EXT = 0x00400000UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_PUSH_DESCRIPTORS_DESCRIPTOR_BUFFER_BIT_EXT = 0x04000000UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_MICROMAP_BUILD_INPUT_READ_ONLY_BIT_EXT = 0x00800000UL;
+
+    [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
+    public const ulong VK_BUFFER_USAGE_2_MICROMAP_STORAGE_BIT_EXT = 0x01000000UL;
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkCmdBindIndexBuffer2KHR(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, [NativeTypeName("VkDeviceSize")] ulong size, VkIndexType indexType);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkGetRenderingAreaGranularityKHR(VkDevice device, [NativeTypeName("const VkRenderingAreaInfoKHR *")] VkRenderingAreaInfoKHR* pRenderingAreaInfo, VkExtent2D* pGranularity);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkGetDeviceImageSubresourceLayoutKHR(VkDevice device, [NativeTypeName("const VkDeviceImageSubresourceInfoKHR *")] VkDeviceImageSubresourceInfoKHR* pInfo, VkSubresourceLayout2KHR* pLayout);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkGetImageSubresourceLayout2KHR(VkDevice device, VkImage image, [NativeTypeName("const VkImageSubresource2KHR *")] VkImageSubresource2KHR* pSubresource, VkSubresourceLayout2KHR* pLayout);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern VkResult vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkCooperativeMatrixPropertiesKHR* pProperties);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkCmdSetDiscardRectangleEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint discardRectangleEnable);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkCmdSetDiscardRectangleModeEXT(VkCommandBuffer commandBuffer, VkDiscardRectangleModeEXT discardRectangleMode);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkCmdSetExclusiveScissorEnableNV(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstExclusiveScissor, [NativeTypeName("uint32_t")] uint exclusiveScissorCount, [NativeTypeName("const VkBool32 *")] uint* pExclusiveScissorEnables);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern VkResult vkCopyMemoryToImageEXT(VkDevice device, [NativeTypeName("const VkCopyMemoryToImageInfoEXT *")] VkCopyMemoryToImageInfoEXT* pCopyMemoryToImageInfo);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern VkResult vkCopyImageToMemoryEXT(VkDevice device, [NativeTypeName("const VkCopyImageToMemoryInfoEXT *")] VkCopyImageToMemoryInfoEXT* pCopyImageToMemoryInfo);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern VkResult vkCopyImageToImageEXT(VkDevice device, [NativeTypeName("const VkCopyImageToImageInfoEXT *")] VkCopyImageToImageInfoEXT* pCopyImageToImageInfo);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern VkResult vkTransitionImageLayoutEXT(VkDevice device, [NativeTypeName("uint32_t")] uint transitionCount, [NativeTypeName("const VkHostImageLayoutTransitionInfoEXT *")] VkHostImageLayoutTransitionInfoEXT* pTransitions);
+
+    [DllImport("vulkan", ExactSpelling = true)]
     public static extern VkResult vkReleaseSwapchainImagesEXT(VkDevice device, [NativeTypeName("const VkReleaseSwapchainImagesInfoEXT *")] VkReleaseSwapchainImagesInfoEXT* pReleaseInfo);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkCmdSetDepthBias2EXT(VkCommandBuffer commandBuffer, [NativeTypeName("const VkDepthBiasInfoEXT *")] VkDepthBiasInfoEXT* pDepthBiasInfo);
 
     [DllImport("vulkan", ExactSpelling = true)]
     public static extern void vkGetDescriptorSetLayoutSizeEXT(VkDevice device, VkDescriptorSetLayout layout, [NativeTypeName("VkDeviceSize *")] ulong* pLayoutSizeInBytes);
@@ -880,10 +1105,20 @@ public static unsafe partial class Vulkan
     public static extern void vkCmdDecompressMemoryIndirectCountNV(VkCommandBuffer commandBuffer, [NativeTypeName("VkDeviceAddress")] ulong indirectCommandsAddress, [NativeTypeName("VkDeviceAddress")] ulong indirectCommandsCountAddress, [NativeTypeName("uint32_t")] uint stride);
 
     [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkGetPipelineIndirectMemoryRequirementsNV(VkDevice device, [NativeTypeName("const VkComputePipelineCreateInfo *")] VkComputePipelineCreateInfo* pCreateInfo, VkMemoryRequirements2* pMemoryRequirements);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkCmdUpdatePipelineIndirectBufferNV(VkCommandBuffer commandBuffer, VkPipelineBindPoint pipelineBindPoint, VkPipeline pipeline);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    [return: NativeTypeName("VkDeviceAddress")]
+    public static extern ulong vkGetPipelineIndirectDeviceAddressNV(VkDevice device, [NativeTypeName("const VkPipelineIndirectDeviceAddressInfoNV *")] VkPipelineIndirectDeviceAddressInfoNV* pInfo);
+
+    [DllImport("vulkan", ExactSpelling = true)]
     public static extern void vkCmdSetTessellationDomainOriginEXT(VkCommandBuffer commandBuffer, VkTessellationDomainOrigin domainOrigin);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetDepthClampEnableEXT(VkCommandBuffer commandBuffer, VkBool32 depthClampEnable);
+    public static extern void vkCmdSetDepthClampEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint depthClampEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
     public static extern void vkCmdSetPolygonModeEXT(VkCommandBuffer commandBuffer, VkPolygonMode polygonMode);
@@ -895,16 +1130,16 @@ public static unsafe partial class Vulkan
     public static extern void vkCmdSetSampleMaskEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkSampleCountFlagBits")] VkSampleCountFlags samples, [NativeTypeName("const VkSampleMask *")] uint* pSampleMask);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetAlphaToCoverageEnableEXT(VkCommandBuffer commandBuffer, VkBool32 alphaToCoverageEnable);
+    public static extern void vkCmdSetAlphaToCoverageEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint alphaToCoverageEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetAlphaToOneEnableEXT(VkCommandBuffer commandBuffer, VkBool32 alphaToOneEnable);
+    public static extern void vkCmdSetAlphaToOneEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint alphaToOneEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetLogicOpEnableEXT(VkCommandBuffer commandBuffer, VkBool32 logicOpEnable);
+    public static extern void vkCmdSetLogicOpEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint logicOpEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetColorBlendEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstAttachment, [NativeTypeName("uint32_t")] uint attachmentCount, [NativeTypeName("const VkBool32 *")] VkBool32* pColorBlendEnables);
+    public static extern void vkCmdSetColorBlendEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstAttachment, [NativeTypeName("uint32_t")] uint attachmentCount, [NativeTypeName("const VkBool32 *")] uint* pColorBlendEnables);
 
     [DllImport("vulkan", ExactSpelling = true)]
     public static extern void vkCmdSetColorBlendEquationEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstAttachment, [NativeTypeName("uint32_t")] uint attachmentCount, [NativeTypeName("const VkColorBlendEquationEXT *")] VkColorBlendEquationEXT* pColorBlendEquations);
@@ -922,10 +1157,10 @@ public static unsafe partial class Vulkan
     public static extern void vkCmdSetExtraPrimitiveOverestimationSizeEXT(VkCommandBuffer commandBuffer, float extraPrimitiveOverestimationSize);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetDepthClipEnableEXT(VkCommandBuffer commandBuffer, VkBool32 depthClipEnable);
+    public static extern void vkCmdSetDepthClipEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint depthClipEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetSampleLocationsEnableEXT(VkCommandBuffer commandBuffer, VkBool32 sampleLocationsEnable);
+    public static extern void vkCmdSetSampleLocationsEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint sampleLocationsEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
     public static extern void vkCmdSetColorBlendAdvancedEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstAttachment, [NativeTypeName("uint32_t")] uint attachmentCount, [NativeTypeName("const VkColorBlendAdvancedEXT *")] VkColorBlendAdvancedEXT* pColorBlendAdvanced);
@@ -937,19 +1172,19 @@ public static unsafe partial class Vulkan
     public static extern void vkCmdSetLineRasterizationModeEXT(VkCommandBuffer commandBuffer, VkLineRasterizationModeEXT lineRasterizationMode);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetLineStippleEnableEXT(VkCommandBuffer commandBuffer, VkBool32 stippledLineEnable);
+    public static extern void vkCmdSetLineStippleEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint stippledLineEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetDepthClipNegativeOneToOneEXT(VkCommandBuffer commandBuffer, VkBool32 negativeOneToOne);
+    public static extern void vkCmdSetDepthClipNegativeOneToOneEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint negativeOneToOne);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetViewportWScalingEnableNV(VkCommandBuffer commandBuffer, VkBool32 viewportWScalingEnable);
+    public static extern void vkCmdSetViewportWScalingEnableNV(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint viewportWScalingEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
     public static extern void vkCmdSetViewportSwizzleNV(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstViewport, [NativeTypeName("uint32_t")] uint viewportCount, [NativeTypeName("const VkViewportSwizzleNV *")] VkViewportSwizzleNV* pViewportSwizzles);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetCoverageToColorEnableNV(VkCommandBuffer commandBuffer, VkBool32 coverageToColorEnable);
+    public static extern void vkCmdSetCoverageToColorEnableNV(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint coverageToColorEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
     public static extern void vkCmdSetCoverageToColorLocationNV(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint coverageToColorLocation);
@@ -958,16 +1193,16 @@ public static unsafe partial class Vulkan
     public static extern void vkCmdSetCoverageModulationModeNV(VkCommandBuffer commandBuffer, VkCoverageModulationModeNV coverageModulationMode);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetCoverageModulationTableEnableNV(VkCommandBuffer commandBuffer, VkBool32 coverageModulationTableEnable);
+    public static extern void vkCmdSetCoverageModulationTableEnableNV(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint coverageModulationTableEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
     public static extern void vkCmdSetCoverageModulationTableNV(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint coverageModulationTableCount, [NativeTypeName("const float *")] float* pCoverageModulationTable);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetShadingRateImageEnableNV(VkCommandBuffer commandBuffer, VkBool32 shadingRateImageEnable);
+    public static extern void vkCmdSetShadingRateImageEnableNV(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint shadingRateImageEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
-    public static extern void vkCmdSetRepresentativeFragmentTestEnableNV(VkCommandBuffer commandBuffer, VkBool32 representativeFragmentTestEnable);
+    public static extern void vkCmdSetRepresentativeFragmentTestEnableNV(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint representativeFragmentTestEnable);
 
     [DllImport("vulkan", ExactSpelling = true)]
     public static extern void vkCmdSetCoverageReductionModeNV(VkCommandBuffer commandBuffer, VkCoverageReductionModeNV coverageReductionMode);
@@ -988,6 +1223,36 @@ public static unsafe partial class Vulkan
     public static extern void vkCmdOpticalFlowExecuteNV(VkCommandBuffer commandBuffer, VkOpticalFlowSessionNV session, [NativeTypeName("const VkOpticalFlowExecuteInfoNV *")] VkOpticalFlowExecuteInfoNV* pExecuteInfo);
 
     [DllImport("vulkan", ExactSpelling = true)]
+    public static extern VkResult vkCreateShadersEXT(VkDevice device, [NativeTypeName("uint32_t")] uint createInfoCount, [NativeTypeName("const VkShaderCreateInfoEXT *")] VkShaderCreateInfoEXT* pCreateInfos, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkShaderEXT* pShaders);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkDestroyShaderEXT(VkDevice device, VkShaderEXT shader, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern VkResult vkGetShaderBinaryDataEXT(VkDevice device, VkShaderEXT shader, [NativeTypeName("size_t *")] nuint* pDataSize, void* pData);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkCmdBindShadersEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint stageCount, [NativeTypeName("const VkShaderStageFlagBits *")] VkShaderStageFlags* pStages, [NativeTypeName("const VkShaderEXT *")] VkShaderEXT* pShaders);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern VkResult vkSetLatencySleepModeNV(VkDevice device, VkSwapchainKHR swapchain, [NativeTypeName("const VkLatencySleepModeInfoNV *")] VkLatencySleepModeInfoNV* pSleepModeInfo);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern VkResult vkLatencySleepNV(VkDevice device, VkSwapchainKHR swapchain, [NativeTypeName("const VkLatencySleepInfoNV *")] VkLatencySleepInfoNV* pSleepInfo);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkSetLatencyMarkerNV(VkDevice device, VkSwapchainKHR swapchain, [NativeTypeName("const VkSetLatencyMarkerInfoNV *")] VkSetLatencyMarkerInfoNV* pLatencyMarkerInfo);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkGetLatencyTimingsNV(VkDevice device, VkSwapchainKHR swapchain, [NativeTypeName("uint32_t *")] uint* pTimingCount, VkGetLatencyMarkerInfoNV* pLatencyMarkerInfo);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkQueueNotifyOutOfBandNV(VkQueue queue, [NativeTypeName("const VkOutOfBandQueueTypeInfoNV *")] VkOutOfBandQueueTypeInfoNV* pQueueTypeInfo);
+
+    [DllImport("vulkan", ExactSpelling = true)]
+    public static extern void vkCmdSetAttachmentFeedbackLoopEnableEXT(VkCommandBuffer commandBuffer, VkImageAspectFlags aspectMask);
+
+    [DllImport("vulkan", ExactSpelling = true)]
     public static extern void vkCmdDrawMeshTasksEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint groupCountX, [NativeTypeName("uint32_t")] uint groupCountY, [NativeTypeName("uint32_t")] uint groupCountZ);
 
     [DllImport("vulkan", ExactSpelling = true)]
@@ -1005,11 +1270,11 @@ public static unsafe partial class Vulkan
     [NativeTypeName("#define VK_API_VERSION_1_0 VK_MAKE_API_VERSION(0, 1, 0, 0)")]
     public const uint VK_API_VERSION_1_0 = ((((uint)(0)) << 29) | (((uint)(1)) << 22) | (((uint)(0)) << 12) | ((uint)(0)));
 
-    [NativeTypeName("#define VK_HEADER_VERSION 239")]
-    public const int VK_HEADER_VERSION = 239;
+    [NativeTypeName("#define VK_HEADER_VERSION 268")]
+    public const int VK_HEADER_VERSION = 268;
 
     [NativeTypeName("#define VK_HEADER_VERSION_COMPLETE VK_MAKE_API_VERSION(0, 1, 3, VK_HEADER_VERSION)")]
-    public const uint VK_HEADER_VERSION_COMPLETE = ((((uint)(0)) << 29) | (((uint)(1)) << 22) | (((uint)(3)) << 12) | ((uint)(239)));
+    public const uint VK_HEADER_VERSION_COMPLETE = ((((uint)(0)) << 29) | (((uint)(1)) << 22) | (((uint)(3)) << 12) | ((uint)(268)));
 
     [NativeTypeName("#define VK_ATTACHMENT_UNUSED (~0U)")]
     public const uint VK_ATTACHMENT_UNUSED = (~0U);
@@ -1737,6 +2002,15 @@ public static unsafe partial class Vulkan
     [NativeTypeName("#define VK_KHR_PIPELINE_EXECUTABLE_PROPERTIES_EXTENSION_NAME \"VK_KHR_pipeline_executable_properties\"")]
     public static ReadOnlySpan<byte> VK_KHR_PIPELINE_EXECUTABLE_PROPERTIES_EXTENSION_NAME => "VK_KHR_pipeline_executable_properties"u8;
 
+    [NativeTypeName("#define VK_KHR_map_memory2 1")]
+    public const int VK_KHR_map_memory2 = 1;
+
+    [NativeTypeName("#define VK_KHR_MAP_MEMORY_2_SPEC_VERSION 1")]
+    public const int VK_KHR_MAP_MEMORY_2_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_KHR_MAP_MEMORY_2_EXTENSION_NAME \"VK_KHR_map_memory2\"")]
+    public static ReadOnlySpan<byte> VK_KHR_MAP_MEMORY_2_EXTENSION_NAME => "VK_KHR_map_memory2"u8;
+
     [NativeTypeName("#define VK_KHR_shader_integer_dot_product 1")]
     public const int VK_KHR_shader_integer_dot_product = 1;
 
@@ -1862,6 +2136,33 @@ public static unsafe partial class Vulkan
 
     [NativeTypeName("#define VK_KHR_MAINTENANCE_4_EXTENSION_NAME \"VK_KHR_maintenance4\"")]
     public static ReadOnlySpan<byte> VK_KHR_MAINTENANCE_4_EXTENSION_NAME => "VK_KHR_maintenance4"u8;
+
+    [NativeTypeName("#define VK_KHR_maintenance5 1")]
+    public const int VK_KHR_maintenance5 = 1;
+
+    [NativeTypeName("#define VK_KHR_MAINTENANCE_5_SPEC_VERSION 1")]
+    public const int VK_KHR_MAINTENANCE_5_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_KHR_MAINTENANCE_5_EXTENSION_NAME \"VK_KHR_maintenance5\"")]
+    public static ReadOnlySpan<byte> VK_KHR_MAINTENANCE_5_EXTENSION_NAME => "VK_KHR_maintenance5"u8;
+
+    [NativeTypeName("#define VK_KHR_ray_tracing_position_fetch 1")]
+    public const int VK_KHR_ray_tracing_position_fetch = 1;
+
+    [NativeTypeName("#define VK_KHR_RAY_TRACING_POSITION_FETCH_SPEC_VERSION 1")]
+    public const int VK_KHR_RAY_TRACING_POSITION_FETCH_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_KHR_RAY_TRACING_POSITION_FETCH_EXTENSION_NAME \"VK_KHR_ray_tracing_position_fetch\"")]
+    public static ReadOnlySpan<byte> VK_KHR_RAY_TRACING_POSITION_FETCH_EXTENSION_NAME => "VK_KHR_ray_tracing_position_fetch"u8;
+
+    [NativeTypeName("#define VK_KHR_cooperative_matrix 1")]
+    public const int VK_KHR_cooperative_matrix = 1;
+
+    [NativeTypeName("#define VK_KHR_COOPERATIVE_MATRIX_SPEC_VERSION 2")]
+    public const int VK_KHR_COOPERATIVE_MATRIX_SPEC_VERSION = 2;
+
+    [NativeTypeName("#define VK_KHR_COOPERATIVE_MATRIX_EXTENSION_NAME \"VK_KHR_cooperative_matrix\"")]
+    public static ReadOnlySpan<byte> VK_KHR_COOPERATIVE_MATRIX_EXTENSION_NAME => "VK_KHR_cooperative_matrix"u8;
 
     [NativeTypeName("#define VK_EXT_debug_report 1")]
     public const int VK_EXT_debug_report = 1;
@@ -2241,8 +2542,8 @@ public static unsafe partial class Vulkan
     [NativeTypeName("#define VK_EXT_discard_rectangles 1")]
     public const int VK_EXT_discard_rectangles = 1;
 
-    [NativeTypeName("#define VK_EXT_DISCARD_RECTANGLES_SPEC_VERSION 1")]
-    public const int VK_EXT_DISCARD_RECTANGLES_SPEC_VERSION = 1;
+    [NativeTypeName("#define VK_EXT_DISCARD_RECTANGLES_SPEC_VERSION 2")]
+    public const int VK_EXT_DISCARD_RECTANGLES_SPEC_VERSION = 2;
 
     [NativeTypeName("#define VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME \"VK_EXT_discard_rectangles\"")]
     public static ReadOnlySpan<byte> VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME => "VK_EXT_discard_rectangles"u8;
@@ -2646,8 +2947,8 @@ public static unsafe partial class Vulkan
     [NativeTypeName("#define VK_NV_scissor_exclusive 1")]
     public const int VK_NV_scissor_exclusive = 1;
 
-    [NativeTypeName("#define VK_NV_SCISSOR_EXCLUSIVE_SPEC_VERSION 1")]
-    public const int VK_NV_SCISSOR_EXCLUSIVE_SPEC_VERSION = 1;
+    [NativeTypeName("#define VK_NV_SCISSOR_EXCLUSIVE_SPEC_VERSION 2")]
+    public const int VK_NV_SCISSOR_EXCLUSIVE_SPEC_VERSION = 2;
 
     [NativeTypeName("#define VK_NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME \"VK_NV_scissor_exclusive\"")]
     public static ReadOnlySpan<byte> VK_NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME => "VK_NV_scissor_exclusive"u8;
@@ -2937,6 +3238,15 @@ public static unsafe partial class Vulkan
     [NativeTypeName("#define VK_EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME \"VK_EXT_extended_dynamic_state\"")]
     public static ReadOnlySpan<byte> VK_EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME => "VK_EXT_extended_dynamic_state"u8;
 
+    [NativeTypeName("#define VK_EXT_host_image_copy 1")]
+    public const int VK_EXT_host_image_copy = 1;
+
+    [NativeTypeName("#define VK_EXT_HOST_IMAGE_COPY_SPEC_VERSION 1")]
+    public const int VK_EXT_HOST_IMAGE_COPY_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_EXT_HOST_IMAGE_COPY_EXTENSION_NAME \"VK_EXT_host_image_copy\"")]
+    public static ReadOnlySpan<byte> VK_EXT_HOST_IMAGE_COPY_EXTENSION_NAME => "VK_EXT_host_image_copy"u8;
+
     [NativeTypeName("#define VK_EXT_shader_atomic_float2 1")]
     public const int VK_EXT_shader_atomic_float2 = 1;
 
@@ -3008,6 +3318,15 @@ public static unsafe partial class Vulkan
 
     [NativeTypeName("#define VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME \"VK_QCOM_render_pass_transform\"")]
     public static ReadOnlySpan<byte> VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME => "VK_QCOM_render_pass_transform"u8;
+
+    [NativeTypeName("#define VK_EXT_depth_bias_control 1")]
+    public const int VK_EXT_depth_bias_control = 1;
+
+    [NativeTypeName("#define VK_EXT_DEPTH_BIAS_CONTROL_SPEC_VERSION 1")]
+    public const int VK_EXT_DEPTH_BIAS_CONTROL_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_EXT_DEPTH_BIAS_CONTROL_EXTENSION_NAME \"VK_EXT_depth_bias_control\"")]
+    public static ReadOnlySpan<byte> VK_EXT_DEPTH_BIAS_CONTROL_EXTENSION_NAME => "VK_EXT_depth_bias_control"u8;
 
     [NativeTypeName("#define VK_EXT_device_memory_report 1")]
     public const int VK_EXT_device_memory_report = 1;
@@ -3098,6 +3417,15 @@ public static unsafe partial class Vulkan
 
     [NativeTypeName("#define VK_QCOM_RENDER_PASS_STORE_OPS_EXTENSION_NAME \"VK_QCOM_render_pass_store_ops\"")]
     public static ReadOnlySpan<byte> VK_QCOM_RENDER_PASS_STORE_OPS_EXTENSION_NAME => "VK_QCOM_render_pass_store_ops"u8;
+
+    [NativeTypeName("#define VK_NV_low_latency 1")]
+    public const int VK_NV_low_latency = 1;
+
+    [NativeTypeName("#define VK_NV_LOW_LATENCY_SPEC_VERSION 1")]
+    public const int VK_NV_LOW_LATENCY_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_NV_LOW_LATENCY_EXTENSION_NAME \"VK_NV_low_latency\"")]
+    public static ReadOnlySpan<byte> VK_NV_LOW_LATENCY_EXTENSION_NAME => "VK_NV_low_latency"u8;
 
     [NativeTypeName("#define VK_EXT_descriptor_buffer 1")]
     public const int VK_EXT_descriptor_buffer = 1;
@@ -3210,8 +3538,8 @@ public static unsafe partial class Vulkan
     [NativeTypeName("#define VK_EXT_device_fault 1")]
     public const int VK_EXT_device_fault = 1;
 
-    [NativeTypeName("#define VK_EXT_DEVICE_FAULT_SPEC_VERSION 1")]
-    public const int VK_EXT_DEVICE_FAULT_SPEC_VERSION = 1;
+    [NativeTypeName("#define VK_EXT_DEVICE_FAULT_SPEC_VERSION 2")]
+    public const int VK_EXT_DEVICE_FAULT_SPEC_VERSION = 2;
 
     [NativeTypeName("#define VK_EXT_DEVICE_FAULT_EXTENSION_NAME \"VK_EXT_device_fault\"")]
     public static ReadOnlySpan<byte> VK_EXT_DEVICE_FAULT_EXTENSION_NAME => "VK_EXT_device_fault"u8;
@@ -3291,8 +3619,8 @@ public static unsafe partial class Vulkan
     [NativeTypeName("#define VK_HUAWEI_subpass_shading 1")]
     public const int VK_HUAWEI_subpass_shading = 1;
 
-    [NativeTypeName("#define VK_HUAWEI_SUBPASS_SHADING_SPEC_VERSION 2")]
-    public const int VK_HUAWEI_SUBPASS_SHADING_SPEC_VERSION = 2;
+    [NativeTypeName("#define VK_HUAWEI_SUBPASS_SHADING_SPEC_VERSION 3")]
+    public const int VK_HUAWEI_SUBPASS_SHADING_SPEC_VERSION = 3;
 
     [NativeTypeName("#define VK_HUAWEI_SUBPASS_SHADING_EXTENSION_NAME \"VK_HUAWEI_subpass_shading\"")]
     public static ReadOnlySpan<byte> VK_HUAWEI_SUBPASS_SHADING_EXTENSION_NAME => "VK_HUAWEI_subpass_shading"u8;
@@ -3323,6 +3651,15 @@ public static unsafe partial class Vulkan
 
     [NativeTypeName("#define VK_EXT_PIPELINE_PROPERTIES_EXTENSION_NAME \"VK_EXT_pipeline_properties\"")]
     public static ReadOnlySpan<byte> VK_EXT_PIPELINE_PROPERTIES_EXTENSION_NAME => "VK_EXT_pipeline_properties"u8;
+
+    [NativeTypeName("#define VK_EXT_frame_boundary 1")]
+    public const int VK_EXT_frame_boundary = 1;
+
+    [NativeTypeName("#define VK_EXT_FRAME_BOUNDARY_SPEC_VERSION 1")]
+    public const int VK_EXT_FRAME_BOUNDARY_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_EXT_FRAME_BOUNDARY_EXTENSION_NAME \"VK_EXT_frame_boundary\"")]
+    public static ReadOnlySpan<byte> VK_EXT_FRAME_BOUNDARY_EXTENSION_NAME => "VK_EXT_frame_boundary"u8;
 
     [NativeTypeName("#define VK_EXT_multisampled_render_to_single_sampled 1")]
     public const int VK_EXT_multisampled_render_to_single_sampled = 1;
@@ -3399,6 +3736,15 @@ public static unsafe partial class Vulkan
     [NativeTypeName("#define VK_EXT_IMAGE_2D_VIEW_OF_3D_EXTENSION_NAME \"VK_EXT_image_2d_view_of_3d\"")]
     public static ReadOnlySpan<byte> VK_EXT_IMAGE_2D_VIEW_OF_3D_EXTENSION_NAME => "VK_EXT_image_2d_view_of_3d"u8;
 
+    [NativeTypeName("#define VK_EXT_shader_tile_image 1")]
+    public const int VK_EXT_shader_tile_image = 1;
+
+    [NativeTypeName("#define VK_EXT_SHADER_TILE_IMAGE_SPEC_VERSION 1")]
+    public const int VK_EXT_SHADER_TILE_IMAGE_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_EXT_SHADER_TILE_IMAGE_EXTENSION_NAME \"VK_EXT_shader_tile_image\"")]
+    public static ReadOnlySpan<byte> VK_EXT_SHADER_TILE_IMAGE_EXTENSION_NAME => "VK_EXT_shader_tile_image"u8;
+
     [NativeTypeName("#define VK_EXT_opacity_micromap 1")]
     public const int VK_EXT_opacity_micromap = 1;
 
@@ -3420,8 +3766,8 @@ public static unsafe partial class Vulkan
     [NativeTypeName("#define VK_HUAWEI_cluster_culling_shader 1")]
     public const int VK_HUAWEI_cluster_culling_shader = 1;
 
-    [NativeTypeName("#define VK_HUAWEI_CLUSTER_CULLING_SHADER_SPEC_VERSION 1")]
-    public const int VK_HUAWEI_CLUSTER_CULLING_SHADER_SPEC_VERSION = 1;
+    [NativeTypeName("#define VK_HUAWEI_CLUSTER_CULLING_SHADER_SPEC_VERSION 2")]
+    public const int VK_HUAWEI_CLUSTER_CULLING_SHADER_SPEC_VERSION = 2;
 
     [NativeTypeName("#define VK_HUAWEI_CLUSTER_CULLING_SHADER_EXTENSION_NAME \"VK_HUAWEI_cluster_culling_shader\"")]
     public static ReadOnlySpan<byte> VK_HUAWEI_CLUSTER_CULLING_SHADER_EXTENSION_NAME => "VK_HUAWEI_cluster_culling_shader"u8;
@@ -3443,6 +3789,27 @@ public static unsafe partial class Vulkan
 
     [NativeTypeName("#define VK_EXT_PAGEABLE_DEVICE_LOCAL_MEMORY_EXTENSION_NAME \"VK_EXT_pageable_device_local_memory\"")]
     public static ReadOnlySpan<byte> VK_EXT_PAGEABLE_DEVICE_LOCAL_MEMORY_EXTENSION_NAME => "VK_EXT_pageable_device_local_memory"u8;
+
+    [NativeTypeName("#define VK_ARM_shader_core_properties 1")]
+    public const int VK_ARM_shader_core_properties = 1;
+
+    [NativeTypeName("#define VK_ARM_SHADER_CORE_PROPERTIES_SPEC_VERSION 1")]
+    public const int VK_ARM_SHADER_CORE_PROPERTIES_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_ARM_SHADER_CORE_PROPERTIES_EXTENSION_NAME \"VK_ARM_shader_core_properties\"")]
+    public static ReadOnlySpan<byte> VK_ARM_SHADER_CORE_PROPERTIES_EXTENSION_NAME => "VK_ARM_shader_core_properties"u8;
+
+    [NativeTypeName("#define VK_EXT_image_sliced_view_of_3d 1")]
+    public const int VK_EXT_image_sliced_view_of_3d = 1;
+
+    [NativeTypeName("#define VK_EXT_IMAGE_SLICED_VIEW_OF_3D_SPEC_VERSION 1")]
+    public const int VK_EXT_IMAGE_SLICED_VIEW_OF_3D_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_EXT_IMAGE_SLICED_VIEW_OF_3D_EXTENSION_NAME \"VK_EXT_image_sliced_view_of_3d\"")]
+    public static ReadOnlySpan<byte> VK_EXT_IMAGE_SLICED_VIEW_OF_3D_EXTENSION_NAME => "VK_EXT_image_sliced_view_of_3d"u8;
+
+    [NativeTypeName("#define VK_REMAINING_3D_SLICES_EXT (~0U)")]
+    public const uint VK_REMAINING_3D_SLICES_EXT = (~0U);
 
     [NativeTypeName("#define VK_VALVE_descriptor_set_host_mapping 1")]
     public const int VK_VALVE_descriptor_set_host_mapping = 1;
@@ -3498,6 +3865,15 @@ public static unsafe partial class Vulkan
     [NativeTypeName("#define VK_NV_MEMORY_DECOMPRESSION_EXTENSION_NAME \"VK_NV_memory_decompression\"")]
     public static ReadOnlySpan<byte> VK_NV_MEMORY_DECOMPRESSION_EXTENSION_NAME => "VK_NV_memory_decompression"u8;
 
+    [NativeTypeName("#define VK_NV_device_generated_commands_compute 1")]
+    public const int VK_NV_device_generated_commands_compute = 1;
+
+    [NativeTypeName("#define VK_NV_DEVICE_GENERATED_COMMANDS_COMPUTE_SPEC_VERSION 2")]
+    public const int VK_NV_DEVICE_GENERATED_COMMANDS_COMPUTE_SPEC_VERSION = 2;
+
+    [NativeTypeName("#define VK_NV_DEVICE_GENERATED_COMMANDS_COMPUTE_EXTENSION_NAME \"VK_NV_device_generated_commands_compute\"")]
+    public static ReadOnlySpan<byte> VK_NV_DEVICE_GENERATED_COMMANDS_COMPUTE_EXTENSION_NAME => "VK_NV_device_generated_commands_compute"u8;
+
     [NativeTypeName("#define VK_NV_linear_color_attachment 1")]
     public const int VK_NV_linear_color_attachment = 1;
 
@@ -3533,6 +3909,24 @@ public static unsafe partial class Vulkan
 
     [NativeTypeName("#define VK_QCOM_IMAGE_PROCESSING_EXTENSION_NAME \"VK_QCOM_image_processing\"")]
     public static ReadOnlySpan<byte> VK_QCOM_IMAGE_PROCESSING_EXTENSION_NAME => "VK_QCOM_image_processing"u8;
+
+    [NativeTypeName("#define VK_EXT_nested_command_buffer 1")]
+    public const int VK_EXT_nested_command_buffer = 1;
+
+    [NativeTypeName("#define VK_EXT_NESTED_COMMAND_BUFFER_SPEC_VERSION 1")]
+    public const int VK_EXT_NESTED_COMMAND_BUFFER_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_EXT_NESTED_COMMAND_BUFFER_EXTENSION_NAME \"VK_EXT_nested_command_buffer\"")]
+    public static ReadOnlySpan<byte> VK_EXT_NESTED_COMMAND_BUFFER_EXTENSION_NAME => "VK_EXT_nested_command_buffer"u8;
+
+    [NativeTypeName("#define VK_EXT_external_memory_acquire_unmodified 1")]
+    public const int VK_EXT_external_memory_acquire_unmodified = 1;
+
+    [NativeTypeName("#define VK_EXT_EXTERNAL_MEMORY_ACQUIRE_UNMODIFIED_SPEC_VERSION 1")]
+    public const int VK_EXT_EXTERNAL_MEMORY_ACQUIRE_UNMODIFIED_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_EXT_EXTERNAL_MEMORY_ACQUIRE_UNMODIFIED_EXTENSION_NAME \"VK_EXT_external_memory_acquire_unmodified\"")]
+    public static ReadOnlySpan<byte> VK_EXT_EXTERNAL_MEMORY_ACQUIRE_UNMODIFIED_EXTENSION_NAME => "VK_EXT_external_memory_acquire_unmodified"u8;
 
     [NativeTypeName("#define VK_EXT_extended_dynamic_state3 1")]
     public const int VK_EXT_extended_dynamic_state3 = 1;
@@ -3609,6 +4003,15 @@ public static unsafe partial class Vulkan
     [NativeTypeName("#define VK_EXT_PIPELINE_PROTECTED_ACCESS_EXTENSION_NAME \"VK_EXT_pipeline_protected_access\"")]
     public static ReadOnlySpan<byte> VK_EXT_PIPELINE_PROTECTED_ACCESS_EXTENSION_NAME => "VK_EXT_pipeline_protected_access"u8;
 
+    [NativeTypeName("#define VK_EXT_shader_object 1")]
+    public const int VK_EXT_shader_object = 1;
+
+    [NativeTypeName("#define VK_EXT_SHADER_OBJECT_SPEC_VERSION 1")]
+    public const int VK_EXT_SHADER_OBJECT_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_EXT_SHADER_OBJECT_EXTENSION_NAME \"VK_EXT_shader_object\"")]
+    public static ReadOnlySpan<byte> VK_EXT_SHADER_OBJECT_EXTENSION_NAME => "VK_EXT_shader_object"u8;
+
     [NativeTypeName("#define VK_QCOM_tile_properties 1")]
     public const int VK_QCOM_tile_properties = 1;
 
@@ -3645,6 +4048,15 @@ public static unsafe partial class Vulkan
     [NativeTypeName("#define VK_NV_RAY_TRACING_INVOCATION_REORDER_EXTENSION_NAME \"VK_NV_ray_tracing_invocation_reorder\"")]
     public static ReadOnlySpan<byte> VK_NV_RAY_TRACING_INVOCATION_REORDER_EXTENSION_NAME => "VK_NV_ray_tracing_invocation_reorder"u8;
 
+    [NativeTypeName("#define VK_NV_extended_sparse_address_space 1")]
+    public const int VK_NV_extended_sparse_address_space = 1;
+
+    [NativeTypeName("#define VK_NV_EXTENDED_SPARSE_ADDRESS_SPACE_SPEC_VERSION 1")]
+    public const int VK_NV_EXTENDED_SPARSE_ADDRESS_SPACE_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_NV_EXTENDED_SPARSE_ADDRESS_SPACE_EXTENSION_NAME \"VK_NV_extended_sparse_address_space\"")]
+    public static ReadOnlySpan<byte> VK_NV_EXTENDED_SPARSE_ADDRESS_SPACE_EXTENSION_NAME => "VK_NV_extended_sparse_address_space"u8;
+
     [NativeTypeName("#define VK_EXT_mutable_descriptor_type 1")]
     public const int VK_EXT_mutable_descriptor_type = 1;
 
@@ -3662,6 +4074,105 @@ public static unsafe partial class Vulkan
 
     [NativeTypeName("#define VK_ARM_SHADER_CORE_BUILTINS_EXTENSION_NAME \"VK_ARM_shader_core_builtins\"")]
     public static ReadOnlySpan<byte> VK_ARM_SHADER_CORE_BUILTINS_EXTENSION_NAME => "VK_ARM_shader_core_builtins"u8;
+
+    [NativeTypeName("#define VK_EXT_pipeline_library_group_handles 1")]
+    public const int VK_EXT_pipeline_library_group_handles = 1;
+
+    [NativeTypeName("#define VK_EXT_PIPELINE_LIBRARY_GROUP_HANDLES_SPEC_VERSION 1")]
+    public const int VK_EXT_PIPELINE_LIBRARY_GROUP_HANDLES_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_EXT_PIPELINE_LIBRARY_GROUP_HANDLES_EXTENSION_NAME \"VK_EXT_pipeline_library_group_handles\"")]
+    public static ReadOnlySpan<byte> VK_EXT_PIPELINE_LIBRARY_GROUP_HANDLES_EXTENSION_NAME => "VK_EXT_pipeline_library_group_handles"u8;
+
+    [NativeTypeName("#define VK_EXT_dynamic_rendering_unused_attachments 1")]
+    public const int VK_EXT_dynamic_rendering_unused_attachments = 1;
+
+    [NativeTypeName("#define VK_EXT_DYNAMIC_RENDERING_UNUSED_ATTACHMENTS_SPEC_VERSION 1")]
+    public const int VK_EXT_DYNAMIC_RENDERING_UNUSED_ATTACHMENTS_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_EXT_DYNAMIC_RENDERING_UNUSED_ATTACHMENTS_EXTENSION_NAME \"VK_EXT_dynamic_rendering_unused_attachments\"")]
+    public static ReadOnlySpan<byte> VK_EXT_DYNAMIC_RENDERING_UNUSED_ATTACHMENTS_EXTENSION_NAME => "VK_EXT_dynamic_rendering_unused_attachments"u8;
+
+    [NativeTypeName("#define VK_NV_low_latency2 1")]
+    public const int VK_NV_low_latency2 = 1;
+
+    [NativeTypeName("#define VK_NV_LOW_LATENCY_2_SPEC_VERSION 1")]
+    public const int VK_NV_LOW_LATENCY_2_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_NV_LOW_LATENCY_2_EXTENSION_NAME \"VK_NV_low_latency2\"")]
+    public static ReadOnlySpan<byte> VK_NV_LOW_LATENCY_2_EXTENSION_NAME => "VK_NV_low_latency2"u8;
+
+    [NativeTypeName("#define VK_QCOM_multiview_per_view_render_areas 1")]
+    public const int VK_QCOM_multiview_per_view_render_areas = 1;
+
+    [NativeTypeName("#define VK_QCOM_MULTIVIEW_PER_VIEW_RENDER_AREAS_SPEC_VERSION 1")]
+    public const int VK_QCOM_MULTIVIEW_PER_VIEW_RENDER_AREAS_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_QCOM_MULTIVIEW_PER_VIEW_RENDER_AREAS_EXTENSION_NAME \"VK_QCOM_multiview_per_view_render_areas\"")]
+    public static ReadOnlySpan<byte> VK_QCOM_MULTIVIEW_PER_VIEW_RENDER_AREAS_EXTENSION_NAME => "VK_QCOM_multiview_per_view_render_areas"u8;
+
+    [NativeTypeName("#define VK_QCOM_image_processing2 1")]
+    public const int VK_QCOM_image_processing2 = 1;
+
+    [NativeTypeName("#define VK_QCOM_IMAGE_PROCESSING_2_SPEC_VERSION 1")]
+    public const int VK_QCOM_IMAGE_PROCESSING_2_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_QCOM_IMAGE_PROCESSING_2_EXTENSION_NAME \"VK_QCOM_image_processing2\"")]
+    public static ReadOnlySpan<byte> VK_QCOM_IMAGE_PROCESSING_2_EXTENSION_NAME => "VK_QCOM_image_processing2"u8;
+
+    [NativeTypeName("#define VK_QCOM_filter_cubic_weights 1")]
+    public const int VK_QCOM_filter_cubic_weights = 1;
+
+    [NativeTypeName("#define VK_QCOM_FILTER_CUBIC_WEIGHTS_SPEC_VERSION 1")]
+    public const int VK_QCOM_FILTER_CUBIC_WEIGHTS_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_QCOM_FILTER_CUBIC_WEIGHTS_EXTENSION_NAME \"VK_QCOM_filter_cubic_weights\"")]
+    public static ReadOnlySpan<byte> VK_QCOM_FILTER_CUBIC_WEIGHTS_EXTENSION_NAME => "VK_QCOM_filter_cubic_weights"u8;
+
+    [NativeTypeName("#define VK_QCOM_ycbcr_degamma 1")]
+    public const int VK_QCOM_ycbcr_degamma = 1;
+
+    [NativeTypeName("#define VK_QCOM_YCBCR_DEGAMMA_SPEC_VERSION 1")]
+    public const int VK_QCOM_YCBCR_DEGAMMA_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_QCOM_YCBCR_DEGAMMA_EXTENSION_NAME \"VK_QCOM_ycbcr_degamma\"")]
+    public static ReadOnlySpan<byte> VK_QCOM_YCBCR_DEGAMMA_EXTENSION_NAME => "VK_QCOM_ycbcr_degamma"u8;
+
+    [NativeTypeName("#define VK_QCOM_filter_cubic_clamp 1")]
+    public const int VK_QCOM_filter_cubic_clamp = 1;
+
+    [NativeTypeName("#define VK_QCOM_FILTER_CUBIC_CLAMP_SPEC_VERSION 1")]
+    public const int VK_QCOM_FILTER_CUBIC_CLAMP_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_QCOM_FILTER_CUBIC_CLAMP_EXTENSION_NAME \"VK_QCOM_filter_cubic_clamp\"")]
+    public static ReadOnlySpan<byte> VK_QCOM_FILTER_CUBIC_CLAMP_EXTENSION_NAME => "VK_QCOM_filter_cubic_clamp"u8;
+
+    [NativeTypeName("#define VK_EXT_attachment_feedback_loop_dynamic_state 1")]
+    public const int VK_EXT_attachment_feedback_loop_dynamic_state = 1;
+
+    [NativeTypeName("#define VK_EXT_ATTACHMENT_FEEDBACK_LOOP_DYNAMIC_STATE_SPEC_VERSION 1")]
+    public const int VK_EXT_ATTACHMENT_FEEDBACK_LOOP_DYNAMIC_STATE_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_EXT_ATTACHMENT_FEEDBACK_LOOP_DYNAMIC_STATE_EXTENSION_NAME \"VK_EXT_attachment_feedback_loop_dynamic_state\"")]
+    public static ReadOnlySpan<byte> VK_EXT_ATTACHMENT_FEEDBACK_LOOP_DYNAMIC_STATE_EXTENSION_NAME => "VK_EXT_attachment_feedback_loop_dynamic_state"u8;
+
+    [NativeTypeName("#define VK_MSFT_layered_driver 1")]
+    public const int VK_MSFT_layered_driver = 1;
+
+    [NativeTypeName("#define VK_MSFT_LAYERED_DRIVER_SPEC_VERSION 1")]
+    public const int VK_MSFT_LAYERED_DRIVER_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_MSFT_LAYERED_DRIVER_EXTENSION_NAME \"VK_MSFT_layered_driver\"")]
+    public static ReadOnlySpan<byte> VK_MSFT_LAYERED_DRIVER_EXTENSION_NAME => "VK_MSFT_layered_driver"u8;
+
+    [NativeTypeName("#define VK_NV_descriptor_pool_overallocation 1")]
+    public const int VK_NV_descriptor_pool_overallocation = 1;
+
+    [NativeTypeName("#define VK_NV_DESCRIPTOR_POOL_OVERALLOCATION_SPEC_VERSION 1")]
+    public const int VK_NV_DESCRIPTOR_POOL_OVERALLOCATION_SPEC_VERSION = 1;
+
+    [NativeTypeName("#define VK_NV_DESCRIPTOR_POOL_OVERALLOCATION_EXTENSION_NAME \"VK_NV_descriptor_pool_overallocation\"")]
+    public static ReadOnlySpan<byte> VK_NV_DESCRIPTOR_POOL_OVERALLOCATION_EXTENSION_NAME => "VK_NV_descriptor_pool_overallocation"u8;
 
     [NativeTypeName("#define VK_KHR_acceleration_structure 1")]
     public const int VK_KHR_acceleration_structure = 1;

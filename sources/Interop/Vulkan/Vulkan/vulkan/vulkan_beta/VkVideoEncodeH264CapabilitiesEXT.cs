@@ -1,6 +1,6 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_beta.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
+// Ported from include/vulkan/vulkan_beta.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan;
@@ -13,30 +13,38 @@ public unsafe partial struct VkVideoEncodeH264CapabilitiesEXT
 
     public VkVideoEncodeH264CapabilityFlagsEXT flags;
 
-    public VkVideoEncodeH264InputModeFlagsEXT inputModeFlags;
-
-    public VkVideoEncodeH264OutputModeFlagsEXT outputModeFlags;
-
-    [NativeTypeName("uint8_t")]
-    public byte maxPPictureL0ReferenceCount;
-
-    [NativeTypeName("uint8_t")]
-    public byte maxBPictureL0ReferenceCount;
-
-    [NativeTypeName("uint8_t")]
-    public byte maxL1ReferenceCount;
-
-    public VkBool32 motionVectorsOverPicBoundariesFlag;
+    public StdVideoH264LevelIdc maxLevelIdc;
 
     [NativeTypeName("uint32_t")]
-    public uint maxBytesPerPicDenom;
+    public uint maxSliceCount;
 
     [NativeTypeName("uint32_t")]
-    public uint maxBitsPerMbDenom;
+    public uint maxPPictureL0ReferenceCount;
 
     [NativeTypeName("uint32_t")]
-    public uint log2MaxMvLengthHorizontal;
+    public uint maxBPictureL0ReferenceCount;
 
     [NativeTypeName("uint32_t")]
-    public uint log2MaxMvLengthVertical;
+    public uint maxL1ReferenceCount;
+
+    [NativeTypeName("uint32_t")]
+    public uint maxTemporalLayerCount;
+
+    [NativeTypeName("VkBool32")]
+    public uint expectDyadicTemporalLayerPattern;
+
+    [NativeTypeName("int32_t")]
+    public int minQp;
+
+    [NativeTypeName("int32_t")]
+    public int maxQp;
+
+    [NativeTypeName("VkBool32")]
+    public uint prefersGopRemainingFrames;
+
+    [NativeTypeName("VkBool32")]
+    public uint requiresGopRemainingFrames;
+
+    [NativeTypeName("VkVideoEncodeH264StdFlagsEXT")]
+    public uint stdSyntaxFlags;
 }
