@@ -3,8 +3,6 @@
 // Ported from include/vulkan/vulkan_wayland.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-using System;
-
 namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkWaylandSurfaceCreateInfoKHR
@@ -17,8 +15,8 @@ public unsafe partial struct VkWaylandSurfaceCreateInfoKHR
     public VkWaylandSurfaceCreateFlagsKHR flags;
 
     [NativeTypeName("struct wl_display *")]
-    public IntPtr display;
+    public void* display;
 
     [NativeTypeName("struct wl_surface *")]
-    public IntPtr surface;
+    public void* surface;
 }

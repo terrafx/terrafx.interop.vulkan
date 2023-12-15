@@ -3,25 +3,23 @@
 // Ported from include/vulkan/vulkan_win32.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
-using System;
-
 namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkDeviceManualImports
 {
-    public delegate* unmanaged<VkDevice, VkMemoryGetWin32HandleInfoKHR*, IntPtr*, VkResult> vkGetMemoryWin32HandleKHR;
+    public delegate* unmanaged<VkDevice, VkMemoryGetWin32HandleInfoKHR*, void**, VkResult> vkGetMemoryWin32HandleKHR;
 
-    public delegate* unmanaged<VkDevice, VkExternalMemoryHandleTypeFlags, IntPtr, VkMemoryWin32HandlePropertiesKHR*, VkResult> vkGetMemoryWin32HandlePropertiesKHR;
+    public delegate* unmanaged<VkDevice, VkExternalMemoryHandleTypeFlags, void*, VkMemoryWin32HandlePropertiesKHR*, VkResult> vkGetMemoryWin32HandlePropertiesKHR;
 
     public delegate* unmanaged<VkDevice, VkImportSemaphoreWin32HandleInfoKHR*, VkResult> vkImportSemaphoreWin32HandleKHR;
 
-    public delegate* unmanaged<VkDevice, VkSemaphoreGetWin32HandleInfoKHR*, IntPtr*, VkResult> vkGetSemaphoreWin32HandleKHR;
+    public delegate* unmanaged<VkDevice, VkSemaphoreGetWin32HandleInfoKHR*, void**, VkResult> vkGetSemaphoreWin32HandleKHR;
 
     public delegate* unmanaged<VkDevice, VkImportFenceWin32HandleInfoKHR*, VkResult> vkImportFenceWin32HandleKHR;
 
-    public delegate* unmanaged<VkDevice, VkFenceGetWin32HandleInfoKHR*, IntPtr*, VkResult> vkGetFenceWin32HandleKHR;
+    public delegate* unmanaged<VkDevice, VkFenceGetWin32HandleInfoKHR*, void**, VkResult> vkGetFenceWin32HandleKHR;
 
-    public delegate* unmanaged<VkDevice, VkDeviceMemory, VkExternalMemoryHandleTypeFlagsNV, IntPtr*, VkResult> vkGetMemoryWin32HandleNV;
+    public delegate* unmanaged<VkDevice, VkDeviceMemory, VkExternalMemoryHandleTypeFlagsNV, void**, VkResult> vkGetMemoryWin32HandleNV;
 
     public delegate* unmanaged<VkDevice, VkSwapchainKHR, VkResult> vkAcquireFullScreenExclusiveModeEXT;
 
