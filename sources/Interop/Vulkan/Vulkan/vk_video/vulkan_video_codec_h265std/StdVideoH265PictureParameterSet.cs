@@ -3,6 +3,8 @@
 // Ported from include/vk_video/vulkan_video_codec_h265std.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
+using System.Runtime.CompilerServices;
+
 namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct StdVideoH265PictureParameterSet
@@ -58,10 +60,10 @@ public unsafe partial struct StdVideoH265PictureParameterSet
     public byte chroma_qp_offset_list_len_minus1;
 
     [NativeTypeName("int8_t[6]")]
-    public fixed sbyte cb_qp_offset_list[6];
+    public _cb_qp_offset_list_e__FixedBuffer cb_qp_offset_list;
 
     [NativeTypeName("int8_t[6]")]
-    public fixed sbyte cr_qp_offset_list[6];
+    public _cr_qp_offset_list_e__FixedBuffer cr_qp_offset_list;
 
     [NativeTypeName("uint8_t")]
     public byte log2_sao_offset_scale_luma;
@@ -100,10 +102,10 @@ public unsafe partial struct StdVideoH265PictureParameterSet
     public byte reserved2;
 
     [NativeTypeName("uint16_t[19]")]
-    public fixed ushort column_width_minus1[19];
+    public _column_width_minus1_e__FixedBuffer column_width_minus1;
 
     [NativeTypeName("uint16_t[21]")]
-    public fixed ushort row_height_minus1[21];
+    public _row_height_minus1_e__FixedBuffer row_height_minus1;
 
     [NativeTypeName("uint32_t")]
     public uint reserved3;
@@ -113,4 +115,28 @@ public unsafe partial struct StdVideoH265PictureParameterSet
 
     [NativeTypeName("const StdVideoH265PredictorPaletteEntries *")]
     public StdVideoH265PredictorPaletteEntries* pPredictorPaletteEntries;
+
+    [InlineArray(6)]
+    public partial struct _cb_qp_offset_list_e__FixedBuffer
+    {
+        public sbyte e0;
+    }
+
+    [InlineArray(6)]
+    public partial struct _cr_qp_offset_list_e__FixedBuffer
+    {
+        public sbyte e0;
+    }
+
+    [InlineArray(19)]
+    public partial struct _column_width_minus1_e__FixedBuffer
+    {
+        public ushort e0;
+    }
+
+    [InlineArray(21)]
+    public partial struct _row_height_minus1_e__FixedBuffer
+    {
+        public ushort e0;
+    }
 }

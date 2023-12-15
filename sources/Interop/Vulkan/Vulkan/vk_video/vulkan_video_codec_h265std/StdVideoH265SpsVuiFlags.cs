@@ -15,7 +15,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint aspect_ratio_info_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return _bitfield & 0x1u;
         }
@@ -31,7 +31,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint overscan_info_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 1) & 0x1u;
         }
@@ -47,7 +47,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint overscan_appropriate_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 2) & 0x1u;
         }
@@ -63,7 +63,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint video_signal_type_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 3) & 0x1u;
         }
@@ -79,7 +79,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint video_full_range_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 4) & 0x1u;
         }
@@ -95,7 +95,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint colour_description_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 5) & 0x1u;
         }
@@ -111,7 +111,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint chroma_loc_info_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 6) & 0x1u;
         }
@@ -127,7 +127,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint neutral_chroma_indication_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 7) & 0x1u;
         }
@@ -143,7 +143,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint field_seq_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 8) & 0x1u;
         }
@@ -159,7 +159,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint frame_field_info_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 9) & 0x1u;
         }
@@ -175,7 +175,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint default_display_window_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 10) & 0x1u;
         }
@@ -191,7 +191,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint vui_timing_info_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 11) & 0x1u;
         }
@@ -207,7 +207,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint vui_poc_proportional_to_timing_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 12) & 0x1u;
         }
@@ -223,7 +223,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint vui_hrd_parameters_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 13) & 0x1u;
         }
@@ -239,7 +239,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint bitstream_restriction_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 14) & 0x1u;
         }
@@ -255,7 +255,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint tiles_fixed_structure_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 15) & 0x1u;
         }
@@ -271,7 +271,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint motion_vectors_over_pic_boundaries_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 16) & 0x1u;
         }
@@ -287,7 +287,7 @@ public partial struct StdVideoH265SpsVuiFlags
     public uint restricted_ref_pic_lists_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 17) & 0x1u;
         }

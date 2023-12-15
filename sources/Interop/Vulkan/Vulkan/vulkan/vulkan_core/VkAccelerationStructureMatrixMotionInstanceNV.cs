@@ -19,7 +19,7 @@ public partial struct VkAccelerationStructureMatrixMotionInstanceNV
     public uint instanceCustomIndex
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return _bitfield1 & 0xFFFFFFu;
         }
@@ -35,7 +35,7 @@ public partial struct VkAccelerationStructureMatrixMotionInstanceNV
     public uint mask
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield1 >> 24) & 0xFFu;
         }
@@ -53,7 +53,7 @@ public partial struct VkAccelerationStructureMatrixMotionInstanceNV
     public uint instanceShaderBindingTableRecordOffset
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return _bitfield2 & 0xFFFFFFu;
         }
@@ -69,7 +69,7 @@ public partial struct VkAccelerationStructureMatrixMotionInstanceNV
     public VkGeometryInstanceFlagsKHR flags
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (VkGeometryInstanceFlagsKHR)((_bitfield2 >> 24) & 0xFFu);
         }

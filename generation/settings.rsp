@@ -10,12 +10,15 @@
 -Wno-macro-redefined
 -Wno-nonportable-include-path
 -Wno-pragma-pack
+-Wno-switch
 --config
 exclude-com-proxies
 exclude-empty-records
 exclude-enum-operators
 generate-aggressive-inlining
+generate-callconv-member-function
 generate-cpp-attributes
+generate-disable-runtime-marshalling
 generate-file-scoped-namespaces
 generate-guid-member
 generate-macro-bindings

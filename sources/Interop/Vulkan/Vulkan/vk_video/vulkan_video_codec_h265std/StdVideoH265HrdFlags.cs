@@ -15,7 +15,7 @@ public partial struct StdVideoH265HrdFlags
     public uint nal_hrd_parameters_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return _bitfield & 0x1u;
         }
@@ -31,7 +31,7 @@ public partial struct StdVideoH265HrdFlags
     public uint vcl_hrd_parameters_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 1) & 0x1u;
         }
@@ -47,7 +47,7 @@ public partial struct StdVideoH265HrdFlags
     public uint sub_pic_hrd_params_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 2) & 0x1u;
         }
@@ -63,7 +63,7 @@ public partial struct StdVideoH265HrdFlags
     public uint sub_pic_cpb_params_in_pic_timing_sei_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 3) & 0x1u;
         }
@@ -79,7 +79,7 @@ public partial struct StdVideoH265HrdFlags
     public uint fixed_pic_rate_general_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 4) & 0xFFu;
         }
@@ -95,7 +95,7 @@ public partial struct StdVideoH265HrdFlags
     public uint fixed_pic_rate_within_cvs_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 12) & 0xFFu;
         }
@@ -111,7 +111,7 @@ public partial struct StdVideoH265HrdFlags
     public uint low_delay_hrd_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 20) & 0xFFu;
         }

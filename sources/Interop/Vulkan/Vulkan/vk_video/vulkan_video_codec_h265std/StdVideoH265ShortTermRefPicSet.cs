@@ -3,9 +3,11 @@
 // Ported from include/vk_video/vulkan_video_codec_h265std.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
+using System.Runtime.CompilerServices;
+
 namespace TerraFX.Interop.Vulkan;
 
-public unsafe partial struct StdVideoH265ShortTermRefPicSet
+public partial struct StdVideoH265ShortTermRefPicSet
 {
     public StdVideoH265ShortTermRefPicSetFlags flags;
 
@@ -43,8 +45,20 @@ public unsafe partial struct StdVideoH265ShortTermRefPicSet
     public byte num_positive_pics;
 
     [NativeTypeName("uint16_t[16]")]
-    public fixed ushort delta_poc_s0_minus1[16];
+    public _delta_poc_s0_minus1_e__FixedBuffer delta_poc_s0_minus1;
 
     [NativeTypeName("uint16_t[16]")]
-    public fixed ushort delta_poc_s1_minus1[16];
+    public _delta_poc_s1_minus1_e__FixedBuffer delta_poc_s1_minus1;
+
+    [InlineArray(16)]
+    public partial struct _delta_poc_s0_minus1_e__FixedBuffer
+    {
+        public ushort e0;
+    }
+
+    [InlineArray(16)]
+    public partial struct _delta_poc_s1_minus1_e__FixedBuffer
+    {
+        public ushort e0;
+    }
 }

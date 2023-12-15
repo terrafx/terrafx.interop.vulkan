@@ -15,7 +15,7 @@ public partial struct StdVideoH264SpsFlags
     public uint constraint_set0_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return _bitfield & 0x1u;
         }
@@ -31,7 +31,7 @@ public partial struct StdVideoH264SpsFlags
     public uint constraint_set1_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 1) & 0x1u;
         }
@@ -47,7 +47,7 @@ public partial struct StdVideoH264SpsFlags
     public uint constraint_set2_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 2) & 0x1u;
         }
@@ -63,7 +63,7 @@ public partial struct StdVideoH264SpsFlags
     public uint constraint_set3_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 3) & 0x1u;
         }
@@ -79,7 +79,7 @@ public partial struct StdVideoH264SpsFlags
     public uint constraint_set4_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 4) & 0x1u;
         }
@@ -95,7 +95,7 @@ public partial struct StdVideoH264SpsFlags
     public uint constraint_set5_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 5) & 0x1u;
         }
@@ -111,7 +111,7 @@ public partial struct StdVideoH264SpsFlags
     public uint direct_8x8_inference_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 6) & 0x1u;
         }
@@ -127,7 +127,7 @@ public partial struct StdVideoH264SpsFlags
     public uint mb_adaptive_frame_field_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 7) & 0x1u;
         }
@@ -143,7 +143,7 @@ public partial struct StdVideoH264SpsFlags
     public uint frame_mbs_only_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 8) & 0x1u;
         }
@@ -159,7 +159,7 @@ public partial struct StdVideoH264SpsFlags
     public uint delta_pic_order_always_zero_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 9) & 0x1u;
         }
@@ -175,7 +175,7 @@ public partial struct StdVideoH264SpsFlags
     public uint separate_colour_plane_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 10) & 0x1u;
         }
@@ -191,7 +191,7 @@ public partial struct StdVideoH264SpsFlags
     public uint gaps_in_frame_num_value_allowed_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 11) & 0x1u;
         }
@@ -207,7 +207,7 @@ public partial struct StdVideoH264SpsFlags
     public uint qpprime_y_zero_transform_bypass_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 12) & 0x1u;
         }
@@ -223,7 +223,7 @@ public partial struct StdVideoH264SpsFlags
     public uint frame_cropping_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 13) & 0x1u;
         }
@@ -239,7 +239,7 @@ public partial struct StdVideoH264SpsFlags
     public uint seq_scaling_matrix_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 14) & 0x1u;
         }
@@ -255,7 +255,7 @@ public partial struct StdVideoH264SpsFlags
     public uint vui_parameters_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 15) & 0x1u;
         }

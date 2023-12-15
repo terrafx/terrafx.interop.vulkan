@@ -4,6 +4,8 @@ using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
+[assembly: DefaultDllImportSearchPaths(DllImportSearchPath.SafeDirectories)]
+
 namespace TerraFX.Interop.Vulkan;
 
 public static unsafe partial class Vulkan
@@ -22,7 +24,7 @@ public static unsafe partial class Vulkan
             return nativeLibrary;
         }
 
-        if (libraryName.Equals("vulkan") && TryResolveVulkan(assembly, searchPath, out nativeLibrary))
+        if (libraryName.Equals("vulkan", StringComparison.Ordinal) && TryResolveVulkan(assembly, searchPath, out nativeLibrary))
         {
             return nativeLibrary;
         }

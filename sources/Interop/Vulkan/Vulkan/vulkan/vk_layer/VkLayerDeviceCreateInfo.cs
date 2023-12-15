@@ -16,7 +16,7 @@ public unsafe partial struct VkLayerDeviceCreateInfo
 
     public VkLayerFunction function;
 
-    [NativeTypeName("union (anonymous union at C:/VulkanSDK/1.3.239.0/Include/vulkan/vk_layer.h:147:5)")]
+    [NativeTypeName("__AnonymousRecord_vk_layer_L147_C5")]
     public _u_e__Union u;
 
     [StructLayout(LayoutKind.Explicit)]

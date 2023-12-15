@@ -15,7 +15,7 @@ public partial struct StdVideoH265PpsFlags
     public uint dependent_slice_segments_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return _bitfield & 0x1u;
         }
@@ -31,7 +31,7 @@ public partial struct StdVideoH265PpsFlags
     public uint output_flag_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 1) & 0x1u;
         }
@@ -47,7 +47,7 @@ public partial struct StdVideoH265PpsFlags
     public uint sign_data_hiding_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 2) & 0x1u;
         }
@@ -63,7 +63,7 @@ public partial struct StdVideoH265PpsFlags
     public uint cabac_init_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 3) & 0x1u;
         }
@@ -79,7 +79,7 @@ public partial struct StdVideoH265PpsFlags
     public uint constrained_intra_pred_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 4) & 0x1u;
         }
@@ -95,7 +95,7 @@ public partial struct StdVideoH265PpsFlags
     public uint transform_skip_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 5) & 0x1u;
         }
@@ -111,7 +111,7 @@ public partial struct StdVideoH265PpsFlags
     public uint cu_qp_delta_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 6) & 0x1u;
         }
@@ -127,7 +127,7 @@ public partial struct StdVideoH265PpsFlags
     public uint pps_slice_chroma_qp_offsets_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 7) & 0x1u;
         }
@@ -143,7 +143,7 @@ public partial struct StdVideoH265PpsFlags
     public uint weighted_pred_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 8) & 0x1u;
         }
@@ -159,7 +159,7 @@ public partial struct StdVideoH265PpsFlags
     public uint weighted_bipred_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 9) & 0x1u;
         }
@@ -175,7 +175,7 @@ public partial struct StdVideoH265PpsFlags
     public uint transquant_bypass_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 10) & 0x1u;
         }
@@ -191,7 +191,7 @@ public partial struct StdVideoH265PpsFlags
     public uint tiles_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 11) & 0x1u;
         }
@@ -207,7 +207,7 @@ public partial struct StdVideoH265PpsFlags
     public uint entropy_coding_sync_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 12) & 0x1u;
         }
@@ -223,7 +223,7 @@ public partial struct StdVideoH265PpsFlags
     public uint uniform_spacing_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 13) & 0x1u;
         }
@@ -239,7 +239,7 @@ public partial struct StdVideoH265PpsFlags
     public uint loop_filter_across_tiles_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 14) & 0x1u;
         }
@@ -255,7 +255,7 @@ public partial struct StdVideoH265PpsFlags
     public uint pps_loop_filter_across_slices_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 15) & 0x1u;
         }
@@ -271,7 +271,7 @@ public partial struct StdVideoH265PpsFlags
     public uint deblocking_filter_control_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 16) & 0x1u;
         }
@@ -287,7 +287,7 @@ public partial struct StdVideoH265PpsFlags
     public uint deblocking_filter_override_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 17) & 0x1u;
         }
@@ -303,7 +303,7 @@ public partial struct StdVideoH265PpsFlags
     public uint pps_deblocking_filter_disabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 18) & 0x1u;
         }
@@ -319,7 +319,7 @@ public partial struct StdVideoH265PpsFlags
     public uint pps_scaling_list_data_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 19) & 0x1u;
         }
@@ -335,7 +335,7 @@ public partial struct StdVideoH265PpsFlags
     public uint lists_modification_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 20) & 0x1u;
         }
@@ -351,7 +351,7 @@ public partial struct StdVideoH265PpsFlags
     public uint slice_segment_header_extension_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 21) & 0x1u;
         }
@@ -367,7 +367,7 @@ public partial struct StdVideoH265PpsFlags
     public uint pps_extension_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 22) & 0x1u;
         }
@@ -383,7 +383,7 @@ public partial struct StdVideoH265PpsFlags
     public uint cross_component_prediction_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 23) & 0x1u;
         }
@@ -399,7 +399,7 @@ public partial struct StdVideoH265PpsFlags
     public uint chroma_qp_offset_list_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 24) & 0x1u;
         }
@@ -415,7 +415,7 @@ public partial struct StdVideoH265PpsFlags
     public uint pps_curr_pic_ref_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 25) & 0x1u;
         }
@@ -431,7 +431,7 @@ public partial struct StdVideoH265PpsFlags
     public uint residual_adaptive_colour_transform_enabled_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 26) & 0x1u;
         }
@@ -447,7 +447,7 @@ public partial struct StdVideoH265PpsFlags
     public uint pps_slice_act_qp_offsets_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 27) & 0x1u;
         }
@@ -463,7 +463,7 @@ public partial struct StdVideoH265PpsFlags
     public uint pps_palette_predictor_initializers_present_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 28) & 0x1u;
         }
@@ -479,7 +479,7 @@ public partial struct StdVideoH265PpsFlags
     public uint monochrome_palette_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 29) & 0x1u;
         }
@@ -495,7 +495,7 @@ public partial struct StdVideoH265PpsFlags
     public uint pps_range_extension_flag
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get
+        readonly get
         {
             return (_bitfield >> 30) & 0x1u;
         }

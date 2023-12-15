@@ -3,13 +3,21 @@
 // Ported from include/vk_video/vulkan_video_codec_h265std.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
+using System.Runtime.CompilerServices;
+
 namespace TerraFX.Interop.Vulkan;
 
-public unsafe partial struct StdVideoH265LongTermRefPicsSps
+public partial struct StdVideoH265LongTermRefPicsSps
 {
     [NativeTypeName("uint32_t")]
     public uint used_by_curr_pic_lt_sps_flag;
 
     [NativeTypeName("uint32_t[32]")]
-    public fixed uint lt_ref_pic_poc_lsb_sps[32];
+    public _lt_ref_pic_poc_lsb_sps_e__FixedBuffer lt_ref_pic_poc_lsb_sps;
+
+    [InlineArray(32)]
+    public partial struct _lt_ref_pic_poc_lsb_sps_e__FixedBuffer
+    {
+        public uint e0;
+    }
 }

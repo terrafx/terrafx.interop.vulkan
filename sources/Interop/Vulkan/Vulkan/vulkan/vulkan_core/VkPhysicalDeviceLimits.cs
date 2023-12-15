@@ -3,9 +3,11 @@
 // Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.239
 // Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
+using System.Runtime.CompilerServices;
+
 namespace TerraFX.Interop.Vulkan;
 
-public unsafe partial struct VkPhysicalDeviceLimits
+public partial struct VkPhysicalDeviceLimits
 {
     [NativeTypeName("uint32_t")]
     public uint maxImageDimension1D;
@@ -164,13 +166,13 @@ public unsafe partial struct VkPhysicalDeviceLimits
     public uint maxComputeSharedMemorySize;
 
     [NativeTypeName("uint32_t[3]")]
-    public fixed uint maxComputeWorkGroupCount[3];
+    public _maxComputeWorkGroupCount_e__FixedBuffer maxComputeWorkGroupCount;
 
     [NativeTypeName("uint32_t")]
     public uint maxComputeWorkGroupInvocations;
 
     [NativeTypeName("uint32_t[3]")]
-    public fixed uint maxComputeWorkGroupSize[3];
+    public _maxComputeWorkGroupSize_e__FixedBuffer maxComputeWorkGroupSize;
 
     [NativeTypeName("uint32_t")]
     public uint subPixelPrecisionBits;
@@ -195,10 +197,10 @@ public unsafe partial struct VkPhysicalDeviceLimits
     public uint maxViewports;
 
     [NativeTypeName("uint32_t[2]")]
-    public fixed uint maxViewportDimensions[2];
+    public _maxViewportDimensions_e__FixedBuffer maxViewportDimensions;
 
     [NativeTypeName("float[2]")]
-    public fixed float viewportBoundsRange[2];
+    public _viewportBoundsRange_e__FixedBuffer viewportBoundsRange;
 
     [NativeTypeName("uint32_t")]
     public uint viewportSubPixelBits;
@@ -284,10 +286,10 @@ public unsafe partial struct VkPhysicalDeviceLimits
     public uint discreteQueuePriorities;
 
     [NativeTypeName("float[2]")]
-    public fixed float pointSizeRange[2];
+    public _pointSizeRange_e__FixedBuffer pointSizeRange;
 
     [NativeTypeName("float[2]")]
-    public fixed float lineWidthRange[2];
+    public _lineWidthRange_e__FixedBuffer lineWidthRange;
 
     public float pointSizeGranularity;
 
@@ -305,4 +307,40 @@ public unsafe partial struct VkPhysicalDeviceLimits
 
     [NativeTypeName("VkDeviceSize")]
     public ulong nonCoherentAtomSize;
+
+    [InlineArray(3)]
+    public partial struct _maxComputeWorkGroupCount_e__FixedBuffer
+    {
+        public uint e0;
+    }
+
+    [InlineArray(3)]
+    public partial struct _maxComputeWorkGroupSize_e__FixedBuffer
+    {
+        public uint e0;
+    }
+
+    [InlineArray(2)]
+    public partial struct _maxViewportDimensions_e__FixedBuffer
+    {
+        public uint e0;
+    }
+
+    [InlineArray(2)]
+    public partial struct _viewportBoundsRange_e__FixedBuffer
+    {
+        public float e0;
+    }
+
+    [InlineArray(2)]
+    public partial struct _pointSizeRange_e__FixedBuffer
+    {
+        public float e0;
+    }
+
+    [InlineArray(2)]
+    public partial struct _lineWidthRange_e__FixedBuffer
+    {
+        public float e0;
+    }
 }
