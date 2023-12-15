@@ -50,7 +50,7 @@ public static unsafe partial class Vulkan
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
-                if (NativeLibrary.TryLoad("libvulkan.so.1.3.239", assembly, searchPath, out nativeLibrary))
+                if (NativeLibrary.TryLoad("libvulkan.so.1.3.268", assembly, searchPath, out nativeLibrary))
                 {
                     return true;
                 }
@@ -62,7 +62,7 @@ public static unsafe partial class Vulkan
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
-                if (NativeLibrary.TryLoad("libvulkan.1.3.239.dylib", assembly, searchPath, out nativeLibrary))
+                if (NativeLibrary.TryLoad("libvulkan.1.3.268.dylib", assembly, searchPath, out nativeLibrary))
                 {
                     return true;
                 }

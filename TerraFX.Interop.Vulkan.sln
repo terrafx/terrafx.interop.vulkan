@@ -153,6 +153,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_wayland", "vulkan_wa
 		generation\Vulkan\vulkan\vulkan_wayland\generate.rsp = generation\Vulkan\vulkan\vulkan_wayland\generate.rsp
 		generation\Vulkan\vulkan\vulkan_wayland\header.txt = generation\Vulkan\vulkan\vulkan_wayland\header.txt
 		generation\Vulkan\vulkan\vulkan_wayland\vulkan-vulkan_wayland.h = generation\Vulkan\vulkan\vulkan_wayland\vulkan-vulkan_wayland.h
+		generation\Vulkan\vulkan\vulkan_wayland\wayland-client.h = generation\Vulkan\vulkan\vulkan_wayland\wayland-client.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_win32", "vulkan_win32", "{0D57A385-E69C-4F88-910B-DD346172C9EE}"
@@ -317,6 +318,41 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan_profiles", "vulkan_p
 		generation\Vulkan\vulkan\vulkan_profiles\vulkan-vulkan_profiles.h = generation\Vulkan\vulkan\vulkan_profiles\vulkan-vulkan_profiles.h
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zircon", "zircon", "{EDF4A882-882F-4C1D-86FA-BF3D3208D897}"
+	ProjectSection(SolutionItems) = preProject
+		generation\Vulkan\vulkan\vulkan_fuchsia\zircon\types.h = generation\Vulkan\vulkan\vulkan_fuchsia\zircon\types.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ggp_c", "ggp_c", "{BE407AD5-6478-4B5F-9D2F-28E819248BE9}"
+	ProjectSection(SolutionItems) = preProject
+		generation\Vulkan\vulkan\vulkan_ggp\ggp_c\vulkan_types.h = generation\Vulkan\vulkan\vulkan_ggp\ggp_c\vulkan_types.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "screen", "screen", "{4C4DDDD4-0449-42BD-9952-34BFB0FA7EEF}"
+	ProjectSection(SolutionItems) = preProject
+		generation\Vulkan\vulkan\vulkan_screen\screen\screen.h = generation\Vulkan\vulkan\vulkan_screen\screen\screen.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xcb", "xcb", "{CD9996AF-540F-40AE-8E38-557D53A34F8E}"
+	ProjectSection(SolutionItems) = preProject
+		generation\Vulkan\vulkan\vulkan_xcb\xcb\xcb.h = generation\Vulkan\vulkan\vulkan_xcb\xcb\xcb.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "X11", "X11", "{8F7DEA80-8B21-47FA-B2C0-FB2CC2CB2C2F}"
+	ProjectSection(SolutionItems) = preProject
+		generation\Vulkan\vulkan\vulkan_xlib\X11\Xlib.h = generation\Vulkan\vulkan\vulkan_xlib\X11\Xlib.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "X11", "X11", "{DF984A37-16D8-4B98-93DC-5C0B2C4234C2}"
+	ProjectSection(SolutionItems) = preProject
+		generation\Vulkan\vulkan\vulkan_xlib_xrandr\X11\Xlib.h = generation\Vulkan\vulkan\vulkan_xlib_xrandr\X11\Xlib.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extensions", "extensions", "{9CB2A30C-0486-4C75-83C6-3C04C2B7A0B2}"
+	ProjectSection(SolutionItems) = preProject
+		generation\Vulkan\vulkan\vulkan_xlib_xrandr\X11\extensions\Xrandr.h = generation\Vulkan\vulkan\vulkan_xlib_xrandr\X11\extensions\Xrandr.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -378,6 +414,13 @@ Global
 		{130AD321-77EC-4B5D-BCDD-708380AB6150} = {70F5B453-DC97-44B5-B557-22FA8093F38D}
 		{634B8A0D-A2BD-4AC3-B56B-B6578E238AA1} = {8B98276D-AB81-4492-81E3-BAB8F9494A99}
 		{191B9CB7-6528-4550-89C7-4F2F52A0FCFD} = {A60F8633-35FC-4F61-A42A-420ED1BEB2DB}
+		{EDF4A882-882F-4C1D-86FA-BF3D3208D897} = {686211F7-8AEB-45EA-83E6-3BAC23CE1FC0}
+		{BE407AD5-6478-4B5F-9D2F-28E819248BE9} = {0BF30806-FF4A-43D5-9D38-77F44BD727E2}
+		{4C4DDDD4-0449-42BD-9952-34BFB0FA7EEF} = {277EB067-C8D5-4766-B3AA-BFBCFD06C984}
+		{CD9996AF-540F-40AE-8E38-557D53A34F8E} = {AFB2FD31-9D96-49AE-BFA3-A1A3150AE386}
+		{8F7DEA80-8B21-47FA-B2C0-FB2CC2CB2C2F} = {14012392-945B-4E64-94FF-A043FE035F0B}
+		{DF984A37-16D8-4B98-93DC-5C0B2C4234C2} = {CE39443C-CC77-4C5C-A90C-DED73C9F7C61}
+		{9CB2A30C-0486-4C75-83C6-3C04C2B7A0B2} = {DF984A37-16D8-4B98-93DC-5C0B2C4234C2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FE36DF8-2D9C-4F20-8787-45DC74B57461}
