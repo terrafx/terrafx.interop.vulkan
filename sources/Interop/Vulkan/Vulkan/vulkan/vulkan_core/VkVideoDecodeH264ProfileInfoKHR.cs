@@ -14,5 +14,6 @@ public unsafe partial struct VkVideoDecodeH264ProfileInfoKHR
 
     public StdVideoH264ProfileIdc stdProfileIdc;
 
-    public VkVideoDecodeH264PictureLayoutFlagBitsKHR pictureLayout;
+    [NativeTypeName("VkVideoDecodeH264PictureLayoutFlagBitsKHR")]
+    public VkDeviceAddressBindingFlagsEXT pictureLayout;
 }
