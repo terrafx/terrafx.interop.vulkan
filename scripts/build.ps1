@@ -113,7 +113,7 @@ try {
   $RepoRoot = Join-Path -Path $PSScriptRoot -ChildPath ".."
 
   if ($solution -eq "") {
-    $solution = Join-Path -Path $RepoRoot -ChildPath "TerraFX.Interop.Vulkan.sln"
+    $solution = Join-Path -Path $RepoRoot -ChildPath "TerraFX.Interop.Vulkan.slnx"
   }
 
   $ArtifactsDir = Join-Path -Path $RepoRoot -ChildPath "artifacts"
@@ -133,7 +133,7 @@ try {
     $DotNetInstallDirectory = Join-Path -Path $ArtifactsDir -ChildPath "dotnet"
     Create-Directory -Path $DotNetInstallDirectory
 
-    & $DotNetInstallScript -Channel 8.0 -Version latest -InstallDir $DotNetInstallDirectory -Architecture $architecture
+    & $DotNetInstallScript -Channel 10.0 -Version latest -InstallDir $DotNetInstallDirectory -Architecture $architecture
 
     $env:PATH="$DotNetInstallDirectory;$env:PATH"
   }

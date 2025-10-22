@@ -14,7 +14,10 @@ public static unsafe partial class Vulkan
 
     static Vulkan()
     {
-        NativeLibrary.SetDllImportResolver(Assembly.GetExecutingAssembly(), OnDllImport);
+        if (!Configuration.DisableResolveLibraryHook)
+        {
+            NativeLibrary.SetDllImportResolver(Assembly.GetExecutingAssembly(), OnDllImport);
+        }
     }
 
     private static IntPtr OnDllImport(string libraryName, Assembly assembly, DllImportSearchPath? searchPath)
@@ -24,7 +27,7 @@ public static unsafe partial class Vulkan
             return nativeLibrary;
         }
 
-        if (libraryName.Equals("vulkan", StringComparison.Ordinal) && TryResolveVulkan(assembly, searchPath, out nativeLibrary))
+        if (libraryName.Equals("vulkan", StringComparison.OrdinalIgnoreCase) && TryResolveVulkan(assembly, searchPath, out nativeLibrary))
         {
             return nativeLibrary;
         }
