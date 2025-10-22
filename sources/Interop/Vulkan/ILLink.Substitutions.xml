@@ -1,0 +1,10 @@
+<linker>
+    <assembly fullname="TerraFX.Interop.Vulkan">
+        <type fullname="TerraFX.Interop.Vulkan.Configuration" feature="TerraFX.Interop.Vulkan.DisableResolveLibraryHook" featurevalue="true">
+            <field name="s_disableResolveLibraryHook" value="true" initialize="true" />
+        </type>
+        <type fullname="TerraFX.Interop.Vulkan.Configuration" feature="TerraFX.Interop.Vulkan.DisableResolveLibraryHook" featurevalue="false">
+            <field name="s_disableResolveLibraryHook" value="false" initialize="true" />
+        </type>
+    </assembly>
+</linker>

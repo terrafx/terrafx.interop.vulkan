@@ -15,7 +15,7 @@ public unsafe partial struct VkEnumerateInstanceVersionChain
     [NativeTypeName("const struct VkEnumerateInstanceVersionChain *")]
     public VkEnumerateInstanceVersionChain* pNextLink;
 
-    public VkResult CallDown([NativeTypeName("uint32_t *")] uint* pApiVersion)
+    public readonly VkResult CallDown([NativeTypeName("uint32_t *")] uint* pApiVersion)
     {
         return pfnNextLayer(pNextLink, pApiVersion);
     }

@@ -1,0 +1,247 @@
+<Solution>
+  <Folder Name="/.github/" />
+  <Folder Name="/.github/ISSUE_TEMPLATE/">
+    <File Path=".github/ISSUE_TEMPLATE/bug.md" />
+    <File Path=".github/ISSUE_TEMPLATE/proposal.md" />
+    <File Path=".github/ISSUE_TEMPLATE/regression.md" />
+  </Folder>
+  <Folder Name="/.github/workflows/">
+    <File Path=".github/workflows/ci.yml" />
+  </Folder>
+  <Folder Name="/.root/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="build.cmd" />
+    <File Path="build.sh" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
+    <File Path="Directory.Packages.props" />
+    <File Path="exclusion.dic" />
+    <File Path="global.json" />
+    <File Path="LICENSE.md" />
+    <File Path="NuGet.config" />
+    <File Path="pack.cmd" />
+    <File Path="pack.sh" />
+    <File Path="restore.cmd" />
+    <File Path="restore.sh" />
+    <File Path="TerraFX.snk" />
+    <File Path="test.cmd" />
+    <File Path="test.sh" />
+  </Folder>
+  <Folder Name="/docs/">
+    <File Path="docs/CODEOWNERS" />
+    <File Path="docs/CODE_OF_CONDUCT.md" />
+    <File Path="docs/CONTRIBUTING.md" />
+    <File Path="docs/ISSUE_TEMPLATE.md" />
+    <File Path="docs/PULL_REQUEST_TEMPLATE.md" />
+    <File Path="docs/README.md" />
+  </Folder>
+  <Folder Name="/generation/">
+    <File Path="generation/remap-classes.rsp" />
+    <File Path="generation/remap-handles.rsp" />
+    <File Path="generation/remap-imports.rsp" />
+    <File Path="generation/remap-structs.rsp" />
+    <File Path="generation/remap-transparent.rsp" />
+    <File Path="generation/remap-types.rsp" />
+    <File Path="generation/remap.rsp" />
+    <File Path="generation/settings.rsp" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/" />
+  <Folder Name="/generation/Vulkan/other/" />
+  <Folder Name="/generation/Vulkan/other/helper-types/">
+    <File Path="generation/Vulkan/other/helper-types/generate.rsp" />
+    <File Path="generation/Vulkan/other/helper-types/header.txt" />
+    <File Path="generation/Vulkan/other/helper-types/other-helper-types.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vk_video/" />
+  <Folder Name="/generation/Vulkan/vk_video/vulkan_video_codecs_common/">
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codecs_common/generate.rsp" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codecs_common/header.txt" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codecs_common/vk_video-vulkan_video_codecs_common.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vk_video/vulkan_video_codec_h264std/">
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h264std/generate.rsp" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h264std/header.txt" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h264std/vk_video-vulkan_video_codec_h264std.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vk_video/vulkan_video_codec_h264std_decode/">
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h264std_decode/generate.rsp" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h264std_decode/header.txt" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h264std_decode/vk_video-vulkan_video_codec_h264std_decode.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vk_video/vulkan_video_codec_h264std_encode/">
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h264std_encode/generate.rsp" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h264std_encode/header.txt" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h264std_encode/vk_video-vulkan_video_codec_h264std_encode.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vk_video/vulkan_video_codec_h265std/">
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h265std/generate.rsp" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h265std/header.txt" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h265std/vk_video-vulkan_video_codec_h265std.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vk_video/vulkan_video_codec_h265std_decode/">
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h265std_decode/generate.rsp" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h265std_decode/header.txt" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h265std_decode/vk_video-vulkan_video_codec_h265std_decode.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vk_video/vulkan_video_codec_h265std_encode/">
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h265std_encode/generate.rsp" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h265std_encode/header.txt" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h265std_encode/vk_video-vulkan_video_codec_h265std_encode.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/" />
+  <Folder Name="/generation/Vulkan/vulkan/vk_enum_string_helper/">
+    <File Path="generation/Vulkan/vulkan/vk_enum_string_helper/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vk_enum_string_helper/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vk_enum_string_helper/vulkan-vk_enum_string_helper.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vk_icd/">
+    <File Path="generation/Vulkan/vulkan/vk_icd/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vk_icd/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vk_icd/vulkan-vk_icd.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vk_layer/">
+    <File Path="generation/Vulkan/vulkan/vk_layer/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vk_layer/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vk_layer/vulkan-vk_layer.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vk_platform/">
+    <File Path="generation/Vulkan/vulkan/vk_platform/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vk_platform/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vk_platform/vulkan-vk_platform.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan/">
+    <File Path="generation/Vulkan/vulkan/vulkan/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan/vulkan-vulkan.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_android/">
+    <File Path="generation/Vulkan/vulkan/vulkan_android/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_android/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_android/vulkan-vulkan_android.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_beta/">
+    <File Path="generation/Vulkan/vulkan/vulkan_beta/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_beta/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_beta/vulkan-vulkan_beta.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_core/">
+    <File Path="generation/Vulkan/vulkan/vulkan_core/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_core/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_core/vulkan-vulkan_core.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_directfb/">
+    <File Path="generation/Vulkan/vulkan/vulkan_directfb/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_directfb/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_directfb/vulkan-vulkan_directfb.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_fuchsia/">
+    <File Path="generation/Vulkan/vulkan/vulkan_fuchsia/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_fuchsia/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_fuchsia/vulkan-vulkan_fuchsia.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_fuchsia/zircon/">
+    <File Path="generation/Vulkan/vulkan/vulkan_fuchsia/zircon/types.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_ggp/">
+    <File Path="generation/Vulkan/vulkan/vulkan_ggp/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_ggp/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_ggp/vulkan-vulkan_ggp.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_ggp/ggp_c/">
+    <File Path="generation/Vulkan/vulkan/vulkan_ggp/ggp_c/vulkan_types.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_ios/">
+    <File Path="generation/Vulkan/vulkan/vulkan_ios/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_ios/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_ios/vulkan-vulkan_ios.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_macos/">
+    <File Path="generation/Vulkan/vulkan/vulkan_macos/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_macos/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_macos/vulkan-vulkan_macos.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_metal/">
+    <File Path="generation/Vulkan/vulkan/vulkan_metal/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_metal/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_metal/vulkan-vulkan_metal.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_screen/">
+    <File Path="generation/Vulkan/vulkan/vulkan_screen/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_screen/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_screen/vulkan-vulkan_screen.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_screen/screen/">
+    <File Path="generation/Vulkan/vulkan/vulkan_screen/screen/screen.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_vi/">
+    <File Path="generation/Vulkan/vulkan/vulkan_vi/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_vi/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_vi/vulkan-vulkan_vi.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_wayland/">
+    <File Path="generation/Vulkan/vulkan/vulkan_wayland/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_wayland/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_wayland/vulkan-vulkan_wayland.h" />
+    <File Path="generation/Vulkan/vulkan/vulkan_wayland/wayland-client.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_win32/">
+    <File Path="generation/Vulkan/vulkan/vulkan_win32/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_win32/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_win32/vulkan-vulkan_win32.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_xcb/">
+    <File Path="generation/Vulkan/vulkan/vulkan_xcb/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_xcb/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_xcb/vulkan-vulkan_xcb.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_xcb/xcb/">
+    <File Path="generation/Vulkan/vulkan/vulkan_xcb/xcb/xcb.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_xlib/">
+    <File Path="generation/Vulkan/vulkan/vulkan_xlib/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_xlib/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_xlib/vulkan-vulkan_xlib.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_xlib/X11/">
+    <File Path="generation/Vulkan/vulkan/vulkan_xlib/X11/Xlib.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_xlib_xrandr/">
+    <File Path="generation/Vulkan/vulkan/vulkan_xlib_xrandr/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_xlib_xrandr/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_xlib_xrandr/vulkan-vulkan_xlib_xrandr.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_xlib_xrandr/X11/">
+    <File Path="generation/Vulkan/vulkan/vulkan_xlib_xrandr/X11/Xlib.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_xlib_xrandr/X11/extensions/">
+    <File Path="generation/Vulkan/vulkan/vulkan_xlib_xrandr/X11/extensions/Xrandr.h" />
+  </Folder>
+  <Folder Name="/scripts/">
+    <File Path="scripts/build.ps1" />
+    <File Path="scripts/build.sh" />
+    <File Path="scripts/cibuild.cmd" />
+    <File Path="scripts/cibuild.sh" />
+  </Folder>
+  <Folder Name="/sources/">
+    <File Path="sources/Directory.Build.props" />
+    <File Path="sources/Directory.Build.targets" />
+  </Folder>
+  <Folder Name="/sources/Interop/">
+    <File Path="sources/Interop/.editorconfig" />
+  </Folder>
+  <Folder Name="/sources/Interop/Vulkan/">
+    <Project Path="sources/Interop/Vulkan/TerraFX.Interop.Vulkan.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <File Path="tests/Directory.Build.props" />
+    <File Path="tests/Directory.Build.targets" />
+  </Folder>
+  <Folder Name="/tests/Interop/">
+    <File Path="tests/Interop/.editorconfig" />
+  </Folder>
+  <Folder Name="/tests/Interop/Vulkan/">
+    <Project Path="tests/Interop/Vulkan/TerraFX.Interop.Vulkan.UnitTests.csproj" />
+  </Folder>
+</Solution>

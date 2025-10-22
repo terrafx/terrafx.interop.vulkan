@@ -4,7 +4,7 @@
 
   <PropertyGroup>
     <RootNamespace>TerraFX.Interop.UnitTests</RootNamespace>
-    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks>net10.0</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -12,7 +12,7 @@
     <!-- CA1708: Identifiers should differ by more than case -->
     <NoWarn>$(NoWarn);CA1707;CA1708</NoWarn>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <ProjectReference Include="..\..\..\sources\Interop\Vulkan\TerraFX.Interop.Vulkan.csproj" />
   </ItemGroup>
