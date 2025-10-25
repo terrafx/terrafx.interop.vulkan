@@ -69,7 +69,7 @@ public readonly partial struct VkEvent : IComparable, IComparable<VkEvent>, IEqu
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkEvent other)
+        if (obj is VkEvent other)
         {
             return CompareTo(other);
         }

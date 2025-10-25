@@ -1,0 +1,16 @@
+@../../../settings.rsp
+@../../../remap.rsp
+--exclude
+VULKAN_VIDEO_CODEC_VP9STD_H_
+--file
+vk_video-vulkan_video_codec_vp9std.h
+--methodClassName
+Vulkan
+--namespace
+TerraFX.Interop.Vulkan
+--output
+../../../../sources/Interop/Vulkan/Vulkan/vk_video/vulkan_video_codec_vp9std
+--test-output
+../../../../tests/Interop/Vulkan/Vulkan/vk_video/vulkan_video_codec_vp9std
+--traverse
+C:/VulkanSDK/1.4.328.1/Include/vk_video/vulkan_video_codec_vp9std.h

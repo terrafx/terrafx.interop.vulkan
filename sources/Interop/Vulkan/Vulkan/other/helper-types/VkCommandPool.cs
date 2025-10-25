@@ -69,7 +69,7 @@ public readonly partial struct VkCommandPool : IComparable, IComparable<VkComman
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkCommandPool other)
+        if (obj is VkCommandPool other)
         {
             return CompareTo(other);
         }

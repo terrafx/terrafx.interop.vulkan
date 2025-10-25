@@ -69,7 +69,7 @@ public readonly partial struct VkAccelerationStructureKHR : IComparable, ICompar
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkAccelerationStructureKHR other)
+        if (obj is VkAccelerationStructureKHR other)
         {
             return CompareTo(other);
         }

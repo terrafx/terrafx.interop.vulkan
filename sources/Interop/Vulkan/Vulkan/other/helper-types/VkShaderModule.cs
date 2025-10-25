@@ -69,7 +69,7 @@ public readonly partial struct VkShaderModule : IComparable, IComparable<VkShade
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkShaderModule other)
+        if (obj is VkShaderModule other)
         {
             return CompareTo(other);
         }

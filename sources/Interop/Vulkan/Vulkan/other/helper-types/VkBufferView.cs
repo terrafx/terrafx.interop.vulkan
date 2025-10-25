@@ -69,7 +69,7 @@ public readonly partial struct VkBufferView : IComparable, IComparable<VkBufferV
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkBufferView other)
+        if (obj is VkBufferView other)
         {
             return CompareTo(other);
         }

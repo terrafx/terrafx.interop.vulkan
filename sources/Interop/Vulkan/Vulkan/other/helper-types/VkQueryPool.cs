@@ -69,7 +69,7 @@ public readonly partial struct VkQueryPool : IComparable, IComparable<VkQueryPoo
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkQueryPool other)
+        if (obj is VkQueryPool other)
         {
             return CompareTo(other);
         }

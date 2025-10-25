@@ -69,7 +69,7 @@ public readonly partial struct VkPrivateDataSlot : IComparable, IComparable<VkPr
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkPrivateDataSlot other)
+        if (obj is VkPrivateDataSlot other)
         {
             return CompareTo(other);
         }

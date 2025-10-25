@@ -69,7 +69,7 @@ public readonly partial struct VkRenderPass : IComparable, IComparable<VkRenderP
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkRenderPass other)
+        if (obj is VkRenderPass other)
         {
             return CompareTo(other);
         }

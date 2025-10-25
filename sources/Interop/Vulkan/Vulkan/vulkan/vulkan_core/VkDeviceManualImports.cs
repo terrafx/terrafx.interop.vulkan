@@ -1,7 +1,7 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
-// Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.4.328.1
+// Original source is Copyright © 2015-2025 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan;
 
@@ -97,11 +97,39 @@ public unsafe partial struct VkDeviceManualImports
 
     public delegate* unmanaged<VkDevice, VkPipelineExecutableInfoKHR*, uint*, VkPipelineExecutableInternalRepresentationKHR*, VkResult> vkGetPipelineExecutableInternalRepresentationsKHR;
 
+    public delegate* unmanaged<VkDevice, VkMemoryMapInfo*, void**, VkResult> vkMapMemory2KHR;
+
+    public delegate* unmanaged<VkDevice, VkMemoryUnmapInfo*, VkResult> vkUnmapMemory2KHR;
+
+    public delegate* unmanaged<VkDevice, VkVideoEncodeSessionParametersGetInfoKHR*, VkVideoEncodeSessionParametersFeedbackInfoKHR*, nuint*, void*, VkResult> vkGetEncodedVideoSessionParametersKHR;
+
     public delegate* unmanaged<VkDevice, VkDeviceBufferMemoryRequirements*, VkMemoryRequirements2*, void> vkGetDeviceBufferMemoryRequirementsKHR;
 
     public delegate* unmanaged<VkDevice, VkDeviceImageMemoryRequirements*, VkMemoryRequirements2*, void> vkGetDeviceImageMemoryRequirementsKHR;
 
     public delegate* unmanaged<VkDevice, VkDeviceImageMemoryRequirements*, uint*, VkSparseImageMemoryRequirements2*, void> vkGetDeviceImageSparseMemoryRequirementsKHR;
+
+    public delegate* unmanaged<VkDevice, VkRenderingAreaInfo*, VkExtent2D*, void> vkGetRenderingAreaGranularityKHR;
+
+    public delegate* unmanaged<VkDevice, VkDeviceImageSubresourceInfo*, VkSubresourceLayout2*, void> vkGetDeviceImageSubresourceLayoutKHR;
+
+    public delegate* unmanaged<VkDevice, VkImage, VkImageSubresource2*, VkSubresourceLayout2*, void> vkGetImageSubresourceLayout2KHR;
+
+    public delegate* unmanaged<VkDevice, VkSwapchainKHR, VkPresentWait2InfoKHR*, VkResult> vkWaitForPresent2KHR;
+
+    public delegate* unmanaged<VkDevice, VkPipelineBinaryCreateInfoKHR*, VkAllocationCallbacks*, VkPipelineBinaryHandlesInfoKHR*, VkResult> vkCreatePipelineBinariesKHR;
+
+    public delegate* unmanaged<VkDevice, VkPipelineBinaryKHR, VkAllocationCallbacks*, void> vkDestroyPipelineBinaryKHR;
+
+    public delegate* unmanaged<VkDevice, VkPipelineCreateInfoKHR*, VkPipelineBinaryKeyKHR*, VkResult> vkGetPipelineKeyKHR;
+
+    public delegate* unmanaged<VkDevice, VkPipelineBinaryDataInfoKHR*, VkPipelineBinaryKeyKHR*, nuint*, void*, VkResult> vkGetPipelineBinaryDataKHR;
+
+    public delegate* unmanaged<VkDevice, VkReleaseCapturedPipelineDataInfoKHR*, VkAllocationCallbacks*, VkResult> vkReleaseCapturedPipelineDataKHR;
+
+    public delegate* unmanaged<VkDevice, VkReleaseSwapchainImagesInfoKHR*, VkResult> vkReleaseSwapchainImagesKHR;
+
+    public delegate* unmanaged<VkDevice, uint, VkCalibratedTimestampInfoKHR*, ulong*, ulong*, VkResult> vkGetCalibratedTimestampsKHR;
 
     public delegate* unmanaged<VkDevice, VkDebugMarkerObjectTagInfoEXT*, VkResult> vkDebugMarkerSetObjectTagEXT;
 
@@ -116,6 +144,8 @@ public unsafe partial struct VkDeviceManualImports
     public delegate* unmanaged<VkDevice, VkCuFunctionNVX, VkAllocationCallbacks*, void> vkDestroyCuFunctionNVX;
 
     public delegate* unmanaged<VkDevice, VkImageViewHandleInfoNVX*, uint> vkGetImageViewHandleNVX;
+
+    public delegate* unmanaged<VkDevice, VkImageViewHandleInfoNVX*, ulong> vkGetImageViewHandle64NVX;
 
     public delegate* unmanaged<VkDevice, VkImageView, VkImageViewAddressPropertiesNVX*, VkResult> vkGetImageViewAddressNVX;
 
@@ -169,7 +199,7 @@ public unsafe partial struct VkDeviceManualImports
 
     public delegate* unmanaged<VkDevice, VkExternalMemoryHandleTypeFlags, void*, VkMemoryHostPointerPropertiesEXT*, VkResult> vkGetMemoryHostPointerPropertiesEXT;
 
-    public delegate* unmanaged<VkDevice, uint, VkCalibratedTimestampInfoEXT*, ulong*, ulong*, VkResult> vkGetCalibratedTimestampsEXT;
+    public delegate* unmanaged<VkDevice, uint, VkCalibratedTimestampInfoKHR*, ulong*, ulong*, VkResult> vkGetCalibratedTimestampsEXT;
 
     public delegate* unmanaged<VkDevice, VkInitializePerformanceApiInfoINTEL*, VkResult> vkInitializePerformanceApiINTEL;
 
@@ -187,7 +217,17 @@ public unsafe partial struct VkDeviceManualImports
 
     public delegate* unmanaged<VkDevice, VkQueryPool, uint, uint, void> vkResetQueryPoolEXT;
 
-    public delegate* unmanaged<VkDevice, VkImage, VkImageSubresource2KHR*, VkSubresourceLayout2KHR*, void> vkGetImageSubresourceLayout2EXT;
+    public delegate* unmanaged<VkDevice, VkCopyMemoryToImageInfo*, VkResult> vkCopyMemoryToImageEXT;
+
+    public delegate* unmanaged<VkDevice, VkCopyImageToMemoryInfo*, VkResult> vkCopyImageToMemoryEXT;
+
+    public delegate* unmanaged<VkDevice, VkCopyImageToImageInfo*, VkResult> vkCopyImageToImageEXT;
+
+    public delegate* unmanaged<VkDevice, uint, VkHostImageLayoutTransitionInfo*, VkResult> vkTransitionImageLayoutEXT;
+
+    public delegate* unmanaged<VkDevice, VkImage, VkImageSubresource2*, VkSubresourceLayout2*, void> vkGetImageSubresourceLayout2EXT;
+
+    public delegate* unmanaged<VkDevice, VkReleaseSwapchainImagesInfoKHR*, VkResult> vkReleaseSwapchainImagesEXT;
 
     public delegate* unmanaged<VkDevice, VkGeneratedCommandsMemoryRequirementsInfoNV*, VkMemoryRequirements2*, void> vkGetGeneratedCommandsMemoryRequirementsNV;
 
@@ -203,11 +243,47 @@ public unsafe partial struct VkDeviceManualImports
 
     public delegate* unmanaged<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong*, void> vkGetPrivateDataEXT;
 
+    public delegate* unmanaged<VkDevice, VkDescriptorSetLayout, ulong*, void> vkGetDescriptorSetLayoutSizeEXT;
+
+    public delegate* unmanaged<VkDevice, VkDescriptorSetLayout, uint, ulong*, void> vkGetDescriptorSetLayoutBindingOffsetEXT;
+
+    public delegate* unmanaged<VkDevice, VkDescriptorGetInfoEXT*, nuint, void*, void> vkGetDescriptorEXT;
+
+    public delegate* unmanaged<VkDevice, VkBufferCaptureDescriptorDataInfoEXT*, void*, VkResult> vkGetBufferOpaqueCaptureDescriptorDataEXT;
+
+    public delegate* unmanaged<VkDevice, VkImageCaptureDescriptorDataInfoEXT*, void*, VkResult> vkGetImageOpaqueCaptureDescriptorDataEXT;
+
+    public delegate* unmanaged<VkDevice, VkImageViewCaptureDescriptorDataInfoEXT*, void*, VkResult> vkGetImageViewOpaqueCaptureDescriptorDataEXT;
+
+    public delegate* unmanaged<VkDevice, VkSamplerCaptureDescriptorDataInfoEXT*, void*, VkResult> vkGetSamplerOpaqueCaptureDescriptorDataEXT;
+
+    public delegate* unmanaged<VkDevice, VkAccelerationStructureCaptureDescriptorDataInfoEXT*, void*, VkResult> vkGetAccelerationStructureOpaqueCaptureDescriptorDataEXT;
+
+    public delegate* unmanaged<VkDevice, VkDeviceFaultCountsEXT*, VkDeviceFaultInfoEXT*, VkResult> vkGetDeviceFaultInfoEXT;
+
     public delegate* unmanaged<VkDevice, VkRenderPass, VkExtent2D*, VkResult> vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI;
 
     public delegate* unmanaged<VkDevice, VkMemoryGetRemoteAddressInfoNV*, void**, VkResult> vkGetMemoryRemoteAddressNV;
 
     public delegate* unmanaged<VkDevice, VkPipelineInfoKHR*, VkBaseOutStructure*, VkResult> vkGetPipelinePropertiesEXT;
+
+    public delegate* unmanaged<VkDevice, VkMicromapCreateInfoEXT*, VkAllocationCallbacks*, VkMicromapEXT*, VkResult> vkCreateMicromapEXT;
+
+    public delegate* unmanaged<VkDevice, VkMicromapEXT, VkAllocationCallbacks*, void> vkDestroyMicromapEXT;
+
+    public delegate* unmanaged<VkDevice, VkDeferredOperationKHR, uint, VkMicromapBuildInfoEXT*, VkResult> vkBuildMicromapsEXT;
+
+    public delegate* unmanaged<VkDevice, VkDeferredOperationKHR, VkCopyMicromapInfoEXT*, VkResult> vkCopyMicromapEXT;
+
+    public delegate* unmanaged<VkDevice, VkDeferredOperationKHR, VkCopyMicromapToMemoryInfoEXT*, VkResult> vkCopyMicromapToMemoryEXT;
+
+    public delegate* unmanaged<VkDevice, VkDeferredOperationKHR, VkCopyMemoryToMicromapInfoEXT*, VkResult> vkCopyMemoryToMicromapEXT;
+
+    public delegate* unmanaged<VkDevice, uint, VkMicromapEXT*, VkQueryType, nuint, void*, nuint, VkResult> vkWriteMicromapsPropertiesEXT;
+
+    public delegate* unmanaged<VkDevice, VkMicromapVersionInfoEXT*, VkAccelerationStructureCompatibilityKHR*, void> vkGetDeviceMicromapCompatibilityEXT;
+
+    public delegate* unmanaged<VkDevice, VkAccelerationStructureBuildTypeKHR, VkMicromapBuildInfoEXT*, VkMicromapBuildSizesInfoEXT*, void> vkGetMicromapBuildSizesEXT;
 
     public delegate* unmanaged<VkDevice, VkDeviceMemory, float, void> vkSetDeviceMemoryPriorityEXT;
 
@@ -215,13 +291,99 @@ public unsafe partial struct VkDeviceManualImports
 
     public delegate* unmanaged<VkDevice, VkDescriptorSet, void**, void> vkGetDescriptorSetHostMappingVALVE;
 
+    public delegate* unmanaged<VkDevice, VkComputePipelineCreateInfo*, VkMemoryRequirements2*, void> vkGetPipelineIndirectMemoryRequirementsNV;
+
+    public delegate* unmanaged<VkDevice, VkPipelineIndirectDeviceAddressInfoNV*, ulong> vkGetPipelineIndirectDeviceAddressNV;
+
+    public delegate* unmanaged<VkDevice, VkTensorCreateInfoARM*, VkAllocationCallbacks*, VkTensorARM*, VkResult> vkCreateTensorARM;
+
+    public delegate* unmanaged<VkDevice, VkTensorARM, VkAllocationCallbacks*, void> vkDestroyTensorARM;
+
+    public delegate* unmanaged<VkDevice, VkTensorViewCreateInfoARM*, VkAllocationCallbacks*, VkTensorViewARM*, VkResult> vkCreateTensorViewARM;
+
+    public delegate* unmanaged<VkDevice, VkTensorViewARM, VkAllocationCallbacks*, void> vkDestroyTensorViewARM;
+
+    public delegate* unmanaged<VkDevice, VkTensorMemoryRequirementsInfoARM*, VkMemoryRequirements2*, void> vkGetTensorMemoryRequirementsARM;
+
+    public delegate* unmanaged<VkDevice, uint, VkBindTensorMemoryInfoARM*, VkResult> vkBindTensorMemoryARM;
+
+    public delegate* unmanaged<VkDevice, VkDeviceTensorMemoryRequirementsARM*, VkMemoryRequirements2*, void> vkGetDeviceTensorMemoryRequirementsARM;
+
+    public delegate* unmanaged<VkDevice, VkTensorCaptureDescriptorDataInfoARM*, void*, VkResult> vkGetTensorOpaqueCaptureDescriptorDataARM;
+
+    public delegate* unmanaged<VkDevice, VkTensorViewCaptureDescriptorDataInfoARM*, void*, VkResult> vkGetTensorViewOpaqueCaptureDescriptorDataARM;
+
     public delegate* unmanaged<VkDevice, VkShaderModule, VkShaderModuleIdentifierEXT*, void> vkGetShaderModuleIdentifierEXT;
 
     public delegate* unmanaged<VkDevice, VkShaderModuleCreateInfo*, VkShaderModuleIdentifierEXT*, void> vkGetShaderModuleCreateInfoIdentifierEXT;
 
+    public delegate* unmanaged<VkDevice, VkOpticalFlowSessionCreateInfoNV*, VkAllocationCallbacks*, VkOpticalFlowSessionNV*, VkResult> vkCreateOpticalFlowSessionNV;
+
+    public delegate* unmanaged<VkDevice, VkOpticalFlowSessionNV, VkAllocationCallbacks*, void> vkDestroyOpticalFlowSessionNV;
+
+    public delegate* unmanaged<VkDevice, VkOpticalFlowSessionNV, VkOpticalFlowSessionBindingPointNV, VkImageView, VkImageLayout, VkResult> vkBindOpticalFlowSessionImageNV;
+
+    public delegate* unmanaged<VkDevice, VkAntiLagDataAMD*, void> vkAntiLagUpdateAMD;
+
+    public delegate* unmanaged<VkDevice, uint, VkShaderCreateInfoEXT*, VkAllocationCallbacks*, VkShaderEXT*, VkResult> vkCreateShadersEXT;
+
+    public delegate* unmanaged<VkDevice, VkShaderEXT, VkAllocationCallbacks*, void> vkDestroyShaderEXT;
+
+    public delegate* unmanaged<VkDevice, VkShaderEXT, nuint*, void*, VkResult> vkGetShaderBinaryDataEXT;
+
     public delegate* unmanaged<VkDevice, VkFramebuffer, uint*, VkTilePropertiesQCOM*, VkResult> vkGetFramebufferTilePropertiesQCOM;
 
     public delegate* unmanaged<VkDevice, VkRenderingInfo*, VkTilePropertiesQCOM*, VkResult> vkGetDynamicRenderingTilePropertiesQCOM;
+
+    public delegate* unmanaged<VkDevice, VkConvertCooperativeVectorMatrixInfoNV*, VkResult> vkConvertCooperativeVectorMatrixNV;
+
+    public delegate* unmanaged<VkDevice, VkSwapchainKHR, VkLatencySleepModeInfoNV*, VkResult> vkSetLatencySleepModeNV;
+
+    public delegate* unmanaged<VkDevice, VkSwapchainKHR, VkLatencySleepInfoNV*, VkResult> vkLatencySleepNV;
+
+    public delegate* unmanaged<VkDevice, VkSwapchainKHR, VkSetLatencyMarkerInfoNV*, void> vkSetLatencyMarkerNV;
+
+    public delegate* unmanaged<VkDevice, VkSwapchainKHR, VkGetLatencyMarkerInfoNV*, void> vkGetLatencyTimingsNV;
+
+    public delegate* unmanaged<VkDevice, VkDeferredOperationKHR, VkPipelineCache, uint, VkDataGraphPipelineCreateInfoARM*, VkAllocationCallbacks*, VkPipeline*, VkResult> vkCreateDataGraphPipelinesARM;
+
+    public delegate* unmanaged<VkDevice, VkDataGraphPipelineSessionCreateInfoARM*, VkAllocationCallbacks*, VkDataGraphPipelineSessionARM*, VkResult> vkCreateDataGraphPipelineSessionARM;
+
+    public delegate* unmanaged<VkDevice, VkDataGraphPipelineSessionBindPointRequirementsInfoARM*, uint*, VkDataGraphPipelineSessionBindPointRequirementARM*, VkResult> vkGetDataGraphPipelineSessionBindPointRequirementsARM;
+
+    public delegate* unmanaged<VkDevice, VkDataGraphPipelineSessionMemoryRequirementsInfoARM*, VkMemoryRequirements2*, void> vkGetDataGraphPipelineSessionMemoryRequirementsARM;
+
+    public delegate* unmanaged<VkDevice, uint, VkBindDataGraphPipelineSessionMemoryInfoARM*, VkResult> vkBindDataGraphPipelineSessionMemoryARM;
+
+    public delegate* unmanaged<VkDevice, VkDataGraphPipelineSessionARM, VkAllocationCallbacks*, void> vkDestroyDataGraphPipelineSessionARM;
+
+    public delegate* unmanaged<VkDevice, VkDataGraphPipelineInfoARM*, uint*, VkDataGraphPipelinePropertyARM*, VkResult> vkGetDataGraphPipelineAvailablePropertiesARM;
+
+    public delegate* unmanaged<VkDevice, VkDataGraphPipelineInfoARM*, uint, VkDataGraphPipelinePropertyQueryResultARM*, VkResult> vkGetDataGraphPipelinePropertiesARM;
+
+    public delegate* unmanaged<VkDevice, VkExternalComputeQueueCreateInfoNV*, VkAllocationCallbacks*, VkExternalComputeQueueNV*, VkResult> vkCreateExternalComputeQueueNV;
+
+    public delegate* unmanaged<VkDevice, VkExternalComputeQueueNV, VkAllocationCallbacks*, void> vkDestroyExternalComputeQueueNV;
+
+    public delegate* unmanaged<VkExternalComputeQueueNV, VkExternalComputeQueueDataParamsNV*, void*, void> vkGetExternalComputeQueueDataNV;
+
+    public delegate* unmanaged<VkDevice, VkClusterAccelerationStructureInputInfoNV*, VkAccelerationStructureBuildSizesInfoKHR*, void> vkGetClusterAccelerationStructureBuildSizesNV;
+
+    public delegate* unmanaged<VkDevice, VkPartitionedAccelerationStructureInstancesInputNV*, VkAccelerationStructureBuildSizesInfoKHR*, void> vkGetPartitionedAccelerationStructuresBuildSizesNV;
+
+    public delegate* unmanaged<VkDevice, VkGeneratedCommandsMemoryRequirementsInfoEXT*, VkMemoryRequirements2*, void> vkGetGeneratedCommandsMemoryRequirementsEXT;
+
+    public delegate* unmanaged<VkDevice, VkIndirectCommandsLayoutCreateInfoEXT*, VkAllocationCallbacks*, VkIndirectCommandsLayoutEXT*, VkResult> vkCreateIndirectCommandsLayoutEXT;
+
+    public delegate* unmanaged<VkDevice, VkIndirectCommandsLayoutEXT, VkAllocationCallbacks*, void> vkDestroyIndirectCommandsLayoutEXT;
+
+    public delegate* unmanaged<VkDevice, VkIndirectExecutionSetCreateInfoEXT*, VkAllocationCallbacks*, VkIndirectExecutionSetEXT*, VkResult> vkCreateIndirectExecutionSetEXT;
+
+    public delegate* unmanaged<VkDevice, VkIndirectExecutionSetEXT, VkAllocationCallbacks*, void> vkDestroyIndirectExecutionSetEXT;
+
+    public delegate* unmanaged<VkDevice, VkIndirectExecutionSetEXT, uint, VkWriteIndirectExecutionSetPipelineEXT*, void> vkUpdateIndirectExecutionSetPipelineEXT;
+
+    public delegate* unmanaged<VkDevice, VkIndirectExecutionSetEXT, uint, VkWriteIndirectExecutionSetShaderEXT*, void> vkUpdateIndirectExecutionSetShaderEXT;
 
     public delegate* unmanaged<VkDevice, VkAccelerationStructureCreateInfoKHR*, VkAllocationCallbacks*, VkAccelerationStructureKHR*, VkResult> vkCreateAccelerationStructureKHR;
 

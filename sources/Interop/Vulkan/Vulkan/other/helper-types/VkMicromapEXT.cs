@@ -69,7 +69,7 @@ public readonly partial struct VkMicromapEXT : IComparable, IComparable<VkMicrom
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkMicromapEXT other)
+        if (obj is VkMicromapEXT other)
         {
             return CompareTo(other);
         }

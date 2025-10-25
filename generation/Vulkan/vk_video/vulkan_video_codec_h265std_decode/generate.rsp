@@ -13,4 +13,4 @@ TerraFX.Interop.Vulkan
 --test-output
 ../../../../tests/Interop/Vulkan/Vulkan/vk_video/vulkan_video_codec_h265std_decode
 --traverse
-C:/VulkanSDK/1.3.268.0/Include/vk_video/vulkan_video_codec_h265std_decode.h
+C:/VulkanSDK/1.4.328.1/Include/vk_video/vulkan_video_codec_h265std_decode.h

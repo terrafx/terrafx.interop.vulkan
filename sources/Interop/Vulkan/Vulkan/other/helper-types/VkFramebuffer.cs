@@ -69,7 +69,7 @@ public readonly partial struct VkFramebuffer : IComparable, IComparable<VkFrameb
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkFramebuffer other)
+        if (obj is VkFramebuffer other)
         {
             return CompareTo(other);
         }

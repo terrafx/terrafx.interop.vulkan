@@ -69,7 +69,7 @@ public readonly partial struct VkPipelineLayout : IComparable, IComparable<VkPip
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkPipelineLayout other)
+        if (obj is VkPipelineLayout other)
         {
             return CompareTo(other);
         }

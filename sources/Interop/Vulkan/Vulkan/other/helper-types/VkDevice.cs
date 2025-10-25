@@ -73,7 +73,7 @@ public readonly unsafe partial struct VkDevice : IComparable, IComparable<VkDevi
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkDevice other)
+        if (obj is VkDevice other)
         {
             return CompareTo(other);
         }

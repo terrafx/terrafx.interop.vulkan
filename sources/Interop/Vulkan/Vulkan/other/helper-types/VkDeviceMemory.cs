@@ -69,7 +69,7 @@ public readonly partial struct VkDeviceMemory : IComparable, IComparable<VkDevic
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkDeviceMemory other)
+        if (obj is VkDeviceMemory other)
         {
             return CompareTo(other);
         }

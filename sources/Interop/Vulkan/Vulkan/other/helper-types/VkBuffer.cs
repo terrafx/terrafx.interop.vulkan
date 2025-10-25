@@ -69,7 +69,7 @@ public readonly partial struct VkBuffer : IComparable, IComparable<VkBuffer>, IE
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkBuffer other)
+        if (obj is VkBuffer other)
         {
             return CompareTo(other);
         }

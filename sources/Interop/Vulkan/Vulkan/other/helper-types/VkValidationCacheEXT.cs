@@ -69,7 +69,7 @@ public readonly partial struct VkValidationCacheEXT : IComparable, IComparable<V
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkValidationCacheEXT other)
+        if (obj is VkValidationCacheEXT other)
         {
             return CompareTo(other);
         }

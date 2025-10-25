@@ -69,7 +69,7 @@ public readonly partial struct VkSurfaceKHR : IComparable, IComparable<VkSurface
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkSurfaceKHR other)
+        if (obj is VkSurfaceKHR other)
         {
             return CompareTo(other);
         }

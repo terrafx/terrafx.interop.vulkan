@@ -69,7 +69,7 @@ public readonly partial struct VkIndirectCommandsLayoutNV : IComparable, ICompar
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkIndirectCommandsLayoutNV other)
+        if (obj is VkIndirectCommandsLayoutNV other)
         {
             return CompareTo(other);
         }

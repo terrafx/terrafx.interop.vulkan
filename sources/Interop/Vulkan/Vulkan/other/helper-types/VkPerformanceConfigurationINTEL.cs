@@ -69,7 +69,7 @@ public readonly partial struct VkPerformanceConfigurationINTEL : IComparable, IC
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkPerformanceConfigurationINTEL other)
+        if (obj is VkPerformanceConfigurationINTEL other)
         {
             return CompareTo(other);
         }

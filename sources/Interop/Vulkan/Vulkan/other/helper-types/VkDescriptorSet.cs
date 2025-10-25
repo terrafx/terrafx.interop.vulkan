@@ -69,7 +69,7 @@ public readonly partial struct VkDescriptorSet : IComparable, IComparable<VkDesc
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkDescriptorSet other)
+        if (obj is VkDescriptorSet other)
         {
             return CompareTo(other);
         }

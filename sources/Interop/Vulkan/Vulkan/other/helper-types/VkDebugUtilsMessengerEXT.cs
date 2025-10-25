@@ -69,7 +69,7 @@ public readonly partial struct VkDebugUtilsMessengerEXT : IComparable, IComparab
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkDebugUtilsMessengerEXT other)
+        if (obj is VkDebugUtilsMessengerEXT other)
         {
             return CompareTo(other);
         }

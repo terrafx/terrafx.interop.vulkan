@@ -37,9 +37,9 @@ VK_ENABLE_BETA_EXTENSIONS
 --headerFile
 header.txt
 --include-directory
-C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared
-C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/um
-C:/VulkanSDK/1.3.268.0/Include
+C:/Program Files (x86)/Windows Kits/10/Include/10.0.26100.0/shared
+C:/Program Files (x86)/Windows Kits/10/Include/10.0.26100.0/um
+C:/VulkanSDK/1.4.328.1/Include
 --with-callconv
 *=Winapi
 --with-librarypath

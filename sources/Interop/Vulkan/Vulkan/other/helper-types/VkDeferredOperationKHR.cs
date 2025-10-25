@@ -69,7 +69,7 @@ public readonly partial struct VkDeferredOperationKHR : IComparable, IComparable
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkDeferredOperationKHR other)
+        if (obj is VkDeferredOperationKHR other)
         {
             return CompareTo(other);
         }

@@ -69,7 +69,7 @@ public readonly partial struct VkDescriptorUpdateTemplate : IComparable, ICompar
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkDescriptorUpdateTemplate other)
+        if (obj is VkDescriptorUpdateTemplate other)
         {
             return CompareTo(other);
         }

@@ -69,7 +69,7 @@ public readonly partial struct VkVideoSessionKHR : IComparable, IComparable<VkVi
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkVideoSessionKHR other)
+        if (obj is VkVideoSessionKHR other)
         {
             return CompareTo(other);
         }

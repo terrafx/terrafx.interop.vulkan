@@ -47,7 +47,7 @@
     <PackageOutputPath>$(BaseArtifactsPath)pkg/$(Configuration)/$(PACKAGE_PUBLISH_MODE)</PackageOutputPath>
     <Product>TerraFX.Interop.Vulkan</Product>
     <RootNamespace>TerraFX.Interop</RootNamespace>
-    <VersionPrefix>1.3.268.1</VersionPrefix>
+    <VersionPrefix>1.4.328.1</VersionPrefix>
     <VersionSuffix Condition="'$(PACKAGE_PUBLISH_MODE)' != 'stable'">rc1</VersionSuffix>
     <VersionSuffix Condition="'$(GITHUB_EVENT_NAME)' == 'pull_request'">pr</VersionSuffix>
   </PropertyGroup>

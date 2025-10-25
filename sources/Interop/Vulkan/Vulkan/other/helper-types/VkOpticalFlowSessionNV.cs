@@ -69,7 +69,7 @@ public readonly partial struct VkOpticalFlowSessionNV : IComparable, IComparable
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkOpticalFlowSessionNV other)
+        if (obj is VkOpticalFlowSessionNV other)
         {
             return CompareTo(other);
         }

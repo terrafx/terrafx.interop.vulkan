@@ -69,7 +69,7 @@ public readonly partial struct VkSwapchainKHR : IComparable, IComparable<VkSwapc
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkSwapchainKHR other)
+        if (obj is VkSwapchainKHR other)
         {
             return CompareTo(other);
         }

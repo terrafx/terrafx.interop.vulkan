@@ -69,7 +69,7 @@ public readonly partial struct VkShaderEXT : IComparable, IComparable<VkShaderEX
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkShaderEXT other)
+        if (obj is VkShaderEXT other)
         {
             return CompareTo(other);
         }

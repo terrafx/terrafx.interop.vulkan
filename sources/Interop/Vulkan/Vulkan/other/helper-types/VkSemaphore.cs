@@ -69,7 +69,7 @@ public readonly partial struct VkSemaphore : IComparable, IComparable<VkSemaphor
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkSemaphore other)
+        if (obj is VkSemaphore other)
         {
             return CompareTo(other);
         }

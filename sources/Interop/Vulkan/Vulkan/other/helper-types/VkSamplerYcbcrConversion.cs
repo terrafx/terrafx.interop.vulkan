@@ -69,7 +69,7 @@ public readonly partial struct VkSamplerYcbcrConversion : IComparable, IComparab
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkSamplerYcbcrConversion other)
+        if (obj is VkSamplerYcbcrConversion other)
         {
             return CompareTo(other);
         }

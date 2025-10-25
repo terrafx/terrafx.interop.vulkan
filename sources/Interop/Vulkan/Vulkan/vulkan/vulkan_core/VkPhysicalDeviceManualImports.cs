@@ -1,7 +1,7 @@
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
-// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.3.268
-// Original source is Copyright © 2015-2022 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
+// Ported from include/vulkan/vulkan_core.h in the KhronosGroup/Vulkan-Headers repository for tag v1.4.328.1
+// Original source is Copyright © 2015-2025 The Khronos Group Inc. Licensed under the Apache License v2.0 (Apache-2.0)
 
 namespace TerraFX.Interop.Vulkan;
 
@@ -41,6 +41,12 @@ public unsafe partial struct VkPhysicalDeviceManualImports
 
     public delegate* unmanaged<VkPhysicalDevice, uint*, VkPhysicalDeviceFragmentShadingRateKHR*, VkResult> vkGetPhysicalDeviceFragmentShadingRatesKHR;
 
+    public delegate* unmanaged<VkPhysicalDevice, VkPhysicalDeviceVideoEncodeQualityLevelInfoKHR*, VkVideoEncodeQualityLevelPropertiesKHR*, VkResult> vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR;
+
+    public delegate* unmanaged<VkPhysicalDevice, uint*, VkCooperativeMatrixPropertiesKHR*, VkResult> vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR;
+
+    public delegate* unmanaged<VkPhysicalDevice, uint*, VkTimeDomainKHR*, VkResult> vkGetPhysicalDeviceCalibrateableTimeDomainsKHR;
+
     public delegate* unmanaged<VkPhysicalDevice, VkFormat, VkImageType, VkImageTiling, VkImageUsageFlags, VkImageCreateFlags, VkExternalMemoryHandleTypeFlagsNV, VkExternalImageFormatPropertiesNV*, VkResult> vkGetPhysicalDeviceExternalImageFormatPropertiesNV;
 
     public delegate* unmanaged<VkPhysicalDevice, VkDisplayKHR, VkResult> vkReleaseDisplayEXT;
@@ -49,7 +55,7 @@ public unsafe partial struct VkPhysicalDeviceManualImports
 
     public delegate* unmanaged<VkPhysicalDevice, VkSampleCountFlags, VkMultisamplePropertiesEXT*, void> vkGetPhysicalDeviceMultisamplePropertiesEXT;
 
-    public delegate* unmanaged<VkPhysicalDevice, uint*, VkTimeDomainEXT*, VkResult> vkGetPhysicalDeviceCalibrateableTimeDomainsEXT;
+    public delegate* unmanaged<VkPhysicalDevice, uint*, VkTimeDomainKHR*, VkResult> vkGetPhysicalDeviceCalibrateableTimeDomainsEXT;
 
     public delegate* unmanaged<VkPhysicalDevice, uint*, VkPhysicalDeviceToolProperties*, VkResult> vkGetPhysicalDeviceToolPropertiesEXT;
 
@@ -60,4 +66,16 @@ public unsafe partial struct VkPhysicalDeviceManualImports
     public delegate* unmanaged<VkPhysicalDevice, int, VkDisplayKHR, VkResult> vkAcquireDrmDisplayEXT;
 
     public delegate* unmanaged<VkPhysicalDevice, int, uint, VkDisplayKHR*, VkResult> vkGetDrmDisplayEXT;
+
+    public delegate* unmanaged<VkPhysicalDevice, VkPhysicalDeviceExternalTensorInfoARM*, VkExternalTensorPropertiesARM*, void> vkGetPhysicalDeviceExternalTensorPropertiesARM;
+
+    public delegate* unmanaged<VkPhysicalDevice, VkOpticalFlowImageFormatInfoNV*, uint*, VkOpticalFlowImageFormatPropertiesNV*, VkResult> vkGetPhysicalDeviceOpticalFlowImageFormatsNV;
+
+    public delegate* unmanaged<VkPhysicalDevice, uint*, VkCooperativeVectorPropertiesNV*, VkResult> vkGetPhysicalDeviceCooperativeVectorPropertiesNV;
+
+    public delegate* unmanaged<VkPhysicalDevice, uint, uint*, VkQueueFamilyDataGraphPropertiesARM*, VkResult> vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM;
+
+    public delegate* unmanaged<VkPhysicalDevice, VkPhysicalDeviceQueueFamilyDataGraphProcessingEngineInfoARM*, VkQueueFamilyDataGraphProcessingEnginePropertiesARM*, void> vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM;
+
+    public delegate* unmanaged<VkPhysicalDevice, uint*, VkCooperativeMatrixFlexibleDimensionsPropertiesNV*, VkResult> vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV;
 }

@@ -17,4 +17,4 @@ TerraFX.Interop.Vulkan
 --test-output
 ../../../../tests/Interop/Vulkan/Vulkan/vulkan/vulkan_wayland
 --traverse
-C:/VulkanSDK/1.3.268.0/Include/vulkan/vulkan_wayland.h
+C:/VulkanSDK/1.4.328.1/Include/vulkan/vulkan_wayland.h

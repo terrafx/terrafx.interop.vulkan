@@ -69,7 +69,7 @@ public readonly partial struct VkBufferCollectionFUCHSIA : IComparable, ICompara
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkBufferCollectionFUCHSIA other)
+        if (obj is VkBufferCollectionFUCHSIA other)
         {
             return CompareTo(other);
         }

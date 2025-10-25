@@ -69,7 +69,7 @@ public readonly partial struct VkCuModuleNVX : IComparable, IComparable<VkCuModu
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkCuModuleNVX other)
+        if (obj is VkCuModuleNVX other)
         {
             return CompareTo(other);
         }

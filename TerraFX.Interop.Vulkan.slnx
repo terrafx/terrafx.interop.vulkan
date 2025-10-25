@@ -60,6 +60,21 @@
     <File Path="generation/Vulkan/vk_video/vulkan_video_codecs_common/header.txt" />
     <File Path="generation/Vulkan/vk_video/vulkan_video_codecs_common/vk_video-vulkan_video_codecs_common.h" />
   </Folder>
+  <Folder Name="/generation/Vulkan/vk_video/vulkan_video_codec_av1std/">
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_av1std/generate.rsp" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_av1std/header.txt" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_av1std/vk_video-vulkan_video_codec_av1std.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vk_video/vulkan_video_codec_av1std_decode/">
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_av1std_decode/generate.rsp" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_av1std_decode/header.txt" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_av1std_decode/vk_video-vulkan_video_codec_av1std_decode.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vk_video/vulkan_video_codec_av1std_encode/">
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_av1std_encode/generate.rsp" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_av1std_encode/header.txt" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_av1std_encode/vk_video-vulkan_video_codec_av1std_encode.h" />
+  </Folder>
   <Folder Name="/generation/Vulkan/vk_video/vulkan_video_codec_h264std/">
     <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h264std/generate.rsp" />
     <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h264std/header.txt" />
@@ -89,6 +104,16 @@
     <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h265std_encode/generate.rsp" />
     <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h265std_encode/header.txt" />
     <File Path="generation/Vulkan/vk_video/vulkan_video_codec_h265std_encode/vk_video-vulkan_video_codec_h265std_encode.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vk_video/vulkan_video_codec_vp9std/">
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_vp9std/generate.rsp" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_vp9std/header.txt" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_vp9std/vk_video-vulkan_video_codec_vp9std.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vk_video/vulkan_video_codec_vp9std_decode/">
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_vp9std_decode/generate.rsp" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_vp9std_decode/header.txt" />
+    <File Path="generation/Vulkan/vk_video/vulkan_video_codec_vp9std_decode/vk_video-vulkan_video_codec_vp9std_decode.h" />
   </Folder>
   <Folder Name="/generation/Vulkan/vulkan/" />
   <Folder Name="/generation/Vulkan/vulkan/vk_enum_string_helper/">
@@ -166,6 +191,11 @@
     <File Path="generation/Vulkan/vulkan/vulkan_metal/generate.rsp" />
     <File Path="generation/Vulkan/vulkan/vulkan_metal/header.txt" />
     <File Path="generation/Vulkan/vulkan/vulkan_metal/vulkan-vulkan_metal.h" />
+  </Folder>
+  <Folder Name="/generation/Vulkan/vulkan/vulkan_ohos/">
+    <File Path="generation/Vulkan/vulkan/vulkan_ohos/generate.rsp" />
+    <File Path="generation/Vulkan/vulkan/vulkan_ohos/header.txt" />
+    <File Path="generation/Vulkan/vulkan/vulkan_ohos/vulkan-vulkan_ohos.h" />
   </Folder>
   <Folder Name="/generation/Vulkan/vulkan/vulkan_screen/">
     <File Path="generation/Vulkan/vulkan/vulkan_screen/generate.rsp" />

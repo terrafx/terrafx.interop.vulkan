@@ -69,7 +69,7 @@ public readonly partial struct VkFence : IComparable, IComparable<VkFence>, IEqu
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkFence other)
+        if (obj is VkFence other)
         {
             return CompareTo(other);
         }

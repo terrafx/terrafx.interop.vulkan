@@ -69,7 +69,7 @@ public readonly partial struct VkDebugReportCallbackEXT : IComparable, IComparab
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkDebugReportCallbackEXT other)
+        if (obj is VkDebugReportCallbackEXT other)
         {
             return CompareTo(other);
         }

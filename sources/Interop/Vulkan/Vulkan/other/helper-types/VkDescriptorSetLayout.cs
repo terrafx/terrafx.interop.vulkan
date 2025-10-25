@@ -69,7 +69,7 @@ public readonly partial struct VkDescriptorSetLayout : IComparable, IComparable<
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkDescriptorSetLayout other)
+        if (obj is VkDescriptorSetLayout other)
         {
             return CompareTo(other);
         }

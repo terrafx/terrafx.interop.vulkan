@@ -73,7 +73,7 @@ public readonly unsafe partial struct VkCommandBuffer : IComparable, IComparable
 
     public int CompareTo(object? obj)
     {
-            if (obj is VkCommandBuffer other)
+        if (obj is VkCommandBuffer other)
         {
             return CompareTo(other);
         }
